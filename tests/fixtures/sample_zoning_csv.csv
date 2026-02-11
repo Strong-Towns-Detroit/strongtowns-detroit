@@ -1,0 +1,10 @@
+Use Category,Specific Land Use,R1,R2,R3,R4,R5,R6,B1,B2,B4,Standards and Conditions
+Residential,Single-family detached dwelling,R,R,R,R,R,R,,,,Sec 50-1234
+Residential,Two-family dwelling,,R,R,R,R,R,,,,Sec 50-1235
+Residential,Townhouse/rowhouse,,,C,R,R,R,,,,Sec 50-1236
+Residential,Multiple-family dwelling,,,,C,R,R,,,,Sec 50-1237
+Residential,Accessory dwelling unit,C,C,R,R,R,R,,,,Sec 50-1238
+Use Category,Specific Land Use,R1,R2,R3,R4,R5,R6,B1,B2,B4,Standards and Conditions
+Residential (cont'd),Live/work unit,,,,C/R,C/R,R,R,R,,Sec 50-1239
+Commercial,Retail sales,,,,,,,R,R,R,Sec 50-1300
+Commercial,Restaurant,,,,,,,C,R,R,Sec 50-1301

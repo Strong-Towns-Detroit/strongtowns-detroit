@@ -1,0 +1,90 @@
+# ──────────────────────────────────────────────
+# Python
+# ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environments (3 venvs in this repo, ~3GB total)
+.venv/
+venv/
+pipelines/parcel-data/venv/
+pipelines/housingDataAnalysis/.venv/
+
+# ──────────────────────────────────────────────
+# Secrets
+# ──────────────────────────────────────────────
+.env
+# .env.example is tracked (safe — contains no real keys)
+
+# ──────────────────────────────────────────────
+# Large data files (downloaded / generated)
+# ──────────────────────────────────────────────
+# Parcel geospatial data (939MB GeoJSON, 653MB + 363MB GeoPackages)
+pipelines/parcel-data/Parcels.geojson
+pipelines/parcel-data/parcels_with_compliance.gpkg
+pipelines/parcel-data/parcels_with_buildability.gpkg
+
+# Raw and cleaned parcel CSVs (172MB + 184MB)
+pipelines/parcel-data/parcel-data.csv
+pipelines/parcel-data/parcel-data-cleaned.csv
+
+# Building permits (16MB)
+pipelines/parcel-data/building-permits.csv
+
+# Street network GeoPackage (70MB)
+pipelines/housingDataAnalysis/street_simplification/detroit_street_network.gpkg
+
+# Zoning ordinance .docx source files (111MB total)
+# These are downloaded from Municode — not checked in due to size
+resources/*.docx
+
+# BZA meeting minutes PDFs (42MB, scraped from detroitmi.gov)
+pipelines/zoning/bza_minutes/
+
+# ──────────────────────────────────────────────
+# Generated outputs (regenerable from pipelines)
+# ──────────────────────────────────────────────
+output/
+pipelines/parcel-data/parcels_with_compliance.csv
+pipelines/parcel-data/parcel-data-with-buildability.csv
+pipelines/parcel-data/parcel-data-with-zoning-districts-mapping.csv
+pipelines/parcel-data/non_conforming_parcels.csv
+pipelines/parcel-data/analysis_sample.csv
+pipelines/parcel-data/merged_tables.csv
+pipelines/parcel-data/zoning-use-code-counts.csv
+pipelines/parcel-data/output.json
+pipelines/parcel-data/preemption_analysis_report.md
+pipelines/zoning/bza_dataset/
+pipelines/zoning/bza_dataset_tesseract/
+pipelines/zoning/bza_dataset_rapidocr/
+
+# Generated map images (124 use_code_charts + parcel maps)
+pipelines/parcel-data/use_code_charts/
+pipelines/parcel-data/detroit_buildable_parcels_map*.png
+
+# Street simplification generated outputs (46MB — GeoPackages, images, CSVs)
+pipelines/housingDataAnalysis/street_simplification/output/
+pipelines/housingDataAnalysis/street_simplification/*.png
+pipelines/housingDataAnalysis/street_simplification/*.graphml
+
+# ──────────────────────────────────────────────
+# IDE / tools
+# ──────────────────────────────────────────────
+.pytest_cache/
+.ipynb_checkpoints/
+*.DS_Store
+.claude/
+
+# Jupyter temp files
+pipelines/parcel-data/Untitled.ipynb
+
+# VS Code workspace files
+*.code-workspace
+
+# Cache directories
+cache/
+pipelines/housingDataAnalysis/cache/

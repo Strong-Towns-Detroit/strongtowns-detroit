@@ -1,0 +1,20 @@
+
+jupyter
+
+# Data access / Census
+censusdata
+pyCensus
+cenpy
+
+# Geospatial
+geopandas
+
+# Common data
+pandas
+
+# HTTP
+requests
+
+# Plotting
+matplotlib
+
