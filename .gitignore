@@ -45,6 +45,11 @@ resources/*.docx
 # BZA meeting minutes PDFs (42MB, scraped from detroitmi.gov)
 pipelines/zoning/bza_minutes/
 
+# Ad Valorem levy-report PDF/text cache (81MB, re-fetchable from MI Treasury)
+pipelines/assessment-history/data/pdf/
+# Rendered minutes page images (VLM working files)
+**/_pages/
+
 # ──────────────────────────────────────────────
 # Generated outputs (regenerable from pipelines)
 # ──────────────────────────────────────────────
