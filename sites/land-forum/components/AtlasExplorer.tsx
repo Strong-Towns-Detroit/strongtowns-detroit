@@ -21,6 +21,16 @@ type CaseRecord = {
   lon: number;
 };
 
+type MapSite = {
+  id: string;
+  category: string;
+  categoryLabel: string;
+  appearances: number;
+  caseIds: string[];
+  lat: number;
+  lon: number;
+};
+
 const CATEGORY_COLORS: Record<string, string> = {
   "Administrative/community appeal": "#0c2340",
   "Parking supply": "#c83a3a",
@@ -46,6 +56,8 @@ export default function AtlasExplorer() {
   const mapRef = useRef<LeafletMap | null>(null);
   const layerRef = useRef<CircleMarker[]>([]);
   const [cases, setCases] = useState<CaseRecord[]>([]);
+  const [mapSites, setMapSites] = useState<MapSite[]>([]);
+  const [mapContext, setMapContext] = useState<GeoJSON.FeatureCollection | null>(null);
   const [mapReady, setMapReady] = useState(false);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All requests");
@@ -54,9 +66,15 @@ export default function AtlasExplorer() {
   const [selected, setSelected] = useState<CaseRecord | null>(null);
 
   useEffect(() => {
-    fetch("/data/bza-cases.json")
-      .then((response) => response.json())
-      .then(setCases);
+    Promise.all([
+      fetch("/data/bza-cases.json").then((response) => response.json()),
+      fetch("/data/bza-map.json").then((response) => response.json()),
+      fetch("/data/detroit-context.geojson").then((response) => response.json()),
+    ]).then(([caseData, siteData, contextData]) => {
+      setCases(caseData);
+      setMapSites(siteData);
+      setMapContext(contextData);
+    });
   }, []);
 
   const filtered = useMemo(() => {
@@ -92,20 +110,9 @@ export default function AtlasExplorer() {
       if (cancelled || !mapNode.current) return;
       const map = L.map(mapNode.current, {
         zoomControl: true,
-        attributionControl: true,
+        attributionControl: false,
+        zoomSnap: 0.25,
       });
-      L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-        {
-          maxZoom: 19,
-          attribution:
-            "&copy; OpenStreetMap contributors &copy; CARTO",
-        },
-      ).addTo(map);
-      map.fitBounds(
-        [[42.245, -83.305], [42.46, -82.91]],
-        { padding: [24, 24] },
-      );
       mapRef.current = map;
       setMapReady(true);
     });
@@ -113,31 +120,86 @@ export default function AtlasExplorer() {
   }, []);
 
   useEffect(() => {
+    if (!mapRef.current || !mapReady || !mapContext) return;
+    let cancelled = false;
+    import("leaflet").then((L) => {
+      if (cancelled || !mapRef.current) return;
+      const contextLayer = L.geoJSON(mapContext, {
+        style: (feature) => {
+          if (feature?.properties?.kind === "city") {
+            return {
+              fillColor: "#ebe5da",
+              fillOpacity: 1,
+              color: "#d8d0c3",
+              weight: 0.7,
+            };
+          }
+          return {
+            color: "#0c2340",
+            weight: feature?.properties?.roadClass === "major" ? 0.75 : 0.48,
+            opacity: feature?.properties?.roadClass === "major" ? 0.34 : 0.24,
+          };
+        },
+      }).addTo(mapRef.current);
+      const cityFeature = mapContext.features.find(
+        (feature) => feature.properties?.kind === "city",
+      );
+      if (cityFeature) {
+        const cityLayer = L.geoJSON(cityFeature);
+        mapRef.current.fitBounds(
+          cityLayer.getBounds().pad(0.055),
+          { padding: [20, 20] },
+        );
+      } else {
+        mapRef.current.fitBounds(
+          [[42.245, -83.305], [42.46, -82.91]],
+          { padding: [20, 20] },
+        );
+      }
+      return () => contextLayer.remove();
+    });
+    return () => { cancelled = true; };
+  }, [mapReady, mapContext]);
+
+  useEffect(() => {
     if (!mapRef.current || !mapReady) return;
     let cancelled = false;
     import("leaflet").then((L) => {
       if (cancelled || !mapRef.current) return;
       layerRef.current.forEach((layer) => layer.remove());
-      layerRef.current = filtered.map((item) => {
-        const marker = L.circleMarker([item.lat, item.lon], {
-          radius: 5 + Math.sqrt(item.appearances) * 2,
+      const visibleIds = new Set(filtered.map((item) => item.id));
+      const caseById = new Map(cases.map((item) => [item.id, item]));
+      const visibleSites = mapSites.filter((site) =>
+        site.caseIds.some((caseId) => visibleIds.has(caseId)),
+      );
+      layerRef.current = visibleSites.map((site) => {
+        const activeCases = site.caseIds
+          .filter((caseId) => visibleIds.has(caseId))
+          .map((caseId) => caseById.get(caseId))
+          .filter((item): item is CaseRecord => Boolean(item));
+        const appearances = activeCases.reduce(
+          (total, item) => total + item.appearances, 0,
+        );
+        const marker = L.circleMarker([site.lat, site.lon], {
+          radius: 4.8 + Math.sqrt(Math.max(1, appearances)) * 2.15,
           color: "#fffaf0",
-          weight: 2,
-          fillColor: CATEGORY_COLORS[item.categoryLabel] || "#73777d",
-          fillOpacity: 0.88,
+          weight: 1.5,
+          fillColor: CATEGORY_COLORS[site.categoryLabel] || "#73777d",
+          fillOpacity: 0.84,
         });
+        const lead = activeCases[0];
+        const label = activeCases.length > 1
+          ? `${activeCases.length} related cases at this site`
+          : `${lead?.caseNumber || "BZA case"} · ${lead?.address || ""}`;
         marker
-          .bindTooltip(
-            `<strong>${item.caseNumber}</strong><br>${item.address}`,
-            { direction: "top" },
-          )
-          .on("click", () => setSelected(item))
+          .bindTooltip(label, { direction: "top" })
+          .on("click", () => lead && setSelected(lead))
           .addTo(mapRef.current!);
         return marker;
       });
     });
     return () => { cancelled = true; };
-  }, [filtered, mapReady]);
+  }, [filtered, cases, mapSites, mapReady]);
 
   function chooseCase(item: CaseRecord) {
     setSelected(item);
@@ -204,6 +266,7 @@ export default function AtlasExplorer() {
         <div ref={mapNode} className="map" aria-label="Map of Detroit BZA cases" />
         <div className="map-note">
           Color identifies one request type. Size indicates hearing appearances.
+          Road context from OpenStreetMap.
         </div>
         {selected && (
           <article className="case-detail">

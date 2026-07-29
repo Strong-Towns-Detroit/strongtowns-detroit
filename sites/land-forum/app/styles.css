@@ -167,7 +167,7 @@ select { display: block; margin-top: 6px; padding: 10px 30px 10px 9px; }
 .case-card b { font: 700 15px Georgia, serif; margin-bottom: 5px; }
 .case-card small { color: var(--ink-soft); font-size: 11px; line-height: 1.45; }
 .map-region { min-width: 0; min-height: 0; position: relative; }
-.map { position: absolute; inset: 0; background: #e9e6df; }
+.map { position: absolute; inset: 0; background: var(--cream); }
 .map-note { position: absolute; left: 15px; bottom: 15px; z-index: 500; background: rgba(255,250,240,.93); padding: 9px 11px; font-size: 11px; color: var(--ink-soft); box-shadow: 0 2px 12px rgba(12,35,64,.12); }
 .case-detail { position: absolute; z-index: 600; right: 18px; top: 18px; width: min(440px, calc(100% - 36px)); max-height: calc(100% - 36px); overflow: auto; padding: 25px; background: rgba(255,250,240,.98); box-shadow: 0 8px 38px rgba(12,35,64,.25); border-top: 5px solid var(--red); }
 .case-detail h2 { font: 700 30px/1.05 Georgia, serif; margin: 10px 0; }
