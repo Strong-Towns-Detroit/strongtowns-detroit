@@ -13,3 +13,5 @@ npm run dev
 The public atlas data is generated from the repository’s normalized BZA case
 histories and matched assessor parcels. Do not edit `public/data/bza-cases.json`
 by hand.
+
+Production builds use vinext and include the Sites metadata inside `dist/`.
