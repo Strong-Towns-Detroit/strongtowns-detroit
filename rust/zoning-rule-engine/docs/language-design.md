@@ -122,20 +122,27 @@ go-to-definition, references, inferred types, and the normalized proposition.
 
 The phrase language is controlled syntax, not unrestricted natural language.
 
-## `for every` binds inputs; `given` states applicability
+## Every rule has three semantic parts
 
-`for every` introduces the rule's universally quantified typed input
-signature. `given` contains only propositions that must all match. It does not
-assert those propositions and it does not create legal effects. Rev1's
-`given all` remains accepted temporarily for old artifacts.
+The primitive is a rule with (1) strongly typed input parameters, (2) a body
+that may refer to propositions or other rules, and (3) one or more typed
+consequents. Identity, source quotations, and review annotations are metadata,
+not a fourth semantic part.
+
+`given` introduces one typed input inline or several in an indented block:
 
 ```text
-for every
+given
   agency: PublicAgency
   hearing_notice: Notice
   hearing: PublicHearing
+```
 
-given
+The `if` block is the rule body. Each line is a typed proposition application
+that the engine must be able to establish from facts or other rules:
+
+```text
+if
   Chapter50 requires publication of hearing_notice
   agency is responsible for publishing hearing_notice
   hearing_notice is notice of hearing
@@ -144,13 +151,16 @@ given
 
 Here `responsible_for` is necessary because §50-3-10 does not identify the
 responsible agency. The relation binds whichever agency has been assigned that
-responsibility elsewhere. Multiple `given` entries are conjunctive;
-alternatives require an explicit alternative construct when one is introduced.
+responsibility elsewhere.
 
 ## Rules produce normative effects
 
-The initial consequence is a duty with a typed bearer, action, subject, and
-deadline:
+`then` separates the body from its consequents. Every consequent is introduced
+by `require`; multiple `require` statements are jointly entailed. Alternatives
+and legally meaningful procedure must be expressed by rule structure rather
+than inferred from an `Any` or `Sequence` container.
+
+A duty consequent has a typed bearer, action, subject, and deadline:
 
 ```text
 require duty
@@ -181,7 +191,7 @@ Vote requirements use a dedicated effect rather than an opaque English
 predicate:
 
 ```text
-require concurrence
+require concurrence_requirement
   decision: decision
   threshold: majority
 ```

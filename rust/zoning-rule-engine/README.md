@@ -45,13 +45,17 @@ dependency slice.
 The compiler currently:
 
 - builds and checks the concept-specialization graph;
+- compiles each rule into typed input parameters, a proposition body, and one
+  or more explicitly required consequents;
 - checks individual and action memberships;
 - resolves controlled phrases to canonical n-ary relation declarations;
 - resolves action forms such as `publication` and `publishing`;
 - checks every relation argument against its named type bound;
 - preserves the authored phrase, canonical symbol references, inferred types,
   source line, exact quotation, and quotation digest;
-- compiles an inclusive `at least N days before EVENT` deadline; and
+- compiles an inclusive `at least N days before EVENT` deadline;
+- validates every checked-in `.zdl` example before the review server publishes
+  a new artifact; and
 - preserves open interpretive relations as visible, non-executable gaps.
 
 This is deliberately a vertical language slice, not a claim that the complete

@@ -89,22 +89,23 @@ rule minimum_bseed_notice
   source §50-3-10(1)
     "At least 15 days prior to a public hearing being held before the Buildings, Safety Engineering, and Environmental Department."
 
-  for every
+  given
     agency: PublicAgency
     hearing_notice: Notice
     hearing: PublicHearing
 
-  given
+  if
     Chapter50 requires publication of hearing_notice
     agency is responsible for publishing hearing_notice
     hearing_notice is notice of hearing
     BSEED is the forum for hearing
-
-  require duty
-    bearer: agency
-    action: publish
-    subject: hearing_notice
-    deadline: at least 15 days before hearing
-    using some newspaper: Newspaper
-      satisfying
-        newspaper has general circulation in Detroit
+  then
+    require duty
+      bearer: agency
+      action: publish
+      subject: hearing_notice
+      deadline: at least 15 days before hearing
+      using some newspaper: Newspaper
+        satisfying
+          newspaper has general circulation in Detroit
+  end

@@ -241,178 +241,244 @@ rule ordinary_bza_vote_threshold
   id detroit.article_ii.50_2_78.ordinary_threshold
   source §50-2-78
     "The concurring vote of a majority of the members of the Board of Zoning Appeals shall be necessary to reverse or adjust any order, requirement, decision, or determination of any administrative official, or to decide in favor of the applicant on any matter upon which the Board is required to pass under this chapter, or to grant a variance in this chapter."
-  for every
-    decision: BoardDecision
 
   given
+    decision: BoardDecision
+
+  if
     decision is decided by DetroitBZA
     decision concerns an ordinary BZA matter
-  require concurrence
-    decision: decision
-    threshold: majority
+  then
+    require concurrence_requirement
+      decision: decision
+      threshold: majority
+  end
 
 rule hardship_vote_threshold
   id detroit.article_ii.50_2_78.hardship_threshold
   overrides detroit.article_ii.50_2_78.ordinary_threshold
   source §50-2-78-exception
     "Except that pursuant to Section 604(10) of the Michigan Zoning Enabling Act, the concurring vote of a two-thirds majority of the members of the Board shall be necessary to approve a variance from a use of land through a hardship relief petition."
-  for every
+
+  given
     decision: BoardDecision
     variance: HardshipUseVariance
 
-  given
+  if
     decision is decided by DetroitBZA
     decision decides variance
-  require concurrence
-    decision: decision
-    threshold: two_thirds
+  then
+    require concurrence_requirement
+      decision: decision
+      threshold: two_thirds
+  end
 
 rule ordinary_bza_finality
   id detroit.article_ii.50_2_79.ordinary_finality
   source §50-2-79
     "Decisions that are rendered by the Board of Zoning Appeals shall not become final until 4:00 p.m. on the third business day after the vote."
-  given all
+
+  given
     decision: BoardDecision
     vote: BoardVote
+
+  if
     decision is decided by DetroitBZA
     decision is rendered by vote
-  conclude automatic_effect
-    decision becomes final at four PM on the third business day after its vote
+  then
+    require automatic_effect
+      decision becomes final at four PM on the third business day after its vote
+  end
 
 rule certified_immediate_finality
   id detroit.article_ii.50_2_79.immediate_effect
   overrides detroit.article_ii.50_2_79.ordinary_finality
   source §50-2-79-exception
     "Unless the Board finds the immediate effect of such order necessary for the preservation of property or personal rights and so certifies on the record."
-  given all
+
+  given
     decision: BoardDecision
     finding: PreservationFinding
+
+  if
     decision has preservation finding finding
     finding is certified on the record
-  conclude automatic_effect
-    decision becomes final immediately after its vote
+  then
+    require automatic_effect
+      decision becomes final immediately after its vote
+  end
 
 rule grant_lapse
   id detroit.article_iii.50_3_386.lapse
   source §50-3-386-sentence-1
     "In any case where a permit for a regulated use has not been obtained within six months after the granting of said use, the grant shall be null and void without further action."
-  given all
+
+  given
     grant: RegulatedUseGrant
+
+  if
     grant has no permit obtained within six calendar months
-  conclude automatic_effect
-    grant becomes null and void without further action
+  then
+    require automatic_effect
+      grant becomes null and void without further action
+  end
 
 rule bounded_extension_power
   id detroit.article_iii.50_3_386.extension
   source §50-3-386-exception
     "Except that the Buildings, Safety Engineering, and Environmental Department or, where applicable, the Board of Zoning Appeals may extend said six-month deadline for no more than 12 months beyond the expiration date of the original six months."
-  given all
+
+  given
     authority: ExtensionAuthority
     grant: RegulatedUseGrant
-  conclude power
-    authority may extend grant no more than twelve additional months
+
+  if
+  then
+    require power
+      authority may extend grant no more than twelve additional months
+  end
 
 rule unlawful_use_extension_bar
   id detroit.article_iii.50_3_386.extension_bar
   overrides detroit.article_iii.50_3_386.extension
   source §50-3-386-notwithstanding
     "Notwithstanding the preceding, no such extension may be considered in the case of a land use that was unlawfully established or expanded and that was subsequently legalized as a result of a regulated land use hearing."
-  given all
+
+  given
     grant: RegulatedUseGrant
     use: LandUse
+
+  if
     grant concerns unlawfully established or expanded use use later legalized by hearing
-  conclude prohibition
-    grant may not receive an extension
+  then
+    require prohibition
+      grant may not receive an extension
+  end
 
 rule no_additional_extension
   id detroit.article_iii.50_3_386.no_additional_extension
   source §50-3-386-sentence-2
     "Where this extension expires, no additional extension shall be authorized, unless a new application has been filed and a further public hearing has been held."
-  given all
+
+  given
     extension: Extension
     grant: RegulatedUseGrant
+
+  if
     extension is an extension of grant
     extension has expired
-  conclude prohibition
-    grant may not receive an additional extension
+  then
+    require prohibition
+      grant may not receive an additional extension
+  end
 
 rule new_application_after_extension
   id detroit.article_iii.50_3_386.new_application_route
   overrides detroit.article_iii.50_3_386.no_additional_extension
   source §50-3-386-unless
     "Unless a new application has been filed and a further public hearing has been held."
-  given all
+
+  given
     application: Application
     use: LandUse
+
+  if
     application is a new application for use
     a further public hearing is held for application
-  conclude permission
-    application may proceed after the expired extension
+  then
+    require permission
+      application may proceed after the expired extension
+  end
 
 rule delinquent_applicant_ineligible
   id detroit.article_iii.50_3_341.ineligibility
   source §50-3-341-b
     "A person is ineligible to apply for a regulated use where the person is delinquent in paying a civil fine, costs, or a justice system assessment imposed by the Blight Administrative Hearings Bureau."
-  given all
+
+  given
     applicant: Person
     application: Application
     obligation: PaymentObligation
     violation: BlightViolation
+
+  if
     application is filed by applicant
     applicant is delinquent on obligation imposed for violation
-  conclude prohibition
-    applicant is ineligible to file application
+  then
+    require prohibition
+      applicant is ineligible to file application
+  end
 
 rule foreclosure_eligibility_exception
   id detroit.article_iii.50_3_341.foreclosure_exception
   overrides detroit.article_iii.50_3_341.ineligibility
   source §50-3-341-b-foreclosure
     "This ineligibility does not apply if the applicant became the owner of the property by foreclosure or by taking a deed in lieu of foreclosure."
-  given all
+
+  given
     applicant: Person
     application: Application
     property: Property
+
+  if
     application concerns property property
     applicant acquired property by foreclosure or deed in lieu
-  conclude permission
-    applicant remains eligible to file application
+  then
+    require permission
+      applicant remains eligible to file application
+  end
 
 rule corrective_authorization_exception
   id detroit.article_iii.50_3_341.corrective_exception
   overrides detroit.article_iii.50_3_341.ineligibility
   source §50-3-341-b-correction
     "This ineligibility does not apply if the zoning authorization will correct, in whole or in part, the blight violation that was the subject of the delinquent payment."
-  given all
+
+  given
     applicant: Person
     application: Application
     violation: BlightViolation
+
+  if
     application is filed by applicant
     application corrects all or part of violation
-  conclude permission
-    applicant remains eligible to file application
+  then
+    require permission
+      applicant remains eligible to file application
+  end
 
 rule regulated_use_spacing_bar
   id detroit.article_iii.50_3_341.spacing
   source §50-3-341-c
     "Shall not approve any such request where there are already in existence two or more regulated uses within 1,000 feet of the boundaries of the site of the proposed regulated use, except as provided for through the waiver provisions."
-  given all
+
+  given
     application: Application
+
+  if
     application has at least two distinct established regulated use sites within one thousand feet
     application has no applicable spacing waiver
-  conclude prohibition
-    application may not be approved
+  then
+    require prohibition
+      application may not be approved
+  end
 
 rule district_permission_bar
   id detroit.article_iii.50_3_443.district_bar
   source §50-3-443-exception
     "In no case shall a controlled use be established in any zoning district where such a use is not permitted by right or as a conditional use."
-  given all
+
+  given
     proposal: DevelopmentProposal
     district: ZoningDistrict
+
+  if
     proposal is located in district
     proposal is neither permitted by right nor conditionally permitted in district
-  conclude prohibition
-    a spacing waiver may not be granted for proposal
+  then
+    require prohibition
+      a spacing waiver may not be granted for proposal
+  end
 
 rule controlled_use_waiver_findings
   id detroit.article_iii.50_3_443.findings
@@ -420,8 +486,13 @@ rule controlled_use_waiver_findings
     "May be waived, provided, that any one of the following findings is made."
   source §50-3-443-list-join
     "And the second finding."
-  given all
+
+  given
     proposal: DevelopmentProposal
+
+  if
     proposal satisfies the controlled use waiver findings
-  conclude power
-    DetroitBZA may grant a spacing waiver for proposal
+  then
+    require power
+      DetroitBZA may grant a spacing waiver for proposal
+  end

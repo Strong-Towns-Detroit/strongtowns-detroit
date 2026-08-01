@@ -1,6 +1,6 @@
 # Source-to-compiler review tool
 
-Static review application for the reviewed zoning-language corpus. It presents
+Compiler-backed review application for the reviewed zoning-language corpus. It presents
 each rule as exact legal text, authored ZDL, and normalized compiler output.
 
 Build the bundle:
@@ -9,11 +9,15 @@ Build the bundle:
 python review-tool/build_data.py
 ```
 
-Serve the repository root and open `review-tool/`, for example:
+Run the validating review server and open its printed URL:
 
 ```bash
-python -m http.server 8766
+python review-tool/serve.py
 ```
+
+The server invokes the Rust compiler before serving the bundle and recompiles
+when an example or repository-backed reply changes. A compiler failure is
+returned as a server error rather than displaying stale review data.
 
 ## Anchored comments
 

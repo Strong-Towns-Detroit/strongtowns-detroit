@@ -219,6 +219,25 @@ pub struct ConclusionSyntax {
     pub phrase: PhraseSyntax,
 }
 
+/// One explicitly required consequent of a rule.
+#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+#[serde(tag = "type", content = "value", rename_all = "snake_case")]
+pub enum ConsequentSyntax {
+    /// A typed duty consequent.
+    Duty(DutySyntax),
+    /// An exact concurrence requirement.
+    VoteRequirement(VoteThresholdSyntax),
+    /// A proposition carrying explicit legal force.
+    Proposition(ConclusionSyntax),
+}
+
+/// The rule body as authored in an `if` block.
+#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+pub struct RuleBodySyntax {
+    /// Proposition applications that must all be established.
+    pub propositions: Vec<PhraseSyntax>,
+}
+
 /// A parsed legal rule.
 #[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -229,16 +248,12 @@ pub struct RuleSyntax {
     pub id: String,
     /// Exact supporting quotations.
     pub sources: Vec<RuleSource>,
-    /// Conjunctive typed bindings.
-    pub bindings: Vec<BindingSyntax>,
-    /// Conjunctive fact patterns.
-    pub premises: Vec<PhraseSyntax>,
-    /// Normative conclusion.
-    pub duty: Option<DutySyntax>,
-    /// Exact concurrence requirement, when this is a voting rule.
-    pub vote_threshold: Option<VoteThresholdSyntax>,
-    /// Additional typed conclusions.
-    pub conclusions: Vec<ConclusionSyntax>,
+    /// Strongly typed input parameters introduced by `given`.
+    pub parameters: Vec<BindingSyntax>,
+    /// Conditions under which the consequents follow.
+    pub body: RuleBodySyntax,
+    /// One or more explicitly required consequents.
+    pub consequents: Vec<ConsequentSyntax>,
     /// Rules expressly displaced by this rule.
     pub overrides: Vec<String>,
     /// Source line.
@@ -357,6 +372,25 @@ pub struct CompiledConclusion {
     pub application: RelationApplication,
 }
 
+/// One compiled, typed consequent.
+#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+#[serde(tag = "type", content = "value", rename_all = "snake_case")]
+pub enum CompiledConsequent {
+    /// A normalized duty.
+    Duty(Box<CompiledDuty>),
+    /// A normalized vote requirement.
+    VoteRequirement(CompiledVoteThreshold),
+    /// A resolved proposition carrying legal force.
+    Proposition(CompiledConclusion),
+}
+
+/// A compiled rule body.
+#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+pub struct CompiledRuleBody {
+    /// Typed propositions that must all be established.
+    pub propositions: Vec<RelationApplication>,
+}
+
 /// A compiled, typed legal rule.
 #[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
 pub struct CompiledRule {
@@ -366,16 +400,12 @@ pub struct CompiledRule {
     pub name: String,
     /// Provenance.
     pub sources: Vec<RuleSource>,
-    /// Typed local bindings.
-    pub bindings: Vec<BindingSyntax>,
-    /// Canonical premise propositions.
-    pub premises: Vec<RelationApplication>,
-    /// Normative conclusion.
-    pub duty: Option<CompiledDuty>,
-    /// Exact vote threshold, if any.
-    pub vote_threshold: Option<CompiledVoteThreshold>,
-    /// Non-duty conclusions.
-    pub conclusions: Vec<CompiledConclusion>,
+    /// Typed input parameters.
+    pub parameters: Vec<BindingSyntax>,
+    /// Canonical proposition applications forming the body.
+    pub body: CompiledRuleBody,
+    /// Explicitly required typed consequents.
+    pub consequents: Vec<CompiledConsequent>,
     /// Explicit precedence edges by stable rule identity.
     pub overrides: Vec<String>,
 }
@@ -574,14 +604,17 @@ fn compile_error_line(module: &SyntaxModule, error: &CompileError) -> usize {
             })
             .or_else(|| {
                 module.rules.iter().find_map(|rule| {
-                    rule.bindings
+                    rule.parameters
                         .iter()
                         .find(|binding| &binding.concept == name)
                         .map(|binding| binding.line)
                         .or_else(|| {
-                            rule.duty
-                                .as_ref()
-                                .and_then(|duty| duty.using.as_ref())
+                            rule.consequents
+                                .iter()
+                                .find_map(|consequent| match consequent {
+                                    ConsequentSyntax::Duty(duty) => duty.using.as_ref(),
+                                    _ => None,
+                                })
                                 .filter(|using| &using.binding.concept == name)
                                 .map(|using| using.binding.line)
                         })
@@ -894,11 +927,11 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
     let direct_indent = header.indent + 2;
     let mut id = None;
     let mut sources = Vec::new();
-    let mut bindings = Vec::new();
-    let mut premises = Vec::new();
-    let mut duty = None;
-    let mut vote_threshold = None;
-    let mut conclusions = Vec::new();
+    let mut parameters = Vec::new();
+    let mut body = RuleBodySyntax {
+        propositions: Vec::new(),
+    };
+    let mut consequents = Vec::new();
     let mut overrides = Vec::new();
     let mut index = start + 1;
     while index < end {
@@ -930,7 +963,38 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
                 line: line.number,
             });
             index += 2;
+        } else if let Some(authored) = line.text.strip_prefix("given ") {
+            let (name, concept) = split_authored_field(authored, line.number)?;
+            parameters.push(BindingSyntax {
+                name,
+                concept,
+                line: line.number,
+            });
+            index += 1;
+        } else if line.text == "given" {
+            let block_stop = nested_block_end(lines, index, end);
+            for entry in &lines[index + 1..block_stop] {
+                if entry.indent != line.indent + 2 {
+                    return Err(parse_error(entry.number, "unexpected `given` indentation"));
+                }
+                if !looks_like_binding(&entry.text) {
+                    return Err(parse_error(
+                        entry.number,
+                        "`given` accepts only strongly typed `NAME: TYPE` inputs",
+                    ));
+                }
+                let (name, concept) = split_field(entry)?;
+                parameters.push(BindingSyntax {
+                    name,
+                    concept,
+                    line: entry.number,
+                });
+            }
+            index = block_stop;
+        } else if line.text == "if" {
+            index = parse_if_then(lines, index, end, &mut body, &mut consequents)?;
         } else if line.text == "for every" {
+            // Rev2 compatibility. Rev3 authors use `given` for typed inputs.
             let block_stop = nested_block_end(lines, index, end);
             for entry in &lines[index + 1..block_stop] {
                 if entry.indent != line.indent + 2 {
@@ -946,27 +1010,9 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
                     ));
                 }
                 let (binding, concept) = split_field(entry)?;
-                bindings.push(BindingSyntax {
+                parameters.push(BindingSyntax {
                     name: binding,
                     concept,
-                    line: entry.number,
-                });
-            }
-            index = block_stop;
-        } else if line.text == "given" {
-            let block_stop = nested_block_end(lines, index, end);
-            for entry in &lines[index + 1..block_stop] {
-                if entry.indent != line.indent + 2 {
-                    return Err(parse_error(entry.number, "unexpected `given` indentation"));
-                }
-                if looks_like_binding(&entry.text) {
-                    return Err(parse_error(
-                        entry.number,
-                        "typed bindings belong under `for every`, not `given`",
-                    ));
-                }
-                premises.push(PhraseSyntax {
-                    text: entry.text.clone(),
                     line: entry.number,
                 });
             }
@@ -984,13 +1030,13 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
                 }
                 if looks_like_binding(&entry.text) {
                     let (binding, concept) = split_field(entry)?;
-                    bindings.push(BindingSyntax {
+                    parameters.push(BindingSyntax {
                         name: binding,
                         concept,
                         line: entry.number,
                     });
                 } else {
-                    premises.push(PhraseSyntax {
+                    body.propositions.push(PhraseSyntax {
                         text: entry.text.clone(),
                         line: entry.number,
                     });
@@ -999,15 +1045,15 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
             index = block_stop;
         } else if line.text == "require duty" {
             let (parsed, next) = parse_duty(lines, index, end)?;
-            duty = Some(parsed);
+            consequents.push(ConsequentSyntax::Duty(parsed));
             index = next;
         } else if line.text == "require concurrence" {
             let (parsed, next) = parse_vote_threshold(lines, index, end)?;
-            vote_threshold = Some(parsed);
+            consequents.push(ConsequentSyntax::VoteRequirement(parsed));
             index = next;
         } else if let Some(value) = line.text.strip_prefix("conclude ") {
             let (conclusion, next) = parse_conclusion(lines, index, value)?;
-            conclusions.push(conclusion);
+            consequents.push(ConsequentSyntax::Proposition(conclusion));
             index = next;
         } else {
             return Err(parse_error(line.number, "unsupported rule entry"));
@@ -1018,11 +1064,9 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
             name: name.to_owned(),
             id: id.ok_or_else(|| parse_error(header.number, "rule requires an id"))?,
             sources,
-            bindings,
-            premises,
-            duty,
-            vote_threshold,
-            conclusions,
+            parameters,
+            body,
+            consequents,
             overrides,
             line: header.number,
         },
@@ -1073,6 +1117,62 @@ fn parse_vote_threshold(
         },
         end,
     ))
+}
+
+fn parse_if_then(
+    lines: &[Line],
+    start: usize,
+    rule_end: usize,
+    body: &mut RuleBodySyntax,
+    consequents: &mut Vec<ConsequentSyntax>,
+) -> Result<usize, ParseError> {
+    let header = &lines[start];
+    let direct_indent = header.indent;
+    let then_index = lines[start + 1..rule_end]
+        .iter()
+        .position(|line| line.indent == direct_indent && line.text == "then")
+        .map(|offset| start + 1 + offset)
+        .ok_or_else(|| parse_error(header.number, "`if` requires `then`"))?;
+    for condition in &lines[start + 1..then_index] {
+        if condition.indent != direct_indent + 2 {
+            return Err(parse_error(
+                condition.number,
+                "unexpected conditional proposition indentation",
+            ));
+        }
+        body.propositions.push(PhraseSyntax {
+            text: condition.text.clone(),
+            line: condition.number,
+        });
+    }
+    let end_index = lines[then_index + 1..rule_end]
+        .iter()
+        .position(|line| line.indent == direct_indent && line.text == "end")
+        .map(|offset| then_index + 1 + offset)
+        .ok_or_else(|| parse_error(lines[then_index].number, "`then` requires `end`"))?;
+    let mut index = then_index + 1;
+    while index < end_index {
+        let effect = &lines[index];
+        if effect.indent != direct_indent + 2 {
+            return Err(parse_error(effect.number, "unexpected `then` indentation"));
+        }
+        if effect.text == "require duty" {
+            let (parsed, next) = parse_duty(lines, index, end_index)?;
+            consequents.push(ConsequentSyntax::Duty(parsed));
+            index = next;
+        } else if effect.text == "require concurrence_requirement" {
+            let (parsed, next) = parse_vote_threshold(lines, index, end_index)?;
+            consequents.push(ConsequentSyntax::VoteRequirement(parsed));
+            index = next;
+        } else if let Some(value) = effect.text.strip_prefix("require ") {
+            let (parsed, next) = parse_conclusion(lines, index, value)?;
+            consequents.push(ConsequentSyntax::Proposition(parsed));
+            index = next;
+        } else {
+            return Err(parse_error(effect.number, "unsupported `then` effect"));
+        }
+    }
+    Ok(end_index + 1)
 }
 
 fn parse_conclusion(
@@ -1216,11 +1316,15 @@ fn unquote(value: &str, line: usize) -> Result<String, ParseError> {
 }
 
 fn split_field(line: &Line) -> Result<(String, String), ParseError> {
-    line.text
+    split_authored_field(&line.text, line.number)
+}
+
+fn split_authored_field(value: &str, line: usize) -> Result<(String, String), ParseError> {
+    value
         .split_once(':')
         .map(|(key, value)| (key.trim().to_owned(), value.trim().to_owned()))
         .filter(|(key, value)| !key.is_empty() && !value.is_empty())
-        .ok_or_else(|| parse_error(line.number, "expected `NAME: VALUE`"))
+        .ok_or_else(|| parse_error(line, "expected `NAME: VALUE`"))
 }
 
 fn looks_like_binding(value: &str) -> bool {
@@ -1429,88 +1533,105 @@ fn compile_rule(
     rule: &RuleSyntax,
 ) -> Result<CompiledRule, CompileError> {
     let mut bindings = BTreeMap::new();
-    for binding in &rule.bindings {
-        if !environment.concepts.contains_key(binding.concept.as_str()) {
-            return Err(CompileError::UnknownConcept(binding.concept.clone()));
+    for parameter in &rule.parameters {
+        if !environment
+            .concepts
+            .contains_key(parameter.concept.as_str())
+        {
+            return Err(CompileError::UnknownConcept(parameter.concept.clone()));
         }
-        bindings.insert(binding.name.as_str(), binding.concept.as_str());
+        bindings.insert(parameter.name.as_str(), parameter.concept.as_str());
     }
-    let premises = rule
-        .premises
+    let propositions = rule
+        .body
+        .propositions
         .iter()
         .map(|phrase| resolve_phrase(environment, &bindings, phrase))
         .collect::<Result<Vec<_>, _>>()?;
-    let duty = rule
-        .duty
-        .as_ref()
-        .map(|duty| {
-            let bearer = resolve_term(environment, &bindings, &duty.bearer, rule.line)?;
-            require_type(environment, &bearer, "LegalEntity", "bearer", rule.line)?;
-            let action = resolve_term(environment, &bindings, &duty.action, rule.line)?;
-            require_type(environment, &action, "LegalAction", "action", rule.line)?;
-            let subject = resolve_term(environment, &bindings, &duty.subject, rule.line)?;
-            require_type(environment, &subject, "LegalMatter", "subject", rule.line)?;
-            let deadline = compile_deadline(environment, &bindings, &duty.deadline, rule.line)?;
-            let using = duty
-                .using
-                .as_ref()
-                .map(|syntax| {
-                    if !environment
-                        .concepts
-                        .contains_key(syntax.binding.concept.as_str())
-                    {
-                        return Err(CompileError::UnknownConcept(syntax.binding.concept.clone()));
-                    }
-                    let mut scoped = bindings.clone();
-                    scoped.insert(
-                        syntax.binding.name.as_str(),
-                        syntax.binding.concept.as_str(),
-                    );
-                    let satisfying = syntax
-                        .satisfying
-                        .iter()
-                        .map(|phrase| resolve_phrase(environment, &scoped, phrase))
-                        .collect::<Result<Vec<_>, _>>()?;
-                    Ok(CompiledUsing {
-                        binding: syntax.binding.clone(),
-                        satisfying,
-                    })
-                })
-                .transpose()?;
-            Ok::<_, CompileError>(CompiledDuty {
-                bearer,
-                action,
-                subject,
-                deadline,
-                using,
+    let consequents =
+        rule.consequents
+            .iter()
+            .map(|consequent| match consequent {
+                ConsequentSyntax::Duty(duty) => Ok(CompiledConsequent::Duty(Box::new(
+                    compile_duty(environment, &bindings, duty, rule.line)?,
+                ))),
+                ConsequentSyntax::VoteRequirement(threshold) => {
+                    Ok(CompiledConsequent::VoteRequirement(compile_vote_threshold(
+                        environment,
+                        &bindings,
+                        threshold,
+                    )?))
+                }
+                ConsequentSyntax::Proposition(conclusion) => {
+                    Ok(CompiledConsequent::Proposition(CompiledConclusion {
+                        kind: conclusion.kind,
+                        application: resolve_phrase(environment, &bindings, &conclusion.phrase)?,
+                    }))
+                }
             })
-        })
-        .transpose()?;
-    let conclusions = rule
-        .conclusions
-        .iter()
-        .map(|conclusion| {
-            Ok(CompiledConclusion {
-                kind: conclusion.kind,
-                application: resolve_phrase(environment, &bindings, &conclusion.phrase)?,
-            })
-        })
-        .collect::<Result<Vec<_>, CompileError>>()?;
-    let vote_threshold = rule
-        .vote_threshold
-        .as_ref()
-        .map(|threshold| compile_vote_threshold(environment, &bindings, threshold))
-        .transpose()?;
+            .collect::<Result<Vec<_>, CompileError>>()?;
     Ok(CompiledRule {
         id: rule.id.clone(),
         name: rule.name.clone(),
         sources: rule.sources.clone(),
-        bindings: rule.bindings.clone(),
-        premises,
-        duty,
-        vote_threshold,
-        conclusions,
+        parameters: rule.parameters.clone(),
+        body: CompiledRuleBody { propositions },
+        consequents,
         overrides: rule.overrides.clone(),
+    })
+}
+
+fn compile_duty(
+    environment: &Environment<'_>,
+    bindings: &BTreeMap<&str, &str>,
+    duty: &DutySyntax,
+    line: usize,
+) -> Result<CompiledDuty, CompileError> {
+    let bearer = resolve_term(environment, bindings, &duty.bearer, line)?;
+    require_type(environment, &bearer, "LegalEntity", "bearer", line)?;
+    let action = resolve_term(environment, bindings, &duty.action, line)?;
+    require_type(environment, &action, "LegalAction", "action", line)?;
+    let subject = resolve_term(environment, bindings, &duty.subject, line)?;
+    require_type(environment, &subject, "LegalMatter", "subject", line)?;
+    let deadline = compile_deadline(environment, bindings, &duty.deadline, line)?;
+    let using = duty
+        .using
+        .as_ref()
+        .map(|syntax| compile_using(environment, bindings, syntax))
+        .transpose()?;
+    Ok(CompiledDuty {
+        bearer,
+        action,
+        subject,
+        deadline,
+        using,
+    })
+}
+
+fn compile_using(
+    environment: &Environment<'_>,
+    bindings: &BTreeMap<&str, &str>,
+    syntax: &UsingSyntax,
+) -> Result<CompiledUsing, CompileError> {
+    if !environment
+        .concepts
+        .contains_key(syntax.binding.concept.as_str())
+    {
+        return Err(CompileError::UnknownConcept(syntax.binding.concept.clone()));
+    }
+    let mut scoped = bindings.clone();
+    scoped.insert(
+        syntax.binding.name.as_str(),
+        syntax.binding.concept.as_str(),
+    );
+    let satisfying = syntax
+        .satisfying
+        .iter()
+        .map(|phrase| resolve_phrase(environment, &scoped, phrase))
+        .collect::<Result<Vec<_>, _>>()?;
+    Ok(CompiledUsing {
+        binding: syntax.binding.clone(),
+        satisfying,
     })
 }
 
@@ -1844,9 +1965,12 @@ mod tests {
         let compiled = compile(&syntax).expect("fixture compiles");
         assert_eq!(compiled.module, "detroit.article_iii.notice");
         assert_eq!(compiled.rules.len(), 1);
-        assert_eq!(compiled.rules[0].premises.len(), 4);
-        assert_eq!(compiled.rules[0].duty.as_ref().unwrap().deadline.days, 15);
-        assert!(compiled.rules[0].duty.as_ref().unwrap().deadline.inclusive);
+        assert_eq!(compiled.rules[0].body.propositions.len(), 4);
+        let CompiledConsequent::Duty(duty) = &compiled.rules[0].consequents[0] else {
+            panic!("notice rule must require a duty")
+        };
+        assert_eq!(duty.deadline.days, 15);
+        assert!(duty.deadline.inclusive);
         assert_eq!(
             compiled.interpretive_gaps,
             vec!["has_general_circulation_in"]
@@ -1856,7 +1980,7 @@ mod tests {
     #[test]
     fn phrase_retains_canonical_relation_and_typed_roles() {
         let compiled = compile(&parse(NOTICE).unwrap()).unwrap();
-        let premise = &compiled.rules[0].premises[1];
+        let premise = &compiled.rules[0].body.propositions[1];
         assert_eq!(premise.relation, "responsible_for");
         assert_eq!(premise.proposition_kind, PropositionKind::Predicate);
         assert_eq!(premise.arguments[0].role, "bearer");
@@ -1868,13 +1992,10 @@ mod tests {
     #[test]
     fn interpretive_constraint_is_not_misreported_as_executable() {
         let compiled = compile(&parse(NOTICE).unwrap()).unwrap();
-        let using = compiled.rules[0]
-            .duty
-            .as_ref()
-            .unwrap()
-            .using
-            .as_ref()
-            .unwrap();
+        let CompiledConsequent::Duty(duty) = &compiled.rules[0].consequents[0] else {
+            panic!("notice rule must require a duty")
+        };
+        let using = duty.using.as_ref().unwrap();
         assert_eq!(using.satisfying.len(), 1);
         assert!(using.satisfying[0].interpretive);
     }
@@ -1919,40 +2040,55 @@ mod tests {
     }
 
     #[test]
-    fn separates_universal_bindings_from_applicability_conditions() {
+    fn separates_given_parameters_from_rule_body() {
         let syntax = parse(NOTICE).unwrap();
         let rule = &syntax.rules[0];
-        assert_eq!(rule.bindings.len(), 3);
-        assert_eq!(rule.premises.len(), 4);
+        assert_eq!(rule.parameters.len(), 3);
+        assert_eq!(rule.body.propositions.len(), 4);
         assert!(
-            rule.premises
+            rule.body
+                .propositions
                 .iter()
                 .all(|premise| !looks_like_binding(&premise.text))
         );
     }
 
     #[test]
-    fn for_every_rejects_propositions() {
+    fn given_rejects_propositions() {
         let invalid = NOTICE.replace(
-            "  given\n    Chapter50 requires publication of hearing_notice",
-            "    Chapter50 requires publication of hearing_notice\n\n  given",
+            "    hearing: PublicHearing",
+            "    hearing: PublicHearing\n    Chapter50 requires publication of hearing_notice",
         );
         let error = parse(&invalid).unwrap_err();
-        assert!(error.message.contains("accepts only `NAME: TYPE` bindings"));
+        assert!(error.message.contains("accepts only strongly typed"));
     }
 
     #[test]
-    fn given_rejects_typed_bindings() {
-        let invalid = NOTICE.replace(
-            "  given\n    Chapter50 requires publication of hearing_notice",
-            "  given\n    extra_notice: Notice\n    Chapter50 requires publication of hearing_notice",
+    fn inline_given_binds_one_typed_parameter() {
+        let source = NOTICE.replace(
+            "  given\n    agency: PublicAgency\n    hearing_notice: Notice\n    hearing: PublicHearing",
+            "  given agency: PublicAgency\n  given hearing_notice: Notice\n  given hearing: PublicHearing",
         );
-        let error = parse(&invalid).unwrap_err();
-        assert!(
-            error
-                .message
-                .contains("typed bindings belong under `for every`")
+        let syntax = parse(&source).unwrap();
+        assert_eq!(syntax.rules[0].parameters.len(), 3);
+    }
+
+    #[test]
+    fn a_rule_may_require_multiple_joint_consequents() {
+        let source = NOTICE.replace(
+            "    require duty\n      bearer: agency",
+            "    require constitutive\n      hearing_notice is notice of hearing\n    require duty\n      bearer: agency",
         );
+        let compiled = compile(&parse(&source).unwrap()).unwrap();
+        assert_eq!(compiled.rules[0].consequents.len(), 2);
+        assert!(matches!(
+            compiled.rules[0].consequents[0],
+            CompiledConsequent::Proposition(_)
+        ));
+        assert!(matches!(
+            compiled.rules[0].consequents[1],
+            CompiledConsequent::Duty(_)
+        ));
     }
 
     #[test]
@@ -1980,16 +2116,25 @@ mod tests {
                 .interpretive_gaps
                 .contains(&"waiver_findings_satisfied".to_owned())
         );
-        let ordinary = &compiled.rules[0].vote_threshold.as_ref().unwrap();
+        let CompiledConsequent::VoteRequirement(ordinary) = &compiled.rules[0].consequents[0]
+        else {
+            panic!("ordinary threshold must require concurrence")
+        };
         assert_eq!(ordinary.vote_coefficient, 2);
         assert!(ordinary.strict);
         assert_eq!(ordinary.member_coefficient, 1);
-        let hardship = &compiled.rules[1].vote_threshold.as_ref().unwrap();
+        let CompiledConsequent::VoteRequirement(hardship) = &compiled.rules[1].consequents[0]
+        else {
+            panic!("hardship threshold must require concurrence")
+        };
         assert_eq!(hardship.vote_coefficient, 3);
         assert!(!hardship.strict);
         assert_eq!(hardship.member_coefficient, 2);
-        assert!(compiled.rules.iter().all(|rule| {
-            rule.duty.is_some() || rule.vote_threshold.is_some() || !rule.conclusions.is_empty()
-        }));
+        assert!(
+            compiled
+                .rules
+                .iter()
+                .all(|rule| !rule.consequents.is_empty())
+        );
     }
 }

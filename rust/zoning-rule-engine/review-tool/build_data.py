@@ -23,6 +23,23 @@ MODULE_SOURCES = [
         ROOT / "examples/ontologies/detroit.reviewed_rules.ontology.zdl",
     ),
 ]
+ALL_EXAMPLES = sorted((ROOT / "examples").rglob("*.zdl"))
+
+
+def validate_all_examples() -> None:
+    """Fail the build unless every authored example compiles together."""
+    command = [
+        "cargo",
+        "run",
+        "--offline",
+        "--quiet",
+        "--bin",
+        "zoning-dsl",
+        "--",
+        "compile-all",
+        *[str(path) for path in ALL_EXAMPLES],
+    ]
+    subprocess.run(command, cwd=ROOT, text=True, capture_output=True, check=True)
 
 
 def compile_modules() -> list[dict]:
@@ -68,17 +85,17 @@ def source_text(rule: dict) -> str:
 
 def interpretive_relations(rule: dict) -> list[str]:
     relations = []
-    for premise in rule["premises"]:
-        if premise["interpretive"]:
-            relations.append(premise["relation"])
-    duty = rule.get("duty")
-    if duty and duty.get("using"):
-        for application in duty["using"]["satisfying"]:
-            if application["interpretive"]:
-                relations.append(application["relation"])
-    for conclusion in rule.get("conclusions", []):
-        if conclusion["application"]["interpretive"]:
-            relations.append(conclusion["application"]["relation"])
+    for proposition in rule["body"]["propositions"]:
+        if proposition["interpretive"]:
+            relations.append(proposition["relation"])
+    for consequent in rule["consequents"]:
+        value = consequent["value"]
+        if consequent["type"] == "duty" and value.get("using"):
+            for application in value["using"]["satisfying"]:
+                if application["interpretive"]:
+                    relations.append(application["relation"])
+        if consequent["type"] == "proposition" and value["application"]["interpretive"]:
+            relations.append(value["application"]["relation"])
     return sorted(set(relations))
 
 
@@ -123,6 +140,7 @@ def version_rules(rules: list[dict]) -> list[dict]:
 
 
 def main() -> None:
+    validate_all_examples()
     compiled_modules = compile_modules()
     rules = []
     for (path, ontology_path), module in zip(
