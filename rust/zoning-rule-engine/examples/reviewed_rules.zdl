@@ -9,6 +9,9 @@ concept ExtensionAuthority is PublicAgency
 concept LegalMatter
 concept BoardDecision is LegalMatter
 concept BoardVote is LegalMatter
+concept Variance is LegalMatter
+concept UseVariance is Variance
+concept HardshipUseVariance is UseVariance
 concept PreservationFinding is LegalMatter
 concept RegulatedUseGrant is LegalMatter
 concept Permit is LegalMatter
@@ -36,31 +39,16 @@ relation decided_by
   phrase
     "{decision} is decided by {board}"
 
-relation ordinary_bza_matter
+predicate ordinary_bza_matter
   decision: BoardDecision
   phrase
     "{decision} concerns an ordinary BZA matter"
 
-relation hardship_use_variance
+relation decides_variance
   decision: BoardDecision
+  variance: Variance
   phrase
-    "{decision} concerns a hardship relief use variance"
-
-interpretive relation requires_ordinary_concurrence
-  decision: BoardDecision
-  phrase
-    "{decision} requires concurrence from a majority of authorized board members"
-  resolution
-    status: open
-    method: whole number rounding rule reviewed in experiment but not stated in source
-
-interpretive relation requires_two_thirds_concurrence
-  decision: BoardDecision
-  phrase
-    "{decision} requires concurrence from two thirds of authorized board members"
-  resolution
-    status: open
-    method: whole number rounding rule reviewed in experiment but not stated in source
+    "{decision} decides {variance}"
 
 relation rendered_by_vote
   decision: BoardDecision
@@ -253,24 +241,31 @@ rule ordinary_bza_vote_threshold
   id detroit.article_ii.50_2_78.ordinary_threshold
   source §50-2-78
     "The concurring vote of a majority of the members of the Board of Zoning Appeals shall be necessary to reverse or adjust any order, requirement, decision, or determination of any administrative official, or to decide in favor of the applicant on any matter upon which the Board is required to pass under this chapter, or to grant a variance in this chapter."
-  given all
+  for every
     decision: BoardDecision
+
+  given
     decision is decided by DetroitBZA
     decision concerns an ordinary BZA matter
-  conclude constitutive
-    decision requires concurrence from a majority of authorized board members
+  require concurrence
+    decision: decision
+    threshold: majority
 
 rule hardship_vote_threshold
   id detroit.article_ii.50_2_78.hardship_threshold
   overrides detroit.article_ii.50_2_78.ordinary_threshold
   source §50-2-78-exception
     "Except that pursuant to Section 604(10) of the Michigan Zoning Enabling Act, the concurring vote of a two-thirds majority of the members of the Board shall be necessary to approve a variance from a use of land through a hardship relief petition."
-  given all
+  for every
     decision: BoardDecision
+    variance: HardshipUseVariance
+
+  given
     decision is decided by DetroitBZA
-    decision concerns a hardship relief use variance
-  conclude constitutive
-    decision requires concurrence from two thirds of authorized board members
+    decision decides variance
+  require concurrence
+    decision: decision
+    threshold: two_thirds
 
 rule ordinary_bza_finality
   id detroit.article_ii.50_2_79.ordinary_finality

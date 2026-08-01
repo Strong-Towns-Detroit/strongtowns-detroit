@@ -1,8 +1,9 @@
 //! Parser and compiler for the unified zoning language.
 //!
 //! The authored language combines ontology declarations and legal rules in one
-//! typed module graph. Controlled phrases compile to canonical n-ary relation
-//! applications; their authored text and source location remain in the output.
+//! typed module graph. Controlled phrases compile to canonical n-ary
+//! propositions—either structural relations or truth-valued predicates—while
+//! their authored text and source location remain in the output.
 
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -23,6 +24,9 @@ pub struct SyntaxModule {
     pub individuals: Vec<IndividualSyntax>,
     /// Typed n-ary relation declarations.
     pub relations: Vec<RelationSyntax>,
+    /// Typed truth-valued predicate declarations. Unlike relations, predicates
+    /// may describe evidence supplied to a rule or a state derived by a rule.
+    pub predicates: Vec<RelationSyntax>,
     /// Legal rule declarations.
     pub rules: Vec<RuleSyntax>,
 }
@@ -83,7 +87,7 @@ pub struct InterpretiveResolution {
     pub method: String,
 }
 
-/// A typed relation and its controlled-language phrase.
+/// A typed proposition declaration and its controlled-language phrase.
 #[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct RelationSyntax {
@@ -97,6 +101,16 @@ pub struct RelationSyntax {
     pub interpretation: Option<InterpretiveResolution>,
     /// Source line.
     pub line: usize,
+}
+
+/// Semantic role of a declared proposition in the authored ontology.
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum PropositionKind {
+    /// A durable structural association among independently typed things.
+    Relation,
+    /// A truth-valued claim that may be supplied or derived.
+    Predicate,
 }
 
 /// A rule source quotation.
@@ -113,7 +127,7 @@ pub struct RuleSource {
     pub line: usize,
 }
 
-/// One typed local binding in a `given all` block.
+/// One universally quantified typed local binding in a `for every` block.
 #[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
 pub struct BindingSyntax {
     /// Local name.
@@ -139,7 +153,7 @@ pub struct PhraseSyntax {
 pub struct UsingSyntax {
     /// Local existential name.
     pub binding: BindingSyntax,
-    /// Relations the selected individual must satisfy.
+    /// Propositions the selected individual must satisfy.
     pub satisfying: Vec<PhraseSyntax>,
 }
 
@@ -157,6 +171,27 @@ pub struct DutySyntax {
     pub deadline: String,
     /// Optional typed means constraint.
     pub using: Option<UsingSyntax>,
+}
+
+/// An exact board-vote threshold authored without floating point or rounding.
+#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+pub struct VoteThresholdSyntax {
+    /// Decision governed by the threshold.
+    pub decision: String,
+    /// Named exact threshold (`majority` or `two_thirds`).
+    pub threshold: VoteThresholdKind,
+    /// Source line.
+    pub line: usize,
+}
+
+/// Exact integer inequality selected by a vote-threshold rule.
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum VoteThresholdKind {
+    /// `2 * concurring_votes > member_count`.
+    Majority,
+    /// `3 * concurring_votes >= 2 * member_count`.
+    TwoThirds,
 }
 
 /// Normative or constitutive force of a phrase conclusion.
@@ -200,6 +235,8 @@ pub struct RuleSyntax {
     pub premises: Vec<PhraseSyntax>,
     /// Normative conclusion.
     pub duty: Option<DutySyntax>,
+    /// Exact concurrence requirement, when this is a voting rule.
+    pub vote_threshold: Option<VoteThresholdSyntax>,
     /// Additional typed conclusions.
     pub conclusions: Vec<ConclusionSyntax>,
     /// Rules expressly displaced by this rule.
@@ -242,12 +279,14 @@ pub struct ResolvedArgument {
     pub term: ResolvedTerm,
 }
 
-/// A controlled phrase resolved to one canonical typed relation.
+/// A controlled phrase resolved to one canonical typed proposition.
 #[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct RelationApplication {
-    /// Canonical relation identity.
+    /// Canonical proposition identity.
     pub relation: String,
+    /// Whether the resolved vocabulary item is structural or truth-valued.
+    pub proposition_kind: PropositionKind,
     /// Authored controlled phrase.
     pub authored_phrase: String,
     /// Typed role assignments.
@@ -295,6 +334,20 @@ pub struct CompiledDuty {
     pub using: Option<CompiledUsing>,
 }
 
+/// Normalized integer inequality for a board-vote requirement.
+#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct CompiledVoteThreshold {
+    /// Decision governed by the requirement.
+    pub decision: ResolvedTerm,
+    /// Coefficient multiplying concurring votes.
+    pub vote_coefficient: u64,
+    /// Strict (`>`) rather than inclusive (`>=`) comparison.
+    pub strict: bool,
+    /// Coefficient multiplying the legally defined member count.
+    pub member_coefficient: u64,
+}
+
 /// A normalized typed phrase carrying legal force.
 #[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
 pub struct CompiledConclusion {
@@ -315,10 +368,12 @@ pub struct CompiledRule {
     pub sources: Vec<RuleSource>,
     /// Typed local bindings.
     pub bindings: Vec<BindingSyntax>,
-    /// Canonical premise relations.
+    /// Canonical premise propositions.
     pub premises: Vec<RelationApplication>,
     /// Normative conclusion.
     pub duty: Option<CompiledDuty>,
+    /// Exact vote threshold, if any.
+    pub vote_threshold: Option<CompiledVoteThreshold>,
     /// Non-duty conclusions.
     pub conclusions: Vec<CompiledConclusion>,
     /// Explicit precedence edges by stable rule identity.
@@ -338,6 +393,8 @@ pub struct CompiledModule {
     pub individuals: Vec<IndividualSyntax>,
     /// Parsed relations retained for navigation and rendering.
     pub relations: Vec<RelationSyntax>,
+    /// Parsed predicate declarations retained for navigation and rendering.
+    pub predicates: Vec<RelationSyntax>,
     /// Typed rules.
     pub rules: Vec<CompiledRule>,
     /// Canonical identities of open interpretive relations.
@@ -622,6 +679,7 @@ pub fn parse(source: &str) -> Result<SyntaxModule, ParseError> {
         concepts: Vec::new(),
         individuals: Vec::new(),
         relations: Vec::new(),
+        predicates: Vec::new(),
         rules: Vec::new(),
     };
     let mut index = 1;
@@ -647,6 +705,12 @@ pub fn parse(source: &str) -> Result<SyntaxModule, ParseError> {
         {
             let (relation, next) = parse_relation(&lines, index)?;
             module.relations.push(relation);
+            index = next;
+        } else if line.text.starts_with("predicate ")
+            || line.text.starts_with("interpretive predicate ")
+        {
+            let (predicate, next) = parse_proposition(&lines, index, PropositionKind::Predicate)?;
+            module.predicates.push(predicate);
             index = next;
         } else if line.text.starts_with("rule ") {
             let (rule, next) = parse_rule(&lines, index)?;
@@ -710,20 +774,33 @@ fn parse_individual(lines: &[Line], start: usize) -> Result<(IndividualSyntax, u
 }
 
 fn parse_relation(lines: &[Line], start: usize) -> Result<(RelationSyntax, usize), ParseError> {
+    parse_proposition(lines, start, PropositionKind::Relation)
+}
+
+fn parse_proposition(
+    lines: &[Line],
+    start: usize,
+    kind: PropositionKind,
+) -> Result<(RelationSyntax, usize), ParseError> {
     let header = &lines[start];
-    let (interpretive, name) =
-        if let Some(name) = header.text.strip_prefix("interpretive relation ") {
-            (true, name.trim())
-        } else {
-            (
-                false,
-                header
-                    .text
-                    .strip_prefix("relation ")
-                    .unwrap_or_default()
-                    .trim(),
-            )
-        };
+    let keyword = match kind {
+        PropositionKind::Relation => "relation",
+        PropositionKind::Predicate => "predicate",
+    };
+    let interpretive_keyword = format!("interpretive {keyword} ");
+    let plain_keyword = format!("{keyword} ");
+    let (interpretive, name) = if let Some(name) = header.text.strip_prefix(&interpretive_keyword) {
+        (true, name.trim())
+    } else {
+        (
+            false,
+            header
+                .text
+                .strip_prefix(&plain_keyword)
+                .unwrap_or_default()
+                .trim(),
+        )
+    };
     let end = block_end(lines, start);
     let direct_indent = header.indent + 2;
     let mut roles = Vec::new();
@@ -734,7 +811,10 @@ fn parse_relation(lines: &[Line], start: usize) -> Result<(RelationSyntax, usize
     while index < end {
         let line = &lines[index];
         if line.indent != direct_indent {
-            return Err(parse_error(line.number, "unexpected relation indentation"));
+            return Err(parse_error(
+                line.number,
+                format!("unexpected {keyword} indentation"),
+            ));
         }
         if line.text == "phrase" {
             let value = lines.get(index + 1).ok_or_else(|| {
@@ -772,19 +852,20 @@ fn parse_relation(lines: &[Line], start: usize) -> Result<(RelationSyntax, usize
             index += 1;
         }
     }
-    let phrase = phrase.ok_or_else(|| parse_error(header.number, "relation requires a phrase"))?;
+    let phrase =
+        phrase.ok_or_else(|| parse_error(header.number, format!("{keyword} requires a phrase")))?;
     let interpretation = if interpretive {
         Some(InterpretiveResolution {
             status: status.ok_or_else(|| {
                 parse_error(
                     header.number,
-                    "interpretive relation requires resolution status",
+                    format!("interpretive {keyword} requires resolution status"),
                 )
             })?,
             method: method.ok_or_else(|| {
                 parse_error(
                     header.number,
-                    "interpretive relation requires resolution method",
+                    format!("interpretive {keyword} requires resolution method"),
                 )
             })?,
         })
@@ -803,6 +884,9 @@ fn parse_relation(lines: &[Line], start: usize) -> Result<(RelationSyntax, usize
     ))
 }
 
+// Each top-level rule clause is kept visible here so the parser mirrors the
+// authored grammar. Clause-specific nested parsing lives in helpers.
+#[allow(clippy::too_many_lines)]
 fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), ParseError> {
     let header = &lines[start];
     let name = header.text.strip_prefix("rule ").unwrap_or_default().trim();
@@ -813,6 +897,7 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
     let mut bindings = Vec::new();
     let mut premises = Vec::new();
     let mut duty = None;
+    let mut vote_threshold = None;
     let mut conclusions = Vec::new();
     let mut overrides = Vec::new();
     let mut index = start + 1;
@@ -845,7 +930,50 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
                 line: line.number,
             });
             index += 2;
+        } else if line.text == "for every" {
+            let block_stop = nested_block_end(lines, index, end);
+            for entry in &lines[index + 1..block_stop] {
+                if entry.indent != line.indent + 2 {
+                    return Err(parse_error(
+                        entry.number,
+                        "unexpected `for every` indentation",
+                    ));
+                }
+                if !looks_like_binding(&entry.text) {
+                    return Err(parse_error(
+                        entry.number,
+                        "`for every` accepts only `NAME: TYPE` bindings",
+                    ));
+                }
+                let (binding, concept) = split_field(entry)?;
+                bindings.push(BindingSyntax {
+                    name: binding,
+                    concept,
+                    line: entry.number,
+                });
+            }
+            index = block_stop;
+        } else if line.text == "given" {
+            let block_stop = nested_block_end(lines, index, end);
+            for entry in &lines[index + 1..block_stop] {
+                if entry.indent != line.indent + 2 {
+                    return Err(parse_error(entry.number, "unexpected `given` indentation"));
+                }
+                if looks_like_binding(&entry.text) {
+                    return Err(parse_error(
+                        entry.number,
+                        "typed bindings belong under `for every`, not `given`",
+                    ));
+                }
+                premises.push(PhraseSyntax {
+                    text: entry.text.clone(),
+                    line: entry.number,
+                });
+            }
+            index = block_stop;
         } else if line.text == "given all" {
+            // Rev 1 compatibility. Rev 2 authors should separate universal
+            // bindings (`for every`) from applicability predicates (`given`).
             let block_stop = nested_block_end(lines, index, end);
             for entry in &lines[index + 1..block_stop] {
                 if entry.indent != line.indent + 2 {
@@ -873,6 +1001,10 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
             let (parsed, next) = parse_duty(lines, index, end)?;
             duty = Some(parsed);
             index = next;
+        } else if line.text == "require concurrence" {
+            let (parsed, next) = parse_vote_threshold(lines, index, end)?;
+            vote_threshold = Some(parsed);
+            index = next;
         } else if let Some(value) = line.text.strip_prefix("conclude ") {
             let (conclusion, next) = parse_conclusion(lines, index, value)?;
             conclusions.push(conclusion);
@@ -889,8 +1021,54 @@ fn parse_rule(lines: &[Line], start: usize) -> Result<(RuleSyntax, usize), Parse
             bindings,
             premises,
             duty,
+            vote_threshold,
             conclusions,
             overrides,
+            line: header.number,
+        },
+        end,
+    ))
+}
+
+fn parse_vote_threshold(
+    lines: &[Line],
+    start: usize,
+    rule_end: usize,
+) -> Result<(VoteThresholdSyntax, usize), ParseError> {
+    let header = &lines[start];
+    let end = nested_block_end(lines, start, rule_end);
+    let mut fields = BTreeMap::new();
+    for entry in &lines[start + 1..end] {
+        if entry.indent != header.indent + 2 {
+            return Err(parse_error(
+                entry.number,
+                "unexpected concurrence indentation",
+            ));
+        }
+        let (key, value) = split_field(entry)?;
+        fields.insert(key, value);
+    }
+    let decision = fields
+        .remove("decision")
+        .ok_or_else(|| parse_error(header.number, "concurrence requires `decision`"))?;
+    let threshold = match fields.remove("threshold").as_deref() {
+        Some("majority") => VoteThresholdKind::Majority,
+        Some("two_thirds") => VoteThresholdKind::TwoThirds,
+        Some(_) => return Err(parse_error(header.number, "unknown vote threshold")),
+        None => {
+            return Err(parse_error(
+                header.number,
+                "concurrence requires `threshold`",
+            ));
+        }
+    };
+    if !fields.is_empty() {
+        return Err(parse_error(header.number, "unsupported concurrence field"));
+    }
+    Ok((
+        VoteThresholdSyntax {
+            decision,
+            threshold,
             line: header.number,
         },
         end,
@@ -1063,6 +1241,7 @@ struct Environment<'a> {
     concepts: BTreeMap<&'a str, &'a ConceptSyntax>,
     individuals: BTreeMap<&'a str, &'a IndividualSyntax>,
     relations: BTreeMap<&'a str, &'a RelationSyntax>,
+    predicates: BTreeMap<&'a str, &'a RelationSyntax>,
 }
 
 /// Resolves names and controlled phrases, checks relation bounds, and emits a
@@ -1086,10 +1265,12 @@ pub fn compile(module: &SyntaxModule) -> Result<CompiledModule, CompileError> {
         concepts: module.concepts.clone(),
         individuals: module.individuals.clone(),
         relations: module.relations.clone(),
+        predicates: module.predicates.clone(),
         rules,
         interpretive_gaps: module
             .relations
             .iter()
+            .chain(&module.predicates)
             .filter(|relation| relation.interpretation.is_some())
             .map(|relation| relation.name.clone())
             .collect(),
@@ -1175,10 +1356,24 @@ fn build_environment(module: &SyntaxModule) -> Result<Environment<'_>, CompileEr
             });
         }
     }
+    let mut predicates = BTreeMap::new();
+    for predicate in &module.predicates {
+        if relations.contains_key(predicate.name.as_str())
+            || predicates
+                .insert(predicate.name.as_str(), predicate)
+                .is_some()
+        {
+            return Err(CompileError::DuplicateSymbol {
+                kind: "proposition",
+                name: predicate.name.clone(),
+            });
+        }
+    }
     Ok(Environment {
         concepts,
         individuals,
         relations,
+        predicates,
     })
 }
 
@@ -1201,7 +1396,17 @@ fn validate_environment(environment: &Environment<'_>) -> Result<(), CompileErro
         }
     }
     let mut skeletons = BTreeMap::<String, String>::new();
-    for relation in environment.relations.values() {
+    for (kind, relation) in environment
+        .relations
+        .values()
+        .map(|item| (PropositionKind::Relation, *item))
+        .chain(
+            environment
+                .predicates
+                .values()
+                .map(|item| (PropositionKind::Predicate, *item)),
+        )
+    {
         for role in &relation.roles {
             if !environment.concepts.contains_key(role.concept.as_str()) {
                 return Err(CompileError::UnknownConcept(role.concept.clone()));
@@ -1212,7 +1417,7 @@ fn validate_environment(environment: &Environment<'_>) -> Result<(), CompileErro
         if let Some(existing) = skeletons.insert(skeleton, relation.name.clone()) {
             return Err(CompileError::InvalidPhraseTemplate {
                 relation: relation.name.clone(),
-                message: format!("collides with relation `{existing}`"),
+                message: format!("collides with another proposition `{existing}` ({kind:?})"),
             });
         }
     }
@@ -1291,6 +1496,11 @@ fn compile_rule(
             })
         })
         .collect::<Result<Vec<_>, CompileError>>()?;
+    let vote_threshold = rule
+        .vote_threshold
+        .as_ref()
+        .map(|threshold| compile_vote_threshold(environment, &bindings, threshold))
+        .transpose()?;
     Ok(CompiledRule {
         id: rule.id.clone(),
         name: rule.name.clone(),
@@ -1298,8 +1508,34 @@ fn compile_rule(
         bindings: rule.bindings.clone(),
         premises,
         duty,
+        vote_threshold,
         conclusions,
         overrides: rule.overrides.clone(),
+    })
+}
+
+fn compile_vote_threshold(
+    environment: &Environment<'_>,
+    bindings: &BTreeMap<&str, &str>,
+    threshold: &VoteThresholdSyntax,
+) -> Result<CompiledVoteThreshold, CompileError> {
+    let decision = resolve_term(environment, bindings, &threshold.decision, threshold.line)?;
+    require_type(
+        environment,
+        &decision,
+        "BoardDecision",
+        "decision",
+        threshold.line,
+    )?;
+    let (vote_coefficient, strict, member_coefficient) = match threshold.threshold {
+        VoteThresholdKind::Majority => (2, true, 1),
+        VoteThresholdKind::TwoThirds => (3, false, 2),
+    };
+    Ok(CompiledVoteThreshold {
+        decision,
+        vote_coefficient,
+        strict,
+        member_coefficient,
     })
 }
 
@@ -1342,9 +1578,19 @@ fn resolve_phrase(
     phrase: &PhraseSyntax,
 ) -> Result<RelationApplication, CompileError> {
     let mut matches = Vec::new();
-    for relation in environment.relations.values() {
+    for (kind, relation) in environment
+        .relations
+        .values()
+        .map(|item| (PropositionKind::Relation, *item))
+        .chain(
+            environment
+                .predicates
+                .values()
+                .map(|item| (PropositionKind::Predicate, *item)),
+        )
+    {
         if let Some(arguments) = match_phrase(environment, bindings, relation, phrase)? {
-            matches.push((relation, arguments));
+            matches.push((kind, relation, arguments));
         }
     }
     match matches.len() {
@@ -1353,9 +1599,10 @@ fn resolve_phrase(
             phrase: phrase.text.clone(),
         }),
         1 => {
-            let (relation, arguments) = matches.pop().expect("one phrase match");
+            let (proposition_kind, relation, arguments) = matches.pop().expect("one phrase match");
             Ok(RelationApplication {
                 relation: relation.name.clone(),
+                proposition_kind,
                 authored_phrase: phrase.text.clone(),
                 arguments,
                 interpretive: relation.interpretation.is_some(),
@@ -1367,7 +1614,7 @@ fn resolve_phrase(
             phrase: phrase.text.clone(),
             relations: matches
                 .into_iter()
-                .map(|(relation, _)| relation.name.clone())
+                .map(|(_, relation, _)| relation.name.clone())
                 .collect(),
         }),
     }
@@ -1611,6 +1858,7 @@ mod tests {
         let compiled = compile(&parse(NOTICE).unwrap()).unwrap();
         let premise = &compiled.rules[0].premises[1];
         assert_eq!(premise.relation, "responsible_for");
+        assert_eq!(premise.proposition_kind, PropositionKind::Predicate);
         assert_eq!(premise.arguments[0].role, "bearer");
         assert_eq!(premise.arguments[0].term.inferred_type, "PublicAgency");
         assert_eq!(premise.arguments[1].term.symbol, "publish");
@@ -1634,8 +1882,8 @@ mod tests {
     #[test]
     fn invalid_relation_argument_is_rejected() {
         let invalid = NOTICE.replace(
-            "hearing is held before BSEED",
-            "hearing_notice is held before BSEED",
+            "BSEED is the forum for hearing",
+            "BSEED is the forum for hearing_notice",
         );
         let error = compile(&parse(&invalid).unwrap()).unwrap_err();
         assert!(matches!(error, CompileError::NoPhraseMatch { .. }));
@@ -1653,7 +1901,7 @@ mod tests {
             diagnose(&invalid),
             vec![LanguageDiagnostic {
                 code: "unknown_concept".to_owned(),
-                line: 25,
+                line: 26,
                 message: "unknown concept `Municipality`".to_owned(),
             }]
         );
@@ -1662,12 +1910,56 @@ mod tests {
     #[test]
     fn missing_fact_is_not_encoded_as_false() {
         let compiled = compile(&parse(NOTICE).unwrap()).unwrap();
-        let relation = compiled
-            .relations
+        let predicate = compiled
+            .predicates
             .iter()
-            .find(|relation| relation.name == "has_general_circulation_in")
+            .find(|predicate| predicate.name == "has_general_circulation_in")
             .unwrap();
-        assert_eq!(relation.interpretation.as_ref().unwrap().status, "open");
+        assert_eq!(predicate.interpretation.as_ref().unwrap().status, "open");
+    }
+
+    #[test]
+    fn separates_universal_bindings_from_applicability_conditions() {
+        let syntax = parse(NOTICE).unwrap();
+        let rule = &syntax.rules[0];
+        assert_eq!(rule.bindings.len(), 3);
+        assert_eq!(rule.premises.len(), 4);
+        assert!(
+            rule.premises
+                .iter()
+                .all(|premise| !looks_like_binding(&premise.text))
+        );
+    }
+
+    #[test]
+    fn for_every_rejects_propositions() {
+        let invalid = NOTICE.replace(
+            "  given\n    Chapter50 requires publication of hearing_notice",
+            "    Chapter50 requires publication of hearing_notice\n\n  given",
+        );
+        let error = parse(&invalid).unwrap_err();
+        assert!(error.message.contains("accepts only `NAME: TYPE` bindings"));
+    }
+
+    #[test]
+    fn given_rejects_typed_bindings() {
+        let invalid = NOTICE.replace(
+            "  given\n    Chapter50 requires publication of hearing_notice",
+            "  given\n    extra_notice: Notice\n    Chapter50 requires publication of hearing_notice",
+        );
+        let error = parse(&invalid).unwrap_err();
+        assert!(
+            error
+                .message
+                .contains("typed bindings belong under `for every`")
+        );
+    }
+
+    #[test]
+    fn relation_and_predicate_names_share_one_namespace() {
+        let invalid = NOTICE.replace("predicate requires_action", "relation forum_for\n  authority: LegalInstrument\n  action: LegalAction\n  subject: LegalMatter\n  phrase\n    \"{authority} requires {action:noun} of {subject}\"\n\npredicate requires_action");
+        let error = compile(&parse(&invalid).unwrap()).unwrap_err();
+        assert!(matches!(error, CompileError::DuplicateSymbol { .. }));
     }
 
     #[test]
@@ -1682,17 +1974,22 @@ mod tests {
                 .sum::<usize>(),
             6
         );
-        assert_eq!(compiled.interpretive_gaps.len(), 7);
+        assert_eq!(compiled.interpretive_gaps.len(), 5);
         assert!(
             compiled
                 .interpretive_gaps
                 .contains(&"waiver_findings_satisfied".to_owned())
         );
-        assert!(
-            compiled
-                .rules
-                .iter()
-                .all(|rule| { rule.duty.is_some() || !rule.conclusions.is_empty() })
-        );
+        let ordinary = &compiled.rules[0].vote_threshold.as_ref().unwrap();
+        assert_eq!(ordinary.vote_coefficient, 2);
+        assert!(ordinary.strict);
+        assert_eq!(ordinary.member_coefficient, 1);
+        let hardship = &compiled.rules[1].vote_threshold.as_ref().unwrap();
+        assert_eq!(hardship.vote_coefficient, 3);
+        assert!(!hardship.strict);
+        assert_eq!(hardship.member_coefficient, 2);
+        assert!(compiled.rules.iter().all(|rule| {
+            rule.duty.is_some() || rule.vote_threshold.is_some() || !rule.conclusions.is_empty()
+        }));
     }
 }

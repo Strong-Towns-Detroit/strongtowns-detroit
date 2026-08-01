@@ -10,6 +10,8 @@ concept CityDepartment is PublicAgency
 
 concept HearingForum is LegalEntity
 
+concept CityGovernment is Organization
+
 concept LegalInstrument
 
 concept LegalMatter
@@ -34,6 +36,9 @@ entity Chapter50
 entity Detroit
   is Municipality
 
+entity CityOfDetroit
+  is CityGovernment
+
 entity BSEED
   is CityDepartment
   is HearingForum
@@ -43,14 +48,20 @@ action publish
   gerund "publishing"
   noun "publication"
 
-relation requires_action
+relation department_of
+  department: CityDepartment
+  government: CityGovernment
+  phrase
+    "{department} is a department of {government}"
+
+predicate requires_action
   authority: LegalInstrument
   action: LegalAction
   subject: LegalMatter
   phrase
     "{authority} requires {action:noun} of {subject}"
 
-relation responsible_for
+predicate responsible_for
   bearer: LegalEntity
   action: LegalAction
   subject: LegalMatter
@@ -63,13 +74,13 @@ relation notice_of
   phrase
     "{notice} is notice of {event}"
 
-relation held_before
-  hearing: PublicHearing
+relation forum_for
   forum: HearingForum
+  hearing: PublicHearing
   phrase
-    "{hearing} is held before {forum}"
+    "{forum} is the forum for {hearing}"
 
-interpretive relation has_general_circulation_in
+interpretive predicate has_general_circulation_in
   publication: Newspaper
   area: GeographicArea
   phrase

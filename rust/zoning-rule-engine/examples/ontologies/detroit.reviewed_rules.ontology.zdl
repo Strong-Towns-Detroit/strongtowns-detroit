@@ -16,6 +16,12 @@ concept BoardDecision is LegalMatter
 
 concept BoardVote is LegalMatter
 
+concept Variance is LegalMatter
+
+concept UseVariance is Variance
+
+concept HardshipUseVariance is UseVariance
+
 concept PreservationFinding is LegalMatter
 
 concept RegulatedUseGrant is LegalMatter
@@ -54,31 +60,16 @@ relation decided_by
   phrase
     "{decision} is decided by {board}"
 
-relation ordinary_bza_matter
+predicate ordinary_bza_matter
   decision: BoardDecision
   phrase
     "{decision} concerns an ordinary BZA matter"
 
-relation hardship_use_variance
+relation decides_variance
   decision: BoardDecision
+  variance: Variance
   phrase
-    "{decision} concerns a hardship relief use variance"
-
-interpretive relation requires_ordinary_concurrence
-  decision: BoardDecision
-  phrase
-    "{decision} requires concurrence from a majority of authorized board members"
-  resolution
-    status: open
-    method: whole number rounding rule reviewed in experiment but not stated in source
-
-interpretive relation requires_two_thirds_concurrence
-  decision: BoardDecision
-  phrase
-    "{decision} requires concurrence from two thirds of authorized board members"
-  resolution
-    status: open
-    method: whole number rounding rule reviewed in experiment but not stated in source
+    "{decision} decides {variance}"
 
 relation rendered_by_vote
   decision: BoardDecision

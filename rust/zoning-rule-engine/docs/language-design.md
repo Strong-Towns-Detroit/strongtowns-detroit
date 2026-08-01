@@ -102,44 +102,50 @@ requires_action(
 )
 ```
 
-Every phrase occurrence must resolve to exactly one canonical typed relation.
+Every phrase occurrence must resolve to exactly one canonical typed
+proposition. A `relation` records durable domain structure among independently
+typed things. A `predicate` names a truth-valued proposition that may be
+supplied as evidence or derived by a rule. Legal force comes from the rule
+conclusion, not from the predicate declaration.
 The compiled form preserves:
 
-- the relation identity;
+- the proposition identity and whether it is a relation or predicate;
 - argument-role identities;
 - local bindings or individual identities;
 - declared and inferred types;
 - source position; and
 - the authored phrase.
 
-Phrase collisions are compile errors. The canonical relation, not its English
+Phrase collisions are compile errors. The canonical proposition, not its English
 rendering, is the semantic identity. Tooling should provide hover information,
-go-to-definition, references, inferred types, and the normalized relation.
+go-to-definition, references, inferred types, and the normalized proposition.
 
 The phrase language is controlled syntax, not unrestricted natural language.
 
-## `given` binds existing entities and facts
+## `for every` binds inputs; `given` states applicability
 
-`given all` introduces typed variables and relational patterns that must all
-match. It does not assert those facts and it does not create legal effects.
+`for every` introduces the rule's universally quantified typed input
+signature. `given` contains only propositions that must all match. It does not
+assert those propositions and it does not create legal effects. Rev1's
+`given all` remains accepted temporarily for old artifacts.
 
 ```text
-given all
+for every
   agency: PublicAgency
   hearing_notice: Notice
   hearing: PublicHearing
 
+given
   Chapter50 requires publication of hearing_notice
   agency is responsible for publishing hearing_notice
   hearing_notice is notice of hearing
-  hearing is held before BSEED
+  BSEED is the forum for hearing
 ```
 
 Here `responsible_for` is necessary because §50-3-10 does not identify the
 responsible agency. The relation binds whichever agency has been assigned that
-responsibility elsewhere. Multiple `given` entries are conjunctive because the
-block says `all`; alternatives must use an explicit alternative construct when
-one is introduced.
+responsibility elsewhere. Multiple `given` entries are conjunctive;
+alternatives require an explicit alternative construct when one is introduced.
 
 ## Rules produce normative effects
 
@@ -170,6 +176,21 @@ declared in the same type environment.
 
 The duty is sourced by its containing rule, so source provenance is not copied
 into every conclusion field.
+
+Vote requirements use a dedicated effect rather than an opaque English
+predicate:
+
+```text
+require concurrence
+  decision: decision
+  threshold: majority
+```
+
+The compiler normalizes `majority` to
+`2 * concurring_votes > member_count` and `two_thirds` to
+`3 * concurring_votes >= 2 * member_count`. These are exact integer
+inequalities. The legal meaning of `member_count` may still require a separate
+sourced definition, but the arithmetic itself is not interpretive.
 
 ## Interpretive gaps are first-class
 
