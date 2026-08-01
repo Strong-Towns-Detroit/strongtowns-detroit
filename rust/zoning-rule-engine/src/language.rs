@@ -1966,6 +1966,12 @@ mod tests {
         assert_eq!(compiled.module, "detroit.article_iii.notice");
         assert_eq!(compiled.rules.len(), 1);
         assert_eq!(compiled.rules[0].body.propositions.len(), 4);
+        assert_eq!(
+            compiled.rules[0].body.propositions[0].arguments[0]
+                .term
+                .symbol,
+            "provision"
+        );
         let CompiledConsequent::Duty(duty) = &compiled.rules[0].consequents[0] else {
             panic!("notice rule must require a duty")
         };
@@ -2022,7 +2028,7 @@ mod tests {
             diagnose(&invalid),
             vec![LanguageDiagnostic {
                 code: "unknown_concept".to_owned(),
-                line: 26,
+                line: 28,
                 message: "unknown concept `Municipality`".to_owned(),
             }]
         );
@@ -2043,7 +2049,7 @@ mod tests {
     fn separates_given_parameters_from_rule_body() {
         let syntax = parse(NOTICE).unwrap();
         let rule = &syntax.rules[0];
-        assert_eq!(rule.parameters.len(), 3);
+        assert_eq!(rule.parameters.len(), 4);
         assert_eq!(rule.body.propositions.len(), 4);
         assert!(
             rule.body
@@ -2066,11 +2072,11 @@ mod tests {
     #[test]
     fn inline_given_binds_one_typed_parameter() {
         let source = NOTICE.replace(
-            "  given\n    agency: PublicAgency\n    hearing_notice: Notice\n    hearing: PublicHearing",
-            "  given agency: PublicAgency\n  given hearing_notice: Notice\n  given hearing: PublicHearing",
+            "  given\n    provision: Chapter50Provision\n    agency: PublicAgency\n    hearing_notice: Notice\n    hearing: PublicHearing",
+            "  given provision: Chapter50Provision\n  given agency: PublicAgency\n  given hearing_notice: Notice\n  given hearing: PublicHearing",
         );
         let syntax = parse(&source).unwrap();
-        assert_eq!(syntax.rules[0].parameters.len(), 3);
+        assert_eq!(syntax.rules[0].parameters.len(), 4);
     }
 
     #[test]

@@ -133,6 +133,7 @@ not a fourth semantic part.
 
 ```text
 given
+  provision: Chapter50Provision
   agency: PublicAgency
   hearing_notice: Notice
   hearing: PublicHearing
@@ -143,7 +144,7 @@ that the engine must be able to establish from facts or other rules:
 
 ```text
 if
-  Chapter50 requires publication of hearing_notice
+  provision requires publication of hearing_notice
   agency is responsible for publishing hearing_notice
   hearing_notice is notice of hearing
   BSEED is the forum for hearing

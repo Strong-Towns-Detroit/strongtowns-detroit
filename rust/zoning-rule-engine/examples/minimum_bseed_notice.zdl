@@ -8,6 +8,8 @@ concept HearingForum is LegalEntity
 concept CityGovernment is Organization
 
 concept LegalInstrument
+concept LegalProvision is LegalInstrument
+concept Chapter50Provision is LegalProvision
 
 concept LegalMatter
 concept Notice is LegalMatter
@@ -90,12 +92,13 @@ rule minimum_bseed_notice
     "At least 15 days prior to a public hearing being held before the Buildings, Safety Engineering, and Environmental Department."
 
   given
+    provision: Chapter50Provision
     agency: PublicAgency
     hearing_notice: Notice
     hearing: PublicHearing
 
   if
-    Chapter50 requires publication of hearing_notice
+    provision requires publication of hearing_notice
     agency is responsible for publishing hearing_notice
     hearing_notice is notice of hearing
     BSEED is the forum for hearing

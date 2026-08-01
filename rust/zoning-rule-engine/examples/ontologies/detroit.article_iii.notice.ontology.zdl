@@ -14,6 +14,10 @@ concept CityGovernment is Organization
 
 concept LegalInstrument
 
+concept LegalProvision is LegalInstrument
+
+concept Chapter50Provision is LegalProvision
+
 concept LegalMatter
 
 concept Notice is LegalMatter
