@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zoning language review</title>
+  <link rel="stylesheet" href="styles.css?v=20260801-4">
+</head>
+<body>
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">Strong Towns Detroit · Zoning language</p>
+      <h1>Source-to-compiler review</h1>
+    </div>
+  </header>
+
+  <main>
+    <section id="panes" class="panes view-all"></section>
+
+    <div id="composer-home" hidden><div class="composer">
+        <div class="section-title">
+          <div><p class="eyebrow">Review comment</p><h2>Comment on this passage</h2></div>
+          <button id="clear-draft" class="quiet">Clear draft</button>
+        </div>
+        <div id="draft-anchors" class="anchor-list empty">Select words or click a line number.</div>
+        <textarea id="comment-body" placeholder="Describe the issue, decision, or requested change"></textarea>
+        <div class="composer-actions">
+          <span id="draft-help">Draft and selected passages autosave locally.</span>
+          <button id="submit-comment" disabled>Submit comment</button>
+        </div>
+      </div></div>
+  </main>
+
+  <aside id="review-sidebar" class="review-sidebar" aria-label="Review controls and comments">
+    <button id="toggle-sidebar" class="sidebar-toggle" aria-expanded="true" title="Collapse sidebar">→</button>
+    <div class="sidebar-content">
+      <section class="sidebar-section">
+        <p class="control-label">Rule</p>
+        <div class="rule-nav">
+          <button id="previous-rule" aria-label="Previous rule">←</button>
+          <select id="rule-select" aria-label="Rule"></select>
+          <button id="next-rule" aria-label="Next rule">→</button>
+        </div>
+        <div id="rule-meta"></div>
+        <label class="version-control"><span>Artifact version</span><select id="version-select"></select></label>
+      </section>
+
+      <section class="sidebar-section comments-section">
+        <p class="control-label">Comments</p>
+        <p class="comments-empty">Select words or click a line number to begin a comment.</p>
+        <div id="comment-layer" class="comment-layer" aria-live="polite"></div>
+      </section>
+
+      <nav class="sidebar-section window-toolbar" aria-label="Review layout controls">
+        <div class="control-group window-controls">
+          <span class="control-label">Windows</span>
+          <button class="active window-toggle" data-toggle-pane="text" aria-pressed="true">Legal text</button>
+          <button class="active window-toggle" data-toggle-pane="presented" aria-pressed="true">Presented rule</button>
+          <button class="active window-toggle" data-toggle-pane="ontology" aria-pressed="true">Ontology</button>
+          <button class="active window-toggle" data-toggle-pane="compiled" aria-pressed="true">Compiled form</button>
+        </div>
+        <div class="control-group display-controls">
+          <span class="control-label">Display</span>
+          <button id="toggle-wrap" aria-pressed="false">Wrap text</button>
+          <button class="quiet reset-layout" id="reset-layout">Reset layout</button>
+        </div>
+      </nav>
+
+      <section class="sidebar-section file-actions">
+        <p class="control-label">Review file</p>
+        <div>
+          <button id="export-review">Export</button>
+          <label class="button">Import<input id="import-review" type="file" accept="application/json"></label>
+        </div>
+      </section>
+
+    </div>
+  </aside>
+
+  <script src="data.js?v=20260801-4"></script>
+  <script src="app.js?v=20260801-4"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "replies": {
+    "1813f373-bbbc-4c80-af5a-7c7dadadf7b6": [{
+      "id": "codex-r1-bindings", "author": "Codex", "createdAt": "2026-08-01T20:00:00Z",
+      "body": "Accepted. These are two distinct grammatical categories: typed universally quantified bindings, followed by premise predicates. I propose `for every` for the bindings and `given` for the predicates; any shorter spelling should compile to that same representation."
+    }],
+    "ae14e0d0-8106-4da3-bddf-eb26f245e9e9": [{
+      "id": "codex-r1-existential", "author": "Codex", "createdAt": "2026-08-01T20:00:01Z",
+      "body": "Agreed that this is unique. `some` introduces an existential scoped to the means of satisfying the duty, unlike the universal rule bindings. I am retaining that semantic distinction while leaving the final surface phrase open."
+    }],
+    "3035980a-ced6-4ffd-9ed5-b21a222213c1": [{
+      "id": "codex-r1-time", "author": "Codex", "createdAt": "2026-08-01T20:00:02Z",
+      "body": "Yes. The controlled-English phrase should compile into four typed components: bound (`at least`), exact duration, direction (`before`/`after`), and typed event. The present form is readable enough to retain while we generalize the normalized representation."
+    }],
+    "b9f5520a-93bb-49f9-b950-bbee5926cc50": [{
+      "id": "codex-r1-forum", "author": "Codex", "createdAt": "2026-08-01T20:00:03Z",
+      "body": "Accepted. The source wording remains in provenance, but the canonical relation should not preserve its ambiguity. I propose `forum_for`, phrased as `BSEED is the forum for hearing`."
+    }],
+    "db7d42dd-6e6e-4467-9711-1dc591d99c79": [{
+      "id": "codex-r1-government", "author": "Codex", "createdAt": "2026-08-01T20:00:04Z",
+      "body": "Accepted. Type membership does not express departmental affiliation. We also need to distinguish geographic Detroit from the City government, then assert a sourced `department_of(BSEED, CityOfDetroit)` relation."
+    }],
+    "03be7032-ecfb-43c2-bbd1-a862a9f0abca": [{
+      "id": "codex-r2-agencies", "author": "Codex", "createdAt": "2026-08-01T20:00:05Z",
+      "body": "Accepted as an ontology gap. Shared types do not express either organizational affiliation or appellate jurisdiction. Those should be distinct sourced relations; we should not infer that the BZA is subordinate to BSEED merely because it reviews some BSEED decisions."
+    }],
+    "68f4e9bc-4975-45b7-b730-79bb330831dd": [{
+      "id": "codex-r2-input", "author": "Codex", "createdAt": "2026-08-01T20:00:06Z",
+      "body": "Agreed. This is the rule's typed input signature—the declarative analogue of a function parameter. It is universally quantified over matching BoardDecision instances."
+    }],
+    "1e06fa29-9e5b-4fa0-b537-2df52ab2056a": [{
+      "id": "codex-r2-guards", "author": "Codex", "createdAt": "2026-08-01T20:00:07Z",
+      "body": "Close: these are best understood as guards or pattern-matching conditions, rather than an ordered imperative body. They restrict the domain over which the rule derives its result."
+    }],
+    "4c9d6710-1bce-4a24-b01f-65dd9589dd8d": [{
+      "id": "codex-r2-output", "author": "Codex", "createdAt": "2026-08-01T20:00:08Z",
+      "body": "Agreed, with the qualification that outputs may be multiple, jointly derived by several rules, or defeated by precedence. Formally this is closer to a typed relation or set-valued partial function than a single-valued function."
+    }],
+    "e81b2440-24b5-4745-ad14-650357077a66": [{
+      "id": "codex-r2-two-thirds", "author": "Codex", "createdAt": "2026-08-01T20:00:09Z",
+      "body": "Accepted. The threshold itself is exact: `3 × concurring_votes >= 2 × member_count`. No floating point or interpretive rounding is needed. Only the legal definition of the member-count denominator may remain unresolved."
+    }],
+    "48de4750-c5eb-424b-9094-30b47813d06c": [{
+      "id": "codex-r2-majority", "author": "Codex", "createdAt": "2026-08-01T20:00:10Z",
+      "body": "The exact majority condition is strict: `2 × concurring_votes > member_count`, rather than `>= 1/2`, which would permit a tie. Again, only the denominator's legal meaning may require interpretation."
+    }],
+    "e9e38f2a-451e-481c-9271-1fc25ea52245": [{
+      "id": "codex-r2-variance", "author": "Codex", "createdAt": "2026-08-01T20:00:11Z",
+      "body": "Accepted. We need an explicit Variance hierarchy and must distinguish the variance, the hardship-relief petition requesting it, and the decision on that request. The current unary predicate collapses all three."
+    }],
+    "f5536a30-4fd8-4759-8cbd-3d6d8a1e68f3": [{
+      "id": "codex-r2-procedure", "author": "Codex", "createdAt": "2026-08-01T20:00:12Z",
+      "body": "Accepted. A generic ontology relation may describe a state such as `final_at(decision, instant)`, but the three-business-day calculation and state transition belong in a traced rule. The specialized predicate currently compresses an entire procedure into ontology vocabulary."
+    }, {
+      "id": "codex-r2-predicate-kinds", "author": "Codex", "createdAt": "2026-08-01T20:30:00Z",
+      "body": "Yes: the prototype currently defines every atomic proposition as a `relation`, which is the conflation your later comments expose. We need explicit declaration kinds. My current division is: `relation` for structural associations among typed things; `fact` or `predicate` for externally supplied truth-valued claims; and a rule conclusion for legally derived states. I favor an explicit `predicate` declaration rather than pretending every proposition is an ontological relation."
+    }],
+    "bb6febe8-fd22-4cc1-921a-a7ce7d885f1b": [{
+      "id": "codex-r2-immediate", "author": "Codex", "createdAt": "2026-08-01T20:00:13Z",
+      "body": "Agreed. Immediate finality is another rule-derived temporal effect, not a special intrinsic property of a decision. It should conclude a generic finality state at a typed event-relative instant."
+    }],
+    "864ea8bb-0006-43e9-8950-c6d0bb5a47cf": [{
+      "id": "codex-r2-lacks-permit", "author": "Codex", "createdAt": "2026-08-01T20:30:01Z",
+      "body": "Agreed. The permit record and relevant dates are inputs; whether the six-month condition is met is evaluated by a procedural rule. `lacks_timely_permit` should not be primitive ontology vocabulary."
+    }],
+    "19bc3de2-65e8-4290-98b9-cb4f232e07ae": [{
+      "id": "codex-r2-null-void", "author": "Codex", "createdAt": "2026-08-01T20:30:02Z",
+      "body": "Accepted. `becomes_null_and_void` is a derived legal status transition, not a structural relation. The ontology may define a `LegalStatus` type and a generic status-at-time predicate; the rule must determine when the grant acquires that status."
+    }],
+    "dec414c6-6d32-4cea-b476-4fd5e8301dde": [{
+      "id": "codex-r2-extension-for", "author": "Codex", "createdAt": "2026-08-01T20:30:03Z",
+      "body": "Agreed. This is a proper structural relation between two independently typed things and belongs in the ontology."
+    }],
+    "cdfa61fb-734d-4a14-8e09-fc4e45d2c8e2": [{
+      "id": "codex-r2-authority-extend", "author": "Codex", "createdAt": "2026-08-01T20:30:04Z",
+      "body": "Agreed. The ontology can relate an authority to its jurisdiction, but whether it may grant this extension, and the twelve-month ceiling, are legal conclusions produced by rules. This declaration must be decomposed."
+    }],
+    "1d9893c1-b86e-4006-a0ff-a7ecb02d07b0": [{
+      "id": "codex-r2-extension-prohibited", "author": "Codex", "createdAt": "2026-08-01T20:30:05Z",
+      "body": "Yes. This is a normative result, not an ontology relation. I would model the result as a typed permission/prohibition conclusion rather than a bare Boolean so its legal force and provenance survive compilation."
+    }],
+    "8b3de8d3-1472-4578-b78b-f03ebcd5b694": [{
+      "id": "codex-r2-extension-expired", "author": "Codex", "createdAt": "2026-08-01T20:30:06Z",
+      "body": "Accepted. Expiration is a derived temporal status. The expiration instant and status are rule outputs over extension facts, not a structural relation declaration."
+    }],
+    "59cd7f01-af67-483f-98f4-690bd1016f02": [{
+      "id": "codex-r2-additional-extension", "author": "Codex", "createdAt": "2026-08-01T20:30:07Z",
+      "body": "Accepted. This is another prohibition conclusion and should be produced by the rule governing extension count and expiry."
+    }],
+    "3b8b623e-d563-469f-b3b8-5b05cbab34d4": [{
+      "id": "codex-r2-new-application", "author": "Codex", "createdAt": "2026-08-01T20:30:08Z",
+      "body": "Agreed. `new_application_for(application, use)` is a genuine association between typed objects. Whether it is legally permitted to proceed remains a separate rule conclusion."
+    }],
+    "0fc4440a-88d8-4161-982c-98c962ee3f88": [{
+      "id": "codex-r2-hearing-held", "author": "Codex", "createdAt": "2026-08-01T20:30:09Z",
+      "body": "Agreed that the current unary declaration is wrong. A historical fact can relate a specific hearing to an application, but the requirement that a further hearing occur is procedural and belongs in a rule. We need both the factual relation and the obligation rule, not this compressed phrase."
+    }],
+    "a2f8b28d-b9f6-4049-a49c-879a70adc416": [{
+      "id": "codex-r2-route-permitted", "author": "Codex", "createdAt": "2026-08-01T20:30:10Z",
+      "body": "Accepted. This is a permission derived from expiry, application identity, and hearing conditions. It belongs in a rule conclusion."
+    }],
+    "ca7b17c2-da8f-40e2-b57a-6e08900bcc43": [{
+      "id": "codex-r2-filed-by", "author": "Codex", "createdAt": "2026-08-01T20:30:11Z",
+      "body": "Agreed. This is a genuine application-to-applicant relation and should remain ontology vocabulary."
+    }],
+    "73cc93a4-dbe6-4cdb-bb0b-3307cadfacf1": [{
+      "id": "codex-r2-delinquency", "author": "Codex", "createdAt": "2026-08-01T20:30:12Z",
+      "body": "Agreed. This is a qualified factual relation among applicant, obligation, and violation. Its presence may trigger an eligibility rule, but it is not itself the eligibility result."
+    }],
+    "9c836d91-f138-47f2-b1d9-7ce68b2af136": [{
+      "id": "codex-r2-ineligible", "author": "Codex", "createdAt": "2026-08-01T20:30:13Z",
+      "body": "Agreed. `filed_by` supplies the applicant/application relation; facts about delinquency, property, and correction enter the evaluation; ineligibility is the derived normative result. It should be concluded by a rule and retain the application as context."
+    }],
+    "7bc53831-b6fa-415c-832e-fc03812b4e6a": [{
+      "id": "codex-r2-concerns-property", "author": "Codex", "createdAt": "2026-08-01T20:30:14Z",
+      "body": "Agreed. This is a genuine structural relation and belongs in the ontology."
+    }],
+    "ccd3534d-3e97-47a5-8e7a-d6a0dff2f28a": [{
+      "id": "codex-r2-foreclosure", "author": "Codex", "createdAt": "2026-08-01T20:30:15Z",
+      "body": "The relation name is too lossy. Applicant-to-property does not imply foreclosure; the acquisition event or instrument carries that meaning. We should model an `Acquisition` with acquirer, property, and method, or use an explicitly sourced ternary predicate. The eligibility consequence then belongs in a separate rule."
+    }],
+    "0c061b79-82ec-49b8-8a32-2511b27fdc43": [{
+      "id": "codex-r2-corrects-violation", "author": "Codex", "createdAt": "2026-08-01T20:30:16Z",
+      "body": "Mostly yes. The proposal's asserted remedial relationship may be an input fact, but legal sufficiency—whether it corrects enough of the violation for the exception—is a rule-derived determination. The current predicate fails to distinguish those."
+    }],
+    "014e5eae-210e-4a73-a7fb-d496d9ede9f2": [{
+      "id": "codex-r2-eligible", "author": "Codex", "createdAt": "2026-08-01T20:30:17Z",
+      "body": "Accepted. Eligibility is a derived result, ideally a typed legal status or permission rather than ontology structure."
+    }],
+    "260fed0a-a418-43e5-960d-4447c991f49b": [{
+      "id": "codex-r2-spacing", "author": "Codex", "createdAt": "2026-08-01T20:30:18Z",
+      "body": "Agreed. The underlying site identities and measured distances are inputs. Counting qualifying sites within the legally defined distance and deciding that the threshold is reached belong in the application-evaluation rule."
+    }],
+    "d9e27a5f-d382-4787-a26b-c66dccf7ca60": [{
+      "id": "codex-r2-rule-scope", "author": "Codex", "createdAt": "2026-08-01T20:30:19Z",
+      "body": "Yes. This review artifact incorrectly pairs one narrow vote-threshold rule with ontology vocabulary extracted from many neighboring provisions. Those provisions should become dozens of independently sourced rules that may compose through shared typed facts and conclusions. The full ontology can remain visible, but each rule needs explicit dependency and coverage traces."
+    }],
+    "b8026029-3caa-49fa-974f-057c56ae2661": [{
+      "id": "codex-r2-waiver", "author": "Codex", "createdAt": "2026-08-01T20:30:20Z",
+      "body": "Agreed. Applicable waivers may be factual inputs; absence under a complete authoritative record and its consequence are determinations in the evaluation rule. The current interpretive relation hides both the closed-world assumption and the legal inference."
+    }]
+  }
+}

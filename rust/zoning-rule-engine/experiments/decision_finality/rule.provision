@@ -1,0 +1,15 @@
+module detroit_bza_decision_finality
+import detroit_bza_decision_finality
+provision ordinary_finality
+  id "detroit:article-ii:section-50-2-79:ordinary-finality"
+  source "§50-2-79" quote "Decisions that are rendered by the Board of Zoning Appeals shall not become final until 4:00 p.m. on the third business day after the vote,"
+  if decision_by(decision, DetroitBZA) && rendered_by_vote(decision, vote) && !certified_immediate_effect(decision)
+  require final_at(decision) == at_time(add_business_days(date(occurred_at(vote)), 3), 16:00)
+end
+provision certified_immediate_effect
+  id "detroit:article-ii:section-50-2-79:immediate-effect-exception"
+  source "§50-2-79 exception" quote "unless the Board finds the immediate effect of such order necessary for the preservation of property or personal rights and so certifies on the record."
+  overrides ordinary_finality
+  if decision_by(decision, DetroitBZA) && finding_for(finding, decision) && necessary_to_preserve(finding, PropertyRights || PersonalRights) && certified_by(finding, record_certification)
+  require final_at(decision) == occurred_at(vote_rendering(decision))
+end

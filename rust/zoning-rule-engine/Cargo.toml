@@ -1,0 +1,27 @@
+[package]
+name = "zoning-rule-engine"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "A strongly typed, traceable engine for executable land-use law"
+license = "MIT"
+repository = "https://github.com/Strong-Towns-Detroit/zoning-rule-engine"
+readme = "README.md"
+keywords = ["zoning", "legal", "geospatial", "rules-as-code"]
+categories = ["data-structures", "science::geo"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+thiserror = "2.0"
+
+[dev-dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[lints.clippy]
+all = "warn"
+pedantic = "warn"

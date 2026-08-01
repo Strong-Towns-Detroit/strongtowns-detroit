@@ -1,0 +1,16 @@
+module detroit.regulated_use_grant_lapse
+import ontology.zonto
+source lapse id detroit:article-iii:section-50-3-386:lapse
+source extension id detroit:article-iii:section-50-3-386:extension
+source precedence id detroit:article-iii:section-50-3-386:notwithstanding
+source renewal id detroit:article-iii:section-50-3-386:no-additional-extension
+extension_barred(Grant) :- grant_for(Grant, Use), unlawfully_established_or_expanded(Use), legalized_by_regulated_use_hearing(Use).
+valid_extension(Grant, ExtendedUntil) :- extension_of(Extension, Grant), authorized_by(Extension, Authority), extension_authority(Authority), extended_until(Extension, ExtendedUntil), granted_at(Grant, GrantedAt), ExtendedUntil <= add_calendar_months(GrantedAt, 18), not extension_barred(Grant).
+effective_deadline(Grant, ExtendedUntil) :- valid_extension(Grant, ExtendedUntil).
+effective_deadline(Grant, InitialDeadline) :- granted_at(Grant, GrantedAt), InitialDeadline = add_calendar_months(GrantedAt, 6), not valid_extension(Grant, _).
+null_and_void_at(Grant, Deadline) :- effective_deadline(Grant, Deadline), not permit_obtained_by(Grant, Deadline).
+permit_obtained_by(Grant, Deadline) :- permit_under(Permit, Grant), obtained_at(Permit, ObtainedAt), ObtainedAt <= Deadline.
+extension_authority(BSEED).
+extension_authority(DetroitBZA).
+additional_extension_prohibited(Grant) :- extension_of(Extension, Grant), expired(Extension).
+may_proceed_as_new_application(Use) :- new_application_for(Application, Use), hearing_for(Hearing, Application).

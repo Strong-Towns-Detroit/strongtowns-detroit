@@ -1,0 +1,13 @@
+module detroit.controlled_use_waiver
+import ontology.zonto
+source district_bar id detroit:article-iii:section-50-3-443:district-bar
+source lead_in id detroit:article-iii:section-50-3-443:findings | may be waived, provided, that any one of the following findings is made
+source terminal_join id detroit:article-iii:section-50-3-443:findings | ; and (2)
+coordination_signal(findings, lead_in, any_one).
+coordination_signal(findings, terminal_join, and).
+coordination_status(findings, unresolved).
+district_permission_bar(Proposal) :- located_in_district(Proposal, District), not permitted_by_right(Proposal, District), not conditionally_permitted(Proposal, District).
+candidate_finding(Proposal, center_qualification) :- only_controlled_use_in_center(Proposal, Center), establishment_count(Center, Count), Count >= 2, usable_retail_area(Center, Area), Area >= 50000 sq_ft, gross_floor_area(Center, Gfa), private_off_street_parking_spaces(Center, Parking), Parking >= ceil_div(Gfa, 200 sq_ft).
+candidate_finding(Proposal, documented_improvement) :- finding_for(Finding, Proposal), contributes_to(Finding, Improvement), qualifying_improvement(Improvement), determined_and_documented_by(Finding, PlanningDirector).
+establishment_count(Center, count_distinct<Establishment>) :- establishment_in(Establishment, Center).
+qualifying_improvement(Social). qualifying_improvement(Economic). qualifying_improvement(Aesthetic). qualifying_improvement(PhysicalImprovement).

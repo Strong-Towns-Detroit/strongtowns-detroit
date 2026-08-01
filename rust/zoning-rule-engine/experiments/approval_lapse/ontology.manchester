@@ -1,0 +1,35 @@
+Ontology: DetroitRegulatedUseGrants
+Class: RegulatedUseGrant
+Class: RegulatedUse
+Class: Permit
+Class: Extension
+Class: Application
+Class: PublicHearing
+Class: DecisionMakingBody
+ObjectProperty: grantFor
+  Domain: RegulatedUseGrant
+  Range: RegulatedUse
+ObjectProperty: permitUnder
+  Domain: Permit
+  Range: RegulatedUseGrant
+ObjectProperty: extensionOf
+  Domain: Extension
+  Range: RegulatedUseGrant
+ObjectProperty: authorizedBy
+  Domain: Extension
+  Range: DecisionMakingBody
+ObjectProperty: newApplicationFor
+  Domain: Application
+  Range: RegulatedUse
+ObjectProperty: hearingFor
+  Domain: PublicHearing
+  Range: Application
+DataProperty: grantedAt
+  Domain: RegulatedUseGrant
+  Range: LocalDate
+DataProperty: obtainedAt
+  Domain: Permit
+  Range: LocalDate
+DataProperty: extendedUntil
+  Domain: Extension
+  Range: LocalDate

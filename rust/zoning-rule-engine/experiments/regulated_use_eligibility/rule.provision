@@ -1,0 +1,20 @@
+module detroit_regulated_use_eligibility
+import detroit_regulated_use_eligibility
+provision delinquent_applicant_ineligible
+  id "detroit:article-iii:section-50-3-341:b:ineligibility"
+  source "§50-3-341(b)" quote "a person is ineligible to apply for a regulated use where the person is delinquent in paying a civil fine, costs, or a justice system assessment imposed by the Blight Administrative Hearings Bureau"
+  if filed_by(application, applicant) && delinquent_on(applicant, obligation) && obligation_from(obligation, violation) && !eligibility_exception(application, applicant, violation)
+  prohibit eligible_to_apply(applicant, application)
+end
+provision eligibility_exceptions
+  id "detroit:article-iii:section-50-3-341:b:exceptions"
+  source "§50-3-341(b) exceptions" quote "This ineligibility does not apply to an applicant for a zoning authorization if the applicant became the owner of the property by foreclosure or by taking a deed in lieu of foreclosure ... Further, this ineligibility does not apply if the zoning authorization will correct, in whole or in part, the blight violation that was the subject of the delinquent payment."
+  if (concerns_property(application, property) && acquired_by_foreclosure_or_deed_in_lieu(applicant, property)) || authorization_corrects(application, violation)
+  permit eligibility_exception(application, applicant, violation)
+end
+provision regulated_use_spacing
+  id "detroit:article-iii:section-50-3-341:c:spacing"
+  source "§50-3-341(c)" quote "shall not approve any such request where there are already in existence two or more regulated uses within 1,000 feet of the boundaries of the site of the proposed regulated use, except as provided for through the waiver provisions"
+  if count distinct site where legally_established(site) && boundary_distance_to(application, site) <= 1000 ft >= 2 && !exists waiver: waiver_for(waiver, application)
+  prohibit approve(application)
+end

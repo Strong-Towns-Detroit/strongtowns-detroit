@@ -1,0 +1,10 @@
+module detroit.regulated_use_eligibility
+import ontology.zonto
+source ineligibility id detroit:article-iii:section-50-3-341:b:ineligibility | a person is ineligible to apply for a regulated use where the person is delinquent in paying a civil fine, costs, or a justice system assessment imposed by the Blight Administrative Hearings Bureau
+source exceptions id detroit:article-iii:section-50-3-341:b:exceptions | This ineligibility does not apply to an applicant for a zoning authorization if the applicant became the owner of the property by foreclosure or by taking a deed in lieu of foreclosure ... Further, this ineligibility does not apply if the zoning authorization will correct, in whole or in part, the blight violation that was the subject of the delinquent payment.
+source spacing id detroit:article-iii:section-50-3-341:c:spacing | shall not approve any such request where there are already in existence two or more regulated uses within 1,000 feet of the boundaries of the site of the proposed regulated use, except as provided for through the waiver provisions
+eligibility_exception(Application, Applicant, Violation) :- concerns_property(Application, Property), acquired_by_foreclosure_or_deed_in_lieu(Applicant, Property).
+eligibility_exception(Application, Applicant, Violation) :- authorization_corrects(Application, Violation), filed_by(Application, Applicant).
+ineligible(Applicant, Application) :- filed_by(Application, Applicant), delinquent_on(Applicant, Obligation), obligation_from(Obligation, Violation), not eligibility_exception(Application, Applicant, Violation).
+nearby_regulated_count(Application, count_distinct<Site>) :- legally_established(Site), boundary_distance_to(Application, Site, Distance), Distance <= 1000 ft.
+approval_prohibited(Application) :- nearby_regulated_count(Application, Count), Count >= 2, not waiver_for(_, Application).

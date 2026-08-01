@@ -1,0 +1,19 @@
+module detroit_controlled_use_waiver is
+  concept ControlledUseProposal
+  concept ZoningDistrict
+  concept NeighborhoodShoppingCenter
+  concept CommercialEstablishment
+  concept ImprovementFinding
+  concept PlanningDirector
+  relation located_in_district is from ControlledUseProposal to ZoningDistrict end
+  relation located_in_center is from ControlledUseProposal to NeighborhoodShoppingCenter end
+  relation establishment_in is from CommercialEstablishment to NeighborhoodShoppingCenter end
+  relation finding_for is from ImprovementFinding to ControlledUseProposal end
+  relation determined_and_documented_by is from ImprovementFinding to PlanningDirector end
+  measure usable_retail_area is for NeighborhoodShoppingCenter value Area end
+  measure gross_floor_area is for NeighborhoodShoppingCenter value Area end
+  measure private_off_street_parking_spaces is for NeighborhoodShoppingCenter value WholeCount end
+  predicate permitted_by_right(ControlledUseProposal, ZoningDistrict)
+  predicate conditionally_permitted(ControlledUseProposal, ZoningDistrict)
+  predicate only_controlled_use_in_center(ControlledUseProposal, NeighborhoodShoppingCenter)
+end

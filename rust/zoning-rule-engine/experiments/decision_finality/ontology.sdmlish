@@ -1,0 +1,13 @@
+module detroit_bza_decision_finality is
+  concept DecisionMakingBody
+  concept BoardDecision
+  concept BoardVote
+  concept NecessityFinding
+  concept RecordCertification
+  individual DetroitBZA is DecisionMakingBody
+  relation decision_by is from BoardDecision to DecisionMakingBody end
+  relation rendered_by_vote is from BoardDecision to BoardVote end
+  relation finding_for is from NecessityFinding to BoardDecision end
+  relation certified_by is from NecessityFinding to RecordCertification end
+  measure occurred_at is for BoardVote value LocalDateTime end
+end

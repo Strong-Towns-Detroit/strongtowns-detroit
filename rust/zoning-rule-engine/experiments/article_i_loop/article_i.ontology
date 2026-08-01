@@ -1,0 +1,31 @@
+module detroit.article_i
+
+concept LegalInstrument
+concept Provision
+concept Land
+concept GovernmentOwnedLand specializes Land
+concept Exemption
+concept DistrictBoundary
+concept ZoningMap
+concept PublicRightOfWay
+concept PrivateAgreement
+concept Approval
+concept Permit
+concept Application
+concept Project
+concept Use
+concept Violation
+concept LegalNonconformity
+concept DevelopmentStandard
+concept DecisionMakingBody
+concept CourtHolding
+
+value EffectiveDate: Date
+value ExpirationDate: Date
+value SubmissionDate: Date
+value ExtensionCount: WholeCount
+value ExtensionDuration: Duration
+value IsComplete: Boolean
+value IsPending: Boolean
+value IsMoreRestrictive: Boolean
+

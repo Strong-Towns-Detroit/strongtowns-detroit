@@ -1,0 +1,17 @@
+prefix detroit https://detroitmi.gov/zoning/
+class Applicant
+class RegulatedUseApplication
+class Property
+class DelinquentObligation
+class BlightViolation
+class RegulatedUseSite
+class SpacingWaiver
+property filed_by domain RegulatedUseApplication range Applicant min 1 max 1
+property concerns_property domain RegulatedUseApplication range Property min 1 max 1
+property delinquent_on domain Applicant range DelinquentObligation
+property obligation_from domain DelinquentObligation range BlightViolation min 1 max 1
+property acquired_by_foreclosure_or_deed_in_lieu domain Applicant range Property
+property authorization_corrects domain RegulatedUseApplication range BlightViolation
+property waiver_for domain SpacingWaiver range RegulatedUseApplication
+datatype boundary_distance_to domain RegulatedUseApplication target RegulatedUseSite range Length
+predicate legally_established domain RegulatedUseSite

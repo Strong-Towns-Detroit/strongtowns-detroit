@@ -1,0 +1,7 @@
+obligation_id	source_span	ontology_terms	rule_field	checker	status
+III-50-3-10-actor	§50-3-10	Agency;PublishedNotice;responsible_for	obligated_actor	canonical signature + domain/range	implemented
+III-50-3-10-forum	§50-3-10(1)	HearingForum;PublicHearing;forum_for	BSEED hearing forum	canonical signature + BSEED types	implemented
+III-50-3-10-applicability	§50-3-10	PublishedNotice;LegalRequirement;required_by	Chapter 50 required notice	canonical signature	implemented
+III-50-3-10-time	§50-3-10(1)	PublishedNotice;PublicHearing;precedes	minimum 15 days inclusive	Rust tests + Lean theorem	implemented
+III-50-3-10-provenance	§50-3-10; §50-3-10(1)	—	stable ID; exact spans	certificate equality	implemented
+III-50-3-10-modality	§50-3-10; §50-3-10(1)	—	strict; non-defeasible; no exception	certificate equality	implemented

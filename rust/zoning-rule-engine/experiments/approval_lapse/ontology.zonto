@@ -1,0 +1,19 @@
+prefix detroit https://detroitmi.gov/zoning/
+class RegulatedUseGrant
+class RegulatedUse
+class Permit
+class Extension
+class Application
+class PublicHearing
+class DecisionMakingBody
+property grant_for domain RegulatedUseGrant range RegulatedUse min 1 max 1
+property permit_under domain Permit range RegulatedUseGrant
+property extension_of domain Extension range RegulatedUseGrant min 1 max 1
+property authorized_by domain Extension range DecisionMakingBody min 1 max 1
+property new_application_for domain Application range RegulatedUse
+property hearing_for domain PublicHearing range Application
+datatype granted_at domain RegulatedUseGrant range LocalDate min 1 max 1
+datatype obtained_at domain Permit range LocalDate min 1 max 1
+datatype extended_until domain Extension range LocalDate min 1 max 1
+predicate unlawfully_established_or_expanded domain RegulatedUse
+predicate legalized_by_regulated_use_hearing domain RegulatedUse

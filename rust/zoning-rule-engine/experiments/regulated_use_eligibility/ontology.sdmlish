@@ -1,0 +1,18 @@
+module detroit_regulated_use_eligibility is
+  concept Applicant
+  concept RegulatedUseApplication
+  concept Property
+  concept DelinquentObligation
+  concept BlightViolation
+  concept RegulatedUseSite
+  concept SpacingWaiver
+  relation filed_by is from RegulatedUseApplication to Applicant end
+  relation concerns_property is from RegulatedUseApplication to Property end
+  relation delinquent_on is from Applicant to DelinquentObligation end
+  relation obligation_from is from DelinquentObligation to BlightViolation end
+  relation acquired_by_foreclosure_or_deed_in_lieu is from Applicant to Property end
+  relation authorization_corrects is from RegulatedUseApplication to BlightViolation end
+  relation waiver_for is from SpacingWaiver to RegulatedUseApplication end
+  measure boundary_distance_to is for RegulatedUseApplication, RegulatedUseSite value Length end
+  predicate legally_established(RegulatedUseSite)
+end

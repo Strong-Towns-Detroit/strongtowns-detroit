@@ -1,0 +1,40 @@
+module detroit_bza_voting is
+
+  concept DecisionMakingBody
+  concept BoardDecision
+  concept MatterKind
+
+  individual DetroitBZA is DecisionMakingBody
+  individual ReverseOrAdjustAdministrativeAction is MatterKind
+  individual ApplicantFavorableMatter is MatterKind
+  individual Variance is MatterKind
+  individual HardshipReliefUseVariance is MatterKind
+
+  relation decision_by is
+    from BoardDecision
+    to DecisionMakingBody
+  end
+
+  relation matter_kind is
+    from BoardDecision
+    to MatterKind
+  end
+
+  relation specializes is
+    from MatterKind
+    to MatterKind
+  end
+
+  measure authorized_members is
+    for DecisionMakingBody
+    value WholeCount
+  end
+
+  measure concurring_votes is
+    for BoardDecision
+    value WholeCount
+  end
+
+  fact specializes(HardshipReliefUseVariance, Variance)
+
+end

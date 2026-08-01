@@ -1,0 +1,28 @@
+module detroit_regulated_use_grant_lapse
+import detroit_regulated_use_grants
+provision lapse_without_permit
+  id "detroit:article-iii:section-50-3-386:lapse"
+  source "§50-3-386 sentence 1" quote "In any case where a permit for a regulated use has not been obtained within six months after the granting of said use, the grant shall be null and void without further action"
+  if !exists permit: permit_under(permit, grant) && obtained_at(permit) <= add_calendar_months(granted_at(grant), 6) && !valid_extension(grant)
+  require status_at(grant, add_calendar_months(granted_at(grant), 6)) == NullAndVoid
+end
+provision one_bounded_extension
+  id "detroit:article-iii:section-50-3-386:extension"
+  source "§50-3-386 sentence 1 exception" quote "except, that the Buildings, Safety Engineering, and Environmental Department or, where applicable, the Board of Zoning Appeals may extend, without further public hearing, said six-month deadline for no more than 12 months beyond the expiration date of the original six months."
+  if extension_of(extension, grant) && authorized_by(extension, BSEED || DetroitBZA) && extended_until(extension) <= add_calendar_months(granted_at(grant), 18) && !extension_barred(grant)
+  permit valid_extension(grant)
+end
+provision extension_bar
+  id "detroit:article-iii:section-50-3-386:notwithstanding"
+  source "§50-3-386 final sentence" quote "Notwithstanding the preceding, no such extension may be considered in the case of a land use that was unlawfully established or expanded and that was subsequently legalized as a result of a regulated land use hearing."
+  overrides one_bounded_extension
+  if grant_for(grant, use) && unlawfully_established_or_expanded(use) && legalized_by_regulated_use_hearing(use)
+  prohibit valid_extension(grant)
+end
+provision no_additional_extension
+  id "detroit:article-iii:section-50-3-386:no-additional-extension"
+  source "§50-3-386 sentence 2" quote "Where this extension expires, no additional extension shall be authorized, unless a new application has been filed and a further public hearing has been held."
+  if expired(extension) && extension_of(extension, grant)
+  prohibit additional_extension(grant)
+  permit proceed_as_new_application(use) if new_application_for(application, use) && hearing_for(hearing, application)
+end

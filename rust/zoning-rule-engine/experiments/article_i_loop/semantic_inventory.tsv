@@ -1,0 +1,49 @@
+span_id	source_ref	kind	status	proposition	ontology_terms	competency_test
+50-1-1:p1	§50-1-1	name	declarative	Chapter 50 is named Detroit Zoning Ordinance	LegalInstrument,Title	name round-trip
+50-1-2:p1	§50-1-2	authority	declarative	Chapter enacted pursuant to state powers and limits including two named acts	LegalAuthority,EnablingAct,Chapter	retain nonexclusive including relation
+50-1-3:p1	§50-1-3	applicability	executable	Chapter applies to all City land unless exempt from local zoning	Land,City,GovernmentOwner,Exemption	inside/not exempt passes; exempt fails
+50-1-4:p1	§50-1-4	purpose	interpretive	Chapter guides and regulates land use and development for public welfare	Purpose,LandUse,Development,PublicWelfare	preserve as interpretive purpose
+50-1-5:1	§50-1-5	purpose	interpretive	Classify land by suitability for uses	Land,Use,Suitability	preserve enumerated purpose
+50-1-5:2	§50-1-5	purpose	interpretive	Regulate location construction reconstruction alteration and use	Building,Structure,Land,RegulatedActivity	preserve enumerated purpose
+50-1-5:3	§50-1-5	purpose	interpretive	Ensure light air privacy safety and access	PublicBenefit,Access	preserve enumerated purpose
+50-1-5:4	§50-1-5	purpose	interpretive	Conserve or enhance property values	PropertyValue	preserve enumerated purpose
+50-1-5:5	§50-1-5	purpose	interpretive	Protect City areas from incompatible-use encroachment	CityArea,Use,Compatibility	preserve enumerated purpose
+50-1-5:6	§50-1-5	purpose	interpretive	Prevent building overcrowding of land	Land,Building,Density	preserve enumerated purpose
+50-1-5:7	§50-1-5	purpose	interpretive	Avoid undue population congestion	Population,Congestion	preserve enumerated purpose
+50-1-5:8	§50-1-5	purpose	interpretive	Establish reasonable conformity standards	Standard,Building,Structure,Use	preserve enumerated purpose
+50-1-5:9	§50-1-5	purpose	interpretive	Lessen street congestion through off-street parking and loading	Street,Parking,Loading,Congestion	preserve means and objective
+50-1-5:10	§50-1-5	purpose	interpretive	Facilitate adequate public requirements	PublicService,Transportation,Utility,Education,Recreation	preserve nonexclusive list
+50-1-5:11	§50-1-5	purpose	interpretive	Provide elimination of nonconforming structures and uses	Nonconformity,Building,Structure,Use	preserve enumerated purpose
+50-1-5:12	§50-1-5	purpose	interpretive	Promote visual environment through development and civic design	VisualEnvironment,DevelopmentTechnique,CivicDesign	preserve means and objective
+50-1-5:13	§50-1-5	purpose	interpretive	Protect resources and ensure environmental-law consistency	NaturalResource,SensitiveArea,EnvironmentalLaw	preserve conjunction
+50-1-5:14	§50-1-5	purpose	interpretive	Define administrative powers and duties	AdministrativeBody,Power,Duty	preserve enumerated purpose
+50-1-5:15	§50-1-5	purpose	interpretive	Provide penalties for Chapter violations and amendments	Penalty,Violation,Amendment	preserve enumerated purpose
+50-1-5:16	§50-1-5	purpose	interpretive	Provide BZA and its powers and duties	BZA,Power,Duty	preserve enumerated purpose
+50-1-6:p1	§50-1-6	interpretation	interpretive	Unless otherwise stated Chapter provisions are minimum requirements serving named purposes	Provision,MinimumRequirement,Purpose,DistrictDescription	default overridden by express statement
+50-1-7:1	§50-1-7	boundary	executable	Approximate mapped boundaries follow named lines or their extensions unless otherwise shown	DistrictBoundary,Map,StreetLine,AlleyLine,PlatLine	mapped approximation resolves to qualifying line
+50-1-7:2	§50-1-7	boundary	executable	Unsubdivided parallel strip dimensions are measured at right angles with mapped frontage	DistrictBoundary,Strip,StreetLine,HighwayLine,Length	depth uses perpendicular map dimension
+50-1-7:3	§50-1-7	power	unresolved	PDD must interpret uncertain contradictory or conflicting mapped boundary by spirit and purpose	PDD,InterpretivePower,MapAmbiguity,DistrictBoundary	requires discretionary finding; no deterministic outcome
+50-1-7:4	§50-1-7	boundary	executable	Vacated right-of-way joins adjoining districts; former centerline divides differing districts	RightOfWay,Vacation,AdjoiningProperty,DistrictBoundary,Centerline	same districts absorb all; differing districts split centerline
+50-1-8:p1	§50-1-8	precedence	executable	More restrictive Chapter or state/federal rule controls to extent permitted by law	Provision,GovernmentLevel,Restrictiveness,LegalPermission	chapter stricter/chapter looser
+50-1-9:p1	§50-1-9	precedence	executable	More restrictive rule controls internal or City Code conflict	Provision,CityCode,Restrictiveness,Conflict	select stricter rule
+50-1-9:p2	§50-1-9	precedence	executable	Article VIII-XI use lists override conflicting Article XII use-table marking or omission	LandUse,UseList,UseTable,PermissionMarking,Conflict	list controls C R or blank conflict
+50-1-10:p1	§50-1-10	intent	declarative	Chapter does not intend to disturb private land agreements	PrivateAgreement,Easement,Covenant,DeedRestriction	preserve noninterference intent
+50-1-10:p2	§50-1-10	precedence	executable	Chapter controls when more restrictive than private agreement	Provision,PrivateAgreement,Restrictiveness	chapter stricter controls
+50-1-10:p3	§50-1-10	precedence	executable	Private agreement controls when more restrictive than Chapter	Provision,PrivateAgreement,Restrictiveness	agreement stricter controls
+50-1-10:p4	§50-1-10	responsibility	executable	City has no responsibility to monitor or enforce private agreements	City,PrivateAgreement,Monitoring,Enforcement	monitoring/enforcement duty absent
+50-1-11:p1	§50-1-11	transition	executable	Prior-ordinance violation continues unless activity complies with Chapter	Violation,PriorOrdinance,Activity,Compliance,Penalty,Enforcement	current compliance extinguishes continued violation
+50-1-12:p1	§50-1-12	transition	executable	Prior legal nonconformity continues while originating situation exists	LegalNonconformity,PriorOrdinance,Situation	continued situation preserves status
+50-1-12:p2	§50-1-12	transition	executable	Prior nonconformity becoming conforming under Chapter loses nonconforming status	LegalNonconformity,Conformity,Chapter	current conformity extinguishes status
+50-1-13:1	§50-1-13	transition	executable	Valid May 28 2005 approvals survive to expiration and permit then-current standards while valid and un-lapsed	Approval,Permit,EffectiveDate,Expiration,DevelopmentStandard	valid survives; lapse blocks reliance
+50-1-13:2	§50-1-13	transition	executable	Uses valid May 28 2005 remain valid under authorizing terms and controls	Use,Approval,Grant,Resolution,Ordinance,Condition	valid use retains authorization terms
+50-1-13:3	§50-1-13	transition	executable	Chapter requires no change to structure plans construction or use with pre-effective-date building permit	Structure,Plan,Construction,Use,BuildingPermit,EffectiveDate	prior permit shields project
+50-1-13:4	§50-1-13	power	executable	Original body may grant one extension up to one year if approval findings remain valid	DecisionMakingBody,Approval,Extension,Finding,Duration	12 months first extension allowed; second or 13 months denied
+50-1-13:5	§50-1-13	transition	executable	Reapplication after expired project approval uses standards at reapplication	Application,ExpiredApproval,DevelopmentStandard,reapplication_date	expired reapplication selects current standards
+50-1-14:1a	§50-1-14	transition	executable	Complete pre-May-28 application pending at enactment may at applicant option use prior ordinance wholly	Application,Completeness,PendingStatus,ApplicantOption,PriorOrdinance	all three predicates enable option
+50-1-14:1b	§50-1-14	transition	executable	Approved opted project uses standards when complete application submitted	Project,Approval,DevelopmentStandard,SubmissionDate	approval attaches submission-date standards
+50-1-14:1c	§50-1-14	transition	executable	Reapplication for expired permit uses standards at reapplication	Application,ExpiredPermit,DevelopmentStandard,reapplication_date	expired reapplication selects current standards
+50-1-14:2	§50-1-14	transition	executable	Project without accepted-complete pre-effective application is subject to all Chapter requirements	Project,Application,Acceptance,Completeness,EffectiveDate	missing timely accepted-complete application selects Chapter
+50-1-15:p1	§50-1-15	severability	executable	Invalidity ruling leaves remaining portions unaffected	Court,CourtHolding,Invalidity,Provision,Chapter	invalid one portion retains others
+50-1-15:p2	§50-1-15	counterfactual	declarative	Each portion would have been adopted regardless of invalidity of others	LegislativeIntent,Provision,Adoption,Invalidity	preserve express counterfactual intent
+50-1-16-40	§§50-1-16—50-1-40	reserved	reserved	Sections reserved	ReservedSectionRange	no propositions generated
+

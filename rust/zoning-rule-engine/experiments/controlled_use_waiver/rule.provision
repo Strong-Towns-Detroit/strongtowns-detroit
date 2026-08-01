@@ -1,0 +1,20 @@
+module detroit_controlled_use_waiver
+import detroit_controlled_use_waiver
+provision district_permission_bar
+  id "detroit:article-iii:section-50-3-443:district-bar"
+  source "§50-3-443 exception" quote "except, that as provided for in Section 50-15-30 of this Code, in no case shall a controlled use be established in any zoning district where such a use is not permitted by right or as a conditional use"
+  if located_in_district(proposal, district) && !(permitted_by_right(proposal, district) || conditionally_permitted(proposal, district))
+  prohibit grant_spacing_waiver(proposal)
+end
+provision spacing_waiver_findings
+  id "detroit:article-iii:section-50-3-443:findings"
+  source "§50-3-443 lead-in" quote "may be waived, provided, that any one of the following findings is made"
+  source "§50-3-443 list join" quote "; and (2)"
+  coordination unresolved {
+    lead_in any_one
+    terminal_join and
+  }
+  candidate finding_1 if only_controlled_use_in_center(proposal, center) && count distinct establishment where establishment_in(establishment, center) >= 2 && usable_retail_area(center) >= 50000 sq_ft && private_off_street_parking_spaces(center) >= ceil(gross_floor_area(center) / 200 sq_ft)
+  candidate finding_2 if finding_for(finding, proposal) && contributes_to(finding, Social || Economic || Aesthetic || PhysicalImprovement) && determined_and_documented_by(finding, PlanningDirector)
+  require !district_permission_bar(proposal)
+end

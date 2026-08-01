@@ -1,0 +1,45 @@
+module detroit.article_i
+
+provision applicability [source §50-1-3]
+  if land.is_within_city && !land.is_exempt_from_local_zoning
+  then chapter_50.applies_to(land)
+
+precedence public_conflict [source §50-1-8, §50-1-9:p1]
+  controlling provision = more_restrictive(chapter_50, conflicting_public_rule)
+
+precedence use_permission_conflict [source §50-1-9:p2]
+  if article_xii_table.conflicts_with(article_viii_to_xi_use_list)
+  then article_viii_to_xi_use_list controls
+
+precedence private_conflict [source §50-1-10:p2-p3]
+  controlling provision = more_restrictive(chapter_50, private_agreement)
+
+provision continued_violation [source §50-1-11]
+  if prior_ordinance.violation(activity) && !chapter_50.complies(activity)
+  then chapter_50.violation(activity)
+
+provision continued_nonconformity [source §50-1-12]
+  if prior_ordinance.legal_nonconformity(situation)
+     && situation.continues
+     && !chapter_50.conforming(situation)
+  then chapter_50.legal_nonconformity(situation)
+
+power one_extension [source §50-1-13(4)]
+  if actor == approval.original_decision_maker
+     && approval.findings_remain_valid
+     && approval.extension_count == 0
+     && requested_extension <= 1 year
+  then actor may extend approval
+
+option pending_application [source §50-1-14(1)]
+  if application.submitted_before(2005-05-28)
+     && application.is_complete
+     && application.pending_on(2005-05-28)
+  then applicant may choose prior_ordinance wholly
+
+unresolved map_boundary_interpretation [source §50-1-7(3)]
+  authority PlanningAndDevelopmentDepartment
+  trigger uncertainty || contradiction || conflict
+  standard spirit_and_purpose_of(chapter_50)
+  execution blocked pending official interpretation
+

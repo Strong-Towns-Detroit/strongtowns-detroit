@@ -1,0 +1,17 @@
+# RDF/SHACL-inspired schema. This is intentionally a small experimental syntax.
+prefix detroit https://detroitmi.gov/zoning/
+
+class Agency
+class HearingForum
+class PublishedNotice
+class PublicHearing
+class LegalRequirement
+
+property responsible_for domain Agency range PublishedNotice min 1
+property forum_for domain HearingForum range PublicHearing min 1
+property notice_for domain PublishedNotice range PublicHearing min 1
+property required_by domain PublishedNotice range LegalRequirement min 1
+property precedes domain PublishedNotice range PublicHearing min 1
+
+individual BSEED types Agency,HearingForum
+individual Chapter50 types LegalRequirement
