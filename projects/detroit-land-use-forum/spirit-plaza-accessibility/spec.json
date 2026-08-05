@@ -1,0 +1,30 @@
+{
+  "study_id": "campus-martius-weekday-midday-2026",
+  "title": "How far can you get from the heart of Detroit?",
+  "origin": {
+    "name": "Campus Martius Park",
+    "address": "800 Woodward Avenue, Detroit, Michigan",
+    "latitude": 42.3314,
+    "longitude": -83.0458,
+    "coordinate_source": "Project Detroit coordinate registry; Campus Martius Park center"
+  },
+  "direction": "departure",
+  "timezone": "America/Detroit",
+  "service_date": "2026-07-29",
+  "departure_window": {
+    "start": "12:00",
+    "end": "13:00",
+    "interval_minutes": 5,
+    "summary": "median"
+  },
+  "threshold_minutes": [5, 10, 15, 20, 30],
+  "modes": ["walking", "public_transport", "driving"],
+  "display_boundary": "Detroit city limits",
+  "routing_boundary_rule": "Routes may leave and re-enter Detroit; clip only the displayed result.",
+  "transit_services": ["DDOT", "SMART", "QLINE", "Detroit People Mover"],
+  "transit_definition": "Door-to-door scheduled travel including access walking, waiting, transfers, and egress walking.",
+  "walk_speed_kph": 4.8,
+  "primary_method": "R5 with OpenStreetMap and archived official GTFS",
+  "comparison_method": "TravelTime regular API",
+  "audit_method": "Small point sample using Google Routes; never used to generate the published surface."
+}

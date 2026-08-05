@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campus Martius travel-time access</title>
+  <style>
+    :root{--navy:#0c2340;--blue:#a7c6ed;--blue2:#5790db;--yellow:#ffb549;--orange:#e8783d;--red:#c83a3a;--paper:#fff8ed;--muted:#526276}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--navy);font-family:Arial,Helvetica,sans-serif}
+    main{width:min(1500px,94vw);margin:auto;padding:4vw 0}.kicker{color:var(--red);font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    h1{max-width:1100px;margin:.15em 0;font:700 clamp(3.2rem,7vw,7.5rem)/.92 Georgia,serif;letter-spacing:-.055em}
+    .dek{max-width:950px;color:var(--muted);font:clamp(1.1rem,2vw,1.65rem)/1.35 Georgia,serif}
+    .rule{height:12px;background:linear-gradient(90deg,var(--navy) 0 50%,var(--red) 50% 67%,var(--yellow) 67% 84%,var(--blue2) 84%);margin:2rem 0 3rem}
+    .maps{display:grid;grid-template-columns:1fr;gap:3rem}.panel{background:#fffdf8;border-top:7px solid var(--navy);padding:clamp(1.2rem,3vw,2.5rem)}
+    .panel h2{margin:0;font:700 clamp(2.2rem,4vw,4rem) Georgia,serif}.panel p{margin:.2rem 0 1rem;color:var(--muted)}svg{display:block;width:100%;aspect-ratio:16/10;background:#e8e2d8}
+    .city{fill:#f4efe6;stroke:var(--navy);stroke-width:1.5;vector-effect:non-scaling-stroke}.band{stroke:var(--navy);stroke-width:.35;vector-effect:non-scaling-stroke}.road{fill:none;vector-effect:non-scaling-stroke;stroke-linecap:round}.road-local{stroke:#fff;stroke-width:.55;opacity:.72}.road-arterial{stroke:var(--navy);stroke-width:.75;opacity:.52}.road-major{stroke:var(--navy);stroke-width:1.6;opacity:.72}.origin{fill:var(--red);stroke:white;stroke-width:2.5;vector-effect:non-scaling-stroke}
+    .legend{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;font-size:.82rem;font-weight:700}.legend i{display:inline-block;width:1.2em;height:1.2em;margin-right:.3em;vertical-align:-.2em}
+    footer{display:grid;grid-template-columns:2fr 1fr;gap:2rem;margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid #cad3dc;color:var(--muted);font-size:.78rem}
+    @media(max-width:850px){footer{grid-template-columns:1fr}}
+    @media print{@page{size:17in 11in;margin:.35in}main{width:100%;padding:0}h1{font-size:48pt}.dek{font-size:14pt}.maps{display:block}.panel{height:10.25in;padding:.22in;break-before:page;border:0}.panel h2{font-size:32pt}.panel svg{height:8.8in;width:auto;margin:auto}.legend,footer{font-size:7.5pt}}
+  </style>
+</head>
+<body><main>
+  <p class="kicker">Detroit Land Use Forum · Accessibility</p>
+  <h1>How far can you get from the heart of Detroit?</h1>
+  <p class="dek">Travel-time reach from Campus Martius on a typical weekday at midday. The same clock means very different access depending on how you move.</p>
+  <div class="rule"></div><section class="maps" id="maps"></section>
+  <div class="legend" id="legend"></div>
+  <footer><div><b>What this measures.</b> Door-to-door scheduled transit includes walking, waiting, transfers, and the final walk. Transit shows the median result across departures every five minutes from noon through 1 p.m. Routes may leave and re-enter Detroit.</div><div id="source"></div></footer>
+</main>
+<script>
+const data=__GEOJSON__,spec=__SPEC__,boundary=__BOUNDARY__,roads=__ROADS__;
+const modes=[["walking","Walking"],["public_transport","Public transit"],["driving","Driving"]];
+const colors={30:"#a7c6ed",20:"#5790db",15:"#ffb549",10:"#e8783d",5:"#c83a3a"};
+function coords(g){if(!g)return[];if(g.type==="Polygon"||g.type==="MultiLineString")return g.coordinates.flat();if(g.type==="MultiPolygon")return g.coordinates.flat(2);if(g.type==="LineString")return g.coordinates;return[]}
+function mercator(p){const lon=p[0]*Math.PI/180,lat=Math.max(-85,Math.min(85,p[1]))*Math.PI/180;return[lon,Math.log(Math.tan(Math.PI/4+lat/2))]}
+const all=(boundary?coords(boundary):data.features.flatMap(f=>coords(f.geometry))).map(mercator);const xs=all.map(p=>p[0]),ys=all.map(p=>p[1]);
+const bounds=[Math.min(...xs),Math.min(...ys),Math.max(...xs),Math.max(...ys)],W=1200,H=750,pad=24;
+function xy(p){p=mercator(p);const scale=Math.min((W-2*pad)/(bounds[2]-bounds[0]),(H-2*pad)/(bounds[3]-bounds[1]));const usedW=(bounds[2]-bounds[0])*scale,usedH=(bounds[3]-bounds[1])*scale;const x=(W-usedW)/2+(p[0]-bounds[0])*scale;const y=(H+usedH)/2-(p[1]-bounds[1])*scale;return[x,y]}
+function ringPath(r){return r.map((p,i)=>(i?"L":"M")+xy(p).join(",")).join("")+"Z"}
+function linePath(r){return r.map((p,i)=>(i?"L":"M")+xy(p).join(",")).join("")}
+function path(g){if(g.type==="Polygon")return g.coordinates.map(ringPath).join("");if(g.type==="MultiPolygon")return g.coordinates.map(p=>p.map(ringPath).join("")).join("");if(g.type==="LineString")return linePath(g.coordinates);if(g.type==="MultiLineString")return g.coordinates.map(linePath).join("");return""}
+for(const [key,label] of modes){const panel=document.createElement("article");panel.className="panel";panel.innerHTML=`<h2>${label}</h2><p>5, 10, 15, 20 and 30 minutes from Campus Martius</p><svg viewBox="0 0 ${W} ${H}" aria-label="${label} isochrones"></svg>`;const svg=panel.querySelector("svg");
+ if(boundary){const city=document.createElementNS("http://www.w3.org/2000/svg","path");city.setAttribute("d",path(boundary));city.setAttribute("fill-rule","evenodd");city.setAttribute("class","city");svg.append(city)}
+ const rows=data.features.filter(f=>f.properties.mode===key).sort((a,b)=>b.properties.minutes-a.properties.minutes);
+ for(const f of rows){const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",path(f.geometry));p.setAttribute("fill",colors[f.properties.minutes]);p.setAttribute("fill-rule","evenodd");p.setAttribute("class","band");svg.append(p)}
+ if(roads){for(const f of roads.features){const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",path(f.geometry));p.setAttribute("class",`road road-${f.properties.road_class}`);svg.append(p)}}
+ const o=document.createElementNS("http://www.w3.org/2000/svg","circle"),pt=xy([spec.origin.longitude,spec.origin.latitude]);o.setAttribute("cx",pt[0]);o.setAttribute("cy",pt[1]);o.setAttribute("r",7);o.setAttribute("class","origin");svg.append(o);document.querySelector("#maps").append(panel)}
+document.querySelector("#legend").innerHTML=spec.threshold_minutes.map(m=>`<span><i style="background:${colors[m]}"></i>${m} minutes</span>`).join("");
+document.querySelector("#source").innerHTML=`<b>Source:</b> ${data.features[0]?.properties.provider||"Routing model"}<br><b>Origin:</b> ${spec.origin.name}<br><b>Service date:</b> ${spec.service_date}`;
+</script></body></html>
