@@ -162,13 +162,13 @@ class TestCalculateBuildableCompliance:
 class TestMergeAndCalculateCompliance:
     """Tests for check_compliance from merge_and_calculate.py.
 
-    This version reads 'zoning', uses total_square_footage with fallback chain,
-    and does NOT check width or set is_buildable_current_zoning.
+    This version reads 'zoning_district', uses total_square_footage with
+    fallback chain, and does NOT check width or set is_buildable_current_zoning.
     """
 
     def _make_row(self, **overrides):
         defaults = {
-            "zoning": "R1",
+            "zoning_district": "R1",
             "total_square_footage": 5000,
             "total_floor_area": 1200,
         }
@@ -206,7 +206,7 @@ class TestMergeAndCalculateCompliance:
     def test_suffixed_column_fallback(self, sample_restrictions):
         """The merge creates suffixed columns; _csv variant takes priority."""
         row = {
-            "zoning": "R1",
+            "zoning_district": "R1",
             "total_square_footage_csv": 5000,
             "total_square_footage_geo": 1000,
             "total_floor_area": 1200,
@@ -228,7 +228,7 @@ class TestMergeAndCalculateCompliance:
         assert result["violates_current_min_dwelling_assumption"] is True
 
     def test_unknown_district(self, sample_restrictions):
-        row = self._make_row(zoning="UNKNOWN")
+        row = self._make_row(zoning_district="UNKNOWN")
         result = mc_check_compliance(row, sample_restrictions)
         assert result["zoning_min_sqft"] is None
         assert result["violates_current_min_sqft"] is False

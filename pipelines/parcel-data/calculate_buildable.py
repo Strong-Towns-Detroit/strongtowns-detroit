@@ -21,9 +21,9 @@ def check_compliance(row, zoning_restrictions):
 
 
 def calculate_buildable():
-    # Load the data
-    # Using the cleaned CSV which is known to have use_code_description and shape stats
-    input_file = 'parcel-data-cleaned.csv'
+    # Load the data — prefer the raw download, fall back to legacy cleaned file
+    import os
+    input_file = 'parcel-data.csv' if os.path.exists('parcel-data.csv') else 'parcel-data-cleaned.csv'
     print(f"Loading {input_file}...")
 
     # helper to handle mixed types if needed, though 'low_memory=False' usually suffices
