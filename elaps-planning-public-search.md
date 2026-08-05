@@ -1,0 +1,37 @@
+- generic [active] [ref=f2e1]:
+  - link [ref=f2e3] [cursor=pointer]:
+    - /url: "#"
+    - img "Skip to main content. Please make sure the Accessibility Support check box is marked." [ref=f2e4]
+  - link [ref=f2e6] [cursor=pointer]:
+    - /url: "#FirstAnchorInACAMainContent"
+    - img "Skip Module Navigation" [ref=f2e7]
+  - generic [ref=f2e8]:
+    - banner [ref=f2e9]:
+      - generic [ref=f2e12]:
+        - heading "Welcome to the City of Detroit eLAPS Home Page (electronic Licensing and Permitting System)" [level=2] [ref=f2e13]
+        - text: For assistance, contact BSEEDSupport@detroitmi.gov
+      - link "Return to BSEED Connect" [ref=f2e17] [cursor=pointer]:
+        - /url: https://detroit-prod.accela.com/portal/core/index
+    - generic [ref=f2e19]:
+      - generic [ref=f2e21]:
+        - generic [ref=f2e22]:
+          - generic [ref=f2e23]:
+            - generic
+          - paragraph [ref=f2e47]:
+            - generic [ref=f2e51]
+        - generic [ref=f2e56]:
+          - generic [ref=f2e57]:
+            - generic [ref=f2e58]
+            - generic [ref=f2e78]
+          - link "Search Cases" [ref=f2e87] [cursor=pointer]:
+            - /url: javascript:void(0);
+      - generic [ref=f2e88]:
+        - link "Skip to main content":
+          - /url: "#mainContent"
+        - main [ref=f2e89]:
+          - generic [ref=f2e90]:
+            - generic [ref=f2e91]
+            - link "Page Results":
+              - /url: "#PageResult"
+    - contentinfo [ref=f2e259]:
+      - paragraph [ref=f2e260]: © Copyright 2026 City of Detroit
