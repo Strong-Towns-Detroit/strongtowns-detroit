@@ -40,19 +40,19 @@ from strongtowns_detroit.zoning.models import (
 
 # Internal section references: "Section 50-12-101" or "Sec. 50-12-101"
 _SECTION_RE = re.compile(
-    r"(?:Section|Sec\.)\s+(50-\d{1,2}-\d{1,4})", re.IGNORECASE
+    r"(?:Section|Sec\.)\s+(50-\d{1,2}-\d{1,4}(?:\.\d+)*)", re.IGNORECASE
 )
 
 # Range references: "Sections 50-12-101 through 50-12-105"
 _SECTION_RANGE_RE = re.compile(
-    r"(?:Sections?)\s+(50-\d{1,2}-\d{1,4})\s+through\s+(50-\d{1,2}-\d{1,4})",
+    r"(?:Sections?)\s+(50-\d{1,2}-\d{1,4}(?:\.\d+)*)\s+through\s+(50-\d{1,2}-\d{1,4}(?:\.\d+)*)",
     re.IGNORECASE,
 )
 
 # Bare section numbers (without "Section" prefix): "50-12-101"
 # Must be preceded by word boundary but NOT by "Section " or "Sec. "
 _BARE_SECTION_RE = re.compile(
-    r"(?<![.\w])(50-\d{1,2}-\d{1,4})(?!\d)"
+    r"(?<![.\w])(50-\d{1,2}-\d{1,4}(?:\.\d+)*)(?![\d.])"
 )
 
 # Article references: "Article XII"
@@ -76,8 +76,8 @@ _SELF_REF_RE = re.compile(
 )
 
 # Figure / Table references within the ordinance
-_FIGURE_RE = re.compile(r"Figure\s+(50-\d{1,2}-\d{1,4})", re.IGNORECASE)
-_TABLE_REF_RE = re.compile(r"Table\s+(50-\d{1,2}-\d{1,4})", re.IGNORECASE)
+_FIGURE_RE = re.compile(r"Figure\s+(50-\d{1,2}-\d{1,4}(?:\.\d+)*)", re.IGNORECASE)
+_TABLE_REF_RE = re.compile(r"Table\s+(50-\d{1,2}-\d{1,4}(?:\.\d+)*)", re.IGNORECASE)
 
 # Michigan Compiled Laws: "MCL 125.3101" or "MCL 125.3101a et seq."
 _MCL_RE = re.compile(
@@ -264,7 +264,7 @@ def _section_text(node: SectionNode) -> str:
 
 
 # Pattern to detect section-starting paragraphs like "Sec. 50-12-101. Title."
-_SEC_START_RE = re.compile(r"^Sec\.?\s+(\d{2}-\d{1,2}-\d{1,4})\b")
+_SEC_START_RE = re.compile(r"^Sec\.?\s+(\d{2}-\d{1,2}-\d{1,4}(?:\.\d+)*)\b")
 
 
 def extract_content_sections(

@@ -117,4 +117,4 @@ class CitationGraph:
 def _is_internal_id(node_id: str) -> bool:
     """Check if a node ID looks like an internal section number."""
     import re
-    return bool(re.match(r"^\d{2}-\d{1,2}-\d{1,4}$", node_id))
+    return bool(re.match(r"^\d{2}-\d{1,2}-\d{1,4}(?:\.\d+)*$", node_id))

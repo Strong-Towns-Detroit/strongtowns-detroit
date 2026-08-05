@@ -1,0 +1,121 @@
+{
+  "provisions": [
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "reserved_article_or_section_range",
+        "type": "reserved"
+      },
+      "exceptions": [],
+      "id": "detroit:article-vi:block:0",
+      "review": {
+        "disposition": "accounted_nonoperative",
+        "executionStatus": "source_record_only",
+        "method": "complete_source_block_disposition",
+        "notes": "Exact reserved source text verified; no operative rule is inferred.",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_VI.municode.json",
+          "end": 22,
+          "node_id": "COCH50_CH50ZO_ARTVIRE",
+          "quote": "ARTICLE VI. - RESERVED",
+          "row": null,
+          "section": null,
+          "sha256": "d1d2056056088d626b9d3879a90026ce7f8e8ee230e9d2ce9891faf2eb29b90c",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 0,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "article": "VI",
+        "section": null,
+        "type": "source_atom"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "relatedCurrentLocationText": "Chapter 4, Articles IV and V",
+        "repealedSubject": "signs",
+        "role": "editor_note_repeal_and_relocation_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:article-vi:block:1",
+      "review": {
+        "disposition": "accounted_contextual",
+        "executionStatus": "source_record_only",
+        "method": "complete_source_block_disposition",
+        "notes": "The editor's note is fully transcribed. Its historical assertions and reference to similar Chapter 4 provisions are not executable Chapter 50 rules.",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_VI.municode.json",
+          "end": 1310,
+          "node_id": "COCH50_CH50ZO_ARTVIRE",
+          "quote": "Editor's note\u2014 Ord. No. 2020-21, \u00a7 1, effective August 8, 2020, repealed Art. VI, Divs. 1\u20144, Subdivs. A\u2014D, Secs. 50-6-1\u201450-6-25, 50-6-41\u201450-6-58, 50-6-71\u201450-6-94, 50-6-111\u201450-6-115, 50-6-131\u201450-6-134, 50-6-151\u201450-6-153 and 50-6-171\u201450-6-179, Signs. Former art. VI pertained to signs and derived from Secs. 61-6-1\u201461-6-23, 61-6-25, 61-6-26, 61-6-31\u201461-6-47, 61-6-49, 61-6-51\u201461-6-74, 61-6-82\u201461-6-85, 61-6-91\u201461-6-94, 61-6-101\u201461-6-103, 61-6-111\u201461-6-119 of the Code of 1984; Ord. No. 11-05, \u00a7 1(61-6-1\u201461-6-23, 61-6-31\u201461-6-47, 61-6-49, 61-6-51\u201461-6-74, 61-6-82\u201461-6-85. 61-6-91\u201461-6-94, 61-6-101\u2014616-103, 61-6-111\u201461-6-119), effective May 28, 2005; Ord. No. 34-05, \u00a7 1(61-6-1, 61-6-2, 61-6-14, 61-6-21, 61-6-39, 61-6-41, 61-6-74, 61-6-81), effective December 6, 2005; Ord. No. 44-06, \u00a7 1(61-6-2, 61-6-5\u201461-6-6, 61-6-14, 61-6-67, 61-6-82\u201461-6-84), effective December 21, 2006; Ord. No. 24-08, \u00a7 1(61-6-2), effective November 1, 2008; Ord. No. 13-11, \u00a7 1(61-6-1, 61-6-6, 61-6-13, 61-6-41, 61-6-82, 61-6-83), effective August 23, 2011; Ord. No. 23-13, \u00a7 1(61-6-25\u201461-6-26, 61-6-34, 61-6-42, 61-6-91), effective August 28, 2013; Ord. No. 38-14, \u00a7 1(61-6-1), effective October 26, 2014; and Ord. No. 20-16, \u00a7 1(61-6-42), effective June 16, 2016. Similar provisions can now be found in Chapter 4, Articles IV and V.",
+          "row": null,
+          "section": null,
+          "sha256": "b1159be125a52e94caff963bcec0dc45bd1251bfdc0b8c8b11bd97ef4165c9fc",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 1,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "article": "VI",
+        "section": null,
+        "type": "source_atom"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "reserved_article_or_section_range",
+        "type": "reserved"
+      },
+      "exceptions": [],
+      "id": "detroit:article-vi:block:2",
+      "review": {
+        "disposition": "accounted_nonoperative",
+        "executionStatus": "source_record_only",
+        "method": "complete_source_block_disposition",
+        "notes": "Exact reserved source text verified; no operative rule is inferred.",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_VI.municode.json",
+          "end": 34,
+          "node_id": "COCH50_CH50ZO_ARTVIRE_SS50-6-1--50-6-200RE",
+          "quote": "Secs. 50-6-1\u201450-6-200. - Reserved.",
+          "row": null,
+          "section": "50-6-1",
+          "sha256": "6969dacb836b54d470d0f6f6ded8cbde212213609ae878235c6e3163f5b170be",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 2,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "article": "VI",
+        "section": "50-6-1",
+        "type": "source_atom"
+      }
+    }
+  ],
+  "schemaVersion": "detroit-legal-ir-v1"
+}

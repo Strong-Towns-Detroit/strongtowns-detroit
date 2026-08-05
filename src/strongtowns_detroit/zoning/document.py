@@ -44,7 +44,7 @@ _CONTENT_STYLES = {
 }
 
 # Section number pattern: "Sec. 50-12-101" or just "50-12-101"
-_SECTION_NUM_RE = re.compile(r"(?:Sec\.?\s*)?(\d{2}-\d{1,2}-\d{1,4})")
+_SECTION_NUM_RE = re.compile(r"(?:Sec\.?\s*)?(\d{2}-\d{1,2}-\d{1,4}(?:\.\d+)*)")
 
 
 def _para_style(p: etree._Element) -> str:

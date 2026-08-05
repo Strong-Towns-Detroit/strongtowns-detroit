@@ -1,0 +1,4015 @@
+{
+  "provisions": [
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "article_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7575",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 36,
+          "node_id": "COCH50_CH50ZO_ARTIINPR",
+          "quote": "ARTICLE I. - INTRODUCTORY PROVISIONS",
+          "row": null,
+          "section": null,
+          "sha256": "738b2a52e8ac249b8214abd5e5fb00fa1f210a496b9314a1d096b19095a0d5f2",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 0,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7576",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 21,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-1TI",
+          "quote": "Sec. 50-1-1. - Title.",
+          "row": null,
+          "section": "50-1-1",
+          "sha256": "7162ac00174f85129f0095b6db4fb68f9f58ac9a773ab5580a066bc3d6e8eb60",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 1,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "assigns_official_short_title",
+        "type": "designation"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-1:title",
+      "review": {
+        "executionStatus": "non_executable_metadata",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 62,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-1TI",
+          "quote": "This chapter shall be known as the \"Detroit Zoning Ordinance.\"",
+          "row": null,
+          "section": "50-1-1",
+          "sha256": "f00aa161fd60b53673eb204e2714c7710e25526cf8cce87d95739fba75d6874d",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 2,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "designation"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-1:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-1TI",
+          "quote": "(Code 1984, \u00a7 61-1-1; Ord. No. 11-05, \u00a7 1(61-1-1), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-1",
+          "sha256": "8cbb3b38051cf0b7abaf62471c2b32e64658f856ff1629803609f4e495525f45",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 3,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7577",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 25,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-2AU",
+          "quote": "Sec. 50-1-2. - Authority.",
+          "row": null,
+          "section": "50-1-2",
+          "sha256": "96f06b192d8e84af90ef5a6c82fe8207fbcef468c6ac4a16ca61fb68411228a4",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 4,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "states_enabling_authority_and_limitations",
+        "type": "authority"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-2:authority",
+      "review": {
+        "executionStatus": "legal_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 270,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-2AU",
+          "quote": "This chapter is enacted pursuant to the powers granted and limitations imposed by laws of the state, including statutory authority granted in the Michigan Zoning Enabling Act, being MCL 125.3101 et seq., and the Michigan Planning Enabling Act, being MCL 125.3801 et seq.",
+          "row": null,
+          "section": "50-1-2",
+          "sha256": "8af9c835e8b572309d95586785495d1ef332585cf487a4d03cd4f4860fa11bfb",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 5,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "authority"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-2:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 157,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-2AU",
+          "quote": "(Code 1984, \u00a7 61-1-2; Ord. No. 11-05, \u00a7 1(61-1-2), eff. 5-28-2005; Ord. No. 44-06, \u00a7 1(61-1-2), eff. 12-21-2006; Ord. No. 13-11, \u00a7 1(61-1-2), eff. 8-23-2011)",
+          "row": null,
+          "section": "50-1-2",
+          "sha256": "ad1f68456e64db50459af5ef74d5f9fdc5d7f7ed6d0438ce0eed576483926c29",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 6,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7578",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 46,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-3APJU",
+          "quote": "Sec. 50-1-3. - Applicability and jurisdiction.",
+          "row": null,
+          "section": "50-1-3",
+          "sha256": "f31d2d230246151c727b9012f4e9dd470c6fae5e3fb14cac34abe1e9ab9ddcc4",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 7,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "chapter_applies_to_all_land_within_city",
+        "type": "applicability"
+      },
+      "exceptions": [
+        {
+          "text": "where such land is determined to be exempt from local zoning regulations",
+          "type": "source_exception"
+        }
+      ],
+      "id": "detroit:50-1-3:citywide-applicability",
+      "review": {
+        "executionStatus": "requires_external_exemption_determination",
+        "method": "manual_clause_review",
+        "notes": [
+          "The section does not identify who determines exemption or encode the external law governing that determination."
+        ],
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 219,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-3APJU",
+          "quote": "The provisions of this chapter shall apply to all land within the City, including land owned by local, County, state, or federal agencies, except where such land is determined to be exempt from local zoning regulations.",
+          "row": null,
+          "section": "50-1-3",
+          "sha256": "eadda87aebafce88797e905be1886c6d317e1d21409226d7ee146d8701e81af1",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 8,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "description": "all land within the City, including land owned by local, County, state, or federal agencies",
+        "type": "applicability"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-3:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-3APJU",
+          "quote": "(Code 1984, \u00a7 61-1-3; Ord. No. 11-05, \u00a7 1(61-1-3), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-3",
+          "sha256": "7819fa60b0977cf88fa9156b46d278f3e0bd36f1f8ac9106d25d63bef01da92a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 9,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7579",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 43,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-4PUINGE",
+          "quote": "Sec. 50-1-4. - Purpose and intent; general.",
+          "row": null,
+          "section": "50-1-4",
+          "sha256": "f8439c6235fed1e84eb9bb49ed64829b632ffd9345ce1584329d7061d1a8dfd3",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 10,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "states_general_purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-4:general-purpose",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 183,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-4PUINGE",
+          "quote": "This chapter is adopted to guide and regulate the appropriate use or development of all land in a manner which will promote and protect the public health, safety, and general welfare.",
+          "row": null,
+          "section": "50-1-4",
+          "sha256": "e45eba067baf0fd4d51978c0504a660532392b893633eb756d8acc0b85927008",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 11,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-4:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-4PUINGE",
+          "quote": "(Code 1984, \u00a7 61-1-4; Ord. No. 11-05, \u00a7 1(61-1-4), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-4",
+          "sha256": "040a1e9bb563c6034e4dad827c2b08c4d7842d5fa243348396aa75240d57a387",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 12,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7580",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 44,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Sec. 50-1-5. - Purpose and intent; specific.",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "8be697b52d2cdaa81e4e0d35ef5d45250a7d81e5010cc48a1f3a298432d7ccd2",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 13,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "scope_or_list_introduction",
+        "type": "purpose_intro"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:lead",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 45,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "The regulations are specifically intended to:",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "40aac34dd89f930aa2c2cb8a83ce9a981a241494ac7598237cb65edca3c311df",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 14,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "purpose_intro"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:1",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 92,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Classify all land in such manner as to reflect its peculiar suitability for particular uses;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "cc217d4b7f9a031d01001bfa7fdb24ce0d4ceb7ebf2e6d7110c765d78486a2c4",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 16,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(1)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:2",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 108,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Regulate the location, construction, reconstruction, alteration, and use of buildings, structures, and land;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "089c7a5b70899b55505195822acaa1bdccffe2f6504e5a63fc9d7c577157293c",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 18,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(2)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:3",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 106,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Ensure adequate light, air, privacy, safety, and convenience of access to buildings, structures, and land;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "cca912c11f1b7c80b30022de3ffcb6e1a6e15816029baa66ba589b54ee8e5973",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 20,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(3)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:4",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 36,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Conserve or enhance property values;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "1279a42191ddbd0ecbd073e684978ce370d93244045173c222cf4bb8a1181bbe",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 22,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(4)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:5",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 77,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Protect all areas of the City from harmful encroachment by incompatible uses;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "5e1af77c780a9151f19a94abae6f65a205f469050c80a0edac3a04d754e8f8b8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 24,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(5)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:6",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 48,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Prevent the overcrowding of land with buildings;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "e72ec68e988c5694abcbb1bd34d7245ba9d5df89888b4c6e916363254f179c0c",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 26,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(6)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:7",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 37,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Avoid undue congestion of population;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "da62c4694150c2389960a7ebfe332a3bbd75fbd133584768d1ba7419d2acdd25",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 28,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(7)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:8",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 86,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Establish reasonable standards to which buildings, structures, and uses shall conform;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "89a312cc92e5b4c1f33e3e5db2f463e38165a50e326adeda24752575837bb0d8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 30,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(8)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:9",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 158,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Lessen congestion in the public streets by providing for off-street parking of motor vehicles and for off-street loading and unloading of commercial vehicles;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "91fb40f4bdb7a6aca2d27e1536e48b8ca0fb3ab8323a65d07d1cb3b1c331ecf7",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 32,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(9)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:10",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 130,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Facilitate the adequate provision of transportation, water, sewage disposal, education, recreation, and other public requirements;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "2b64a8832b592936b1c0f1abf31cedbea18243130f996c17824dbbd4c62ef760",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 34,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(10)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:11",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 124,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Provide for the elimination of nonconforming buildings and structures and for the elimination of nonconforming uses of land;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "dc262a4edb80e1f1fed8a73009e438d256fa501431dfe8d3836e98a60322015b",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 36,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(11)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:12",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 117,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Promote a desirable visual environment through creative development techniques and good civic design and arrangement;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "0ceee3c30795fee866c0e73930023321c9a08ed9ff499d181841deadf3412496",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 38,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(12)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:13",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 155,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Protect natural resources and environmentally sensitive areas and ensure that development is consistent with applicable environmental laws and regulations;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "3c15b88ac6577736734972b4f03a3bf9902b1611c3f2f62fb026ad6397ab6f0c",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 40,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(13)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:14",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 71,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Define the powers and duties of the administrative officers and bodies;",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "7f6e2f1c475d4b2ccd265b9a033f0a5d08d0fdc7f802da0567d61ce9a5f2186c",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 42,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(14)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:15",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 106,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Provide penalties for violation of the provisions of this chapter or any subsequent amendment thereto; and",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "3f48ec37460e4cc7372145b29b5010ba035d35fb7d68787070c9c55f81764caa",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 44,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(15)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "purpose",
+        "type": "purpose"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:16",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 64,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "Provide for a Board of Zoning Appeals and its powers and duties.",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "760060d641dc5be4d270331fcba60aef336cceb91e854cafb0ee5f25cfa1f6e8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 46,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(16)",
+        "type": "purpose"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-5:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(Code 1984, \u00a7 61-1-5; Ord. No. 11-05, \u00a7 1(61-1-5), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "6d092b5b02b29ba5c8d556a8df4590a64a1b4e15dbbed12402d079a2d58ea738",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 47,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7581",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 39,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-6REARMI",
+          "quote": "Sec. 50-1-6. - Regulations are minimum.",
+          "row": null,
+          "section": "50-1-6",
+          "sha256": "da055339c79063fa8b71cbccc56dff4e40567490af0106809a15c316d7d91833",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 48,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [
+        "50-1-4",
+        "50-1-5"
+      ],
+      "effect": {
+        "action": "treat_chapter_provisions_as_minimum_requirements",
+        "type": "interpretive_rule"
+      },
+      "exceptions": [
+        {
+          "text": "unless otherwise stated",
+          "type": "source_exception"
+        }
+      ],
+      "id": "detroit:50-1-6:minimum-requirements",
+      "review": {
+        "executionStatus": "global_interpretive_rule",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 483,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-6REARMI",
+          "quote": "In interpreting and applying the provisions of this chapter, such provisions shall be considered, unless otherwise stated, to be the minimum requirements necessary to promote and protect public health, safety, comfort, convenience, prosperity, other aspects of the general welfare, and the natural environment as set forth in Section 50-1-4 and Section 50-1-5 of this Code, \"Purpose and Intent,\" and in the \"Description\" statements for the respective districts and other regulations.",
+          "row": null,
+          "section": "50-1-6",
+          "sha256": "050489f184a7407429019d8f7e8ac98c3f4313f82353a32b78228cf7c578d28e",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 49,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "interpretive_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-6:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-6REARMI",
+          "quote": "(Code 1984, \u00a7 61-1-6; Ord. No. 11-05, \u00a7 1(61-1-6), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-6",
+          "sha256": "f6bfeaf65a858c433f425e1a20ac9ae7630bb89f5f43be05623d53e3275a3c6f",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 50,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7582",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 26,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "Sec. 50-1-7. - Boundaries.",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "7983345c7b88916811cc69aa4ea33f251f47b90b14ff39cd2d6a6afc13808f33",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 51,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "scope_or_list_introduction",
+        "type": "applicability_intro"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-7:lead",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 125,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "The following rules shall apply with respect to the boundaries of the various districts as shown on the zoning district maps:",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "7c32f1c39801ff7ff760955f44a020dda42c65de8c0ecd60600e69e612a7128b",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 52,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "applicability_intro"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "unless otherwise shown",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "uses_mapped_lines_as_district_boundaries",
+        "type": "boundary_default"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-7:1",
+      "review": {
+        "executionStatus": "requires_spatial_interpretation",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 436,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "Unless otherwise shown, district boundaries are street lines, alley lines, or the subdividing or boundary lines of recorded plats or the extensions thereof, and where the districts designated on the maps accompanying and made a part of this chapter are approximately bounded by street lines, alley lines, or the subdividing lines of recorded plats, such lines or the extensions thereof shall be considered to be the district boundaries;",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "ce14790ec9ba5ebf5229da4ffbf5e88019da00338a1512acd538a929925c492d",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 54,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(1)",
+        "type": "boundary_default"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "area is not subdivided into lots and blocks and district is indicated as a strip adjacent and parallel to a street or highway",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "uses_map_dimensions_for_strip_depth_and_frontage",
+        "type": "boundary_measurement"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-7:2",
+      "review": {
+        "executionStatus": "requires_map_dimensions",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 365,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "In areas not subdivided into lots and blocks, wherever a district is indicated as a strip adjacent and paralleling a street or highway, the depths of such strips shall be in accordance with dimensions shown on the maps measured at right angles from the street or highway line, and the length of such frontage shall be in accordance with dimensions shown on the map;",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "3347ec88e158cda80b850b8f360c6ba8615b8ae06877fd2efea60a013f3bf863",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 56,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(2)",
+        "type": "boundary_measurement"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "uncertainty, contradiction, or conflict caused by map scale or illegibility or absence of specified lines",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "planning_and_development_department_determines_uncertain_boundary",
+        "standard": "in accordance with the spirit and purpose of this chapter",
+        "type": "delegated_interpretation"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-7:3",
+      "review": {
+        "executionStatus": "administrative_discretion_required",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 521,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "Where due to the scale or illegibility of the district maps or due to the absence of street, alley, or recorded subdivision or plat lines, there is any uncertainty, contradiction, or conflict as to the intended location of any district boundary on a district map, the Planning and Development Department shall have the power and duty to interpret the intent of said district map so as to determine and designate the proper location for such district boundary in accordance with the spirit and purpose of this chapter; and",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "3dff89d7f078f8f0e36922a5a61e00841a6c1c2b54066c72414fa3f285e9a3ff",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 58,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(3)",
+        "type": "delegated_interpretation"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "assigns_vacated_right_of_way_to_adjoining_property_districts",
+        "type": "boundary_change"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-7:4a",
+      "review": {
+        "executionStatus": "requires_vacation_and_adjoining_district_data",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 207,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "Where a public right-of-way is hereafter vacated, the land formerly in such public right-of-way shall be included within the district of adjoining property on either side of said vacated public right-of-way,",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "f5d596c2bc10121dbf6659bcc0e0e4d10b95acdb48f124ce9e8fd94d2a35ea24",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 60,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(4)",
+        "type": "boundary_change"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "vacated public right-of-way was a boundary between two or more different districts",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "places_boundary_at_former_centerline_when_vacated_right_of_way_separated_districts",
+        "type": "boundary_change"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-7:4b",
+      "review": {
+        "executionStatus": "requires_vacation_and_adjoining_district_data",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 408,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "and in the event such public right-of-way was a district boundary between two or more different districts, the new district boundary shall be the former centerline of such vacated public right-of-way.",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "4b796917dafcaa79488f7b179218d557ba0c9b3b6596180a099c1d2a506ba22a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 60,
+          "start": 208
+        }
+      ],
+      "subject": {
+        "subsection": "(4)",
+        "type": "boundary_change"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-7:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "(Code 1984, \u00a7 61-1-7; Ord. No. 11-05, \u00a7 1(61-1-7), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "704bc5fd18e06a5156f73d63fac16190243d3b66ca83be8b6a675e6f4662798f",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 61,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7583",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 82,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-8COPRCOSTFERE",
+          "quote": "Sec. 50-1-8. - Conflicting provisions; conflict with state or federal regulations.",
+          "row": null,
+          "section": "50-1-8",
+          "sha256": "eb233e5ac6826e000ce9ddf2852ea295ea8893bb55f96352cd1b2a5bdcb4eb89",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 62,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "chapter provision is inconsistent with a state or federal provision",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "more_restrictive_provision_controls",
+        "limitation": "to the extent permitted by law",
+        "type": "conflict_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-8:government-conflict",
+      "review": {
+        "executionStatus": "requires_legal_comparison",
+        "method": "manual_clause_review",
+        "notes": [
+          "Determining which provision is more restrictive and whether law permits local control is context-dependent."
+        ],
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 176,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-8COPRCOSTFERE",
+          "quote": "Where the provisions of this chapter are inconsistent with those of the state or federal government, the more restrictive provision will control to the extent permitted by law.",
+          "row": null,
+          "section": "50-1-8",
+          "sha256": "24b44af5215b608e8eccb4ed36246465b9ff57207fb8a34c60512424e44d502c",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 63,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "conflict_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-8:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-8COPRCOSTFERE",
+          "quote": "(Code 1984, \u00a7 61-1-8; Ord. No. 11-05, \u00a7 1(61-1-8), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-8",
+          "sha256": "0bb4ce99a79cb4e4d74d654c92104d6f0f60a482db562e19910590e2bfb3b8a3",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 64,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "range": {
+          "from": "50-1-16",
+          "through": "50-1-40"
+        },
+        "role": "reserved_range",
+        "type": "reserved"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7584",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 76,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-9COPRCOOTRE",
+          "quote": "Sec. 50-1-9. - Conflicting provisions; conflict with other City regulations.",
+          "row": null,
+          "section": "50-1-9",
+          "sha256": "66450381ec48ca40cf0a945b445da19ad00ef77b1f1456a4dc4d43d8d88ccdf7",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 65,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "reserved"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "chapter provisions conflict with each other or with another provision in the Code",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "more_restrictive_provision_controls",
+        "type": "conflict_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-9:city-conflict",
+      "review": {
+        "executionStatus": "requires_legal_comparison",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 174,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-9COPRCOOTRE",
+          "quote": "Where the provisions of this chapter are inconsistent with one another or where they conflict with provisions found in this Code, the more restrictive provision will control.",
+          "row": null,
+          "section": "50-1-9",
+          "sha256": "ef68235ca037295e40bcbea507a96de06861332887e76e558c5c9fef8042fcb7",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 66,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "conflict_rule"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "Article XII C, R, or blank designation conflicts with listing or omission of same use in Article VIII, IX, X, or XI",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [
+        "ARTICLE VIII",
+        "ARTICLE IX",
+        "ARTICLE X",
+        "ARTICLE XI",
+        "ARTICLE XII"
+      ],
+      "effect": {
+        "action": "district_article_use_lists_control_over_article_xii_use_table",
+        "type": "specific_precedence_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-9:use-list-priority",
+      "review": {
+        "executionStatus": "executable_precedence_rule",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 579,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-9COPRCOOTRE",
+          "quote": "In the event the specification of the permissibility/impermissibility of a given land use in the Article XII of this chapter Use Table (\"C\" or \"R\" or blank) conflicts with the listing or omission of that same land use in the use lists in Article VIII, Article IX, Article X, or Article XI of this chapter, the use lists in Article VIII, Article IX, Article X, or Article XI of this chapter shall control.",
+          "row": null,
+          "section": "50-1-9",
+          "sha256": "85a8ca25f11e3ffa0f06cd519c231d82f3011149a427b0f9d0496d84eea5e847",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 66,
+          "start": 175
+        }
+      ],
+      "subject": {
+        "type": "specific_precedence_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-9:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-9COPRCOOTRE",
+          "quote": "(Code 1984, \u00a7 61-1-9; Ord. No. 11-05, \u00a7 1(61-1-9), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-9",
+          "sha256": "10c52913eed59db6753d988183fcdba5361b7f69d088734161742c91fabbf6f8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 67,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7585",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 73,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-10COPRCOPRAG",
+          "quote": "Sec. 50-1-10. - Conflicting provisions; conflict with private agreements.",
+          "row": null,
+          "section": "50-1-10",
+          "sha256": "a2ca9af76a581fc51b7739260fc0d86106d65c6160eba4492acf193028046095",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 68,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "disclaims_intent_to_interfere_with_private_agreements",
+        "type": "intent"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-10:noninterference",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 160,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-10COPRCOPRAG",
+          "quote": "It is not the intent of this chapter to interfere with, abrogate, or annul any easement, covenant, deed restriction, or other agreement between private parties.",
+          "row": null,
+          "section": "50-1-10",
+          "sha256": "df547b561ee8ecd4bfe7c55e7e2e745a2fd55bbd7828554649bc83720b13b3f4",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 69,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "intent"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "chapter imposes a greater restriction than private agreement",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "chapter_controls",
+        "type": "conflict_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-10:chapter-more-restrictive",
+      "review": {
+        "executionStatus": "requires_legal_comparison",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 308,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-10COPRCOPRAG",
+          "quote": "Where the provisions of this chapter impose a greater restriction than imposed by a private agreement, the provisions of this chapter will control.",
+          "row": null,
+          "section": "50-1-10",
+          "sha256": "0d3ff2a80d40d4a77d9c756f2150d21f4c6b8aaeb3a1be31f1b6c5c99b01e1c7",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 69,
+          "start": 161
+        }
+      ],
+      "subject": {
+        "type": "conflict_rule"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "private agreement imposes a greater restriction than chapter",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "private_agreement_controls",
+        "type": "conflict_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-10:agreement-more-restrictive",
+      "review": {
+        "executionStatus": "requires_private_agreement_and_legal_comparison",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 454,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-10COPRCOPRAG",
+          "quote": "Where the provisions of a private agreement impose a greater restriction than this chapter, the provisions of the private agreement will control.",
+          "row": null,
+          "section": "50-1-10",
+          "sha256": "d2fce3cf6d27d6664c54e8d7bd1d8c1e8714aac52ecf847b0aac8e83638de9a2",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 69,
+          "start": 309
+        }
+      ],
+      "subject": {
+        "type": "conflict_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "city_not_responsible_for_monitoring_or_enforcing_private_agreements",
+        "type": "administrative_limitation"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-10:no-city-enforcement",
+      "review": {
+        "executionStatus": "nonparcel_administrative_rule",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 536,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-10COPRCOPRAG",
+          "quote": "The City shall not be responsible for monitoring or enforcing private agreements.",
+          "row": null,
+          "section": "50-1-10",
+          "sha256": "30727a80b9a36bc3131a2a0a7f0ce29ffc4f213d205882e6bbc514fd0f73caa1",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 69,
+          "start": 455
+        }
+      ],
+      "subject": {
+        "type": "administrative_limitation"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-10:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 68,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-10COPRCOPRAG",
+          "quote": "(Code 1984, \u00a7 61-1-10; Ord. No. 11-05, \u00a7 1(61-1-10), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-10",
+          "sha256": "b4ca145ac4e07339907fc94d397b17488140dcaf92566dbdcd8fea30cd501106",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 70,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7586",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 61,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-11TRPRVICO",
+          "quote": "Sec. 50-1-11. - Transitional provisions; violations continue.",
+          "row": null,
+          "section": "50-1-11",
+          "sha256": "2be087595a4a04e4067e5cbc4b98bf0c5ef9145be3a3d2dfe6b9c35d070841b4",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 71,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [
+        "ARTICLE V"
+      ],
+      "effect": {
+        "action": "prior_violation_continues_and_is_subject_to_article_v",
+        "type": "transition_rule"
+      },
+      "exceptions": [
+        {
+          "text": "the use, development, construction, or other activity complies with this chapter",
+          "type": "source_exception"
+        }
+      ],
+      "id": "detroit:50-1-11:prior-violations",
+      "review": {
+        "executionStatus": "requires_prior_ordinance_and_factual_history",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 438,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-11TRPRVICO",
+          "quote": "Any violation of Ordinance No. 390-G, as amended, being the Official Zoning Ordinance of the City of Detroit, which was repealed on the effective date of the ordinance from which this chapter is derived, will continue to be a violation under this chapter and be subject to penalties and enforcement under Article V of this chapter, unless the use, development, construction, or other activity complies with the provisions of this chapter.",
+          "row": null,
+          "section": "50-1-11",
+          "sha256": "981a240408121549fdd3de9aa2d30b4a4a6f1e181d4fa5b94e4876fb98f4aa92",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 72,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "description": "violation of Ordinance No. 390-G as amended",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-11:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 68,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-11TRPRVICO",
+          "quote": "(Code 1984, \u00a7 61-1-11; Ord. No. 11-05, \u00a7 1(61-1-11), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-11",
+          "sha256": "144edcfa562da3002f370522de18c4f6e1e9347ee13090f5031c04ee63120084",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 73,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7587",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 85,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-12TRPRLENOUNPROR",
+          "quote": "Sec. 50-1-12. - Transitional provisions; legal nonconformities under prior ordinance.",
+          "row": null,
+          "section": "50-1-12",
+          "sha256": "fa4b7cdcda5c6975a9d3d1f50e3102c973e575f86691d39b6c83e76c112c6f3f",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 74,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "situation producing prior nonconforming status continues to exist",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "prior_legal_nonconformity_remains_legal_nonconformity",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-12:continued-nonconformity",
+      "review": {
+        "executionStatus": "requires_prior_ordinance_and_factual_history",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 394,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-12TRPRLENOUNPROR",
+          "quote": "Any legal nonconformity under Ordinance No. 390-G, as amended, being the Official Zoning Ordinance of the City of Detroit, which was repealed on the effective date of the ordinance from which this chapter is derived, will also be a legal nonconformity under this chapter, as long as the situation that resulted in the nonconforming status under the previous zoning ordinance continues to exist.",
+          "row": null,
+          "section": "50-1-12",
+          "sha256": "4034e718c0ace60535535a455ebf2b2cb24e71b51732369c430364d351ae04eb",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 75,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "adoption of this chapter makes it conforming",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "prior_nonconformity_ceases_to_be_nonconformity",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-12:newly-conforming",
+      "review": {
+        "executionStatus": "requires_prior_and_current_rule_comparison",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 597,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-12TRPRLENOUNPROR",
+          "quote": "Where a nonconformity under the previous zoning ordinance becomes conforming because of the adoption of the ordinance from which this chapter is derived, the situation will no longer be a nonconformity.",
+          "row": null,
+          "section": "50-1-12",
+          "sha256": "dd4deb5e9c61215f3f76cc44a239dc01bd946741fc6f670ccb6425f48a1a35e2",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 75,
+          "start": 395
+        }
+      ],
+      "subject": {
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-12:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 68,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-12TRPRLENOUNPROR",
+          "quote": "(Code 1984, \u00a7 61-1-12; Ord. No. 11-05, \u00a7 1(61-1-12), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-12",
+          "sha256": "13fab8b8420750536bdc13ee1f756eaf4db30ffc70002701fad3db364ea0bf24",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 76,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7588",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 59,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "Sec. 50-1-13. - Transitional provisions; approved projects.",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "2ea42b07a0d142be89bd6e615f573c57fa2c939d39948991ef8cc2df143fa9ed",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 77,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "scope_or_list_introduction",
+        "type": "applicability_intro"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:lead",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 145,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "The following transitional provisions shall apply to projects approved prior to the adoption of the ordinance from which this chapter is derived:",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "6d24180f8d991542d88f811af38cfa3e8c2d082b7a8bcc3f00d78624a5179c97",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 78,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "applicability_intro"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "valid_permits_and_approvals_remain_valid_until_expiration",
+        "date": "2005-05-28",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:1a",
+      "review": {
+        "executionStatus": "requires_approval_history",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 182,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "Permits and approvals that are valid on the effective date of the ordinance from which this chapter is derived, which is May 28, 2005, shall remain valid until their expiration date.",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "81b4ea709f4bc0531f7345a188fce952948ced26166c97298a94cb44c8bb87d8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 80,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(1)",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "approval or permit remains valid and has not lapsed",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "project_may_use_standards_in_effect_at_approval",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:1b",
+      "review": {
+        "executionStatus": "requires_historical_rules_and_approval_status",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 389,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "Projects with valid approvals or permits may be carried out in accordance with the development standards in effect at the time of approval, provided, that the permit or approval is valid and has not lapsed;",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "0593395aecf6b1c0bd386d252f14ad39b22758c61f203d2a0c09ddcd126bae79",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 80,
+          "start": 183
+        }
+      ],
+      "subject": {
+        "subsection": "(1)",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "valid_uses_remain_valid_under_terms_of_authorization",
+        "date": "2005-05-28",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:2",
+      "review": {
+        "executionStatus": "requires_authorization_history",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 379,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "All uses that are valid on the effective date of the ordinance from which this chapter is derived, which is May 28, 2005, remain valid in accordance with the terms, conditions, regulations, controls or requirements of the grants or approvals that are issued by any City department or agency, or resolutions adopted or ordinances passed by the City Council, which allow such uses;",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "a314882b52287a131f1e9ab7217e24e2aba23ec6cf31f4b1aee5ec3136c76a22",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 82,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(2)",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "building permit issued before 2005-05-28",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "chapter_does_not_require_change_to_permitted_structure_plans_construction_or_use",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:3",
+      "review": {
+        "executionStatus": "requires_permit_history",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 264,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "No provision of this chapter shall require any change in the plans, construction, or designated use of any structure for which a building permit has been issued prior to the effective date of the ordinance from which this chapter is derived, which is May 28, 2005;",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "4c47c6bc1261478e8f1cc1a60ac4ef8113326b22018752740fa5e4159002c2d7",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 84,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(3)",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "required findings or approval criteria remain valid",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "original_decision_maker_may_renew_or_extend_previous_approval",
+        "type": "discretionary_transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:4a",
+      "review": {
+        "executionStatus": "administrative_discretion_required",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 171,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "The decision-making body that granted original approval may renew or extend the time of a previous approval if the required findings or criteria for approval remain valid.",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "d6a7fbe7e13759aa647300c79635b516db7199afcda1a4da73639d75bfa0e898",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 86,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(4)",
+        "type": "discretionary_transition_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "extension_may_not_exceed_one_year",
+        "type": "duration_limit"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:4b",
+      "review": {
+        "executionStatus": "executable_temporal_limit",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 230,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "Any extension granted shall not exceed one year in length,",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "0040ccb92f29d9ce32a8df51a7ffe71717c90e98fb257459e2353ed2894c6474",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 86,
+          "start": 172
+        }
+      ],
+      "subject": {
+        "subsection": "(4)",
+        "type": "duration_limit"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "no_more_than_one_extension_may_be_granted",
+        "type": "count_limit"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:4c",
+      "review": {
+        "executionStatus": "executable_count_limit",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 281,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "and no more than one extension may be granted; and",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "1754deac479b01eed6c5ba76ecb3fc10fa2db1dad87d7a28b4c63d9c4fc8496a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 86,
+          "start": 231
+        }
+      ],
+      "subject": {
+        "subsection": "(4)",
+        "type": "count_limit"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "expired_project_reapplication_subject_to_current_standards",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:5",
+      "review": {
+        "executionStatus": "requires_application_history_and_current_rules",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 116,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "Any re-application for an expired project approval shall meet the standards in effect at the time of re-application.",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "db7f4b5880853951cfc6f2519539b721b597b84bfdc376591b742df8972f9d1c",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 88,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(5)",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-13:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 160,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "(Code 1984, \u00a7 61-1-13; Ord. No. 11-05, \u00a7 1(61-1-13), eff. 5-28-2005; Ord. No. 19-05, \u00a7 1(61-1-13), eff. 5-28-2005; Ord. No. 34-05, \u00a7 1(61-1-13), eff. 12-6-2005)",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "80eda669b0f26aacf21b42175297126ffa6ec20b2f7403d676eba202a2cf015f",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 89,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7589",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 66,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "Sec. 50-1-14. - Transitional provisions; applications in progress.",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "a7e2b5b2f89b3e4bc4322cd1f6954a875a6e54b44ae3fdacc5b679cff76af005",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 90,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "scope_or_list_introduction",
+        "type": "applicability_intro"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-14:lead",
+      "review": {
+        "executionStatus": "interpretive_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 200,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "The following transitional provisions shall apply to complete permit applications submitted prior to the adoption of the ordinance from which this chapter is derived, but not approved as of that date:",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "084bd95ce1a27683088be97ab6992867a9db08fa7ceec71d9e10cd18a252a278",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 91,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "applicability_intro"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "submitted before 2005-05-28",
+          "type": "source_condition"
+        },
+        {
+          "text": "found complete",
+          "type": "source_condition"
+        },
+        {
+          "text": "pending approval on 2005-05-28",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "qualifying_application_may_be_reviewed_wholly_under_previous_zoning_ordinance",
+        "type": "applicant_option"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-14:1a",
+      "review": {
+        "executionStatus": "requires_application_history_and_applicant_election",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 368,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "Applications for permits and other approvals, submitted before the effective date of the ordinance from which this chapter is derived, which is May 28, 2005, that are found to be complete, and pending approval at the time of enactment of this chapter on May 28, 2005, may, at the applicant's option, be reviewed wholly under the terms of the previous zoning ordinance.",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "eafe28d59eebd8d551cd8c9db4f184ff2d67325108537c65daf7383db91aedcb",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 93,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(1)",
+        "type": "applicant_option"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "approved_project_may_use_standards_in_effect_when_complete_application_submitted",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-14:1b",
+      "review": {
+        "executionStatus": "requires_historical_rules_and_application_history",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 525,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "Where approved, these projects may be carried out in accordance with the development standards in effect at the time the completed application is submitted.",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "ace1a427d50df2771dc5e5228c81fef0b840359a25ec4cd34e326d61ff457903",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 93,
+          "start": 369
+        }
+      ],
+      "subject": {
+        "subsection": "(1)",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "expired_permit_reapplication_subject_to_current_standards",
+        "type": "transition_rule"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-14:1c",
+      "review": {
+        "executionStatus": "requires_application_history_and_current_rules",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 636,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "Any re-application for an expired permit shall meet the standards in effect at the time of re-application; and",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "edc4d81f8176c1134f14c8623064316fa4a2dfd0d485cffa590dbbc84faa3eab",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 93,
+          "start": 526
+        }
+      ],
+      "subject": {
+        "subsection": "(1)",
+        "type": "transition_rule"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "no application submitted and accepted as complete before 2005-05-28",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "current_chapter_applies",
+        "type": "applicability"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-14:2",
+      "review": {
+        "executionStatus": "requires_application_history",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 249,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "Projects for which no application has been submitted and accepted as complete prior to the effective date of the ordinance from which this chapter is derived, which is May 28, 2005, shall be subject to all requirements and standards of this chapter.",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "d92c019233fdf9878236fc99912514bbb875529d44a31b8e6197a0be0f040863",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 95,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "subsection": "(2)",
+        "type": "applicability"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-14:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 68,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "(Code 1984, \u00a7 61-1-14; Ord. No. 11-05, \u00a7 1(61-1-14), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "a6463ec079652d9bf4b67126a5de4bc21a7e979baf1012f4312c821e5c7e7215",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 96,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7590",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 29,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-15SE",
+          "quote": "Sec. 50-1-15. - Severability.",
+          "row": null,
+          "section": "50-1-15",
+          "sha256": "ef543e6fba34268278400e00cac5edb75ef83251fa02612afc9989bfb1ec83a6",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 97,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "text": "court of competent jurisdiction holds a section, subsection, sentence, or phrase invalid or unconstitutional",
+          "type": "source_condition"
+        }
+      ],
+      "cross_references": [],
+      "effect": {
+        "action": "remaining_portions_unaffected_by_invalidity",
+        "type": "severability"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-15:remaining-portions",
+      "review": {
+        "executionStatus": "legal_effect_not_parcel_evaluation",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 224,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-15SE",
+          "quote": "Where any section, subsection, sentence, or phrase of this chapter is held to be invalid or unconstitutional by a court of competent jurisdiction, for any reason, the remaining portions of this chapter shall not be affected.",
+          "row": null,
+          "section": "50-1-15",
+          "sha256": "7f6b7b1148a0600571eef6a0ea93075846f4a3c960ac217461cde956acd93525",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 98,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "severability"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "action": "declares_each_portion_independently_adopted",
+        "type": "severability_intent"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-15:independent-adoption",
+      "review": {
+        "executionStatus": "legal_context_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 460,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-15SE",
+          "quote": "It is expressly declared that this chapter and each section, subsection, sentence, and phrase would have been adopted regardless of the fact that one or more other portions of this chapter would be declared invalid or unconstitutional.",
+          "row": null,
+          "section": "50-1-15",
+          "sha256": "6bc75dd6baf21952cfd98e7d4c98c5c28b1d492764cb184b74f8aab6e5226fa4",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 98,
+          "start": 225
+        }
+      ],
+      "subject": {
+        "type": "severability_intent"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "codification_and_amendment_history",
+        "type": "history"
+      },
+      "exceptions": [],
+      "id": "detroit:50-1-15:history",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 68,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-15SE",
+          "quote": "(Code 1984, \u00a7 61-1-15; Ord. No. 11-05, \u00a7 1(61-1-15), eff. 5-28-2005)",
+          "row": null,
+          "section": "50-1-15",
+          "sha256": "861e8c93c25c89c2ff800fc983becb4f58df78c9faa32fe38b8a3b1deb877db4",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 99,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "history"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "section_heading",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-heading:7591",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 34,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_SS50-1-16--50-1-40RE",
+          "quote": "Secs. 50-1-16\u201450-1-40. - Reserved.",
+          "row": null,
+          "section": "50-1-16",
+          "sha256": "f8ca93d566281270ef14c7da3f5c49072b1909915cd9b7a5eb6819a31b93592a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 100,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:15",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(1)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "fd0ad9026eee596b7072a762941f60bef57e760a230edd450b3a634825685c2a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 15,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:17",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(2)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "0e77e68ba5473d98840c3212f4a8cb801226494f1162c8001a9f4ed7b00cbaa8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 17,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:19",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(3)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "46f789d1efeefad080846917a6a4a761d0e1804bb0a4f27fa4634a887ec26265",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 19,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:21",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(4)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "cbe3b52ccdb46fd15e9f52b372fc95b549e6d8a1c5202fda06e4f3bf478e41ca",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 21,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:23",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(5)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "97ce6126f9bad63aac5ddf4679f0612cefe3e29045a0c685838526b952c8150d",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 23,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:25",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(6)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "8d8feaf7780d6b65f43b3305ab71142e0bd5c8f36701fbe8db1f98f9599f14c9",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 25,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:27",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(7)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "cd8734e4d42ef1eb87538b3072b2505694f8e3e9a388828e5a9374f95695e39a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 27,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:29",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(8)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "241ce7ecc46a448f085356fe5edce69396734f4e2c265a52b84dedcccbf01acf",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 29,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:31",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(9)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "7a7170fab8cc10cdf154841d6022a9f16e22c78ea17cc854d00f4f3b353d1e02",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 31,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:33",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 4,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(10)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "6c2d89f668f6f2c1b3b73d4349e3820694952f74ab6668a024bd68f0a6c20d1d",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 33,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:35",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 4,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(11)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "2471833ad37c217ba2cc698f0c29141c6157230ff7e05ce1131d5b28013e5873",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 35,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:37",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 4,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(12)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "a0bac4a5242302c04d916b754bc2a60ee32a1e37b3f5a69fc3c643df7ad55d8b",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 37,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:39",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 4,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(13)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "4ef8442a7df31cb6306e78bce3c7ceaa1c5394cf00ec097b43dd04d5113d8c1e",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 39,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:41",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 4,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(14)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "f22321d3e13d0f409ede3f7e6c4591ff1e77ae7c531d0a0804ac734b5fffad8b",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 41,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:43",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 4,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(15)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "49b59326b7bcf29bfb032e9e1c2b0b270167240fb47da43cb10856735dc752cc",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 43,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:45",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 4,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-5PUINSP",
+          "quote": "(16)",
+          "row": null,
+          "section": "50-1-5",
+          "sha256": "a186b156d012cee172fd1106e9b9e40b5116a4ebecee895d8e3aa777b6bec302",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 45,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:53",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "(1)",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "fd0ad9026eee596b7072a762941f60bef57e760a230edd450b3a634825685c2a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 53,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:55",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "(2)",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "0e77e68ba5473d98840c3212f4a8cb801226494f1162c8001a9f4ed7b00cbaa8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 55,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:57",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "(3)",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "46f789d1efeefad080846917a6a4a761d0e1804bb0a4f27fa4634a887ec26265",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 57,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:59",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-7BO",
+          "quote": "(4)",
+          "row": null,
+          "section": "50-1-7",
+          "sha256": "cbe3b52ccdb46fd15e9f52b372fc95b549e6d8a1c5202fda06e4f3bf478e41ca",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 59,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:79",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "(1)",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "fd0ad9026eee596b7072a762941f60bef57e760a230edd450b3a634825685c2a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 79,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:81",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "(2)",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "0e77e68ba5473d98840c3212f4a8cb801226494f1162c8001a9f4ed7b00cbaa8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 81,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:83",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "(3)",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "46f789d1efeefad080846917a6a4a761d0e1804bb0a4f27fa4634a887ec26265",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 83,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:85",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "(4)",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "cbe3b52ccdb46fd15e9f52b372fc95b549e6d8a1c5202fda06e4f3bf478e41ca",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 85,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:87",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-13TRPRAPPR",
+          "quote": "(5)",
+          "row": null,
+          "section": "50-1-13",
+          "sha256": "97ce6126f9bad63aac5ddf4679f0612cefe3e29045a0c685838526b952c8150d",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 87,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:92",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "(1)",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "fd0ad9026eee596b7072a762941f60bef57e760a230edd450b3a634825685c2a",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 92,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    },
+    {
+      "conditions": [],
+      "cross_references": [],
+      "effect": {
+        "role": "subsection_marker",
+        "type": "source_structure"
+      },
+      "exceptions": [],
+      "id": "detroit:article-i:source-marker:94",
+      "review": {
+        "executionStatus": "source_record_only",
+        "method": "manual_clause_review",
+        "reviewedOn": "2026-07-31",
+        "status": "verified"
+      },
+      "sources": [
+        {
+          "column": null,
+          "document": "ARTICLE_I.municode.json",
+          "end": 3,
+          "node_id": "COCH50_CH50ZO_ARTIINPR_S50-1-14TRPRAPPR",
+          "quote": "(2)",
+          "row": null,
+          "section": "50-1-14",
+          "sha256": "0e77e68ba5473d98840c3212f4a8cb801226494f1162c8001a9f4ed7b00cbaa8",
+          "snapshot": "2025-10-09_job-429936",
+          "source_index": 94,
+          "start": 0
+        }
+      ],
+      "subject": {
+        "type": "source_structure"
+      }
+    }
+  ],
+  "schemaVersion": "detroit-legal-ir-v1"
+}

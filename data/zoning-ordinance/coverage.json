@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "ordinance-coverage-v1",
+  "source": {
+    "format": "municode_snapshot",
+    "canonicalSource": {
+      "kind": "municode_snapshot",
+      "snapshot": "2025-10-09_job-429936",
+      "manifest": "resources/municode/2025-10-09_job-429936/manifest.json",
+      "manifestSha256": "0fa1f7aad85f5965e13e9635678e1f101265d13cb081dec2fe6c39917746a5ff",
+      "jobId": 429936,
+      "jobName": "Supplement 4",
+      "latestUpdatedDate": "2025-10-09T16:34:25",
+      "pendingOrdinanceCountReported": 70
+    },
+    "documents": 18,
+    "sections": 1982,
+    "nodes": 2224,
+    "blocks": 17334,
+    "tables": 224
+  },
+  "legacyDocxMachineExtracted": {
+    "usePermissionCells": 7685,
+    "dimensionalCells": 1907,
+    "definitions": 1072,
+    "warning": "Legacy totals include known context and provenance errors."
+  },
+  "provenanceCandidates": {
+    "permissions": 7685,
+    "dimensions": 1403,
+    "definitions": 467,
+    "useAssignments": 478,
+    "rejected": 0
+  },
+  "reviewedExecutable": {
+    "districts": 29,
+    "uses": 304,
+    "rules": 856,
+    "verifiedRules": 92,
+    "structurallyVerifiedDimensions": 728,
+    "computedDimensionRules": 80,
+    "reviewedFillingStationDimensionRules": 4,
+    "reviewedFillingStationGeneralRules": 10,
+    "compoundSideYardRules": 34,
+    "recreationalSpaceRules": 12,
+    "specialDistrictDimensionRules": {
+      "rules": 16,
+      "computedRules": 6,
+      "formulas": 3,
+      "provisions": 2
+    },
+    "structurallyVerifiedPermissions": 7565,
+    "reviewedConditionalPermissionBranches": 108,
+    "reviewedAntennaRules": {
+      "permissions": 41,
+      "provisions": 6
+    },
+    "verifiedOverlayProhibitions": 61,
+    "structurallyVerifiedDefinitions": 467,
+    "structurallyVerifiedUseAssignments": 478,
+    "sourceEncodedProvisions": 17334,
+    "machineClassifiedTextProvisions": {
+      "definition": 58,
+      "enforcement": 172,
+      "exception": 383,
+      "map": 122,
+      "nonconformity": 272,
+      "procedure": 563,
+      "prohibition": 461,
+      "purpose": 304,
+      "requirement": 1481
+    },
+    "scope": "Principal one- and two-family dwellings in R1-R6"
+  },
+  "warning": "Source encoding is comprehensive. Machine candidates are not executable rules until normalized and reviewed."
+}
