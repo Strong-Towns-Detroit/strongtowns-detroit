@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "node scripts/copy-maplibre-assets.mjs",
     "dev": "next dev",
     "build": "vinext build && node scripts/prepare_dist.mjs",
     "start": "next start",
@@ -10,12 +11,23 @@
     "dev:vinext": "vinext dev --port 3001",
     "build:vinext": "vinext build",
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
-    "deploy:vinext": "vinext-cloudflare deploy --config dist/server/wrangler.json"
+    "deploy:vinext": "vinext-cloudflare deploy --config dist/server/wrangler.json",
+    "tokens": "python3 ../../design/build_tokens.py",
+    "tokens:check": "python3 ../../design/build_tokens.py --check",
+    "tiles:parcels": "python3 scripts/build_parcel_tiles.py",
+    "freeze:lot-area": "node scripts/freeze_exhibit.mjs --route /publications/minimum-lot-area/poster/ --stem detroit-minimum-lot-size",
+    "freeze:lot-width": "node scripts/freeze_exhibit.mjs --route /publications/minimum-lot-width/poster/ --stem detroit-minimum-lot-width",
+    "test": "node --experimental-strip-types --test lib/**/*.test.ts",
+    "freeze:setback": "node scripts/freeze_exhibit.mjs --route /publications/setback-envelope/poster/ --stem detroit-residential-setback-envelope",
+    "freeze:value": "node scripts/freeze_exhibit.mjs --route /publications/assessed-value-per-acre/poster/ --stem detroit-assessed-value-per-acre"
   },
   "dependencies": {
+    "@loaders.gl/core": "^4.4.3",
+    "@loaders.gl/mvt": "^4.4.3",
     "@vinext/cloudflare": "^1.0.0-beta.4",
-    "leaflet": "^1.9.4",
+    "maplibre-gl": "^6.0.0",
     "next": "^16.2.12",
+    "pmtiles": "^4.4.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-server-dom-webpack": "^19.2.8",
@@ -23,12 +35,12 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.48.0",
-    "@types/leaflet": "^1.9.20",
     "@types/node": "^22.16.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "@vitejs/plugin-rsc": "^0.5.32",
+    "playwright": "^1.62.1",
     "typescript": "^5.8.3",
     "vite": "^8.1.5",
     "wrangler": "^4.115.0"

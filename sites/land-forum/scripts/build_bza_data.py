@@ -4,16 +4,12 @@
 from __future__ import annotations
 
 import json
-import math
 import sys
 from pathlib import Path
 
 import geopandas as gpd
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 from shapely.geometry import mapping
-from shapely.ops import unary_union
 
 HERE = Path(__file__).resolve().parent
 SITE = HERE.parent
@@ -22,7 +18,6 @@ DATA = ROOT / "pipelines/zoning/bza_dataset_gemini"
 OUTPUT = SITE / "public/data/bza-cases.json"
 MAP_OUTPUT = SITE / "public/data/bza-map.json"
 CONTEXT_OUTPUT = SITE / "public/data/detroit-context.geojson"
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = (
     ROOT / "projects/detroit-land-use-forum/spirit-plaza-accessibility"
     / "output/road_context.geojson"
@@ -36,7 +31,6 @@ ATLAS_CODE = (
 )
 sys.path.insert(0, str(ATLAS_CODE))
 from build_atlas import (  # noqa: E402
-    displace_overlapping_points,
     primary_relief_categories,
 )
 
@@ -95,6 +89,7 @@ def main() -> None:
     histories = pd.read_csv(DATA / "case_histories.csv").drop_duplicates(
         "case_history_id"
     )
+    occurrences = pd.read_csv(DATA / "case_occurrences.csv").fillna("")
     applications = pd.read_csv(DATA / "atlas_applications.csv")
     sites = gpd.read_file(DATA / "map_sites.gpkg").to_crs(4326)
     sites["point"] = sites.geometry.representative_point()
@@ -110,6 +105,18 @@ def main() -> None:
         )
     )
     records = histories.merge(points, on="case_history_id", how="inner")
+    hearings_by_case = {}
+    for case_id, group in occurrences.groupby("case_history_id"):
+        hearings_by_case[case_id] = [
+            {
+                "date": clean(row.meeting_date),
+                "status": clean(row.decision_status),
+                "decision": clean(row.decision),
+                "file": clean(row.source_file),
+                "url": f"/bza-minutes/{clean(row.source_file)}",
+            }
+            for row in group.sort_values("meeting_date").itertuples(index=False)
+        ]
     public = []
     for row in records.itertuples(index=False):
         category = primary.get(row.case_history_id, "unspecified")
@@ -132,6 +139,7 @@ def main() -> None:
                 "firstDate": clean(row.first_meeting_date),
                 "lastDate": clean(row.last_meeting_date),
                 "appearances": int(row.appearance_count),
+                "hearings": hearings_by_case.get(row.case_history_id, []),
                 "lat": round(float(row.lat), 6),
                 "lon": round(float(row.lon), 6),
             }
@@ -149,7 +157,7 @@ def build_map_assets(
     sites: gpd.GeoDataFrame,
     primary: dict[str, str | None],
 ) -> None:
-    """Export the poster map's context and displaced, appearance-sized sites."""
+    """Export the atlas context and true locations of appearance-sized sites."""
     sites = sites.drop_duplicates(
         ["case_history_id", "site_id", "parcel_id"]
     ).copy()
@@ -211,46 +219,14 @@ def build_map_assets(
     )
     dissolved = sites.dissolve(by=["project_group", "primary_category"])
     dissolved = dissolved.join(aggregate)
-    points = dissolved.geometry.representative_point()
-    appearances = dissolved["appearances"].clip(lower=1, upper=10)
-    marker_areas = 64 * appearances.to_numpy()
-
-    parcels = gpd.read_file(PARCELS, columns=["geometry"]).to_crs(3857)
-    city_geometry = unary_union(parcels.geometry)
-    roads = gpd.read_file(ROADS).to_crs(3857)
-    major = roads[roads["road_class"].isin(["major", "arterial"])].copy()
-
-    # Match the poster viewport and marker-to-map scale before displacement.
-    fig, ax = plt.subplots(figsize=(10.7, 7.15), dpi=145)
-    gpd.GeoSeries([city_geometry], crs=3857).plot(ax=ax)
-    major.plot(ax=ax)
-    ax.set_axis_off()
-    ax.margins(0.01)
-    y_min, y_max = ax.get_ylim()
-    shift = (y_max - y_min) * 0.02
-    ax.set_ylim(y_min + shift, y_max + shift)
-    fig.tight_layout(pad=0)
-    fig.canvas.draw()
-    origin = ax.transData.transform((0.0, 0.0))
-    kilometer = ax.transData.transform((1000.0, 0.0))
-    pixels_per_map_unit = np.linalg.norm(kilometer - origin) / 1000.0
-    radii_pixels = np.sqrt(marker_areas / math.pi) * fig.dpi / 72.0
-    radii_map_units = radii_pixels / pixels_per_map_unit
-    placed, _ = displace_overlapping_points(
-        points,
-        symbol_radii=radii_map_units,
-        padding=1.0 / pixels_per_map_unit,
-    )
-    plt.close(fig)
-
-    placed_points = gpd.GeoSeries(
-        gpd.points_from_xy(placed[:, 0], placed[:, 1]), crs=3857
+    true_points = gpd.GeoSeries(
+        dissolved.geometry.representative_point(), crs=3857
     ).to_crs(4326)
     map_records = []
     for index, ((project_group, category), row) in enumerate(
         dissolved.iterrows()
     ):
-        point = placed_points.iloc[index]
+        point = true_points.iloc[index]
         map_records.append(
             {
                 "id": f"{project_group}:{category}",
@@ -269,6 +245,8 @@ def build_map_assets(
         encoding="utf-8",
     )
 
+    roads = gpd.read_file(ROADS).to_crs(3857)
+    major = roads[roads["road_class"].isin(["major", "arterial"])].copy()
     city_simple = (
         gpd.read_file(CITY_BOUNDARY)
         .to_crs(3857)
@@ -283,7 +261,11 @@ def build_map_assets(
         road_features.append(
             {
                 "type": "Feature",
-                "properties": {"roadClass": row.road_class},
+                "properties": {
+                    "roadClass": row.road_class,
+                    "roadWidthM": float(row.road_width_m),
+                    "widthSource": row.width_source,
+                },
                 "geometry": mapping(geometry),
             }
         )

@@ -1,13 +1,48 @@
 import Link from "next/link";
+import { absoluteUrl, site } from "./site";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": absoluteUrl("/#website"),
+      url: absoluteUrl("/"),
+      name: site.name,
+      description: site.description,
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "Dataset",
+      "@id": absoluteUrl("/atlas/#dataset"),
+      name: "Detroit Board of Zoning Appeals case records, 2019–2026",
+      description:
+        "Case-level records extracted from published Detroit Board of Zoning " +
+        "Appeals meeting minutes, including petitioner, location, request " +
+        "type, and decision.",
+      url: absoluteUrl("/atlas/"),
+      isAccessibleForFree: true,
+      creator: { "@type": "Organization", name: site.name },
+      spatialCoverage: "Detroit, Michigan",
+      temporalCoverage: "2019/2026",
+    },
+  ],
+};
 
 export default function Home() {
   return (
-    <main>
+    <main id="main">
+      <script
+        type="application/ld+json"
+        // Static, author-controlled object — not user input.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <header className="site-header">
         <Link className="wordmark" href="/" aria-label="Land Forum home">
           LAND FORUM
         </Link>
-        <nav aria-label="Primary navigation">
+        <nav aria-label="Primary">
           <Link href="/atlas">BZA Atlas</Link>
           <a href="#about">About</a>
         </nav>
@@ -44,11 +79,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="project-band">
+      <section className="project-band" aria-labelledby="first-publication">
         <p className="kicker">FIRST PUBLICATION</p>
         <div className="project-grid">
           <div>
-            <h2>Detroit BZA Atlas</h2>
+            <h2 id="first-publication">Detroit BZA Atlas</h2>
             <p>
               Search and examine Board of Zoning Appeals cases recorded in
               public meeting minutes from 2019 through 2026.
@@ -65,10 +100,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about" id="about">
+      <section className="project-band" aria-labelledby="lot-area">
+        <p className="kicker">PARCEL GEOMETRY</p>
+        <div className="project-grid">
+          <div>
+            <h2 id="lot-area">Detroit’s residential lot minimums</h2>
+            <p>
+              Every recorded residential parcel in Detroit, measured against
+              the minimum lot area and the minimum lot width in force today.
+              Select any parcel to see its own numbers.
+            </p>
+          </div>
+          <dl>
+            <div><dt>69%</dt><dd>below the 5,000-sq.-ft. area</dd></div>
+            <div><dt>378,366</dt><dd>parcels mapped</dd></div>
+            <div><dt>88%</dt><dd>below the 50-ft. width</dd></div>
+          </dl>
+          <Link className="project-link" href="/publications/minimum-lot-area">
+            Open the map <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      </section>
+
+      <section className="about" id="about" aria-labelledby="proposition">
         <p className="kicker">THE PROPOSITION</p>
         <div>
-          <h2>A genuine forum begins with evidence—and remains open to argument.</h2>
+          <h2 id="proposition">
+            A genuine forum begins with evidence—and remains open to argument.
+          </h2>
           <div className="about-columns">
             <p>
               Land Forum is being built as civic infrastructure: a place where
@@ -85,8 +144,28 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="wordmark footer-mark">LAND FORUM</div>
-        <p>Built in Detroit. Institutional partnerships are still being formed.</p>
+        <div className="footer-top">
+          <div className="wordmark footer-mark">LAND FORUM</div>
+          <p>
+            Built in Detroit. Institutional partnerships are still being
+            formed.
+          </p>
+        </div>
+        <div className="footer-meta">
+          <p>
+            © {new Date().getFullYear()} Land Forum. Case records are derived
+            from published City of Detroit Board of Zoning Appeals meeting
+            minutes and are provided without warranty as to accuracy or
+            completeness.
+          </p>
+          <nav aria-label="Footer">
+            <Link href="/atlas">BZA Atlas</Link>
+            <a href="#about">About</a>
+            <a href="https://detroitmi.gov/government/boards/board-zoning-appeals">
+              Source: City of Detroit BZA
+            </a>
+          </nav>
+        </div>
       </footer>
     </main>
   );

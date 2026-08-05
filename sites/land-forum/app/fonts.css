@@ -1,0 +1,131 @@
+/*
+ * Land Forum typefaces — self-hosted, no third-party requests at runtime.
+ *
+ * Both families are variable fonts with an optical-size axis, which is why the
+ * old hand-tuned `letter-spacing: -.065em` on display headings is gone: the
+ * browser sets `opsz` from the used font-size automatically
+ * (`font-optical-sizing: auto` is the default), so large text gets the cut the
+ * designer actually drew for that size rather than a text face squeezed.
+ *
+ *   Source Serif 4  wght 200..900, opsz 8..60   (editorial display + reading)
+ *   Inter           wght 100..900, opsz 14..32  (UI, labels, controls)
+ *
+ * Files live in public/fonts and are written by hand rather than through
+ * next/font, because `npm run dev` runs real `next dev` while `npm run build`
+ * runs `vinext build`, and vinext's next/font shim resolves `src` paths
+ * verbatim, emits no unicode-range, and generates no fallback metrics. Plain
+ * @font-face behaves identically under both.
+ *
+ * Subsets match Google's own split so the ~100KB latin-ext file is only
+ * fetched when a glyph outside Latin-1 is actually used.
+ */
+
+/* ── Source Serif 4 ─────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/source-serif-4-latin.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/source-serif-4-latin-ext.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/source-serif-4-latin-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/fonts/source-serif-4-latin-ext-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ── Inter ──────────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-latin-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7,
+    U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ── Metric-matched fallbacks ───────────────────────────────────────────────
+ *
+ * `font-display: swap` means the fallback paints first. Without matching, the
+ * swap reflows the page. These overrides scale the local face so its x-height
+ * and line box match the real font, so the swap is a restyle rather than a
+ * relayout.
+ *
+ * Ratios measured from the actual font binaries:
+ *
+ *   Source Serif 4  x-height .4750  ascent 1.0360  descent .3350  (upm 1000)
+ *   Georgia         x-height .4814                               (upm 2048)
+ *     size-adjust   .4750 / .4814 = 98.67%
+ *     ascent        1.0360 / .9867 = 105.00%
+ *     descent        .3350 / .9867 =  33.95%
+ *
+ *   Inter           x-height .5459  ascent  .9688  descent .2412  (upm 2048)
+ *   Arial           x-height .5186                               (upm 2048)
+ *     size-adjust   .5459 / .5186 = 105.26%
+ *     ascent         .9688 / 1.0526 = 92.03%
+ *     descent        .2412 / 1.0526 = 22.92%
+ */
+
+@font-face {
+  font-family: "Source Serif 4 Fallback";
+  src: local("Georgia"), local("Times New Roman"), local("Times");
+  size-adjust: 98.67%;
+  ascent-override: 105%;
+  descent-override: 33.95%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Helvetica Neue"), local("Arial"), local("Liberation Sans");
+  size-adjust: 105.26%;
+  ascent-override: 92.03%;
+  descent-override: 22.92%;
+  line-gap-override: 0%;
+}
