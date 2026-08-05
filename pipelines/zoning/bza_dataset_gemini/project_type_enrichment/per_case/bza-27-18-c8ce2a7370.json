@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-27-18-c8ce2a7370",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "concrete crushing facility",
+  "proposed_action": "unclear",
+  "intensity_direction": "unclear_or_not_applicable",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Proposal for concrete crushing operations.",
+  "evidence": [
+    "Concrete crushing"
+  ],
+  "confidence": "medium",
+  "alternative_type": null
+}

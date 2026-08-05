@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bza2025-00045-d453f7d2bf",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Develop an accessory parking lot on vacant land to serve an existing nearby business.",
+  "evidence": [
+    "Develop an Accessory Parking Lot on existing vacant land",
+    "serve an existing business"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-37-22-b17d680e46",
+  "project_type_family": "housing",
+  "project_type_label": "residential garage",
+  "proposed_action": "new_construction",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Construct a proposed garage in a two-family residential district.",
+  "evidence": [
+    "proposed garage in a R2 zone Two-Family Residential District"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

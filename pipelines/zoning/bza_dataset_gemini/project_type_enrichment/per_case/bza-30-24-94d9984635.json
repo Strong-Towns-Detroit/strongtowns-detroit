@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-30-24-94d9984635",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "Outdoor Storage Yard",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishing a proposed outdoor storage yard in an intensive industrial district.",
+  "evidence": [
+    "proposed outdoor storage yard",
+    "within 150' of residential zone district"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

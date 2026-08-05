@@ -1,0 +1,62 @@
+[
+  {
+    "case_number": "27-25",
+    "meeting_date": "2025-09-15",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 1,
+    "petitioner": "MICHAEL EVANS & DIANN C. HARRIS",
+    "location": "20851 W Seven Mile Rd., between Burt Rd and Pierson St. in a B4 Zone (General Business District).",
+    "legal_description": "S SEVEN MILE W 1 BURTLAND SUBDIVISION LIBER 77, PAGE 37 PLATS , W C R 22/783 109.04",
+    "proposal": "Michael Evans/Diann Harris requests dimensional variance to establish a rental hall in an existing 5,396 square foot building approved under SLU2024-00137. This subject site is within a B4 Zone (General Business District). The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Deficient parking. 27 spaces required, 12 provided, 15 off street parking spaces deficient. (Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+    "bseed_refs": [
+      "SLU2024-00137"
+    ],
+    "action": "Mr. Weed made a Motion to Grant dimensional parking variance ONLY to establish a rental hall in an existing 5,396 square foot building approved under SLU2024-00137. Seconded by Board Member Sherman",
+    "affirmative_votes": [
+      "Mr. Roberts",
+      "Boman",
+      "Weed",
+      "Thomas",
+      "Sherman",
+      "Mrs. Hill-Knott",
+      "Moore"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  },
+  {
+    "case_number": "28-25",
+    "meeting_date": "2025-09-15",
+    "hearing_time": "9:45 a.m.",
+    "council_district": 6,
+    "petitioner": "Luvtesh Randhawa / Randhawa Real Estate Group, LLC.",
+    "location": "1411 Central, between Pershing and W. Lafayeet (Railroad tracks) in a M4 Zone (Intensive Industrial District).",
+    "legal_description": "W CENTRAL 740 THRU 753 FERNDALE AVE SUB L30 P56 PLATS, W C R 20/349 1 THRU 33 SUB OF P C 718 L16 P55 PLATS, W C R 20/167 ALSO LOTS 1&2 11 THRU 14 23,24&26 35 N 82 FT OF 25 SUB OF P C 718 L12 P21 PLATS, W C R 20/168 AND VAC BANK & MINT STS AND ALLEYS ADJ 20/--- 338,438 SQ FT",
+    "proposal": "Luvtesh Randhawa request a dimensional variance for spacing of proposed outdoor storage. This case is BY-RIGHT and was Plan Reviewed. The subject site is within an M4 Zone (Intensive Industrial District). The reason for the appeal is because the Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks; Per 50-12-344 (3) Outdoor Storage yard must be located more than 150' away from land zoned R1, R2, R3, R4, R5, R6, or residential PD. Per 50-4-132 [1]) a Board of Zoning Appeals (BZA) hearing is required. (Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+    "bseed_refs": [],
+    "action": "Mr. Roberts made to motion to adjourn at petitioners request without date and without fee. Seconded by Board Member Moore",
+    "affirmative_votes": [
+      "Mr. Roberts",
+      "Boman",
+      "Weed",
+      "Thomas",
+      "Sherman",
+      "Mrs. Hill-Knott",
+      "Moore"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "ADJOURNED",
+    "decision_status": "postponed",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  }
+]

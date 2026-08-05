@@ -1,0 +1,71 @@
+{
+  "meeting_date": "2025-06-16",
+  "cases": [
+    {
+      "case_number": "59-24",
+      "meeting_date": "2025-06-16",
+      "hearing_time": "9:15 a.m.",
+      "council_district": 2,
+      "petitioner": "Frank Simon Salama / 7 Mile & Outer Drive Properties",
+      "location": "13110 W. Seven Mile Rd. between Littlefield and W. Outer Drive in a B2 Zone (Local Business and Residential District).",
+      "legal_description": "Available Upon Request",
+      "proposal": "7 Mile Properties request dimensional variances to expand a legal nonconforming 2,171 square foot gas station by adding a carry out restaurant to an existing Auto Service and existing convenience store by construction an approximately 999 square foot addition in a B2 Zone (Local Business and Residential District). The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks. (Deficient 1 parking space, deficient aisle width, deficient right of way screening and deficient residential screening. Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.",
+      "bseed_refs": [],
+      "action": "Mr. Roberts made a motion to Grant dimensional variances to expand a legal nonconforming 2,171 square foot gas station by adding a carry out restaurant to an existing Auto Service and existing convenience store by construction an approximately 999 square foot addition in a B2 Zone (Local Business and Residential District). Seconded by Board Member Watson",
+      "affirmative_votes": [
+        "Mr. Roberts",
+        "Thomas",
+        "Sherman",
+        "Boman",
+        "Osbern",
+        "Watson",
+        "Weed",
+        "Mrs. Hill-Knott",
+        "Moore"
+      ],
+      "affirmative_count": 9,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCE GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "All fields extracted clearly."
+    },
+    {
+      "case_number": "12-25",
+      "meeting_date": "2025-06-16",
+      "hearing_time": "9:30 a.m.",
+      "council_district": 6,
+      "petitioner": "Maria Patricia Lara",
+      "location": "1247 Campbell between Howard and Porter in a R2 zone (Two Family Residential District ).",
+      "legal_description": "W CAMPBELL S 5 FT 657 656 THIRD PLAT SUB L18 P27 PLATS, W C R 16/28 30 X 12",
+      "proposal": "Maria Patricia Lara requests a dimensional variance for the construction of a Car Port. This case is BY-RIGHT and was Plan Reviewed. The subject site is within a R2 Zone (Two Family Residential District). The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks. Car Port MAY NOT be located less than three feet from a side property line. Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.",
+      "bseed_refs": [],
+      "action": "Mr. Boman made to Grant dimensional variance for construction of Car Port in a R2 district. Seconded by Board Member Osbern",
+      "affirmative_votes": [
+        "Mr. Roberts",
+        "Thomas",
+        "Sherman",
+        "Boman",
+        "Osbern",
+        "Watson",
+        "Weed",
+        "Mrs. Moore",
+        "Hill-Knott",
+        "Moore"
+      ],
+      "affirmative_count": 10,
+      "negative_votes": [
+        "Mr. Watson"
+      ],
+      "negative_count": 1,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCE GRANTED",
+      "decision_status": "decided",
+      "confidence": "medium",
+      "confidence_note": "Affirmative votes list contains duplicates/errors in the original text (Watson listed in both affirmative and negative, Moore listed twice in affirmative). Extracted exactly as written."
+    }
+  ],
+  "document_notes": "Meeting minutes for June 16, 2025."
+}

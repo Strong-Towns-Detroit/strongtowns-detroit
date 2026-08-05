@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-83-24-c9e72204a7",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "cabaret with live entertainment",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner proposes to establish a cabaret with alcohol consumption and live entertainment in an existing building.",
+  "evidence": [
+    "Establish a Cabaret C Alcohol Consumption on Premises with Live Entertainment",
+    "in an existing 3,930 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": "recreation_or_open_space"
+}

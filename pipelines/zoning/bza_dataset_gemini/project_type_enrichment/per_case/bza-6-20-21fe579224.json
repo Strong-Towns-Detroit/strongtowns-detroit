@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-6-20-21fe579224",
+  "project_type_family": "housing",
+  "project_type_label": "Single-family home",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 1,
+  "summary": "Proposal to construct a new single-family residence with an attached garage requiring setback variances.",
+  "evidence": [
+    "construct a 1,701 sq. ft. Single Family Residence",
+    "with 720 sq. ft. attached garages"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

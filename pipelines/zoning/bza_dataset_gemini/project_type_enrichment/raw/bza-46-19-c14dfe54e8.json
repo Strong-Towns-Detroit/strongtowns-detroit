@@ -1,0 +1,198 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-46-19-c14dfe54e8",
+      "project_type_family": "housing",
+      "project_type_label": "multifamily dwelling",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 6,
+      "summary": "Construct a 6-unit multifamily dwelling with an accessory garage.",
+      "evidence": [
+        "construct a (BY-RIGHT) 6 unit 8,305 square foot, Multifamily dwelling"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-49-19-171a94dba8",
+      "project_type_family": "housing",
+      "project_type_label": "townhouses",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 6,
+      "summary": "Construct two separate three-unit townhouses.",
+      "evidence": [
+        "construct two (2) separate three unit townhouses"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-50-19-a14aec6068",
+      "project_type_family": "housing",
+      "project_type_label": "townhouses",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 5,
+      "summary": "Construct a five-unit townhouse building.",
+      "evidence": [
+        "construct a five unit 13,901 square foot Townhouse building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-65-19-ece5db0d26",
+      "project_type_family": "signage",
+      "project_type_label": "roof mounted neon sign",
+      "proposed_action": "signage_installation",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Change an existing roof sign to a roof-mounted neon sign.",
+      "evidence": [
+        "changing the sign to a Roof Mounted Neon Sign"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-67-18-3e522c88c3",
+      "project_type_family": "housing",
+      "project_type_label": "multifamily dwelling",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 19,
+      "summary": "Construct a 19-unit affordable multifamily dwelling.",
+      "evidence": [
+        "construct a (BY-RIGHT) Multi-family, dwelling containing 19 Affordable Housing Units"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-184-17-b3de95c28c",
+      "project_type_family": "housing",
+      "project_type_label": "townhouses",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 18,
+      "summary": "Construct two three-story townhouse buildings with a total of 18 units.",
+      "evidence": [
+        "construct two, three story townhouse buildings (18 units)"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-47-19-c50f5d7e9b",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "medical marijuana facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana provisioning, growing, and processing facility in an existing building.",
+      "evidence": [
+        "establish a Medical Marihuana Provisioning Center Facility",
+        "a Medical Marihuana Grower Facility",
+        "a Medical Marihuana Processor Facility"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-51-19-16581fdd54",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "medical marijuana grower facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "adverse",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana grower facility, which was denied due to proximity to a drug-free zone.",
+      "evidence": [
+        "proposed MMGF site is located 438 feet from a \"DRUG FREE ZONE\""
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-52-19-7051e12b93",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "motor vehicle repair facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a major motor vehicle repair facility in an existing building.",
+      "evidence": [
+        "establish a major motor vehicle repair facility (no painting) in an existing 2,562 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-22-19-e564f573b6",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "motor vehicle repair facility",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Expand an existing minor motor vehicle repair facility.",
+      "evidence": [
+        "expansion of an existing Minor Motor Vehicle Repair Facility from 1,353 square feet to 3,937 square feet"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-53-19-966124a009",
+      "project_type_family": "signage",
+      "project_type_label": "billboard",
+      "proposed_action": "signage_installation",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Replace an existing non-conforming billboard with a new non-conforming advertising sign structure.",
+      "evidence": [
+        "replace an existing non-conforming Billboard Structure with a NEW non-conforming advertising sign structure"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-55-19-0f4e1aa768",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "used motor vehicle sales lot",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a used motor vehicle sales lot in an existing building.",
+      "evidence": [
+        "establish a Used Motor Vehicle Sales Lot in an existing 2,250 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+}

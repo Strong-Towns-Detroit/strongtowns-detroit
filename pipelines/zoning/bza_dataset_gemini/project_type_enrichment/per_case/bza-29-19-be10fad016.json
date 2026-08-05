@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-29-19-be10fad016",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "motor vehicle repair",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Expand a minor motor vehicle repair shop by adding a 3,480 square foot building.",
+  "evidence": [
+    "expand a non-conforming Minor Motor Vehicle Repair",
+    "adding a 3,480 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

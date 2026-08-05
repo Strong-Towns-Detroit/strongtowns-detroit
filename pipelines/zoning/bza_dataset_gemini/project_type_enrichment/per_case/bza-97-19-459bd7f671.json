@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-97-19-459bd7f671",
+  "project_type_family": "housing",
+  "project_type_label": "residential addition",
+  "proposed_action": "expansion",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Construct a new second-story garage bay and enclose an outdoor living area at a single-family home.",
+  "evidence": [
+    "construction project of a new garage bay",
+    "enclose an outdoor living area"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-bseed-slu2024-0060-b144f712f9",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Appeal of BSEED approval to develop a 37-space accessory parking lot to serve a nearby church.",
+  "evidence": [
+    "develop a 37-space off-street accessory parking lot to serve the Macedonia Baptist Church"
+  ],
+  "confidence": "high",
+  "alternative_type": "religious"
+}

@@ -1,0 +1,221 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-bseed-slu2019-000186-e221339ca6",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical marijuana grower facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "adverse",
+      "housing_units": null,
+      "summary": "Appeal against the approval of a medical marijuana grower facility in an existing industrial building, citing special damages and harm to neighboring property.",
+      "evidence": [
+        "establishment of a Medical Marihuana Grower Facility",
+        "suffered special damages related to the beneficial use and enjoyment",
+        "show harm or damages that are unique"
+      ],
+      "confidence": "high",
+      "alternative_type": "industrial_or_logistics"
+    },
+    {
+      "case_history_id": "bza-06-21-e118eb8f66",
+      "project_type_family": "housing",
+      "project_type_label": "Apartment buildings",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 24,
+      "summary": "Request for dimensional variances for deficient parking to support two multiple-family dwelling buildings totaling 24 units.",
+      "evidence": [
+        "proposed use of Multiple-family dwellings",
+        "BUILDING 1: (2 story, 4,024 square foot, 8 dwelling units)",
+        "BUILDING 2: (2 story, 7,944 square foot, 16 unit building)"
+      ],
+      "confidence": "high",
+      "alternative_type": "change_of_use"
+    },
+    {
+      "case_history_id": "bza-29-20-787a86c963",
+      "project_type_family": "office_or_medical",
+      "project_type_label": "Office",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 0,
+      "summary": "Request to change a nonconforming dry cleaners to a nonconforming office within an existing building.",
+      "evidence": [
+        "change from a nonconforming Dry Cleaners to a nonconforming Office",
+        "within an existing 4,028 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-44-20-29912dcf2c",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "Auto repair and used car sales",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "adverse",
+      "housing_units": 0,
+      "summary": "Appeal of a denial to expand an auto repair facility and add a used car sales lot, citing property maintenance violations, illegal storage, and neighborhood nuisance.",
+      "evidence": [
+        "expand an existing Major Motor Vehicle Repair Facility",
+        "add a Used Motor Vehicle Sales lot",
+        "detrimental to the physical environment or to public health",
+        "undue hardship and nuisance"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-1-21-97e069a509",
+      "project_type_family": "housing",
+      "project_type_label": "Apartment building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 8,
+      "summary": "Request for dimensional variances to construct a new 3-story, 8-unit multi-family dwelling on vacant land with deficient setbacks and excessive lot coverage.",
+      "evidence": [
+        "proposed construction of an 8 units, 3 story Multi-Family Dwelling",
+        "on 12,428 square feet of vacant land",
+        "Deficient front yard setback 9’ provided"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-10-21-ae57d08409",
+      "project_type_family": "housing",
+      "project_type_label": "Townhouses",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 7,
+      "summary": "Request for dimensional variances to construct two townhouse buildings totaling seven units with deficient front setbacks and parking.",
+      "evidence": [
+        "proposed construction of two separate townhouse buildings",
+        "total of seven townhouse units",
+        "deficient front setbacks",
+        "deficient parking"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-42-20-373295a30e",
+      "project_type_family": "housing",
+      "project_type_label": "Townhouses",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 8,
+      "summary": "Request for dimensional variances to develop an 8-unit, 3-story townhouse building with deficient parking and setbacks.",
+      "evidence": [
+        "development of an 8 unit, 3 story Townhouse",
+        "Deficient parking, deficient front setback",
+        "Deficient rear setback"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-11-21-2065af5007",
+      "project_type_family": "housing",
+      "project_type_label": "Apartment buildings",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 16,
+      "summary": "Request for variances to construct two 8-unit multi-family buildings on vacant land with deficient parking, setbacks, and lot width.",
+      "evidence": [
+        "Construct two, eight-unit, two-story Multiple-Family buildings",
+        "existing vacant land",
+        "twelve total parking spaces are required; eight parking spaces are proposed"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-25-20-0c7c6c8bde",
+      "project_type_family": "mixed_use",
+      "project_type_label": "Mixed-use commercial complex",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": 0,
+      "summary": "Request for dimensional variances for a new three-building development featuring government, office, and retail uses with excessive height and landscaping deficiencies in large parking areas.",
+      "evidence": [
+        "proposed construction of three (3) buildings on one parcel",
+        "government service agency",
+        "office",
+        "retail",
+        "parking areas with 101 spaces or more"
+      ],
+      "confidence": "high",
+      "alternative_type": "office_or_medical"
+    },
+    {
+      "case_history_id": "bza-8-21-6178c7b555",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "Car wash",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "adverse",
+      "housing_units": 0,
+      "summary": "Appeal of a denial for an addition to a car wash due to illegal signage, maintenance issues, and negative impacts on adjacent residential properties.",
+      "evidence": [
+        "Construction of an 880 square foot addition to an existing Motor Vehicle Washing",
+        "aggravate any preexisting physical, social or economic deterioration",
+        "block windows to the adjacent multiple-family dwelling"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-12-21-ad158761eb",
+      "project_type_family": "housing",
+      "project_type_label": "Apartment building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request for variances to demolish a single-family home and construct a new two-story multi-family dwelling with surface parking.",
+      "evidence": [
+        "Demolish an existing single-family dwelling",
+        "construct a new two story, 4,499 square foot Multiple-Family Dwelling"
+      ],
+      "confidence": "high",
+      "alternative_type": "demolition"
+    },
+    {
+      "case_history_id": "bza-43-20-83bc71214b",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "Auto repair and used car sales",
+      "proposed_action": "continue_or_legalize_existing_condition",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": 0,
+      "summary": "Request for dimensional variances for deficient parking and screening at an approved auto repair and used car sales facility in an existing building.",
+      "evidence": [
+        "approved Major Motor Vehicle Repair and Used Auto Sales Facility",
+        "deficient accessory parking in an existing, two-story, 9,800 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "site_or_building_alteration"
+    }
+  ]
+}

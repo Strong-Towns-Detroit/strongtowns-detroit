@@ -1,0 +1,96 @@
+[
+  {
+    "case_number": "35-24",
+    "meeting_date": "2024-06-17",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 5,
+    "petitioner": "SALEM KASSAB",
+    "location": "6338 LAMBERT, between Edsel Ford Service Drive and Holborn in a M4 zone (Intensive Industrial District).",
+    "legal_description": "S LAMBERT 33 THRU 36 F A SCHULTES SUB L14 P46 PLATS, W C R 15/85 140 X 68.70",
+    "proposal": "Salem Kassab request dimensional variances to establish a Marijuana Grower Facility (MGF) in an existing 8,677 square foot building. APPROVED w/Conditions in BSEED Case No: SLU2023-00237; Decision Date: March 13, 2024 \u2013 Effective Date: March 27, 2024. The subject site is within an M4 Intensive Industrial District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks; Deficient parking; 8 parking spaces required, 0 provided, 8 parking spaces deficient. (Sections 50-4-131 (1) Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+    "bseed_refs": [
+      "SLU2023-00237"
+    ],
+    "action": "Mr. Roberts made a motion to Grant dimensional variances to establish a Marijuana Grower Facility (MGF) in an existing 8,677 square foot building. APPROVED w/Conditions in BSEED Case No: SLU2023-00237 Seconded by Board Member Sherman.",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Roberts",
+      "Thomas",
+      "Boman",
+      "Sherman",
+      "Mrs. Hill-Knott"
+    ],
+    "affirmative_count": 6,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  },
+  {
+    "case_number": "34-24",
+    "meeting_date": "2024-06-17",
+    "hearing_time": "9:30 a.m.",
+    "council_district": 6,
+    "petitioner": "TIMOTHY NAEMI",
+    "location": "230 GREEN, between Fort and Melville in a M4 zone (Intensive Industrial District).",
+    "legal_description": "E GREEN N 5 FT 6 5 BEARDS SUB L13 P95 PLATS, W C R 18/110 40 X 107.95 COMBINED ON 02/23/2024 WITH 18008907. INTO 18008907-18;",
+    "proposal": "Timothy Naemi request dimensional variances to Establish a Marijuana Grower Facility (MGF) in an existing 5,950 square foot building APPROVED w/Conditions in BSEED Case No: SLU2023-00172; Decision Date: March 1, 2024 \u2013 Effective Date: March 15, 2024. The subject site is within an M4 Intensive Industrial District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks; That the applicant must provide a 5-foot walkway waiver from the Board of Zoning Appeals before a building permit can be issued. (Sections 50-4-131 (6) Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+    "bseed_refs": [
+      "SLU2023-00172"
+    ],
+    "action": "Mr. Weed made a motion to Grant dimensional variances to Establish a Marijuana Grower Facility (MGF) in an existing 5,950 square foot building APPROVED w/Conditions in BSEED Case No: SLU2023-00172 Seconded by Board Member Watson.",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Roberts",
+      "Thomas",
+      "Boman",
+      "Sherman",
+      "Watson"
+    ],
+    "affirmative_count": 6,
+    "negative_votes": [
+      "Mrs. Hill-Knott"
+    ],
+    "negative_count": 1,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  },
+  {
+    "case_number": "36-24",
+    "meeting_date": "2024-06-17",
+    "hearing_time": "9:45 a.m.",
+    "council_district": 7,
+    "petitioner": "MOUSSA BAZZI",
+    "location": "12010 Greenfield between Plymouth and Wadsworth in a B4 General Business District.",
+    "legal_description": "E GREENFIELD 115 THRU 118 EXC GREENFIELD AS WD BROADMOOR SUB L41 P48 PLATS W C R 22/578 173.50 X 88.44A;",
+    "proposal": "Moussa Bazzi appeals the decision of the Buildings Safety and Engineering and Environmental Department (BSEED PIN: 22049833-6) which DENIED a Marijuana Retail/Provisioning Facility in a B4 General Business District. The subject site is within an M4 Intensive Industrial District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks; The review has determined that the proposed Marijuana Retail/Provisioning Facility is located within 750 radial feet of a Controlled Use located and within 1000 radial feet of a Drug Free Zone located at: 1. 15428 Plymouth Rd, Specially Designated Merchant\u2019s/Specially Designated Distributor\u2019s Establishment \u2013 approximately 679 feet away 2. 15810 Capitol \u2013 O\u2019Shea Park \u2013 approximately 707 feet away. Therefore, this request is DENIED (Sections 50-4-101 Jurisdiction Over Appeals of Administrative Decisions and 50-3-281- General Approval Criteria). AP",
+    "bseed_refs": [
+      "22049833-6"
+    ],
+    "action": "Mr. Boman made a motion to Uphold BSEED\u2019s Decision which DENIED a Marijuana Retail/Provisioning Facility in a B4 General Business District. Seconded by Board Member Watson.",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Boman",
+      "Sherman",
+      "Watson"
+    ],
+    "affirmative_count": 4,
+    "negative_votes": [
+      "Mrs. Hill-Knott",
+      "Mr. Thomas",
+      "Roberts"
+    ],
+    "negative_count": 3,
+    "abstentions": [],
+    "decision": "BSEED DENIAL UPHELD",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  }
+]

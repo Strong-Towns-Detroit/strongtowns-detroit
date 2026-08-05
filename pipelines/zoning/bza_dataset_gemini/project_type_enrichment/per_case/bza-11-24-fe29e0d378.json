@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-11-24-fe29e0d378",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "Used Auto Sales Lot",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Expanding an existing used auto sales lot by constructing a new 962 square foot building.",
+  "evidence": [
+    "expansion of the legal existing nonconforming use (Used Auto Sales Lot)",
+    "construct a new 962 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

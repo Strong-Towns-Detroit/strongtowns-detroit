@@ -1,0 +1,64 @@
+[
+  {
+    "case_number": "30-25",
+    "meeting_date": "2025-09-29",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 5,
+    "petitioner": "SHANE OVERBEY",
+    "location": "8849 YATES, between Crane and Rohns in a R2 zone (Two Family Residential District).",
+    "legal_description": "PROPERTY EXEMPT FROM AD VALOREM TAXES AND ASSESSED ON THE SPECIAL ACT ROLL PURSUANT TO PA 261 OF 2003 EXPIRING 12/30/2029. N YATES 9-12 LOW & YERKES SUB L27 P92 PLATS, W C R 19/86 123 X 101.02 COMBINED ON 03/17/2025 FROM 19001207., 19001204., 19001205., 19001206",
+    "proposal": "Shane Overby requesting dimensional variances to develop a 24 (twenty-four) space accessory parking lot to serve three Detroit-based businesses that will be located within two office buildings located at 8800 E. Forest Ave. and 4630 Crane; APPROVED w/Conditions in BSEED Case No. SLU-2024-00110; Decision Date: October 2, 2024; Effective Date: October 16, 2024. The subject site is within a R2 Zone (Two-Family Residential District). The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Excessive parking lot size 8,500 sq. ft. maximum 12,501 sq. ft proposed, 4,001 square feet excessive and 70 feet in width allowed 120 feet in width proposed, 50 feet excessive width Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria AP",
+    "bseed_refs": [
+      "SLU-2024-00110"
+    ],
+    "action": "Mr. Roberts made a Motion to develop a 24 (twenty-four) space accessory parking lot to serve three Detroit-based businesses that will be located within two office buildings located at 8800 E. Forest Ave. and 4630 Crane. Seconded by Board Member Boman",
+    "affirmative_votes": [
+      "Mr. Roberts",
+      "Boman",
+      "Weed",
+      "Thomas",
+      "Sherman",
+      "Mrs. Hill-Knott",
+      "Moore"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  },
+  {
+    "case_number": "29-25",
+    "meeting_date": "2025-09-29",
+    "hearing_time": "9:45 a.m.",
+    "council_district": 6,
+    "petitioner": "DAVE ROOT/CORKTOWN DEVELOPMENT PROPERTIES, LLC",
+    "location": "1728 MICHIGAN AVE, Corner of Cochrane and Harrison in a R3 Low Density Residential District.",
+    "legal_description": "N MICHIGAN 41 THRU 45 PLAT OF P C 27 L2 P5 PLATS, WCR 8/29 105 X 100 COMBINED ON 02/20/2025 FROM 08000567., 08000565., 08000566., 08000568., 08000569",
+    "proposal": "Dave Root requesting dimensional variances to construct a nine-story, 69-unit mixed use building along Michigan Avenue in Detroit's Corktown neighborhood. The building will also include 2,522 square feet of ground-level commercial, retail or service-related space. The project would take place on 1736, 1732, 1728, 1724, and 1720 Michigan. The development site will also include a 14-space parking lot underneath the 9-story mixed-use building. Additionally, the applicant will be redeveloping a vacant lot located at the intersection of Cherry Street and Rosa Parks Boulevard into a 44-space surface parking lot as part of a separate building permit (BLD2025-0094, currently under review). The proposed surface lot is approximately 295 linear feet from the development project. The subject site is within a B4 zone (General Business District). The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks; Excessive building height: 80 feet required, 101 feet seven inches proposed; 21 feet seven inches excessive; and b) Rear setback (30 feet required, zero setback proposed, 30 feet deficient);Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.",
+    "bseed_refs": [
+      "BLD2025-0094"
+    ],
+    "action": "Mr. Osbern made to motion to Grant dimensional variance to construct a nine-story, 69-unit mixed use building along Michigan Avenue in Detroit's Corktown neighborhood. Seconded by Board Member Boman",
+    "affirmative_votes": [
+      "Mr. Roberts",
+      "Boman",
+      "Weed",
+      "Thomas",
+      "Sherman",
+      "Mrs. Hill-Knott",
+      "Moore"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  }
+]

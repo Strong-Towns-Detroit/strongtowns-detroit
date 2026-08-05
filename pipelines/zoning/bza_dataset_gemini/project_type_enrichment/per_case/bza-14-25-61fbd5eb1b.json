@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-14-25-61fbd5eb1b",
+  "project_type_family": "institutional_or_civic",
+  "project_type_label": "non-profit neighborhood center and outdoor recreation facility",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish and expand a non-profit neighborhood center and develop an adjacent outdoor recreation facility.",
+  "evidence": [
+    "establish a Neighborhood Center, Non-Profit in an existing building and expand its footprint",
+    "develop an Outdoor Recreation Facility on an adjacent"
+  ],
+  "confidence": "high",
+  "alternative_type": "recreation_or_open_space"
+}

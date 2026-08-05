@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-90-19-38e31cc945",
+  "project_type_family": "housing",
+  "project_type_label": "residential carport",
+  "proposed_action": "continue_or_legalize_existing_condition",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Requesting setback variances to legalize an existing residential carport.",
+  "evidence": [
+    "dimensional variances for existing carport",
+    "Deficient side yard and rear yard setback"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

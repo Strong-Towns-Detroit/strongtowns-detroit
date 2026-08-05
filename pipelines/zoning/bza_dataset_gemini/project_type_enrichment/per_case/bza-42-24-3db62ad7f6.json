@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-42-24-3db62ad7f6",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "fast-food restaurant with drive-thru",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Renovation of an existing fast-food restaurant to add a double drive-thru lane and make other improvements.",
+  "evidence": [
+    "renovate an existing Restaurant, fast-food",
+    "installation of a double drive-thru lane"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

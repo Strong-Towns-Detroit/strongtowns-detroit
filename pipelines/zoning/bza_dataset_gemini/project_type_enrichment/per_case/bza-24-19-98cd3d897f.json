@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-24-19-98cd3d897f",
+  "project_type_family": "housing",
+  "project_type_label": "apartment building",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 10,
+  "summary": "Convert an existing single-family dwelling into a multiple-family dwelling with accessory parking.",
+  "evidence": [
+    "convert an existing single-family dwelling into a six-unit Multiple Family Dwelling",
+    "petitioner is requesting 10 units"
+  ],
+  "confidence": "medium",
+  "alternative_type": null
+}

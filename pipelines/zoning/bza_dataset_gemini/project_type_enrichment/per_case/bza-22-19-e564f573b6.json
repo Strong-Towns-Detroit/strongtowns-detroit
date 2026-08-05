@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-22-19-e564f573b6",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "motor vehicle repair facility",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Expand an existing minor motor vehicle repair facility.",
+  "evidence": [
+    "expansion of an existing Minor Motor Vehicle Repair Facility from 1,353 square feet to 3,937 square feet"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

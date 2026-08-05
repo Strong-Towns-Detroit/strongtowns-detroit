@@ -1,0 +1,93 @@
+{
+  "meeting_date": "2023-06-12",
+  "cases": [
+    {
+      "case_number": "22-23",
+      "meeting_date": "2023-06-12",
+      "hearing_time": "9:15 a.m.",
+      "council_district": null,
+      "petitioner": "BENJAMIN NEWMAN",
+      "location": "1815 Church, between 11th St. and Rosa Parks Blvd. in an R2 Two-Family Residential District.",
+      "legal_description": "S CHURCH 4 BLK 3 LUTHER BEECHERS SUB L2 P27 PLATS, W C R 8/19 33 X 131.12",
+      "proposal": "Benjamin Newman, is requesting to construct an Accessory Dwelling for a Residential unit located at 1815 Church Street. The subject site is within an R2 Two-Family Residential District. The subject site is within an B4 General Business District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks. Excessive Lot Coverage, Excessive lot size, excessive height and more than one building on a zoning lot. (Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria).",
+      "bseed_refs": [],
+      "action": "Mr. Roberts made a motion to Grant petitioners request for dimensional variances to construct an Accessory Dwelling for a Residential unit located at 1815 Church Street. The subject site is within an R2 Two-Family Residential District. Seconded by Board Member Moore.",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Thomas",
+        "Roberts",
+        "Mrs. Moore",
+        "Hill-Knott"
+      ],
+      "affirmative_count": 5,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCES GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted. Council district not specified."
+    },
+    {
+      "case_number": "23-23",
+      "meeting_date": "2023-06-12",
+      "hearing_time": "9:30 a.m.",
+      "council_district": null,
+      "petitioner": "PHIL AIELLO",
+      "location": "3400 MICHIGAN, between Butternut and Risdon in an B4 District. General Business District.",
+      "legal_description": "N MICHIGAN AVE 77 & 78 EXC MICHIGAN AVE AS WD J W JOHNSTONS SUB L1 P32&33 PLATS W C R 12/42 84.90 IRREG R 45.95 61.0 51.76",
+      "proposal": "Phil Aiello is requesting to establish a Small Distillery or Winery (outside the Central Business district) in an existing 3,322 square foot building, APPROVED w/Conditions in BSEED SLU2022-00115; Decision Date: March 23, 2323; Effective Date: April 6, 2023. The subject site is within an B4 General Business District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks. The applicant shall submit a duly executed and recorded shared parking agreement or District Parking Plan that has been approved by the Planning & Development Department, otherwise a parking waiver shall be required from the Board of Zoning Appeals for the deficient nine off-street parking spaces prior to permit. (Sections 50-4-131 (1)- Permitted dimensional variances and 50-4-121 Approval Criteria).",
+      "bseed_refs": [
+        "SLU2022-00115"
+      ],
+      "action": "Mr. Roberts made a motion to Grant petitioners request for dimensional variances to establish a Small Distillery or Winery (outside the Central Business district) in an existing 3,322 square foot building, APPROVED w/Conditions in BSEED SLU2022-00115; Decision Date: March 23, 2323; Effective Date: April 6, 2023. Seconded by Board Member Moore.",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Sherman",
+        "Roberts",
+        "Thomas",
+        "Mrs. Moore",
+        "Hill-Knott"
+      ],
+      "affirmative_count": 6,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCES GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted. Council district not specified."
+    },
+    {
+      "case_number": "BSEED SLU2023-00014 (COMMUNITY APPEAL)",
+      "meeting_date": "2023-06-12",
+      "hearing_time": "9:45 a.m.",
+      "council_district": null,
+      "petitioner": "VANESSA PEAKE",
+      "location": "19347 Mt. Elliott, between Emery and E. Lantz in an M2 Restricted Industrial District.",
+      "legal_description": "W MT ELLIOTT 47-46 GEO J KOLOWICH L46 P45 PLATS, W C R 13/287 40 X 124.51",
+      "proposal": "Vanessa Peake appeals the decision of the Buildings Safety Engineering and Environmental Department (BSEED) Case No.: SLU2023-00014: Decision Date April 12, 2023; effective April 26, 2023) which (Approved with Conditions) to Establish a Marijuana Retail/Provisioning Facility (MRPF) and Designated Marijuana Consumption Establishment (DMCE) in an existing 1,500 square foot building in an M2 Restricted Industrial District. Appeals to the Board of Zoning Appeals may be taken by any person, firm, partnership or corporation, or by any City department, commission, board or other City agency which is aggrieved 1) by a decision of an enforcing officer, or 2) by any decision made by the Buildings and Safety Engineering Department involving Conditional Uses; Michigan courts have held that in order to meet the “aggrieved person” standard, the appellant must prove that he or she (or it, if the appellant is an organization) has suffered special damages related to the beneficial use and enjoyment of his/her own property that are not common to other property owners similarly situated. The party filing the appeal must be more than a mere resident of the City; he or she must be able to show harm or damages that are unique to him or her, and to his/her property, specifically. (Sections 50-4-102 Appeals, Michigan Case Law on “Aggrieved Person” Standard and 50-3-281 General Approval Criteria (Community Appeals)",
+      "bseed_refs": [
+        "SLU2023-00014"
+      ],
+      "action": "Mr. Weed made a motion to Adjourn the case for the petitioner to be prepared with the understanding and information of the request for Community Appeal. Seconded by Board Member Sherman.",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Thomas",
+        "Sherman",
+        "Roberts",
+        "Ms. Moore",
+        "Hill-Knott"
+      ],
+      "affirmative_count": 6,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "ADJOURNED WITHOUT DATE AND WITHOUT FEE",
+      "decision_status": "postponed",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted. Council district not specified."
+    }
+  ],
+  "document_notes": "Under Misc. Business, Director Ribbron informed the Board that Case No. 1-23 will be scheduled for a hearing date on July 17, 2023 at 9:45 a.m."
+}

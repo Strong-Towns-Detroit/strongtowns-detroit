@@ -32,6 +32,9 @@ OUTPUT_DIR = DATA / "project_type_enrichment"
 PER_CASE_DIR = OUTPUT_DIR / "per_case"
 RAW_DIR = OUTPUT_DIR / "raw"
 MERGED = OUTPUT_DIR / "project_types.csv"
+JOINED = OUTPUT_DIR / "case_histories_with_project_types.csv"
+REVIEW = OUTPUT_DIR / "review_medium_low_confidence.csv"
+AUDIT = OUTPUT_DIR / "project_type_audit.json"
 DEFAULT_MODEL = "gemini-3.1-pro-preview"
 WRITE_LOCK = threading.Lock()
 
@@ -133,6 +136,11 @@ alter in ordinary civic and urban-development language.
 Important distinctions:
 - project_type_family is a broad analytic family; project_type_label is the
   specific ordinary-language use.
+- housing covers projects whose primary context is a residence or residential
+  development, including new dwellings, residential additions, and accessory
+  work such as a garage or carport serving a residence.
+- mixed_use requires a material residential and nonresidential combination;
+  do not use housing for those projects.
 - parking_only means parking is itself the project. Do not classify an
   apartment, store, or restaurant as parking_only merely because its case
   requests parking relief.
@@ -237,8 +245,43 @@ def merge_results() -> None:
         for path in sorted(PER_CASE_DIR.glob("*.json"))
     ]
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    pd.DataFrame(records).to_csv(MERGED, index=False)
+    classifications = pd.DataFrame(records)
+    classifications.to_csv(MERGED, index=False)
+    histories = pd.read_csv(HISTORIES)
+    joined = histories.merge(
+        classifications,
+        on="case_history_id",
+        how="left",
+        validate="one_to_one",
+    )
+    joined.to_csv(JOINED, index=False)
+    review = joined[joined["confidence"].isin(["medium", "low"])]
+    review.to_csv(REVIEW, index=False)
+    audit = {
+        "case_histories": int(len(histories)),
+        "classifications": int(len(classifications)),
+        "unique_classified_ids": int(
+            classifications["case_history_id"].nunique()
+        ),
+        "unmatched_histories": int(
+            joined["project_type_family"].isna().sum()
+        ),
+        "project_type_families": {
+            str(key): int(value)
+            for key, value in classifications[
+                "project_type_family"
+            ].value_counts().items()
+        },
+        "confidence": {
+            str(key): int(value)
+            for key, value in classifications["confidence"].value_counts().items()
+        },
+        "review_records": int(len(review)),
+    }
+    AUDIT.write_text(json.dumps(audit, indent=2), encoding="utf-8")
     print(f"Merged {len(records)} classifications -> {MERGED}")
+    print(f"Joined case histories -> {JOINED}")
+    print(f"Review queue: {len(review)} -> {REVIEW}")
 
 
 def main() -> int:

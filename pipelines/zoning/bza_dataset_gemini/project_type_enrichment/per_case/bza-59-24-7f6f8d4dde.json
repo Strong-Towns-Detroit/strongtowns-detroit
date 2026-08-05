@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-59-24-7f6f8d4dde",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "gas station with carry-out restaurant and auto service",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner proposes to expand an existing gas station, auto service, and convenience store by constructing a 999-square-foot addition for a carry-out restaurant.",
+  "evidence": [
+    "expand a legal nonconforming 2,171 square foot gas station",
+    "adding a carry out restaurant",
+    "construction an approximately 999 square foot addition"
+  ],
+  "confidence": "high",
+  "alternative_type": "food_or_beverage"
+}

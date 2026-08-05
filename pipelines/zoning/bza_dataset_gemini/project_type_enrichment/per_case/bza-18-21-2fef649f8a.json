@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-18-21-2fef649f8a",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "junkyard and auto dismantling facility",
+  "proposed_action": "continue_or_legalize_existing_condition",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "The petitioner appeals the denial to establish a junkyard and auto dismantling facility, which is currently operating illegally with several site deficiencies.",
+  "evidence": [
+    "establishment of a Junkyard, Used Auto Parts Sales and Indoor Dismantling",
+    "operating as an illegal junkyard",
+    "site has several deficiencies"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

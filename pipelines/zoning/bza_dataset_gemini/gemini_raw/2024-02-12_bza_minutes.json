@@ -1,0 +1,95 @@
+{
+  "meeting_date": "2024-02-12",
+  "cases": [
+    {
+      "case_number": "5-24",
+      "meeting_date": "2024-02-12",
+      "hearing_time": "9:15 a.m.",
+      "council_district": 6,
+      "petitioner": "TIMOTHY FLINTOFF JR.",
+      "location": "5268 Avery, between I-94 Service Drive and Merrick in a R2 zone (Two Family Residential District).",
+      "legal_description": "Upon request",
+      "proposal": "TIMOTHY FLINTOFF JR. request dimensional variances for an Accessory Use Structure (garage) located at 5268 Avery. The subject site is within an R2 Two-Family Residential District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks; Sec. 50-12-431 Not more than one principal detached residential building shall be located on a zoning lot in the R1, R2, R3, R4, R5, and R6 Districts, and no detached accessory building or structure shall be closer than 10 feet from any principal building. Zoning Ordinance Sections: 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria AP",
+      "bseed_refs": [],
+      "action": "Mr. Watson made a motion to Grant dimensional variances for an Accessory Use Structure (garage) located at 5268 Avery. The subject site is within an R2 Two-Family Residential District. Seconded by Board Member Weed.",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Roberts",
+        "Thomas",
+        "Watson",
+        "Ms. Moore",
+        "Hill-Knott",
+        "Sherman"
+      ],
+      "affirmative_count": 7,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCE GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": null
+    },
+    {
+      "case_number": "4-24",
+      "meeting_date": "2024-02-12",
+      "hearing_time": "9:30 a.m.",
+      "council_district": 5,
+      "petitioner": "LAVONN ROBINSON",
+      "location": "648 TAYLOR, between 2nd and 3rd in an R1 zone (Single Family Residential District).",
+      "legal_description": "N TAYLOR 20 DE WITT H TAYLORS SUB L15 P21 PLATS, W C R 4/88 50 X 130.47A",
+      "proposal": "Lavonn Robinson request dimensional variances for an Accessory Use Structure (garage with small living space above) located at 648 Taylor. The subject site is within an R1 Single-Family Residential District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks; Excessive height and Sec. 50-12-431 Not more than one principal detached residential building shall be located on a zoning lot in the R1, R2, R3, R4, R5, and R6 Districts, excessive height and no detached accessory building or structure shall be closer than 10 feet from any principal building. (Sections 50-4-131 (6) Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+      "bseed_refs": [],
+      "action": "Mr. Watson made a motion to Grant dimensional variances for an Accessory Use Structure (garage with small living space above) located at 648 Taylor. Seconded by Board Member Sherman.",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Roberts",
+        "Thomas",
+        "Watson",
+        "Sherman",
+        "Ms. Moore",
+        "Hill-Knott"
+      ],
+      "affirmative_count": 7,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCE GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": null
+    },
+    {
+      "case_number": "56-23",
+      "meeting_date": "2024-02-12",
+      "hearing_time": "9:45 a.m.",
+      "council_district": 5,
+      "petitioner": "Attorney Malefyt for Jefferson Fuel and AL OUD 4, LLC",
+      "location": "8005 aka 8009 E. Jefferson, between Van Dyke and Parker in a B4-H General Business District Historic",
+      "legal_description": "N JEFFERSON 22 THRU 24 W 15 FT OF 25 AND S 10 FT OF VAC ALLEY ADJ W 15 FT OF 25 & E 15.77 FT OF 24 PARKERS RE SUB L21 P99 PLATS, WCR 17/16 162.11 IRREG",
+      "proposal": "Attorney Malefyt for Jefferson Fuel and AL OUD 4, LLC appeals the decision of the Buildings Safety and Engineering and Environmental Department (BSEED SLU2022-00042 Decision Date: June 22, 2023, Effective Date: July 6, 2023) which DENIED the permission to renovate an existing 6,440 square foot gas station store by adding two future retail tenant spaces within the existing building in a B4-H (General Business District Historic). The Board of Zoning Appeals shall hear and decide appeals from and review any order, requirement, decision, or determination that is made by an administrative official in the administration of this Zoning Ordinance, or any decision made by the Buildings and Safety Engineering Department involving Conditional Uses, Regulated Uses, or Controlled Uses, or any denial of a site plan by the Planning and Development Department. Zoning Ordinance Sections: 50-4-101 Jurisdiction Over Appeals of Administrative Decisions and 50-3-171 thru 50-3-281- General Approval Criteria. AP",
+      "bseed_refs": [
+        "SLU2022-00042"
+      ],
+      "action": "Mr. Roberts made a motion to Adjourn this case with fee and without date for the new attorney to review the file to be prepared to present their case before the Board. Seconded by Board Member Moore.",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Roberts",
+        "Thomas",
+        "Watson",
+        "Sherman",
+        "Ms. Moore",
+        "Hill-Knott"
+      ],
+      "affirmative_count": 7,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "ADJOURNED WITH FEE AND WITHOUT DATE",
+      "decision_status": "postponed",
+      "confidence": "high",
+      "confidence_note": null
+    }
+  ],
+  "document_notes": "Meeting adjourned at 10:25 A.M."
+}

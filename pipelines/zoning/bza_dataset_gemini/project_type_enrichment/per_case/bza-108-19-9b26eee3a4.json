@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-108-19-9b26eee3a4",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "Used auto parts, dismantling, and auto repair facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Proposal to establish a used auto parts facility with indoor dismantling and auto repair in an existing building, with a condition to add interior landscaping.",
+  "evidence": [
+    "establish a Used Auto Parts Facility with Indoor Dismantling and Major Motor Vehicle Repair Facility",
+    "in an existing 13,200 square foot building",
+    "revise site plan to include 1,152 square feet of interior landscaping"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

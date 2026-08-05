@@ -1,0 +1,205 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-bseed-slu2022-00042-fcd0ff29b5",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "cannabis grow facility",
+      "proposed_action": "unclear",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Appeal regarding the approval of a proposed cannabis grow facility in an intensive industrial district.",
+      "evidence": [
+        "Proposed Grow Facility in a M4 Zone"
+      ],
+      "confidence": "medium",
+      "alternative_type": "industrial_or_logistics"
+    },
+    {
+      "case_history_id": "bza-25-23-d87a52a78b",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "car wash",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request to establish a motor vehicle washing facility on the ground floor of an existing two-story building.",
+      "evidence": [
+        "establish a motor vehicle washing facility",
+        "on the ground floor on an existing 2 story 2,004 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-28-23-32856cc88a",
+      "project_type_family": "housing",
+      "project_type_label": "residential porch enclosure",
+      "proposed_action": "site_or_building_alteration",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request to add an enclosure for a second-story porch on a lot with multiple existing principal dwellings.",
+      "evidence": [
+        "add an enclosure for a 2nd story porch",
+        "multiple principal dwellings exist on the subject lot"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-36-23-eb4390b021",
+      "project_type_family": "housing",
+      "project_type_label": "residential garage",
+      "proposed_action": "new_construction",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request for dimensional variances for a residential accessory garage with a deficient side setback.",
+      "evidence": [
+        "accessory use (Garage)",
+        "deficient side setback"
+      ],
+      "confidence": "medium",
+      "alternative_type": "parking_only"
+    },
+    {
+      "case_history_id": "bza-39-23-9f515fc65e",
+      "project_type_family": "food_or_beverage",
+      "project_type_label": "restaurant",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request to change an existing non-conforming motor vehicle repair garage into a standard restaurant and add a 40-square-foot addition.",
+      "evidence": [
+        "change an existing non-conforming (Motor Vehicle Repair Garage) to a non-conforming (Standard Restaurant)",
+        "adding a 40 square foot addition"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-bseedslu2023-00014-500488c05f",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "cannabis dispensary and consumption lounge",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Appeal regarding the approval to establish a marijuana retail facility and consumption establishment in an existing building.",
+      "evidence": [
+        "Establish a Marijuana Retail/Provisioning Facility (MRPF) and Designated Marijuana Consumption Establishment (DMCE)",
+        "in an existing 1,500 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-29-23-1e6ae3ddb9",
+      "project_type_family": "housing",
+      "project_type_label": "senior apartment building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 35,
+      "summary": "Proposal to construct a four-story, 35-unit senior living apartment building with an accessory parking area and community room.",
+      "evidence": [
+        "construct a four-story, 32,111 square-foot building",
+        "establish a Multiple-Family dwelling (35 senior living units)"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-30-23-0932bf1f77",
+      "project_type_family": "housing",
+      "project_type_label": "apartment building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 10,
+      "summary": "Request for dimensional variances for a proposed 10-unit multi-family development.",
+      "evidence": [
+        "10 unit proposed multi-family development"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-31-23-4dc13ed6eb",
+      "project_type_family": "housing",
+      "project_type_label": "apartment buildings",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 16,
+      "summary": "Proposal to construct two multi-family buildings containing a total of 16 residential units.",
+      "evidence": [
+        "construction of two multi-family buildings",
+        "total of 16 multi-family units"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-32-23-5510e7b99d",
+      "project_type_family": "housing",
+      "project_type_label": "apartment building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 10,
+      "summary": "Request for dimensional variances for a proposed 10-unit multi-family development.",
+      "evidence": [
+        "10 unit proposed multi-family development"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-33-23-9df1fa2044",
+      "project_type_family": "housing",
+      "project_type_label": "apartment buildings",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 71,
+      "summary": "Proposal to construct two multi-family buildings containing a total of 71 residential units.",
+      "evidence": [
+        "construction of two multi family buildings",
+        "total of 71 multi family units"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-34-23-b9a318fe90",
+      "project_type_family": "housing",
+      "project_type_label": "apartment buildings",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 24,
+      "summary": "Proposal to develop two multi-family buildings containing a total of 24 residential units.",
+      "evidence": [
+        "development of two buildings",
+        "7A containing 14 multiple family units and 7B containing 10 multiple family units"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+}

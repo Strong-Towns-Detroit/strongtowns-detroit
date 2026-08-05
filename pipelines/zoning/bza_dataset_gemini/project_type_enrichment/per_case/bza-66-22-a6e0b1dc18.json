@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-66-22-a6e0b1dc18",
+  "project_type_family": "housing",
+  "project_type_label": "accessory dwelling unit",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 1,
+  "summary": "Convert an existing garage into an accessory residential dwelling.",
+  "evidence": [
+    "convert the existing garage into an accessory 2 story 580 square foot residential dwelling"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

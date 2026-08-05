@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-71-19-ed59cd56e2",
+  "project_type_family": "housing",
+  "project_type_label": "Single-family dwelling with boat slips",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 1,
+  "summary": "Demolish an existing boathouse and construct a new residential unit with three boat slips underneath.",
+  "evidence": [
+    "demolish an existing boathouse and replace it with a residential unit",
+    "three boat slips underneath the residence"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

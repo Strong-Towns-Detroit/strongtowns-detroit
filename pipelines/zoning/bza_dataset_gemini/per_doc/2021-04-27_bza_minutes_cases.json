@@ -1,0 +1,62 @@
+[
+  {
+    "case_number": "40-20",
+    "meeting_date": "2021-04-27",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 4,
+    "petitioner": "Tiny Dine, LLC DBA/EastEats/Lloyd",
+    "location": "1005, 1010, 1018 & 1033 Navahoe between Jefferson and Freud in a R1 (Single-Family Residential District)-City Council District #4",
+    "legal_description": "W NAVAHOE 173 A M CAMPAU REALTY CO SUB L32 P87 PLATS, W C R 21/405 35 X 100; E NAVAHOE 85 A M CAMPAU REALTY CO SUB L32 P87 PLATS, W C R 21/405 35 X 100; W NAVAHOE 177 A M CAMPAU REALTY CO SUB L32 P87 PLATS, W C R 21/405 35 X 100",
+    "proposal": "Tiny Dine, LLC DBA/EastEats requests Hardship Relief TO establish a restaurant on 3505 sq ft (1005 Navahoe), 3500 sq. ft. (1010 Navahoe), 3485 sq. ft. (1018 Navahoe) and 3505 sq. ft. (1033 Navahoe) not allowed in R1 (General Business District). Restaurants are not allowed R1 Also, the Board of Zoning Appeals shall hold a public hearing to determine whether all reasonable economic use has been prevented as a result of final action on the application. The Board may adopt any legally available incentive or measure that is reasonably necessary to offset any denial of reasonable economic use, and may condition such incentives upon approval of specific development plans. (Sections 50-4-151. - Deprivation of use of property, 50-4-153. - Denial of all reasonable economic use standard, 50-4-194. - Application of the \"all reasonable economic use\" standard, 50-4-195. - Burden of proof, 50-4-196. - Findings of the Board of Zoning Appeals and 50-4-197. - Additional forms of relief.)",
+    "bseed_refs": [],
+    "action": "Mr. West made a motion to Adjourn this case without date and without fee. Seconded by Ms. Moore",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Sherman",
+      "Thomas",
+      "Ms. Moore",
+      "Walker",
+      "West",
+      "Teague"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "ADJOURNED WITHOUT DATE AND WITHOUT FEE",
+    "decision_status": "postponed",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  },
+  {
+    "case_number": "20-21",
+    "meeting_date": "2021-04-27",
+    "hearing_time": "10:15 a.m.",
+    "council_district": 2,
+    "petitioner": "Ramia Kirma",
+    "location": "10345 W. Eight Mile between Griggs and Birwood in B2 (Local Business and Residential District)-City Council District #2",
+    "legal_description": "S EIGHT MILE ROAD W 17 FT 7 6 GRAND PARK SUB L42 P16 PLATS, W C R 16/404 40 X 100",
+    "proposal": "Ramia Kirma appeals the decision of the Buildings Safety and Engineering and Environmental Department (SLU2019-00079) which DENIED the establishment of a Medical Marihuana Provisioning Center Facility (MMPCF) and a Medical Marihuana Safety Compliance Facility (MMSCF) in an existing 2,800 square foot building in a B4 Zone General Business District. The Board of Zoning Appeals shall hear and decide appeals from and review any order, requirement, decision, or determination that is made by an administrative official in the administration of this Zoning Ordinance, or any decision made by the Buildings and Safety Engineering Department involving Conditional Uses, Regulated Uses, or Controlled Uses, or any denial of a site plan by the Planning and Development Department; After careful consideration, the required findings of fact were made per Section 50-3-281, specifically: A) That because the parcel was split, this request is considered to be two separate individual land uses, not a co-location of uses. B) That the conditional use sought will be injurious to the use and enjoyment of other properties in the immediate vicinity for all the purposes. Detroit residents have spoken in opposition to the proposed uses due to (i) the lack of community engagement prior to the public hearing, and (ii) the over-saturation of other marijuana facilities along Eight Mile Road. C) The conditional use will hinder or have a detrimental effect upon vehicular turning patterns, ingress/egress, traffic flow, nearby intersections, traffic visibility and the clear vision triangle, and other vehicular and pedestrian traffic patterns in the vicinity. Birwood Street is heavily trafficked by children who play at the Alfonso Wells Memorial Playground, which is located less than two city blocks from the applicant\u2019s site at 20159 Griggs Street. D) The applicant has otherwise failed to meet its burden and satisfy other general approval criteria outlined in Section 50-3-281 of the 2019 Detroit City Code. More specifically, the applicant has not provided evidence which demonstrates: a. The conditional use sought will not substantially diminish or impair property values within the neighborhood; b. The conditional use sought will be compatible with the capacities of public services and public facilities that are affected by the proposed use. c. Adequate utilities, access roads, drainage, and other necessary facilities have been or will be provided. d. The conditional use sought will be compatible with land uses on adjacent and nearby zoning lots in terms of location, size, and character. e. The conditional use sought is so designed, located, planned, and will be operated so that the public health, safety, and welfare will be protected. (Sections 50-4-101 Jurisdiction over Appeals of Administrative Decisions and 50-3-281 General approval criteria)",
+    "bseed_refs": [
+      "SLU2019-00079"
+    ],
+    "action": "Ms. West made a motion to Adjourn without date and without fee. Seconded by Ms. Teague",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Thomas",
+      "Sherman",
+      "Ms. Walker",
+      "Moore",
+      "West",
+      "Teague"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "AJOURNED WITHOUT DATE AND WITHOUT FEE",
+    "decision_status": "postponed",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  }
+]

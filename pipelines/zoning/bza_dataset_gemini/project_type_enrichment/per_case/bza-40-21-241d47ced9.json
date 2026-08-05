@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-40-21-241d47ced9",
+  "project_type_family": "parking_only",
+  "project_type_label": "parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The applicant is requesting dimensional variances to construct an 8-space surface parking lot on a narrow residential lot.",
+  "evidence": [
+    "construct an 8-space parking lot",
+    "constraints of the 35' wide lot"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

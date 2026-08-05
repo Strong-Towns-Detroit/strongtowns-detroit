@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-111-19-7252fe4512",
+  "project_type_family": "mixed_use",
+  "project_type_label": "neighborhood center with offices and living space",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Convert a vacant former church building into a non-profit neighborhood center with accessory offices and living space.",
+  "evidence": [
+    "convert a vacant two-story former church building",
+    "Neighborhood Center Non Profit Center with accessory offices and living space"
+  ],
+  "confidence": "high",
+  "alternative_type": "institutional_or_civic"
+}

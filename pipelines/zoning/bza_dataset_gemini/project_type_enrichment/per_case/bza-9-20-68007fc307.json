@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-9-20-68007fc307",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "bar with outdoor patio",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishing a bar with an outdoor seating patio in an existing building, requesting a parking variance.",
+  "evidence": [
+    "Bar Establishment for the sale of beer or intoxicating liquor",
+    "existing 3,022 sq. ft. bldg",
+    "1,243 sq. ft. outdoor Seating/Patio area"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

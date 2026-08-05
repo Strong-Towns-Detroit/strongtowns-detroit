@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-bseed-slu2024-00062-b94c40c39e",
+  "project_type_family": "other",
+  "project_type_label": "cell tower",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Appeal of BSEED approval to construct a 75-foot monopole antenna tower on an existing business site.",
+  "evidence": [
+    "construct a 75 foot tower to add a Monopole Antenna on the site of an existing business"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

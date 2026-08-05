@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-bseed-slu2024-00043-35e34d484b",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "marijuana facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Appeal of BSEED approval to establish a marijuana provisioning and processing facility in an industrial district.",
+  "evidence": [
+    "establish a MRPF and MPF in an M2 Restricted Industrial District"
+  ],
+  "confidence": "medium",
+  "alternative_type": "industrial_or_logistics"
+}

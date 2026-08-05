@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-30-21-d888c96eb5",
+  "project_type_family": "mixed_use",
+  "project_type_label": "mixed-use building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 16,
+  "summary": "Construction of a new 5-story mixed-use building with 16 residential units and ground-floor retail.",
+  "evidence": [
+    "new, 5-story, mixed-use development consisting of 16 residential units and 3,600 square feet of ground level retail"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

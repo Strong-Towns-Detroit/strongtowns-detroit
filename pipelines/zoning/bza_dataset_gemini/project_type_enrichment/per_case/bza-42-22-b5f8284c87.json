@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-42-22-b5f8284c87",
+  "project_type_family": "housing",
+  "project_type_label": "residential addition",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Construct an addition to an existing residential home.",
+  "evidence": [
+    "addition on existing residential home"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-43-20-83bc71214b",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "Auto repair and used car sales",
+  "proposed_action": "continue_or_legalize_existing_condition",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Request for dimensional variances for deficient parking and screening at an approved auto repair and used car sales facility in an existing building.",
+  "evidence": [
+    "approved Major Motor Vehicle Repair and Used Auto Sales Facility",
+    "deficient accessory parking in an existing, two-story, 9,800 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": "site_or_building_alteration"
+}

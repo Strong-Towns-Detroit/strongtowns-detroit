@@ -1,0 +1,158 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-29-25-7515a970f7",
+      "project_type_family": "mixed_use",
+      "project_type_label": "mixed-use building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 69,
+      "summary": "Construct a nine-story, 69-unit mixed-use building with ground-floor commercial space and associated parking.",
+      "evidence": [
+        "construct a nine-story, 69-unit mixed use building",
+        "2,522 square feet of ground-level commercial",
+        "14-space parking lot underneath"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-30-25-701e35d3e8",
+      "project_type_family": "parking_only",
+      "project_type_label": "accessory parking lot",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Develop a 24-space accessory parking lot to serve nearby office buildings.",
+      "evidence": [
+        "develop a 24 (twenty-four) space accessory parking lot",
+        "serve three Detroit-based businesses"
+      ],
+      "confidence": "high",
+      "alternative_type": "office_or_medical"
+    },
+    {
+      "case_history_id": "bza-bza2026-00009-e187ef5c5d",
+      "project_type_family": "housing",
+      "project_type_label": "single-family dwelling addition",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Construct a 720-square-foot front addition to an existing single-family dwelling.",
+      "evidence": [
+        "construction of a 720 square foot front addition",
+        "existing single family dwelling"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-bza2026-00051-ccc5f5dbb5",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "auto repair and oil change",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Construct a 729-square-foot addition to expand an existing minor auto repair and oil change business.",
+      "evidence": [
+        "expand a nonconforming minor auto repair",
+        "adding a 729 square foot addition",
+        "existing auto related oil change business"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-53-23-cdc298d7fd",
+      "project_type_family": "unclear",
+      "project_type_label": "unclear",
+      "proposed_action": "unclear",
+      "intensity_direction": "unclear_or_not_applicable",
+      "urban_form_orientation": "unclear_or_not_applicable",
+      "proposal_language_tone": "insufficient_text",
+      "housing_units": null,
+      "summary": "Case dismissed at petitioner's request with no project details provided.",
+      "evidence": [
+        "dismiss at petitioners request"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-bza2025-00044-8af9060833",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "gas station",
+      "proposed_action": "site_or_building_alteration",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Demolish existing structures to build a new 2,640-square-foot principal building and replace gas pump islands at an existing gas station.",
+      "evidence": [
+        "demolish the existing structure(s) for new development",
+        "replacement of the existing (6) gas pump islands with (4) new gas pump islands"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-bza2025-00045-d453f7d2bf",
+      "project_type_family": "parking_only",
+      "project_type_label": "accessory parking lot",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Develop an accessory parking lot on vacant land to serve an existing nearby business.",
+      "evidence": [
+        "Develop an Accessory Parking Lot on existing vacant land",
+        "serve an existing business"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-bza2025-00048-3d30f83bb6",
+      "project_type_family": "housing",
+      "project_type_label": "townhouses",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 25,
+      "summary": "Construct five townhouse structures containing a total of 25 dwelling units on a vacant site.",
+      "evidence": [
+        "construction of five separate townhouse structures",
+        "contained a total of 25 dwelling units",
+        "vacant site"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-bza2025-00049-131db941ce",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "scrap tire storage and recycling facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a scrap tire storage, processing, or recycling facility.",
+      "evidence": [
+        "Establishment of a Scrap Tire Storage, Processing, or Recycling Facility"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+  }

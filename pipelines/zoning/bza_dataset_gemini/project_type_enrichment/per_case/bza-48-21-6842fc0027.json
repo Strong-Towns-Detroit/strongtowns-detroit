@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-48-21-6842fc0027",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "slaughterhouse",
+  "proposed_action": "continue_or_legalize_existing_condition",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "The applicant is appealing the denial to establish a slaughterhouse that was found to be operating illegally and creating health and safety hazards for the adjacent neighborhood.",
+  "evidence": [
+    "establishment of an Abattoir (“Slaughterhouse”)",
+    "posing a public health and safety hazard",
+    "aggravating any pre-existing physical social or economic deterioration"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

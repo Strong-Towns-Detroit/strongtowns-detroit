@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-13-23-fa2355c165",
+  "project_type_family": "housing",
+  "project_type_label": "multi-family affordable housing complex",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 48,
+  "summary": "Developing a 48-unit affordable multi-family housing complex with an accessory clubhouse across four buildings.",
+  "evidence": [
+    "develop a multi-family housing",
+    "48 Multi-family dwelling units in four separate buildings",
+    "700 square foot accessory clubhouse building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

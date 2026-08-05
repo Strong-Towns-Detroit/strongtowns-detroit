@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-19-24-5152521f4c",
+  "project_type_family": "other",
+  "project_type_label": "screening wall",
+  "proposed_action": "new_construction",
+  "intensity_direction": "unclear_or_not_applicable",
+  "urban_form_orientation": "unclear_or_not_applicable",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner proposes to construct a 20-foot high screening wall, which exceeds the allowed 8-foot height.",
+  "evidence": [
+    "proposed wall that is excessive in height",
+    "20’ HIGH PROPOSED"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

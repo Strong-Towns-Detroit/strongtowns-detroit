@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-35-19-a7022fa187",
+  "project_type_family": "retail_or_personal_service",
+  "project_type_label": "Beauty salon",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Converting an existing non-conforming clinic into a non-conforming beauty salon.",
+  "evidence": [
+    "change a non-conforming Clinic to 1872 square foot non-conforming Beauty Salon"
+  ],
+  "confidence": "high",
+  "alternative_type": "office_or_medical"
+}

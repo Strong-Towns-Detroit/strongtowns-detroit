@@ -1,0 +1,69 @@
+{
+  "meeting_date": "2025-06-23",
+  "cases": [
+    {
+      "case_number": "76-24",
+      "meeting_date": "2025-06-23",
+      "hearing_time": "9:15 a.m.",
+      "council_district": 6,
+      "petitioner": "Parkstone Development Partners",
+      "location": "856 Beard between W Lafayette and Fisher Freeway in a R2 Zone (Two-Family Residential District).",
+      "legal_description": "E BEARD 27&28 FAHNDRICHS SUB L24 P60 PLATS, W C R 18/273 50 X 143.62 COMBINED ON 02/06/2025 WITH 18008478., 18008479. INTO 18008478-80",
+      "proposal": "Parkstone Development request permission dimensional variances for nonconforming Light Duty Vehicle Repair Establishment (Minor Auto Repair) by adding 850 and 846 Beard to 856 Beard Street. The building square footage has also increased from 1,154 square feet within a 1,246 square foot addition to a total of 2,400 square feet in a R2 zone Two Family Residential District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks. Residential Screening and screening material. Sections 50-4-131 (6) dimensional variances and 50-4-121 Approval Criteria AP",
+      "bseed_refs": [],
+      "action": "Mr. Boman made a motion to Grant dimensional variances for nonconforming Light Duty Vehicle Repair Establishment (Minor Auto Repair) by adding 850 and 846 Beard to 856 Beard Street. The building square footage has also increased from 1,154 square feet within a 1,246 square foot addition to a total of 2,400 square feet in a R2 zone Two Family Residential District. Seconded by Board Member Sherman",
+      "affirmative_votes": [
+        "Mr. Roberts",
+        "Thomas",
+        "Sherman",
+        "Boman",
+        "Osbern",
+        "Weed",
+        "Mrs. Hill-Knott",
+        "Moore"
+      ],
+      "affirmative_count": 8,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCE GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "All fields clearly legible."
+    },
+    {
+      "case_number": "BZA SLU2024-00172",
+      "meeting_date": "2025-06-23",
+      "hearing_time": "9:30 a.m.",
+      "council_district": 1,
+      "petitioner": "TONYA G. ARTHUR",
+      "location": "22001 West Eight Mile Rd. between Cooley and Lahser in a M2 Zone (Restricted Industrial District).",
+      "legal_description": "S EIGHT MILE W E 242 FT OF N 414.50 FT OF N E 1/4 OF N E 1/4 OF SEC 4 T 1 S R 10 E EXC N 102 FT & EXC E 60 FT 22/--- 182 X 312.50",
+      "proposal": "Tonya G. Arthur appeals the decision of the Buildings Safety Engineering and Environmental Department (BSEED) SLU2024-000172: Decision Date: April 9, 2025; Effective Date: April 23, 2025 which Approved with Conditions to partially demolish an existing 10,848 square foot building, reducing its size to 7,884 square feet to establish a Motor Vehicle Filling Station that will include a 969 square foot restaurant, carry-out with drive up or drive thru facilities in an M2 Zone (Restricted Industrial District). This case is appealed because Appeals to the Board of Zoning Appeals may be taken by any person, firm, partnership or corporation, or by any City department, commission, board or other City agency which is aggrieved 1) by a decision of an enforcing officer, or 2) by any decision made by the Buildings and Safety Engineering Department involving Conditional Uses; Michigan courts have held that in order to meet the “aggrieved person” standard, the appellant must prove that he or she (or it, if the appellant is an organization) has suffered special damages related to the beneficial use and enjoyment of his/her own property that are not common to other property owners similarly situated. The party filing the appeal must be more than a mere resident of the City; he or she must be able to show harm or damages that are unique to him or her, and to his/her property, specifically. (Sections 50-4-102 Appeals, Michigan Case Law on “Aggrieved Person” Standard and 50-3-281 General Approval Criteria (Community Appeals).AP",
+      "bseed_refs": [
+        "SLU2024-000172",
+        "SLU2024-00172"
+      ],
+      "action": "Mr. Roberts made a motion that petitioner has not met the aggrieved standard to bring the Community Appeal. Seconded by Board Member Sherman",
+      "affirmative_votes": [
+        "Mr. Roberts",
+        "Thomas",
+        "Sherman",
+        "Boman",
+        "Osbern",
+        "Weed",
+        "Mrs. Moore",
+        "Hill-Knott"
+      ],
+      "affirmative_count": 8,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "AGGREIVED STANDARD NOT MET, CASE DENIED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "Typographical error in original text ('Mrs. Moore, Hill-Knott, Moore') corrected to 8 distinct votes."
+    }
+  ],
+  "document_notes": "Meeting adjourned at 11:20 A.M."
+}

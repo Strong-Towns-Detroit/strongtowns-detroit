@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-6-25-1d092416b3",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "used vehicle sales and repair",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Expand an existing used motor vehicle sales lot and light duty vehicle repair facility.",
+  "evidence": [
+    "expand an existing Motor Vehicles, Used Salesroom or Sales Lot and Light Duty Vehicle Repair"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

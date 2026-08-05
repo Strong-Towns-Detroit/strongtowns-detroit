@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-14-24-3f7d9a8551",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "fast-food restaurant with drive-through",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Demolition of an existing building to construct a new fast-food restaurant with a drive-through.",
+  "evidence": [
+    "demolishing an existing building",
+    "construct a new 2,950 square foot Restaurant, fast-food, with drive-up or drive-through facilities"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

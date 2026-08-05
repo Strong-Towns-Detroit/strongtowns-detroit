@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-25-24-e30fbc8699",
+  "project_type_family": "institutional_or_civic",
+  "project_type_label": "private club",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner proposes to establish a private club in an existing 4,420 square foot building.",
+  "evidence": [
+    "establish a Private Club in an existing 4,420 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": "recreation_or_open_space"
+}

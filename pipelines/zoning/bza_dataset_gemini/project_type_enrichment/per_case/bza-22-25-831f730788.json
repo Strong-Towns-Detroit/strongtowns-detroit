@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-22-25-831f730788",
+  "project_type_family": "housing",
+  "project_type_label": "residential garage",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "The petitioner is requesting a dimensional variance to construct a new 2-car garage.",
+  "evidence": [
+    "construction of a new 689 square foot 2 car garage"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

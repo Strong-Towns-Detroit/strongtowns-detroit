@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bza2025-00044-8af9060833",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "gas station",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Demolish existing structures to build a new 2,640-square-foot principal building and replace gas pump islands at an existing gas station.",
+  "evidence": [
+    "demolish the existing structure(s) for new development",
+    "replacement of the existing (6) gas pump islands with (4) new gas pump islands"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

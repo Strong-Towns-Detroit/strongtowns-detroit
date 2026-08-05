@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-94-19-5002df6378",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "junkyard and auto dismantling facility",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "Add a junkyard with dismantling to an existing used auto parts facility, which the department found would be detrimental to the surrounding area.",
+  "evidence": [
+    "add a Junkyard with dismantling",
+    "proposed Conditional Use will be detrimental",
+    "impede the normal and orderly development"
+  ],
+  "confidence": "high",
+  "alternative_type": "vehicle_oriented"
+}

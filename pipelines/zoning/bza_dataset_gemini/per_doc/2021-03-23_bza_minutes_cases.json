@@ -1,0 +1,64 @@
+[
+  {
+    "case_number": "12-21",
+    "meeting_date": "2021-03-23",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 6,
+    "petitioner": "ADR Consultants/Barry Ellentuck",
+    "location": "2020-2028 24th St. (AKA 2024 and 2026 24th St) between Michigan and Dalzelle in an R2 Zone Two-Family Residential District -City Council District #6",
+    "legal_description": "E 24TH 37 SUB OF PORTER FARM L1 P25 PLATS, W C R 12/126 1 SUB OF PORTER FARM L6 P10 PLATS, W C R 12/127 76.23 IRREG",
+    "proposal": "ADR CONSULTANTS/BARRY ELLENTUCK request dimensional variances to Demolish an existing single-family dwelling on the rear portion of a lot and construct a new two story, 4,499 square foot Multiple-Family Dwelling along with ten accessory parking spaces APPROVED w/Conditions in BSEED SLU2020-00105, in an R2 Zone Two-Family Residential District. The Board of Zoning Appeals shall be authorized to hear dimensional variance requests for matters that are beyond the scope of Buildings and Safety Engineering Department ten percent (10%) administrative adjustments for a variance of the minimum setbacks; that prior to issuance of permit, the applicant shall obtain the following variances from the Board of Zoning Appeals: a) Per Section 50-12-431 (\u201cNumber of buildings on a zoning lot\u201d), \u201cNot more than one principal detached residential building shall be located on a zoning lot in the R1, R2, R3, R4, R5, and R6 Districts\u201d; and b) Per Section 50-14-341(\u201cRight-of-way screening\u201d), the proposed surface parking lot along 24th Street does not contain the necessary right of way screening as required for surface lots. (Sections 50-4-131 - Permitted dimensional variances and 50-4-121 Approval Criteria.) AP",
+    "bseed_refs": [
+      "SLU2020-00105"
+    ],
+    "action": "Mr. Weed made a motion to Adjourn this case with fee and without date at petitioners request. Seconded by Ms. Moore",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Sherman",
+      "Thomas",
+      "Ms. Moore",
+      "Walker",
+      "West",
+      "Teague"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "ADJOURNED WITH FEE AND WITHOUT DATE",
+    "decision_status": "postponed",
+    "confidence": "high",
+    "confidence_note": "Adjourned without date mapped to postponed."
+  },
+  {
+    "case_number": "43-20",
+    "meeting_date": "2021-03-23",
+    "hearing_time": "10:15 a.m.",
+    "council_district": 5,
+    "petitioner": "Jimmie Henderson",
+    "location": "8911, 8885, 8877 & 8873 Grand River between Hillsboro St and S Clarendon St in a B4 zone (General Business District) -City Council District #5",
+    "legal_description": "S GRAND RIVER 15 THRU 11 FREDERICK C MARTINDALE SUB L32 P19 PLATS, W C R 16/167 100 X 100; S GRAND RIVER 19&18 FREDERICK C MARTINDALE SUB L32 P19 PLATS, W C R 16/167 40 X 100; S GRAND RIVER 20 FREDERICK C MARTINDALE SUB L32 P19 PLATS, W C R 16/167 20 X 100",
+    "proposal": "Jimmie Henderson requesting dimensional variances on an approved Major Motor Vehicle Repair and Used Auto Sales Facility with deficient accessory parking in an existing, two-story, 9,800 square foot building. The subject site is within a B4 (General Business) zoning district. The Board of Zoning Appeals shall be authorized to hear dimensional variance requests for matters that are beyond the scope of Buildings and Safety Engineering Department ten percent (10%) administrative adjustments for a variance of the minimum setbacks; that prior to issuance of permit, the applicant shall obtain the following variances from the Board of Zoning Appeals: Deficient parking for motor vehicle repair and deficient parking for the used auto sales, deficient right of way screening. (Sections 50-4-131 (1&6)- Permitted dimensional variances and 50-4-121 Approval Criteria.)",
+    "bseed_refs": [
+      "SLU2019-00051"
+    ],
+    "action": "Ms. Walker made a motion to Grant dimensional (parking) variance an approved Major Motor Vehicle Repair and Used Auto Sales Facility with deficient accessory parking in an existing, two-story, 9,800 square foot building. The subject site is within a B4 (General Business) zoning district. Seconded by Ms. Teague",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Sherman",
+      "Thomas",
+      "Ms. Walker",
+      "Moore",
+      "West",
+      "Teague"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL (Parking) VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  }
+]

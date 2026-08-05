@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-41-19-e5976ad285",
+  "project_type_family": "housing",
+  "project_type_label": "Townhouse building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 11,
+  "summary": "Constructing a new 11-unit townhouse building with an accessory parking structure on vacant land.",
+  "evidence": [
+    "construct an eleven unit, 5,760 square foot townhouse building",
+    "on vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bseed-slu2019-00141-e642903056",
+  "project_type_family": "recreation_or_open_space",
+  "project_type_label": "urban farm",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Establish an urban tree farm on multiple parcels of existing vacant land.",
+  "evidence": [
+    "establishment of an Urban Farm",
+    "multiple parcels of existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": "other"
+}

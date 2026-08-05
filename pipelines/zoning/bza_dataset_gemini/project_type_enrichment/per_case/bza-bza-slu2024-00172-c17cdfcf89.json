@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bza-slu2024-00172-c17cdfcf89",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "gas station and drive-through restaurant",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Partially demolish an existing building to establish a motor vehicle filling station with a drive-through restaurant.",
+  "evidence": [
+    "partially demolish an existing 10,848 square foot building",
+    "establish a Motor Vehicle Filling Station that will include a 969 square foot restaurant, carry-out with drive up or drive thru facilities"
+  ],
+  "confidence": "high",
+  "alternative_type": "food_or_beverage"
+}

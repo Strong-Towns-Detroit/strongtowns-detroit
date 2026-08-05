@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-107-19-7c49964699",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "Medical marijuana provisioning center and safety compliance facility",
+  "proposed_action": "unclear",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Proposal to establish a medical marijuana provisioning center and safety compliance facility, which was deemed ineligible due to its location within a Drug Free Zone.",
+  "evidence": [
+    "proposed MMPC/Safety Compliance Facility",
+    "identified as being in a Drug Free Zone",
+    "ineligible to establish"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

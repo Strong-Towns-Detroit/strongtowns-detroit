@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bssed-slu2021-00023-spr2021-00009-cb7a323150",
+  "project_type_family": "office_or_medical",
+  "project_type_label": "mental health and substance abuse treatment facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishment of a mental health and substance abuse treatment facility in an existing building with an accessory parking lot on adjacent vacant land.",
+  "evidence": [
+    "establishment of a Mental Health Facility with accessory Substance Abuse Treatment Facility",
+    "in an existing approximately 20,000 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": "institutional_or_civic"
+}

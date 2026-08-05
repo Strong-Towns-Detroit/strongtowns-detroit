@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bseed-slu2021-00077-bd9c3a9d09",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "Marijuana Grower Facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish a marijuana grower facility in an existing 71,179 square foot industrial building.",
+  "evidence": [
+    "establish a Marijuana Grower Facility",
+    "in an existing 71,179 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "case_number": "78-24",
+    "meeting_date": "2026-01-23",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 5,
+    "petitioner": "FREDERICK IDEOZU",
+    "location": "3652 GRATIOT, between Sylvester and Superior in a B2 Zone (Local Business and Residential District).",
+    "legal_description": "S GRATIOT 10 THRU 1 EXC GRATIOT AVE AS WD ZENDERS L10 P11 PLATS, W C R 13/76 250 IRREG",
+    "proposal": "Frederick Ideozu is requesting to re-establish a Motor Vehicle Fueling Station (Note: the site has been vacant 10 years), this will be hardship relief in a B2 Zone (Local Business and Residential District). A public hearing at the Board of Zoning Appeals shall be required; Any applicant for development may file a hardship relief petition with the Buildings, Safety Engineering, and Environmental Department which seeks relief from any regulations in this chapter on the basis that the denial of the application deprived the applicant of all reasonable use of such applicant's property. A hardship shall be defined as a denial of all reasonable economic use of the property. Upon finding that the denial of the application has resulted in a denial of all reasonable economic use of the property, the City may provide the petitioner with relief from applicable zoning regulations. Sections 50-4-151. - Deprivation of use of property, 50-4-153. - Denial of all reasonable economic use standards, 50-4-194. - Application of the \"all reasonable economic use\" standard, 50-4-195. - Burden of proof, 50-4-196. - Findings of the Board of Zoning Appeals and 50-4-197. - Additional forms of relief. AP",
+    "bseed_refs": [],
+    "action": "Mr. Boman made a motion to Approve Hardship Relief Petition to re-establish a Motor Vehicle Fueling Station. Seconded by Board Member Osbern",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Boman",
+      "Mrs. Hill-Knott"
+    ],
+    "affirmative_count": 3,
+    "negative_votes": [
+      "Mr. Roberts",
+      "Osbern",
+      "Sherman",
+      "Watson"
+    ],
+    "negative_count": 4,
+    "abstentions": [],
+    "decision": "HARDSHIP RELIEF PETITION DENIED DUE VOTE COUNT",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields extracted clearly."
+  },
+  {
+    "case_number": "BZA2026-00051",
+    "meeting_date": "2026-01-23",
+    "hearing_time": "9:45 a.m.",
+    "council_district": 2,
+    "petitioner": "FRANK SALAMA/YASSER ISMAIL",
+    "location": "17415 Livernois St, between Santa Clara and Santa Maria in a B2 Zone (Local Business District).",
+    "legal_description": "The north 4 feet of lot 25 and all of lots 26 through 30, inclusive except Livernois Avenue as widened J Lee Baker Co\u2019s Livernois Subdivision, according to the plat thereof, as recorded in Liber 44 of Plats, Page 53 Wayne County Records.",
+    "proposal": "Frank Salama/YASSER ISMAIL requests to expand a nonconforming minor auto repair by adding a 729 square foot addition to existing auto related oil change business. The subject site is within a B2 Zone (Local Business District). A public hearing at the Board of Zoning Appeals shall be required in any instance that involves the expansion or intensification of a nonconforming use. Sections: 50-15-7 - Board of Zoning Appeals, 50-15-26 - Expansion or intensification of nonconforming uses and 50-15-27. - Required findings. AP",
+    "bseed_refs": [],
+    "action": "Mr. Boman made a motion to Grant expansion of a nonconforming minor auto repair by adding a 729 square foot addition to existing auto related oil change business. The subject site is within a B2 Zone (Local Business District). Seconded by Board Member Watson",
+    "affirmative_votes": [
+      "Mr. Watson",
+      "Thomas",
+      "Weed",
+      "Boman",
+      "Osbern",
+      "Sherman",
+      "Mrs. Hill-Knott"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "EXPANSION OF NONCONFORMING USE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields extracted clearly."
+  },
+  {
+    "case_number": "BZA2026-00009",
+    "meeting_date": "2026-01-23",
+    "hearing_time": "10:15 a.m.",
+    "council_district": 3,
+    "petitioner": "JOSEPH ALTMAN/WAEL AHMED MOHAMED NAGI",
+    "location": "3901 Garvin, between Justin and Fenelon in a R2 Zone (Two-Family Residential District).",
+    "legal_description": "N GARVIN 144 PULASKI PK L29 P66 PLATS, W C R 13/215 30 X 100",
+    "proposal": "Joseph Altman request dimensional variances for the construction of a 720 square foot front addition the existing single family dwelling. This Case was Plan Reviewed in BSEED BLD2025-03069. Property is in a R2 Zone (Two-Family Residential District). The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Deficient side yard setback, excessive lot coverage and, Porch/Stairs may not project more than eight feet into a required front or rear setback. No enclosed porch shall be constructed within any required setback. Ordinance Sections: 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria. AP",
+    "bseed_refs": [
+      "BLD2025-03069"
+    ],
+    "action": "Mr. Osbern made a motion to Grant dimensional variances for construction of a 720 square foot 2 story addition to existing single family dwelling. Seconded by Board Member Boman",
+    "affirmative_votes": [
+      "Mr. Watson",
+      "Thomas",
+      "Weed",
+      "Boman",
+      "Osbern",
+      "Sherman",
+      "Mrs. Hill-Knott"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCES GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields extracted clearly."
+  }
+]

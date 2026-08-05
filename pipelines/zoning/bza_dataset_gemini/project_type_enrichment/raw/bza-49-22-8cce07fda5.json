@@ -1,0 +1,212 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-49-22-8cce07fda5",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "marijuana safety compliance facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "adverse",
+      "housing_units": null,
+      "summary": "The petitioner is appealing the denial of a request to add a marijuana safety compliance facility in an existing building, which was denied due to an unapproved wall blocking an alley and negative impacts on the surrounding residential properties.",
+      "evidence": [
+        "negative impact on the community",
+        "injurious to the use and enjoyment",
+        "blocks the north/south alley"
+      ],
+      "confidence": "high",
+      "alternative_type": "office_or_medical"
+    },
+    {
+      "case_history_id": "bza-51-22-07f10681c0",
+      "project_type_family": "housing",
+      "project_type_label": "detached garage",
+      "proposed_action": "new_construction",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting a variance for excessive height to construct a detached garage behind an existing single-family residence.",
+      "evidence": [
+        "construction of detached garage behind single-family residence",
+        "Excessive Height"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-58-22-943196124c",
+      "project_type_family": "mixed_use",
+      "project_type_label": "mixed-use building with apartments and retail",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 53,
+      "summary": "The petitioner proposes to demolish an existing structure and build a four-story mixed-use building with 53 residential units, ground-floor commercial space, and a surface parking lot, requiring a variance for deficient parking.",
+      "evidence": [
+        "construct a four-story, mixed-use building",
+        "containing 53 residential units",
+        "ground level commercial, retail, and service-oriented space"
+      ],
+      "confidence": "high",
+      "alternative_type": "housing"
+    },
+    {
+      "case_history_id": "bza-53-22-f89cd6be57",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "meat processing facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting a parking variance to establish a meat processing facility in an existing two-story building with zero off-street parking spaces provided.",
+      "evidence": [
+        "establish the use of a High-Impact Manufacturing or Processing",
+        "Meat processing facility",
+        "Zero off-street parking spaces are being proposed"
+      ],
+      "confidence": "high",
+      "alternative_type": "food_or_beverage"
+    },
+    {
+      "case_history_id": "bza-56-22-ec38b25482",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "marijuana retail facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is appealing the denial of a proposed marijuana retail facility, which was rejected for being located too close to an existing approved marijuana facility.",
+      "evidence": [
+        "establishment of a Marijuana Retail/Provisioning Facility",
+        "located within 1000 radial feet of a Marijuana Retail/Provisioning Facility"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-57-22-29d327c7bd",
+      "project_type_family": "housing",
+      "project_type_label": "carriage house and four seasons room",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting variances to construct a carriage house and a four seasons room on a single-family residential lot, which conflicts with the rule against multiple principal residential buildings on one lot.",
+      "evidence": [
+        "construct 2 structures (carriage house and four seasons room)",
+        "not more than one principal detached residential building shall be located"
+      ],
+      "confidence": "high",
+      "alternative_type": "recreation_or_open_space"
+    },
+    {
+      "case_history_id": "bza-52-22-dbe49059e9",
+      "project_type_family": "food_or_beverage",
+      "project_type_label": "restaurant with accessory parking lot",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting variances for deficient setbacks to build an accessory parking lot for a newly established restaurant serving alcohol in an existing building.",
+      "evidence": [
+        "establish a Standard Restaurant with the sale of beer or alcoholic consumption",
+        "Accessory Parking Lot on existing vacant land"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-55-22-5f45ad09c6",
+      "project_type_family": "institutional_or_civic",
+      "project_type_label": "private social club",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is seeking approval to change an existing nonconforming retail store with alcohol sales into a nonconforming private social club.",
+      "evidence": [
+        "change from one nonconforming use (Retail Store w/SDM & SDD Licenses) to another nonconforming use (Private Social Club)"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-59-22-b75dd5795b",
+      "project_type_family": "housing",
+      "project_type_label": "house addition",
+      "proposed_action": "expansion",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting variances for excessive lot coverage and a deficient side setback to build a 614-square-foot addition to an existing single-family home.",
+      "evidence": [
+        "proposed 614 SF addition to the existing Single-Family Dwelling",
+        "excessive lot coverage by 11%"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-46-22-492c5e629d",
+      "project_type_family": "housing",
+      "project_type_label": "house addition, pool, shed, and carport",
+      "proposed_action": "expansion",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting variances for excessive lot coverage and a deficient rear yard setback to construct a home addition, pool, shed, and carport.",
+      "evidence": [
+        "addition to residential home",
+        "construction of a pool, shed and carport",
+        "Excessive lot coverage"
+      ],
+      "confidence": "high",
+      "alternative_type": "recreation_or_open_space"
+    },
+    {
+      "case_history_id": "bza-60-22-958ec66e06",
+      "project_type_family": "housing",
+      "project_type_label": "apartment building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 65,
+      "summary": "The petitioner is requesting variances to construct a three-story multi-family building with 65 residential units and accessory parking on adjacent lots.",
+      "evidence": [
+        "construction of a three-story",
+        "multi-family building will now contain 65 residential dwelling units",
+        "accessory parking spaces shall be located on"
+      ],
+      "confidence": "high",
+      "alternative_type": "mixed_use"
+    },
+    {
+      "case_history_id": "bza-61-22-401fb1319a",
+      "project_type_family": "housing",
+      "project_type_label": "deck addition",
+      "proposed_action": "expansion",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting a variance for excessive lot coverage to build a deck addition to the rear of an existing house.",
+      "evidence": [
+        "proposed addition (deck) to rear of house",
+        "Excessive Lot Coverage"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+}

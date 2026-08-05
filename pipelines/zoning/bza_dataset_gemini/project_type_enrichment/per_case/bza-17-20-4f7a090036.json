@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-17-20-4f7a090036",
+  "project_type_family": "housing",
+  "project_type_label": "senior housing development",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 105,
+  "summary": "Construction of a 105-unit senior housing development across three buildings, requiring setback variances.",
+  "evidence": [
+    "proposed senior housing development",
+    "new construction of a residential building with 73 units",
+    "total of 105 multiple-dwelling units"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

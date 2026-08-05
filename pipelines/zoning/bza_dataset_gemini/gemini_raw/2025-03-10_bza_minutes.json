@@ -1,0 +1,62 @@
+{
+  "meeting_date": "2025-03-10",
+  "cases": [
+    {
+      "case_number": "2-24",
+      "meeting_date": "2025-03-10",
+      "hearing_time": "9:15 A.M.",
+      "council_district": 2,
+      "petitioner": "482 HOOKAH/TONY HARRISON",
+      "location": "17150 W MCNICHOLS, between Biltmore and Gilchrist in a B2 zone (Local Business and Residential District).",
+      "legal_description": "N--W MC NICHOLS 6&5 B E TAYLORS NINETEEN TWENTY-TWO SUB L43 P82 PLATS, W C R 22/4 46.38 X 100",
+      "proposal": "482 Hookah/Tony Harrison is requesting to establish a hookah lounge in the existing building. As the City of Detroit does not have the land use of ‘Hookah Lounge’ in the current zoning ordinance, this will be a hardship relief in a B2 Local Business and Residential District. A public hearing at the Board of Zoning Appeals shall be required; Any applicant for development may file a hardship relief petition with the Buildings, Safety Engineering, and Environmental Department which seeks relief from any regulations in this chapter on the basis that the denial of the application has deprived the applicant of all reasonable use of such applicant's property. A hardship shall be defined as a denial of all reasonable economic use of the property. Upon a finding that the denial of the application has resulted in a denial of all reasonable economic use of the property, the City may provide the petitioner with relief from applicable zoning regulations. Sections 50-4-151. - Deprivation of use of property, 50-4-153. - Denial of all reasonable economic use standard, 50-4-194. - Application of the \"all reasonable economic use\" standard, 50-4-195. - Burden of proof, 50-4-196. - Findings of the Board of Zoning Appeals and 50-4-197. - Additional forms of relief. AP",
+      "bseed_refs": [],
+      "action": "Mr. Roberts made a motion to Dismiss without return of fee due to failure to show and longevity of case. Seconded by Board Member Moore",
+      "affirmative_votes": [
+        "Mr. Roberts",
+        "Thomas",
+        "Weed",
+        "Sherman",
+        "Boman",
+        "Mrs. Moore"
+      ],
+      "affirmative_count": 6,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DISMISSED WITHOUT RETURN OF FEE",
+      "decision_status": "dismissed",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted."
+    },
+    {
+      "case_number": "50-24",
+      "meeting_date": "2025-03-10",
+      "hearing_time": "9:45 A.M.",
+      "council_district": 6,
+      "petitioner": "TIMOTHY FLINTOFF/1530 BAGLEY DEVELOPMENT, LLC",
+      "location": "1530 BAGLEY, aka 1530-1550 Bagley between Trumbull and 10th in an R3 District (Low Density Residential District).",
+      "legal_description": "Lots 10 and 11, Block 77 of Woodbridge Farm, as recorded in Liber 1 of Plats page 146 and 147 of WCR.",
+      "proposal": "Timothy Flintoff request is requesting Relief From Hardship to establish a 11,903 sq ft building with 10 residential units with total sq ft of 11288 sq ft and one commercial space with 615 sq. Ft . A public hearing at the Board of Zoning Appeals shall be required; Any applicant for development may file a hardship relief petition with the Buildings, Safety Engineering, and Environmental Department which seeks relief from any regulations in this chapter on the basis that the denial of the application has deprived the applicant of all reasonable use of such applicant's property. A hardship shall be defined as a denial of all reasonable economic use of the property. Upon a finding that the denial of the application has resulted in a denial of all reasonable economic use of the property, the City may provide the petitioner with relief from applicable zoning regulations Sections: 50-4-151. - Deprivation of use of property, 50-4-153. - Denial of all reasonable economic use standard, 50-4-194. - Application of the \"all reasonable economic use\" standard, 50-4-195. - Burden of proof, 50-4-196. - Findings of the Board of Zoning Appeals and 50-4-197. - Additional forms of relief. AP",
+      "bseed_refs": [],
+      "action": "Mr. Osbern made a motion Adjourn to March 24, 2025 for petitioner to provide information regarding NEZ and for the absent Board Member to hear the audio and participate in the vote. Supported by Board Member Roberts",
+      "affirmative_votes": [
+        "Mr. Roberts",
+        "Weed",
+        "Roberts",
+        "Boman",
+        "Osbern",
+        "Mrs. Moore"
+      ],
+      "affirmative_count": 6,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "ADJOURNED TO MARCH 24, 2025",
+      "decision_status": "postponed",
+      "confidence": "high",
+      "confidence_note": "Roberts appears twice in the affirmative votes list, transcribed exactly as written."
+    }
+  ],
+  "document_notes": "Meeting minutes for March 10, 2025."
+}

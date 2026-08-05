@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-184-17-b3de95c28c",
+  "project_type_family": "housing",
+  "project_type_label": "townhouses",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 18,
+  "summary": "Construct two three-story townhouse buildings with a total of 18 units.",
+  "evidence": [
+    "construct two, three story townhouse buildings (18 units)"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

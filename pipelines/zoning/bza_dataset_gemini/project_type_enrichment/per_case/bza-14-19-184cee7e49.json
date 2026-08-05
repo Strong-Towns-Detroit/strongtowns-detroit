@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-14-19-184cee7e49",
+  "project_type_family": "retail_or_personal_service",
+  "project_type_label": "Rental Hall and Dance Studio",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Add a rental hall to an existing dance studio without providing the required off-street parking.",
+  "evidence": [
+    "add a Rental Hall to an existing Dance Studio",
+    "fifty-one off-street parking spaces are required, 0 spaces are provided"
+  ],
+  "confidence": "high",
+  "alternative_type": "recreation_or_open_space"
+}

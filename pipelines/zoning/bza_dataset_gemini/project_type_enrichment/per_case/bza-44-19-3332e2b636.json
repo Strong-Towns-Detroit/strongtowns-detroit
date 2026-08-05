@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-44-19-3332e2b636",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Expand an existing accessory parking lot from three to eight spaces for a multiple-family dwelling.",
+  "evidence": [
+    "expand an existing Accessory Parking lot",
+    "from three (3) spaces to eight (8) spaces"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

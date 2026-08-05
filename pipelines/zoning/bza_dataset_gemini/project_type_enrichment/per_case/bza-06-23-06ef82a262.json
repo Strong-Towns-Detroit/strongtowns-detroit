@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-06-23-06ef82a262",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "marijuana grower and processor facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": 0,
+  "summary": "Establish a marijuana grower and processor facility in an existing building.",
+  "evidence": [
+    "establishment of a Marijuana Grower Facility",
+    "negative impact on the community",
+    "injurious to the use and enjoyment of other properties"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

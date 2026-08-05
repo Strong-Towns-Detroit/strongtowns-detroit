@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-42-19-2143d12bd7",
+  "project_type_family": "mixed_use",
+  "project_type_label": "mixed-use building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 10,
+  "summary": "Construct a four-story mixed-use building with ten residential units and office space.",
+  "evidence": [
+    "construct a mixed-use development in a four (4) story",
+    "six (6) Townhouse Units, four (4) Multi-family units and 1,034 square foot Office space"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

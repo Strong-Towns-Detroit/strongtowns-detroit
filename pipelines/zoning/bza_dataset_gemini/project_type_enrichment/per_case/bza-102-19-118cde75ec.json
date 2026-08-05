@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-102-19-118cde75ec",
+  "project_type_family": "mixed_use",
+  "project_type_label": "Retail store with second-floor offices",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "reduces_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "Proposal to convert a non-conforming store and dwelling into a retail space with second-floor offices, which faced criticism over parking and waste management.",
+  "evidence": [
+    "change a non-conforming Store & Dwelling",
+    "to non-conforming Retail with Offices",
+    "proposed parking \"does not work\""
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

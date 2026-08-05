@@ -1,0 +1,82 @@
+[
+  {
+    "case_number": "88-19",
+    "meeting_date": "2020-02-11",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 3,
+    "petitioner": "EBONY BUTLER",
+    "location": "4535 E. Seven Mile Rd. Between: Eureka and Justine B4 Zone (General Business District)",
+    "legal_description": "N SEVEN MILE RD 3 THRU 6 SEVEN OAKS L36 P9 PLATS, W C R 13/243 80 X 100",
+    "proposal": "Ebony Butler requests a dimensional variance to add a Rental/Banquet Hall to an existing 3,633 square building which was approved w/conditions in SLU2019-00095 in a B4 Zone (General Business District). This case is appealed because the Board of Zoning Appeals shall be authorized to hear dimensional variance requests for matters that are beyond the scope of Buildings and Safety Engineering Department ten percent (10%) administrative adjustments and for a variance from the required location of off-street parking facilities or the amount of off-street parking facilities required, or both, where, after investigation by the Board, it is found that such modification is necessary to secure an appropriate development of a specific parcel of land, provided, that any such modification will not be inconsistent with other requirements and general purpose of this Zoning Ordinance; parking deficiency \u2013 36 parking spaces required; 5 provided. (Sections 50-4-102 Permitted Dimensional Variances, Location or Amount of Off-Street-Parking and 50-4-121 Approval Criteria.).AP",
+    "bseed_refs": [
+      "SLU2019-00095"
+    ],
+    "action": "Ms. Moore made a motion to Grant Parking Variance to establish a rental/banquet hall in a B4 zone. Seconded by Mr. Finn",
+    "affirmative_votes": [
+      "Mr. Thomas",
+      "Finn",
+      "Weed",
+      "Ms. Teague",
+      "Moore",
+      "Walker"
+    ],
+    "affirmative_count": 6,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "PARKING VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  },
+  {
+    "case_number": "6-19",
+    "meeting_date": "2020-02-11",
+    "hearing_time": "10:00 a.m.",
+    "council_district": 6,
+    "petitioner": "ESAM VINNIE SHOKRIE",
+    "location": "8836 McGraw Between: Addison and Cabot in a R2 Zone (Two-Family Residential District)",
+    "legal_description": "E ADDISON N 2.37 FT IN FRT BG N 2.26 FT IN REAR OF 26 27&28 ADDISONS SUB L14 P3 PLATS, W C R 20/375 62.37 IRREG",
+    "proposal": "Esam Vinnie Shokrie requests Hardship Relief TO add a C-Store with SDM-SDD and cellular store with repair to a Retail Store building in a R2 Zone (Two-Family Residential District). This case is appealed because C-Store with SDM-SDD and cellular store with repair to a Retail Store building not allowed R2 (Two-Family Residential District). Also, the Board of Zoning Appeals shall hold a public hearing to determine whether all reasonable economic use has been prevented as a result of final action on the application. The Board may adopt any legally available incentive or measure that is reasonably necessary to offset any denial of reasonable economic use, and may condition such incentives upon approval of specific development plans. (Sections Hardship Relief Petitions: 50-4-151. - Deprivation of use of property, 50-4-132 Other Dimensional Variances, General Dimensional Standards and 50-4-121 Approval Criteria.).AP",
+    "bseed_refs": [],
+    "action": "Mr. Weed made a motion to take case under Advisement without fee and without date. Seconded by Ms. Walker",
+    "affirmative_votes": [
+      "Mr. Thomas",
+      "Finn",
+      "Weed",
+      "Ms. Moore",
+      "Walker"
+    ],
+    "affirmative_count": 5,
+    "negative_votes": [
+      "Ms. Teague"
+    ],
+    "negative_count": 1,
+    "abstentions": [],
+    "decision": "ADJOURNED WITHOUT DATE AND WITHOUT FEE",
+    "decision_status": "under_advisement",
+    "confidence": "high",
+    "confidence_note": null
+  },
+  {
+    "case_number": "87-19",
+    "meeting_date": "2020-02-11",
+    "hearing_time": "10:45 a.m.",
+    "council_district": 6,
+    "petitioner": "INTERNATIONAL OUTDOOR",
+    "location": "850 W. Fisher Fwy. Between: 4th and 3rd in a B4 Zone (General Business District)",
+    "legal_description": "N FISHER FWY E 21 FT 6 BLK 67 JONES FARM SUB L1 P184 PLATS, W C R 4/16 21 X 42",
+    "proposal": "International Outdoor requests Hardship Relief TO erect a billboard measuring twenty five feet high by forty feet wide digital display area with an overall height of seventy feet not allowed in a B4 (General Business District) on a 882 square foot lot in B4 Zone (General Business District).This case is appealed because Billboards are not allowed B4 (General Business District). Also, the Board of Zoning Appeals shall hold a public hearing to determine whether all reasonable economic use has been prevented as a result of final action on the application. The Board may adopt any legally available incentive or measure that is reasonably necessary to offset any denial of reasonable economic use, and may condition such incentives upon approval of specific development plans. (Sections Hardship Relief Petitions: 50-4-151. - Deprivation of use of property, 50-4-132 Other Dimensional Variances, General Dimensional Standards and 50-4-121 Approval Criteria.).AP",
+    "bseed_refs": [],
+    "action": "NO ACTION TAKEN DUE TO MORATORIUM.",
+    "affirmative_votes": [],
+    "affirmative_count": 0,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "NO ACTION TAKEN DUE TO MORATORIUM.",
+    "decision_status": "unknown",
+    "confidence": "high",
+    "confidence_note": null
+  }
+]

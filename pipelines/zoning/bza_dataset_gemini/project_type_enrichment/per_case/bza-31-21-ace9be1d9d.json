@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-31-21-ace9be1d9d",
+  "project_type_family": "mixed_use",
+  "project_type_label": "office building and restaurant",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Construction of a new four-story office building and conversion of an existing one-story building into a restaurant.",
+  "evidence": [
+    "develop office spaces in a newly constructed four story building",
+    "existing one story building will be a proposed restaurant without drive-up or drive through facilities"
+  ],
+  "confidence": "high",
+  "alternative_type": "office_or_medical"
+}

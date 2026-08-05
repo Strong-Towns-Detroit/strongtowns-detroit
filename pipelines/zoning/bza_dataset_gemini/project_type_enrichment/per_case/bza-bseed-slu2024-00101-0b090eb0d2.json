@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-bseed-slu2024-00101-0b090eb0d2",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "marijuana processor facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish a marijuana processor facility in an existing 1,140 square foot building.",
+  "evidence": [
+    "Establish a Marijuana Processor Facility (MPF) in an existing 1,140 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

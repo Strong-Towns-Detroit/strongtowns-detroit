@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-89-19-2ba8fd28cf",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "café",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Change the use of a nonconforming marina boathouse to a café.",
+  "evidence": [
+    "change a nonconforming Marina Boathouse",
+    "to a non-conforming Café/Class C"
+  ],
+  "confidence": "high",
+  "alternative_type": "recreation_or_open_space"
+}

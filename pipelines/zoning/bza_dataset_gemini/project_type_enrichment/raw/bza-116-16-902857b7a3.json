@@ -1,0 +1,196 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-116-16-902857b7a3",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Caregiver Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana caregiver center in a unit of an existing building.",
+      "evidence": [
+        "establish a Medical Marihuana Caregiver Center (MMCC) in an approximate 1,078 square foot unit of an existing eight unit"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-5-19-2dc104a2e6",
+      "project_type_family": "mixed_use",
+      "project_type_label": "Mixed Use Development",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 38,
+      "summary": "Construct a new mixed-use development with 38 residential units and a medical office.",
+      "evidence": [
+        "construct a Mixed Use Development with Townhouses (17 units), Multi-Family Dwelling (21 units) and Medical Office (3,000 sq. ft)"
+      ],
+      "confidence": "high",
+      "alternative_type": "housing"
+    },
+    {
+      "case_history_id": "bza-72-18-196a5b43c0",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "Hand Car Wash",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a hand car wash in an existing building.",
+      "evidence": [
+        "establishment of a Motor Vehicle Washing and Steam Cleaning Facility (Hand Car Wash) in an existing 1,220 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-75-18-7d8e616722",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Provisioning Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana provisioning center in an existing building.",
+      "evidence": [
+        "establishment of a Medical Marihuana Provisioning Center Facility (MMPCF) in an existing building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-116-17-28da9b4180",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Caregiver Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana caregiver center in an existing building.",
+      "evidence": [
+        "establish a Medical Marihuana Caregiver Center in an existing 1,140 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-76-18-cbc171d150",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Provisioning Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana provisioning center in an existing building.",
+      "evidence": [
+        "establishment of a Medical Marihuana Provisioning Center Facility (MMPCF) in an existing building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-77-18-95afed9f1e",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Provisioning Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana provisioning center in an existing building.",
+      "evidence": [
+        "establishment of a Medical Marihuana Provisioning Center Facility (MMPCF) in an existing building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-78-18-85c69b7830",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "Office and Storage",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Change a nonconforming sales and service station to an office and storage facility.",
+      "evidence": [
+        "change one nonconforming use (Sales & Service Station Permit #44395 5-15-28) to another non-conforming use (Office & Storage)"
+      ],
+      "confidence": "high",
+      "alternative_type": "office_or_medical"
+    },
+    {
+      "case_history_id": "bza-01-19-6ca8bb24fa",
+      "project_type_family": "mixed_use",
+      "project_type_label": "High Rise Mixed-use Development",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Construct a high-rise mixed-use development with residential, retail, and office spaces.",
+      "evidence": [
+        "construct a 862,503 square foot High Rise Mixed-use Development with Residential structures, Retail and Office"
+      ],
+      "confidence": "high",
+      "alternative_type": "housing"
+    },
+    {
+      "case_history_id": "bza-49-18-7931dced47",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Caregiver Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana caregiver center in an existing building.",
+      "evidence": [
+        "establish a Medical Marihuana Caregiver Center (MMCC) in an existing one-story, 2,226 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-53-18-249a9f612c",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Caregiver Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana caregiver center in an existing building.",
+      "evidence": [
+        "establishment of a Medical Marihuana Caregiver Center (MMCC) in an existing approximate 3,600 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-79-18-d186bad83f",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Caregiver Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana caregiver center.",
+      "evidence": [
+        "establish a Medical Marihuana Caregiver Center (MMCC) at 8052 E. Eight Mile"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    }
+  ]
+}

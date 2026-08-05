@@ -1,0 +1,51 @@
+{
+  "minutes_cases": 496,
+  "with_specific_relief_category": 407,
+  "dimensional_relief_unspecified": 76,
+  "with_case_route": 460,
+  "request_not_stated": 13,
+  "multi_relief": 122,
+  "relief_counts": {
+    "administrative_or_community_appeal": 151,
+    "dimensional_relief_unspecified": 76,
+    "parking_supply": 74,
+    "use_spacing_separation": 62,
+    "setbacks_yards": 57,
+    "nonconforming_use_or_structure": 47,
+    "lot_coverage": 32,
+    "lot_dimensions": 28,
+    "hardship_relief": 20,
+    "height": 19,
+    "open_recreation_space": 15,
+    "request_not_stated": 13,
+    "signs_billboards": 12,
+    "parking_layout": 12,
+    "floor_area_bulk": 11,
+    "screening_landscaping": 10,
+    "multiple_buildings": 7,
+    "fences_walls": 1,
+    "loading": 1
+  },
+  "route_counts": {
+    "dimensional_variance": 286,
+    "administrative_appeal": 150,
+    "nonconforming_review": 39,
+    "hardship_petition": 20,
+    "use_or_spacing_variance": 10
+  },
+  "request_not_stated_occurrence_ids": [
+    "2019-07-23:39-19:1",
+    "2019-08-13:36-19:1",
+    "2019-08-13:39-19:1",
+    "2021-10-12:27-18:1",
+    "2023-03-13:31-22:1",
+    "2024-03-11:4-22:1",
+    "2024-03-11:54-23:1",
+    "2024-03-11:65-33:1",
+    "2025-02-17:1-24:1",
+    "2025-02-24:52-23:1",
+    "2025-07-14:70-24:1",
+    "2026-02-16:53-23:1",
+    "2026-02-16:54-23:1"
+  ]
+}

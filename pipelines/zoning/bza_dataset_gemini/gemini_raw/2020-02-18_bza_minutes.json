@@ -1,0 +1,90 @@
+{
+  "meeting_date": "2020-02-18",
+  "cases": [
+    {
+      "case_number": "105-19",
+      "meeting_date": "2020-02-18",
+      "hearing_time": "9:15 a.m.",
+      "council_district": 6,
+      "petitioner": "511 Design, LLC",
+      "location": "1992, 2000 & 2004 Scotten and 4111 Wolff Between: Wolff and W Vernor R2 Zone (Two-Family Residential Distrcit)",
+      "legal_description": "S WOLFF 24 WOLFFS SUB L8 P35 PLATS, W C R 14/41 30 X 115 SPLIT ON 03/11/2019 WITH 14009537. 14009538., 14009539. INTO 14009537-9",
+      "proposal": "511 Design, LLC request dimensional variances to expand an existing two-building Religious Institution campus by adding a new 4,644 square foot auxiliary building in an R2 Zone (TWO-FAMILY RESIDENTIAL DISTRICT). This case is appealed because The Board of Zoning Appeals shall be authorized to hear dimensional variance requests for matters that are beyond the scope of Buildings and Safety Engineering Department ten percent (10%) administrative adjustments for a variance of the minimum setbacks, for a variance of the loading space provisions of ARTICLE XIV, DIVISION 1, Subdivision D of this Chapter and for a variance of various developmental standards and use regulation requirements; Front setback: 20’ feet required; 8’ feet proposed, Maximum Parking Lot Distance: 100 feet required, 205 feet proposed. (Sections 50-4-132 - Other variances and 50-4-121 Approval Criteria.).AP",
+      "bseed_refs": [
+        "SLU2019-00176"
+      ],
+      "action": "Ms. Walker made a motion to Grant dimensional variances to expand an existing two-building Religious Institution campus by adding a new 4,644 square foot auxiliary building in an R2 Zone (TWO-FAMILY RESIDENTIAL DISTRICT). Seconded by Ms. Moore",
+      "affirmative_votes": [
+        "Mr. Thomas",
+        "Ms. Teague",
+        "Moore",
+        "Walker"
+      ],
+      "affirmative_count": 4,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCES GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted."
+    },
+    {
+      "case_number": "73-19",
+      "meeting_date": "2020-02-18",
+      "hearing_time": "10:00 a.m.",
+      "council_district": 7,
+      "petitioner": "ABDULMALIK ALHARTAKI",
+      "location": "16980 W. Warren Between: Clayburn and Rutland in a B4 Zone (General Business District)",
+      "legal_description": "N WARREN 807 THRU 802 WEST WARREN PARK SUB L50 P6 PLATS, W C R 22/249 125 X 100",
+      "proposal": "Abdulmalik Alhartaki appeals the decision of the Buildings Safety and Engineering and Environmental Department (BSEED SLU2019-00007) which DENIED the site plan for the proposed intensification of the current use Minor Motor Vehicle Repair from three (3) service bays to seven (7) service bays on a 12,500 square foot lot in a 3,670 square foot building in a B4 zone (General Business District). This case is appealed because The Board of Zoning Appeals shall hear and decide appeals from and review any order, requirement, decision, or determination that is made by an administrative official in the administration of this Zoning Ordinance, or any decision made by the Buildings and Safety Engineering Department involving Conditional Uses, Regulated Uses, or Controlled Uses, or any denial of a site plan by the Planning and Development Department; site plan denied; did not meet the site plan requirements (see BSEED letter dated January 22, 2020). (Sections 50-4-101 Jurisdiction Over Appeals of Administrative Decisions and 50-3-151 thru 50-3-187 Approval Criteria.).AP",
+      "bseed_refs": [
+        "SLU2019-00007"
+      ],
+      "action": "Ms. Teague made a motion to take case under Advisement with fee and without date. Seconded by Ms. Walker",
+      "affirmative_votes": [
+        "Mr. Thomas",
+        "Ms. Moore",
+        "Walker",
+        "Teague"
+      ],
+      "affirmative_count": 4,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "ADJOURNED WITHOUT DATE AND WITH FEE",
+      "decision_status": "under_advisement",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted."
+    },
+    {
+      "case_number": "94-19",
+      "meeting_date": "2020-02-18",
+      "hearing_time": "10:45 a.m.",
+      "council_district": 7,
+      "petitioner": "KAZEM JAWAD",
+      "location": "13777 Plymouth Between: Freeland and Schaefer in a M4 Zone (Intensive Industrial District)",
+      "legal_description": "S PLYMOUTH E 90 FT OF W 406 FT A EXCEPT N 33 FT E 340 FT OF W 406 FT BC&D LYG N WLY OF PENN R R LOUD SPUR R/W PLAT OF THE ESTATE OF JOHN KEAL L543 P404 DEEDS, W C R 22/586 78322 SQ FT",
+      "proposal": "Kazem Jawad appeals the decision of the Buildings Safety and Engineering and Environmental Department (BSEED 147-17 effective date August 8, 2019) which DENIED a (re-submission) to add a Junkyard with dismantling to an existing used auto parts facility and used motor vehicle sales lot on a combined 2.39 acre site in a M4 zone (Intensive Industrial District). This case is appealed because the Board of Zoning Appeals shall hear and decide appeals from and review any order, requirement, decision, or determination that is made by an administrative official in the administration of this Zoning Ordinance, or any decision made by the Buildings and Safety Engineering Department involving Conditional Uses, Regulated Uses, or Controlled Uses, or any denial of a site plan by the Planning and Development Department. Also, the establishment, maintenance, location and operation of the proposed Conditional Use will be detrimental, the current use of used auto parts sales does not have a certificate of compliance, business license nor legal building permits and the establishment of the conditional use will impede the normal and orderly development and improvement of the surrounding properties. (Sections 50-12-341 - Junkyards. Setbacks 50-4-132 - Other variances and 50-2-281 Approve Criteria –Conditional Land Use.).AP",
+      "bseed_refs": [
+        "147-17"
+      ],
+      "action": "Ms. Teague made a motion to take case under Advisement with fee and without date. Seconded by Ms. Moore",
+      "affirmative_votes": [
+        "Mr. Thomas",
+        "Ms. Moore",
+        "Walker",
+        "Teague"
+      ],
+      "affirmative_count": 4,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "ADJOURNED WITHOUT DATE AND WITH FEE",
+      "decision_status": "under_advisement",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted."
+    }
+  ],
+  "document_notes": "Meeting adjourned at 11:55 A.M."
+}

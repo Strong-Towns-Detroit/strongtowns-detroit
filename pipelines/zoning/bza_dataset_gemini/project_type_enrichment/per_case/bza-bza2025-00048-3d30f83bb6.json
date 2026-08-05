@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-bza2025-00048-3d30f83bb6",
+  "project_type_family": "housing",
+  "project_type_label": "townhouses",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 25,
+  "summary": "Construct five townhouse structures containing a total of 25 dwelling units on a vacant site.",
+  "evidence": [
+    "construction of five separate townhouse structures",
+    "contained a total of 25 dwelling units",
+    "vacant site"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bseed-slu2019-00063-6cba26170a",
+  "project_type_family": "institutional_or_civic",
+  "project_type_label": "pre-release adjustment center",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "A community association appeals the approval to construct a new building for a pre-release adjustment center.",
+  "evidence": [
+    "construct a 10,775 square foot building",
+    "establish a Pre-Release Adjustment Center"
+  ],
+  "confidence": "high",
+  "alternative_type": "housing"
+}

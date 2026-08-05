@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-74-21-4b77c7f140",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "towing service storage yard",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The applicant is appealing a denial to expand an existing towing storage yard onto adjacent parcels, significantly increasing its vehicle capacity.",
+  "evidence": [
+    "expand an existing Towing Service Storage Yard",
+    "increase the storage capacity from 100 to 350 cars"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

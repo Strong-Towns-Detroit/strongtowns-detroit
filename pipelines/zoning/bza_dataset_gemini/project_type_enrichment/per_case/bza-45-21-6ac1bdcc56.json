@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-45-21-6ac1bdcc56",
+  "project_type_family": "housing",
+  "project_type_label": "two-family dwellings",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 4,
+  "summary": "Dimensional variances requested to construct two attached two-family dwellings.",
+  "evidence": [
+    "development of (2) Two story attached 2 family Dwellings",
+    "deficient front setback"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

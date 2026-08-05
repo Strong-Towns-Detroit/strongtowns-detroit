@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-10-25-d76fac624f",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "restaurant with drive-through",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Change of nonconforming use from a bank with a drive-through to a standard restaurant with a drive-through.",
+  "evidence": [
+    "change from one nonconforming use (Bank with drive thru) to another nonconforming use (Standard Restaurant with drive thru)"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

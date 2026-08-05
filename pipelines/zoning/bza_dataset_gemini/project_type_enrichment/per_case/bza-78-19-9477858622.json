@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-78-19-9477858622",
+  "project_type_family": "mixed_use",
+  "project_type_label": "Neighborhood center and residential units",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 2,
+  "summary": "Establish a nonprofit neighborhood center on the first floor of a building with two residential units on the second floor.",
+  "evidence": [
+    "establish a Nonprofit Neighborhood Center on the first floor",
+    "two residential units on the second floor"
+  ],
+  "confidence": "high",
+  "alternative_type": "institutional_or_civic"
+}

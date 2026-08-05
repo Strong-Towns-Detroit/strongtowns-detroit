@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-19-21-15219721d5",
+  "project_type_family": "housing",
+  "project_type_label": "townhouse",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 4,
+  "summary": "The petitioner requests dimensional variances to construct a four-unit townhouse on vacant land.",
+  "evidence": [
+    "construct a four unit, 4,260 square foot Townhouse on an existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

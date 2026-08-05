@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-08-23-aa01dd18f0",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "restaurant with alcohol sales",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishing a standard restaurant with alcohol sales in an existing one-story building, requiring a parking variance.",
+  "evidence": [
+    "establish a Standard Restaurant with the sale of beer or alcoholic liquor",
+    "existing one story approximately 4,650 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}
