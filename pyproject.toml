@@ -2,16 +2,29 @@
 name = "strongtowns-detroit"
 version = "0.1.0"
 requires-python = ">=3.12"
+dependencies = [
+    "osmnx",
+    "geopandas",
+    "networkx",
+    "shapely",
+    "scikit-learn",
+    "matplotlib",
+    "pandas",
+    "numpy",
+]
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-mock", "python-dotenv"]
+minutes = ["google-genai", "pydantic"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "pipelines/isochrones/tests"]
 pythonpath = [
     "src",
     "pipelines/parcel-data",
     "pipelines/housingDataAnalysis/src",
     "pipelines/housingDataAnalysis/street_simplification",
     "pipelines/zoning",
+    "pipelines/legislative-district",
+    "pipelines/isochrones",
 ]
