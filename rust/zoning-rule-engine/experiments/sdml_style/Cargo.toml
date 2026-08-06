@@ -1,0 +1,9 @@
+[package]
+name = "sdml-style-experiment"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+zoning-rule-engine = { path = "../.." }
+

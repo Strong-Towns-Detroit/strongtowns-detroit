@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-72-19-be782cacfd",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "auto repair shop",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner requests permission to establish a minor auto repair shop in an existing building, seeking parking variances.",
+  "evidence": [
+    "establish a Minor Auto Repair",
+    "in an existing 2,370 sq. ft. building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

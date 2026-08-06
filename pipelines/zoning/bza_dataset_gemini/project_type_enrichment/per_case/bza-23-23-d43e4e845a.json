@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-23-23-d43e4e845a",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "small distillery or winery",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Proposal to establish a small distillery or winery in an existing building.",
+  "evidence": [
+    "establish a Small Distillery or Winery",
+    "in an existing 3,322 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

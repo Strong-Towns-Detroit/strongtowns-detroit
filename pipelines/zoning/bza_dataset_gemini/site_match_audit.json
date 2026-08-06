@@ -1,0 +1,17 @@
+{
+  "case_histories": 405,
+  "histories_with_extracted_address": 400,
+  "histories_with_any_parcel_match": 397,
+  "application_match_share": 0.980246913580247,
+  "address_candidates": 626,
+  "matched_address_candidates": 485,
+  "unmatched_address_candidates": 141,
+  "matched_multiple_parcels": 8,
+  "histories_without_extracted_address": [
+    "bza-1-24-938659c379",
+    "bza-31-22-0443674bdf",
+    "bza-52-23-a7b9086fdb",
+    "bza-70-24-782fb1ee01",
+    "bza-bseed-slu2022-00042-fcd0ff29b5"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-29-20-787a86c963",
+  "project_type_family": "office_or_medical",
+  "project_type_label": "Office",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Request to change a nonconforming dry cleaners to a nonconforming office within an existing building.",
+  "evidence": [
+    "change from a nonconforming Dry Cleaners to a nonconforming Office",
+    "within an existing 4,028 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

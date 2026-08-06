@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-75-22-e3fe10778e",
+  "project_type_family": "signage",
+  "project_type_label": "hotel sign",
+  "proposed_action": "signage_installation",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Install a sign for a new seven-story hotel.",
+  "evidence": [
+    "proposed sign at a new seven-story, 142,928 square foot, 227-room hotel"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

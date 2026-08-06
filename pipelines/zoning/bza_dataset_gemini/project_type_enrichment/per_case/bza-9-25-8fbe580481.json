@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-9-25-8fbe580481",
+  "project_type_family": "housing",
+  "project_type_label": "residential two-car garage",
+  "proposed_action": "new_construction",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner proposes to construct a two-car garage as an accessory building in a residential zone.",
+  "evidence": [
+    "construction of a Two-Car Garage",
+    "Accessory buildings or structures in rear setback"
+  ],
+  "confidence": "high",
+  "alternative_type": "parking_only"
+}

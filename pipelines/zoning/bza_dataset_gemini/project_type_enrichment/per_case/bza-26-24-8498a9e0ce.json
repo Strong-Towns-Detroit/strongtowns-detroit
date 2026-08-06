@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-26-24-8498a9e0ce",
+  "project_type_family": "housing",
+  "project_type_label": "multi-family dwelling complex",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 100,
+  "summary": "The petitioner proposes to convert a former school building into a 100-unit multi-family residential complex.",
+  "evidence": [
+    "convert a former school building site though adaptive reuse",
+    "100-unit Multi-family Dwelling complex"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-29-23-1e6ae3ddb9",
+  "project_type_family": "housing",
+  "project_type_label": "senior apartment building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 35,
+  "summary": "Proposal to construct a four-story, 35-unit senior living apartment building with an accessory parking area and community room.",
+  "evidence": [
+    "construct a four-story, 32,111 square-foot building",
+    "establish a Multiple-Family dwelling (35 senior living units)"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

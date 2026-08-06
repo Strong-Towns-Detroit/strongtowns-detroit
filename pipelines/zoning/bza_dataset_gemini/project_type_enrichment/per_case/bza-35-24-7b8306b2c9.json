@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-35-24-7b8306b2c9",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "Marijuana Grower Facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishing a marijuana grower facility in an existing 8,677 square foot building with zero parking spaces provided.",
+  "evidence": [
+    "establish a Marijuana Grower Facility (MGF) in an existing 8,677 square foot building",
+    "0 provided, 8 parking spaces deficient"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

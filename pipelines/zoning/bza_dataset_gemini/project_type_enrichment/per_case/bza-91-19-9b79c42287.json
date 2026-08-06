@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-91-19-9b79c42287",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "Auto repair facility and used car lot",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "Proposal to establish an auto repair facility and used car sales lot in an existing building, noted for lacking required catch basins and parking lot lighting.",
+  "evidence": [
+    "establishment of a Major Motor Vehicle Repair Facility with Used Motor Vehicle Sales Lot",
+    "no catch basins are provided",
+    "no lighting is provided in the parking lot"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

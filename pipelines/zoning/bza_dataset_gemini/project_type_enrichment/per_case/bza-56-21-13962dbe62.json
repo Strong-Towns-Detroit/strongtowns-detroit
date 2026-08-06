@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-56-21-13962dbe62",
+  "project_type_family": "housing",
+  "project_type_label": "townhouses",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 4,
+  "summary": "Dimensional variances requested to build a four-unit townhouse development with detached garages on vacant land.",
+  "evidence": [
+    "construct a four-unit, three-story 4,800 square foot Townhouse development",
+    "Deficient front setback: 4’ provided",
+    "four spaces proposed, deficient two spaces"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,24 @@
+RuleModule: DetroitRegulatedUseGrantLapse
+ImportOntology: DetroitRegulatedUseGrants
+Provision: LapseWithoutPermit
+  PropositionId: detroit:article-iii:section-50-3-386:lapse
+  SourceSpan: lapse | In any case where a permit for a regulated use has not been obtained within six months after the granting of said use, the grant shall be null and void without further action
+  AppliesWhen: (!exists permit: permitUnder(permit, grant) && obtainedAt(permit) <= addCalendarMonths(grantedAt(grant), 6) && !ValidExtension(grant))
+  StateTransition: grant -> NullAndVoid at addCalendarMonths(grantedAt(grant), 6)
+Provision: OneBoundedExtension
+  PropositionId: detroit:article-iii:section-50-3-386:extension
+  SourceSpan: exception | except, that the Buildings, Safety Engineering, and Environmental Department or, where applicable, the Board of Zoning Appeals may extend, without further public hearing, said six-month deadline for no more than 12 months beyond the expiration date of the original six months.
+  AppliesWhen: (extensionOf(extension, grant) && authorizedBy(extension, BSEED || DetroitBZA) && extendedUntil(extension) <= addCalendarMonths(grantedAt(grant), 18) && !ExtensionBar(grant))
+  Power: authorize ValidExtension(grant)
+Provision: ExtensionBar
+  PropositionId: detroit:article-iii:section-50-3-386:notwithstanding
+  SourceSpan: precedence | Notwithstanding the preceding, no such extension may be considered in the case of a land use that was unlawfully established or expanded and that was subsequently legalized as a result of a regulated land use hearing.
+  Overrides: OneBoundedExtension
+  AppliesWhen: (grantFor(grant, use) && unlawfullyEstablishedOrExpanded(use) && legalizedByRegulatedUseHearing(use))
+  Prohibition: ValidExtension(grant)
+Provision: NoAdditionalExtension
+  PropositionId: detroit:article-iii:section-50-3-386:no-additional-extension
+  SourceSpan: renewal | Where this extension expires, no additional extension shall be authorized, unless a new application has been filed and a further public hearing has been held.
+  AppliesWhen: (expired(extension) && extensionOf(extension, grant))
+  Prohibition: AdditionalExtension(grant)
+  AlternativeProcedure: ProceedAsNewApplication(use) when (newApplicationFor(application, use) && hearingFor(hearing, application))

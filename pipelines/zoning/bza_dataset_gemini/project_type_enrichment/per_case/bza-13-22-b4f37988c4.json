@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-13-22-b4f37988c4",
+  "project_type_family": "office_or_medical",
+  "project_type_label": "employee recruitment center and parking lot",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Establish an employee recruitment center in an existing building and construct a 19-space accessory parking lot on adjacent vacant land.",
+  "evidence": [
+    "establish an Employee Recruitment Center",
+    "existing 13,600 square foot building",
+    "19-space Accessory Parking Lot on existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": "parking_only"
+}

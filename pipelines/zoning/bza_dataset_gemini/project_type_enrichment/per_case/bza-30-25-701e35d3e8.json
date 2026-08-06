@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-30-25-701e35d3e8",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Develop a 24-space accessory parking lot to serve nearby office buildings.",
+  "evidence": [
+    "develop a 24 (twenty-four) space accessory parking lot",
+    "serve three Detroit-based businesses"
+  ],
+  "confidence": "high",
+  "alternative_type": "office_or_medical"
+}

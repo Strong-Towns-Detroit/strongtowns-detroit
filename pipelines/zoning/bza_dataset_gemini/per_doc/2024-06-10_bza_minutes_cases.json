@@ -1,0 +1,92 @@
+[
+  {
+    "case_number": "33-24",
+    "meeting_date": "2024-06-10",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 6,
+    "petitioner": "BRETT BABIN AND VIVEKA MISHRA",
+    "location": "2012 WABASH, between Dalzelle and Marantette in a R2 zone (Two Family Residential District).",
+    "legal_description": "E WABASH N 25 FT 54 SUB OF PT OF O L NO 1 LAFFERTY FARM L1 P193 PLATS, W C R 8/21 25 X 130 SPLIT/COMBINED ON 02/17/2023 FROM 08008718",
+    "proposal": "Brett Babin and Viveka Mishra request dimensional variances to construct a new three-story single-family dwelling at 2014 Wabash aka 2012 Wabash. The subject site is within an R2 Two-Family Residential District and is a by right use. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. deficient lot area prior to issuance of a building permit (5,000 square feet required, 3,250 square feet proposed; 1,750 square feet and deficient lot area and deficient lot width 50 feet width required, 25 feet proposed 25 feet deficient lot width. (Sections 50-4-131 (6) Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+    "bseed_refs": [],
+    "action": "Mr. Roberts made a motion to Grant dimensional variances construct a new three-story single-family dwelling at 2012 Wabash. Seconded by Board Member Boman.",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Roberts",
+      "Thomas",
+      "Boman",
+      "Sherman",
+      "Mrs. Moore",
+      "Hill-Knott"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  },
+  {
+    "case_number": "30-24",
+    "meeting_date": "2024-06-10",
+    "hearing_time": "9:30 a.m.",
+    "council_district": 3,
+    "petitioner": "CROWN ENTERPRISE",
+    "location": "8600 E EIGHT MILE RD., between Conner and Hoover in an M4 Zone - (Intensive and Industrial District)",
+    "legal_description": "upon request",
+    "proposal": "Crown Enterprise request dimensional variances for a proposed outdoor storage yard. This case is BY-RIGHT and was Plan Reviewed. The subject site is within an M4 Intensive Industrial District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks; Per 50-4-129 of zoning ordinance, Board of Zoning Appeals hearing (BZA) is required due to proposed outdoor storage yard within 150' of residential zone district (50-12-344 [3]). (Sections 50-4-131 (6) Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+    "bseed_refs": [],
+    "action": "Mr. Boman made a motion to Deny dimensional variances for a proposed outdoor storage yard. Seconded by Board Member Hill-Knott.",
+    "affirmative_votes": [
+      "Mr. Thomas",
+      "Sherman",
+      "Boman",
+      "Weed",
+      "Roberts",
+      "Mrs. Moore",
+      "Hill-Knott"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCES DENIED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": null
+  },
+  {
+    "case_number": "31-24",
+    "meeting_date": "2024-06-10",
+    "hearing_time": null,
+    "council_district": 3,
+    "petitioner": "ADNAN GOBAH",
+    "location": "2929 CARPENTER, between Mitchell and Jos. Campau in a B4 zone (General Business District).",
+    "legal_description": "N CARPENTER 112 THRU 115 R A NEWMANS SUB L33 P96 PLATS, W C R 9/131 120 X 100;",
+    "proposal": "Adnan Gobah request dimensional variances to establish a Banquet Hall in an existing 12,000 square foot building. APPROVED w/Conditions in BSEED Case No: SLU2021 \u2013 00251; Decision Date: January 23, 2024 \u2013 Effective Date: February 6, 2024. The subject site is within an B4 General Business District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Per to issuance of a building permit, the applicant shall obtain a variance from the Board of Zoning Appeals for the following deficiency: a) Off-Street Parking (Section 50-14-50): 120 parking spaces required; 20 parking spaces proposed; 100 spaces deficient. (50-4-131 [1]). (Sections 50-4-131 (1) Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+    "bseed_refs": [
+      "SLU2021 - 00251"
+    ],
+    "action": "Mrs. Moore made a motion to Reconsider her vote for Case No. 31-24. Seconded by Board Member Sherman. RECONSIDERATION MOTION PASSES. Mrs. Moore made a motion to Grant dimensional parking variance to establish a Banquet Hall in an existing 12,000 square foot building. APPROVED w/Conditions in BSEED Case No: SLU2021 \u2013 00251. Seconded by Board Member Boman",
+    "affirmative_votes": [
+      "Mr. Thomas",
+      "Sherman",
+      "Boman",
+      "Weed",
+      "Mrs. Moore"
+    ],
+    "affirmative_count": 5,
+    "negative_votes": [
+      "Mr. Roberts",
+      "Mrs. Hill-Knott"
+    ],
+    "negative_count": 2,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "Hearing time not explicitly listed for this reconsideration case."
+  }
+]

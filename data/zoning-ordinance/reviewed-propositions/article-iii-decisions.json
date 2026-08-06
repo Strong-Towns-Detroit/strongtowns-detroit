@@ -1,0 +1,32 @@
+{
+  "materialDecisions": [
+    {
+      "architecture": {
+        "executableShape": "Catala-inspired scope/base-definition/exceptions",
+        "serialization": "project JSON; no XML migration",
+        "sourceRuleRelationship": "LegalRuleML-inspired source/interpretation/rule trace"
+      },
+      "decision": "project_explicit_minimum_public_hearing_notice_periods",
+      "propositionIds": [
+        "detroit:article-iii:block:79:proposition:1",
+        "detroit:article-iii:block:81:proposition:1",
+        "detroit:article-iii:block:83:proposition:1",
+        "detroit:article-iii:block:85:proposition:1"
+      ],
+      "rationale": "The deadline line and its supporting introduction together state actor, event, forum, minimum period, value, and unit.",
+      "sourceSection": "50-3-10"
+    }
+  ],
+  "policy": {
+    "default": "non_executable",
+    "excludedCategories": [
+      "official_discretion_or_judgment",
+      "context_or_exception_requires_modeling",
+      "external_or_cross_referenced_rule_dependency",
+      "no_complete_mandatory_operator",
+      "procedure_not_yet_supported_by_executable_dsl"
+    ],
+    "executableCriterion": "The deadline line and its verified introductory source together state actor, event, forum, comparison, numeric value, and unit; the effect is supported by the procedural-deadline DSL."
+  },
+  "schemaVersion": "detroit-article-iii-semantic-decisions-v1"
+}

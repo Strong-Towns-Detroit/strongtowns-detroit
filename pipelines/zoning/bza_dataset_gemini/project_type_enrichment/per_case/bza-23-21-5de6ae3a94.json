@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-23-21-5de6ae3a94",
+  "project_type_family": "unclear",
+  "project_type_label": "unclear",
+  "proposed_action": "unclear",
+  "intensity_direction": "unclear_or_not_applicable",
+  "urban_form_orientation": "unclear_or_not_applicable",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Appeal regarding the expiration of a previously approved Special Land Use permit in an intensive industrial district.",
+  "evidence": [
+    "appeals BSEED’s decision to NOT consider an extension",
+    "department issued a Special Land Use approval decision"
+  ],
+  "confidence": "low",
+  "alternative_type": "industrial_or_logistics"
+}

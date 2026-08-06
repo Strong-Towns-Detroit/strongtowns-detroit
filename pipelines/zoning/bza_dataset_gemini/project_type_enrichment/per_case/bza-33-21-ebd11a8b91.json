@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-33-21-ebd11a8b91",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "marijuana retail and provisioning center",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishment of a marijuana retail and provisioning center facility.",
+  "evidence": [
+    "establishment of a Marijuana retail/provisioning center facility"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

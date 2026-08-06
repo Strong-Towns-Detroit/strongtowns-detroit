@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-06-17-1938c13e88",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "Medical Marijuana Caregiver Center",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish a medical marijuana caregiver center in an existing 3,600 square foot building.",
+  "evidence": [
+    "establish a Medical Marijuana Caregiver Center (MMCC)",
+    "in an existing approximate 3,600 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

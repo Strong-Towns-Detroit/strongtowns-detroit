@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2340">
+  <title>Strong Towns Detroit — Data Graphics System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-type-preset="brand-safe">
+  <header class="masthead">
+    <a class="identity" href="#top" aria-label="Strong Towns Detroit data graphics">
+      <span class="provisional-name">Strong Towns Detroit</span>
+      <span class="system-name">Data graphics · awaiting official lockup</span>
+    </a>
+    <nav aria-label="Page sections">
+      <a href="#principles">Principles</a>
+      <a href="#examples">Examples</a>
+      <a href="#tokens">Tokens</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-meta">
+        <p class="eyebrow">Working visual standard · v0.2</p>
+        <label class="preset-control">
+          <span>Typography</span>
+          <select id="type-preset" aria-label="Typography preset">
+            <option value="brand-safe">Brand-guide fallback</option>
+            <option value="open-editorial">Open-source editorial</option>
+          </select>
+        </label>
+      </div>
+      <h1>Make the argument visible.</h1>
+      <p class="dek">An HTML-first system for evidence about Detroit’s land, mobility,
+        neighborhoods, and public wealth.</p>
+      <div class="hero-rule" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <section id="principles" class="section principles">
+      <div class="section-heading">
+        <p class="eyebrow">01 · Editorial posture</p>
+        <h2>Clear enough to trust.<br>Bold enough to remember.</h2>
+      </div>
+      <div class="principle-grid">
+        <article><b>Lead with the finding</b><p>Titles state what the evidence shows. A topic is not a headline.</p></article>
+        <article><b>Show the denominator</b><p>Use units, baselines, geography, time period, and uncertainty.</p></article>
+        <article><b>Annotate the evidence</b><p>Direct labels and short callouts beat detached legends and decorative copy.</p></article>
+        <article><b>Use emphasis sparingly</b><p>Yellow identifies the argument. Most data should remain navy, blue, or neutral.</p></article>
+        <article><b>Never rely on color alone</b><p>Pair color with labels, stroke styles, symbols, or patterns.</p></article>
+        <article><b>Keep provenance attached</b><p>Source, method, author, and update date travel with every graphic.</p></article>
+      </div>
+    </section>
+
+    <section id="examples" class="section examples">
+      <div class="section-heading horizontal">
+        <div>
+          <p class="eyebrow">02 · Reference compositions</p>
+          <h2>One system, different questions.</h2>
+        </div>
+        <p>Illustrative data only. The examples demonstrate hierarchy and behavior, not forum claims.</p>
+      </div>
+
+      <article class="chart-card chart-wide">
+        <header class="chart-header">
+          <p class="chart-kicker">Access · travel time</p>
+          <h3>More time opens the city—but not evenly.</h3>
+          <p>Illustrative reachable area from one origin, by travel-time budget.</p>
+        </header>
+        <div id="bar-chart" class="chart" role="img"
+             aria-label="Bar chart showing reachable area increasing from 24 square kilometers at five minutes to 343 at fifteen minutes."></div>
+        <footer class="chart-footer">
+          <span><b>Source:</b> Demonstration data</span>
+          <span><b>Method:</b> Reachable street edges, local projection</span>
+          <span>Updated July 2026</span>
+        </footer>
+      </article>
+
+      <div class="chart-grid">
+        <article class="chart-card">
+          <header class="chart-header">
+            <p class="chart-kicker">Land · composition</p>
+            <h3>A small share can carry an outsized burden.</h3>
+            <p>Use a focused color for the category the text is actually about.</p>
+          </header>
+          <div id="stack-chart" class="chart" role="img"
+               aria-label="Stacked bar demonstration with four directly labeled land categories."></div>
+          <footer class="chart-footer"><span><b>Source:</b> Demonstration data</span><span>Illustrative</span></footer>
+        </article>
+
+        <article class="chart-card chart-dark">
+          <header class="chart-header">
+            <p class="chart-kicker">Change · indexed trend</p>
+            <h3>Comparison belongs in context.</h3>
+            <p>Direct labels replace a legend; dash and symbol preserve meaning without color.</p>
+          </header>
+          <div id="line-chart" class="chart" role="img"
+               aria-label="Two-line demonstration comparing an emphasized Detroit series with a contextual comparison series."></div>
+          <footer class="chart-footer"><span><b>Source:</b> Demonstration data</span><span>Index: 2000 = 100</span></footer>
+        </article>
+      </div>
+
+      <article class="chart-card metric-strip" aria-label="Demonstration key figures">
+        <div><span class="metric">40<sup>%</sup></span><p>Large numerals carry one finding, not a dashboard’s worth.</p></div>
+        <div><span class="metric">15<sup>min</sup></span><p>Units stay attached to the number and remain visually subordinate.</p></div>
+        <div><span class="metric">3.2<sup>×</sup></span><p>Every ratio names its baseline in the adjacent text.</p></div>
+      </article>
+    </section>
+
+    <section id="tokens" class="section tokens">
+      <div class="section-heading">
+        <p class="eyebrow">03 · System tokens</p>
+        <h2>Strong Towns first.<br>Detroit in the accents.</h2>
+      </div>
+      <div class="token-layout">
+        <div>
+          <h3>Core palette</h3>
+          <div class="swatches">
+            <div class="swatch navy"><b>Navy</b><code>#0C2340</code><span>Structure, type, primary data</span></div>
+            <div class="swatch yellow"><b>Yellow</b><code>#FFB549</code><span>Finding, selected series</span></div>
+            <div class="swatch blue"><b>Light blue</b><code>#A7C6ED</code><span>Comparison, range, context</span></div>
+            <div class="swatch blue-access"><b>Accessible blue</b><code>#5790DB</code><span>Blue text on light fields</span></div>
+          </div>
+        </div>
+        <div>
+          <h3>Detroit extension</h3>
+          <div class="swatches">
+            <div class="swatch detroit-red"><b>Detroit red</b><code>#C83A3A</code><span>Alerts, negative divergence</span></div>
+            <div class="swatch detroit-gold"><b>Detroit gold</b><code>#E8A92F</code><span>Secondary civic accent</span></div>
+            <div class="swatch paper"><b>Warm paper</b><code>#FFF8ED</code><span>Editorial field, print background</span></div>
+            <div class="swatch ink-muted"><b>Muted ink</b><code>#526276</code><span>Notes, axes, secondary copy</span></div>
+          </div>
+          <p class="usage-note">The flag colors create local identity through small rules,
+            category markers, section dividers, and the Detroit mark. They do not replace
+            the parent palette or turn every chart into four-color heraldry.</p>
+        </div>
+      </div>
+      <div class="type-comparison">
+        <article>
+          <p class="eyebrow">Brand-guide fallback</p>
+          <div class="type-sample brand-safe-sample">
+            <h3>Detroit is built through choices.</h3>
+            <p>Georgia carries editorial findings and body copy. Arial handles labels,
+              measurements, notes, and interface elements.</p>
+            <span>AREA REACHED · 15 MINUTES · 343 KM²</span>
+          </div>
+        </article>
+        <article>
+          <p class="eyebrow">Open-source editorial</p>
+          <div class="type-sample open-editorial-sample">
+            <h3>Detroit is built through choices.</h3>
+            <p>Fraunces carries display findings, Source Serif 4 handles reading, and
+              Source Sans 3 handles analytical notation.</p>
+            <span>AREA REACHED · 15 MINUTES · 343 KM²</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p><strong>Strong Towns Detroit data graphics</strong> · Working system for analytical and educational material.</p>
+    <button type="button" onclick="window.print()">Print / save PDF</button>
+  </footer>
+  <script src="config.js"></script>
+  <script src="charts.js"></script>
+</body>
+</html>

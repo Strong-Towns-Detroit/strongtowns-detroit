@@ -1,0 +1,102 @@
+{
+  "meeting_date": "2024-07-08",
+  "cases": [
+    {
+      "case_number": "41-24",
+      "meeting_date": "2024-07-08",
+      "hearing_time": null,
+      "council_district": null,
+      "petitioner": "DPSCD",
+      "location": "9026 WOODWARD, between Owen Josephine in a R5 zone (Medium Density Residential District).",
+      "legal_description": "E WOODWARD 1 THRU 13 56 THRU 64 75 THRU 80 EXC JOHN R AS OP ALSO E 25 FT OF 74 AND VAC JOSEPHINE AVE & ALLEYS ADJ FRAZER & MC LAUGHLINS L14 P29 PLATS, W C R 1/117 ALSO 70 THRU 58 AND W 3 FT OF 57 AND VAC N S ALLEY ADJ OWEN & BARTLETTS SUB L15 P52 PLATS, W C R 1/119 251.5 IRREG",
+      "proposal": "DPSCD request dimensional variances for Expansion of a Surface Parking Lot to establish 121 Accessory Parking Spaces for an existing High School in BSEED Case No: SLU2024-00002; Decision Date: May 10, 2024 Effective Date: May 24, 2024. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks; Per Section 50-13-182 of the Zoning Ordinance, that the required waivers shall be obtained from the Board of Zoning Appeals for the accessory parking lot prior to seeking building permits. Specifically, they are: a. Excessive Parking Lot Size: 8,500’ square feet allowed, 56,871 square feet proposed, 48,371 square feet excessive and; b. Excessive Lot Width: 70’ feet maximum lot width allowed, 142’ feet lot width proposed, 72’ feet width excessive. (Section 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+      "bseed_refs": [
+        "SLU2024-00002"
+      ],
+      "action": "Mr. Watson made a motion to Dismiss this case based on the information that schools are exempt from the zoning process. Per MCL 380.1263(3) and Act 306 of 1937, the “Construction of School Buildings Act,“ The Detroit Public Schools Community District (DPSCD) is considered exempt from local zoning and land use laws. This includes use, density, and dimensional requirements. State law “outright preempts” the applicability of such local laws to the DPSCD. Seconded by Board Member Sherman.",
+      "affirmative_votes": [
+        "Mr. Roberts",
+        "Thomas",
+        "Boman",
+        "Sherman",
+        "Watson",
+        "Osbern",
+        "Mrs. Hill-Knott",
+        "Moore"
+      ],
+      "affirmative_count": 8,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "CASE DISMISSED",
+      "decision_status": "dismissed",
+      "confidence": "high",
+      "confidence_note": null
+    },
+    {
+      "case_number": "40-24",
+      "meeting_date": "2024-07-08",
+      "hearing_time": "9:30 a.m.",
+      "council_district": null,
+      "petitioner": "LADONNA REYNOLDS/GOOD TIMES ON THE AVE",
+      "location": "19416 LIVERNOIS, between Santa Clara and Santa Maria in a B2 zone (Local Business and Residential District).",
+      "legal_description": "E LIVERNOIS 214 EXC LIVERNOIS AVE AS WD SHERWOOD FOREST SUB L39 P11 PLATS, W C R 2/148 40 X 73.43A",
+      "proposal": "Ladonna Reynolds/Good Times on the Ave., request dimensional variances Add Retail (Cigar Bar) to the second floor of a Standard Restaurant with the sale of beer or alcoholic liquor for consumption on the premises on the first floor APPROVEDW/ Conditions in BSEED Case No: BLD2024-00665. The subject site is within an B2 Local Business and Residential District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of the minimum setbacks; Deficient parking, 16 parking spaces required, 7 parking spaces provided through a shared parking agreement and 9 parking spaces deficient. (Section 50-4-131 (1)- Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+      "bseed_refs": [
+        "BLD2024-00665"
+      ],
+      "action": "Mr. Boman made a motion to Grant dimensional variances Add Retail (Cigar Bar) to the second floor of a Standard Restaurant with the sale of beer or alcoholic liquor for consumption on the premises on the first floor APPROVEDW/ Conditions in BSEED Case No: BLD2024-00665. Seconded by Board Member Sherman.",
+      "affirmative_votes": [
+        "Mr. Osbern",
+        "Boman",
+        "Sherman",
+        "Watson"
+      ],
+      "affirmative_count": 4,
+      "negative_votes": [
+        "Mr. Roberts",
+        "Thomas",
+        "Mrs. Moore"
+      ],
+      "negative_count": 3,
+      "abstentions": [
+        "Mrs. Hill-Knott"
+      ],
+      "decision": "VARIANCE REQUEST DENIED DUE TO VOTE COUNT",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": null
+    },
+    {
+      "case_number": "15-24",
+      "meeting_date": "2024-07-08",
+      "hearing_time": "9:45 a.m.",
+      "council_district": null,
+      "petitioner": "A&A ROSEDALE, LLC",
+      "location": "19400 GRAND RIVER, between Outer Drive and Bretton in a B4 zone (General Business District).",
+      "legal_description": "North Grand River 2144 thru 2141 Rosedale Park Subdivision No. 3 L41 P15 Plats WCR 22/440 80x100",
+      "proposal": "A&A Rosedale, LLC request dimensional and spacing variances to expand an existing Light Duty Vehicle Service Establishment to include off street parking on the same zoning lot for a total of approximately 0.46 acres. The subject site is within a B4 General Business District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED’s 10% administrative adjustments for a variance of minimum setbacks. Spacing from another light duty vehicle service establishment (19541 W Grand River), opaque screen wall, right of way screening, interior landscaping and parking design standard. (Section 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria). AP",
+      "bseed_refs": [],
+      "action": "Mr. Roberts made a motion to Grant dimensional and spacing variances to expand an existing Light Duty Vehicle Service Establishment to include off street parking on the same zoning lot for a total of approximately 0.46 acres. The subject site is within a B4 General Business District. Seconded by Board Member Osbern",
+      "affirmative_votes": [
+        "Mr. Thomas",
+        "Sherman",
+        "Boman",
+        "Roberts",
+        "Watson",
+        "Osbern",
+        "Mrs. Hill-Knott",
+        "Moore"
+      ],
+      "affirmative_count": 8,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL AND LOCATIONAL VARIANCES GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": null
+    }
+  ],
+  "document_notes": "Three cases were heard. Case 41-24 was dismissed due to DPSCD exemption from local zoning. Case 40-24 was denied due to vote count. Case 15-24 was granted."
+}

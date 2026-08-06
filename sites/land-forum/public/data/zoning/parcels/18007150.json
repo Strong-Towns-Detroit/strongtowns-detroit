@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "zoning-parcel-v1",
+  "parcel": {
+    "id": "18007150.",
+    "address": "1573 LIVERNOIS",
+    "district": "R2",
+    "recordedUse": "SINGLE FAMILY",
+    "scenario": "one_family_dwelling",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -83.10872811615658,
+            42.31291269445795
+          ],
+          [
+            -83.10871574043668,
+            42.31291802171735
+          ],
+          [
+            -83.10829770143039,
+            42.31308457635533
+          ],
+          [
+            -83.108285325658,
+            42.31308990266756
+          ],
+          [
+            -83.10823280262095,
+            42.313017382737
+          ],
+          [
+            -83.10824516126713,
+            42.313012966542026
+          ],
+          [
+            -83.1086632170447,
+            42.31284550198604
+          ],
+          [
+            -83.10867557562636,
+            42.31284108574417
+          ],
+          [
+            -83.10872811615658,
+            42.31291269445795
+          ]
+        ]
+      ]
+    }
+  },
+  "buildings": [
+    {
+      "id": 207762,
+      "status": "Current",
+      "role": "principal_by_largest_current_footprint",
+      "areaSqft": 1082.23,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -83.10831774700169,
+              42.313057462002845
+            ],
+            [
+              -83.10830166800179,
+              42.313035009002746
+            ],
+            [
+              -83.10829155100181,
+              42.313039000002874
+            ],
+            [
+              -83.10826435400179,
+              42.31300102300275
+            ],
+            [
+              -83.10827447000179,
+              42.31299703200282
+            ],
+            [
+              -83.1082723270018,
+              42.31299404000275
+            ],
+            [
+              -83.1083905740017,
+              42.31294739200286
+            ],
+            [
+              -83.10841241100178,
+              42.31297788400285
+            ],
+            [
+              -83.10843298600179,
+              42.312969767002755
+            ],
+            [
+              -83.10845656900169,
+              42.31300269700288
+            ],
+            [
+              -83.10831774700169,
+              42.313057462002845
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "frontEdge": {
+    "confidence": "high",
+    "source": "base_units_address_link",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [
+          -83.108285325658,
+          42.31308990266756
+        ],
+        [
+          -83.10823280262095,
+          42.313017382737
+        ]
+      ]
+    }
+  },
+  "setbackEnvelope": {
+    "status": "fails",
+    "outsideAreaSqft": 546.15,
+    "classificationToleranceSqft": 10.82,
+    "selectedAlternative": 2,
+    "alternatives": [
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -83.10831535046741,
+              42.31301544517961
+            ],
+            [
+              -83.10859562102165,
+              42.31290362546354
+            ],
+            [
+              -83.10862372531811,
+              42.31294242949415
+            ],
+            [
+              -83.10834345464012,
+              42.31305424927964
+            ],
+            [
+              -83.10831535046741,
+              42.31301544517961
+            ]
+          ]
+        ]
+      },
+      {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -83.10830484717184,
+              42.313000943015325
+            ],
+            [
+              -83.10858511767982,
+              42.312889123325206
+            ],
+            [
+              -83.10861322196325,
+              42.31292792735843
+            ],
+            [
+              -83.1083329513315,
+              42.31303974711798
+            ],
+            [
+              -83.10830484717184,
+              42.313000943015325
+            ]
+          ]
+        ]
+      }
+    ],
+    "footprintOutsideEnvelope": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -83.10830166800179,
+            42.313035009002746
+          ],
+          [
+            -83.10829155100181,
+            42.313039000002874
+          ],
+          [
+            -83.10826435400179,
+            42.31300102300275
+          ],
+          [
+            -83.10827447000179,
+            42.31299703200282
+          ],
+          [
+            -83.1082723270018,
+            42.31299404000275
+          ],
+          [
+            -83.1083905740017,
+            42.31294739200286
+          ],
+          [
+            -83.10840135129386,
+            42.3129624408321
+          ],
+          [
+            -83.10830484717184,
+            42.313000943015325
+          ],
+          [
+            -83.1083329513315,
+            42.31303974711798
+          ],
+          [
+            -83.10844973478234,
+            42.31299315408005
+          ],
+          [
+            -83.10845656900169,
+            42.31300269700288
+          ],
+          [
+            -83.10831774700169,
+            42.313057462002845
+          ],
+          [
+            -83.10830166800179,
+            42.313035009002746
+          ]
+        ]
+      ]
+    },
+    "sourceRefs": [
+      "50-13-231",
+      "50-13-3",
+      "50-16-382"
+    ],
+    "explanation": "The current principal footprint extends beyond both ordinary side-yard allocations."
+  },
+  "dimensionalRules": [
+    {
+      "ruleId": "r2:one_family_dwelling:minimum_lot_area",
+      "status": "fails",
+      "measuredValue": 4095.0,
+      "requirement": {
+        "metric": "lot_area",
+        "operator": ">=",
+        "value": 5000,
+        "unit": "square_feet"
+      },
+      "source": {
+        "document": "ARTICLE_XIII.___INTENSITY_AND_DIMENSIONAL_STANDARDS.docx",
+        "sections": [
+          "50-13-3",
+          "50-13-222"
+        ],
+        "source_value": "5,000",
+        "note": ""
+      },
+      "exceptionsNotEvaluated": [
+        "lot_of_record",
+        "combined_zoning_lot",
+        "approved_relief"
+      ]
+    },
+    {
+      "ruleId": "r2:one_family_dwelling:minimum_lot_width",
+      "status": "fails",
+      "measuredValue": 30.0,
+      "requirement": {
+        "metric": "lot_width",
+        "operator": ">=",
+        "value": 50,
+        "unit": "feet"
+      },
+      "source": {
+        "document": "ARTICLE_XIII.___INTENSITY_AND_DIMENSIONAL_STANDARDS.docx",
+        "sections": [
+          "50-13-3",
+          "50-13-222"
+        ],
+        "source_value": "50",
+        "note": ""
+      },
+      "exceptionsNotEvaluated": [
+        "lot_of_record",
+        "combined_zoning_lot",
+        "approved_relief"
+      ]
+    }
+  ],
+  "limitations": [
+    "This compares recorded geometry with current dimensional standards; it does not determine whether the existing structure is unlawful.",
+    "The assessor parcel is treated as the candidate zoning lot for this prototype.",
+    "Recorded assessor frontage is used as a lot-width proxy.",
+    "Variances, adjustments, lot-of-record protection, combined zoning lots, and other approvals have not been researched for this parcel."
+  ],
+  "sources": {
+    "parcel": "City of Detroit assessor parcel data",
+    "buildingAndStreet": "City of Detroit Base Units",
+    "ordinance": "Detroit Zoning Ordinance, Chapter 50 repository snapshot"
+  }
+}

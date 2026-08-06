@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-57-22-29d327c7bd",
+  "project_type_family": "housing",
+  "project_type_label": "carriage house and four seasons room",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner is requesting variances to construct a carriage house and a four seasons room on a single-family residential lot, which conflicts with the rule against multiple principal residential buildings on one lot.",
+  "evidence": [
+    "construct 2 structures (carriage house and four seasons room)",
+    "not more than one principal detached residential building shall be located"
+  ],
+  "confidence": "high",
+  "alternative_type": "recreation_or_open_space"
+}

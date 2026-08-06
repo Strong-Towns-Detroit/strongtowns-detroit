@@ -1,0 +1,54 @@
+{
+  "lot_area": {
+    "legalMinimum": 5000,
+    "screeningBoundary": 4950.0,
+    "unit": "square_feet",
+    "evaluatedParcels": 332160,
+    "belowMinimumParcels": 227868,
+    "meetsMinimumParcels": 104292,
+    "belowMinimumShare": 0.6860187861271676,
+    "unknownParcels": 4125,
+    "outsideScopeParcels": 42081,
+    "parksParcels": 412,
+    "totalParcels": 378366,
+    "bzaCases": 11,
+    "bzaGrantedOrReversed": 11
+  },
+  "lot_width": {
+    "legalMinimum": 50,
+    "screeningBoundary": 49.5,
+    "unit": "feet",
+    "evaluatedParcels": 331007,
+    "belowMinimumParcels": 289718,
+    "meetsMinimumParcels": 41289,
+    "belowMinimumShare": 0.8752624566852061,
+    "unknownParcels": 5278,
+    "outsideScopeParcels": 42081,
+    "parksParcels": 412,
+    "totalParcels": 378366,
+    "bzaCases": 6,
+    "bzaGrantedOrReversed": 6
+  },
+  "setback_envelope": {
+    "legalMinimum": null,
+    "screeningBoundary": null,
+    "unit": "square_feet",
+    "evaluatedParcels": 172083,
+    "belowMinimumParcels": 148860,
+    "meetsMinimumParcels": 23223,
+    "belowMinimumShare": 0.8650476804797684,
+    "unknownParcels": 37213,
+    "outsideScopeParcels": 169070,
+    "parksParcels": 0,
+    "totalParcels": 378366,
+    "bzaCases": 9,
+    "bzaGrantedOrReversed": 8
+  },
+  "assessed_value_per_acre": {
+    "totalParcels": 378366,
+    "recordedParcels": 372219,
+    "zeroAssessmentParcels": 88290,
+    "unrecordedParcels": 6147,
+    "topTenPercentLandValueShare": 0.5599916065372905
+  }
+}

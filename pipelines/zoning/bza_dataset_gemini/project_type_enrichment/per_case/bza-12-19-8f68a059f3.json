@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-12-19-8f68a059f3",
+  "project_type_family": "retail_or_personal_service",
+  "project_type_label": "Rental Hall",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish a rental hall on the second floor of an existing building with accessory parking.",
+  "evidence": [
+    "establish a 3,492 square foot Rental Hall",
+    "on the second floor of an existing 13,600 square foot building",
+    "along with accessory parking"
+  ],
+  "confidence": "high",
+  "alternative_type": "food_or_beverage"
+}

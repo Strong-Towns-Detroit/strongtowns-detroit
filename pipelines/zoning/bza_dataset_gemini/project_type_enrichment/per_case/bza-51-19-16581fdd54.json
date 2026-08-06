@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-51-19-16581fdd54",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "medical marijuana grower facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "Establish a medical marijuana grower facility, which was denied due to proximity to a drug-free zone.",
+  "evidence": [
+    "proposed MMGF site is located 438 feet from a \"DRUG FREE ZONE\""
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

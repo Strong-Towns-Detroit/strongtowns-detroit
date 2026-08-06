@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-49-22-8cce07fda5",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "marijuana safety compliance facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "The petitioner is appealing the denial of a request to add a marijuana safety compliance facility in an existing building, which was denied due to an unapproved wall blocking an alley and negative impacts on the surrounding residential properties.",
+  "evidence": [
+    "negative impact on the community",
+    "injurious to the use and enjoyment",
+    "blocks the north/south alley"
+  ],
+  "confidence": "high",
+  "alternative_type": "office_or_medical"
+}

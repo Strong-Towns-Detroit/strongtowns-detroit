@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-bza2026-00051-ccc5f5dbb5",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "auto repair and oil change",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Construct a 729-square-foot addition to expand an existing minor auto repair and oil change business.",
+  "evidence": [
+    "expand a nonconforming minor auto repair",
+    "adding a 729 square foot addition",
+    "existing auto related oil change business"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

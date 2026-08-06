@@ -1,0 +1,26 @@
+# The legal rule is a separate module importing the ontology vocabulary.
+module detroit.article_iii
+import ontology.zonto
+id detroit:article-iii:block:79:proposition:1
+source-span §50-3-10 | Where the provisions of this chapter require that notice be published, the agency responsible for giving notice shall ensure that it is published in a newspaper of general circulation within the City. The notice shall be published:
+source-span §50-3-10(1) | At least 15 days prior to a public hearing being held before the Buildings, Safety Engineering, and Environmental Department; or
+obligation actor Agency action publish_notice
+
+publication_obligation_satisfied(
+  agency: Agency,
+  notice: Notice,
+  hearing: Hearing
+) :-
+  Notice is PublishedNotice,
+  Hearing is PublicHearing,
+  Agency is Agency,
+  Notice.required_by = Chapter50,
+  Notice.responsible_agency = Agency,
+  Notice.hearing = Hearing,
+  Hearing.forum = BSEED,
+  elapsed_days(
+    from: Notice.published_at,
+    until: Hearing.starts_at,
+    result: Days
+  ),
+  Days >= 15.

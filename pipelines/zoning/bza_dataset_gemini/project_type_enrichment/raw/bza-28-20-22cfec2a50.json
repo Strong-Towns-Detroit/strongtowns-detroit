@@ -1,0 +1,208 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-28-20-22cfec2a50",
+      "project_type_family": "food_or_beverage",
+      "project_type_label": "carry-out restaurant",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting to expand an existing non-conforming carry-out restaurant and its parking lot, requiring dimensional variances for setbacks and lot coverage.",
+      "evidence": [
+        "expand a non-conforming carry out restaurant",
+        "building with the addition will cover approximately 47%"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-48-21-6842fc0027",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "slaughterhouse",
+      "proposed_action": "continue_or_legalize_existing_condition",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "adverse",
+      "housing_units": null,
+      "summary": "The applicant is appealing the denial to establish a slaughterhouse that was found to be operating illegally and creating health and safety hazards for the adjacent neighborhood.",
+      "evidence": [
+        "establishment of an Abattoir (“Slaughterhouse”)",
+        "posing a public health and safety hazard",
+        "aggravating any pre-existing physical social or economic deterioration"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-40-21-241d47ced9",
+      "project_type_family": "parking_only",
+      "project_type_label": "parking lot",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting dimensional variances to construct an 8-space surface parking lot on a narrow residential lot.",
+      "evidence": [
+        "construct an 8-space parking lot",
+        "constraints of the 35' wide lot"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-42-21-7411c236b8",
+      "project_type_family": "housing",
+      "project_type_label": "two-family dwelling",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 2,
+      "summary": "The applicant is requesting hardship relief to convert a single-family rental home into a two-family rental dwelling.",
+      "evidence": [
+        "alter property at 127 Woodland from a single-family home (rental) to a two family (rental)"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-9-21-310ddefa62",
+      "project_type_family": "retail_or_personal_service",
+      "project_type_label": "mini-mart and carry-out restaurant",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting to build a 444-square-foot addition to an existing nonconforming mini-mart and carry-out restaurant located in a Traditional Main Street Overlay district.",
+      "evidence": [
+        "expand an existing nonconforming Mini-Mart and Carryout restaurant",
+        "add a 444 square foot addition"
+      ],
+      "confidence": "high",
+      "alternative_type": "food_or_beverage"
+    },
+    {
+      "case_history_id": "bza-59-21-1c38dd3618",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "gas station",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting dimensional variances to construct a new gas station with a retail building and three pump islands.",
+      "evidence": [
+        "construct a 2,500 square foot Motor Vehicle Filling Station with retail and three pump islands"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-60-21-edd97a26a1",
+      "project_type_family": "recreation_or_open_space",
+      "project_type_label": "outdoor entertainment pavilion and bar",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting variances to build an outdoor entertainment pavilion with a soundstage and an enclosure for alcohol consumption.",
+      "evidence": [
+        "Construct a 934 square foot Commercial Outdoor Entertainment pavilion",
+        "Alcohol Consumption on the Premises"
+      ],
+      "confidence": "high",
+      "alternative_type": "food_or_beverage"
+    },
+    {
+      "case_history_id": "bza-73-21-281525e794",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "marijuana grower facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting variances to establish a marijuana grower facility within a portion of a large existing industrial building.",
+      "evidence": [
+        "establish a Marijuana Grower Facility (MGF)",
+        "in a 38,326 square foot portion of an existing 231,686 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "industrial_or_logistics"
+    },
+    {
+      "case_history_id": "bza-74-21-4b77c7f140",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "towing service storage yard",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is appealing a denial to expand an existing towing storage yard onto adjacent parcels, significantly increasing its vehicle capacity.",
+      "evidence": [
+        "expand an existing Towing Service Storage Yard",
+        "increase the storage capacity from 100 to 350 cars"
+      ],
+      "confidence": "high",
+      "alternative_type": "industrial_or_logistics"
+    },
+    {
+      "case_history_id": "bza-75-21-9044d745bd",
+      "project_type_family": "mixed_use",
+      "project_type_label": "mixed-use commercial and institutional building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting variances to construct a new two-story mixed-use building featuring a grocery, office, banquet hall, and culinary school, along with a surface parking lot.",
+      "evidence": [
+        "proposed construction of a grocery/office/rental/banquet hall and culinary school",
+        "development of the roughly 30,000 sf, 2 story building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-25-21-6318646cda",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "gas station",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The applicant is requesting to expand an existing nonconforming gas station by constructing a 2,705-square-foot addition.",
+      "evidence": [
+        "expand an existing nonconforming 2,280 square foot gas station",
+        "constructing an approximately 2,705 square foot addition"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-80-21-7cf4389d0b",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "asphalt mixing facility",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "adverse",
+      "housing_units": null,
+      "summary": "The applicant is appealing the denial to establish a high-impact asphalt mixing facility, which was cited for potential health, noise, and safety hazards to the adjacent residential neighborhood.",
+      "evidence": [
+        "establishment of an Asphalt Mixing Facility",
+        "could pose an adverse public health, noise, and safety hazard",
+        "aggravate any pre-existing physical, social or economic deterioration"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+}

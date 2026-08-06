@@ -1,0 +1,20 @@
+module detroit_regulated_use_grants is
+  concept RegulatedUseGrant
+  concept RegulatedUse
+  concept Permit
+  concept Extension
+  concept Application
+  concept PublicHearing
+  concept DecisionMakingBody
+  relation grant_for is from RegulatedUseGrant to RegulatedUse end
+  relation permit_under is from Permit to RegulatedUseGrant end
+  relation extension_of is from Extension to RegulatedUseGrant end
+  relation authorized_by is from Extension to DecisionMakingBody end
+  relation new_application_for is from Application to RegulatedUse end
+  relation hearing_for is from PublicHearing to Application end
+  measure granted_at is for RegulatedUseGrant value LocalDate end
+  measure obtained_at is for Permit value LocalDate end
+  measure extended_until is for Extension value LocalDate end
+  predicate unlawfully_established_or_expanded(RegulatedUse)
+  predicate legalized_by_regulated_use_hearing(RegulatedUse)
+end

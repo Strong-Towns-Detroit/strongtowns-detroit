@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-76-24-6ee5d23546",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "auto repair shop",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Request to expand an existing minor auto repair shop by adding adjacent lots and constructing a building addition.",
+  "evidence": [
+    "expand a legal nonconforming Light Duty Vehicle Service Establishment (Minor Auto Repair)",
+    "1,246 square foot addition"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

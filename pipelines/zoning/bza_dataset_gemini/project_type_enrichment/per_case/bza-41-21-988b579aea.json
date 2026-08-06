@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-41-21-988b579aea",
+  "project_type_family": "housing",
+  "project_type_label": "apartment building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 24,
+  "summary": "Parking variance requested to demolish an existing residential structure and build a 24-unit apartment building near public transit.",
+  "evidence": [
+    "demolish residential structure and construct a three story, 24-unit apartment building",
+    "25% public transit reduction"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

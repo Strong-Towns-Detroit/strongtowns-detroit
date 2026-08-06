@@ -1,0 +1,19 @@
+prefix detroit https://detroitmi.gov/zoning/
+
+class DecisionMakingBody
+class BoardDecision
+class MatterKind
+
+individual DetroitBZA types DecisionMakingBody
+individual ReverseOrAdjustAdministrativeAction types MatterKind
+individual ApplicantFavorableMatter types MatterKind
+individual Variance types MatterKind
+individual HardshipReliefUseVariance types MatterKind
+
+property decision_by domain BoardDecision range DecisionMakingBody min 1 max 1
+property matter_kind domain BoardDecision range MatterKind min 1
+property specializes domain MatterKind range MatterKind
+datatype authorized_members domain DecisionMakingBody range nonNegativeInteger min 1 max 1
+datatype concurring_votes domain BoardDecision range nonNegativeInteger min 1 max 1
+
+fact specializes HardshipReliefUseVariance Variance

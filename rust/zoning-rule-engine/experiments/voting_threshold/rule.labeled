@@ -1,0 +1,23 @@
+RuleModule: DetroitBzaVotingThreshold
+ImportOntology: DetroitBzaVoting
+
+Provision: ConcurringVoteRequired
+  PropositionId: detroit:article-ii:section-50-2-78:ordinary-threshold
+  Citation: §50-2-78
+  SourceSpan: ordinary | The concurring vote of a majority of the members of the Board of Zoning Appeals shall be necessary to reverse or adjust any order, requirement, decision, or determination of any administrative official, or to decide in favor of the applicant on any matter upon which the Board is required to pass under this chapter, or to grant a variance in this chapter;
+  Status: Strict
+  Given: decision BoardDecision
+  Given: board DecisionMakingBody
+  AppliesWhen: (decidedBy(decision, board) && board == DetroitBZA && hasMatterKind(decision, ReverseOrAdjustAdministrativeAction || ApplicantFavorableMatter || Variance) && !hasMatterKind(decision, HardshipReliefUseVariance))
+  RequiredVotes: floor(authorizedMemberCount(board) / 2) + 1
+
+Provision: HardshipReliefOverride
+  PropositionId: detroit:article-ii:section-50-2-78:hardship-override
+  Citation: §50-2-78 exception; MCL 125.3604(10); Article IV, Division 7
+  SourceSpan: exception | except that pursuant to Section 604(10) of the Michigan Zoning Enabling Act, being MCL 125.3604(10), the concurring vote of a two-thirds majority of the members of the Board shall be necessary to approve a variance from a use of land through a hardship relief petition as set forth in Article IV, Division 7, of this chapter.
+  Status: Strict
+  Overrides: ConcurringVoteRequired
+  Given: decision BoardDecision
+  Given: board DecisionMakingBody
+  AppliesWhen: (decidedBy(decision, board) && board == DetroitBZA && hasMatterKind(decision, HardshipReliefUseVariance))
+  RequiredVotes: ceil(authorizedMemberCount(board) * 2 / 3)

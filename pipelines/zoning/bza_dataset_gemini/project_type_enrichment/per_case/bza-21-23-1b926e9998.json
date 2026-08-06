@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-21-23-1b926e9998",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Proposal to construct a 22-space employee accessory parking lot on vacant land to serve a nearby business.",
+  "evidence": [
+    "construct a 22-space employee Accessory Parking Lot on existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

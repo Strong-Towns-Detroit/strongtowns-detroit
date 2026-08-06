@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-11-20-6f01bb250d",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "gas station",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Expanding and modifying an existing non-conforming gas station with a new canopy and building addition.",
+  "evidence": [
+    "expand or modify a non-conforming Gas Station",
+    "building a new non-conforming Gas Station w/Canopy",
+    "592 sq. ft. addition"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

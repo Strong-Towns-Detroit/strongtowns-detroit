@@ -57,6 +57,21 @@ def _find_data_start(grid: list[list[str]]) -> int:
         first_cell = grid[r][0].strip().lower()
         if first_cell in ("use", "use category", ""):
             continue
+        # Some specialized tables use two header rows whose first cell is
+        # repeated while the second row supplies column scenarios (for
+        # example, service-bay counts in §§50-13-174--176).
+        if (
+            r + 1 < len(grid)
+            and grid[r + 1]
+            and first_cell == grid[r + 1][0].strip().lower()
+        ):
+            continue
+        if (
+            r > 0
+            and grid[r - 1]
+            and first_cell == grid[r - 1][0].strip().lower()
+        ):
+            continue
         # This looks like a data row
         return r
     return len(grid)
@@ -75,10 +90,30 @@ def _build_column_map(grid: list[list[str]]) -> list[tuple[int, str]]:
     row0 = [c.strip() for c in grid[0]]
     row1 = [c.strip() for c in grid[1]] if len(grid) > 1 else row0
 
+    # The principal Article XIII tables expand to 18 visual grid columns, but
+    # their first merged "Use" cell occupies two header columns and only one
+    # data column. Values therefore begin one index left of their expanded
+    # headers. Encode the reviewed physical layout explicitly; deriving it
+    # from repeated header strings mislabeled rear setback as height.
+    if len(row0) == 18 and row0[0].lower() == "use":
+        return [
+            (1, "Minimum Lot Dimensions - Area (sq. ft.)"),
+            (3, "Minimum Lot Dimensions - Width (feet)"),
+            (5, "Minimum Setbacks (feet) - Front"),
+            (7, "Minimum Setbacks (feet) - Side*"),
+            (8, "Minimum Setbacks (feet) - Rear"),
+            (10, "Max. Height (feet)"),
+            (12, "Max. Lot Coverage (%)"),
+            (13, "Max FAR"),
+            (15, "Add'l. Regs."),
+        ]
+
     columns: list[tuple[int, str]] = []
     seen_names: set[str] = set()
 
     for col in range(len(row0)):
+        if col == 0:
+            continue
         cat = row0[col]
         sub = row1[col] if col < len(row1) else ""
 
@@ -148,6 +183,11 @@ def parse_dimensional_table(
                 continue
             value = row[col_idx].strip()
             if not value or value == "—":
+                continue
+            # Vertically/row-merged use labels sometimes occupy the first
+            # apparent value cell. They are structural repetition, not a lot
+            # area or other dimensional value.
+            if value.casefold() == use_name.casefold():
                 continue
 
             records.append(

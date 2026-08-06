@@ -1,0 +1,9 @@
+{
+  "minutes_occurrences": 496,
+  "case_histories": 405,
+  "collapsed_occurrences": 91,
+  "histories_with_multiple_appearances": 71,
+  "printed_numbers_with_multiple_histories": 2,
+  "override_rows_used": 4,
+  "unresolved_same_date_number_collisions": []
+}

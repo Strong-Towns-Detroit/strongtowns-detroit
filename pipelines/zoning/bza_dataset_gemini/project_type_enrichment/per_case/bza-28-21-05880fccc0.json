@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-28-21-05880fccc0",
+  "project_type_family": "housing",
+  "project_type_label": "single-family dwelling addition",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 1,
+  "summary": "Construction of a second single-family dwelling with an attached garage on a lot with an existing single-family home.",
+  "evidence": [
+    "proposed addition of a 706 square foot, two-story, single family dwelling",
+    "constitutes a second principal use on the subject site"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

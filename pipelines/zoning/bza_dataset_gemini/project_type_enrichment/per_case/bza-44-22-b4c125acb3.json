@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-44-22-b4c125acb3",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Construct a 23-space accessory parking lot on vacant land to serve an existing medical marijuana facility.",
+  "evidence": [
+    "develop a 23-space Accessory Parking Lot",
+    "serve an existing Medical Marihuana Provisioning Facility",
+    "relieve traffic at the intersection"
+  ],
+  "confidence": "high",
+  "alternative_type": "cannabis_or_controlled_use"
+}

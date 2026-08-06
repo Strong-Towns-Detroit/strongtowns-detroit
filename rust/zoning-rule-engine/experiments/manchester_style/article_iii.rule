@@ -1,0 +1,21 @@
+RuleModule: DetroitArticleIII
+ImportOntology: DetroitHearings
+
+Provision: MinimumBseedNotice
+  PropositionId: detroit:article-iii:block:79:proposition:1
+  Citation: §50-3-10(1)
+  SourceSpan: applicability | Where the provisions of this chapter require that notice be published, the agency responsible for giving notice shall ensure that it is published in a newspaper of general circulation within the City. The notice shall be published:
+  SourceSpan: deadline | At least 15 days prior to a public hearing being held before the Buildings, Safety Engineering, and Environmental Department; or
+  Given:
+    notice: PublishedNotice
+    hearing: PublicHearing
+    agency: Agency
+  AppliesWhenAll:
+    notice.requiredBy: Chapter50
+    notice.responsibleAgency: agency
+    notice.hearing: hearing
+    hearing.forum: BSEED
+  Duty:
+    bearer: agency
+    action: publish notice
+    deadline: no later than 15 days before hearing.startsAt

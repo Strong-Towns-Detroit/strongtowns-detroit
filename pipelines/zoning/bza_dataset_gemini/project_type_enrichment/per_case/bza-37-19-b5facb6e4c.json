@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-37-19-b5facb6e4c",
+  "project_type_family": "signage",
+  "project_type_label": "Wall sign",
+  "proposed_action": "signage_installation",
+  "intensity_direction": "unclear_or_not_applicable",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Adding a large identification wall sign to an existing retail building.",
+  "evidence": [
+    "ADD identification sign to the front wall of a building",
+    "proposed sign 680 square feet"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

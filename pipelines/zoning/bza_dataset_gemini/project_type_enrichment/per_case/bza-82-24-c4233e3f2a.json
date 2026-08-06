@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-82-24-c4233e3f2a",
+  "project_type_family": "housing",
+  "project_type_label": "townhouse buildings",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 18,
+  "summary": "The petitioner proposes to construct four separate three-story townhouse buildings containing a total of 18 residential units on vacant land.",
+  "evidence": [
+    "construct four, separate, three-story townhouse buildings",
+    "consisting of 18 units",
+    "on existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

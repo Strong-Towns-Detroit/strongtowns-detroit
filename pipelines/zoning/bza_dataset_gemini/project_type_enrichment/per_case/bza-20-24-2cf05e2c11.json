@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-20-24-2cf05e2c11",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "used motor vehicle sales lot",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner proposes to expand an existing used motor vehicle sales lot by adding adjacent land.",
+  "evidence": [
+    "expand a legal nonconforming",
+    "Used Motor Vehicle Sales lot by adding land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-64-24-a56bb532d6",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Develop a 17-space accessory parking lot to serve a nearby mixed-use building.",
+  "evidence": [
+    "develop a 10,584 square foot, 17 space accessory parking lot",
+    "serve a re-developed mixed use building"
+  ],
+  "confidence": "high",
+  "alternative_type": "mixed_use"
+}

@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-29-21-cd232a5ef8",
+  "project_type_family": "housing",
+  "project_type_label": "townhouses",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 23,
+  "summary": "Construction of four townhouse buildings containing a total of 23 residential units on vacant land.",
+  "evidence": [
+    "Construct four separate townhouse buildings containing a total of twenty three units on existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

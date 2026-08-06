@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-43-22-cb2a611acd",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Construct a 62-space accessory parking lot on vacant land to serve a new community center.",
+  "evidence": [
+    "Develop a 62-space Accessory Parking Lot",
+    "serve a new community center",
+    "on existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": "institutional_or_civic"
+}

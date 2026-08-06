@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-01-23-b0171819a2",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "concrete crushing and processing facility",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": 0,
+  "summary": "Establish a high-impact manufacturing or processing facility for crushing rock and concrete on a vacant site.",
+  "evidence": [
+    "establishment of a very high-impact manufacturing or processing facility",
+    "could pose an adverse public health, noise, and safety hazard for residents"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

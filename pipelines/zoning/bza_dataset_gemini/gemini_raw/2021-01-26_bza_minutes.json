@@ -1,0 +1,68 @@
+{
+  "meeting_date": "2021-01-26",
+  "cases": [
+    {
+      "case_number": "34-20",
+      "meeting_date": "2021-01-26",
+      "hearing_time": "9:15 a.m.",
+      "council_district": 6,
+      "petitioner": "Integrity Building Group-John P. Biggar",
+      "location": "1441 Brooklyn Street between Porter and Labrosse in a R3 (Low Density Residential District)-City Council District #6",
+      "legal_description": "W BROOKLYN S 80 FT 1 BLK 60 COL D BAKER L17 P272-3 DEEDS, W C R 6/11 80 X 50 SPLIT ON 06/12/2017 06005352-6",
+      "proposal": "Integrity Building Group - John P. Biggar request to change from one nonconforming use to another nonconforming use. The current nonconforming legal use is Factory with accessory parking across Brooklyn St. The proposed nonconforming use is Commercial Office with accessory parking across Brooklyn St. The existing building is approximately 20,175 square feet in area. The petitioner obtained a Certificate of Appropriateness on July 14th, 2020 from the Historic District Commission for changes to the exterior of the building. The existing building and parking lot are located within the Corktown Historic District and are within the Greater Corktown Project Planning area in an R3 (Low Density Residential District) A nonconforming use may be changed to another nonconforming use only where reviewed and approved by the Board of Zoning Appeals in accordance with the procedures that are specified in Section 50-2-67 of this Code, except, that a nonconforming use may not be changed to any of the following: (b) Except for the ten items prohibited above, the Board of Zoning Appeals may approve the change of one nonconforming use to another nonconforming use only where the Body determines that the new proposed use will be less injurious to the surrounding area than the previous nonconforming use. Where a change in use is approved, the Board of Zoning Appeals shall be authorized to impose conditions that the Body deems necessary to reduce or minimize any potentially adverse effect upon other property in the neighborhood, and to carry out the general purpose and intent of this chapter. Any condition that is imposed must relate to a situation created or aggravated by the proposed use and must be roughly proportional to its impact: Sec. 50-14-342(2)(a)-Residential Screening - Per the Zoning Ordinance, parking that is adjacent to residentially zoned land not containing a residential structure requires an opaque screen wall 4-6’ in height, and a landscaped 5’ buffer; Per the site plan, there is an existing approximately 6’ tall wrought iron fence and no setback on the eastern property line of the parking lot, which the petitioner would like to keep as residential screening. Planning & Development may approve alternative materials used for screening, but not the opacity. In order to come into compliance, the petitioner must request a variance of this development standard; Per the site plan, the north property line is adjacent to a non-residential structure zoned R3. There is an existing cyclone fence and no landscaped setback has been provided. The petitioner is proposing a decorative wrought iron fence that is 6’ in height and no landscaped 5’ buffer. This is deficient opacity and a 5’ landscaped setback. In order to come into compliance, the petitioner must request a variance of these development standards and Sec. 50-14-52-Off-Street Parking: Per the Zoning Ordinance, based on 20,175 gross square feet of Office, 50 off-street parking spaces are required; Per the site plan, 26 spaces have been provided. This is 24 spaces deficient. In order to come into compliance, the petitioner will need to request a parking variance for the deficient parking spaces. (Sections 50-15-7 - Board of Zoning Appeals and (b) - Change of nonconforming use to other nonconforming use: (b) the Board of Zoning Appeals may approve the change of one nonconforming use to another nonconforming use only where the Body determines that the new proposed use will be less injurious to the surrounding area than the previous nonconforming use.)AP",
+      "bseed_refs": [],
+      "action": "Ms. Teague made a motion to Adjourn this case at the petitioners request due to a change in proposal with fee and without date. Seconded by Ms. Walker",
+      "affirmative_votes": [
+        "Mr. Thomas",
+        "Finn",
+        "Ms. Teague",
+        "Moore",
+        "Walker"
+      ],
+      "affirmative_count": 5,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [
+        "Mr. Weed"
+      ],
+      "decision": "ADJOURNED WITH FEE AND WITHOUT DATE",
+      "decision_status": "postponed",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted. Note that 'Finn' appears in the vote list despite not being in the roll call."
+    },
+    {
+      "case_number": "38-20",
+      "meeting_date": "2021-01-26",
+      "hearing_time": "10:15 a.m.",
+      "council_district": 1,
+      "petitioner": "Sherita Smith, GRDC",
+      "location": "19505 W Grand River between Minock and Auburn in a B4 General Business District- City Council District #1",
+      "legal_description": "S GRAND RIVER 41&40 E 40 FT 39 EXC TRIANG PT BG S 25 FT ON E LINE & E 50.16 FT ON S LINE & EXC GRAND RIVER AS WD EDWARD J MINOCKS SUB L28 P94 PLATS, W C R 22/449 165.89 IRREG",
+      "proposal": "Sherita Smith, GRDC request dimensional variances to develop 36 units of senior housing, commercial space and parking. 27 parking spaces are required for the 36 units, because this is located within .50 mile of bus rapid transit. The Planning and Development department can give a waiver per section 50-11-303, to waive the first 3,000 square feet of pedestrian oriented retail, service, or commercial uses. The proposed commercial use is 5,500 square feet. With 2,500 square feet calculated, 13 parking spaces are required. 34 parking spaces are provided. Even if this department gives an administrative adjustment, the parking will still be deficient. The site will include outdoor gathering spaces for tenants and south facing patios on the 4th level. Additional gathering space may be proposed on the roof; APPROVED w/conditions by BSEED (PIN 22007297-9 & 22092572) SPR2020-00060 in a B4 General Business District. The Board of Zoning Appeals shall be authorized to hear dimensional variance requests for matters that are beyond the scope of Buildings and Safety Engineering Department ten percent (10%) administrative adjustments for a variance of the minimum setbacks; A Board of Zoning Appeals hearing will be required for the deficient parking and loading. (Sections 50-4-131 - Permitted dimensional variances and 50-4-121 Approval Criteria.) AP",
+      "bseed_refs": [
+        "SPR2020-00060",
+        "22007297-9",
+        "22092572"
+      ],
+      "action": "Ms. Walker made a motion to Grant Dimensional Variances and TMSO Standards to develop 36 units of senior housing, commercial space and parking Seconded by Mr. Weed",
+      "affirmative_votes": [
+        "Mr. Thomas",
+        "Finn",
+        "Weed",
+        "Ms. Teague",
+        "Moore",
+        "Walker",
+        "West"
+      ],
+      "affirmative_count": 7,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCES AND TMSO WAIVERS GRANTED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted."
+    }
+  ],
+  "document_notes": "Meeting held via Zoom. 'Finn' appears in the affirmative votes for both cases but is not listed in the roll call."
+}

@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-7-19-8a6c93d171",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "Cabaret",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish a cabaret in an existing 3,250 square foot building with no parking provided.",
+  "evidence": [
+    "establish a Cabaret",
+    "in a 3,250 square foot building",
+    "the required number of parking spaces is 19; 0 are proposed"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

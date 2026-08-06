@@ -1,0 +1,62 @@
+{
+  "meeting_date": "2021-05-18",
+  "cases": [
+    {
+      "case_number": "22-21",
+      "meeting_date": "2021-05-18",
+      "hearing_time": "9:15 a.m.",
+      "council_district": 6,
+      "petitioner": "Brian Hurttienne",
+      "location": "2627 Austin Street between 17th and 18th in a R3 - (Low Density Residential District)-City Council District #6",
+      "legal_description": "Property exempt from Ad Valorem taxes and assessed on the Special Act Roll pursuant to PA 261 of 2003 expiring 12/30/2020. S AUSTIN E 30 FT 66 WARDS SUB L1 P263 PLATS, W C R 10/21 30 X 108",
+      "proposal": "Brian Hurttienne request dimensional variances to construct three attached Townhouse units on existing vacant land, 6,804 square foot property is ‘vacant land’. The applicant proposes to construct three townhouse units on the subject lots. At the Zoom hearing, the applicant testified that the 2,016 square foot townhome units will be for sale and will be managed by a home owner’s association in a R3 Zone (Low Density Residential District). This case is appealed because the Board of Zoning Appeals shall be authorized to hear dimensional variance requests for matters that are beyond the scope of Buildings and Safety Engineering Department ten percent (10%) administrative adjustments for a variance of the minimum setbacks; Section 50-13-186(3) “Minimum Townhouse width” (20’ feet required); Townhouse Unit one: 16’ feet 2” inches proposed (deficient 3’ feet 10” inches); Townhouse unit two: 15’ feet 8” inches proposed (deficient 4’ feet 8” inches); and Townhouse unit three: 16’ feet 2” inches proposed (deficient 3’ feet 10” inches). (Sections 50-4-131(6) - Permitted dimensional variances and 50-4-121 Approval Criteria.) AP",
+      "bseed_refs": [],
+      "action": "Ms. West made a motion to Adjourn this case without fee and without date due to mis-notification. Seconded by Ms. Teague",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Sherman",
+        "Thomas",
+        "Ms. Walker",
+        "West",
+        "Teague"
+      ],
+      "affirmative_count": 6,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "ADJOURNED WITHOUT DATE AND WITHOUT FEE",
+      "decision_status": "postponed",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted."
+    },
+    {
+      "case_number": "23-21",
+      "meeting_date": "2021-05-18",
+      "hearing_time": "10:15 a.m.",
+      "council_district": 6,
+      "petitioner": "David Ryzyi (Mannik Smith Group)",
+      "location": "7303 W. McNichols between Prairie and Monica in a B2 - (Local Business and Residential District) (TMSO)-City Council District #6",
+      "legal_description": "Lots 14-18 of the Marshal, Michaelson and Kohn subdivision. Liber 33 of Plats Page 46 of WCR.",
+      "proposal": "David Ryzyi (Mannik Smith Group) request dimensional variances to establish a mixed use building, with 38 multi-family units and ground floor commercial, this is a by-right use in this zoning district per section 50-9-44 (7). 27 parking spaces are provided on the site plan. 29 parking spaces are required for the 38 units, because this is located within .50 miles of the bus rapid transit. The proposed commercial space will be 6595 square feet and split into 4 units in a B2 - (Local Business and Residential District) (TMSO). The Board of Zoning Appeals shall be authorized to hear dimensional variance requests for matters that are beyond the scope of Buildings and Safety Engineering Department ten percent (10%) administrative adjustments for a variance of the minimum setbacks; That Board of Zoning Appeals hearing is required to waive, the rear setback, excessive height, excessive floor area ratio, loading area and not meeting the TMSO transparency; This development does not meet all the dimensional standards per section 50-13-43. Rear setback: 30 feet required, 0 feet provided, 30 feet deficient Maximum height: 35 feet permitted, 43 feet provided, 8 feet excessive Floor Area Ratio: 36,000 permitted, 37,700 provided, 1,700 excessive. (Sec.50-4-131(6) - Permitted dimensional variances and 50-4-121 Approval Criteria.) AP",
+      "bseed_refs": [],
+      "action": "Ms. Teague made a motion to Grant Dimensional Variances and to waive the TMSO transparency standards to establish a mixed use building, with 38 multi-family units and ground floor commercial. Seconded by Ms. Walker",
+      "affirmative_votes": [
+        "Mr. Weed",
+        "Thomas",
+        "Sherman",
+        "Ms. Walker",
+        "West",
+        "Teague"
+      ],
+      "affirmative_count": 6,
+      "negative_votes": [],
+      "negative_count": 0,
+      "abstentions": [],
+      "decision": "DIMENSIONAL VARIANCES GRANTED AND TMSO STANDARDS WAIVED",
+      "decision_status": "decided",
+      "confidence": "high",
+      "confidence_note": "All fields clearly extracted."
+    }
+  ],
+  "document_notes": "Meeting minutes for May 18, 2021."
+}

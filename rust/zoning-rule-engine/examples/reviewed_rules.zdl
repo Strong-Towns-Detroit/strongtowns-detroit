@@ -1,0 +1,498 @@
+module detroit.reviewed_rules
+
+concept LegalEntity
+concept Person is LegalEntity
+concept PublicAgency is LegalEntity
+concept DecisionMakingBody is PublicAgency
+concept ExtensionAuthority is PublicAgency
+
+concept LegalMatter
+concept BoardDecision is LegalMatter
+concept BoardVote is LegalMatter
+concept Variance is LegalMatter
+concept UseVariance is Variance
+concept HardshipUseVariance is UseVariance
+concept PreservationFinding is LegalMatter
+concept RegulatedUseGrant is LegalMatter
+concept Permit is LegalMatter
+concept Extension is LegalMatter
+concept LandUse is LegalMatter
+concept Application is LegalMatter
+concept Property is LegalMatter
+concept PaymentObligation is LegalMatter
+concept BlightViolation is LegalMatter
+concept ZoningDistrict is LegalMatter
+concept Waiver is LegalMatter
+concept DevelopmentProposal is Application
+
+entity DetroitBZA
+  is DecisionMakingBody
+  is ExtensionAuthority
+
+entity BSEED
+  is PublicAgency
+  is ExtensionAuthority
+
+relation decided_by
+  decision: BoardDecision
+  board: DecisionMakingBody
+  phrase
+    "{decision} is decided by {board}"
+
+predicate ordinary_bza_matter
+  decision: BoardDecision
+  phrase
+    "{decision} concerns an ordinary BZA matter"
+
+relation decides_variance
+  decision: BoardDecision
+  variance: Variance
+  phrase
+    "{decision} decides {variance}"
+
+relation rendered_by_vote
+  decision: BoardDecision
+  vote: BoardVote
+  phrase
+    "{decision} is rendered by {vote}"
+
+relation has_preservation_finding
+  decision: BoardDecision
+  finding: PreservationFinding
+  phrase
+    "{decision} has preservation finding {finding}"
+
+relation certified_on_record
+  finding: PreservationFinding
+  phrase
+    "{finding} is certified on the record"
+
+interpretive relation final_after_three_business_days
+  decision: BoardDecision
+  phrase
+    "{decision} becomes final at four PM on the third business day after its vote"
+  resolution
+    status: open
+    method: Detroit business calendar and vote timestamp interpretation required
+
+relation final_immediately
+  decision: BoardDecision
+  phrase
+    "{decision} becomes final immediately after its vote"
+
+interpretive relation lacks_timely_permit
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} has no permit obtained within six calendar months"
+  resolution
+    status: open
+    method: requires a complete permit record and a named calendar month policy
+
+relation becomes_null_and_void
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} becomes null and void without further action"
+
+relation extension_for
+  extension: Extension
+  grant: RegulatedUseGrant
+  phrase
+    "{extension} is an extension of {grant}"
+
+relation authority_may_extend
+  authority: ExtensionAuthority
+  grant: RegulatedUseGrant
+  phrase
+    "{authority} may extend {grant} no more than twelve additional months"
+
+relation unlawful_use_legalized_by_hearing
+  grant: RegulatedUseGrant
+  use: LandUse
+  phrase
+    "{grant} concerns unlawfully established or expanded use {use} later legalized by hearing"
+
+relation extension_prohibited
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} may not receive an extension"
+
+relation extension_expired
+  extension: Extension
+  phrase
+    "{extension} has expired"
+
+relation additional_extension_prohibited
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} may not receive an additional extension"
+
+relation new_application_for
+  application: Application
+  use: LandUse
+  phrase
+    "{application} is a new application for {use}"
+
+relation hearing_held_for
+  application: Application
+  phrase
+    "a further public hearing is held for {application}"
+
+relation new_application_route_permitted
+  application: Application
+  phrase
+    "{application} may proceed after the expired extension"
+
+relation filed_by
+  application: Application
+  applicant: Person
+  phrase
+    "{application} is filed by {applicant}"
+
+relation delinquent_on_blight_obligation
+  applicant: Person
+  obligation: PaymentObligation
+  violation: BlightViolation
+  phrase
+    "{applicant} is delinquent on {obligation} imposed for {violation}"
+
+relation applicant_ineligible
+  applicant: Person
+  application: Application
+  phrase
+    "{applicant} is ineligible to file {application}"
+
+relation concerns_property
+  application: Application
+  property: Property
+  phrase
+    "{application} concerns property {property}"
+
+relation acquired_by_foreclosure
+  applicant: Person
+  property: Property
+  phrase
+    "{applicant} acquired {property} by foreclosure or deed in lieu"
+
+relation corrects_violation
+  application: Application
+  violation: BlightViolation
+  phrase
+    "{application} corrects all or part of {violation}"
+
+relation applicant_eligible
+  applicant: Person
+  application: Application
+  phrase
+    "{applicant} remains eligible to file {application}"
+
+interpretive relation spacing_threshold_reached
+  application: Application
+  phrase
+    "{application} has at least two distinct established regulated use sites within one thousand feet"
+  resolution
+    status: open
+    method: site identity boundary target and distance method require reviewed definitions
+
+interpretive relation lacks_spacing_waiver
+  application: Application
+  phrase
+    "{application} has no applicable spacing waiver"
+  resolution
+    status: open
+    method: requires a complete authoritative waiver record
+
+relation approval_prohibited
+  application: Application
+  phrase
+    "{application} may not be approved"
+
+relation located_in_district
+  proposal: DevelopmentProposal
+  district: ZoningDistrict
+  phrase
+    "{proposal} is located in {district}"
+
+relation use_not_permitted_in_district
+  proposal: DevelopmentProposal
+  district: ZoningDistrict
+  phrase
+    "{proposal} is neither permitted by right nor conditionally permitted in {district}"
+
+relation spacing_waiver_prohibited
+  proposal: DevelopmentProposal
+  phrase
+    "a spacing waiver may not be granted for {proposal}"
+
+interpretive relation waiver_findings_satisfied
+  proposal: DevelopmentProposal
+  phrase
+    "{proposal} satisfies the controlled use waiver findings"
+  resolution
+    status: open
+    method: source says any one finding but joins numbered findings with and
+
+relation spacing_waiver_authorized
+  board: DecisionMakingBody
+  proposal: DevelopmentProposal
+  phrase
+    "{board} may grant a spacing waiver for {proposal}"
+
+rule ordinary_bza_vote_threshold
+  id detroit.article_ii.50_2_78.ordinary_threshold
+  source §50-2-78
+    "The concurring vote of a majority of the members of the Board of Zoning Appeals shall be necessary to reverse or adjust any order, requirement, decision, or determination of any administrative official, or to decide in favor of the applicant on any matter upon which the Board is required to pass under this chapter, or to grant a variance in this chapter."
+
+  given
+    decision: BoardDecision
+
+  if
+    decision is decided by DetroitBZA
+    decision concerns an ordinary BZA matter
+  then
+    require concurrence_requirement
+      decision: decision
+      threshold: majority
+  end
+
+rule hardship_vote_threshold
+  id detroit.article_ii.50_2_78.hardship_threshold
+  overrides detroit.article_ii.50_2_78.ordinary_threshold
+  source §50-2-78-exception
+    "Except that pursuant to Section 604(10) of the Michigan Zoning Enabling Act, the concurring vote of a two-thirds majority of the members of the Board shall be necessary to approve a variance from a use of land through a hardship relief petition."
+
+  given
+    decision: BoardDecision
+    variance: HardshipUseVariance
+
+  if
+    decision is decided by DetroitBZA
+    decision decides variance
+  then
+    require concurrence_requirement
+      decision: decision
+      threshold: two_thirds
+  end
+
+rule ordinary_bza_finality
+  id detroit.article_ii.50_2_79.ordinary_finality
+  source §50-2-79
+    "Decisions that are rendered by the Board of Zoning Appeals shall not become final until 4:00 p.m. on the third business day after the vote."
+
+  given
+    decision: BoardDecision
+    vote: BoardVote
+
+  if
+    decision is decided by DetroitBZA
+    decision is rendered by vote
+  then
+    require automatic_effect
+      decision becomes final at four PM on the third business day after its vote
+  end
+
+rule certified_immediate_finality
+  id detroit.article_ii.50_2_79.immediate_effect
+  overrides detroit.article_ii.50_2_79.ordinary_finality
+  source §50-2-79-exception
+    "Unless the Board finds the immediate effect of such order necessary for the preservation of property or personal rights and so certifies on the record."
+
+  given
+    decision: BoardDecision
+    finding: PreservationFinding
+
+  if
+    decision has preservation finding finding
+    finding is certified on the record
+  then
+    require automatic_effect
+      decision becomes final immediately after its vote
+  end
+
+rule grant_lapse
+  id detroit.article_iii.50_3_386.lapse
+  source §50-3-386-sentence-1
+    "In any case where a permit for a regulated use has not been obtained within six months after the granting of said use, the grant shall be null and void without further action."
+
+  given
+    grant: RegulatedUseGrant
+
+  if
+    grant has no permit obtained within six calendar months
+  then
+    require automatic_effect
+      grant becomes null and void without further action
+  end
+
+rule bounded_extension_power
+  id detroit.article_iii.50_3_386.extension
+  source §50-3-386-exception
+    "Except that the Buildings, Safety Engineering, and Environmental Department or, where applicable, the Board of Zoning Appeals may extend said six-month deadline for no more than 12 months beyond the expiration date of the original six months."
+
+  given
+    authority: ExtensionAuthority
+    grant: RegulatedUseGrant
+
+  if
+  then
+    require power
+      authority may extend grant no more than twelve additional months
+  end
+
+rule unlawful_use_extension_bar
+  id detroit.article_iii.50_3_386.extension_bar
+  overrides detroit.article_iii.50_3_386.extension
+  source §50-3-386-notwithstanding
+    "Notwithstanding the preceding, no such extension may be considered in the case of a land use that was unlawfully established or expanded and that was subsequently legalized as a result of a regulated land use hearing."
+
+  given
+    grant: RegulatedUseGrant
+    use: LandUse
+
+  if
+    grant concerns unlawfully established or expanded use use later legalized by hearing
+  then
+    require prohibition
+      grant may not receive an extension
+  end
+
+rule no_additional_extension
+  id detroit.article_iii.50_3_386.no_additional_extension
+  source §50-3-386-sentence-2
+    "Where this extension expires, no additional extension shall be authorized, unless a new application has been filed and a further public hearing has been held."
+
+  given
+    extension: Extension
+    grant: RegulatedUseGrant
+
+  if
+    extension is an extension of grant
+    extension has expired
+  then
+    require prohibition
+      grant may not receive an additional extension
+  end
+
+rule new_application_after_extension
+  id detroit.article_iii.50_3_386.new_application_route
+  overrides detroit.article_iii.50_3_386.no_additional_extension
+  source §50-3-386-unless
+    "Unless a new application has been filed and a further public hearing has been held."
+
+  given
+    application: Application
+    use: LandUse
+
+  if
+    application is a new application for use
+    a further public hearing is held for application
+  then
+    require permission
+      application may proceed after the expired extension
+  end
+
+rule delinquent_applicant_ineligible
+  id detroit.article_iii.50_3_341.ineligibility
+  source §50-3-341-b
+    "A person is ineligible to apply for a regulated use where the person is delinquent in paying a civil fine, costs, or a justice system assessment imposed by the Blight Administrative Hearings Bureau."
+
+  given
+    applicant: Person
+    application: Application
+    obligation: PaymentObligation
+    violation: BlightViolation
+
+  if
+    application is filed by applicant
+    applicant is delinquent on obligation imposed for violation
+  then
+    require prohibition
+      applicant is ineligible to file application
+  end
+
+rule foreclosure_eligibility_exception
+  id detroit.article_iii.50_3_341.foreclosure_exception
+  overrides detroit.article_iii.50_3_341.ineligibility
+  source §50-3-341-b-foreclosure
+    "This ineligibility does not apply if the applicant became the owner of the property by foreclosure or by taking a deed in lieu of foreclosure."
+
+  given
+    applicant: Person
+    application: Application
+    property: Property
+
+  if
+    application concerns property property
+    applicant acquired property by foreclosure or deed in lieu
+  then
+    require permission
+      applicant remains eligible to file application
+  end
+
+rule corrective_authorization_exception
+  id detroit.article_iii.50_3_341.corrective_exception
+  overrides detroit.article_iii.50_3_341.ineligibility
+  source §50-3-341-b-correction
+    "This ineligibility does not apply if the zoning authorization will correct, in whole or in part, the blight violation that was the subject of the delinquent payment."
+
+  given
+    applicant: Person
+    application: Application
+    violation: BlightViolation
+
+  if
+    application is filed by applicant
+    application corrects all or part of violation
+  then
+    require permission
+      applicant remains eligible to file application
+  end
+
+rule regulated_use_spacing_bar
+  id detroit.article_iii.50_3_341.spacing
+  source §50-3-341-c
+    "Shall not approve any such request where there are already in existence two or more regulated uses within 1,000 feet of the boundaries of the site of the proposed regulated use, except as provided for through the waiver provisions."
+
+  given
+    application: Application
+
+  if
+    application has at least two distinct established regulated use sites within one thousand feet
+    application has no applicable spacing waiver
+  then
+    require prohibition
+      application may not be approved
+  end
+
+rule district_permission_bar
+  id detroit.article_iii.50_3_443.district_bar
+  source §50-3-443-exception
+    "In no case shall a controlled use be established in any zoning district where such a use is not permitted by right or as a conditional use."
+
+  given
+    proposal: DevelopmentProposal
+    district: ZoningDistrict
+
+  if
+    proposal is located in district
+    proposal is neither permitted by right nor conditionally permitted in district
+  then
+    require prohibition
+      a spacing waiver may not be granted for proposal
+  end
+
+rule controlled_use_waiver_findings
+  id detroit.article_iii.50_3_443.findings
+  source §50-3-443-lead-in
+    "May be waived, provided, that any one of the following findings is made."
+  source §50-3-443-list-join
+    "And the second finding."
+
+  given
+    proposal: DevelopmentProposal
+
+  if
+    proposal satisfies the controlled use waiver findings
+  then
+    require power
+      DetroitBZA may grant a spacing waiver for proposal
+  end

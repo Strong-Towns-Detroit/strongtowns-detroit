@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-8-21-6178c7b555",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "Car wash",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": 0,
+  "summary": "Appeal of a denial for an addition to a car wash due to illegal signage, maintenance issues, and negative impacts on adjacent residential properties.",
+  "evidence": [
+    "Construction of an 880 square foot addition to an existing Motor Vehicle Washing",
+    "aggravate any preexisting physical, social or economic deterioration",
+    "block windows to the adjacent multiple-family dwelling"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

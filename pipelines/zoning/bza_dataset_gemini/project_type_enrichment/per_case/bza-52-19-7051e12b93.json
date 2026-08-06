@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-52-19-7051e12b93",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "motor vehicle repair facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish a major motor vehicle repair facility in an existing building.",
+  "evidence": [
+    "establish a major motor vehicle repair facility (no painting) in an existing 2,562 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

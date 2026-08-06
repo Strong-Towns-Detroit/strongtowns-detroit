@@ -1,0 +1,202 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-18-24-b7d9862137",
+      "project_type_family": "food_or_beverage",
+      "project_type_label": "bakery",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to construct a new 3,753 square foot bakery and requests dimensional variances for setbacks, parking, screening, and loading.",
+      "evidence": [
+        "construct a 3,753 square foot Bakery"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-19-24-5152521f4c",
+      "project_type_family": "other",
+      "project_type_label": "screening wall",
+      "proposed_action": "new_construction",
+      "intensity_direction": "unclear_or_not_applicable",
+      "urban_form_orientation": "unclear_or_not_applicable",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to construct a 20-foot high screening wall, which exceeds the allowed 8-foot height.",
+      "evidence": [
+        "proposed wall that is excessive in height",
+        "20’ HIGH PROPOSED"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-20-24-2cf05e2c11",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "used motor vehicle sales lot",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to expand an existing used motor vehicle sales lot by adding adjacent land.",
+      "evidence": [
+        "expand a legal nonconforming",
+        "Used Motor Vehicle Sales lot by adding land"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-21-24-b752b33f22",
+      "project_type_family": "parking_only",
+      "project_type_label": "accessory parking lot",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to create an accessory parking lot to serve a nearby multi-tenant building.",
+      "evidence": [
+        "intensify the land use to provide an accessory parking lot"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-12-24-a6fc69b387",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "trade services",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to change an existing nonconforming office and storage facility to a trade services use.",
+      "evidence": [
+        "change an existing non conforming (Office and Storage Facility) and parking to Trade Services"
+      ],
+      "confidence": "high",
+      "alternative_type": "office_or_medical"
+    },
+    {
+      "case_history_id": "bza-22-24-5c0940c4c3",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "gas station and car wash",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to demolish an existing building and construct a new gas station and car wash.",
+      "evidence": [
+        "demolish an existing building and construct a 6,716 sq. ft. Motor Vehicle Filling Station",
+        "Motor Vehicle Washing facility"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-23-24-52267c8cf9",
+      "project_type_family": "housing",
+      "project_type_label": "residential home addition",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to build a second-floor addition to an existing residential home.",
+      "evidence": [
+        "Residential home with Second floor addition"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-24-24-ba03fb1f1d",
+      "project_type_family": "institutional_or_civic",
+      "project_type_label": "non-profit neighborhood center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to establish a non-profit neighborhood center and requests a variance for deficient off-street parking.",
+      "evidence": [
+        "proposed land use (Neighborhood Center Non-Profit)",
+        "off-street parking deficiency"
+      ],
+      "confidence": "high",
+      "alternative_type": "office_or_medical"
+    },
+    {
+      "case_history_id": "bza-25-24-e30fbc8699",
+      "project_type_family": "institutional_or_civic",
+      "project_type_label": "private club",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to establish a private club in an existing 4,420 square foot building.",
+      "evidence": [
+        "establish a Private Club in an existing 4,420 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "recreation_or_open_space"
+    },
+    {
+      "case_history_id": "bza-26-24-8498a9e0ce",
+      "project_type_family": "housing",
+      "project_type_label": "multi-family dwelling complex",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 100,
+      "summary": "The petitioner proposes to convert a former school building into a 100-unit multi-family residential complex.",
+      "evidence": [
+        "convert a former school building site though adaptive reuse",
+        "100-unit Multi-family Dwelling complex"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-27-24-014e8967b0",
+      "project_type_family": "parking_only",
+      "project_type_label": "accessory parking lot",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to develop a 54-space accessory parking lot on vacant land to serve a nearby church.",
+      "evidence": [
+        "develop a 54-space Accessory Parking Lot on existing vacant land",
+        "serve a church"
+      ],
+      "confidence": "high",
+      "alternative_type": "religious"
+    },
+    {
+      "case_history_id": "bza-28-24-a82f3aaf57",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "gas station",
+      "proposed_action": "site_or_building_alteration",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner proposes to renovate and re-establish a formerly closed gas station with three pump islands.",
+      "evidence": [
+        "renovate and re-establish a formerly closed 1,430 square foot Motor Vehicle Filing Station"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+}

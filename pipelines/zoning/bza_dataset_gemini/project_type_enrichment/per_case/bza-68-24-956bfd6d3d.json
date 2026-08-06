@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-68-24-956bfd6d3d",
+  "project_type_family": "housing",
+  "project_type_label": "carriage house",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 1,
+  "summary": "Construct a 966-square-foot carriage house with a 2-car garage in the rear yard of an existing residential lot.",
+  "evidence": [
+    "construct a 966 square foot accessory structure (Carriage home)",
+    "rear yard of existing lot with a 2-car garage included"
+  ],
+  "confidence": "high",
+  "alternative_type": "vehicle_oriented"
+}

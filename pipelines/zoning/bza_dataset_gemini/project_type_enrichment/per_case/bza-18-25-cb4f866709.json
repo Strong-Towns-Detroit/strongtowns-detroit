@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-18-25-cb4f866709",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "used motor vehicle sales and repair garage",
+  "proposed_action": "continue_or_legalize_existing_condition",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner is appealing an order to remove unapproved corrugated fencing at an existing auto sales and repair facility.",
+  "evidence": [
+    "remove unapproved materials (Corrugated fencing)",
+    "Legal Used Motor Vehicles Sales and Major Motor Vehicle Repair Garage"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

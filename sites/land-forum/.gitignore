@@ -1,0 +1,18 @@
+.next/
+dist/
+out/
+node_modules/
+.DS_Store
+npm-debug.log*
+.vinext/
+.wrangler/
+
+# Generated vector tiles. 54 MB and reproducible from the parcel pipeline:
+#   npm run tiles:lot-area
+public/data/zoning/*.pmtiles
+
+# Frozen exhibit boards, produced by npm run freeze:*
+public/exhibits/
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo

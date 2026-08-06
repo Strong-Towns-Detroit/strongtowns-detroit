@@ -1,0 +1,99 @@
+[
+  {
+    "case_number": "17-25",
+    "meeting_date": "2025-07-28",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 7,
+    "petitioner": "JASON BUSTILLO RAMIREZ",
+    "location": "6401 MANSFIELD, between Paul and Whitlock in a R1 Zone Single Family Residential District",
+    "legal_description": "W MANSFIELD 81 HITCHMANS WARREN GDNS SUB L40 P81 PLATS, W C R 22/255 40 X 134",
+    "proposal": "Jason A. Bustillo Ramirez requesting dimensional variances for construction of single family residence with attached garage in a R1 District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.",
+    "bseed_refs": [],
+    "action": "Mr. Watson made a motion to Grant dimensional variances for construction of single family residence with attached garage in a R1 District with condition that the petitioner install fences on both side of new property for privacy of adjacent neighbors. Seconded by Board Member Boman",
+    "affirmative_votes": [
+      "Mr. Thomas",
+      "Boman",
+      "Weed",
+      "Osbern",
+      "Watson",
+      "Roberts",
+      "Mrs. Hill-Knott"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [
+      "Mr. Sherman",
+      "Moore"
+    ],
+    "negative_count": 2,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  },
+  {
+    "case_number": "16-25",
+    "meeting_date": "2025-07-28",
+    "hearing_time": "9:45 a.m.",
+    "council_district": 7,
+    "petitioner": "DAVE ROOT",
+    "location": "7441 ELMHURST, Corner of Elmhurst and American in a R3 Zone (Low Density Residential District).",
+    "legal_description": "S ELMHURST W 50 FT OF 33 EVERGREEN SUB L25 P49 PLATS, W C R 16/203 50 X 128.56",
+    "proposal": "DAVE ROOT requesting dimensional variances to establish a community outreach center, including youth programs for carpentry and millwright trades. The subject site is within a R3 Zone Low Density Residential District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Sections 50-4-131 (1&6)- Permitted dimensional variances and 50-4-121 Approval Criteria.",
+    "bseed_refs": [],
+    "action": "Mr. Osbern made a motion to Grant dimensional variances to establish a community outreach center, including youth programs for carpentry and millwright trades with condition that petitioner provide heavy duty wood fence along the south and east property lines. Seconded by Board Member Boman",
+    "affirmative_votes": [
+      "Mr. Thomas",
+      "Boman",
+      "Weed",
+      "Osbern",
+      "Roberts",
+      "Mrs. Hill-Knott",
+      "Moore"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [
+      "Mr. Sherman",
+      "Watson"
+    ],
+    "negative_count": 2,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  },
+  {
+    "case_number": "18-25",
+    "meeting_date": "2025-07-28",
+    "hearing_time": "10:15 a.m.",
+    "council_district": 5,
+    "petitioner": "SHAHNAJ MIAH",
+    "location": "8228 MT ELLIOTT, between Farr and Cymbal in a B4 zone General Business District.",
+    "legal_description": "E MT ELLIOTT 17 GEORGE T ABREYS SUB L13 P87 PLATS, W C R 15/174 34.55 X 100.20",
+    "proposal": "Shanaj Miah request permission to appeal the decision of the plan reviewer which stated to remove unapproved materials (Corrugated fencing) which are not allowed under Section 50-14-368(2) and removal of unapproved fencing materials (corrugated fencing is not allowed in a B4 Zone General Business District. The Legal Used Motor Vehicles Sales and Major Motor Vehicle Repair Garage Granted under BSEED 149-01 and BSEED 126-07. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Corrugated fencing is not allowed under Section 50-14-268(2). The following shall apply with respect fences and walls. Fences, walls and gates shall be constructed of standard building materials that are customarily used for wall and fence construction, such as brick, stone, concrete masonry, stucco, concrete or wood. Scrap or recycled material shall not be used. Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.",
+    "bseed_refs": [
+      "149-01",
+      "126-07"
+    ],
+    "action": "Mr. Osbern made to Grant request to keep unapproved material (Corrugated Metal Fencing) to Major Motor Vehicle Repair Garage and Used Motor Vehicle Sales Lot in a B4 zone. This case is BY-RIGHT and was Plan Reviewed. Seconded by Board Member Boman",
+    "affirmative_votes": [
+      "Mr. Boman"
+    ],
+    "affirmative_count": 1,
+    "negative_votes": [
+      "Mr. Sherman",
+      "Osbern",
+      "Weed",
+      "Thomas",
+      "Mrs. Moore",
+      "Hill-Knott"
+    ],
+    "negative_count": 6,
+    "abstentions": [],
+    "decision": "APPEAL DENIED DUE TO VOTE COUNT",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  }
+]

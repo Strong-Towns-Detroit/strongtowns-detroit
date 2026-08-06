@@ -1,0 +1,33 @@
+Ontology: DetroitHearings
+
+Class: Agency
+Class: HearingForum
+Class: PublishedNotice
+Class: PublicHearing
+Class: LegalRegime
+
+ObjectProperty: responsibleFor
+  Domain: Agency
+  Range: PublishedNotice
+
+ObjectProperty: forumFor
+  Domain: HearingForum
+  Range: PublicHearing
+
+ObjectProperty: noticeFor
+  Domain: PublishedNotice
+  Range: PublicHearing
+
+ObjectProperty: requiresPublishedNotice
+  Domain: LegalRegime
+  Range: PublishedNotice
+
+ObjectProperty: precedes
+  Domain: PublishedNotice
+  Range: PublicHearing
+
+Individual: BSEED
+  Types: Agency, HearingForum
+
+Individual: Chapter50
+  Types: LegalRegime

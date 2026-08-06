@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-17-19-f5959a3b07",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "Towing and Vehicle Storage Yard",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Modify a previous grant for a towing and vehicle storage yard to allow a metal wall instead of a masonry wall.",
+  "evidence": [
+    "MODIFY a previous BSEED Grant",
+    "legalized a Police \"A-BAN\" Towing and Vehicle Storage Yard",
+    "a metal wall is proposed along the southern portion"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

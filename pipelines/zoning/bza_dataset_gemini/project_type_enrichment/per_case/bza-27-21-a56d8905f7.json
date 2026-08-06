@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-27-21-a56d8905f7",
+  "project_type_family": "mixed_use",
+  "project_type_label": "mixed-use apartment and retail buildings",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 318,
+  "summary": "Construction of six new buildings containing 318 multi-family dwelling units and accessory retail on vacant land.",
+  "evidence": [
+    "revised development of a total of 318 Multiple-family dwelling units",
+    "six buildings will include accessory retail sales and personal services",
+    "current legal land use of 1401 Rivard is “Vacant Land”"
+  ],
+  "confidence": "high",
+  "alternative_type": "housing"
+}

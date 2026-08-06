@@ -1,0 +1,497 @@
+occurrence_id,case_history_id,case_number,meeting_date,decision_status,decision,decision_basis,source_file
+2019-03-05:116-16:1,bza-116-16-902857b7a3,116-16,2019-03-05,decided,SPACING/LOCATIONAL VARIANCE DENIED,recorded_disposition,2019-03-05_bza_minutes.pdf
+2019-03-05:5-19:1,bza-5-19-2dc104a2e6,5-19,2019-03-05,decided,DIMENSIONAL VARAINCE GRANTED,recorded_disposition,2019-03-05_bza_minutes.pdf
+2019-03-05:72-18:1,bza-72-18-196a5b43c0,72-18,2019-03-05,dismissed,DISMSSED WITH PREJUDICE,recorded_disposition,2019-03-05_bza_minutes.pdf
+2019-03-05:75-18:1,bza-75-18-7d8e616722,75-18,2019-03-05,decided,"BSEED DECISION UPHELD, DRUG FREE ZONE",recorded_disposition,2019-03-05_bza_minutes.pdf
+2019-03-12:116-17:1,bza-116-17-28da9b4180,116-17,2019-03-12,dismissed,Petitioner does not have standing to bring appeal before the Board.,recorded_disposition,2019-03-12_bza_minutes.pdf
+2019-03-12:76-18:1,bza-76-18-cbc171d150,76-18,2019-03-12,decided,"BSEED DECISION UPHELD, DRUG FREE ZONE",recorded_disposition,2019-03-12_bza_minutes.pdf
+2019-03-12:77-18:1,bza-77-18-95afed9f1e,77-18,2019-03-12,decided,BSEED DECISION AFFIRMED,recorded_disposition,2019-03-12_bza_minutes.pdf
+2019-03-12:78-18:1,bza-78-18-85c69b7830,78-18,2019-03-12,decided,CHANGE OF NON CONFORMING USE GRANTED,recorded_disposition,2019-03-12_bza_minutes.pdf
+2019-03-19:01-19:1,bza-01-19-6ca8bb24fa,01-19,2019-03-19,postponed,ADJOURNED,inferred_from_motion_and_vote,2019-03-19_bza_minutes.pdf
+2019-03-19:49-18:1,bza-49-18-7931dced47,49-18,2019-03-19,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2019-03-19_bza_minutes.pdf
+2019-03-19:53-18:1,bza-53-18-249a9f612c,53-18,2019-03-19,decided,BSEED DECISION UPHELD/USE DENIED,recorded_disposition,2019-03-19_bza_minutes.pdf
+2019-03-19:79-18:1,bza-79-18-d186bad83f,79-18,2019-03-19,decided,SPACING/LOCATIONAL VARIANCE GRANTED,recorded_disposition,2019-03-19_bza_minutes.pdf
+2019-03-26:06-17:1,bza-06-17-1938c13e88,06-17,2019-03-26,decided,SPACING/LOCATIONAL VARIANCE DENIED,recorded_disposition,2019-03-26_bza_minutes.pdf
+2019-03-26:2-19:1,bza-2-19-dafba32633,2-19,2019-03-26,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-03-26_bza_minutes.pdf
+2019-03-26:4-19:1,bza-4-19-9704261508,4-19,2019-03-26,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-03-26_bza_minutes.pdf
+2019-03-26:57-18:1,bza-57-18-3495b99b21,57-18,2019-03-26,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2019-03-26_bza_minutes.pdf
+2019-03-26:79-18:1,bza-79-18-d186bad83f,79-18,2019-03-26,decided,MOTION FAILS DUE TO VOTE COUNT. ORIGINAL MOTION TO APPROVE STANDS.,recorded_disposition,2019-03-26_bza_minutes.pdf
+2019-04-02:7-19:1,bza-7-19-8a6c93d171,7-19,2019-04-02,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-04-02_bza_minutes.pdf
+2019-04-02:8-19:1,bza-8-19-5feed4f6f4,8-19,2019-04-02,postponed,"ADJOURNED TO APRIL 9, 2019 with no further notification",recorded_disposition,2019-04-02_bza_minutes.pdf
+2019-04-02:9-19:1,bza-9-19-4602d22e22,9-19,2019-04-02,decided,AFFIRMED DRUG FREE ZONE,recorded_disposition,2019-04-02_bza_minutes.pdf
+2019-04-23:12-19:1,bza-12-19-8f68a059f3,12-19,2019-04-23,decided,DIMENSIONAL (Parking) VARIANCE GRANTED,recorded_disposition,2019-04-23_bza_minutes.pdf
+2019-04-23:14-19:1,bza-14-19-184cee7e49,14-19,2019-04-23,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-04-23_bza_minutes.pdf
+2019-04-23:15-19:1,bza-15-19-dccd43859a,15-19,2019-04-23,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2019-04-23_bza_minutes.pdf
+2019-04-23:49-18:1,bza-49-18-7931dced47,49-18,2019-04-23,postponed,"ADJOURNED TO MAY 7, 2019",recorded_disposition,2019-04-23_bza_minutes.pdf
+2019-05-07:16-19:1,bza-16-19-80a654a895,16-19,2019-05-07,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-05-07_bza_minutes.pdf
+2019-05-07:17-19:1,bza-17-19-f5959a3b07,17-19,2019-05-07,decided,MODIFICATION GRANTED,recorded_disposition,2019-05-07_bza_minutes.pdf
+2019-05-07:49-18:1,bza-49-18-7931dced47,49-18,2019-05-07,decided,SPACING/LOCATIONAL VARIANCE GRANTED,recorded_disposition,2019-05-07_bza_minutes.pdf
+2019-05-07:94-17:1,bza-94-17-ef14740afe,94-17,2019-05-07,decided,SPACING VARIANCE DENIED,recorded_disposition,2019-05-07_bza_minutes.pdf
+2019-05-14:20-19:1,bza-20-19-f02fd63021,20-19,2019-05-14,decided,RE-HEARING REQUEST DENIED,recorded_disposition,2019-05-14_bza_minutes.pdf
+2019-05-14:30-19:1,bza-30-19-9c0b26b104,30-19,2019-05-14,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-05-14_bza_minutes.pdf
+2019-05-14:57-18:1,bza-57-18-3495b99b21,57-18,2019-05-14,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2019-05-14_bza_minutes.pdf
+2019-06-11:24-19:1,bza-24-19-98cd3d897f,24-19,2019-06-11,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-06-11_bza_minutes_1.pdf
+2019-06-11:27-19:1,bza-27-19-79df09a810,27-19,2019-06-11,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2019-06-11_bza_minutes_1.pdf
+2019-06-11:28-19:1,bza-28-19-9c30f8d441,28-19,2019-06-11,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-06-11_bza_minutes_1.pdf
+2019-06-18:29-19:1,bza-29-19-be10fad016,29-19,2019-06-18,dismissed,CASE DISMISSED,recorded_disposition,2019-06-18_bza_minutes.pdf
+2019-06-18:31-19:1,bza-31-19-2cf7ef7116,31-19,2019-06-18,decided,CHANGE OF NON CONFORMING USE GRANTED,recorded_disposition,2019-06-18_bza_minutes.pdf
+2019-06-18:33-19:1,bza-33-19-ccbe2c0b37,33-19,2019-06-18,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-06-18_bza_minutes.pdf
+2019-07-09:34-19:1,bza-34-19-e402408898,34-19,2019-07-09,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-07-09_bza_minutes.pdf
+2019-07-09:42-19:1,bza-42-19-2143d12bd7,42-19,2019-07-09,decided,DIMENSIONALVARIANCES GRANTED,recorded_disposition,2019-07-09_bza_minutes.pdf
+2019-07-09:44-19:1,bza-44-19-3332e2b636,44-19,2019-07-09,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-07-09_bza_minutes.pdf
+2019-07-09:48-19:1,bza-48-19-35b257663a,48-19,2019-07-09,decided,EXPEDIATED HEARING DATE GRANTED,recorded_disposition,2019-07-09_bza_minutes.pdf
+2019-07-23:13-19:1,bza-13-19-d1848d1cb5,13-19,2019-07-23,decided,DIMENSIONALVARIANCES GRANTED,recorded_disposition,2019-07-23_bza_minutes.pdf
+2019-07-23:39-19:1,bza-39-19-5ad28b381f,39-19,2019-07-23,dismissed,CASES DISMISSED,recorded_disposition,2019-07-23_bza_minutes.pdf
+2019-07-23:41-19:1,bza-41-19-e5976ad285,41-19,2019-07-23,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-07-23_bza_minutes.pdf
+2019-07-23:76-18:1,bza-76-18-cbc171d150,76-18,2019-07-23,decided,RE-HEARING REQUEST GRANTED,recorded_disposition,2019-07-23_bza_minutes.pdf
+2019-07-23:80-17:1,bza-80-17-303a06ac56,80-17,2019-07-23,decided,Spacing/Locational Variance Granted,recorded_disposition,2019-07-23_bza_minutes.pdf
+2019-08-13:35-19:1,bza-35-19-a7022fa187,35-19,2019-08-13,decided,CHANGE OF NON CONFORMING USE GRANTED,recorded_disposition,2019-08-13_bza_minutes.pdf
+2019-08-13:36-19:1,bza-36-19-2ede43fee8,36-19,2019-08-13,dismissed,CASES DISMISSED,recorded_disposition,2019-08-13_bza_minutes.pdf
+2019-08-13:39-19:1,bza-39-19-5ad28b381f,39-19,2019-08-13,dismissed,CASES DISMISSED,recorded_disposition,2019-08-13_bza_minutes.pdf
+2019-08-13:48-19:1,bza-48-19-35b257663a,48-19,2019-08-13,decided,,,2019-08-13_bza_minutes.pdf
+2019-08-13:54-19:1,bza-54-19-b25700d41d,54-19,2019-08-13,decided,DIMENSIONALVARIANCES GRANTED,recorded_disposition,2019-08-13_bza_minutes.pdf
+2019-08-13:57-18:1,bza-57-18-3495b99b21,57-18,2019-08-13,decided,BSEED DECISION AFFIRMED/ DRUG FREE ZONE,recorded_disposition,2019-08-13_bza_minutes.pdf
+2019-08-13:76-18:1,bza-76-18-cbc171d150,76-18,2019-08-13,decided,RE-HEARING REQUEST GRANTED,recorded_disposition,2019-08-13_bza_minutes.pdf
+2019-08-20:37-19:1,bza-37-19-b5facb6e4c,37-19,2019-08-20,postponed,,,2019-08-20_bza_minutes.pdf
+2019-08-20:38-19:1,bza-38-19-f657c9531f,38-19,2019-08-20,postponed,,,2019-08-20_bza_minutes.pdf
+2019-08-20:40-19:1,bza-40-19-aae5d99948,40-19,2019-08-20,postponed,,,2019-08-20_bza_minutes.pdf
+2019-08-20:43-19:1,bza-43-19-df0b0c111b,43-19,2019-08-20,postponed,,,2019-08-20_bza_minutes.pdf
+2019-08-27:37-19:1,bza-37-19-b5facb6e4c,37-19,2019-08-27,dismissed,CASE DISMISSED,recorded_disposition,2019-08-27_bza_minutes.pdf
+2019-08-27:46-19:1,bza-46-19-c14dfe54e8,46-19,2019-08-27,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-08-27_bza_minutes.pdf
+2019-08-27:49-19:1,bza-49-19-171a94dba8,49-19,2019-08-27,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-08-27_bza_minutes.pdf
+2019-08-27:50-19:1,bza-50-19-a14aec6068,50-19,2019-08-27,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-08-27_bza_minutes.pdf
+2019-08-27:57-18:1,bza-57-18-3495b99b21,57-18,2019-08-27,decided,CASE BEING REHEARD DUE TO NEW INFORMATION,recorded_disposition,2019-08-27_bza_minutes.pdf
+2019-08-27:65-19:1,bza-65-19-ece5db0d26,65-19,2019-08-27,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2019-08-27_bza_minutes.pdf
+2019-08-27:67-18:1,bza-67-18-3e522c88c3,67-18,2019-08-27,under_advisement,ADVSEMENT,recorded_disposition,2019-08-27_bza_minutes.pdf
+2019-09-17:184-17:1,bza-184-17-b3de95c28c,184-17,2019-09-17,decided,"ACCORDING TO THE RULES OF PROCEDURE, MOTION FAILS AND COMMUNITY APPEAL DENIED",recorded_disposition,2019-09-17_bza_minutes.pdf
+2019-09-17:43-19:1,bza-43-19-df0b0c111b,43-19,2019-09-17,decided,SPACING VARIANCE DENIED,recorded_disposition,2019-09-17_bza_minutes.pdf
+2019-09-17:47-19:1,bza-47-19-c50f5d7e9b,47-19,2019-09-17,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2019-09-17_bza_minutes.pdf
+2019-09-17:51-19:1,bza-51-19-16581fdd54,51-19,2019-09-17,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2019-09-17_bza_minutes.pdf
+2019-09-17:52-19:1,bza-52-19-7051e12b93,52-19,2019-09-17,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2019-09-17_bza_minutes.pdf
+2019-09-17:67-18:1,bza-67-18-3e522c88c3,67-18,2019-09-17,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2019-09-17_bza_minutes.pdf
+2019-09-24:22-19:1,bza-22-19-e564f573b6,22-19,2019-09-24,decided,"BSEED DECISION REVERSED, EXPANSION GRANTED",recorded_disposition,2019-09-24_bza_minutes_1.pdf
+2019-09-24:27-19:1,bza-27-19-79df09a810,27-19,2019-09-24,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2019-09-24_bza_minutes_1.pdf
+2019-09-24:38-19:1,bza-38-19-f657c9531f,38-19,2019-09-24,decided,PARKING VARIANCE GRANTED,recorded_disposition,2019-09-24_bza_minutes_1.pdf
+2019-09-24:53-19:1,bza-53-19-966124a009,53-19,2019-09-24,dismissed,DISMISSED,recorded_disposition,2019-09-24_bza_minutes_1.pdf
+2019-10-01:40-19:1,bza-40-19-aae5d99948,40-19,2019-10-01,decided,PARKING VARIANCE GRANTED,recorded_disposition,2019-10-01_bza_minutes.pdf
+2019-10-01:55-19:1,bza-55-19-0f4e1aa768,55-19,2019-10-01,decided,SPACING/LOCATIONAL VARIANCE DENIED,recorded_disposition,2019-10-01_bza_minutes.pdf
+2019-10-01:56-19:1,bza-56-19-d21ffb627f,56-19,2019-10-01,decided,MODIFICATION OF GRANT CONDITIONS APPROVED,recorded_disposition,2019-10-01_bza_minutes.pdf
+2019-10-01:57-19:1,bza-57-19-8dd8e8bb14,57-19,2019-10-01,decided,DIMENSIONALVARIANCES GRANTED,recorded_disposition,2019-10-01_bza_minutes.pdf
+2019-10-01:71-19:1,bza-71-19-ed59cd56e2,71-19,2019-10-01,decided,DIMENSIONALVARIANCES GRANTED,recorded_disposition,2019-10-01_bza_minutes.pdf
+2019-10-08:58-19:1,bza-58-19-df53c91db1,58-19,2019-10-08,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-10-08_bza_minutes.pdf
+2019-10-08:60-19:1,bza-60-19-c1f3b6a77d,60-19,2019-10-08,decided,BSEED DENIAL UPHELD USE DENIED,recorded_disposition,2019-10-08_bza_minutes.pdf
+2019-10-08:61-19:1,bza-61-19-4e42da9805,61-19,2019-10-08,decided,PARKING VARIANCE GRANTED,recorded_disposition,2019-10-08_bza_minutes.pdf
+2019-10-08:78-19:1,bza-78-19-9477858622,78-19,2019-10-08,decided,DIMENSIONAL PARKING VARIANCES GRANTED,recorded_disposition,2019-10-08_bza_minutes.pdf
+2019-10-15:62-19:1,bza-62-19-80921f9b24,62-19,2019-10-15,decided,"BSEED DENIAL UPHELD, USE DENIED",recorded_disposition,2019-10-15_bza_minutes.pdf
+2019-10-15:63-19:1,bza-63-19-7f94d4aa9b,63-19,2019-10-15,decided,"BSEED DENIAL REVERSED, USE GRANTED",recorded_disposition,2019-10-15_bza_minutes.pdf
+2019-10-15:97-17:1,bza-97-17-ef5e8042d9,97-17,2019-10-15,decided,HARDSHIP RELIEF GRANTED,recorded_disposition,2019-10-15_bza_minutes.pdf
+2019-10-22:51-19:1,bza-51-19-16581fdd54,51-19,2019-10-22,decided,BSEED DENIAL REVERSED NOT IN A DRUG FREE ZONE,recorded_disposition,2019-10-22_bza_minutes.pdf
+2019-10-22:64-19:1,bza-64-19-20a7b65020,64-19,2019-10-22,decided,"BSEED DENIAL UPHELD, USE DENIED",recorded_disposition,2019-10-22_bza_minutes.pdf
+2019-10-22:66-19:1,bza-66-19-63716eb5c4,66-19,2019-10-22,decided,"BSEED DENIAL REVERSED, USE GRANTED",recorded_disposition,2019-10-22_bza_minutes.pdf
+2019-10-22:67-19:1,bza-67-19-dd6df5c915,67-19,2019-10-22,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2019-10-22_bza_minutes.pdf
+2019-11-19:73-19:1,bza-73-19-34f97db8c8,73-19,2019-11-19,postponed,"ADJOURNED TO DECEMBER 17, 2019",recorded_disposition,2019-11-19_bza_minutes.pdf
+2019-11-19:74-19:1,bza-74-19-05e355c7b2,74-19,2019-11-19,decided,CHAGNE OF NON CONFORMING USE GRANTED,recorded_disposition,2019-11-19_bza_minutes.pdf
+2019-11-19:75-19:1,bza-75-19-9591bc33b1,75-19,2019-11-19,decided,MODIFICAITON OF GRANT CONDITIONS GRANTED,recorded_disposition,2019-11-19_bza_minutes.pdf
+2019-11-19:BSEED SLU2019-00063:1,bza-bseed-slu2019-00063-6cba26170a,BSEED SLU2019-00063,2019-11-19,dismissed,CASE DISMISSED,recorded_disposition,2019-11-19_bza_minutes.pdf
+2019-11-26:72-19:1,bza-72-19-be782cacfd,72-19,2019-11-26,decided,MINOR AUTO REPAIR FACILITIY DENIED,recorded_disposition,2019-11-26_bza_minutes.pdf
+2019-11-26:76-19:1,bza-76-19-5db6a813e8,76-19,2019-11-26,decided,DIMENSIONAL SIGN VARIANCES GRANTED,recorded_disposition,2019-11-26_bza_minutes.pdf
+2019-11-26:76-19:2,bza-76-19-8948b8b0cf,76-19,2019-11-26,decided,RE-HEARING REQUEST DENIED,recorded_disposition,2019-11-26_bza_minutes.pdf
+2019-11-26:BSEED SLU2019-00094-COMMUNITY APPEAL:1,bza-bseed-slu2019-00094-community-appeal-74dfdc0253,BSEED SLU2019-00094-COMMUNITY APPEAL,2019-11-26,decided,"BSEED REVERSED, USE DENIED",recorded_disposition,2019-11-26_bza_minutes.pdf
+2019-12-03:57-18:1,bza-57-18-3495b99b21,57-18,2019-12-03,decided,BSEED DECISION AFFIRMED/ DRUG FREE ZONE,recorded_disposition,2019-12-03_bza_minutes.pdf
+2019-12-03:77-19:1,bza-77-19-a7f510e04a,77-19,2019-12-03,decided,DIMENSIONAL SIGN VARIANCES GRANTED,recorded_disposition,2019-12-03_bza_minutes.pdf
+2019-12-03:79-19:1,bza-79-19-51772cbfc9,79-19,2019-12-03,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-12-03_bza_minutes.pdf
+2019-12-10:81-19:1,bza-81-19-7c4a7d5065,81-19,2019-12-10,decided,DIMENSIONAL AND SPACING VARIANCES GRANTED,recorded_disposition,2019-12-10_bza_minutes.pdf
+2019-12-10:82-19:1,bza-82-19-94ef549a4a,82-19,2019-12-10,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2019-12-10_bza_minutes.pdf
+2019-12-10:84-19:1,bza-84-19-5eb320fb4c,84-19,2019-12-10,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-12-10_bza_minutes.pdf
+2019-12-17:85-19:1,bza-85-19-b0b1323990,85-19,2019-12-17,decided,TMSO STANDARDS WAIVED,recorded_disposition,2019-12-17_bza_minutes.pdf
+2019-12-17:86-19:1,bza-86-19-fdba0c918b,86-19,2019-12-17,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2019-12-17_bza_minutes.pdf
+2019-12-17:89-19:1,bza-89-19-2ba8fd28cf,89-19,2019-12-17,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2019-12-17_bza_minutes.pdf
+2019-12-17:97-19:1,bza-97-19-459bd7f671,97-19,2019-12-17,postponed,"ADJOURNED TO JANUARY 28, 2020.",recorded_disposition,2019-12-17_bza_minutes.pdf
+2020-02-11:6-19:1,bza-6-19-2b90e3b9d9,6-19,2020-02-11,under_advisement,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-02-11_bza_minutes.pdf
+2020-02-11:87-19:1,bza-87-19-86a1450728,87-19,2020-02-11,no_action,NO ACTION TAKEN DUE TO MORATORIUM.,recorded_disposition,2020-02-11_bza_minutes.pdf
+2020-02-11:88-19:1,bza-88-19-07e1969543,88-19,2020-02-11,decided,PARKING VARIANCE GRANTED,recorded_disposition,2020-02-11_bza_minutes.pdf
+2020-02-18:105-19:1,bza-105-19-6f26fdbf3e,105-19,2020-02-18,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2020-02-18_bza_minutes.pdf
+2020-02-18:73-19:1,bza-73-19-34f97db8c8,73-19,2020-02-18,under_advisement,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2020-02-18_bza_minutes.pdf
+2020-02-18:94-19:1,bza-94-19-5002df6378,94-19,2020-02-18,under_advisement,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2020-02-18_bza_minutes.pdf
+2020-02-25:106-17:1,bza-106-17-de942bc315,106-17,2020-02-25,decided,"BSEED DECISION REVERSED, NOT IN A DRUG FREE ZONE",recorded_disposition,2020-02-25_bza_minutes.pdf
+2020-02-25:110-19:1,bza-110-19-6035ce5f01,110-19,2020-02-25,decided,DIMENSIONAL (PARKING) VARIANCE GRANTED,recorded_disposition,2020-02-25_bza_minutes.pdf
+2020-02-25:112-19:1,bza-112-19-8bdcb1c11b,112-19,2020-02-25,decided,DIMENSIONAL (PARKING) VARIANCE GRANTED,recorded_disposition,2020-02-25_bza_minutes.pdf
+2020-04-14:5-20:1,bza-5-20-fc09d791a0,5-20,2020-04-14,decided,DIMENSIONAL (PARKING) VARIANCE GRANTED,recorded_disposition,2020-04-14_bza_minutes.pdf
+2020-04-14:68-18:1,bza-68-18-995664bec8,68-18,2020-04-14,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-04-14_bza_minutes.pdf
+2020-04-14:95-19:1,bza-95-19-765c392d3a,95-19,2020-04-14,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-04-14_bza_minutes.pdf
+2020-04-14:BSEED SLU2019-00141:1,bza-bseed-slu2019-00141-e642903056,BSEED SLU2019-00141,2020-04-14,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-04-14_bza_minutes.pdf
+2020-04-21:111-19:1,bza-111-19-7252fe4512,111-19,2020-04-21,decided,PARKING VARIANCE GRANTED,recorded_disposition,2020-04-21_bza_minutes.pdf
+2020-04-21:26-17:1,bza-26-17-06a09b7674,26-17,2020-04-21,decided,MOTION FAILS/SPACING/LOCATIONAL VARIANCE DENIED,recorded_disposition,2020-04-21_bza_minutes.pdf
+2020-04-21:7-20:1,bza-7-20-39fc390e6c,7-20,2020-04-21,decided,DIMENSIONAL (LOADING) VARIANCE GRANTED,recorded_disposition,2020-04-21_bza_minutes.pdf
+2020-04-21:98-19:1,bza-98-19-99e1df0223,98-19,2020-04-21,decided,SPACING/LOCATIONAL VARIANCE DENIED,recorded_disposition,2020-04-21_bza_minutes.pdf
+2020-04-28:10-20:1,bza-10-20-4e6d17ae69,10-20,2020-04-28,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2020-04-28_bza_minutes.pdf
+2020-04-28:100-19:1,bza-100-19-fe808d91c8,100-19,2020-04-28,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-04-28_bza_minutes.pdf
+2020-04-28:26-17:1,bza-26-17-06a09b7674,26-17,2020-04-28,under_advisement,TAKEN UNDER ADVISEMENT,recorded_disposition,2020-04-28_bza_minutes.pdf
+2020-04-28:76-18:1,bza-76-18-cbc171d150,76-18,2020-04-28,decided,BSEED DECISION REVERSED/LOCATION NOT IN A DRUG FREE ZONE,recorded_disposition,2020-04-28_bza_minutes.pdf
+2020-04-28:96-19:1,bza-96-19-4b9e83ce6d,96-19,2020-04-28,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-04-28_bza_minutes.pdf
+2020-05-12:101-19:1,bza-101-19-2b70c94d41,101-19,2020-05-12,decided,PARKING VARIANCE GRANTED,recorded_disposition,2020-05-12_bza_minutes.pdf
+2020-05-12:102-19:1,bza-102-19-118cde75ec,102-19,2020-05-12,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2020-05-12_bza_minutes.pdf
+2020-05-12:26-17:1,bza-26-17-06a09b7674,26-17,2020-05-12,postponed,"Director Ribbron informed the Board that this case will be back before the Board on May 19, 2020 and to review all documents of the case to be prepared to adjudicate a decision.",recorded_disposition,2020-05-12_bza_minutes.pdf
+2020-05-12:6-20:1,bza-6-20-21fe579224,6-20,2020-05-12,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2020-05-12_bza_minutes.pdf
+2020-05-19:104-19:1,bza-104-19-3f504bb48a,104-19,2020-05-19,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-05-19_bza_minutes.pdf
+2020-05-19:106-19:1,bza-106-19-ac2502a929,106-19,2020-05-19,dismissed,DISMISSED WITH RETURN OF FEE,recorded_disposition,2020-05-19_bza_minutes.pdf
+2020-05-19:26-17:1,bza-26-17-06a09b7674,26-17,2020-05-19,decided,MOTION FAILS/SPACING VARIANCE DENIED,inferred_from_motion_and_vote,2020-05-19_bza_minutes.pdf
+2020-05-19:91-19:1,bza-91-19-9b79c42287,91-19,2020-05-19,decided,SPACING/LOCATIONAL VARIANCE DENIED,inferred_from_motion_and_vote,2020-05-19_bza_minutes.pdf
+2020-05-26:107-19:1,bza-107-19-7c49964699,107-19,2020-05-26,decided,BSEED AFFIRMED/DRUG FREE ZONE,recorded_disposition,2020-05-26_bza_minutes.pdf
+2020-05-26:108-19:1,bza-108-19-9b26eee3a4,108-19,2020-05-26,decided,BSEED GRANT EXTENDED,recorded_disposition,2020-05-26_bza_minutes.pdf
+2020-05-26:109-19:1,bza-109-19-877243d9d6,109-19,2020-05-26,decided,"BSEED UPHELD, USE DENIED",recorded_disposition,2020-05-26_bza_minutes.pdf
+2020-06-09:1-20:1,bza-1-20-b402ab3506,1-20,2020-06-09,decided,CHANGE OF NONCONFORMING USE DENIED,recorded_disposition,2020-06-09_bza_minutes.pdf
+2020-06-09:2-20:1,bza-2-20-b0139b3b1f,2-20,2020-06-09,decided,"BSEED UPHELD, USE DENIED",recorded_disposition,2020-06-09_bza_minutes.pdf
+2020-06-09:4-20:1,bza-4-20-e38716d808,4-20,2020-06-09,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2020-06-09_bza_minutes.pdf
+2020-06-16:103-19:1,bza-103-19-b51a4c7926,103-19,2020-06-16,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2020-06-16_bza_minutes.pdf
+2020-06-16:9-20:1,bza-9-20-68007fc307,9-20,2020-06-16,dismissed,DISMISSED AT PETITIONERS REQUEST AND WITH RETURN OF FEE,recorded_disposition,2020-06-16_bza_minutes.pdf
+2020-06-16:90-19:1,bza-90-19-38e31cc945,90-19,2020-06-16,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2020-06-16_bza_minutes.pdf
+2020-06-23:1-19:1,bza-1-19-b17dd09224,1-19,2020-06-23,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2020-06-23_bza_minutes.pdf
+2020-06-23:11-20:1,bza-11-20-6f01bb250d,11-20,2020-06-23,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2020-06-23_bza_minutes.pdf
+2020-06-23:12-20:1,bza-12-20-f9060d3522,12-20,2020-06-23,decided,BSEED DENIAL REVERSED. USE GRANTED,recorded_disposition,2020-06-23_bza_minutes.pdf
+2020-07-21:14-17:1,bza-14-17-07ea6a1a53,14-17,2020-07-21,decided,SPACING/LOCATIONAL VARIANCE DENIED,recorded_disposition,2020-07-21_bza_minutes.pdf
+2020-07-21:17-20:1,bza-17-20-4f7a090036,17-20,2020-07-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2020-07-21_bza_minutes.pdf
+2020-07-21:68-18:1,bza-68-18-995664bec8,68-18,2020-07-21,decided,BSEED UPHELD/DRUG FREE ZONE AFFIRMED,recorded_disposition,2020-07-21_bza_minutes.pdf
+2020-07-21:95-19:1,bza-95-19-765c392d3a,95-19,2020-07-21,decided,DIMENSIONAL VARIANCES DENIED,recorded_disposition,2020-07-21_bza_minutes.pdf
+2021-01-26:34-20:1,bza-34-20-ee36e5ccb2,34-20,2021-01-26,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2021-01-26_bza_minutes.pdf
+2021-01-26:38-20:1,bza-38-20-ee1ac31af4,38-20,2021-01-26,decided,DIMENSIONAL VARIANCES AND TMSO WAIVERS GRANTED,recorded_disposition,2021-01-26_bza_minutes.pdf
+2021-02-16:04-21:1,bza-04-21-d519a3c5a2,04-21,2021-02-16,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2021-02-16_bza_minutes.pdf
+2021-02-16:100-19:1,bza-100-19-fe808d91c8,100-19,2021-02-16,dismissed,DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2021-02-16_bza_minutes.pdf
+2021-02-16:89-19:1,bza-89-19-2ba8fd28cf,89-19,2021-02-16,dismissed,DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2021-02-16_bza_minutes.pdf
+2021-02-16:BSEED SLU2019-000186:1,bza-bseed-slu2019-000186-e221339ca6,BSEED SLU2019-000186,2021-02-16,postponed,"AGGRIEVED STANDARD MET, COMMUNITY APPEAL REQUEST GRANTED. ADJOURNED TO FEBRUARY 23, 2021 AFTER SCHEDULED DOCKET.",recorded_disposition,2021-02-16_bza_minutes.pdf
+2021-02-23:06-21:1,bza-06-21-e118eb8f66,06-21,2021-02-23,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-02-23_bza_minutes.pdf
+2021-02-23:29-20:1,bza-29-20-787a86c963,29-20,2021-02-23,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2021-02-23_bza_minutes.pdf
+2021-02-23:44-20:1,bza-44-20-29912dcf2c,44-20,2021-02-23,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2021-02-23_bza_minutes.pdf
+2021-02-23:BSEED SLU2019-000186:1,bza-bseed-slu2019-000186-e221339ca6,BSEED SLU2019-000186,2021-02-23,decided,"COMMUNITY APPEAL DENIED, BSEED GRANT UPHELD",recorded_disposition,2021-02-23_bza_minutes.pdf
+2021-03-09:1-21:1,bza-1-21-97e069a509,1-21,2021-03-09,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-03-09_bza_minutes.pdf
+2021-03-09:10-21:1,bza-10-21-ae57d08409,10-21,2021-03-09,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-03-09_bza_minutes.pdf
+2021-03-09:42-20:1,bza-42-20-373295a30e,42-20,2021-03-09,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-03-09_bza_minutes.pdf
+2021-03-16:11-21:1,bza-11-21-2065af5007,11-21,2021-03-16,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-03-16_bza_minutes.pdf
+2021-03-16:25-20:1,bza-25-20-0c7c6c8bde,25-20,2021-03-16,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-03-16_bza_minutes.pdf
+2021-03-16:8-21:1,bza-8-21-6178c7b555,8-21,2021-03-16,decided,"BSEED DECISION UPHELD, ADDITION DENIED",recorded_disposition,2021-03-16_bza_minutes.pdf
+2021-03-23:12-21:1,bza-12-21-ad158761eb,12-21,2021-03-23,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2021-03-23_bza_minutes.pdf
+2021-03-23:43-20:1,bza-43-20-83bc71214b,43-20,2021-03-23,decided,DIMENSIONAL (Parking) VARIANCE GRANTED,recorded_disposition,2021-03-23_bza_minutes.pdf
+2021-03-30:05-21:1,bza-05-21-9b7c537c06,05-21,2021-03-30,decided,TMSO STANDARDS WAIVED,recorded_disposition,2021-03-30_bza_minutes.pdf
+2021-03-30:BSEED SLU2020-00137:1,bza-bseed-slu2020-00137-78ddfd97ee,BSEED SLU2020-00137,2021-03-30,postponed,AJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-03-30_bza_minutes.pdf
+2021-04-13:16-21:1,bza-16-21-6706391ca7,16-21,2021-04-13,postponed,AJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-04-13_bza_minutes.pdf
+2021-04-13:18-21:1,bza-18-21-2fef649f8a,18-21,2021-04-13,dismissed,DISMISSED WITH RETURN OF FEE,recorded_disposition,2021-04-13_bza_minutes.pdf
+2021-04-20:13-21:1,bza-13-21-993080da6c,13-21,2021-04-20,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2021-04-20_bza_minutes.pdf
+2021-04-20:19-21:1,bza-19-21-15219721d5,19-21,2021-04-20,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-04-20_bza_minutes.pdf
+2021-04-20:26-17:1,bza-26-17-06a09b7674,26-17,2021-04-20,decided,SPACING/LOCATIONAL VARIANCES GRANTED,recorded_disposition,2021-04-20_bza_minutes.pdf
+2021-04-27:20-21:1,bza-20-21-d70f25cae4,20-21,2021-04-27,postponed,AJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-04-27_bza_minutes_1.pdf
+2021-04-27:40-20:1,bza-40-20-36fcdb76ae,40-20,2021-04-27,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-04-27_bza_minutes_1.pdf
+2021-05-11:3-21:1,bza-3-21-cee9bd7f02,3-21,2021-05-11,decided,RE-ESTABLISH DRIVE THRU AND DIMENSIONAL VARIANCES GRANTED.,recorded_disposition,2021-05-11_bza_minutes.pdf
+2021-05-11:34-20:1,bza-34-20-ee36e5ccb2,34-20,2021-05-11,decided,BSEED DENIAL UPHELD/ USE DENIED,recorded_disposition,2021-05-11_bza_minutes.pdf
+2021-05-11:4-21:1,bza-4-21-25f351c9e7,4-21,2021-05-11,decided,BSEED DENIAL UPHELD/ USE DENIED,recorded_disposition,2021-05-11_bza_minutes.pdf
+2021-05-18:22-21:1,bza-22-21-a0cae37c6a,22-21,2021-05-18,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-05-18_bza_minutes.pdf
+2021-05-18:23-21:1,bza-23-21-67b09caf30,23-21,2021-05-18,decided,DIMENSIONAL VARIANCES GRANTED AND TMSO STANDARDS WAIVED,recorded_disposition,2021-05-18_bza_minutes.pdf
+2021-05-25:17-21:1,bza-17-21-b8c081e0c9,17-21,2021-05-25,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2021-05-25_bza_minutes.pdf
+2021-05-25:29-20:1,bza-29-20-787a86c963,29-20,2021-05-25,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2021-05-25_bza_minutes.pdf
+2021-06-08:16-21:1,bza-16-21-6706391ca7,16-21,2021-06-08,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-06-08_bza_minutes.pdf
+2021-06-08:27-21:1,bza-27-21-a56d8905f7,27-21,2021-06-08,decided,DIMENSIONAL (Front Yard Variances) GRANTED,recorded_disposition,2021-06-08_bza_minutes.pdf
+2021-06-15:24-21:1,bza-24-21-9280554649,24-21,2021-06-15,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-06-15_bza_minutes.pdf
+2021-06-15:26-21:1,bza-26-21-b04c2ad13b,26-21,2021-06-15,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2021-06-15_bza_minutes.pdf
+2021-06-15:28-21:1,bza-28-21-05880fccc0,28-21,2021-06-15,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-06-15_bza_minutes.pdf
+2021-06-29:23-21:1,bza-23-21-5de6ae3a94,23-21,2021-06-29,decided,"BSEED’S DECISION AFFIRMED, EXTENSION DENIED",recorded_disposition,2021-06-29_bza_minutes.pdf
+2021-06-29:33-21:1,bza-33-21-ebd11a8b91,33-21,2021-06-29,decided,"BSEED DECISION UPHELD, REQUEST DENIED.",recorded_disposition,2021-06-29_bza_minutes.pdf
+2021-06-29:BSSED SLU2021-00023 & SPR2021-00009:1,bza-bssed-slu2021-00023-spr2021-00009-cb7a323150,BSSED SLU2021-00023 & SPR2021-00009,2021-06-29,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-06-29_bza_minutes.pdf
+2021-07-13:20-21:1,bza-20-21-d70f25cae4,20-21,2021-07-13,decided,"REQUEST DENIED, BSEED DECISION UPHELD",recorded_disposition,2021-07-13_bza_minutes.pdf
+2021-07-13:29-21:1,bza-29-21-cd232a5ef8,29-21,2021-07-13,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-07-13_bza_minutes.pdf
+2021-07-13:30-21:1,bza-30-21-d888c96eb5,30-21,2021-07-13,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-07-13_bza_minutes.pdf
+2021-07-13:34-21:1,bza-34-21-04aac96c4f,34-21,2021-07-13,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-07-13_bza_minutes.pdf
+2021-07-20:31-21:1,bza-31-21-ace9be1d9d,31-21,2021-07-20,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-07-20_bza_minutes.pdf
+2021-07-20:36-21:1,bza-36-21-dce8b705cb,36-21,2021-07-20,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-07-20_bza_minutes.pdf
+2021-08-30:26-21:1,bza-26-21-b04c2ad13b,26-21,2021-08-30,decided,"Re-Hearing Request Granted, fee required.",recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-08-30:31-21:1,bza-31-21-ace9be1d9d,31-21,2021-08-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-08-30:41-21:1,bza-41-21-988b579aea,41-21,2021-08-30,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-08-30:6-19:1,bza-6-19-2b90e3b9d9,6-19,2021-08-30,dismissed,CASES DISMISSED,recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-08-30:87-19:1,bza-87-19-86a1450728,87-19,2021-08-30,dismissed,"CASES DISMISSED, Case 87-19 and 99-19 are dismissed with return of fee.",recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-08-30:99-19:1,bza-99-19-59f6443f73,99-19,2021-08-30,dismissed,"CASES DISMISSED, Case 87-19 and 99-19 are dismissed with return of fee.",recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-08-30:SLU2020-00137:1,bza-slu2020-00137-2c185677d8,SLU2020-00137,2021-08-30,dismissed,CASES DISMISSED,recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-08-30:SLU2021-00023:1,bza-slu2021-00023-547efa3864,SLU2021-00023,2021-08-30,decided,"BSEED DECISION REVERSED, USE DENIED",recorded_disposition,2021-08-30_bza_minutes.pdf
+2021-09-21:44-21:1,bza-44-21-19025a6ffc,44-21,2021-09-21,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2021-09-21_bza_minutes.pdf
+2021-09-21:45-21:1,bza-45-21-6ac1bdcc56,45-21,2021-09-21,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2021-09-21_bza_minutes.pdf
+2021-09-21:56-21:1,bza-56-21-13962dbe62,56-21,2021-09-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-09-21_bza_minutes.pdf
+2021-10-12:18-21:1,bza-18-21-2fef649f8a,18-21,2021-10-12,decided,"BSEED DENIAL UPHELD, USE DENIED",recorded_disposition,2021-10-12_bza_minutes.pdf
+2021-10-12:27-18:1,bza-27-18-c8ce2a7370,27-18,2021-10-12,dismissed,CASES DISMISSED,recorded_disposition,2021-10-12_bza_minutes.pdf
+2021-10-12:3-20:1,bza-3-20-ab5d59efc6,3-20,2021-10-12,dismissed,CASES DISMISSED,recorded_disposition,2021-10-12_bza_minutes.pdf
+2021-10-12:49-21:1,bza-49-21-1a9cf8794a,49-21,2021-10-12,decided,EXPANSION OF NONCONFORMING USE GRANTED,recorded_disposition,2021-10-12_bza_minutes.pdf
+2021-10-12:53-19:1,bza-53-19-966124a009,53-19,2021-10-12,dismissed,CASES DISMISSED,recorded_disposition,2021-10-12_bza_minutes.pdf
+2021-10-12:55-21:1,bza-55-21-48ef6cb9d1,55-21,2021-10-12,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-10-12_bza_minutes.pdf
+2021-10-12:65-19:1,bza-65-19-ece5db0d26,65-19,2021-10-12,dismissed,CASES DISMISSED,recorded_disposition,2021-10-12_bza_minutes.pdf
+2021-10-19:26-21:1,bza-26-21-b04c2ad13b,26-21,2021-10-19,decided,"BSEED DENIAL OVERTURNED, PARKING LOT USE GRANTED",recorded_disposition,2021-10-19_bza_minutes.pdf
+2021-10-19:28-20:1,bza-28-20-22cfec2a50,28-20,2021-10-19,decided,EXPANSION OF NON-CONFORMING USE GRANTED | DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-10-19_bza_minutes.pdf
+2021-10-19:48-21:1,bza-48-21-6842fc0027,48-21,2021-10-19,decided,"BSEED DENIAL UPHELD, ABATTOIR USE DENIED",recorded_disposition,2021-10-19_bza_minutes.pdf
+2021-10-26:40-21:1,bza-40-21-241d47ced9,40-21,2021-10-26,postponed,ADJOURNED WITH FINAL NOTICE,recorded_disposition,2021-10-26_bza_minutes.pdf
+2021-10-26:42-21:1,bza-42-21-7411c236b8,42-21,2021-10-26,decided,“All reasonable economic use” standard not met; HARDSHIP RELIEF PETITION DENIED,recorded_disposition,2021-10-26_bza_minutes.pdf
+2021-10-26:9-21:1,bza-9-21-310ddefa62,9-21,2021-10-26,decided,EXPANSION OF NONCONFORMING USE GRANTED,recorded_disposition,2021-10-26_bza_minutes.pdf
+2021-11-09:44-20:1,bza-44-20-29912dcf2c,44-20,2021-11-09,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2021-11-09_bza_minutes.pdf
+2021-11-09:59-21:1,bza-59-21-1c38dd3618,59-21,2021-11-09,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-11-09_bza_minutes.pdf
+2021-11-09:60-21:1,bza-60-21-edd97a26a1,60-21,2021-11-09,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2021-11-09_bza_minutes.pdf
+2021-12-21:40-21:1,bza-40-21-241d47ced9,40-21,2021-12-21,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2021-12-21_bza_minutes.pdf
+2021-12-21:73-21:1,bza-73-21-281525e794,73-21,2021-12-21,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2021-12-21_bza_minutes.pdf
+2021-12-21:74-21:1,bza-74-21-4b77c7f140,74-21,2021-12-21,decided,"BSEED DECISION REVERSED, EXPANSION GRANTED",recorded_disposition,2021-12-21_bza_minutes.pdf
+2021-12-21:75-21:1,bza-75-21-9044d745bd,75-21,2021-12-21,decided,Dimensional Variances Granted,recorded_disposition,2021-12-21_bza_minutes.pdf
+2022-02-15:25-21:1,bza-25-21-6318646cda,25-21,2022-02-15,decided,NONCONFORMING GAS STATION EXPANSION GRANTED,recorded_disposition,2022-02-15_bza_minutes.pdf
+2022-02-15:40-21:1,bza-40-21-241d47ced9,40-21,2022-02-15,decided,PARKING LOT USE GRANTED AND DIMENSIONAL VARIANCES APPROVED,recorded_disposition,2022-02-15_bza_minutes.pdf
+2022-02-15:80-21:1,bza-80-21-7cf4389d0b,80-21,2022-02-15,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2022-02-15_bza_minutes.pdf
+2022-03-29:70-21:1,bza-70-21-c405bd7cdb,70-21,2022-03-29,decided,EXCESSIVE SQUARE FOOTAGE VARIANCE GRANTED,recorded_disposition,2022-03-29_bza_minutes.pdf
+2022-03-29:77-21:1,bza-77-21-46450fedf6,77-21,2022-03-29,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-03-29_bza_minutes.pdf
+2022-04-19:01-22:1,bza-01-22-5580a4e30b,01-22,2022-04-19,decided,"BSEED DECISION REVERSED, PARKING LOT GRANTED",recorded_disposition,2022-04-19_bza_minutes.pdf
+2022-04-19:79-21:1,bza-79-21-52fddd53d5,79-21,2022-04-19,decided,EXCESSIVE SQUARE FOOTAGE VARIANCE GRANTED,recorded_disposition,2022-04-19_bza_minutes.pdf
+2022-04-19:BSEED SLU2021-00077:1,bza-bseed-slu2021-00077-bd9c3a9d09,BSEED SLU2021-00077,2022-04-19,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2022-04-19_bza_minutes.pdf
+2022-04-26:67-21:1,bza-67-21-1beb30943a,67-21,2022-04-26,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-04-26_bza_minutes.pdf
+2022-04-26:7-22:1,bza-7-22-e8bc45c9d7,7-22,2022-04-26,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2022-04-26_bza_minutes.pdf
+2022-04-26:82-21:1,bza-82-21-76e3fe3dd8,82-21,2022-04-26,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2022-04-26_bza_minutes.pdf
+2022-05-10:3-22:1,bza-3-22-cd12f2bbc2,3-22,2022-05-10,decided,PARKING VARIANCE GRANTED,recorded_disposition,2022-05-10_bza_minutes.pdf
+2022-05-10:61-21:1,bza-61-21-d38fa68bf4,61-21,2022-05-10,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-05-10_bza_minutes.pdf
+2022-05-10:8-22:1,bza-8-22-922c1bb173,8-22,2022-05-10,decided,PARKING VARIANCE GRANTED,recorded_disposition,2022-05-10_bza_minutes.pdf
+2022-05-10:9-22:1,bza-9-22-9fe538539b,9-22,2022-05-10,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-05-10_bza_minutes.pdf
+2022-05-17:11-22:1,bza-11-22-50abfc40df,11-22,2022-05-17,decided,DIMENSIONAL VARIANCE (Parking) GRANTED,recorded_disposition,2022-05-17_bza_minutes.pdf
+2022-05-17:13-22:1,bza-13-22-b4f37988c4,13-22,2022-05-17,decided,DIMENSIONAL VARIANCEs GRANTED,recorded_disposition,2022-05-17_bza_minutes.pdf
+2022-05-17:80-21:1,bza-80-21-7cf4389d0b,80-21,2022-05-17,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2022-05-17_bza_minutes.pdf
+2022-08-30:42-22:1,bza-42-22-b5f8284c87,42-22,2022-08-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-08-30_bza_minutes.pdf
+2022-08-30:43-22:1,bza-43-22-cb2a611acd,43-22,2022-08-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-08-30_bza_minutes.pdf
+2022-08-30:44-22:1,bza-44-22-b4c125acb3,44-22,2022-08-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-08-30_bza_minutes.pdf
+2022-08-30:45-22:1,bza-45-22-ac51806c35,45-22,2022-08-30,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2022-08-30_bza_minutes.pdf
+2022-09-13:38-22:1,bza-38-22-38ba18ce36,38-22,2022-09-13,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-09-13_bza_minutes.pdf
+2022-09-13:40-22:1,bza-40-22-1bccc643ae,40-22,2022-09-13,decided,CHANGE OF NONCONFORMING USE AND DIMENSIONAL PARKING VARIANCE GRANTED,recorded_disposition,2022-09-13_bza_minutes.pdf
+2022-09-13:BSEED SLU2022-00038:1,bza-bseed-slu2022-00038-7072ea4ca4,BSEED SLU2022-00038,2022-09-13,dismissed,"STANDING HAS NOT BEEN ESTABLISHED, therefore the Board cannot proceed to the Appeal.",recorded_disposition,2022-09-13_bza_minutes.pdf
+2022-09-20:41-22:1,bza-41-22-15dfb8ba06,41-22,2022-09-20,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-09-20_bza_minutes.pdf
+2022-09-20:48-22:1,bza-48-22-a38616f516,48-22,2022-09-20,decided,"BSEED DENIAL UPHELD, RENOVATION REQUEST DENIED",recorded_disposition,2022-09-20_bza_minutes.pdf
+2022-09-20:50-22:1,bza-50-22-e2dd6e5b59,50-22,2022-09-20,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-09-20_bza_minutes.pdf
+2022-09-27:45-22:1,bza-45-22-ac51806c35,45-22,2022-09-27,decided,"MOTION FAILS DUE TO VOTE COUNT, REQUEST DENIED",recorded_disposition,2022-09-27_bza_minutes_1.pdf
+2022-09-27:49-22:1,bza-49-22-8cce07fda5,49-22,2022-09-27,decided,"BSEED DENIAL UPHELD, MODIFICATION REQUEST DENIED",recorded_disposition,2022-09-27_bza_minutes_1.pdf
+2022-09-27:51-22:1,bza-51-22-07f10681c0,51-22,2022-09-27,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-09-27_bza_minutes_1.pdf
+2022-09-27:58-22:1,bza-58-22-943196124c,58-22,2022-09-27,decided,DIMENSIONAL PARKING VARIANCE GRANTED,recorded_disposition,2022-09-27_bza_minutes_1.pdf
+2022-10-25:53-22:1,bza-53-22-f89cd6be57,53-22,2022-10-25,dismissed,DISMISSED WITH RETURN OF FEE,recorded_disposition,2022-10-25_bza_minutes.pdf
+2022-10-25:56-22:1,bza-56-22-ec38b25482,56-22,2022-10-25,decided,"BSEED DENIAL UPHELD, USE DENIED",recorded_disposition,2022-10-25_bza_minutes.pdf
+2022-10-25:57-22:1,bza-57-22-29d327c7bd,57-22,2022-10-25,decided,DIMENSIONAL VARIANCES DENIED,recorded_disposition,2022-10-25_bza_minutes.pdf
+2022-11-15:52-22:1,bza-52-22-dbe49059e9,52-22,2022-11-15,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2022-11-15_bza_minutes.pdf
+2022-11-15:55-22:1,bza-55-22-5f45ad09c6,55-22,2022-11-15,decided,CHANGE OF NONCONFORMNG USE GRANTED,recorded_disposition,2022-11-15_bza_minutes.pdf
+2022-11-15:59-22:1,bza-59-22-b75dd5795b,59-22,2022-11-15,postponed,"ADJOURNED TO DECEMBER 13, 2022",recorded_disposition,2022-11-15_bza_minutes.pdf
+2023-01-30:46-22:1,bza-46-22-492c5e629d,46-22,2023-01-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-01-30:59-22:1,bza-59-22-b75dd5795b,59-22,2023-01-30,dismissed,DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-01-30:60-22:1,bza-60-22-958ec66e06,60-22,2023-01-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-01-30:61-22:1,bza-61-22-401fb1319a,61-22,2023-01-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-01-30:62-22:1,bza-62-22-fb5b5b77b1,62-22,2023-01-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-01-30:63-22:1,bza-63-22-01da7e63d3,63-22,2023-01-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-01-30:66-22:1,bza-66-22-a6e0b1dc18,66-22,2023-01-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-01-30:70-22:1,bza-70-22-983cbd4b8b,70-22,2023-01-30,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-01-30_bza_minutes.pdf
+2023-02-13:37-22:1,bza-37-22-b17d680e46,37-22,2023-02-13,dismissed,DISMISSED WITH RETURN OF FEE,recorded_disposition,2023-02-13_bza_minutes.pdf
+2023-02-13:73-22:1,bza-73-22-965d798f67,73-22,2023-02-13,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2023-02-13_bza_minutes.pdf
+2023-02-13:74-22:1,bza-74-22-7d9c062553,74-22,2023-02-13,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-02-13_bza_minutes.pdf
+2023-02-20:01-23:1,bza-01-23-b0171819a2,01-23,2023-02-20,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2023-02-20_bza_minutes.pdf
+2023-02-20:03-23:1,bza-03-23-cdc3a2629c,03-23,2023-02-20,decided,MOTION FAILED DUE TO VOTE COUNT. DRUG FREE ZONE AFFIRMED,recorded_disposition,2023-02-20_bza_minutes.pdf
+2023-02-20:06-23:1,bza-06-23-06ef82a262,06-23,2023-02-20,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2023-02-20_bza_minutes.pdf
+2023-02-27:05-23:1,bza-05-23-5a53c91971,05-23,2023-02-27,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-02-27_bza_minutes.pdf
+2023-02-27:75-22:1,bza-75-22-e3fe10778e,75-22,2023-02-27,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-02-27_bza_minutes.pdf
+2023-02-27:BSEED SLU2022-00038:1,bza-bseed-slu2022-00038-7072ea4ca4,BSEED SLU2022-00038,2023-02-27,decided,AGGRIEVED STANDARD NOT MET,recorded_disposition,2023-02-27_bza_minutes.pdf
+2023-03-13:02-23:1,bza-02-23-09191613e4,02-23,2023-03-13,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-03-13_bza_minutes.pdf
+2023-03-13:07-23:1,bza-07-23-9b431ff07a,07-23,2023-03-13,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-03-13_bza_minutes.pdf
+2023-03-13:31-22:1,bza-31-22-0443674bdf,31-22,2023-03-13,dismissed,DISMISS WITH RETURN OF FEE,recorded_disposition,2023-03-13_bza_minutes.pdf
+2023-03-13:81-21:1,bza-81-21-7685eb2595,81-21,2023-03-13,postponed,"ADJOURNED TO MARCH 20, 2023",recorded_disposition,2023-03-13_bza_minutes.pdf
+2023-03-20:06-22:1,bza-06-22-239afc0021,06-22,2023-03-20,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-03-20_bza_minutes.pdf
+2023-03-20:32-21:1,bza-32-21-04cdb9c55b,32-21,2023-03-20,dismissed,DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2023-03-20_bza_minutes.pdf
+2023-03-20:71-22:1,bza-71-22-235ad6936d,71-22,2023-03-20,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2023-03-20_bza_minutes.pdf
+2023-03-20:81-21:1,bza-81-21-7685eb2595,81-21,2023-03-20,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-03-20_bza_minutes.pdf
+2023-03-27:08-23:1,bza-08-23-aa01dd18f0,08-23,2023-03-27,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-03-27_bza_minutes.pdf
+2023-03-27:09-23:1,bza-09-23-2b90c325ff,09-23,2023-03-27,decided,PARKING AREA ALLOWED IN FRONT OF RESIDENTIAL HOME | REQUEST TO RETURN FEE TO PETITIONER GRANTED,recorded_disposition,2023-03-27_bza_minutes.pdf
+2023-05-01:03-23:1,bza-03-23-cdc3a2629c,03-23,2023-05-01,decided,MOTION FAILED DUE TO VOTE COUNT. REHEARING REQUEST DENIED,recorded_disposition,2023-05-01_bza_minutes.pdf
+2023-05-01:11-23:1,bza-11-23-100fdb0043,11-23,2023-05-01,decided,EXPAND NONCONFORMING USE GRANTED,recorded_disposition,2023-05-01_bza_minutes.pdf
+2023-05-01:13-23:1,bza-13-23-fa2355c165,13-23,2023-05-01,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-05-01_bza_minutes.pdf
+2023-05-15:16-23:1,bza-16-23-d69ef06e72,16-23,2023-05-15,decided,BSEED DENIAL UPHELD,recorded_disposition,2023-05-15_bza_minutes.pdf
+2023-05-15:17-23:1,bza-17-23-eb9c5fba42,17-23,2023-05-15,decided,MOTION FAILED DUE TO VOTE COUNT/BSEED DENIAL UPHELD,recorded_disposition,2023-05-15_bza_minutes.pdf
+2023-05-15:64-22:1,bza-64-22-591273173f,64-22,2023-05-15,postponed,"ADJOURNED TIL MAY 22, 2023",recorded_disposition,2023-05-15_bza_minutes.pdf
+2023-05-15:94-19:1,bza-94-19-5002df6378,94-19,2023-05-15,decided,"BSEED DECISION UPHELD, USE DENIED",recorded_disposition,2023-05-15_bza_minutes.pdf
+2023-05-22:17-23:1,bza-17-23-eb9c5fba42,17-23,2023-05-22,decided,"BSEED DECISION REVERSED, USE GRANTED FOR PARKING LOT AT SUBJECT PROPERTY.",recorded_disposition,2023-05-22_bza_minutes.pdf
+2023-05-22:18-23:1,bza-18-23-535a07c23f,18-23,2023-05-22,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-05-22_bza_minutes.pdf
+2023-05-22:20-23:1,bza-20-23-dab8c7b9c0,20-23,2023-05-22,decided,DIMENSIONAL VARIANCES DENIED,recorded_disposition,2023-05-22_bza_minutes.pdf
+2023-05-22:21-23:1,bza-21-23-1b926e9998,21-23,2023-05-22,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-05-22_bza_minutes.pdf
+2023-05-22:64-22:1,bza-64-22-591273173f,64-22,2023-05-22,decided,MOTION FAILS DUE TO VOTE COUNT. HARDSHIP RELIEF PETITION DENIED.,recorded_disposition,2023-05-22_bza_minutes.pdf
+2023-06-12:22-23:1,bza-22-23-4eb0024be7,22-23,2023-06-12,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-06-12_bza_minutes.pdf
+2023-06-12:23-23:1,bza-23-23-d43e4e845a,23-23,2023-06-12,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-06-12_bza_minutes.pdf
+2023-06-12:BSEED SLU2023-00014 (COMMUNITY APPEAL):1,bza-bseed-slu2023-00014-community-appeal-8b680b85f6,BSEED SLU2023-00014 (COMMUNITY APPEAL),2023-06-12,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2023-06-12_bza_minutes.pdf
+2023-06-26:19-23:1,bza-19-23-ed15514286,19-23,2023-06-26,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-06-26_bza_minutes.pdf
+2023-06-26:24-23:1,bza-24-23-39f2ee37b3,24-23,2023-06-26,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-06-26_bza_minutes.pdf
+2023-06-26:BSEED SLU2022-00181:1,bza-bseed-slu2022-00181-f4fb048e7f,BSEED SLU2022-00181,2023-06-26,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2023-06-26_bza_minutes.pdf
+2023-07-17:01-23:1,bza-01-23-b0171819a2,01-23,2023-07-17,decided,"BSEED’S DECISION UPHELD, USE DENIED",recorded_disposition,2023-07-17_bza_minutes.pdf
+2023-07-17:27-23:1,bza-27-23-9c40617de8,27-23,2023-07-17,decided,DIMENSIONAL (PARKING) VARIANCES GRANTED,recorded_disposition,2023-07-17_bza_minutes.pdf
+2023-07-17:BSEED SLU2022-00042:1,bza-bseed-slu2022-00042-fcd0ff29b5,BSEED SLU2022-00042,2023-07-17,dismissed,CASE DISMISSED,recorded_disposition,2023-07-17_bza_minutes.pdf
+2023-07-17:BSEED SLU2022-00181:1,bza-bseed-slu2022-00181-f4fb048e7f,BSEED SLU2022-00181,2023-07-17,dismissed,CASE DISMISSED,recorded_disposition,2023-07-17_bza_minutes.pdf
+2023-07-24:25-23:1,bza-25-23-d87a52a78b,25-23,2023-07-24,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2023-07-24_bza_minutes.pdf
+2023-07-24:28-23:1,bza-28-23-32856cc88a,28-23,2023-07-24,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2023-07-24_bza_minutes.pdf
+2023-08-14:36-23:1,bza-36-23-eb4390b021,36-23,2023-08-14,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-08-14_bza_minutes.pdf
+2023-08-14:39-23:1,bza-39-23-9f515fc65e,39-23,2023-08-14,decided,CHANGE AND EXPANSION OF NONCONFORMING USE GRANTED / DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-08-14_bza_minutes.pdf
+2023-08-14:BSEEDSLU2023-00014:1,bza-bseedslu2023-00014-500488c05f,BSEEDSLU2023-00014,2023-08-14,postponed,"AGGRIEVED PERSON STANDARD MET / ADJOURNED TO AUGUST 21, 2023",recorded_disposition,2023-08-14_bza_minutes.pdf
+2023-08-21:29-23:1,bza-29-23-1e6ae3ddb9,29-23,2023-08-21,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-21:30-23:1,bza-30-23-0932bf1f77,30-23,2023-08-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-21:31-23:1,bza-31-23-4dc13ed6eb,31-23,2023-08-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-21:32-23:1,bza-32-23-5510e7b99d,32-23,2023-08-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-21:33-23:1,bza-33-23-9df1fa2044,33-23,2023-08-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-21:34-23:1,bza-34-23-b9a318fe90,34-23,2023-08-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-21:35-23:1,bza-35-23-80eeb47028,35-23,2023-08-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-21:BSEEDSLU2023-00014 (COMMUNITY APPEAL):1,bza-bseedslu2023-00014-community-appeal-f0d68c60e5,BSEEDSLU2023-00014 (COMMUNITY APPEAL),2023-08-21,decided,"MOTION FAILS DUE TO VOTE COUNT ACCORIDING TO THE RULES AND PROCEDURES, BSEED GRANT UPHELD",recorded_disposition,2023-08-21_bza_minutes.pdf
+2023-08-28:37-23:1,bza-37-23-9ef40df08c,37-23,2023-08-28,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2023-08-28_bza_minutes.pdf
+2023-08-28:4-23:1,bza-4-23-9c77a16125,4-23,2023-08-28,decided,HARDSHIP RELIEF PETITION GRANTED,recorded_disposition,2023-08-28_bza_minutes.pdf
+2023-08-28:41-23:1,bza-41-23-556360fc27,41-23,2023-08-28,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2023-08-28_bza_minutes.pdf
+2023-09-11:38-23:1,bza-38-23-2b956d227e,38-23,2023-09-11,decided,RE-ESTABLISH ABANDONED CARRYOUT RESTAURANT USE GRANTED | RE-ESTABLISH CARRYOUT RESTAURANT USE GRANTED | CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2023-09-11_bza_minutes.pdf
+2023-09-11:40-23:1,bza-40-23-012c2b298a,40-23,2023-09-11,decided,DIMENSIONAL VARAINCE GRANTED,recorded_disposition,2023-09-11_bza_minutes.pdf
+2023-09-11:BSEED SLU2023-00053:1,bza-bseed-slu2023-00053-66b77370f6,BSEED SLU2023-00053,2023-09-11,decided,AGGRIEVED PERSON STANDARD NOT MET,recorded_disposition,2023-09-11_bza_minutes.pdf
+2024-01-29:2-24:1,bza-2-24-a52a3386d9,2-24,2024-01-29,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2024-01-29_bza_minutes.pdf
+2024-01-29:3-24:1,bza-3-24-b561a47236,3-24,2024-01-29,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-01-29_bza_minutes.pdf
+2024-02-12:4-24:1,bza-4-24-1781607356,4-24,2024-02-12,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-02-12_bza_minutes.pdf
+2024-02-12:5-24:1,bza-5-24-129e13df5d,5-24,2024-02-12,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-02-12_bza_minutes.pdf
+2024-02-12:56-23:1,bza-56-23-c15a6bc544,56-23,2024-02-12,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2024-02-12_bza_minutes.pdf
+2024-02-19:7-24:1,bza-7-24-5ad1c5fa16,7-24,2024-02-19,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-02-19_bza_minutes.pdf
+2024-02-19:8-24:1,bza-8-24-a24c88c868,8-24,2024-02-19,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2024-02-19_bza_minutes.pdf
+2024-02-19:9-24:1,bza-9-24-bb584396c6,9-24,2024-02-19,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-02-19_bza_minutes.pdf
+2024-03-11:10-24:1,bza-10-24-4e76e64453,10-24,2024-03-11,dismissed,CASE DISMISSED WITH RETURN OF FEE,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-11:13-24:1,bza-13-24-797c117868,13-24,2024-03-11,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-11:14-24:1,bza-14-24-3f7d9a8551,14-24,2024-03-11,decided,BSEED DENIAL OVERTURNED WITH CONDITIONS,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-11:4-22:1,bza-4-22-321d323913,4-22,2024-03-11,dismissed,CASES DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-11:40-20:1,bza-40-20-36fcdb76ae,40-20,2024-03-11,dismissed,CASES DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-11:54-23:1,bza-54-23-6eab1a3ade,54-23,2024-03-11,dismissed,CASES DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-11:65-33:1,bza-65-33-781a0accb3,65-33,2024-03-11,dismissed,CASES DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-11:89-19:1,bza-89-19-2ba8fd28cf,89-19,2024-03-11,dismissed,CASES DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2024-03-11_bza_minutes.pdf
+2024-03-18:16-24:1,bza-16-24-5938101fbe,16-24,2024-03-18,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-03-18_bza_minutes.pdf
+2024-03-18:17-24:1,bza-17-24-ce52cb3966,17-24,2024-03-18,dismissed,DISMISSED WITH RETURN OF FEE,recorded_disposition,2024-03-18_bza_minutes.pdf
+2024-03-18:18-24:1,bza-18-24-b7d9862137,18-24,2024-03-18,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-03-18_bza_minutes.pdf
+2024-03-25:19-24:1,bza-19-24-5152521f4c,19-24,2024-03-25,postponed,ADJOURNED WITH FEE AND WITHOUT DATE,recorded_disposition,2024-03-25_bza_minutes.pdf
+2024-03-25:20-24:1,bza-20-24-2cf05e2c11,20-24,2024-03-25,decided,EXPANSION OF NONCONFORMING USE GRANTED,recorded_disposition,2024-03-25_bza_minutes.pdf
+2024-03-25:21-24:1,bza-21-24-b752b33f22,21-24,2024-03-25,decided,BSEED SITE PLAN DENIAL UPHELD,inferred_from_motion_and_vote,2024-03-25_bza_minutes.pdf
+2024-03-25:56-23:1,bza-56-23-c15a6bc544,56-23,2024-03-25,dismissed,DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2024-03-25_bza_minutes.pdf
+2024-04-08:12-24:1,bza-12-24-a6fc69b387,12-24,2024-04-08,decided,"CHANGE OF NONCONFORMING USE GRANTED, VARIANCE CASE SCHEDULED FOR APRIL 15, 2024",recorded_disposition,2024-04-08_bza_minutes.pdf
+2024-04-08:22-24:1,bza-22-24-5c0940c4c3,22-24,2024-04-08,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-04-08_bza_minutes.pdf
+2024-04-08:23-24:1,bza-23-24-52267c8cf9,23-24,2024-04-08,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-04-08_bza_minutes.pdf
+2024-04-15:24-24:1,bza-24-24-ba03fb1f1d,24-24,2024-04-15,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-04-15_bza_minutes.pdf
+2024-04-15:25-24:1,bza-25-24-e30fbc8699,25-24,2024-04-15,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-04-15_bza_minutes.pdf
+2024-04-15:8-24:1,bza-8-24-a24c88c868,8-24,2024-04-15,decided,BSEED DENIAL UPHELD,recorded_disposition,2024-04-15_bza_minutes.pdf
+2024-05-13:26-24:1,bza-26-24-8498a9e0ce,26-24,2024-05-13,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-05-13_bza_minutes.pdf
+2024-05-13:27-24:1,bza-27-24-014e8967b0,27-24,2024-05-13,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-05-13_bza_minutes.pdf
+2024-05-13:28-24:1,bza-28-24-a82f3aaf57,28-24,2024-05-13,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-05-13_bza_minutes.pdf
+2024-05-20:11-24:1,bza-11-24-fe29e0d378,11-24,2024-05-20,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2024-05-20_bza_minutes.pdf
+2024-05-20:29-24:1,bza-29-24-6d70f0b779,29-24,2024-05-20,dismissed,CASE DISMISSED,recorded_disposition,2024-05-20_bza_minutes.pdf
+2024-05-20:31-24:1,bza-31-24-5f6ef1ba25,31-24,2024-05-20,decided,DIMENSIONAL VARIANCES DENIED,recorded_disposition,2024-05-20_bza_minutes.pdf
+2024-05-20:32-24:1,bza-32-24-9d20f69e4b,32-24,2024-05-20,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-05-20_bza_minutes.pdf
+2024-06-10:30-24:1,bza-30-24-94d9984635,30-24,2024-06-10,decided,DIMENSIONAL VARIANCES DENIED,recorded_disposition,2024-06-10_bza_minutes.pdf
+2024-06-10:31-24:1,bza-31-24-5f6ef1ba25,31-24,2024-06-10,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-06-10_bza_minutes.pdf
+2024-06-10:33-24:1,bza-33-24-f8b434d5ad,33-24,2024-06-10,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-06-10_bza_minutes.pdf
+2024-06-17:34-24:1,bza-34-24-0550ac5afc,34-24,2024-06-17,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-06-17_bza_minutes.pdf
+2024-06-17:35-24:1,bza-35-24-7b8306b2c9,35-24,2024-06-17,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-06-17_bza_minutes.pdf
+2024-06-17:36-24:1,bza-36-24-25e89f7eb8,36-24,2024-06-17,decided,BSEED DENIAL UPHELD,recorded_disposition,2024-06-17_bza_minutes.pdf
+2024-06-24:11-24:1,bza-11-24-fe29e0d378,11-24,2024-06-24,decided,EXPANSION OF NONCONFORMING USE GRANTED,recorded_disposition,2024-06-24_bza_minutes.pdf
+2024-06-24:19-24:1,bza-19-24-5152521f4c,19-24,2024-06-24,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-06-24_bza_minutes.pdf
+2024-06-24:39-24:1,bza-39-24-fc8328dfcb,39-24,2024-06-24,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-06-24_bza_minutes.pdf
+2024-07-08:15-24:1,bza-15-24-43336a40f9,15-24,2024-07-08,decided,DIMENSIONAL AND LOCATIONAL VARIANCES GRANTED,recorded_disposition,2024-07-08_bza_minutes.pdf
+2024-07-08:40-24:1,bza-40-24-8e2b4f04b1,40-24,2024-07-08,decided,VARIANCE REQUEST DENIED DUE TO VOTE COUNT,recorded_disposition,2024-07-08_bza_minutes.pdf
+2024-07-08:41-24:1,bza-41-24-ea692df8b1,41-24,2024-07-08,dismissed,CASE DISMISSED,recorded_disposition,2024-07-08_bza_minutes.pdf
+2024-07-15:37-24:1,bza-37-24-f961ca02ca,37-24,2024-07-15,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-07-15_bza_minutes.pdf
+2024-07-15:42-24:1,bza-42-24-3db62ad7f6,42-24,2024-07-15,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-07-15_bza_minutes.pdf
+2024-07-15:44-24:1,bza-44-24-a72911911c,44-24,2024-07-15,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-07-15_bza_minutes.pdf
+2024-07-15:47-24:1,bza-47-24-192327b733,47-24,2024-07-15,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-07-15_bza_minutes.pdf
+2024-07-22:38-24:1,bza-38-24-5cdec3b56e,38-24,2024-07-22,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2024-07-22_bza_minutes.pdf
+2024-07-22:45-24:1,bza-45-24-0ac7b21e08,45-24,2024-07-22,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-07-22_bza_minutes.pdf
+2024-07-22:46-24:1,bza-46-24-04961161fb,46-24,2024-07-22,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-07-22_bza_minutes.pdf
+2024-07-29:29-23:1,bza-29-23-1e6ae3ddb9,29-23,2024-07-29,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2024-07-29_bza_minutes.pdf
+2024-07-29:30-23:1,bza-30-23-0932bf1f77,30-23,2024-07-29,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2024-07-29_bza_minutes.pdf
+2024-07-29:31-23:1,bza-31-23-4dc13ed6eb,31-23,2024-07-29,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2024-07-29_bza_minutes.pdf
+2024-07-29:32-23:1,bza-32-23-5510e7b99d,32-23,2024-07-29,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2024-07-29_bza_minutes.pdf
+2024-07-29:33-23:1,bza-33-23-9df1fa2044,33-23,2024-07-29,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2024-07-29_bza_minutes.pdf
+2024-07-29:34-23:1,bza-34-23-b9a318fe90,34-23,2024-07-29,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2024-07-29_bza_minutes.pdf
+2024-07-29:35-23:1,bza-35-23-80eeb47028,35-23,2024-07-29,postponed,ADJOURNED WITHOUT DATE AND WITH FEE,recorded_disposition,2024-07-29_bza_minutes.pdf
+2024-08-12:48-24:1,bza-48-24-4a6b166e25,48-24,2024-08-12,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-08-12_bza_minutes.pdf
+2024-08-12:51-24:1,bza-51-24-646801293c,51-24,2024-08-12,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-08-12_bza_minutes.pdf
+2024-08-19:53-24:1,bza-53-24-56e59115b1,53-24,2024-08-19,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-08-19_bza_minutes.pdf
+2024-08-19:54-24:1,bza-54-24-ed802c4239,54-24,2024-08-19,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-08-19_bza_minutes.pdf
+2024-08-19:58-24:1,bza-58-24-6532bebb8a,58-24,2024-08-19,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-08-19_bza_minutes.pdf
+2024-09-23:57-24:1,bza-57-24-083f13055b,57-24,2024-09-23,decided,BSEED DECISION UPHELD,recorded_disposition,2024-09-23_bza_minutes.pdf
+2024-09-23:60-24:1,bza-60-24-fc667bdd68,60-24,2024-09-23,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-09-23_bza_minutes.pdf
+2024-09-23:61-24:1,bza-61-24-a638176bcc,61-24,2024-09-23,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-09-23_bza_minutes.pdf
+2024-09-23:64-24:1,bza-64-24-a56bb532d6,64-24,2024-09-23,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-09-23_bza_minutes.pdf
+2024-09-30:29-24:1,bza-29-24-6d70f0b779,29-24,2024-09-30,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-09-30_bza_minutes.pdf
+2024-09-30:56-24:1,bza-56-24-ac697c2a02,56-24,2024-09-30,postponed,"ADJOURNED TO OCTOBER 21, 2024",recorded_disposition,2024-09-30_bza_minutes.pdf
+2024-09-30:62-24:1,bza-62-24-e9793916e2,62-24,2024-09-30,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-09-30_bza_minutes.pdf
+2024-10-14:29-23:1,bza-29-23-1e6ae3ddb9,29-23,2024-10-14,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-10-14_bza_minutes.pdf
+2024-10-14:30-23:1,bza-30-23-0932bf1f77,30-23,2024-10-14,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-10-14_bza_minutes.pdf
+2024-10-14:31-23:1,bza-31-23-4dc13ed6eb,31-23,2024-10-14,under_advisement,"TAKEN UNDER ADVISMENT TO NOVEMBER 4, 2024",recorded_disposition,2024-10-14_bza_minutes.pdf
+2024-10-14:32-23:1,bza-32-23-5510e7b99d,32-23,2024-10-14,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-10-14_bza_minutes.pdf
+2024-10-14:33-23:1,bza-33-23-9df1fa2044,33-23,2024-10-14,under_advisement,"TAKEN UNDER ADVISMENT TO NOVEMBER 4, 2024",recorded_disposition,2024-10-14_bza_minutes.pdf
+2024-10-14:34-23:1,bza-34-23-b9a318fe90,34-23,2024-10-14,under_advisement,"TAKEN UNDER ADVISMENT TO NOVEMBER 4, 2024",recorded_disposition,2024-10-14_bza_minutes.pdf
+2024-10-14:35-23:1,bza-35-23-80eeb47028,35-23,2024-10-14,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-10-14_bza_minutes.pdf
+2024-10-21:65-24:1,bza-65-24-4abb08cb2f,65-24,2024-10-21,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2024-10-21_bza_minutes.pdf
+2024-10-21:66-24:1,bza-66-24-27cac6bb0f,66-24,2024-10-21,decided,DIMENSIONAL PARKING VARIANCES DENIED,recorded_disposition,2024-10-21_bza_minutes.pdf
+2024-10-21:68-24:1,bza-68-24-956bfd6d3d,68-24,2024-10-21,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2024-10-21_bza_minutes.pdf
+2024-10-28:49-24:1,bza-49-24-176da3f813,49-24,2024-10-28,decided,BSEED DENIAL UPHELD,recorded_disposition,2024-10-28_bza_minutes.pdf
+2024-10-28:55-24:1,bza-55-24-5abfd2ee33,55-24,2024-10-28,decided,NONCONFORMING USE EXPANSION GRANTED,recorded_disposition,2024-10-28_bza_minutes.pdf
+2024-10-28:BSEED SLU2024-00043:1,bza-bseed-slu2024-00043-35e34d484b,BSEED SLU2024-00043,2024-10-28,postponed,"ADJOURNED TO DECEMBER 16, 2024",recorded_disposition,2024-10-28_bza_minutes.pdf
+2024-10-28:BSEED SLU2024-0060:1,bza-bseed-slu2024-0060-b144f712f9,BSEED SLU2024-0060,2024-10-28,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2024-10-28_bza_minutes.pdf
+2025-01-27:BSEED SLU2024-00062:1,bza-bseed-slu2024-00062-b94c40c39e,BSEED SLU2024-00062,2025-01-27,postponed,CASE ADJOURNED WITHOUT DATE,recorded_disposition,2025-01-27_bza_minutes.pdf
+2025-01-27:BSEED SLU2024-0060:1,bza-bseed-slu2024-0060-b144f712f9,BSEED SLU2024-0060,2025-01-27,decided,"BSEED APPROVAL REVERSED, USE DENIED",recorded_disposition,2025-01-27_bza_minutes.pdf
+2025-02-17:1-24:1,bza-1-24-938659c379,1-24,2025-02-17,dismissed,CASE DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2025-02-17_bza_minutes.pdf
+2025-02-17:67-24:1,bza-67-24-6a04eb879d,67-24,2025-02-17,decided,EXPANSION OF NONCONFORMING USE GRANTED,recorded_disposition,2025-02-17_bza_minutes.pdf
+2025-02-17:76-24:1,bza-76-24-6ee5d23546,76-24,2025-02-17,decided,EXPANSION OF NONCONFORMING USE GRANTED,recorded_disposition,2025-02-17_bza_minutes.pdf
+2025-02-17:BSEED SLU2024-00043:1,bza-bseed-slu2024-00043-35e34d484b,BSEED SLU2024-00043,2025-02-17,decided,MOTION FAILS DUE TO VOTE COUNT. STANDING STANDARD NOT MET. BSEED DECISION UPHELD.,recorded_disposition,2025-02-17_bza_minutes.pdf
+2025-02-24:52-23:1,bza-52-23-a7b9086fdb,52-23,2025-02-24,dismissed,CASE DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2025-02-24_bza_minutes.pdf
+2025-02-24:77-24:1,bza-77-24-8710bfed88,77-24,2025-02-24,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-02-24_bza_minutes.pdf
+2025-02-24:79-24:1,bza-79-24-03fe91ef07,79-24,2025-02-24,decided,DIMENSIONAL VARIANCE GRANTED / DIMENSIONAL VARIANCE FOR INTERIOR LANDSCAPING WAIVED / DIMENSIONAL SCREENING VARIANCE GRANTED,recorded_disposition,2025-02-24_bza_minutes.pdf
+2025-02-24:86-24:1,bza-86-24-15baadd557,86-24,2025-02-24,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-02-24_bza_minutes.pdf
+2025-03-10:2-24:1,bza-2-24-a52a3386d9,2-24,2025-03-10,dismissed,DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2025-03-10_bza_minutes.pdf
+2025-03-10:50-24:1,bza-50-24-10e21a7cea,50-24,2025-03-10,postponed,"ADJOURNED TO MARCH 24, 2025",recorded_disposition,2025-03-10_bza_minutes.pdf
+2025-03-17:1-25:1,bza-1-25-e8e3ff71db,1-25,2025-03-17,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-03-17_bza_minutes.pdf
+2025-03-17:59-24:1,bza-59-24-7f6f8d4dde,59-24,2025-03-17,under_advisement,TAKEN UNDER ADVISEMENT,recorded_disposition,2025-03-17_bza_minutes.pdf
+2025-03-17:80-24:1,bza-80-24-eb9518e9ff,80-24,2025-03-17,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-03-17_bza_minutes.pdf
+2025-03-17:83-24:1,bza-83-24-c9e72204a7,83-24,2025-03-17,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-03-17_bza_minutes.pdf
+2025-03-17:85-24:1,bza-85-24-ae3e833dfd,85-24,2025-03-17,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-03-17_bza_minutes.pdf
+2025-03-24:4-25:1,bza-4-25-34d6c95571,4-25,2025-03-24,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-03-24_bza_minutes.pdf
+2025-03-24:50-24:1,bza-50-24-10e21a7cea,50-24,2025-03-24,decided,HARDSHIP RELIEF PETITION GRANTED / DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-03-24_bza_minutes.pdf
+2025-03-24:76-24:1,bza-76-24-6ee5d23546,76-24,2025-03-24,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2025-03-24_bza_minutes.pdf
+2025-03-24:82-24:1,bza-82-24-c4233e3f2a,82-24,2025-03-24,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-03-24_bza_minutes.pdf
+2025-03-24:84-24:1,bza-84-24-6f5548ffcb,84-24,2025-03-24,postponed,"ADJOURNED TO APRIL 14, 2025",recorded_disposition,2025-03-24_bza_minutes.pdf
+2025-03-24:BSEED SLU2024-00062:1,bza-bseed-slu2024-00062-b94c40c39e,BSEED SLU2024-00062,2025-03-24,decided,"BSEED DECISION REVERSED, USE DENIED",recorded_disposition,2025-03-24_bza_minutes.pdf
+2025-04-14:3-25:1,bza-3-25-36721a5eeb,3-25,2025-04-14,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-04-14_bza_minutes.pdf
+2025-04-14:5-25:1,bza-5-25-489295d35a,5-25,2025-04-14,decided,DIMENSIONAL VARIANCE DENIED,recorded_disposition,2025-04-14_bza_minutes.pdf
+2025-04-14:7-25:1,bza-7-25-6f5b94d140,7-25,2025-04-14,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-04-14_bza_minutes.pdf
+2025-04-14:84-24:1,bza-84-24-6f5548ffcb,84-24,2025-04-14,decided,DIMENSIONAL VARIANCE GRANTED,inferred_from_motion_and_vote,2025-04-14_bza_minutes.pdf
+2025-04-14:9-25:1,bza-9-25-8fbe580481,9-25,2025-04-14,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-04-14_bza_minutes.pdf
+2025-04-21:43-24:1,bza-43-24-4bc5821238,43-24,2025-04-21,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2025-04-21_bza_minutes.pdf
+2025-05-12:10-25:1,bza-10-25-d76fac624f,10-25,2025-05-12,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2025-05-12_bza_minutes.pdf
+2025-05-12:61-18:1,bza-61-18-2008f817ed,61-18,2025-05-12,postponed,"ADJOURNED TO MAY 19, 2025 AT END OF THE DOCKET",recorded_disposition,2025-05-12_bza_minutes.pdf
+2025-05-19:11-25:1,bza-11-25-9414020318,11-25,2025-05-19,decided,CHANGE OF NONCONFORMING USE GRANTED,recorded_disposition,2025-05-19_bza_minutes.pdf
+2025-05-19:61-18:1,bza-61-18-2008f817ed,61-18,2025-05-19,decided,HARDSHIP RELIEF PETITION DENIED,recorded_disposition,2025-05-19_bza_minutes.pdf
+2025-05-19:63-24:1,bza-63-24-ee881c1b59,63-24,2025-05-19,decided,HARDSHIP RELIEF PETITION GRANTED,recorded_disposition,2025-05-19_bza_minutes.pdf
+2025-06-09:6-25:1,bza-6-25-1d092416b3,6-25,2025-06-09,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2025-06-09_bza_minutes.pdf
+2025-06-09:78-24:1,bza-78-24-65be9f6b24,78-24,2025-06-09,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2025-06-09_bza_minutes.pdf
+2025-06-09:BSEED SLU2024-00101:1,bza-bseed-slu2024-00101-0b090eb0d2,BSEED SLU2024-00101,2025-06-09,dismissed,DISMISSED,recorded_disposition,2025-06-09_bza_minutes.pdf
+2025-06-16:12-25:1,bza-12-25-67c0867482,12-25,2025-06-16,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-06-16_bza_minutes.pdf
+2025-06-16:59-24:1,bza-59-24-7f6f8d4dde,59-24,2025-06-16,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-06-16_bza_minutes.pdf
+2025-06-23:76-24:1,bza-76-24-6ee5d23546,76-24,2025-06-23,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-06-23_bza_minutes.pdf
+2025-06-23:BZA SLU2024-00172:1,bza-bza-slu2024-00172-c17cdfcf89,BZA SLU2024-00172,2025-06-23,decided,"AGGREIVED STANDARD NOT MET, CASE DENIED",recorded_disposition,2025-06-23_bza_minutes.pdf
+2025-07-14:13-25:1,bza-13-25-2c39937285,13-25,2025-07-14,postponed,ADJOURNED WITHOUT DATE AND WITHOUT FEE,recorded_disposition,2025-07-14_bza_minutes.pdf
+2025-07-14:14-25:1,bza-14-25-61fbd5eb1b,14-25,2025-07-14,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-07-14_bza_minutes.pdf
+2025-07-14:15-25:1,bza-15-25-aa055fbabb,15-25,2025-07-14,decided,PARKING VARIANCE GRANTED,recorded_disposition,2025-07-14_bza_minutes.pdf
+2025-07-14:70-24:1,bza-70-24-782fb1ee01,70-24,2025-07-14,dismissed,CASE DISMISSED,recorded_disposition,2025-07-14_bza_minutes.pdf
+2025-07-21:5-25:1,bza-5-25-489295d35a,5-25,2025-07-21,decided,PARKING VARIANCE GRANTED,recorded_disposition,2025-07-21_bza_minutes.pdf
+2025-07-21:BSEED SLU2023-00093:1,bza-bseed-slu2023-00093-1af72b8cea,BSEED SLU2023-00093,2025-07-21,decided,BSEED APPROVAL UPHELD,recorded_disposition,2025-07-21_bza_minutes.pdf
+2025-07-28:16-25:1,bza-16-25-aaaaa5d0aa,16-25,2025-07-28,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-07-28_bza_minutes.pdf
+2025-07-28:17-25:1,bza-17-25-97935d5a5c,17-25,2025-07-28,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-07-28_bza_minutes.pdf
+2025-07-28:18-25:1,bza-18-25-cb4f866709,18-25,2025-07-28,decided,APPEAL DENIED DUE TO VOTE COUNT,recorded_disposition,2025-07-28_bza_minutes.pdf
+2025-08-25:20-25:1,bza-20-25-6131a2cc71,20-25,2025-08-25,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2025-08-25_bza_minutes.pdf
+2025-08-25:21-25:1,bza-21-25-dcb8d4f773,21-25,2025-08-25,dismissed,DISMISSED WITH RETURN OF FEE,recorded_disposition,2025-08-25_bza_minutes.pdf
+2025-08-25:24-25:1,bza-24-25-67f735277c,24-25,2025-08-25,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-08-25_bza_minutes.pdf
+2025-09-08:22-25:1,bza-22-25-831f730788,22-25,2025-09-08,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-09-08_bza_minutes.pdf
+2025-09-08:26-25:1,bza-26-25-7703d8a4a4,26-25,2025-09-08,decided,LOCATIONAL VARIANCE GRANTED,recorded_disposition,2025-09-08_bza_minutes.pdf
+2025-09-15:27-25:1,bza-27-25-b460cdbf7e,27-25,2025-09-15,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-09-15_bza_minutes.pdf
+2025-09-15:28-25:1,bza-28-25-d2fb7bb161,28-25,2025-09-15,postponed,ADJOURNED,recorded_disposition,2025-09-15_bza_minutes.pdf
+2025-09-29:29-25:1,bza-29-25-7515a970f7,29-25,2025-09-29,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-09-29_bza_minutes.pdf
+2025-09-29:30-25:1,bza-30-25-701e35d3e8,30-25,2025-09-29,decided,DIMENSIONAL VARIANCE GRANTED,recorded_disposition,2025-09-29_bza_minutes.pdf
+2026-01-23:78-24:1,bza-78-24-65be9f6b24,78-24,2026-01-23,decided,HARDSHIP RELIEF PETITION DENIED DUE VOTE COUNT,recorded_disposition,2026-01-23_bza_minutes.pdf
+2026-01-23:BZA2026-00009:1,bza-bza2026-00009-e187ef5c5d,BZA2026-00009,2026-01-23,decided,DIMENSIONAL VARIANCES GRANTED,recorded_disposition,2026-01-23_bza_minutes.pdf
+2026-01-23:BZA2026-00051:1,bza-bza2026-00051-ccc5f5dbb5,BZA2026-00051,2026-01-23,decided,EXPANSION OF NONCONFORMING USE GRANTED,recorded_disposition,2026-01-23_bza_minutes.pdf
+2026-02-16:53-23:1,bza-53-23-cdc298d7fd,53-23,2026-02-16,dismissed,CASES DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2026-02-16_bza_minutes.pdf
+2026-02-16:54-23:1,bza-54-23-6eab1a3ade,54-23,2026-02-16,dismissed,CASES DISMISSED WITHOUT RETURN OF FEE,recorded_disposition,2026-02-16_bza_minutes.pdf
+2026-02-16:BZA2025-00044:1,bza-bza2025-00044-8af9060833,BZA2025-00044,2026-02-16,decided,DIMENSIONAL VARIANCES GRANTED PENDING LETTER OF AUTHORIZATION TO PRESENT BEFORE THE BOARD,recorded_disposition,2026-02-16_bza_minutes.pdf
+2026-02-16:BZA2025-00045:1,bza-bza2025-00045-d453f7d2bf,BZA2025-00045,2026-02-16,decided,DIMENSIONAL VARIANCES GRANTED PENDING LETTER OF AUTHORIZATION TO PRESENT BEFORE THE BOARD,recorded_disposition,2026-02-16_bza_minutes.pdf
+2026-02-16:BZA2025-00048:1,bza-bza2025-00048-3d30f83bb6,BZA2025-00048,2026-02-16,postponed,ADJOURNED WITHOUT DATE,recorded_disposition,2026-02-16_bza_minutes.pdf
+2026-03-09:6-25:1,bza-6-25-1d092416b3,6-25,2026-03-09,postponed,ADJOURNED WITHOUT FEE AND WITHOUT DATE,recorded_disposition,2026-03-09_bza_minutes.pdf
+2026-03-09:BZA2025-00049:1,bza-bza2025-00049-131db941ce,BZA2025-00049,2026-03-09,decided,"BSEED DENIAL REVERSED, USE GRANTED",recorded_disposition,2026-03-09_bza_minutes.pdf

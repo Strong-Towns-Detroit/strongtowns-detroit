@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-77-19-a7f510e04a",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner requests variances to establish an 18-space accessory parking lot on a vacant site to serve an existing restaurant.",
+  "evidence": [
+    "establish an eighteen space Accessory Parking lot",
+    "on a vacant 10,600 square foot site",
+    "to serve an existing restaurant"
+  ],
+  "confidence": "high",
+  "alternative_type": "food_or_beverage"
+}

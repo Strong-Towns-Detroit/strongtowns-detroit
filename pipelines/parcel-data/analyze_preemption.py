@@ -16,7 +16,7 @@ def analyze_preemption():
     # Deduplicate by Parcel Number (One Parcel = One Record, ignore multi-polygon splits)
     # This prevents inflation of counts where geometry is split.
     print(f"Initial Rows: {len(df)}")
-    df = df.drop_duplicates(subset=['parcel_number'])
+    df = df.drop_duplicates(subset=['parcel_id'])
     print(f"Unique Parcels: {len(df)}")
 
     # Load Specific Zoning Map
@@ -29,13 +29,13 @@ def analyze_preemption():
 
     residential_zones = RESIDENTIAL_ZONES
 
-    df['is_vacant'] = df['use_code_desc'].apply(is_vacant)
-    df['is_residential_zone'] = df['zoning'].isin(residential_zones)
+    df['is_vacant'] = df['use_code_description'].apply(is_vacant)
+    df['is_residential_zone'] = df['zoning_district'].isin(residential_zones)
     
     # --- 2. Metric: Lot Size (Buildable Land) ---
     print("Analyzing Lot Size...")
     
-    lot_stats = df.groupby('zoning')[[
+    lot_stats = df.groupby('zoning_district')[[
         'violates_current_min_sqft', 
         'violates_proposed_min_sqft'
     ]].agg(['sum', 'count'])
@@ -43,8 +43,8 @@ def analyze_preemption():
     saved_mask = (df['violates_current_min_sqft']) & (~df['violates_proposed_min_sqft'])
     df['lot_size_saved_by_preemption'] = saved_mask
     
-    lot_summary = df.groupby('zoning').agg(
-        Total_Parcels=('parcel_number', 'count'),
+    lot_summary = df.groupby('zoning_district').agg(
+        Total_Parcels=('parcel_id', 'count'),
         Violating_Current_Law=('violates_current_min_sqft', 'sum'),
         Violating_State_Cap=('violates_proposed_min_sqft', 'sum'),
         Legalized_By_State=('lot_size_saved_by_preemption', 'sum')
@@ -81,7 +81,7 @@ def analyze_preemption():
         )
         
         # Filter parcels matching this description
-        subset = df[df['use_code_desc'] == key].copy()
+        subset = df[df['use_code_description'] == key].copy()
         total_count = len(subset)
         
         if total_count == 0:
@@ -90,10 +90,10 @@ def analyze_preemption():
         # Check Compliance
         # We handle NaN zoning as compliant or skip? 
         # Usually NaN zoning means we don't know, so exclude from violation count.
-        subset_known = subset[subset['zoning'].notna()]
-        
+        subset_known = subset[subset['zoning_district'].notna()]
+
         # Non-conforming: Zoning NOT in allowed_districts
-        violating = subset_known[~subset_known['zoning'].isin(allowed_districts)]
+        violating = subset_known[~subset_known['zoning_district'].isin(allowed_districts)]
         violation_count = len(violating)
         
         use_violation_stats.append({
@@ -119,7 +119,7 @@ def analyze_preemption():
         use_table_md = use_stats_df.to_markdown(index=False)
 
     # --- 5. Single Family Zoning Stat ---
-    r1_count = len(df[df['zoning'] == 'R1'])
+    r1_count = len(df[df['zoning_district'] == 'R1'])
     total_res_count = len(df[df['is_residential_zone']])
     sf_zoning_pct = (r1_count / total_res_count * 100) if total_res_count > 0 else 0
 

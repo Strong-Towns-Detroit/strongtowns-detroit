@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-33-19-ccbe2c0b37",
+  "project_type_family": "housing",
+  "project_type_label": "residential garage",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Construct an accessory garage with excessive height for a single-family home.",
+  "evidence": [
+    "construct an accessory structure (garage)",
+    "with excessive height"
+  ],
+  "confidence": "high",
+  "alternative_type": "parking_only"
+}

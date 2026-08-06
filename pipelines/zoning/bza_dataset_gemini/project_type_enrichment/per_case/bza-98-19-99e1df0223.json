@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-98-19-99e1df0223",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "used motor vehicle sales lot",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Establish a used motor vehicle sales lot in an existing building.",
+  "evidence": [
+    "establish a Used Motor Vehicle Sales Lot Facility",
+    "existing 3,380 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

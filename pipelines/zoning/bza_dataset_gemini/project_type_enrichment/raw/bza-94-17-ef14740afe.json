@@ -1,0 +1,207 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-94-17-ef14740afe",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Caregiver Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a Medical Marihuana Caregiver Center in an existing 1,434 square foot building.",
+      "evidence": [
+        "establish a Medical Marihuana Caregiver Center (MMCC)",
+        "in an existing approximate 1,434 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-20-19-f02fd63021",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Caregiver Center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a Medical Marihuana Caregiver Center in an 800-square foot building.",
+      "evidence": [
+        "establish a Medical Marihuana Caregiver Center (MMCC)",
+        "in an 800-square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-30-19-9c0b26b104",
+      "project_type_family": "housing",
+      "project_type_label": "apartment building",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 12,
+      "summary": "Convert an existing seven-unit multiple-family dwelling into a twelve-unit dwelling with accessory parking.",
+      "evidence": [
+        "convert an existing two-story, seven unit multiple-family dwelling into a twelve unit dwelling"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-24-19-98cd3d897f",
+      "project_type_family": "housing",
+      "project_type_label": "apartment building",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 10,
+      "summary": "Convert an existing single-family dwelling into a multiple-family dwelling with accessory parking.",
+      "evidence": [
+        "convert an existing single-family dwelling into a six-unit Multiple Family Dwelling",
+        "petitioner is requesting 10 units"
+      ],
+      "confidence": "medium",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-27-19-79df09a810",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "Medical Marihuana Grower Facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marihuana caregiver center or grower facility.",
+      "evidence": [
+        "medical marihuana caregiver center",
+        "Medical Marihuna Growers Faculty"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-28-19-9c30f8d441",
+      "project_type_family": "parking_only",
+      "project_type_label": "surface parking lot",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Construct a seven-space surface parking lot to serve an adjacent multiple-family dwelling.",
+      "evidence": [
+        "construct a seven space surface parking lot",
+        "serve an adjacent multiple-family dwelling"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-29-19-be10fad016",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "motor vehicle repair",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Expand a minor motor vehicle repair shop by adding a 3,480 square foot building.",
+      "evidence": [
+        "expand a non-conforming Minor Motor Vehicle Repair",
+        "adding a 3,480 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-31-19-2cf7ef7116",
+      "project_type_family": "office_or_medical",
+      "project_type_label": "art studio and office space",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Change a former retail grocery to an art studio and technology start-up rental space.",
+      "evidence": [
+        "change a non-conforming Retail Grocery Confectionary",
+        "to an Art Studio and Technology Start Up Rental Space"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-33-19-ccbe2c0b37",
+      "project_type_family": "housing",
+      "project_type_label": "residential garage",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Construct an accessory garage with excessive height for a single-family home.",
+      "evidence": [
+        "construct an accessory structure (garage)",
+        "with excessive height"
+      ],
+      "confidence": "high",
+      "alternative_type": "parking_only"
+    },
+    {
+      "case_history_id": "bza-34-19-e402408898",
+      "project_type_family": "signage",
+      "project_type_label": "illuminated business sign",
+      "proposed_action": "signage_installation",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Erect an internally illuminated projecting sign for a pizza restaurant.",
+      "evidence": [
+        "erect an internally illuminated Sign (Grandma Bob's Pizza)",
+        "projecting sign is 13 square feet"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-42-19-2143d12bd7",
+      "project_type_family": "mixed_use",
+      "project_type_label": "mixed-use building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 10,
+      "summary": "Construct a four-story mixed-use building with ten residential units and office space.",
+      "evidence": [
+        "construct a mixed-use development in a four (4) story",
+        "six (6) Townhouse Units, four (4) Multi-family units and 1,034 square foot Office space"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-44-19-3332e2b636",
+      "project_type_family": "parking_only",
+      "project_type_label": "accessory parking lot",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Expand an existing accessory parking lot from three to eight spaces for a multiple-family dwelling.",
+      "evidence": [
+        "expand an existing Accessory Parking lot",
+        "from three (3) spaces to eight (8) spaces"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+  }

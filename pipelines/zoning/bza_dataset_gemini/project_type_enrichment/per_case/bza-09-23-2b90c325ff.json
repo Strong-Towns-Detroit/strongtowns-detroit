@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-09-23-2b90c325ff",
+  "project_type_family": "housing",
+  "project_type_label": "front yard parking area for single-family dwelling",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Requesting a waiver to allow a front yard parking area/driveway for a single-family dwelling.",
+  "evidence": [
+    "driveway – Single Family Dwelling",
+    "Parking area is proposed in the front yard"
+  ],
+  "confidence": "medium",
+  "alternative_type": "parking_only"
+}

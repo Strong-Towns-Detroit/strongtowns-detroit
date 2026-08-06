@@ -1,0 +1,206 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-70-24-782fb1ee01",
+      "project_type_family": "unclear",
+      "project_type_label": "unknown",
+      "proposed_action": "unclear",
+      "intensity_direction": "unclear_or_not_applicable",
+      "urban_form_orientation": "unclear_or_not_applicable",
+      "proposal_language_tone": "insufficient_text",
+      "housing_units": null,
+      "summary": "The case was dismissed because it is being recommended for rezoning, with no details provided about the proposed land use.",
+      "evidence": [
+        "recommended for re-zoning"
+      ],
+      "confidence": "low",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-bseed-slu2023-00093-1af72b8cea",
+      "project_type_family": "mixed_use",
+      "project_type_label": "mixed-use building with apartments and office space",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 49,
+      "summary": "The appellant is appealing the approval of a project to renovate a vacant building into 49 apartments and ground-floor office space.",
+      "evidence": [
+        "renovate a vacant 41,040 square foot building",
+        "establish a 49 unit multi-family residential dwelling",
+        "ground level commercial office space"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-16-25-aaaaa5d0aa",
+      "project_type_family": "institutional_or_civic",
+      "project_type_label": "community outreach center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting dimensional variances to establish a community outreach center with youth trade programs.",
+      "evidence": [
+        "establish a community outreach center",
+        "youth programs for carpentry and millwright trades"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-17-25-97935d5a5c",
+      "project_type_family": "housing",
+      "project_type_label": "single-family residence",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": 1,
+      "summary": "The petitioner is requesting dimensional variances to construct a new single-family home with an attached garage.",
+      "evidence": [
+        "construction of single family residence with attached garage"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-18-25-cb4f866709",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "used motor vehicle sales and repair garage",
+      "proposed_action": "continue_or_legalize_existing_condition",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is appealing an order to remove unapproved corrugated fencing at an existing auto sales and repair facility.",
+      "evidence": [
+        "remove unapproved materials (Corrugated fencing)",
+        "Legal Used Motor Vehicles Sales and Major Motor Vehicle Repair Garage"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-20-25-6131a2cc71",
+      "project_type_family": "retail_or_personal_service",
+      "project_type_label": "rental hall",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is appealing the denial of permission to establish a rental hall in an existing building.",
+      "evidence": [
+        "establish a rental hall",
+        "existing 1,926 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-21-25-dcb8d4f773",
+      "project_type_family": "institutional_or_civic",
+      "project_type_label": "pre-release adjustment center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is appealing the denial of a site plan to change the use of a site to a pre-release adjustment center.",
+      "evidence": [
+        "change of use/ occupancy",
+        "Pre-release adjustment center"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-24-25-67f735277c",
+      "project_type_family": "housing",
+      "project_type_label": "carriage house",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 1,
+      "summary": "The petitioner is requesting dimensional variances to build a garage with living space.",
+      "evidence": [
+        "Garage and Living (carriage house)"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-22-25-831f730788",
+      "project_type_family": "housing",
+      "project_type_label": "residential garage",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": 0,
+      "summary": "The petitioner is requesting a dimensional variance to construct a new 2-car garage.",
+      "evidence": [
+        "construction of a new 689 square foot 2 car garage"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-26-25-7703d8a4a4",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "light duty vehicle service establishment",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting locational variances for a light duty vehicle service establishment due to spacing requirements.",
+      "evidence": [
+        "Light Duty Vehicle Service Establishment",
+        "existing 1,488 square foot"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-27-25-b460cdbf7e",
+      "project_type_family": "retail_or_personal_service",
+      "project_type_label": "rental hall",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting a dimensional variance for deficient parking to establish a rental hall in an existing building.",
+      "evidence": [
+        "establish a rental hall",
+        "existing 5,396 square foot building",
+        "Deficient parking"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-28-25-d2fb7bb161",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "outdoor storage yard",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "The petitioner is requesting a dimensional variance for the spacing of a proposed outdoor storage yard near residential zones.",
+      "evidence": [
+        "spacing of proposed outdoor storage",
+        "Outdoor Storage yard"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    }
+  ]
+  }

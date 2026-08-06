@@ -1,0 +1,14 @@
+[package]
+name = "dsl-matrix-harness"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+manchester-style-experiment = { path = "../manchester_style" }
+rdf-datalog-style = { path = "../rdf_datalog_style" }
+sdml-style-experiment = { path = "../sdml_style" }
+zoning-rule-engine = { path = "../.." }
+
+[lints.rust]
+unsafe_code = "forbid"

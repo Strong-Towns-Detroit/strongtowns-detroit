@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-8-19-5feed4f6f4",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "Medical Marihuana Grower Facility",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Develop a medical marijuana grower facility in a general industrial district.",
+  "evidence": [
+    "develop a Medical Marihuana Grower Facility (MMGF)",
+    "in a M3 (General Industrial District)"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

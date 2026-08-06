@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-61-19-4e42da9805",
+  "project_type_family": "mixed_use",
+  "project_type_label": "Cabaret and office",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Convert two vacant buildings into a single building to establish a cabaret and office space.",
+  "evidence": [
+    "convert two adjacent vacant buildings",
+    "establish a Cabaret and Office"
+  ],
+  "confidence": "high",
+  "alternative_type": "food_or_beverage"
+}

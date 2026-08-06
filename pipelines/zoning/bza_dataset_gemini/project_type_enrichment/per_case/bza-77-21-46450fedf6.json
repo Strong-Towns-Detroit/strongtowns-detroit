@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-77-21-46450fedf6",
+  "project_type_family": "housing",
+  "project_type_label": "townhouses",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Construct townhouses in a medium density residential district.",
+  "evidence": [
+    "proposed use of “townhouses”"
+  ],
+  "confidence": "medium",
+  "alternative_type": null
+}

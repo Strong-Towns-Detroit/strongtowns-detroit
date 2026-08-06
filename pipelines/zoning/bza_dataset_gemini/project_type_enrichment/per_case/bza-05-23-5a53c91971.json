@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-05-23-5a53c91971",
+  "project_type_family": "housing",
+  "project_type_label": "residential lofts",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 162,
+  "summary": "Renovate an existing building to establish 162 residential loft units.",
+  "evidence": [
+    "renovate an existing 110,000 square foot building to establish 162 residential Loft units"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

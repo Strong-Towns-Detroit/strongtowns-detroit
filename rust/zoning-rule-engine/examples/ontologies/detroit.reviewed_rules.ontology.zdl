@@ -1,0 +1,259 @@
+module detroit.reviewed_rules
+
+concept LegalEntity
+
+concept Person is LegalEntity
+
+concept PublicAgency is LegalEntity
+
+concept DecisionMakingBody is PublicAgency
+
+concept ExtensionAuthority is PublicAgency
+
+concept LegalMatter
+
+concept BoardDecision is LegalMatter
+
+concept BoardVote is LegalMatter
+
+concept Variance is LegalMatter
+
+concept UseVariance is Variance
+
+concept HardshipUseVariance is UseVariance
+
+concept PreservationFinding is LegalMatter
+
+concept RegulatedUseGrant is LegalMatter
+
+concept Permit is LegalMatter
+
+concept Extension is LegalMatter
+
+concept LandUse is LegalMatter
+
+concept Application is LegalMatter
+
+concept Property is LegalMatter
+
+concept PaymentObligation is LegalMatter
+
+concept BlightViolation is LegalMatter
+
+concept ZoningDistrict is LegalMatter
+
+concept Waiver is LegalMatter
+
+concept DevelopmentProposal is Application
+
+entity DetroitBZA
+  is DecisionMakingBody
+  is ExtensionAuthority
+
+entity BSEED
+  is PublicAgency
+  is ExtensionAuthority
+
+relation decided_by
+  decision: BoardDecision
+  board: DecisionMakingBody
+  phrase
+    "{decision} is decided by {board}"
+
+predicate ordinary_bza_matter
+  decision: BoardDecision
+  phrase
+    "{decision} concerns an ordinary BZA matter"
+
+relation decides_variance
+  decision: BoardDecision
+  variance: Variance
+  phrase
+    "{decision} decides {variance}"
+
+relation rendered_by_vote
+  decision: BoardDecision
+  vote: BoardVote
+  phrase
+    "{decision} is rendered by {vote}"
+
+relation has_preservation_finding
+  decision: BoardDecision
+  finding: PreservationFinding
+  phrase
+    "{decision} has preservation finding {finding}"
+
+relation certified_on_record
+  finding: PreservationFinding
+  phrase
+    "{finding} is certified on the record"
+
+interpretive relation final_after_three_business_days
+  decision: BoardDecision
+  phrase
+    "{decision} becomes final at four PM on the third business day after its vote"
+  resolution
+    status: open
+    method: Detroit business calendar and vote timestamp interpretation required
+
+relation final_immediately
+  decision: BoardDecision
+  phrase
+    "{decision} becomes final immediately after its vote"
+
+interpretive relation lacks_timely_permit
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} has no permit obtained within six calendar months"
+  resolution
+    status: open
+    method: requires a complete permit record and a named calendar month policy
+
+relation becomes_null_and_void
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} becomes null and void without further action"
+
+relation extension_for
+  extension: Extension
+  grant: RegulatedUseGrant
+  phrase
+    "{extension} is an extension of {grant}"
+
+relation authority_may_extend
+  authority: ExtensionAuthority
+  grant: RegulatedUseGrant
+  phrase
+    "{authority} may extend {grant} no more than twelve additional months"
+
+relation unlawful_use_legalized_by_hearing
+  grant: RegulatedUseGrant
+  use: LandUse
+  phrase
+    "{grant} concerns unlawfully established or expanded use {use} later legalized by hearing"
+
+relation extension_prohibited
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} may not receive an extension"
+
+relation extension_expired
+  extension: Extension
+  phrase
+    "{extension} has expired"
+
+relation additional_extension_prohibited
+  grant: RegulatedUseGrant
+  phrase
+    "{grant} may not receive an additional extension"
+
+relation new_application_for
+  application: Application
+  use: LandUse
+  phrase
+    "{application} is a new application for {use}"
+
+relation hearing_held_for
+  application: Application
+  phrase
+    "a further public hearing is held for {application}"
+
+relation new_application_route_permitted
+  application: Application
+  phrase
+    "{application} may proceed after the expired extension"
+
+relation filed_by
+  application: Application
+  applicant: Person
+  phrase
+    "{application} is filed by {applicant}"
+
+relation delinquent_on_blight_obligation
+  applicant: Person
+  obligation: PaymentObligation
+  violation: BlightViolation
+  phrase
+    "{applicant} is delinquent on {obligation} imposed for {violation}"
+
+relation applicant_ineligible
+  applicant: Person
+  application: Application
+  phrase
+    "{applicant} is ineligible to file {application}"
+
+relation concerns_property
+  application: Application
+  property: Property
+  phrase
+    "{application} concerns property {property}"
+
+relation acquired_by_foreclosure
+  applicant: Person
+  property: Property
+  phrase
+    "{applicant} acquired {property} by foreclosure or deed in lieu"
+
+relation corrects_violation
+  application: Application
+  violation: BlightViolation
+  phrase
+    "{application} corrects all or part of {violation}"
+
+relation applicant_eligible
+  applicant: Person
+  application: Application
+  phrase
+    "{applicant} remains eligible to file {application}"
+
+interpretive relation spacing_threshold_reached
+  application: Application
+  phrase
+    "{application} has at least two distinct established regulated use sites within one thousand feet"
+  resolution
+    status: open
+    method: site identity boundary target and distance method require reviewed definitions
+
+interpretive relation lacks_spacing_waiver
+  application: Application
+  phrase
+    "{application} has no applicable spacing waiver"
+  resolution
+    status: open
+    method: requires a complete authoritative waiver record
+
+relation approval_prohibited
+  application: Application
+  phrase
+    "{application} may not be approved"
+
+relation located_in_district
+  proposal: DevelopmentProposal
+  district: ZoningDistrict
+  phrase
+    "{proposal} is located in {district}"
+
+relation use_not_permitted_in_district
+  proposal: DevelopmentProposal
+  district: ZoningDistrict
+  phrase
+    "{proposal} is neither permitted by right nor conditionally permitted in {district}"
+
+relation spacing_waiver_prohibited
+  proposal: DevelopmentProposal
+  phrase
+    "a spacing waiver may not be granted for {proposal}"
+
+interpretive relation waiver_findings_satisfied
+  proposal: DevelopmentProposal
+  phrase
+    "{proposal} satisfies the controlled use waiver findings"
+  resolution
+    status: open
+    method: source says any one finding but joins numbered findings with and
+
+relation spacing_waiver_authorized
+  board: DecisionMakingBody
+  proposal: DevelopmentProposal
+  phrase
+    "{board} may grant a spacing waiver for {proposal}"

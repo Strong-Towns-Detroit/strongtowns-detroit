@@ -1,0 +1,32 @@
+Ontology: DetroitRegulatedUseEligibility
+Class: Applicant
+Class: RegulatedUseApplication
+Class: Property
+Class: DelinquentObligation
+Class: BlightViolation
+Class: RegulatedUseSite
+Class: SpacingWaiver
+ObjectProperty: filedBy
+  Domain: RegulatedUseApplication
+  Range: Applicant
+ObjectProperty: concernsProperty
+  Domain: RegulatedUseApplication
+  Range: Property
+ObjectProperty: delinquentOn
+  Domain: Applicant
+  Range: DelinquentObligation
+ObjectProperty: obligationFrom
+  Domain: DelinquentObligation
+  Range: BlightViolation
+ObjectProperty: acquiredByForeclosureOrDeedInLieu
+  Domain: Applicant
+  Range: Property
+ObjectProperty: authorizationCorrects
+  Domain: RegulatedUseApplication
+  Range: BlightViolation
+ObjectProperty: waiverFor
+  Domain: SpacingWaiver
+  Range: RegulatedUseApplication
+DataProperty: boundaryDistanceTo
+  Domain: RegulatedUseApplication
+  Range: Length

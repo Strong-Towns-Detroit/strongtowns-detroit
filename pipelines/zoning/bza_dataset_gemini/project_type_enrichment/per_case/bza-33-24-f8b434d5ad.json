@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-33-24-f8b434d5ad",
+  "project_type_family": "housing",
+  "project_type_label": "Single-Family Dwelling",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 1,
+  "summary": "Constructing a new three-story single-family home on a lot with deficient area and width.",
+  "evidence": [
+    "construct a new three-story single-family dwelling"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

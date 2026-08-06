@@ -1,0 +1,19 @@
+{
+  "case_history_id": "bza-44-20-29912dcf2c",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "Auto repair and used car sales",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": 0,
+  "summary": "Appeal of a denial to expand an auto repair facility and add a used car sales lot, citing property maintenance violations, illegal storage, and neighborhood nuisance.",
+  "evidence": [
+    "expand an existing Major Motor Vehicle Repair Facility",
+    "add a Used Motor Vehicle Sales lot",
+    "detrimental to the physical environment or to public health",
+    "undue hardship and nuisance"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

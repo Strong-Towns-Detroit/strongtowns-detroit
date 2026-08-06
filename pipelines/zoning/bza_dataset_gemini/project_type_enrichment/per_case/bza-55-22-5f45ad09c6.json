@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-55-22-5f45ad09c6",
+  "project_type_family": "institutional_or_civic",
+  "project_type_label": "private social club",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The petitioner is seeking approval to change an existing nonconforming retail store with alcohol sales into a nonconforming private social club.",
+  "evidence": [
+    "change from one nonconforming use (Retail Store w/SDM & SDD Licenses) to another nonconforming use (Private Social Club)"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

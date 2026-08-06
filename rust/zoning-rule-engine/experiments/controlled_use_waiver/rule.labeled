@@ -1,0 +1,16 @@
+RuleModule: DetroitControlledUseWaiver
+ImportOntology: DetroitControlledUseWaiver
+Provision: DistrictPermissionBar
+  PropositionId: detroit:article-iii:section-50-3-443:district-bar
+  AppliesWhen: (locatedInDistrict(proposal, district) && !(permittedByRight(proposal, district) || conditionallyPermitted(proposal, district)))
+  Prohibition: GrantSpacingWaiver(proposal)
+Provision: SpacingWaiverFindings
+  PropositionId: detroit:article-iii:section-50-3-443:findings
+  SourceSpan: lead-in | may be waived, provided, that any one of the following findings is made
+  SourceSpan: terminal-join | ; and (2)
+  CoordinationStatus: Unresolved
+  LeadInOperator: AnyOne
+  TerminalJoinOperator: And
+  CandidateFinding: CenterQualification when (onlyControlledUseInCenter(proposal, center) && count distinct establishment where establishmentIn(establishment, center) >= 2 && usableRetailArea(center) >= 50000 sq_ft && privateOffStreetParkingSpaces(center) >= ceil(grossFloorArea(center) / 200 sq_ft))
+  CandidateFinding: DocumentedImprovement when (findingFor(finding, proposal) && contributesTo(finding, Social || Economic || Aesthetic || PhysicalImprovement) && determinedAndDocumentedBy(finding, PlanningDirector))
+  SubjectTo: !DistrictPermissionBar(proposal)

@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-60-22-958ec66e06",
+  "project_type_family": "housing",
+  "project_type_label": "apartment building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 65,
+  "summary": "The petitioner is requesting variances to construct a three-story multi-family building with 65 residential units and accessory parking on adjacent lots.",
+  "evidence": [
+    "construction of a three-story",
+    "multi-family building will now contain 65 residential dwelling units",
+    "accessory parking spaces shall be located on"
+  ],
+  "confidence": "high",
+  "alternative_type": "mixed_use"
+}

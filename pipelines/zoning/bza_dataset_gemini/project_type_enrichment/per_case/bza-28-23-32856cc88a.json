@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-28-23-32856cc88a",
+  "project_type_family": "housing",
+  "project_type_label": "residential porch enclosure",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Request to add an enclosure for a second-story porch on a lot with multiple existing principal dwellings.",
+  "evidence": [
+    "add an enclosure for a 2nd story porch",
+    "multiple principal dwellings exist on the subject lot"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

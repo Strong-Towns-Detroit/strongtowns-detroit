@@ -1,0 +1,34 @@
+Ontology: DetroitBzaVoting
+
+Class: DecisionMakingBody
+Class: BoardDecision
+Class: MatterKind
+
+Individual: DetroitBZA
+  Types: DecisionMakingBody
+Individual: ReverseOrAdjustAdministrativeAction
+  Types: MatterKind
+Individual: ApplicantFavorableMatter
+  Types: MatterKind
+Individual: Variance
+  Types: MatterKind
+Individual: HardshipReliefUseVariance
+  Types: MatterKind
+  Facts: specializes Variance
+
+ObjectProperty: decidedBy
+  Domain: BoardDecision
+  Range: DecisionMakingBody
+ObjectProperty: hasMatterKind
+  Domain: BoardDecision
+  Range: MatterKind
+ObjectProperty: specializes
+  Domain: MatterKind
+  Range: MatterKind
+
+DataProperty: authorizedMemberCount
+  Domain: DecisionMakingBody
+  Range: nonNegativeInteger
+DataProperty: concurringVoteCount
+  Domain: BoardDecision
+  Range: nonNegativeInteger

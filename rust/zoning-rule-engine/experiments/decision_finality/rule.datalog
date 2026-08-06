@@ -1,0 +1,8 @@
+module detroit.bza_decision_finality
+import ontology.zonto
+source ordinary id detroit:article-ii:section-50-2-79:ordinary-finality | Decisions that are rendered by the Board of Zoning Appeals shall not become final until 4:00 p.m. on the third business day after the vote,
+source exception id detroit:article-ii:section-50-2-79:immediate-effect-exception | unless the Board finds the immediate effect of such order necessary for the preservation of property or personal rights and so certifies on the record.
+final_at(Decision, FinalAt) :- decision_by(Decision, DetroitBZA), rendered_by_vote(Decision, Vote), occurred_at(Vote, VotedAt), not immediate_effect_authorized(Decision), FinalAt = at_time(add_business_days(date(VotedAt), 3), 16:00).
+immediate_effect_authorized(Decision) :- finding_for(Finding, Decision), necessary_to_preserve(Finding, PropertyRights), certified_by(Finding, Certification).
+immediate_effect_authorized(Decision) :- finding_for(Finding, Decision), necessary_to_preserve(Finding, PersonalRights), certified_by(Finding, Certification).
+final_at(Decision, VotedAt) :- decision_by(Decision, DetroitBZA), rendered_by_vote(Decision, Vote), occurred_at(Vote, VotedAt), immediate_effect_authorized(Decision).

@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-103-19-b51a4c7926",
+  "project_type_family": "mixed_use",
+  "project_type_label": "restaurant with residential loft",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishing a restaurant on the ground floor with a residential loft on the second floor of an existing building.",
+  "evidence": [
+    "establish a Standard Restaurant",
+    "Loft on the 2nd floor of an existing 10,523 square foot building",
+    "Traditional Main Street Overlay District"
+  ],
+  "confidence": "high",
+  "alternative_type": "food_or_beverage"
+}

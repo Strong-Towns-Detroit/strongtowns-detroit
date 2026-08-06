@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-bseed-slu2023-00053-66b77370f6",
+  "project_type_family": "housing",
+  "project_type_label": "townhouses",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 20,
+  "summary": "Construct four three-story, five-unit townhouse buildings on vacant land.",
+  "evidence": [
+    "Construct four separate three-story, five-unit Townhouse buildings",
+    "existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-57-19-8dd8e8bb14",
+  "project_type_family": "housing",
+  "project_type_label": "Boathouse and garage",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 0,
+  "summary": "Rebuild an accessory boathouse and garage structure for a single-family home.",
+  "evidence": [
+    "rebuild accessory structure (boathouse/garage)"
+  ],
+  "confidence": "high",
+  "alternative_type": "recreation_or_open_space"
+}

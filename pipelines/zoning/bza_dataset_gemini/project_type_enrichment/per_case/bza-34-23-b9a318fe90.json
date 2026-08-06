@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-34-23-b9a318fe90",
+  "project_type_family": "housing",
+  "project_type_label": "apartment buildings",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 24,
+  "summary": "Proposal to develop two multi-family buildings containing a total of 24 residential units.",
+  "evidence": [
+    "development of two buildings",
+    "7A containing 14 multiple family units and 7B containing 10 multiple family units"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

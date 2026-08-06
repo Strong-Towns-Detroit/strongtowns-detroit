@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-04-21-d519a3c5a2",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "gas station",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "Appeal of a denial to construct a new gas station on a vacant lot, cited for existing code violations and incompatibility with nearby school bus stops.",
+  "evidence": [
+    "Construction of a 2,475 square foot building",
+    "accommodate a Motor Vehicle Filling Station",
+    "detrimental to or endanger the social, physical, environmental or economic well-being"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

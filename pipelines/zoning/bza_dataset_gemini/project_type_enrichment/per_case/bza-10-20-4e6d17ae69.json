@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-10-20-4e6d17ae69",
+  "project_type_family": "mixed_use",
+  "project_type_label": "mixed-use high-rise development",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 150,
+  "summary": "Develop a 49-story tower and an 11-story block building containing residential units, a hotel, office space, event space, and retail.",
+  "evidence": [
+    "develop a 49 story, 680 feet high Tower building",
+    "Residential with 150 units",
+    "11 story, 232 foot high Block Building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

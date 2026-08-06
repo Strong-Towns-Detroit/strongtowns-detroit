@@ -1,0 +1,23 @@
+Ontology: DetroitBzaDecisionFinality
+Class: DecisionMakingBody
+Class: BoardDecision
+Class: BoardVote
+Class: NecessityFinding
+Class: RecordCertification
+Individual: DetroitBZA
+  Types: DecisionMakingBody
+ObjectProperty: decidedBy
+  Domain: BoardDecision
+  Range: DecisionMakingBody
+ObjectProperty: renderedByVote
+  Domain: BoardDecision
+  Range: BoardVote
+ObjectProperty: findingFor
+  Domain: NecessityFinding
+  Range: BoardDecision
+ObjectProperty: certifiedBy
+  Domain: NecessityFinding
+  Range: RecordCertification
+DataProperty: occurredAt
+  Domain: BoardVote
+  Range: LocalDateTime

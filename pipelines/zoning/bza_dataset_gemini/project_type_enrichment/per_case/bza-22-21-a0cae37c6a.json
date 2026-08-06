@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-22-21-a0cae37c6a",
+  "project_type_family": "housing",
+  "project_type_label": "townhouses",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 3,
+  "summary": "The petitioner requests dimensional variances to construct three attached townhouse units on vacant land.",
+  "evidence": [
+    "construct three attached Townhouse units on existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

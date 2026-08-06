@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-15-19-dccd43859a",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "Junkyard and Auto Parts Facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establish a junkyard with indoor dismantling and used auto parts facility in two existing buildings.",
+  "evidence": [
+    "establishment of a Junkyard with Indoor Dismantling and Used Auto Parts Facility",
+    "in two existing buildings"
+  ],
+  "confidence": "high",
+  "alternative_type": "vehicle_oriented"
+}

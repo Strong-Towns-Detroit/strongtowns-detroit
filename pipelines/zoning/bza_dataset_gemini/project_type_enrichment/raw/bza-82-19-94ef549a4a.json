@@ -1,0 +1,206 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-82-19-94ef549a4a",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "art studio and fabrication facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Change of use from a non-conforming factory to an art studio and low/medium impact fabrication facility.",
+      "evidence": [
+        "change an existing non-conforming factory",
+        "to a non-conforming Art Studio/Low/Medium Impact Fabrication"
+      ],
+      "confidence": "high",
+      "alternative_type": "office_or_medical"
+    },
+    {
+      "case_history_id": "bza-84-19-5eb320fb4c",
+      "project_type_family": "housing",
+      "project_type_label": "townhouse building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 7,
+      "summary": "Construct a new 7-unit townhouse building with accessory residential parking.",
+      "evidence": [
+        "construct 7 (seven) unit 10,786 sq. ft. Townhouse building"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-85-19-b0b1323990",
+      "project_type_family": "food_or_beverage",
+      "project_type_label": "restaurant walk-in cooler",
+      "proposed_action": "site_or_building_alteration",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Add a shipping container to serve as a walk-in cooler for an existing restaurant.",
+      "evidence": [
+        "existing Restaurant w/consumption",
+        "shipping container for walk in cooler"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    },
+    {
+      "case_history_id": "bza-86-19-fdba0c918b",
+      "project_type_family": "housing",
+      "project_type_label": "garage dwelling",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": 1,
+      "summary": "Construct a new garage dwelling on a residential lot.",
+      "evidence": [
+        "construct a Garage dwelling"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-89-19-2ba8fd28cf",
+      "project_type_family": "food_or_beverage",
+      "project_type_label": "café",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Change the use of a nonconforming marina boathouse to a café.",
+      "evidence": [
+        "change a nonconforming Marina Boathouse",
+        "to a non-conforming Café/Class C"
+      ],
+      "confidence": "high",
+      "alternative_type": "recreation_or_open_space"
+    },
+    {
+      "case_history_id": "bza-97-19-459bd7f671",
+      "project_type_family": "housing",
+      "project_type_label": "residential addition",
+      "proposed_action": "expansion",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Construct a new second-story garage bay and enclose an outdoor living area at a single-family home.",
+      "evidence": [
+        "construction project of a new garage bay",
+        "enclose an outdoor living area"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-6-19-2b90e3b9d9",
+      "project_type_family": "retail_or_personal_service",
+      "project_type_label": "convenience and cellular store",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Add a convenience store with alcohol sales and a cellular repair store to an existing retail building.",
+      "evidence": [
+        "add a C-Store with SDM-SDD and cellular store with repair",
+        "to a Retail Store building"
+      ],
+      "confidence": "high",
+      "alternative_type": "food_or_beverage"
+    },
+    {
+      "case_history_id": "bza-87-19-86a1450728",
+      "project_type_family": "signage",
+      "project_type_label": "digital billboard",
+      "proposed_action": "signage_installation",
+      "intensity_direction": "unclear_or_not_applicable",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Erect a 70-foot-tall digital billboard.",
+      "evidence": [
+        "erect a billboard",
+        "digital display area with an overall height of seventy feet"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-88-19-07e1969543",
+      "project_type_family": "retail_or_personal_service",
+      "project_type_label": "banquet hall",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Add a rental/banquet hall to an existing building.",
+      "evidence": [
+        "add a Rental/Banquet Hall to an existing 3,633 square building"
+      ],
+      "confidence": "high",
+      "alternative_type": "food_or_beverage"
+    },
+    {
+      "case_history_id": "bza-105-19-6f26fdbf3e",
+      "project_type_family": "religious",
+      "project_type_label": "religious institution auxiliary building",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Expand an existing religious institution campus by adding a new auxiliary building.",
+      "evidence": [
+        "expand an existing two-building Religious Institution campus",
+        "adding a new 4,644 square foot auxiliary building"
+      ],
+      "confidence": "high",
+      "alternative_type": "institutional_or_civic"
+    },
+    {
+      "case_history_id": "bza-94-19-5002df6378",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "junkyard and auto dismantling facility",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "adverse",
+      "housing_units": null,
+      "summary": "Add a junkyard with dismantling to an existing used auto parts facility, which the department found would be detrimental to the surrounding area.",
+      "evidence": [
+        "add a Junkyard with dismantling",
+        "proposed Conditional Use will be detrimental",
+        "impede the normal and orderly development"
+      ],
+      "confidence": "high",
+      "alternative_type": "vehicle_oriented"
+    },
+    {
+      "case_history_id": "bza-106-17-de942bc315",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "medical marijuana caregiver center",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Establish a medical marijuana caregiver center, which was denied due to its proximity to a park in a Drug Free Zone.",
+      "evidence": [
+        "medical marihuana caregiver center",
+        "identified as being in a Drug Free Zone"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    }
+  ]
+}

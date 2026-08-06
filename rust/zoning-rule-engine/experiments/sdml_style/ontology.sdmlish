@@ -1,0 +1,37 @@
+module detroit_hearings is
+
+  concept Agency
+  concept HearingForum
+  concept PublishedNotice
+  concept PublicHearing
+  concept LegalRequirement
+
+  individual BSEED is Agency, HearingForum
+  individual Chapter50 is LegalRequirement
+
+  relation responsible_for is
+    from Agency
+    to PublishedNotice
+  end
+
+  relation notice_for is
+    from PublishedNotice
+    to PublicHearing
+  end
+
+  relation forum_for is
+    from HearingForum
+    to PublicHearing
+  end
+
+  relation required_by is
+    from PublishedNotice
+    to LegalRequirement
+  end
+
+  relation precedes is
+    from PublishedNotice
+    to PublicHearing
+  end
+
+end

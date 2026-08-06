@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-5-19-2dc104a2e6",
+  "project_type_family": "mixed_use",
+  "project_type_label": "Mixed Use Development",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 38,
+  "summary": "Construct a new mixed-use development with 38 residential units and a medical office.",
+  "evidence": [
+    "construct a Mixed Use Development with Townhouses (17 units), Multi-Family Dwelling (21 units) and Medical Office (3,000 sq. ft)"
+  ],
+  "confidence": "high",
+  "alternative_type": "housing"
+}

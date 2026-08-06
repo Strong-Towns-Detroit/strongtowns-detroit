@@ -1,0 +1,200 @@
+{
+  "classifications": [
+    {
+      "case_history_id": "bza-bseed-slu2024-00043-35e34d484b",
+      "project_type_family": "cannabis_or_controlled_use",
+      "project_type_label": "marijuana facility",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Appeal of BSEED approval to establish a marijuana provisioning and processing facility in an industrial district.",
+      "evidence": [
+        "establish a MRPF and MPF in an M2 Restricted Industrial District"
+      ],
+      "confidence": "medium",
+      "alternative_type": "industrial_or_logistics"
+    },
+    {
+      "case_history_id": "bza-bseed-slu2024-0060-b144f712f9",
+      "project_type_family": "parking_only",
+      "project_type_label": "accessory parking lot",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Appeal of BSEED approval to develop a 37-space accessory parking lot to serve a nearby church.",
+      "evidence": [
+        "develop a 37-space off-street accessory parking lot to serve the Macedonia Baptist Church"
+      ],
+      "confidence": "high",
+      "alternative_type": "religious"
+    },
+    {
+      "case_history_id": "bza-bseed-slu2024-00062-b94c40c39e",
+      "project_type_family": "other",
+      "project_type_label": "cell tower",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Appeal of BSEED approval to construct a 75-foot monopole antenna tower on an existing business site.",
+      "evidence": [
+        "construct a 75 foot tower to add a Monopole Antenna on the site of an existing business"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-1-24-938659c379",
+      "project_type_family": "unclear",
+      "project_type_label": "unknown",
+      "proposed_action": "unclear",
+      "intensity_direction": "unclear_or_not_applicable",
+      "urban_form_orientation": "unclear_or_not_applicable",
+      "proposal_language_tone": "insufficient_text",
+      "housing_units": null,
+      "summary": "Case dismissed due to lack of petitioner response; no project details provided.",
+      "evidence": [
+        "petitioner has not responded",
+        "Dismiss the Case"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-67-24-6a04eb879d",
+      "project_type_family": "other",
+      "project_type_label": "electrical equipment upgrade",
+      "proposed_action": "site_or_building_alteration",
+      "intensity_direction": "maintains_existing_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request to upgrade electrical equipment on the exterior of an existing nonconforming building.",
+      "evidence": [
+        "expand existing nonconforming use by upgrading electrical equipment located on the south elevation"
+      ],
+      "confidence": "medium",
+      "alternative_type": "unclear"
+    },
+    {
+      "case_history_id": "bza-76-24-6ee5d23546",
+      "project_type_family": "vehicle_oriented",
+      "project_type_label": "auto repair shop",
+      "proposed_action": "expansion",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "automobile_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request to expand an existing minor auto repair shop by adding adjacent lots and constructing a building addition.",
+      "evidence": [
+        "expand a legal nonconforming Light Duty Vehicle Service Establishment (Minor Auto Repair)",
+        "1,246 square foot addition"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-52-23-a7b9086fdb",
+      "project_type_family": "unclear",
+      "project_type_label": "unknown",
+      "proposed_action": "unclear",
+      "intensity_direction": "unclear_or_not_applicable",
+      "urban_form_orientation": "unclear_or_not_applicable",
+      "proposal_language_tone": "insufficient_text",
+      "housing_units": null,
+      "summary": "Case dismissed at petitioner's request; no project details provided.",
+      "evidence": [
+        "at the Petitioner’s Request Case No. 52-23 should be Dismissed"
+      ],
+      "confidence": "high",
+      "alternative_type": null
+    },
+    {
+      "case_history_id": "bza-77-24-8710bfed88",
+      "project_type_family": "mixed_use",
+      "project_type_label": "mixed-use residential and commercial building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 32,
+      "summary": "Request for dimensional variances to construct a four-story, 32-unit mixed-use building with commercial space and accessory parking on a vacant site.",
+      "evidence": [
+        "redevelop a vacant site by constructing a four-story, 32-unit residential building with permitted commercial uses"
+      ],
+      "confidence": "high",
+      "alternative_type": "housing"
+    },
+    {
+      "case_history_id": "bza-79-24-03fe91ef07",
+      "project_type_family": "institutional_or_civic",
+      "project_type_label": "emergency shelter",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request for dimensional variances to establish an emergency shelter in an existing 36,417 square foot building.",
+      "evidence": [
+        "establish an Emergency Shelter in an existing, 36,417 square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "housing"
+    },
+    {
+      "case_history_id": "bza-86-24-15baadd557",
+      "project_type_family": "industrial_or_logistics",
+      "project_type_label": "outdoor storage and semi-trailer parking",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "industrial_or_freight_oriented",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request for dimensional variances for screening and placement of shipping containers for an outdoor storage and semi-trailer parking facility.",
+      "evidence": [
+        "proposed use of Outdoor Storage and Parking of Semi Trailers",
+        "screening material of the shipping containers"
+      ],
+      "confidence": "high",
+      "alternative_type": "parking_only"
+    },
+    {
+      "case_history_id": "bza-50-24-10e21a7cea",
+      "project_type_family": "mixed_use",
+      "project_type_label": "mixed-use residential and commercial building",
+      "proposed_action": "new_construction",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "pedestrian_or_transit_supportive",
+      "proposal_language_tone": "neutral",
+      "housing_units": 10,
+      "summary": "Request for hardship relief to construct a new building with 10 residential units and one commercial space.",
+      "evidence": [
+        "establish a 11,903 sq ft building with 10 residential units",
+        "one commercial space with 615 sq. Ft"
+      ],
+      "confidence": "high",
+      "alternative_type": "housing"
+    },
+    {
+      "case_history_id": "bza-1-25-e8e3ff71db",
+      "project_type_family": "recreation_or_open_space",
+      "project_type_label": "pool hall",
+      "proposed_action": "change_of_use",
+      "intensity_direction": "adds_homes_or_activity",
+      "urban_form_orientation": "mixed_or_neutral",
+      "proposal_language_tone": "neutral",
+      "housing_units": null,
+      "summary": "Request for a dimensional spacing variance to establish a pool hall in an existing building.",
+      "evidence": [
+        "establish a Pool Hall in an existing 2,958 Square foot building"
+      ],
+      "confidence": "high",
+      "alternative_type": "retail_or_personal_service"
+    }
+  ]
+}

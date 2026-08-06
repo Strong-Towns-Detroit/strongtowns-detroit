@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-28-19-9c30f8d441",
+  "project_type_family": "parking_only",
+  "project_type_label": "surface parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Construct a seven-space surface parking lot to serve an adjacent multiple-family dwelling.",
+  "evidence": [
+    "construct a seven space surface parking lot",
+    "serve an adjacent multiple-family dwelling"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

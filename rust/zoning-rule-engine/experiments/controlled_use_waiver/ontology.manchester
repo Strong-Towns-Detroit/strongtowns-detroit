@@ -1,0 +1,31 @@
+Ontology: DetroitControlledUseWaiver
+Class: ControlledUseProposal
+Class: ZoningDistrict
+Class: NeighborhoodShoppingCenter
+Class: CommercialEstablishment
+Class: ImprovementFinding
+Class: PlanningDirector
+ObjectProperty: locatedInDistrict
+  Domain: ControlledUseProposal
+  Range: ZoningDistrict
+ObjectProperty: locatedInCenter
+  Domain: ControlledUseProposal
+  Range: NeighborhoodShoppingCenter
+ObjectProperty: establishmentIn
+  Domain: CommercialEstablishment
+  Range: NeighborhoodShoppingCenter
+ObjectProperty: findingFor
+  Domain: ImprovementFinding
+  Range: ControlledUseProposal
+ObjectProperty: determinedAndDocumentedBy
+  Domain: ImprovementFinding
+  Range: PlanningDirector
+DataProperty: usableRetailArea
+  Domain: NeighborhoodShoppingCenter
+  Range: Area
+DataProperty: grossFloorArea
+  Domain: NeighborhoodShoppingCenter
+  Range: Area
+DataProperty: privateOffStreetParkingSpaces
+  Domain: NeighborhoodShoppingCenter
+  Range: nonNegativeInteger

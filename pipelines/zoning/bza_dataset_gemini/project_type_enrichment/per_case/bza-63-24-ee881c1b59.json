@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-63-24-ee881c1b59",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "gas station",
+  "proposed_action": "continue_or_legalize_existing_condition",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Re-establish a currently nonconforming gas station.",
+  "evidence": [
+    "re-establish a currently nonconforming gas station"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

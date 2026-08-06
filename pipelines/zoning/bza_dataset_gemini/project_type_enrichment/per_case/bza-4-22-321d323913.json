@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-4-22-321d323913",
+  "project_type_family": "unclear",
+  "project_type_label": "unknown",
+  "proposed_action": "unclear",
+  "intensity_direction": "unclear_or_not_applicable",
+  "urban_form_orientation": "unclear_or_not_applicable",
+  "proposal_language_tone": "insufficient_text",
+  "housing_units": null,
+  "summary": "The case was dismissed due to lack of activity, with no project details provided.",
+  "evidence": [
+    "Lack of Activity"
+  ],
+  "confidence": "low",
+  "alternative_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-25-23-d87a52a78b",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "car wash",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Request to establish a motor vehicle washing facility on the ground floor of an existing two-story building.",
+  "evidence": [
+    "establish a motor vehicle washing facility",
+    "on the ground floor on an existing 2 story 2,004 square foot building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

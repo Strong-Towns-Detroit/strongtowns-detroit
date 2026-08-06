@@ -1,0 +1,39 @@
+{
+  "notes": [
+    "Archive every downloaded input beside its SHA-256 before analysis.",
+    "Confirm that the chosen service_date falls within each feed's calendar.",
+    "QLINE may be included in a regional feed; inspect agency.txt and avoid double-loading it."
+  ],
+  "feeds": [
+    {
+      "agency": "DDOT",
+      "url": "https://www.detroitmi.gov/Portals/0/docs/deptoftransportation/pdfs/ddot_gtfs.zip",
+      "registry": "https://mobilitydatabase.org/feeds/gtfs/mdb-464",
+      "official": true
+    },
+    {
+      "agency": "Detroit People Mover",
+      "url": "https://hosted-gtfs-feeds.s3.amazonaws.com/DPM/gtfs.zip",
+      "registry": "https://mobilitydatabase.org/feeds/gtfs/mdb-2281",
+      "official": true
+    },
+    {
+      "agency": "SMART",
+      "url": "https://apps1.smartbus.org/gtfs/smart_gtfs.zip",
+      "registry": "https://mobilitydatabase.org/feeds/gtfs/mdb-414",
+      "official": true,
+      "status": "Verified current producer URL; registry service range includes 2026-07-29."
+    },
+    {
+      "agency": "QLINE",
+      "url": "https://data.trilliumtransit.com/gtfs/qline-mi-us/qline-mi-us.zip",
+      "registry": "https://www.transit.land/feeds/f-qline~mi~us",
+      "official": false,
+      "status": "Producer feed is current at this URL, but the registry's last indexed schedule ends in 2025. Download and validate before inclusion; do not silently assume 2026 service."
+    }
+  ],
+  "osm": {
+    "url": "https://download.geofabrik.de/north-america/us/michigan-latest.osm.pbf",
+    "status": "Large statewide reproducible extract; archive the downloaded file hash."
+  }
+}

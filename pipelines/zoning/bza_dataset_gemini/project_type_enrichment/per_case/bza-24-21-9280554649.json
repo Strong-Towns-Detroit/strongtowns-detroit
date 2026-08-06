@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-24-21-9280554649",
+  "project_type_family": "vehicle_oriented",
+  "project_type_label": "minor motor vehicle repair facility",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishment of a minor motor vehicle repair facility in an existing 7,092 square foot building.",
+  "evidence": [
+    "establishment of a Minor Motor Vehicle Repair Facility in an existing 7,092 sq. ft. bldg."
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

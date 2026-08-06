@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-109-19-877243d9d6",
+  "project_type_family": "industrial_or_logistics",
+  "project_type_label": "Junkyard addition to auto parts and repair facility",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "industrial_or_freight_oriented",
+  "proposal_language_tone": "adverse",
+  "housing_units": null,
+  "summary": "Proposal to add a junkyard to an existing auto parts and repair facility, denied due to existing site violations and negative neighborhood impact.",
+  "evidence": [
+    "add a Junkyard to an existing Used Auto Parts Sales",
+    "property owner had not cleaned up the site",
+    "use would have a negative effect on the neighborhood"
+  ],
+  "confidence": "high",
+  "alternative_type": "vehicle_oriented"
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-63-22-01da7e63d3",
+  "project_type_family": "housing",
+  "project_type_label": "accessory dwelling unit and home expansion",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": 1,
+  "summary": "Construct a new residential dwelling along the rear alley and expand an existing single-family dwelling.",
+  "evidence": [
+    "addition of a new 615 square foot residential dwelling along the rear alley",
+    "proposed expansion of 200 square feet"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

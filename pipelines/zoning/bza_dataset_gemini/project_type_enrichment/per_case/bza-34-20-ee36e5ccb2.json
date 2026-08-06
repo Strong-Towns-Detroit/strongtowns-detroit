@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-34-20-ee36e5ccb2",
+  "project_type_family": "office_or_medical",
+  "project_type_label": "commercial office",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Changing a nonconforming factory into a commercial office with accessory parking, requiring variances for screening and deficient parking.",
+  "evidence": [
+    "change from one nonconforming use to another",
+    "current nonconforming legal use is Factory",
+    "proposed nonconforming use is Commercial Office"
+  ],
+  "confidence": "high",
+  "alternative_type": "industrial_or_logistics"
+}

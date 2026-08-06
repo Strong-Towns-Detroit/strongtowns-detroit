@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-1-21-97e069a509",
+  "project_type_family": "housing",
+  "project_type_label": "Apartment building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 8,
+  "summary": "Request for dimensional variances to construct a new 3-story, 8-unit multi-family dwelling on vacant land with deficient setbacks and excessive lot coverage.",
+  "evidence": [
+    "proposed construction of an 8 units, 3 story Multi-Family Dwelling",
+    "on 12,428 square feet of vacant land",
+    "Deficient front yard setback 9’ provided"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-14-17-07ea6a1a53",
+  "project_type_family": "cannabis_or_controlled_use",
+  "project_type_label": "medical marijuana caregiver center",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Request for a locational variance to establish a medical marijuana caregiver center that is too close to a controlled use and religious institutions.",
+  "evidence": [
+    "establish a Medical Marihuana Caregiver Center",
+    "within 1,000 radial feet of one Controlled Use",
+    "and three (3) Religious Institutions"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}

@@ -1,0 +1,18 @@
+{
+  "case_history_id": "bza-bseed-slu2023-00093-1af72b8cea",
+  "project_type_family": "mixed_use",
+  "project_type_label": "mixed-use building with apartments and office space",
+  "proposed_action": "change_of_use",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": 49,
+  "summary": "The appellant is appealing the approval of a project to renovate a vacant building into 49 apartments and ground-floor office space.",
+  "evidence": [
+    "renovate a vacant 41,040 square foot building",
+    "establish a 49 unit multi-family residential dwelling",
+    "ground level commercial office space"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

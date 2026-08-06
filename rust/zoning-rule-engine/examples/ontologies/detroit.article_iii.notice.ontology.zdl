@@ -1,0 +1,94 @@
+module detroit.article_iii.notice
+
+concept LegalEntity
+
+concept Organization is LegalEntity
+
+concept PublicAgency is Organization
+
+concept CityDepartment is PublicAgency
+
+concept HearingForum is LegalEntity
+
+concept CityGovernment is Organization
+
+concept LegalInstrument
+
+concept LegalProvision is LegalInstrument
+
+concept Chapter50Provision is LegalProvision
+
+concept LegalMatter
+
+concept Notice is LegalMatter
+
+concept PublicHearing is LegalMatter
+
+concept LegalAction
+
+concept PublicationMedium
+
+concept Newspaper is PublicationMedium
+
+concept GeographicArea
+
+concept Municipality is GeographicArea
+
+entity Chapter50
+  is LegalInstrument
+
+entity Detroit
+  is Municipality
+
+entity CityOfDetroit
+  is CityGovernment
+
+entity BSEED
+  is CityDepartment
+  is HearingForum
+
+action publish
+  is LegalAction
+  gerund "publishing"
+  noun "publication"
+
+relation department_of
+  department: CityDepartment
+  government: CityGovernment
+  phrase
+    "{department} is a department of {government}"
+
+predicate requires_action
+  authority: LegalInstrument
+  action: LegalAction
+  subject: LegalMatter
+  phrase
+    "{authority} requires {action:noun} of {subject}"
+
+predicate responsible_for
+  bearer: LegalEntity
+  action: LegalAction
+  subject: LegalMatter
+  phrase
+    "{bearer} is responsible for {action:gerund} {subject}"
+
+relation notice_of
+  notice: Notice
+  event: PublicHearing
+  phrase
+    "{notice} is notice of {event}"
+
+relation forum_for
+  forum: HearingForum
+  hearing: PublicHearing
+  phrase
+    "{forum} is the forum for {hearing}"
+
+interpretive predicate has_general_circulation_in
+  publication: Newspaper
+  area: GeographicArea
+  phrase
+    "{publication} has general circulation in {area}"
+  resolution
+    status: open
+    method: not defined by Chapter 50

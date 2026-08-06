@@ -1,0 +1,33 @@
+{
+  "name": "Land Forum — Detroit",
+  "short_name": "Land Forum",
+  "description": "Public evidence and open inquiry about how Detroit uses its land.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#0c2340",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["government", "education", "news"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-26-21-b04c2ad13b",
+  "project_type_family": "parking_only",
+  "project_type_label": "accessory parking lot",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "automobile_oriented",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Establishment of an accessory parking lot on vacant land for a landscaping business.",
+  "evidence": [
+    "establishment of an accessory parking lot on an existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-75-21-9044d745bd",
+  "project_type_family": "mixed_use",
+  "project_type_label": "mixed-use commercial and institutional building",
+  "proposed_action": "new_construction",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "The applicant is requesting variances to construct a new two-story mixed-use building featuring a grocery, office, banquet hall, and culinary school, along with a surface parking lot.",
+  "evidence": [
+    "proposed construction of a grocery/office/rental/banquet hall and culinary school",
+    "development of the roughly 30,000 sf, 2 story building"
+  ],
+  "confidence": "high",
+  "alternative_type": null
+}

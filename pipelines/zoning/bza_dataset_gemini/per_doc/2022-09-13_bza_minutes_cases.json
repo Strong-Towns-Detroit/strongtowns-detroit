@@ -1,0 +1,88 @@
+[
+  {
+    "case_number": "40-22",
+    "meeting_date": "2022-09-13",
+    "hearing_time": "9:15 a.m.",
+    "council_district": 5,
+    "petitioner": "MIKE SEMMA/FILIP SKELAF",
+    "location": "3471 JOY RD., between Dexter and Clairmount in an R2 Zone (Two-Family Residential District)- City Council District #5",
+    "legal_description": "E DEXTER BLVD 369 368 367 COONLEYS SUB L31 P30 PLATS, WCR 12/173 101.53 IRREG",
+    "proposal": "Mike Semma, Consultant/Filip Skelaf is requesting to change from one non-conforming use (carryout restaurant) to another nonconforming use (carry out restaurant to include drive-thru lane and accessory parking lot) in a R2 Two-Family Residential District. A nonconforming use may be change to another nonconforming use only where reviewed and approved by the Board of Zoning Appeals if they determine the new nonconforming use is less injurious than the previous nonconforming use, also deficient parking. (Sections 50-15-30 Change of Nonconforming Use and 50-4-121 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.) AP",
+    "bseed_refs": [],
+    "action": "Mr. Watson made a motion to Grant change from one non-conforming carryout restaurant to another non-conforming use carry out restaurant to include drive-thru lane and parking variance in a R2 Two-Family Residential District. Seconded by Board Member Moore.",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Watson",
+      "Thomas",
+      "Sherman",
+      "Ms. Walker",
+      "Teague",
+      "Moore"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "CHANGE OF NONCONFORMING USE AND DIMENSIONAL PARKING VARIANCE GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  },
+  {
+    "case_number": "38-22",
+    "meeting_date": "2022-09-13",
+    "hearing_time": "9:45 a.m.",
+    "council_district": 3,
+    "petitioner": "Yolanda and Olive Drake",
+    "location": "20411 Prairie St., between W. Eight Mile Rd and Norfolk in an R1 Zone (Single-Family Residential District)- City Council District #3",
+    "legal_description": "W PRAIRIE 32 AND VAC ALLEY ADJ GEORGE COX EIGHT MILE RD SUB L43 P84 PLATS, W C R 16/283 35 X 122.67A COMBINED ON 12/08/2021 WITH 16023049. INTO 16023048-9",
+    "proposal": "Yolanda Drake is requesting dimensional variances for the construction of a pole barn/garage within an R1 Single-Family Residential District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Sec. 50-13-209. - Height of accessory buildings. (a)No detached accessory building or structure in any R1 or R2 District shall exceed the height of the principal building or structure, or 15 feet, whichever is less. (b)The height of buildings accessory to single-family and two-family detached dwellings shall be limited to one story, and shall not exceed 15 feet. (Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.) AP",
+    "bseed_refs": [],
+    "action": "Mr. Watson made a motion to Grant dimensional variances for construction of a pole barn/garage. The subject site is within an R1 Single-Family Residential District. Seconded by Board Member Moore.",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Watson",
+      "Thomas",
+      "Ms. Walker"
+    ],
+    "affirmative_count": 4,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "DIMENSIONAL VARIANCES GRANTED",
+    "decision_status": "decided",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted."
+  },
+  {
+    "case_number": "BSEED SLU2022-00038",
+    "meeting_date": "2022-09-13",
+    "hearing_time": "10:15 a.m.",
+    "council_district": 1,
+    "petitioner": "Developing K.I.D.S. (Kingdom in Different Stages) Kimberly Johnson",
+    "location": "16890 Telegraph, between W. McNichols and Grove in a B4 zone. City Council District #1",
+    "legal_description": "E. Telegraph 8 Riverdale Park Sub L33, P77 Plats WCR 22/472 140x300",
+    "proposal": "Developing K.I.D.S. (Kingdom in Different Stages) Kimberly Johnson appeals the decision of the Buildings Safety Engineering and Environmental Department (BSEED SLU2022-00038 effective date of decision July 1, 2022) which (Approved with Conditions) the establishment of a Marijuana Retail/Provisioning Facility (MRPF) in a 2,519 sq. ft. portion of an existing 7,242 sq. ft building in a R5 Medium Density Residential District. The Board shall be authorized to hear dimensional variance requests for matters that are beyond the scope of BSEED\u2019s 10% administrative adjustments for a variance of the minimum setbacks. Excessive lot width and excessive square footage. (Sections 50-4-131 (6)- Permitted dimensional variances and 50-4-121 Approval Criteria.) AP",
+    "bseed_refs": [
+      "BSEED SLU2022-00038"
+    ],
+    "action": "Mr. Watson made a motion that the BZA Petitioner has not established standing to bring this case before the Board. Seconded by Board Member Moore.",
+    "affirmative_votes": [
+      "Mr. Weed",
+      "Watson",
+      "Thomas",
+      "Sherman",
+      "Ms. Walker",
+      "Teague",
+      "Moore"
+    ],
+    "affirmative_count": 7,
+    "negative_votes": [],
+    "negative_count": 0,
+    "abstentions": [],
+    "decision": "STANDING HAS NOT BEEN ESTABLISHED, therefore the Board cannot proceed to the Appeal.",
+    "decision_status": "dismissed",
+    "confidence": "high",
+    "confidence_note": "All fields clearly extracted. Decision status mapped to dismissed due to lack of standing."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "case_history_id": "bza-46-24-04961161fb",
+  "project_type_family": "recreation_or_open_space",
+  "project_type_label": "urban garden",
+  "proposed_action": "other",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Development of an urban garden on existing vacant land.",
+  "evidence": [
+    "Develop an Urban Garden on existing vacant land"
+  ],
+  "confidence": "high",
+  "alternative_type": "other"
+}

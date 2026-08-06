@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-105-19-6f26fdbf3e",
+  "project_type_family": "religious",
+  "project_type_label": "religious institution auxiliary building",
+  "proposed_action": "expansion",
+  "intensity_direction": "adds_homes_or_activity",
+  "urban_form_orientation": "mixed_or_neutral",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Expand an existing religious institution campus by adding a new auxiliary building.",
+  "evidence": [
+    "expand an existing two-building Religious Institution campus",
+    "adding a new 4,644 square foot auxiliary building"
+  ],
+  "confidence": "high",
+  "alternative_type": "institutional_or_civic"
+}

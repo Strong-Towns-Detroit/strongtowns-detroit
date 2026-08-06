@@ -1,0 +1,385 @@
+/* Colour, type, and tracking tokens come from app/tokens.css, which is
+   generated from design/tokens.json by design/build_tokens.py and imported
+   ahead of this file in app/layout.tsx. Do not redeclare them here — the
+   whole point is that the website and the Python exhibit builders read the
+   same source. */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--navy);
+  font-family: var(--font-sans);
+  /* Both families ship real italics and a full weight axis, so never let the
+     browser slant or embolden synthetically. */
+  font-synthesis: none;
+}
+a { color: inherit; }
+
+/* Keyboard users could not previously see where they were on the page. */
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -100px;
+  z-index: 2000;
+  padding: 12px 18px;
+  background: var(--navy);
+  color: var(--cream);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top .15s ease;
+}
+.skip-link:focus { top: 12px; }
+
+.site-header {
+  min-height: 92px;
+  padding: 20px clamp(24px, 5vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,250,240,.96);
+  position: relative;
+  z-index: 1000;
+}
+.site-header nav { display: flex; gap: 30px; }
+.site-header nav a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: var(--track-caps);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-header nav a:hover, .site-header nav a.active { color: var(--red); }
+.wordmark {
+  display: inline-block;
+  /* Was -.025em. Negative tracking on all-caps closes the counters between
+     straight-sided letters (N/D/F/R) and reads as a kerning fault. */
+  font: 600 22px/1 var(--font-serif);
+  letter-spacing: 0.055em;
+  text-decoration: none;
+}
+.hero {
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(340px, .88fr);
+  border-bottom: 1px solid var(--line);
+}
+.hero-copy {
+  padding: 100px clamp(28px, 6vw, 96px) 80px;
+  align-self: center;
+}
+.kicker {
+  color: var(--red);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  /* Was clamp(74px, 9vw, 142px)/.82 with letter-spacing: -.065em, which made
+     "A forum for" overflow its column and wrap mid-phrase, and set a line box
+     shorter than the type so descenders struck the caps below. */
+  font: 600 clamp(50px, 7.8vw, 118px)/1.02 var(--font-serif);
+  letter-spacing: var(--track-display);
+  margin: 28px 0 40px;
+  text-wrap: balance;
+}
+.hero h1 em { color: var(--red); font-size: .78em; font-weight: inherit; }
+.hero-dek {
+  max-width: 620px;
+  color: var(--ink-soft);
+  font: 400 24px/1.45 var(--font-serif);
+  text-wrap: pretty;
+}
+.hero-actions { display: flex; gap: 14px; margin-top: 42px; flex-wrap: wrap; }
+.button {
+  padding: 16px 22px;
+  border: 1px solid var(--navy);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+}
+.button-primary { background: var(--navy); color: var(--cream); }
+.button-quiet:hover { background: var(--paper); }
+.hero-field {
+  overflow: hidden;
+  position: relative;
+  min-height: 550px;
+  background: var(--navy);
+}
+.hero-field::before {
+  content: "";
+  position: absolute;
+  inset: 8% -25% -20% 12%;
+  border: 2px solid rgba(255,250,240,.34);
+  transform: rotate(-11deg);
+  border-radius: 44% 56% 38% 62%;
+}
+.hero-field p {
+  position: absolute;
+  right: 9%;
+  bottom: 8%;
+  margin: 0;
+  color: var(--cream);
+  text-align: right;
+  font: 600 clamp(30px, 4.2vw, 62px)/1.04 var(--font-serif);
+  letter-spacing: 0.012em;
+}
+.field-line { position: absolute; background: var(--gold); height: 3px; transform-origin: left; }
+.field-line-one { width: 78%; top: 35%; left: 8%; transform: rotate(22deg); }
+.field-line-two { width: 70%; top: 72%; left: 15%; transform: rotate(-32deg); }
+.field-dot { position: absolute; border-radius: 50%; background: var(--red); border: 5px solid var(--cream); }
+.dot-one { width: 42px; height: 42px; top: 31%; left: 44%; }
+.dot-two { width: 75px; height: 75px; top: 61%; left: 20%; }
+.dot-three { width: 28px; height: 28px; top: 48%; right: 12%; background: var(--gold); }
+.project-band { padding: 70px clamp(24px, 5vw, 76px); background: var(--paper); border-bottom: 1px solid var(--line); }
+.project-grid { display: grid; grid-template-columns: 1.35fr 1fr auto; gap: 60px; align-items: flex-end; }
+.project-grid h2, .about h2 {
+  font: 600 clamp(38px, 4.4vw, 64px)/1.04 var(--font-serif);
+  letter-spacing: var(--track-display);
+  margin: 16px 0 22px;
+  text-wrap: balance;
+}
+.project-grid p { color: var(--ink-soft); font: 400 19px/1.55 var(--font-serif); max-width: 690px; text-wrap: pretty; }
+.project-grid dl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; }
+.project-grid dl div { padding: 0 16px; border-left: 1px solid var(--line); }
+.project-grid dt {
+  font: 600 30px/1.1 var(--font-serif);
+  /* Georgia had no lining-figure alternate, so 405/496/2019 sat on mismatched
+     baselines. Source Serif 4 defaults to lining; tabular keeps the columns
+     aligned and stops "2019-26" breaking across two lines. */
+  font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
+}
+.project-grid dd { margin: 6px 0 0; color: var(--ink-soft); font-size: 12px; letter-spacing: .01em; }
+.project-link { font-weight: 600; text-transform: uppercase; letter-spacing: var(--track-caps); white-space: nowrap; }
+.about { padding: 100px clamp(24px, 8vw, 128px) 130px; display: grid; grid-template-columns: 220px 1fr; gap: 50px; }
+.about h2 { max-width: 1060px; margin-top: 0; }
+.about-columns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; max-width: 980px; }
+.about-columns p { color: var(--ink-soft); font: 400 18px/1.7 var(--font-serif); text-wrap: pretty; }
+footer { background: var(--navy); color: var(--cream); padding: 55px clamp(24px, 5vw, 76px); }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+.footer-mark { color: var(--cream); font-size: 32px; }
+footer p { color: rgba(255,250,240,.68); font-size: 12px; line-height: 1.6; max-width: 460px; margin: 0; }
+.footer-meta {
+  margin-top: 38px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,250,240,.18);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  color: rgba(255,250,240,.6);
+  font-size: 11px;
+  letter-spacing: .02em;
+}
+.footer-meta nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-meta a { color: rgba(255,250,240,.82); text-decoration: underline; text-underline-offset: 3px; }
+.footer-meta a:hover { color: var(--cream); }
+
+.atlas-page { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+.atlas-header { flex: 0 0 auto; }
+.atlas-intro { flex: 0 0 auto; padding: 28px clamp(24px, 4vw, 60px) 25px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 0 40px; align-items: end; }
+.atlas-intro .kicker { grid-column: 1 / -1; margin: 0 0 12px; }
+.atlas-intro h1 {
+  font: 600 clamp(34px, 3.6vw, 56px)/1.06 var(--font-serif);
+  letter-spacing: var(--track-display);
+  margin: 0;
+  text-wrap: balance;
+}
+.atlas-intro > p:last-child { color: var(--ink-soft); font: 400 17px/1.55 var(--font-serif); max-width: 620px; margin: 0; text-wrap: pretty; }
+.explorer { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: 390px 1fr; border-top: 1px solid var(--line); }
+.filter-panel { min-height: 0; display: flex; flex-direction: column; background: var(--cream); border-right: 1px solid var(--line); z-index: 500; }
+.search-label { padding: 20px 20px 12px; }
+.search-label span { font-size: 11px; font-weight: 700; letter-spacing: var(--track-caps); text-transform: uppercase; }
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fffdf7;
+  color: var(--navy);
+  font: 400 14px var(--font-sans);
+  border-radius: 0;
+}
+input { margin-top: 8px; padding: 13px; }
+.filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 20px 18px; position: relative; z-index: 5; }
+.filter-grid > :last-child { grid-column: 1 / -1; }
+.filter-menu { position: relative; min-width: 0; }
+.filter-menu summary {
+  list-style: none;
+  border: 1px solid var(--line);
+  background: #fffdf7;
+  min-height: 42px;
+  padding: 10px 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.filter-menu summary::-webkit-details-marker { display: none; }
+.filter-menu summary::after { content: "⌄"; margin-left: 8px; font-size: 15px; line-height: .5; }
+.filter-menu summary b { margin-left: auto; color: var(--red); font-size: 10px; }
+.filter-menu[open] summary { border-color: var(--navy); }
+.filter-menu[open] summary::after { transform: rotate(180deg); }
+.filter-options {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  width: max(100%, 270px);
+  max-height: 330px;
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--navy);
+  background: #fffdf7;
+  box-shadow: 0 10px 30px rgba(12,35,64,.2);
+}
+.filter-grid > :nth-child(2) .filter-options { left: auto; right: 0; }
+.filter-menu-heading { padding: 5px 4px 9px; display: flex; justify-content: space-between; align-items: center; }
+.filter-menu-heading strong { font-size: 10px; letter-spacing: var(--track-caps); text-transform: uppercase; }
+.filter-menu-heading button { border: 0; background: none; color: var(--red); font: 700 10px var(--font-sans); cursor: pointer; text-transform: uppercase; letter-spacing: .06em; }
+.filter-options label {
+  position: relative;
+  padding: 8px 6px;
+  display: grid;
+  grid-template-columns: 16px 9px 1fr;
+  gap: 8px;
+  align-items: center;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.3;
+}
+.filter-options label:hover { background: var(--paper); }
+.filter-options input { position: absolute; opacity: 0; pointer-events: none; }
+.custom-check { width: 15px; height: 15px; border: 1px solid var(--navy); background: var(--cream); }
+.filter-options input:checked + .custom-check { background: var(--navy); box-shadow: inset 0 0 0 3px var(--cream); }
+/* The checkbox is visually hidden, so the ring has to be drawn on its label. */
+.filter-options input:focus-visible + .custom-check { outline: 3px solid var(--red); outline-offset: 2px; }
+.filter-swatch { width: 8px; height: 8px; border-radius: 50%; }
+.filter-options label:not(:has(.filter-swatch)) { grid-template-columns: 16px 1fr; }
+.results-heading { padding: 13px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; gap: 7px; align-items: baseline; }
+.results-heading strong { font: 600 25px var(--font-serif); font-variant-numeric: lining-nums tabular-nums; }
+.results-heading span { color: var(--ink-soft); font-size: 12px; }
+.case-list { overflow: auto; min-height: 0; }
+.case-card { appearance: none; width: 100%; border: 0; border-bottom: 1px solid var(--line); background: transparent; padding: 15px 20px; display: grid; grid-template-columns: 10px 1fr; gap: 13px; text-align: left; color: var(--navy); cursor: pointer; font-family: inherit; }
+.case-card:hover, .case-card.selected { background: var(--paper); }
+.case-swatch { width: 9px; height: 9px; margin-top: 4px; border-radius: 50%; }
+.case-card b, .case-card small { display: block; }
+/* Street addresses are set in caps, so they need the caps tracking, and
+   tabular figures keep the house numbers from looking ragged down the list. */
+.case-card b { font: 600 15px/1.25 var(--font-serif); letter-spacing: .02em; font-variant-numeric: lining-nums tabular-nums; margin-bottom: 5px; }
+.case-card small { color: var(--ink-soft); font-size: 11px; line-height: 1.5; font-variant-numeric: lining-nums tabular-nums; }
+.map-region { min-width: 0; min-height: 0; position: relative; }
+.map { position: absolute; inset: 0; background: var(--cream); }
+.map-note { position: absolute; left: 15px; bottom: 15px; z-index: 500; background: rgba(255,250,240,.93); padding: 9px 11px; font-size: 11px; line-height: 1.45; color: var(--ink-soft); box-shadow: 0 2px 12px rgba(12,35,64,.12); }
+.case-detail { position: absolute; z-index: 600; right: 18px; top: 18px; width: min(440px, calc(100% - 36px)); max-height: calc(100% - 36px); overflow: auto; padding: 25px; background: rgba(255,250,240,.98); box-shadow: 0 8px 38px rgba(12,35,64,.25); border-top: 5px solid var(--red); }
+.case-detail h2 { font: 600 28px/1.12 var(--font-serif); letter-spacing: -.01em; margin: 10px 0; text-wrap: balance; }
+.detail-meta { color: var(--ink-soft); }
+.case-detail dl { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); margin-top: 20px; }
+.case-detail dl div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.case-detail dt { color: var(--ink-soft); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: var(--track-caps); }
+.case-detail dd { margin: 5px 0 0; font: 400 15px/1.4 var(--font-serif); font-variant-numeric: lining-nums tabular-nums; }
+.proposal { font: 400 15px/1.6 var(--font-serif); text-wrap: pretty; }
+.detail-close { position: absolute; top: 10px; right: 12px; background: none; border: 0; color: var(--navy); font-size: 28px; line-height: 1; cursor: pointer; }
+.detail-back { border: 0; padding: 0; margin: 0 0 18px; background: none; color: var(--red); cursor: pointer; font: 700 11px var(--font-sans); letter-spacing: .06em; text-transform: uppercase; }
+.site-year-groups { margin-top: 22px; border-top: 1px solid var(--line); }
+.site-year-groups section { display: grid; grid-template-columns: 54px 1fr; border-bottom: 1px solid var(--line); }
+.site-year-groups h3 { margin: 0; padding: 15px 0; font: 600 16px var(--font-serif); font-variant-numeric: lining-nums tabular-nums; }
+.site-year-cases { min-width: 0; border-left: 1px solid var(--line); }
+.site-year-groups button { width: 100%; border: 0; border-bottom: 1px solid var(--line); padding: 12px; display: grid; grid-template-columns: 9px 1fr; gap: 10px; background: transparent; color: var(--navy); text-align: left; cursor: pointer; font-family: inherit; }
+.site-year-groups button:last-child { border-bottom: 0; }
+.site-year-groups button:hover { background: var(--paper); }
+.site-year-groups button b, .site-year-groups button small { display: block; }
+.site-year-groups button b { font: 600 13px var(--font-serif); letter-spacing: .02em; font-variant-numeric: lining-nums tabular-nums; }
+.site-year-groups button small { color: var(--ink-soft); font-size: 10px; line-height: 1.45; }
+.hearing-files { margin-top: 24px; border-top: 1px solid var(--line); }
+.hearing-files h3 { font: 600 19px var(--font-serif); margin: 18px 0 8px; }
+.hearing-files a { padding: 11px 0; display: flex; justify-content: space-between; gap: 15px; border-bottom: 1px solid var(--line); color: var(--navy); text-decoration: none; }
+.hearing-files a:hover strong { color: var(--red); }
+.hearing-files a b, .hearing-files a small { display: block; }
+.hearing-files a b { font-variant-numeric: lining-nums tabular-nums; }
+.hearing-files a small { max-width: 280px; margin-top: 3px; color: var(--ink-soft); font-size: 10px; line-height: 1.4; }
+.hearing-files a > strong { flex: 0 0 auto; color: var(--navy); font-size: 10px; font-weight: 700; letter-spacing: .07em; }
+
+/* 404 */
+.notfound { min-height: 62vh; display: grid; align-content: center; justify-items: start; padding: 90px clamp(28px, 7vw, 112px); }
+.notfound h1 { font: 600 clamp(48px, 6vw, 92px)/1.02 var(--font-serif); letter-spacing: var(--track-display); margin: 22px 0 18px; }
+/* :not(.kicker) matters — a bare `.notfound p` outranks `.kicker` on
+   specificity and would strip the eyebrow's colour and UI font. */
+.notfound p:not(.kicker) { color: var(--ink-soft); font: 400 20px/1.55 var(--font-serif); max-width: 560px; margin: 0 0 34px; text-wrap: pretty; }
+
+.maplibregl-ctrl-group {
+  border-radius: 0 !important;
+  box-shadow: 0 2px 12px rgba(12,35,64,.12) !important;
+}
+.maplibregl-ctrl-group button {
+  background-color: rgba(255,250,240,.96);
+}
+.maplibregl-popup-content {
+  border-radius: 0;
+  padding: 8px 10px;
+  background: rgba(255,250,240,.97);
+  color: var(--navy);
+  font: 400 11px/1.45 var(--font-sans);
+  box-shadow: 0 2px 12px rgba(12,35,64,.18);
+}
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+  border-top-color: rgba(255,250,240,.97);
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-field { min-height: 430px; }
+  .project-grid, .about { grid-template-columns: 1fr; }
+  .project-grid { gap: 30px; }
+  .about-columns { grid-template-columns: 1fr; gap: 10px; }
+  .atlas-page { height: auto; overflow: visible; }
+  .atlas-intro { grid-template-columns: 1fr; gap: 12px; }
+  .explorer { display: flex; flex-direction: column; }
+  .map-region { order: -1; height: 58vh; min-height: 480px; }
+  .filter-panel { height: 700px; }
+}
+
+@media (max-width: 560px) {
+  .site-header { min-height: 74px; padding: 14px 18px; }
+  .site-header nav { gap: 14px; }
+  .site-header nav a { font-size: 10px; }
+  .hero-copy { padding: 70px 24px; }
+  .hero h1 { font-size: 52px; }
+  .hero-dek { font-size: 20px; }
+  .project-grid dl { grid-template-columns: 1fr; gap: 12px; }
+  .footer-top { align-items: start; flex-direction: column; gap: 20px; }
+  .footer-meta { flex-direction: column; gap: 12px; }
+  .explorer { grid-template-columns: 1fr; }
+}
+
+/* Respect the OS "reduce motion" setting — `scroll-behavior: smooth` was
+   previously applied unconditionally. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "case_history_id": "bza-85-19-b0b1323990",
+  "project_type_family": "food_or_beverage",
+  "project_type_label": "restaurant walk-in cooler",
+  "proposed_action": "site_or_building_alteration",
+  "intensity_direction": "maintains_existing_activity",
+  "urban_form_orientation": "pedestrian_or_transit_supportive",
+  "proposal_language_tone": "neutral",
+  "housing_units": null,
+  "summary": "Add a shipping container to serve as a walk-in cooler for an existing restaurant.",
+  "evidence": [
+    "existing Restaurant w/consumption",
+    "shipping container for walk in cooler"
+  ],
+  "confidence": "high",
+  "alternative_type": "retail_or_personal_service"
+}
