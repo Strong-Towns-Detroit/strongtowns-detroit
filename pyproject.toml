@@ -16,6 +16,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest", "pytest-mock", "python-dotenv"]
 minutes = ["google-genai", "pydantic"]
+archive = ["boto3"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests", "pipelines/isochrones/tests"]
