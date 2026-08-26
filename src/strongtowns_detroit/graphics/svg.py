@@ -37,7 +37,7 @@ class SvgRegion:
 
 @dataclass(frozen=True)
 class MobileMapLayout:
-    """Fixed mobile slots for a Detroit map and its optional legend."""
+    """One centered mobile composition containing a map and its siblings."""
 
     map_region: SvgRegion
     legend_region: SvgRegion | None = None
@@ -311,7 +311,16 @@ def render_graphic_svg(
             width * region.height / region.width
             for _, region, width, _ in slots
         ]
-        slot_y = visual_y
+        composition_height = sum(slot_heights) + layout.gap * max(
+            0, len(slots) - 1
+        )
+        # Treat the map, its in-map pockets, legend, and following segments as
+        # one visual object. Centering that object in the available region
+        # shares unused space above and below it instead of allowing title
+        # length to push the entire composition down line-for-line.
+        composition_offset = max(0, (visual_height - composition_height) / 2)
+        slot_y = visual_y + composition_offset
+        composition_y = slot_y
         visual_parts = []
         for (
             (slot_name, region, slot_width, slot_markup),
@@ -353,14 +362,15 @@ def render_graphic_svg(
         map_top_overflow = (
             layout.map_top_bleed * layout.map_width / layout.map_region.width
         )
-        layout_clip_y = visual_y - map_top_overflow
-        layout_clip_height = visual_height + map_top_overflow
+        layout_clip_y = composition_y - map_top_overflow
+        layout_clip_height = visual_bottom - layout_clip_y
         visual_markup = (
             f'<defs><clipPath id="{clip_id}"><rect x="0" '
             f'y="{layout_clip_y:g}" width="{canvas_width}" '
             f'height="{layout_clip_height:g}"/>'
             f'</clipPath></defs><g clip-path="url(#{clip_id})">'
-            f'{"".join(visual_parts)}</g>'
+            f'<g data-layout-node="map-composition">'
+            f'{"".join(visual_parts)}</g></g>'
         )
     elif portrait and visual.portrait_regions:
         gap = 28

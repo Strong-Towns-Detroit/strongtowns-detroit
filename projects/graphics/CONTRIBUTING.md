@@ -71,7 +71,9 @@ Instagram is a mobile editorial format. It is not a scaled conference layout.
 Respect `MOBILE_TYPOGRAPHY`, automatic balanced title wrapping, the standard
 masthead, and the fixed 1570-unit Detroit map slot. Mobile compositions should
 prioritize title, map/chart, and legend in that order unless the definition
-explicitly establishes another hierarchy.
+explicitly establishes another hierarchy. A mobile map, its pocket insets,
+legend, and following segments form one measured composition that is centered
+vertically in the space between the completed masthead and footer.
 
 ## Testing and review
 

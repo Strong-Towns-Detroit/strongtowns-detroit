@@ -1,6 +1,7 @@
 """Tests for the public strongtowns_detroit.graphics library."""
 
 import json
+import re
 
 import polars as pl
 import pytest
@@ -293,10 +294,50 @@ def test_mobile_map_top_bleed_is_not_cut_off_by_composition_clip() -> None:
     )
 
     assert '<rect x="32" y="200" width="1047" height="700"/>' in svg
-    assert '<rect x="0" y="171.01" width="1600"' in svg
+    clip = re.search(
+        r'id="mobile-map-layout-bounds"><rect x="0" y="([^"]+)"',
+        svg,
+    )
+    map_slot = re.search(
+        r'data-layout-node="map" x="[^"]+" y="([^"]+)"',
+        svg,
+    )
+    assert clip is not None and map_slot is not None
+    assert float(map_slot.group(1)) - float(clip.group(1)) == pytest.approx(
+        20 * 1570 / 1047,
+        abs=0.02,
+    )
     assert svg.index('data-layout-node="brand"') < svg.index(
         'data-layout-node="visual"'
     )
+
+
+def test_mobile_map_and_legend_are_centered_as_one_composition() -> None:
+    layout = MobileMapLayout(
+        SvgRegion(32, 220, 1047, 680),
+        legend_region=SvgRegion(0, 980, 1080, 210),
+    )
+    visual = SvgComponent("<g/>", 1080, 1200, mobile_map_layout=layout)
+    one_line = render_graphic_svg(
+        Graphic(title="One line", visual=visual),
+        aspect_ratio=INSTAGRAM_PORTRAIT,
+    )
+    three_lines = render_graphic_svg(
+        Graphic(title=("Line one", "Line two", "Line three"), visual=visual),
+        aspect_ratio=INSTAGRAM_PORTRAIT,
+    )
+
+    def map_y(svg: str) -> float:
+        match = re.search(r'data-layout-node="map" x="[^"]+" y="([^"]+)"', svg)
+        assert match is not None
+        return float(match.group(1))
+
+    title_line_height = 72 * 1.08
+    assert map_y(three_lines) - map_y(one_line) == pytest.approx(
+        title_line_height,
+        abs=0.02,
+    )
+    assert 'data-layout-node="map-composition"' in one_line
 
 
 def test_mobile_map_pockets_accept_independent_typed_insets() -> None:
