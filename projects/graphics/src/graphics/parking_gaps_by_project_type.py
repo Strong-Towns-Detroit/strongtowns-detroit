@@ -104,8 +104,7 @@ def build():
             ),
         ),
         title=(
-            "Developers consistently propose far fewer parking spaces "
-            "than the law requires."
+            "Detroit's Zoning Code mandates far more parking spaces than developments require"
         ),
         subtitle="Parking gaps by project type · Detroit BZA cases, 2019–2026",
         axis=NumericAxis(

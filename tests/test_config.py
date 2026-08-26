@@ -16,7 +16,7 @@ class TestGetCensusApiKey:
     def test_raises_when_missing(self, monkeypatch):
         monkeypatch.delenv("CENSUS_API_KEY", raising=False)
         with pytest.raises(ValueError, match="CENSUS_API_KEY not set"):
-            get_census_api_key()
+            get_census_api_key(load_dotenv_file=False)
 
 
 class TestLoadJsonConfig:

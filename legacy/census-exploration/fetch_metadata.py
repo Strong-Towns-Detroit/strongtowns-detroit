@@ -8,14 +8,11 @@ def get_table_vars(table_id):
         resp = requests.get(url)
         if resp.status_code == 200:
             data = resp.json()
-            # The variables are in 'variables' dict
             vars_dict = data.get('variables', {})
             print(f"Found {len(vars_dict)} variables for {table_id}")
             
-            # Sort by key to see order
             sorted_keys = sorted(vars_dict.keys())
             for key in sorted_keys:
-                # Filter for Estimate variables (usually end in E)
                 if key.endswith("E"):
                     label = vars_dict[key].get('label', 'No Label')
                     print(f"{key}: {label}")

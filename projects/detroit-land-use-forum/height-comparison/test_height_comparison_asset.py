@@ -8,10 +8,10 @@ def test_height_audit_counts_and_duplicate():
     ]
     numeric = valid[valid["audit_status"].eq("explicit_pair")]
 
-    assert len(cases) == 18
-    assert len(valid) == 17
+    assert len(cases) == 20
+    assert len(valid) == 19
     assert len(numeric) == 10
-    assert valid["audit_status"].eq("not_stated").sum() == 7
+    assert valid["audit_status"].eq("not_stated").sum() == 9
 
 
 def test_height_outcomes():
@@ -20,11 +20,11 @@ def test_height_outcomes():
         ~cases["audit_status"].eq("same_project_predecessor")
     ]
 
-    assert valid["final_outcome"].eq("granted_reversed").sum() == 15
+    assert valid["final_outcome"].eq("granted_reversed").sum() == 16
     assert valid["final_outcome"].eq("denied_upheld").sum() == 0
     assert (
         ~valid["final_outcome"].isin(["granted_reversed", "denied_upheld"])
-    ).sum() == 2
+    ).sum() == 3
 
 
 def test_explicit_height_pairs():

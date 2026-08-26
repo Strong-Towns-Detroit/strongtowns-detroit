@@ -11,11 +11,11 @@ def test_spacing_audit_counts():
     valid = cases[~cases["audit_status"].eq("not_spacing_case")]
     numeric = valid[valid["audit_status"].eq("explicit_pair")].copy()
 
-    assert len(cases) == 45
+    assert len(cases) == 52
     assert len(FALSE_POSITIVES) == 1
-    assert len(valid) == 44
+    assert len(valid) == 51
     assert len(numeric) == len(SPACING_VALUES) == 37
-    assert valid["audit_status"].eq("not_stated").sum() == 7
+    assert valid["audit_status"].eq("not_stated").sum() == 14
     assert (numeric["actual_distance_ft"] < numeric["required_distance_ft"]).all()
 
 

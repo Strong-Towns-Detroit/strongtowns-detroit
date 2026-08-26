@@ -98,7 +98,8 @@ This replaces what were previously hardcoded API keys scattered across Census sc
 `load_json_config(path)` is a small utility for loading the JSON config files that
 the parcel pipeline depends on (zoning restrictions, use code mappings, etc.).
 
-**Used by:** `census/fetcher.py`, `verify_vars.py`
+**Used by:** `census/fetcher.py`. The former `verify_vars.py` is preserved under
+`legacy/census-exploration/` and is not a production consumer.
 
 ---
 

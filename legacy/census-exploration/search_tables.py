@@ -40,4 +40,3 @@ def get_table_vars(table_id):
 
 search_groups("Nonrelatives")
 search_groups("Group Quarters")
-# Also check B09019 again fully? No, I'll trust the search.

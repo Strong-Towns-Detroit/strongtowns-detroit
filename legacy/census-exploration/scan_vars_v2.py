@@ -16,7 +16,6 @@ def scan_tables(prefix, start, end):
                     if "Roomer" in label or "Boarder" in label:
                         print(f"FOUND in {table_id}: {key} - {label}")
                     if "Non-institutional" in label or "Group Quarters" in label:
-                         # Only print if it's a variable label, not just table title
                          if "Group quarters" in label or "Noninstitutional" in label or "Non-institutional" in label:
                              print(f"FOUND GQ in {table_id}: {key} - {label}")
         except Exception:

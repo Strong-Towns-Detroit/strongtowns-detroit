@@ -412,4 +412,12 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # Compatibility wrapper: archive ownership now lives in the installed
+    # library and its registered asset catalog. Keep ``recipes`` available
+    # during migration, but route durable storage commands through the single
+    # canonical implementation.
+    if len(sys.argv) > 1 and sys.argv[1] in {"status", "push", "pull"}:
+        from strongtowns_detroit.data.cli import main as data_main
+
+        sys.exit(data_main(["archive", *sys.argv[1:]]))
     sys.exit(main())

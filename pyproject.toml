@@ -12,21 +12,44 @@ dependencies = [
     "pandas",
     "polars",
     "numpy",
+    "pyarrow",
+    "jsonschema",
+    "requests",
+    "python-dotenv",
+    "pyogrio",
+    "beautifulsoup4",
+    "lxml",
+    "python-docx",
+    "rdflib",
+    "pillow",
+    "httpx",
+    "duckdb>=1.4,<2",
 ]
 
 [project.scripts]
 strongtowns-graphics = "strongtowns_detroit.graphics.cli:main"
+strongtowns-data = "strongtowns_detroit.data.cli:main"
 
 [tool.setuptools.package-data]
 "strongtowns_detroit.graphics" = ["assets/*.png"]
 
 [project.optional-dependencies]
-dev = ["pytest", "pytest-mock", "python-dotenv"]
+dev = ["pytest", "pytest-mock"]
 minutes = ["google-genai", "pydantic"]
 archive = ["boto3"]
+census = ["pytidycensus"]
+semantic = ["sentence-transformers"]
+accessibility = ["r5py"]
+notebooks = ["marimo>=0.18,<1"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests", "pipelines/isochrones/tests"]
+testpaths = [
+    "tests",
+    "pipelines/isochrones/tests",
+    "pipelines/zoning",
+    "projects/detroit-land-use-forum",
+]
+asyncio_default_fixture_loop_scope = "function"
 pythonpath = [
     "src",
     "pipelines/parcel-data",

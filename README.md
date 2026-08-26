@@ -102,11 +102,26 @@ that fan out to Instagram posts, Instagram Stories, and conference graphics.
 - AI agents should follow [AGENTS.md](AGENTS.md), establish publishing or
   developer mode, and preserve the boundary between graphic definitions and
   the shared library.
+- Data collaborators can use the [downloadable query catalog and nonprofit
+  hosting plan](docs/nonprofit-data-access.md) without a metered query API.
 
 ```bash
 strongtowns-graphics list
 strongtowns-graphics build
 ```
+
+### Reproducible data and local SQL
+
+```bash
+uv run strongtowns-data status
+uv run strongtowns-data build detroit-query-catalog
+uv run strongtowns-data catalog query detroit.query.catalog \
+  --sql "SELECT count(*) FROM parcels"
+uv run --extra notebooks marimo edit notebooks/data_catalog.py
+```
+
+The DuckDB catalog is a read-only, downloadable mirror of promoted data. No
+hosted database, R2 upload, or paid query service is required.
 
 ### Parcel Zoning Analysis
 
@@ -207,7 +222,10 @@ source .venv/bin/activate
 python -m pytest tests/ -v --tb=short
 ```
 
-435 tests (393 unit + 42 integration), ~10 seconds. Integration tests parse real `.docx` files and are skipped if `resources/*.docx` are not present.
+The default suite includes library, pipeline, Land Forum, graphics, and
+isochrone tests. See [Reproducible data pipelines](docs/data-pipelines.md) for
+the locked environment and clean-checkout workflow. AI agents follow
+[AGENTS.md](AGENTS.md).
 
 ## Key Technical Details
 
