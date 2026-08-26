@@ -346,9 +346,19 @@ def render_graphic_svg(
             )
             slot_y += slot_height + layout.gap
         clip_id = "mobile-map-layout-bounds"
+        # The map is painted after the masthead and title, so its deliberate
+        # top bleed can sit above them. Extend the outer composition clip by
+        # the same scaled amount; otherwise this second clip shears off large
+        # markers even though the map slot itself permits overflow.
+        map_top_overflow = (
+            layout.map_top_bleed * layout.map_width / layout.map_region.width
+        )
+        layout_clip_y = visual_y - map_top_overflow
+        layout_clip_height = visual_height + map_top_overflow
         visual_markup = (
-            f'<defs><clipPath id="{clip_id}"><rect x="0" y="{visual_y:g}" '
-            f'width="{canvas_width}" height="{visual_height:g}"/>'
+            f'<defs><clipPath id="{clip_id}"><rect x="0" '
+            f'y="{layout_clip_y:g}" width="{canvas_width}" '
+            f'height="{layout_clip_height:g}"/>'
             f'</clipPath></defs><g clip-path="url(#{clip_id})">'
             f'{"".join(visual_parts)}</g>'
         )

@@ -275,6 +275,30 @@ def test_mobile_detroit_map_width_is_independent_of_source_viewbox() -> None:
     assert '<rect x="20" y="10" width="400" height="220"/>' in svg
 
 
+def test_mobile_map_top_bleed_is_not_cut_off_by_composition_clip() -> None:
+    visual = SvgComponent(
+        "<circle cx='1040' cy='205' r='18'/>",
+        1080,
+        1080,
+        mobile_map_layout=MobileMapLayout(
+            SvgRegion(32, 220, 1047, 680),
+            map_width=1570,
+            map_top_bleed=20,
+        ),
+    )
+
+    svg = render_graphic_svg(
+        Graphic(title="Map", visual=visual),
+        aspect_ratio=INSTAGRAM_PORTRAIT,
+    )
+
+    assert '<rect x="32" y="200" width="1047" height="700"/>' in svg
+    assert '<rect x="0" y="171.01" width="1600"' in svg
+    assert svg.index('data-layout-node="brand"') < svg.index(
+        'data-layout-node="visual"'
+    )
+
+
 def test_mobile_map_pockets_accept_independent_typed_insets() -> None:
     from strongtowns_detroit.graphics import map_on_mobile
 
