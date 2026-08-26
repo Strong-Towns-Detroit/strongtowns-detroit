@@ -87,7 +87,7 @@ def build():
     graphic = categorical_proportional_symbol_map(
         pl.DataFrame(records),
         basemap=load_detroit_basemap(),
-        title="Hundreds of different rules send Detroiters to the Board of Zoning Appeals for Relief, delaying development and adding to costs",
+        title="Detroit Board of Zoning Appeals cases by Relief Requested",
         subtitle="Cases by primary request recorded in meeting minutes, 2019–2026",
         category_legend_heading="Type of request",
         magnitude_legend_heading="HEARINGS PER CASE",

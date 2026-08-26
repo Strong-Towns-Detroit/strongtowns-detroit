@@ -90,6 +90,24 @@ The large data files are not checked into git. To run the pipelines, you'll need
 
 ## Running the Pipelines
 
+### Publishing graphics
+
+The repository includes a reusable graphics library and canonical definitions
+that fan out to Instagram posts, Instagram Stories, and conference graphics.
+
+- Start with the [plain-language graphics guide](projects/graphics/USING_GRAPHICS.md)
+  if you want to produce or revise graphics without working directly in code.
+- Read the [graphics contributor guide](projects/graphics/CONTRIBUTING.md) before
+  changing library APIs or adding reusable rendering behavior.
+- AI agents should follow [AGENTS.md](AGENTS.md), establish publishing or
+  developer mode, and preserve the boundary between graphic definitions and
+  the shared library.
+
+```bash
+strongtowns-graphics list
+strongtowns-graphics build
+```
+
 ### Parcel Zoning Analysis
 
 Run in order from `pipelines/parcel-data/`:

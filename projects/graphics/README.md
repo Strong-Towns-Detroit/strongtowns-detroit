@@ -2,6 +2,13 @@
 
 This is the publishing-neutral home for Strong Towns Detroit graphics.
 
+Choose the guide that matches how you want to work:
+
+- [Using the graphics](USING_GRAPHICS.md): plain-language publishing workflow
+  for editors, researchers, organizers, and AI-assisted users.
+- [Contributing](CONTRIBUTING.md): architecture and safeguards for developers
+  and AI agents extending the library.
+
 The current definitions are grouped under `src/graphics/`, with one plainly
 named file per graphic. That is an organizational choice, not a library
 requirement. A builder registered with `@graphic_definition(...)` may live at
@@ -147,27 +154,6 @@ map_on_mobile(
 The map, legend, pocket insets, and segments belong to the map composition;
 segments do not belong to the legend. Segments render after the legend and are
 clipped at the visual/footer boundary when the preceding content is too tall.
-
-## Maintainer layout workbench
-
-The repository includes a local SVG-Edit workbench for visually refining the
-library's layout components. It is a library-development tool, not a user-facing
-application or a publishing dependency.
-
-```bash
-cd projects/graphics/editor
-npm ci
-npm run editor
-```
-
-Open <http://127.0.0.1:4178>. The hierarchy panel exposes the semantic boxes
-emitted by the library. Moving or resizing one of those boxes and choosing
-**Save layout sidecar** writes only its supported layout attributes to
-`src/graphics/layout/<graphic-family>/<target>/<graphic-name>.json`. The next normal
-graphics build applies that target-specific sidecar. Arbitrary edited SVG is
-never used as source code.
-
-See [`editor/README.md`](editor/README.md) for the complete workflow.
 
 The older `projects/detroit-land-use-forum/` modules currently provide the
 data preparation and SVG visual components. They are inputs to this catalog;
