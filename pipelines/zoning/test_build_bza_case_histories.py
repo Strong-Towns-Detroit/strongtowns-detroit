@@ -54,3 +54,56 @@ def test_duplicate_printed_number_can_be_split_by_override():
 
 def test_history_id_is_stable():
     assert make_history_id(" 76-19 ", "cass") == make_history_id("76/19", "cass")
+
+
+def test_case_review_replaces_unspecified_with_detailed_categories():
+    frame = pd.DataFrame([
+        row(
+            "2020-01-01:1-20:1", "1-20", "2020-01-01",
+            category="dimensional_relief_unspecified",
+        )
+    ])
+    reviews = pd.DataFrame([{
+        "case_history_id": make_history_id("1-20"),
+        "printed_case_number": "1-20",
+        "review_status": "classified",
+        "categories": "parking_supply|setbacks_yards",
+        "evidence": "Four spaces deficient; rear setback deficient",
+    }])
+
+    histories, _, categories, audit = build_histories(
+        frame,
+        pd.DataFrame(columns=["occurrence_id", "history_discriminator"]),
+        reviews,
+    )
+
+    assert histories.iloc[0].relief_categories == "parking_supply|setbacks_yards"
+    assert set(categories["category"]) == {"parking_supply", "setbacks_yards"}
+    assert set(categories["classification_sources"]) == {"manual_case_review"}
+    assert audit["relief_case_reviews"]["classified_histories"] == 1
+
+
+def test_unresolved_case_review_preserves_unspecified_category():
+    frame = pd.DataFrame([
+        row(
+            "2020-01-01:1-20:1", "1-20", "2020-01-01",
+            category="dimensional_relief_unspecified",
+        )
+    ])
+    reviews = pd.DataFrame([{
+        "case_history_id": make_history_id("1-20"),
+        "printed_case_number": "1-20",
+        "review_status": "unresolved",
+        "categories": "",
+        "evidence": "The requested dimension is absent",
+    }])
+
+    histories, _, categories, audit = build_histories(
+        frame,
+        pd.DataFrame(columns=["occurrence_id", "history_discriminator"]),
+        reviews,
+    )
+
+    assert histories.iloc[0].relief_categories == "dimensional_relief_unspecified"
+    assert categories.iloc[0].category == "dimensional_relief_unspecified"
+    assert audit["relief_case_reviews"]["unresolved_histories"] == 1

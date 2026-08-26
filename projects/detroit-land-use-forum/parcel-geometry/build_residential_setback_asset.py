@@ -31,6 +31,13 @@ from exhibit_components import (
     write_svg_bundle,
 )
 from parcel_exhibit_components import bza_case_stat
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    SvgComponent,
+    render_graphic_svg,
+    write_graphic_bundle,
+)
 
 from build_minimum_lot_size_asset import (
     BZA,
@@ -394,11 +401,18 @@ def histogram_svg(
     return "".join(result)
 
 
-def build_svg(
+def build_graphic(
     frame: gpd.GeoDataFrame,
     cases: pd.DataFrame,
     categories: pd.DataFrame,
-) -> str:
+    *,
+    title: str = "Detroit’s single- and two-family setback envelope",
+    subtitle: str = (
+        "Existing homes compared with Detroit’s required front, rear, and side yards"
+    ),
+    sources: tuple[str, ...] | None = None,
+    description: str | None = None,
+) -> Graphic:
     evaluated = frame[frame["evaluated"]]
     crossing = evaluated[evaluated["crosses_envelope"]]
     total, affected = len(evaluated), len(crossing)
@@ -410,20 +424,13 @@ def build_svg(
         (frame["in_scope"] & frame["candidate_multi_parcel_site"]).sum()
     )
     image = map_image(frame)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100"
-role="img" aria-labelledby="title desc">
-<title id="title">Detroit's single- and two-family setback envelope</title>
-<desc id="desc">{affected:,} of {total:,} evaluated single- and two-family principal building footprints extend outside the ordinary current setback envelope.</desc>
+    visual = f"""
 <style>{forum_css(title_size=45,
 extra_sans=(".bar-label", ".bar-value"),
 extra_serif=(".bza-metric",),
 extra_rules=f".bza-metric{{font-size:28px;font-weight:700}}"
 f".bar-label,.bar-value{{font-size:13px;fill:{NAVY}}}",
 muted=MUTED)}</style>
-<rect class="paper" width="1600" height="1100"/>
-{masthead_svg()}
-{title_block("Detroit’s single- and two-family setback envelope",
-"Existing homes compared with Detroit’s required front, rear, and side yards")}
 {map_frame(f"data:image/jpeg;base64,{image}")}
 {swatch_legend([
 LegendItem("Crosses ordinary envelope", RED),
@@ -441,11 +448,34 @@ LegendItem("Not evaluated / other parcel type", OUTSIDE),
 {bza_case_stat(
     len(cases), "setback", "single- and two-family setback", y=530
 )}
-{source_lines([
-f"Ordinary rectangular lots only; {candidate:,} sites without one clear principal building are not evaluated. Front edges use City Base Units street links.",
-f"Crossing requires more than 10 sq. ft. or 1% of the footprint outside both permissible side-yard allocations. Result: {affected:,} cross · {within:,} within · {unknown:,} not evaluated · {other:,} other type.",
-])}
-</svg>"""
+"""
+    return Graphic(
+        title=title,
+        subtitle=subtitle,
+        visual=SvgComponent(visual, 1600, 780, min_y=180),
+        sources=sources if sources is not None else (
+            f"Ordinary rectangular lots only; {candidate:,} sites without one "
+            "clear principal building are not evaluated. Front edges use City "
+            "Base Units street links.",
+            "Crossing requires more than 10 sq. ft. or 1% of the footprint "
+            "outside both permissible side-yard allocations. Result: "
+            f"{affected:,} cross · {within:,} within · {unknown:,} not "
+            f"evaluated · {other:,} other type.",
+        ),
+        description=description if description is not None else (
+            f"{affected:,} of {total:,} evaluated single- and two-family "
+            "principal building footprints extend outside the ordinary current "
+            "setback envelope."
+        ),
+    )
+
+
+def build_svg(
+    frame: gpd.GeoDataFrame,
+    cases: pd.DataFrame,
+    categories: pd.DataFrame,
+) -> str:
+    return render_graphic_svg(build_graphic(frame, cases, categories))
 
 
 def run() -> None:
@@ -474,11 +504,10 @@ def run() -> None:
     histories = pd.read_csv(BZA / "case_histories.csv")
     categories = pd.read_csv(BZA / "case_categories.csv")
     cases = select_house_setback_cases(histories, categories)
-    svg = build_svg(frame, cases, categories)
     stem = "detroit-residential-setback-envelope"
-    write_svg_bundle(
-        OUT, stem, "Detroit single- and two-family setback envelope", svg,
-        width=1600, height=1100, png_width=3200,
+    write_graphic_bundle(
+        OUT, stem, build_graphic(frame, cases, categories),
+        aspect_ratio=CONFERENCE_LANDSCAPE, png_width=3200,
     )
     cases.to_csv(OUT / f"{stem}-bza-cases.csv", index=False)
     result_columns = [

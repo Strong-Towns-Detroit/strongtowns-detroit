@@ -18,8 +18,8 @@ REPO_ROOT = HERE.parents[2]
 DEFAULT_GRAPH = REPO_ROOT / "cache/Detroit__Michigan__USA_1bcfe6a4_drive.graphml"
 DEFAULT_BOUNDARY = (
     REPO_ROOT
-    / "pipelines/housingDataAnalysis/resources/data"
-    / "Detroit_City_Council_Districts_2026.geojson"
+    / "pipelines/housingDataAnalysis/street_simplification/output"
+    / "detroit_boundary.gpkg"
 )
 
 CLASSES = {
@@ -128,6 +128,19 @@ def road_width(row):
     return DEFAULT_WIDTH_M.get(highway, 6.5), "class"
 
 
+def linear_only(geometry):
+    """Discard point fragments produced when roads touch the clip boundary."""
+    if geometry.geom_type in {"LineString", "MultiLineString"}:
+        return geometry
+    parts = []
+    for part in getattr(geometry, "geoms", ()):
+        if part.geom_type == "LineString":
+            parts.append(part)
+        elif part.geom_type == "MultiLineString":
+            parts.extend(part.geoms)
+    return unary_union(parts) if parts else None
+
+
 def run(graph_path, boundary_path, output_path, simplify_m=8):
     graph = ox.load_graphml(graph_path)
     edges = ox.graph_to_gdfs(graph, nodes=False).reset_index()
@@ -164,7 +177,8 @@ def run(graph_path, boundary_path, output_path, simplify_m=8):
     boundary = gpd.read_file(boundary_path).to_crs(edges.crs)
     city = unary_union(boundary.geometry)
     edges.geometry = edges.geometry.intersection(city)
-    edges = edges[~edges.geometry.is_empty]
+    edges.geometry = edges.geometry.map(linear_only)
+    edges = edges[edges.geometry.notna() & ~edges.geometry.is_empty]
     # OSMnx drive graphs contain reciprocal directed edges for many two-way
     # streets. They are cartographically coincident; drawing both with
     # transparency makes some segments look darker than their neighbors.

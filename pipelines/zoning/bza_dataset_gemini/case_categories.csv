@@ -80,6 +80,7 @@ bza-75-18-7d8e616722,administrative_or_community_appeal,direct,"[""appeals and r
 bza-76-18-cbc171d150,administrative_or_community_appeal,direct,"[""appeals and requests to reverse the decision"", ""appeals shall hear and decide appeals from and review any order, requirement, decision, or determination"", ""requests to reverse the decision""]"
 bza-76-19-8948b8b0cf,administrative_or_community_appeal,direct,"[""appeals and requests to reverse the decision"", ""requests to reverse the decision""]"
 bza-77-18-95afed9f1e,administrative_or_community_appeal,direct,"[""appeals and requests to reverse the decision"", ""appeals shall hear and decide appeals from and review any order, requirement, decision, or determination"", ""requests to reverse the decision""]"
+bza-79-19-51772cbfc9,administrative_or_community_appeal,manual_case_review,"[""Administrative appeal with excessive square footage and deficient parking""]"
 bza-79-21-52fddd53d5,administrative_or_community_appeal,direct,"[""appeals shall hear and decide appeals from and review any order, requirement, decision, or determination""]"
 bza-8-19-5feed4f6f4,administrative_or_community_appeal,direct,"[""appeals and requests to reverse the decision"", ""appeals shall hear and decide appeals from and review any order, requirement, decision, or determination"", ""requests to reverse the decision""]"
 bza-8-21-6178c7b555,administrative_or_community_appeal,direct,"[""appeals shall hear and decide appeals from and review any order, requirement, decision, or determination"", ""appeals the decision""]"
@@ -117,85 +118,37 @@ bza-bza-slu2024-00172-c17cdfcf89,administrative_or_community_appeal,direct,"[""a
 bza-bza2025-00049-131db941ce,administrative_or_community_appeal,direct,"[""appeals of administrative decisions and 50-3-281- general approval"", ""appeals shall hear and decide appeals from and review any order, requirement, decision, or determination"", ""appeals the decision""]"
 bza-slu2020-00137-2c185677d8,administrative_or_community_appeal,direct,"[""community appeal""]"
 bza-slu2021-00023-547efa3864,administrative_or_community_appeal,direct,"[""appeals the decision""]"
-bza-02-23-09191613e4,dimensional_relief_unspecified,route_only,[]
-bza-05-21-9b7c537c06,dimensional_relief_unspecified,route_only,[]
-bza-05-23-5a53c91971,dimensional_relief_unspecified,route_only,[]
-bza-09-23-2b90c325ff,dimensional_relief_unspecified,route_only,[]
-bza-11-21-2065af5007,dimensional_relief_unspecified,route_only,[]
-bza-12-25-67c0867482,dimensional_relief_unspecified,route_only,[]
-bza-15-24-43336a40f9,dimensional_relief_unspecified,route_only,[]
-bza-16-21-6706391ca7,dimensional_relief_unspecified,route_only,[]
+bza-05-21-9b7c537c06,building_design_standards,manual_case_review,"[""Upper-level facade transparency deficiency""]"
+bza-75-21-9044d745bd,building_design_standards,manual_case_review,"[""Parcel dimensions screening wall and facade standards""]"
+bza-85-19-b0b1323990,building_design_standards,manual_case_review,"[""Shipping-container material and overlay standards""]"
+bza-30-19-9c0b26b104,density_units,manual_case_review,"[""Unit count and paved and landscaped setbacks""]"
+bza-79-24-03fe91ef07,density_units,manual_case_review,"[""Occupancy capacity and mesh screening""]"
 bza-16-25-aaaaa5d0aa,dimensional_relief_unspecified,route_only,[]
-bza-17-20-4f7a090036,dimensional_relief_unspecified,route_only,[]
 bza-17-25-97935d5a5c,dimensional_relief_unspecified,route_only,[]
 bza-19-21-15219721d5,dimensional_relief_unspecified,route_only,[]
-bza-22-21-a0cae37c6a,dimensional_relief_unspecified,route_only,[]
-bza-22-24-5c0940c4c3,dimensional_relief_unspecified,route_only,[]
-bza-23-24-52267c8cf9,dimensional_relief_unspecified,route_only,[]
-bza-26-24-8498a9e0ce,dimensional_relief_unspecified,route_only,[]
-bza-26-25-7703d8a4a4,dimensional_relief_unspecified,route_only,[]
-bza-27-21-a56d8905f7,dimensional_relief_unspecified,route_only,[]
-bza-28-19-9c30f8d441,dimensional_relief_unspecified,route_only,[]
 bza-28-21-05880fccc0,dimensional_relief_unspecified,route_only,[]
-bza-28-23-32856cc88a,dimensional_relief_unspecified,route_only,[]
-bza-28-24-a82f3aaf57,dimensional_relief_unspecified,route_only,[]
-bza-29-21-cd232a5ef8,dimensional_relief_unspecified,route_only,[]
-bza-3-21-cee9bd7f02,dimensional_relief_unspecified,route_only,[]
-bza-3-24-b561a47236,dimensional_relief_unspecified,route_only,[]
-bza-3-25-36721a5eeb,dimensional_relief_unspecified,route_only,[]
-bza-30-19-9c0b26b104,dimensional_relief_unspecified,route_only,[]
-bza-30-24-94d9984635,dimensional_relief_unspecified,route_only,[]
-bza-36-21-dce8b705cb,dimensional_relief_unspecified,route_only,[]
-bza-37-22-b17d680e46,dimensional_relief_unspecified,route_only,[]
-bza-38-22-38ba18ce36,dimensional_relief_unspecified,route_only,[]
-bza-4-19-9704261508,dimensional_relief_unspecified,route_only,[]
-bza-4-25-34d6c95571,dimensional_relief_unspecified,route_only,[]
-bza-40-21-241d47ced9,dimensional_relief_unspecified,route_only,[]
-bza-40-23-012c2b298a,dimensional_relief_unspecified,route_only,[]
 bza-41-22-15dfb8ba06,dimensional_relief_unspecified,route_only,[]
 bza-42-19-2143d12bd7,dimensional_relief_unspecified,route_only,[]
-bza-44-24-a72911911c,dimensional_relief_unspecified,route_only,[]
-bza-45-22-ac51806c35,dimensional_relief_unspecified,route_only,[]
 bza-46-24-04961161fb,dimensional_relief_unspecified,route_only,[]
-bza-48-19-35b257663a,dimensional_relief_unspecified,route_only,[]
 bza-48-24-4a6b166e25,dimensional_relief_unspecified,route_only,[]
-bza-5-19-2dc104a2e6,dimensional_relief_unspecified,route_only,[]
-bza-5-20-fc09d791a0,dimensional_relief_unspecified,route_only,[]
-bza-53-24-56e59115b1,dimensional_relief_unspecified,route_only,[]
-bza-55-21-48ef6cb9d1,dimensional_relief_unspecified,route_only,[]
-bza-56-19-d21ffb627f,dimensional_relief_unspecified,route_only,[]
 bza-57-22-29d327c7bd,dimensional_relief_unspecified,route_only,[]
-bza-58-19-df53c91db1,dimensional_relief_unspecified,route_only,[]
-bza-6-20-21fe579224,dimensional_relief_unspecified,route_only,[]
 bza-60-22-958ec66e06,dimensional_relief_unspecified,route_only,[]
-bza-61-19-4e42da9805,dimensional_relief_unspecified,route_only,[]
-bza-61-21-d38fa68bf4,dimensional_relief_unspecified,route_only,[]
-bza-66-22-a6e0b1dc18,dimensional_relief_unspecified,route_only,[]
-bza-67-19-dd6df5c915,dimensional_relief_unspecified,route_only,[]
-bza-67-21-1beb30943a,dimensional_relief_unspecified,route_only,[]
-bza-7-19-8a6c93d171,dimensional_relief_unspecified,route_only,[]
-bza-7-20-39fc390e6c,dimensional_relief_unspecified,route_only,[]
-bza-7-24-5ad1c5fa16,dimensional_relief_unspecified,route_only,[]
-bza-71-19-ed59cd56e2,dimensional_relief_unspecified,route_only,[]
-bza-72-19-be782cacfd,dimensional_relief_unspecified,route_only,[]
-bza-75-19-9591bc33b1,dimensional_relief_unspecified,route_only,[]
-bza-75-21-9044d745bd,dimensional_relief_unspecified,route_only,[]
-bza-75-22-e3fe10778e,dimensional_relief_unspecified,route_only,[]
 bza-77-21-46450fedf6,dimensional_relief_unspecified,route_only,[]
-bza-79-24-03fe91ef07,dimensional_relief_unspecified,route_only,[]
 bza-83-24-c9e72204a7,dimensional_relief_unspecified,route_only,[]
-bza-85-19-b0b1323990,dimensional_relief_unspecified,route_only,[]
-bza-9-20-68007fc307,dimensional_relief_unspecified,route_only,[]
-bza-91-19-9b79c42287,dimensional_relief_unspecified,route_only,[]
-bza-97-19-459bd7f671,dimensional_relief_unspecified,route_only,[]
 bza-1-20-b402ab3506,fences_walls,direct,"[""fence proposed""]"
+bza-56-19-d21ffb627f,fences_walls,manual_case_review,"[""Landscaping and wrought-iron-fence conditions""]"
+bza-67-19-dd6df5c915,fences_walls,manual_case_review,"[""Fence and landscaped buffer""]"
+bza-02-23-09191613e4,floor_area_bulk,manual_case_review,"[""Grower facility exceeds allowed building area""]"
 bza-1-21-97e069a509,floor_area_bulk,direct,"[""excessive floor area ratio""]"
 bza-104-19-3f504bb48a,floor_area_bulk,direct,"[""maximum building footprint""]"
 bza-23-21-67b09caf30,floor_area_bulk,direct,"[""excessive floor area ratio""]"
+bza-23-24-52267c8cf9,floor_area_bulk,manual_case_review,"[""Second floor wider than first-floor envelope""]"
 bza-29-23-1e6ae3ddb9,floor_area_bulk,direct,"[""excessive floor area ratio""]"
 bza-33-23-9df1fa2044,floor_area_bulk,direct,"[""maximum floor area ratio""]"
+bza-48-19-35b257663a,floor_area_bulk,manual_case_review,"[""Facilities excessive in square footage and acreage""]"
 bza-56-21-13962dbe62,floor_area_bulk,direct,"[""excessive floor area ratio""]"
 bza-70-21-c405bd7cdb,floor_area_bulk,direct,"[""excessive building footprint""]"
+bza-79-19-51772cbfc9,floor_area_bulk,manual_case_review,"[""Administrative appeal with excessive square footage and deficient parking""]"
 bza-2-24-a52a3386d9,hardship_relief,direct,"[""hardship relief""]"
 bza-4-23-9c77a16125,hardship_relief,direct,"[""hardship relief""]"
 bza-40-20-36fcdb76ae,hardship_relief,direct|inherited_case_history,"[""hardship relief""]"
@@ -219,6 +172,8 @@ bza-25-20-0c7c6c8bde,height,direct,"[""excessive building height"", ""height all
 bza-29-25-7515a970f7,height,direct,"[""excessive building height""]"
 bza-30-21-d888c96eb5,height,direct,"[""excessive height""]"
 bza-33-19-ccbe2c0b37,height,direct,"[""excessive height"", ""maximum height""]"
+bza-37-22-b17d680e46,height,manual_case_review,"[""Explicit dimensional height variance""]"
+bza-38-22-38ba18ce36,height,manual_case_review,"[""Accessory-building height limit""]"
 bza-39-24-fc8328dfcb,height,direct,"[""excessive height"", ""maximum height""]"
 bza-4-24-1781607356,height,direct,"[""excessive height""]"
 bza-51-22-07f10681c0,height,direct,"[""excessive height""]"
@@ -227,6 +182,8 @@ bza-68-24-956bfd6d3d,height,direct,"[""excessive height""]"
 bza-86-24-15baadd557,height,direct,"[""excessive height""]"
 bza-9-22-9fe538539b,height,direct,"[""excessive height""]"
 bza-18-24-b7d9862137,loading,direct,"[""deficient off-street loading""]"
+bza-4-19-9704261508,loading,manual_case_review,"[""Loading-space variance and lot-area limit""]"
+bza-7-20-39fc390e6c,loading,manual_case_review,"[""Parking location or amount and loading-zone deficiency""]"
 bza-1-21-97e069a509,lot_coverage,direct,"[""excessive lot coverage""]"
 bza-13-24-797c117868,lot_coverage,direct,"[""excessive lot coverage""]"
 bza-14-25-61fbd5eb1b,lot_coverage,direct,"[""excessive lot coverage""]"
@@ -263,12 +220,15 @@ bza-1-19-b17dd09224,lot_dimensions,direct,"[""minimum lot area"", ""minimum lot 
 bza-14-25-61fbd5eb1b,lot_dimensions,direct,"[""minimum lot size""]"
 bza-18-23-535a07c23f,lot_dimensions,direct,"[""deficient lot area""]"
 bza-21-23-1b926e9998,lot_dimensions,direct,"[""excessive lot width""]"
+bza-22-21-a0cae37c6a,lot_dimensions,manual_case_review,"[""Minimum townhouse width deficiency""]"
 bza-22-23-4eb0024be7,lot_dimensions,direct,"[""excessive lot size""]"
 bza-24-19-98cd3d897f,lot_dimensions,direct,"[""lot size required""]"
 bza-25-23-d87a52a78b,lot_dimensions,direct,"[""deficient lot size""]"
 bza-27-24-014e8967b0,lot_dimensions,direct,"[""excessive lot width"", ""lot width proposed""]"
+bza-28-24-a82f3aaf57,lot_dimensions,manual_case_review,"[""Building setback lot area and walkway width""]"
 bza-33-24-f8b434d5ad,lot_dimensions,direct,"[""deficient lot area"", ""deficient lot width""]"
 bza-34-21-04aac96c4f,lot_dimensions,direct,"[""lot area required"", ""minimum lot area""]"
+bza-4-19-9704261508,lot_dimensions,manual_case_review,"[""Loading-space variance and lot-area limit""]"
 bza-41-24-ea692df8b1,lot_dimensions,direct,"[""excessive lot width"", ""lot width proposed""]"
 bza-43-22-cb2a611acd,lot_dimensions,direct,"[""excessive lot width""]"
 bza-44-21-19025a6ffc,lot_dimensions,direct,"[""deficient lot square footage"", ""deficient lot width""]"
@@ -279,6 +239,7 @@ bza-59-21-1c38dd3618,lot_dimensions,direct,"[""insufficient lot size""]"
 bza-62-24-e9793916e2,lot_dimensions,direct,"[""deficient lot size"", ""deficient lot width""]"
 bza-63-22-01da7e63d3,lot_dimensions,direct,"[""minimum lot size"", ""minimum lot width""]"
 bza-64-24-a56bb532d6,lot_dimensions,direct,"[""excessive lot width""]"
+bza-75-21-9044d745bd,lot_dimensions,manual_case_review,"[""Parcel dimensions screening wall and facade standards""]"
 bza-77-19-a7f510e04a,lot_dimensions,direct,"[""excessive lot size"", ""excessive lot width""]"
 bza-77-24-8710bfed88,lot_dimensions,direct,"[""excessive lot width""]"
 bza-82-24-c4233e3f2a,lot_dimensions,direct,"[""minimum lot area""]"
@@ -287,10 +248,15 @@ bza-bseed-slu2022-00038-7072ea4ca4,lot_dimensions,direct,"[""excessive lot width
 bza-bza2025-00045-d453f7d2bf,lot_dimensions,direct,"[""lot area required"", ""lot width required""]"
 bza-12-21-ad158761eb,multiple_buildings,direct,"[""more than one principal detached residential building""]"
 bza-24-25-67f735277c,multiple_buildings,direct,"[""more than one principal detached residential building""]"
+bza-28-23-32856cc88a,multiple_buildings,manual_case_review,"[""Multiple principal dwellings and setback deficiencies""]"
+bza-3-24-b561a47236,multiple_buildings,manual_case_review,"[""One-principal-building rule""]"
+bza-3-25-36721a5eeb,multiple_buildings,manual_case_review,"[""Maximum number of principal detached buildings""]"
 bza-4-24-1781607356,multiple_buildings,direct,"[""more than one principal detached residential building""]"
 bza-5-24-129e13df5d,multiple_buildings,direct,"[""more than one principal detached residential building""]"
 bza-50-22-e2dd6e5b59,multiple_buildings,direct,"[""excessive number of principal detached residential buildings""]"
+bza-53-24-56e59115b1,multiple_buildings,manual_case_review,"[""Multiple principal buildings and inter-building distance""]"
 bza-61-24-a638176bcc,multiple_buildings,direct,"[""more than one principal detached residential building""]"
+bza-66-22-a6e0b1dc18,multiple_buildings,manual_case_review,"[""Second principal use or building""]"
 bza-68-24-956bfd6d3d,multiple_buildings,direct,"[""more than one principal building""]"
 bza-1-20-b402ab3506,nonconforming_use_or_structure,direct,"[""change of nonconforming use to other nonconforming"", ""change of one nonconforming use to another nonconforming"", ""changed to another nonconforming"", ""nonconforming use""]"
 bza-10-25-d76fac624f,nonconforming_use_or_structure,direct,"[""change from one nonconforming use (bank with drive thru) to another nonconforming"", ""change of nonconforming use to other nonconforming"", ""change of one nonconforming use to another nonconforming"", ""changed to another nonconforming"", ""nonconforming use""]"
@@ -308,6 +274,7 @@ bza-25-21-6318646cda,nonconforming_use_or_structure,direct,"[""expand an existin
 bza-28-20-22cfec2a50,nonconforming_use_or_structure,direct,"[""changed to another nonconforming"", ""expansion or intensification of nonconforming"", ""nonconforming use""]"
 bza-29-19-be10fad016,nonconforming_use_or_structure,direct,"[""expansion of the nonconforming use. any increase in the area of a zoning lot where a nonconforming"", ""expansion of the nonconforming use; (2) any change to the site plan of a nonconforming"", ""expansion or intensification of a nonconforming"", ""intensification of nonconforming"", ""intensification of the nonconforming"", ""nonconforming use""]"
 bza-29-20-787a86c963,nonconforming_use_or_structure,direct,"[""change a nonconforming dry cleaners to a nonconforming"", ""change from a nonconforming dry cleaners to a nonconforming"", ""change of nonconforming use to other nonconforming"", ""change of one nonconforming use to another nonconforming"", ""changed to another nonconforming"", ""nonconforming use""]"
+bza-3-21-cee9bd7f02,nonconforming_use_or_structure,manual_case_review,"[""Re-establish a drive-through accessory use""]"
 bza-31-19-2cf7ef7116,nonconforming_use_or_structure,direct,"[""expansion of the nonconforming use. any increase in the area of a zoning lot where a nonconforming"", ""expansion of the nonconforming use; (2) any change to the site plan of a nonconforming"", ""expansion or intensification of a nonconforming"", ""intensification of the nonconforming use. (sections 61-15-16 intensification of nonconforming"", ""nonconforming use""]"
 bza-32-21-04cdb9c55b,nonconforming_use_or_structure,direct,"[""change from one nonconforming use (auto repair facility) to another nonconforming"", ""change of nonconforming use to other nonconforming"", ""change of one nonconforming use to another nonconforming"", ""changed to another nonconforming"", ""nonconforming use""]"
 bza-34-20-ee36e5ccb2,nonconforming_use_or_structure,direct,"[""change from one nonconforming use to another nonconforming use. the current nonconforming"", ""change of nonconforming use to other nonconforming"", ""change of one nonconforming use to another nonconforming"", ""changed to another nonconforming"", ""nonconforming use""]"
@@ -337,16 +304,30 @@ bza-31-23-4dc13ed6eb,open_recreation_space,direct,"[""deficient recreational spa
 bza-32-23-5510e7b99d,open_recreation_space,direct|inherited_case_history,"[""deficient recreational space""]"
 bza-34-23-b9a318fe90,open_recreation_space,direct,"[""deficient recreational space""]"
 bza-35-23-80eeb47028,open_recreation_space,direct,"[""deficient recreational space""]"
+bza-67-21-1beb30943a,open_recreation_space,manual_case_review,"[""Front setback and deficient outdoor play area""]"
+bza-7-20-39fc390e6c,parking,manual_case_review,"[""Parking location or amount and loading-zone deficiency""]"
+bza-72-19-be782cacfd,parking,manual_case_review,"[""Location or amount of off-street parking; subtype unstated""]"
 bza-07-23-9b431ff07a,parking_layout,direct,"[""excessive parking lot size""]"
+bza-09-23-2b90c325ff,parking_layout,manual_case_review,"[""Parking area proposed in front yard""]"
 bza-105-19-6f26fdbf3e,parking_layout,direct,"[""maximum parking lot distance""]"
+bza-15-24-43336a40f9,parking_layout,manual_case_review,"[""Setbacks use spacing landscaping and parking design""]"
+bza-16-21-6706391ca7,parking_layout,manual_case_review,"[""Two vehicle-stacking spaces required""]"
 bza-21-23-1b926e9998,parking_layout,direct,"[""excessive parking lot size""]"
+bza-27-21-a56d8905f7,parking_layout,manual_case_review,"[""Front setbacks and undersized parallel parking spaces""]"
 bza-27-24-014e8967b0,parking_layout,direct,"[""excessive parking lot size""]"
+bza-28-19-9c30f8d441,parking_layout,manual_case_review,"[""Parking aisle and residential screening setback""]"
+bza-28-24-a82f3aaf57,parking_layout,manual_case_review,"[""Building setback lot area and walkway width""]"
 bza-29-20-787a86c963,parking_layout,direct,"[""deficient aisle width""]"
+bza-30-19-9c0b26b104,parking_layout,manual_case_review,"[""Unit count and paved and landscaped setbacks""]"
 bza-30-25-701e35d3e8,parking_layout,direct,"[""excessive parking lot size""]"
+bza-40-21-241d47ced9,parking_layout,manual_case_review,"[""Drive aisle walkway wall and landscaped parking setback""]"
 bza-41-24-ea692df8b1,parking_layout,direct,"[""excessive parking lot size""]"
 bza-44-22-b4c125acb3,parking_layout,direct,"[""excessive parking lot size""]"
+bza-45-22-ac51806c35,parking_layout,manual_case_review,"[""Parking lot paving drainage and striping""]"
+bza-58-19-df53c91db1,parking_layout,manual_case_review,"[""Setbacks landscaping and parking layout""]"
 bza-59-24-7f6f8d4dde,parking_layout,direct,"[""deficient aisle width""]"
 bza-64-24-a56bb532d6,parking_layout,direct,"[""excessive parking lot size""]"
+bza-75-19-9591bc33b1,parking_layout,manual_case_review,"[""Landscaping screening and parking surface""]"
 bza-77-24-8710bfed88,parking_layout,direct,"[""excessive parking lot size""]"
 bza-06-21-e118eb8f66,parking_supply,direct,"[""off-street parking spaces required""]"
 bza-06-22-239afc0021,parking_supply,direct,"[""deficient parking"", ""parking variance""]"
@@ -356,6 +337,7 @@ bza-10-24-4e76e64453,parking_supply,direct,"[""deficient parking""]"
 bza-10-25-d76fac624f,parking_supply,direct,"[""deficient parking""]"
 bza-101-19-2b70c94d41,parking_supply,direct,"[""parking variance""]"
 bza-103-19-b51a4c7926,parking_supply,direct,"[""deficient parking""]"
+bza-11-21-2065af5007,parking_supply,manual_case_review,"[""Four parking spaces deficient; other measurements unrecoverable""]"
 bza-11-22-50abfc40df,parking_supply,direct,"[""deficient parking"", ""off-street parking required""]"
 bza-110-19-6035ce5f01,parking_supply,direct,"[""parking variance""]"
 bza-111-19-7252fe4512,parking_supply,direct,"[""parking variance""]"
@@ -390,10 +372,12 @@ bza-38-20-ee1ac31af4,parking_supply,direct,"[""deficient parking""]"
 bza-38-24-5cdec3b56e,parking_supply,direct,"[""deficient parking""]"
 bza-40-19-aae5d99948,parking_supply,direct,"[""deficient parking""]"
 bza-40-22-1bccc643ae,parking_supply,direct,"[""deficient parking""]"
+bza-40-23-012c2b298a,parking_supply,manual_case_review,"[""Three parking spaces deficient""]"
 bza-40-24-8e2b4f04b1,parking_supply,direct,"[""deficient parking"", ""parking spaces required""]"
 bza-41-21-988b579aea,parking_supply,direct,"[""parking variance""]"
 bza-42-20-373295a30e,parking_supply,direct,"[""deficient parking""]"
 bza-43-20-83bc71214b,parking_supply,direct,"[""deficient parking""]"
+bza-5-20-fc09d791a0,parking_supply,manual_case_review,"[""26 spaces required and zero provided""]"
 bza-5-25-489295d35a,parking_supply,direct,"[""deficient parking"", ""parking variance""]"
 bza-50-22-e2dd6e5b59,parking_supply,direct,"[""deficient off-street parking""]"
 bza-53-22-f89cd6be57,parking_supply,direct,"[""parking variance""]"
@@ -401,14 +385,18 @@ bza-58-22-943196124c,parking_supply,direct,"[""deficient off street parking"", "
 bza-58-24-6532bebb8a,parking_supply,direct,"[""deficient parking""]"
 bza-60-21-edd97a26a1,parking_supply,direct,"[""deficient off-street parking""]"
 bza-60-24-fc667bdd68,parking_supply,direct,"[""deficient parking""]"
+bza-61-19-4e42da9805,parking_supply,manual_case_review,"[""Use spacing and 45-space parking requirement""]"
 bza-66-24-27cac6bb0f,parking_supply,direct,"[""deficient parking""]"
 bza-67-18-3e522c88c3,parking_supply,direct,"[""parking spaces required""]"
+bza-7-19-8a6c93d171,parking_supply,manual_case_review,"[""19 spaces required and zero proposed""]"
 bza-7-25-6f5b94d140,parking_supply,direct,"[""parking waiver""]"
 bza-78-19-9477858622,parking_supply,direct,"[""parking variance""]"
+bza-79-19-51772cbfc9,parking_supply,manual_case_review,"[""Administrative appeal with excessive square footage and deficient parking""]"
 bza-80-24-eb9518e9ff,parking_supply,direct,"[""deficient parking""]"
 bza-82-24-c4233e3f2a,parking_supply,direct,"[""deficient parking""]"
 bza-84-24-6f5548ffcb,parking_supply,direct,"[""parking waiver""]"
 bza-88-19-07e1969543,parking_supply,direct,"[""parking spaces required""]"
+bza-9-20-68007fc307,parking_supply,manual_case_review,"[""Ten parking spaces deficient""]"
 bza-bza2025-00044-8af9060833,parking_supply,direct,"[""deficient parking""]"
 bza-1-24-938659c379,request_not_stated,not_stated,[]
 bza-27-18-c8ce2a7370,request_not_stated,not_stated,[]
@@ -421,24 +409,44 @@ bza-53-23-cdc298d7fd,request_not_stated,not_stated,[]
 bza-54-23-6eab1a3ade,request_not_stated,not_stated,[]
 bza-65-33-781a0accb3,request_not_stated,not_stated,[]
 bza-70-24-782fb1ee01,request_not_stated,not_stated,[]
+bza-05-23-5a53c91971,screening_landscaping,manual_case_review,"[""Landscaping area and shade trees required""]"
+bza-15-24-43336a40f9,screening_landscaping,manual_case_review,"[""Setbacks use spacing landscaping and parking design""]"
 bza-18-24-b7d9862137,screening_landscaping,direct,"[""deficient right-of-way screening""]"
 bza-25-20-0c7c6c8bde,screening_landscaping,direct,"[""deficient opacity""]"
+bza-28-19-9c30f8d441,screening_landscaping,manual_case_review,"[""Parking aisle and residential screening setback""]"
 bza-29-20-787a86c963,screening_landscaping,direct,"[""deficient residential screening"", ""deficient right of way screening""]"
+bza-30-19-9c0b26b104,screening_landscaping,manual_case_review,"[""Unit count and paved and landscaped setbacks""]"
 bza-34-20-ee36e5ccb2,screening_landscaping,direct,"[""deficient opacity""]"
+bza-40-21-241d47ced9,screening_landscaping,manual_case_review,"[""Drive aisle walkway wall and landscaped parking setback""]"
 bza-42-24-3db62ad7f6,screening_landscaping,direct,"[""deficient right of way screening""]"
 bza-43-20-83bc71214b,screening_landscaping,direct,"[""deficient right of way screening""]"
+bza-56-19-d21ffb627f,screening_landscaping,manual_case_review,"[""Landscaping and wrought-iron-fence conditions""]"
+bza-58-19-df53c91db1,screening_landscaping,manual_case_review,"[""Setbacks landscaping and parking layout""]"
 bza-59-24-7f6f8d4dde,screening_landscaping,direct,"[""deficient residential screening"", ""deficient right of way screening""]"
+bza-67-19-dd6df5c915,screening_landscaping,manual_case_review,"[""Fence and landscaped buffer""]"
 bza-74-22-7d9c062553,screening_landscaping,direct,"[""deficient residential screening""]"
+bza-75-19-9591bc33b1,screening_landscaping,manual_case_review,"[""Landscaping screening and parking surface""]"
+bza-75-21-9044d745bd,screening_landscaping,manual_case_review,"[""Parcel dimensions screening wall and facade standards""]"
 bza-78-18-85c69b7830,screening_landscaping,direct,"[""landscaping required""]"
+bza-79-24-03fe91ef07,screening_landscaping,manual_case_review,"[""Occupancy capacity and mesh screening""]"
 bza-1-21-97e069a509,setbacks_yards,direct,"[""deficient front yard"", ""deficient front yard setback""]"
+bza-12-25-67c0867482,setbacks_yards,manual_case_review,"[""Carport side-property-line separation""]"
 bza-13-21-993080da6c,setbacks_yards,direct,"[""side setback required""]"
 bza-13-22-b4f37988c4,setbacks_yards,direct,"[""deficient side setback"", ""side setback required""]"
 bza-13-23-fa2355c165,setbacks_yards,direct,"[""deficient front yard"", ""deficient front yard setback""]"
 bza-14-25-61fbd5eb1b,setbacks_yards,direct,"[""deficient front yard"", ""deficient front yard setback"", ""deficient side yard"", ""deficient side yard setback""]"
+bza-15-24-43336a40f9,setbacks_yards,manual_case_review,"[""Setbacks use spacing landscaping and parking design""]"
+bza-17-20-4f7a090036,setbacks_yards,manual_case_review,"[""30-foot rear setback required and 15 feet proposed""]"
 bza-20-23-dab8c7b9c0,setbacks_yards,direct,"[""deficient front yard"", ""deficient front yard setback"", ""deficient side yard""]"
+bza-22-24-5c0940c4c3,setbacks_yards,manual_case_review,"[""Gas-station setback and filling-station spacing""]"
 bza-24-19-98cd3d897f,setbacks_yards,direct,"[""rear setback required""]"
 bza-24-23-39f2ee37b3,setbacks_yards,direct,"[""deficient front setback""]"
+bza-26-24-8498a9e0ce,setbacks_yards,manual_case_review,"[""Inter-building distance deficiency""]"
+bza-27-21-a56d8905f7,setbacks_yards,manual_case_review,"[""Front setbacks and undersized parallel parking spaces""]"
 bza-28-20-22cfec2a50,setbacks_yards,direct,"[""rear setback required""]"
+bza-28-23-32856cc88a,setbacks_yards,manual_case_review,"[""Multiple principal dwellings and setback deficiencies""]"
+bza-28-24-a82f3aaf57,setbacks_yards,manual_case_review,"[""Building setback lot area and walkway width""]"
+bza-29-21-cd232a5ef8,setbacks_yards,manual_case_review,"[""20-foot setback required and approximately 10 feet proposed""]"
 bza-29-23-1e6ae3ddb9,setbacks_yards,direct,"[""deficient front yard"", ""deficient front yard setback"", ""deficient side yard"", ""deficient side yard setback""]"
 bza-30-23-0932bf1f77,setbacks_yards,direct,"[""deficient front yard"", ""deficient front yard setback"", ""deficient rear setback"", ""deficient rear yard"", ""deficient rear yard setback""]"
 bza-31-23-4dc13ed6eb,setbacks_yards,direct,"[""deficient front setback"", ""deficient side setback""]"
@@ -446,29 +454,41 @@ bza-32-23-5510e7b99d,setbacks_yards,direct|inherited_case_history,"[""deficient 
 bza-33-23-9df1fa2044,setbacks_yards,direct,"[""deficient front setback"", ""deficient side yard"", ""deficient side yard setback""]"
 bza-34-23-b9a318fe90,setbacks_yards,direct,"[""deficient front setback""]"
 bza-35-23-80eeb47028,setbacks_yards,direct,"[""deficient front yard"", ""deficient front yard setback""]"
+bza-36-21-dce8b705cb,setbacks_yards,manual_case_review,"[""Front- and rear-setback deficiencies""]"
 bza-36-23-eb4390b021,setbacks_yards,direct,"[""deficient side setback"", ""deficient side yard"", ""deficient side yard setback""]"
 bza-37-24-f961ca02ca,setbacks_yards,direct,"[""deficient setback"", ""deficient side setback""]"
 bza-42-20-373295a30e,setbacks_yards,direct,"[""deficient front setback"", ""deficient rear setback""]"
 bza-44-19-3332e2b636,setbacks_yards,direct,"[""side setback required""]"
 bza-44-21-19025a6ffc,setbacks_yards,direct,"[""deficient front setback"", ""deficient rear yard"", ""deficient rear yard setback"", ""deficient side yard"", ""deficient side yard set back""]"
+bza-44-24-a72911911c,setbacks_yards,manual_case_review,"[""Side-setback deficiencies""]"
 bza-45-21-6ac1bdcc56,setbacks_yards,direct,"[""deficient front setback"", ""deficient rear yard"", ""deficient rear yard setback"", ""deficient side yard"", ""deficient side yard set back""]"
 bza-46-22-492c5e629d,setbacks_yards,direct,"[""deficient rear yard"", ""deficient rear yard setback""]"
 bza-47-24-192327b733,setbacks_yards,direct,"[""rear setback deficien"", ""rear setback proposed"", ""rear setback required""]"
+bza-5-19-2dc104a2e6,setbacks_yards,manual_case_review,"[""Front and side yard setbacks""]"
 bza-50-22-e2dd6e5b59,setbacks_yards,direct,"[""deficient front setback"", ""deficient rear setback"", ""deficient side setback""]"
 bza-52-22-dbe49059e9,setbacks_yards,direct,"[""deficient side setback"", ""side setback required""]"
+bza-53-24-56e59115b1,setbacks_yards,manual_case_review,"[""Multiple principal buildings and inter-building distance""]"
+bza-55-21-48ef6cb9d1,setbacks_yards,manual_case_review,"[""30-foot rear setback required and 6 feet 3 inches proposed""]"
 bza-56-21-13962dbe62,setbacks_yards,direct,"[""deficient front setback""]"
+bza-58-19-df53c91db1,setbacks_yards,manual_case_review,"[""Setbacks landscaping and parking layout""]"
 bza-59-21-1c38dd3618,setbacks_yards,direct,"[""deficient front setback""]"
 bza-59-22-b75dd5795b,setbacks_yards,direct,"[""deficient side setback""]"
+bza-6-20-21fe579224,setbacks_yards,manual_case_review,"[""Front-yard and garage corner-lot setbacks""]"
+bza-61-21-d38fa68bf4,setbacks_yards,manual_case_review,"[""Garage side setback deficiency""]"
 bza-61-24-a638176bcc,setbacks_yards,direct,"[""deficient rear yard"", ""deficient rear yard setback""]"
 bza-62-22-fb5b5b77b1,setbacks_yards,direct,"[""deficient setback""]"
 bza-62-24-e9793916e2,setbacks_yards,direct,"[""deficient front setback"", ""deficient front yard"", ""deficient front yard setback""]"
 bza-63-22-01da7e63d3,setbacks_yards,direct,"[""deficient side yard"", ""deficient side yard setback""]"
 bza-65-24-4abb08cb2f,setbacks_yards,direct,"[""rear setback required""]"
+bza-67-21-1beb30943a,setbacks_yards,manual_case_review,"[""Front setback and deficient outdoor play area""]"
+bza-7-24-5ad1c5fa16,setbacks_yards,manual_case_review,"[""Front and side-yard setbacks""]"
+bza-71-19-ed59cd56e2,setbacks_yards,manual_case_review,"[""30-foot rear setback required and 13 feet provided""]"
 bza-77-24-8710bfed88,setbacks_yards,direct,"[""deficient rear set back""]"
 bza-82-24-c4233e3f2a,setbacks_yards,direct,"[""deficient front setback"", ""deficient rear yard"", ""deficient rear yard setback"", ""deficient side setback""]"
 bza-84-19-5eb320fb4c,setbacks_yards,direct,"[""side set back required""]"
 bza-86-19-fdba0c918b,setbacks_yards,direct,"[""deficient side yard"", ""deficient side yard setback""]"
 bza-90-19-38e31cc945,setbacks_yards,direct,"[""deficient side yard""]"
+bza-97-19-459bd7f671,setbacks_yards,manual_case_review,"[""Rear-yard setback for garage""]"
 bza-bza2025-00045-d453f7d2bf,setbacks_yards,direct,"[""deficient front setback""]"
 bza-bza2025-00048-3d30f83bb6,setbacks_yards,direct,"[""deficient rear setback""]"
 bza-bza2026-00009-e187ef5c5d,setbacks_yards,direct,"[""deficient side yard"", ""deficient side yard setback""]"
@@ -477,6 +497,7 @@ bza-34-19-e402408898,signs_billboards,direct,"[""erect an internally illuminated
 bza-37-19-b5facb6e4c,signs_billboards,direct,"[""add identification sign""]"
 bza-53-19-966124a009,signs_billboards,direct,"[""nonconforming billboard"", ""replace an existing non-conforming billboard""]"
 bza-65-19-ece5db0d26,signs_billboards,direct,"[""excessive sign"", ""roof sign""]"
+bza-75-22-e3fe10778e,signs_billboards,manual_case_review,"[""Sign projects excessively into right-of-way""]"
 bza-76-19-5db6a813e8,signs_billboards,direct,"[""excessive electronic message board""]"
 bza-87-19-86a1450728,signs_billboards,direct|inherited_case_history,"[""erect a billboard""]"
 bza-99-19-59f6443f73,signs_billboards,direct,"[""billboard""]"
@@ -491,14 +512,19 @@ bza-12-19-8f68a059f3,use_spacing_separation,direct,"[""within 500 radial feet""]
 bza-13-19-d1848d1cb5,use_spacing_separation,direct,"[""within 1,000 feet""]"
 bza-13-25-2c39937285,use_spacing_separation,direct,"[""dimensional spacing variance"", ""spacing variance""]"
 bza-14-17-07ea6a1a53,use_spacing_separation,direct,"[""within 1,000 radial feet""]"
+bza-15-24-43336a40f9,use_spacing_separation,manual_case_review,"[""Setbacks use spacing landscaping and parking design""]"
 bza-16-23-d69ef06e72,use_spacing_separation,direct,"[""drug free zone"", ""within 1,000 feet""]"
 bza-16-24-5938101fbe,use_spacing_separation,direct,"[""spacing variance"", ""within 1,000 radial feet""]"
 bza-20-19-f02fd63021,use_spacing_separation,direct,"[""within 1,000 radial feet""]"
 bza-20-24-2cf05e2c11,use_spacing_separation,direct,"[""within 2,000 feet""]"
+bza-22-24-5c0940c4c3,use_spacing_separation,manual_case_review,"[""Gas-station setback and filling-station spacing""]"
 bza-26-17-06a09b7674,use_spacing_separation,direct|inherited_case_history,"[""within 1,000 radial feet""]"
+bza-26-25-7703d8a4a4,use_spacing_separation,manual_case_review,"[""Vehicle-service use-spacing deficiency""]"
 bza-27-19-79df09a810,use_spacing_separation,direct,"[""drug free zone"", ""within 1000 radial feet""]"
+bza-30-24-94d9984635,use_spacing_separation,manual_case_review,"[""Outdoor-storage residential separation""]"
 bza-33-21-ebd11a8b91,use_spacing_separation,direct,"[""within 820 feet""]"
 bza-36-24-25e89f7eb8,use_spacing_separation,direct,"[""drug free zone"", ""within 1000 radial feet"", ""within 750 radial feet""]"
+bza-4-25-34d6c95571,use_spacing_separation,manual_case_review,"[""Overconcentration of similar vehicle-service uses""]"
 bza-43-19-df0b0c111b,use_spacing_separation,direct,"[""variance of spacing regulation"", ""within 1,000 radial feet""]"
 bza-45-24-0ac7b21e08,use_spacing_separation,direct,"[""within 1,000 radial feet""]"
 bza-49-18-7931dced47,use_spacing_separation,direct,"[""within 1,000 radial feet""]"
@@ -509,6 +535,7 @@ bza-55-19-0f4e1aa768,use_spacing_separation,direct,"[""spacing variance"", ""wit
 bza-56-22-ec38b25482,use_spacing_separation,direct,"[""within 1000 radial feet""]"
 bza-57-18-3495b99b21,use_spacing_separation,direct|inherited_case_history,"[""drug free zone"", ""within 1,000 radial feet"", ""within 1000 feet""]"
 bza-60-19-c1f3b6a77d,use_spacing_separation,direct,"[""drug free zone"", ""drug-free zone""]"
+bza-61-19-4e42da9805,use_spacing_separation,manual_case_review,"[""Use spacing and 45-space parking requirement""]"
 bza-62-19-80921f9b24,use_spacing_separation,direct,"[""within 1,000 feet""]"
 bza-63-19-7f94d4aa9b,use_spacing_separation,direct,"[""within 1,000 feet""]"
 bza-68-18-995664bec8,use_spacing_separation,direct,"[""drug free zone""]"
@@ -523,5 +550,6 @@ bza-81-19-7c4a7d5065,use_spacing_separation,direct,"[""within 1000 feet""]"
 bza-85-24-ae3e833dfd,use_spacing_separation,direct,"[""dimensional spacing variance""]"
 bza-9-19-4602d22e22,use_spacing_separation,direct,"[""drug free zone"", ""within 1000 radial feet""]"
 bza-9-24-bb584396c6,use_spacing_separation,direct,"[""spacing variance"", ""within 1,000 radial feet""]"
+bza-91-19-9b79c42287,use_spacing_separation,manual_case_review,"[""Vehicle-sales spacing waiver""]"
 bza-94-17-ef14740afe,use_spacing_separation,direct,"[""within 1,000 radial feet""]"
 bza-98-19-99e1df0223,use_spacing_separation,direct,"[""spacing variance"", ""within 1,000 feet""]"

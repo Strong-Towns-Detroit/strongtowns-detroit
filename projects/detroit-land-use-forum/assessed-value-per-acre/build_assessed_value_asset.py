@@ -28,6 +28,13 @@ from exhibit_components import (
     title_block,
     write_svg_bundle,
 )
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    SvgComponent,
+    render_graphic_svg,
+    write_graphic_bundle,
+)
 
 PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = FORUM / "spirit-plaza-accessibility/output/road_context.geojson"
@@ -118,11 +125,21 @@ def map_image(frame: gpd.GeoDataFrame) -> str:
     return base64.b64encode(buffer.getvalue()).decode()
 
 
-def build_svg(frame: gpd.GeoDataFrame) -> str:
+def build_graphic(
+    frame: gpd.GeoDataFrame,
+    *,
+    title: str = "Detroit's assessed property value per acre",
+    subtitle: str = (
+        "Total assessed land and improvement value divided by recorded parcel area"
+    ),
+    sources: tuple[str, ...] | None = None,
+    description: str | None = None,
+) -> Graphic:
     recorded = frame[frame["recorded"]]
     zero = int(recorded["assessed"].eq(0).sum())
     unknown = int((~frame["recorded"]).sum())
     share = concentration(frame)
+    median_per_acre = float(recorded["assessed_value_per_acre"].median())
     image = map_image(frame)
     legend = [
         LegendItem("No recorded value / $0", NO_VALUE),
@@ -136,16 +153,9 @@ def build_svg(frame: gpd.GeoDataFrame) -> str:
         legend[4:], positions=(67, 350, 655),
         y=965, size=17, text_gap=8,
     )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100"
-role="img" aria-labelledby="title desc">
-<title id="title">Detroit's assessed property value per acre</title>
-<desc id="desc">Parcel map comparing total assessed land and improvement value per acre. {share:.0%} of recorded assessed value is concentrated on 10 percent of recorded parcel acreage.</desc>
+    visual = f"""
 <style>{forum_css(title_size=61, metric_size=72, note_size=17,
 extra_rules=".metric-label{font-size:14px}", muted=MUTED)}</style>
-<rect class="paper" width="1600" height="1100"/>
-{masthead_svg()}
-{title_block("Detroit's assessed property value per acre",
-"Total assessed land and improvement value divided by recorded parcel area")}
 {map_frame(f"data:image/jpeg;base64,{image}")}
 {first_legend_row}
 {second_legend_row}
@@ -158,12 +168,33 @@ extra_rules=".metric-label{font-size:14px}", muted=MUTED)}</style>
 <text class="note" x="1123" y="530">The assessment includes both land and</text>
 <text class="note" x="1123" y="555">buildings. It is not a land-only value,</text>
 <text class="note" x="1123" y="580">sale price, tax bill, or taxable value.</text>
-{source_lines([
-f"Coverage: {len(recorded):,} parcels with recorded area and assessment; {zero:,} have a recorded assessment of $0; {unknown:,} lack a usable area or assessment.",
-"Source: City of Detroit parcel assessment data downloaded in 2026.",
-"Values are nominal assessor records and have not been adjusted for exemptions or assessment-year differences.",
-], first_y=1018, line_height=24)}
-</svg>"""
+"""
+    return Graphic(
+        title=title,
+        subtitle=subtitle,
+        visual=SvgComponent(visual, 1600, 800, min_y=180),
+        sources=sources if sources is not None else (
+            f"Coverage: {len(recorded):,} parcels with recorded area and "
+            f"assessment; {zero:,} have a recorded assessment of $0; "
+            f"{unknown:,} lack a usable area or assessment.",
+            "Source: City of Detroit parcel assessment data downloaded in 2026.",
+            "Values are nominal assessor records and have not been adjusted "
+            "for exemptions or assessment-year differences.",
+        ),
+        description=description if description is not None else (
+            "Parcel map comparing total assessed land and improvement value "
+            f"per acre. {share:.0%} of recorded assessed value is concentrated "
+            "on 10 percent of recorded parcel acreage."
+        ),
+        metadata={
+            "concentration_share": share,
+            "median_assessed_value_per_acre": median_per_acre,
+        },
+    )
+
+
+def build_svg(frame: gpd.GeoDataFrame) -> str:
+    return render_graphic_svg(build_graphic(frame))
 
 
 def run() -> None:
@@ -173,15 +204,12 @@ def run() -> None:
             "parcel_id", "assessed_value", "total_square_footage", "geometry",
         ],
     ))
-    svg = build_svg(frame)
     OUT.mkdir(parents=True, exist_ok=True)
-    write_svg_bundle(
+    write_graphic_bundle(
         OUT,
         "detroit-assessed-value-per-acre",
-        "Detroit assessed property value per acre",
-        svg,
-        width=1600,
-        height=1100,
+        build_graphic(frame),
+        aspect_ratio=CONFERENCE_LANDSCAPE,
         png_width=3200,
     )
     summary = pd.DataFrame([{

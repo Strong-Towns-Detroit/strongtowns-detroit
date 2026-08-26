@@ -29,6 +29,13 @@ from exhibit_components import (
     write_svg_bundle,
 )
 from parcel_exhibit_components import bza_case_stat, is_detroit_parks_taxpayer
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    SvgComponent,
+    render_graphic_svg,
+    write_graphic_bundle,
+)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -242,10 +249,17 @@ def map_image(frame: gpd.GeoDataFrame) -> str:
     return base64.b64encode(buffer.getvalue()).decode()
 
 
-def build_svg(
+def build_graphic(
     frame: gpd.GeoDataFrame,
     area_cases: pd.DataFrame,
-) -> str:
+    *,
+    title: str = "Detroit's 5,000-square-foot minimum lot area",
+    subtitle: str = (
+        "Recorded R1–R6 parcel area compared with the 5,000-square-foot minimum"
+    ),
+    sources: tuple[str, ...] | None = None,
+    description: str | None = None,
+) -> Graphic:
     evaluated = frame[frame["evaluated"]]
     below = evaluated[evaluated["below_minimum"]]
     total, affected = len(evaluated), len(below)
@@ -270,19 +284,12 @@ def build_svg(
         ).sum()
     )
     image = map_image(frame)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100"
-role="img" aria-labelledby="title desc">
-<title id="title">Detroit residential parcels and the 5,000-square-foot minimum</title>
-<desc id="desc">{affected:,} of {total:,} evaluated R1 through R6 parcels are more than one percent below 5,000 square feet. {len(area_cases)} BZA case histories sought residential minimum-lot-area relief.</desc>
+    visual = f"""
 <style>{forum_css(extra_sans=(".bar-label", ".bar-value"),
 extra_serif=(".bza-metric",),
 extra_rules=f".bza-metric{{font-size:31px;font-weight:700}}"
 f".bar-label,.bar-value{{font-size:13px;fill:{NAVY}}}",
 muted=MUTED)}</style>
-<rect class="paper" width="1600" height="1100"/>
-{masthead_svg()}
-{title_block("Detroit's 5,000-square-foot minimum lot area",
-"Recorded R1–R6 parcel area compared with the 5,000-square-foot minimum")}
 {map_frame(f"data:image/jpeg;base64,{image}")}
 {swatch_legend([
 LegendItem("Variance or exception required", RED),
@@ -296,11 +303,31 @@ f"{affected:,} of {total:,} evaluated parcels")}
 <text class="note" x="1120" y="429">exception applies, new development cannot</text>
 <text class="note" x="1120" y="454">proceed under this minimum.</text>
 {bza_case_stat(len(area_cases), "lot-area", "residential minimum-lot-area")}
-{source_lines([
-"Classification: below minimum when recorded lot area is under 4,950 sq. ft.; the 1% tolerance avoids false precision around the legal 5,000-sq.-ft. boundary.",
-f"Parcel result: {affected:,} below · {meets:,} meet · {unknown:,} not enough data · {parks:,} Parks & Recreation taxpayer · {outside:,} outside R1–R6. Sources: City parcel data; Detroit BZA minutes; Detroit Code §§50-13-1–7, 50-13-21.",
-])}
-</svg>"""
+"""
+    return Graphic(
+        title=title,
+        subtitle=subtitle,
+        visual=SvgComponent(visual, 1600, 780, min_y=180),
+        sources=sources if sources is not None else (
+            "Classification: below minimum when recorded lot area is under "
+            "4,950 sq. ft.; the 1% tolerance avoids false precision around "
+            "the legal 5,000-sq.-ft. boundary.",
+            f"Parcel result: {affected:,} below · {meets:,} meet · {unknown:,} "
+            f"not enough data · {parks:,} Parks & Recreation taxpayer · "
+            f"{outside:,} outside R1–R6. Sources: City parcel data; Detroit "
+            "BZA minutes; Detroit Code §§50-13-1–7, 50-13-21.",
+        ),
+        description=description if description is not None else (
+            f"{affected:,} of {total:,} evaluated R1 through R6 parcels are "
+            "more than one percent below 5,000 square feet. "
+            f"{len(area_cases)} BZA case histories sought residential "
+            "minimum-lot-area relief."
+        ),
+    )
+
+
+def build_svg(frame: gpd.GeoDataFrame, area_cases: pd.DataFrame) -> str:
+    return render_graphic_svg(build_graphic(frame, area_cases))
 
 
 def build_histogram_svg(rows: list[tuple[str, int, str]]) -> str:
@@ -359,10 +386,12 @@ def run() -> None:
     categories = pd.read_csv(BZA / "case_categories.csv")
     area_cases = select_residential_area_cases(histories, categories)
     histogram = primary_request_histogram(histories, categories)
-    svg = build_svg(frame, area_cases)
     OUT.mkdir(parents=True, exist_ok=True)
     stem = "detroit-minimum-lot-size"
-    write_svg_asset(stem, "Detroit minimum lot size", svg)
+    write_graphic_bundle(
+        OUT, stem, build_graphic(frame, area_cases),
+        aspect_ratio=CONFERENCE_LANDSCAPE, png_width=3200,
+    )
     write_svg_asset(
         "detroit-bza-request-types",
         "Detroit BZA cases by request type",

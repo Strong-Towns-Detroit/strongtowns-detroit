@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.path import Path as MplPath
+from PIL import Image
 from shapely.ops import unary_union
 
 HERE = Path(__file__).resolve().parent
@@ -30,6 +31,16 @@ from exhibit_components import (
     source_lines,
     title_block,
     write_svg_bundle,
+)
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    MapMarkerStyle,
+    SvgComponent,
+    bza_hearing_marker_area,
+    bza_hearing_marker_radius,
+    build_map_graphic,
+    write_graphic_bundle,
 )
 ROOT = HERE.parents[2]
 DATA = ROOT / "pipelines/zoning/bza_dataset_gemini"
@@ -99,6 +110,7 @@ OUTCOME_LABELS = [
 
 CATEGORY_LABELS = {
     "administrative_or_community_appeal": "Administrative/community appeal",
+    "parking": "Parking",
     "parking_supply": "Parking supply",
     "use_spacing_separation": "Use spacing/separation",
     "setbacks_yards": "Setbacks/yards",
@@ -114,6 +126,9 @@ CATEGORY_LABELS = {
     "open_recreation_space": "Open/recreation space",
     "fences_walls": "Fences/walls",
     "loading": "Loading",
+    "density_units": "Density/unit count",
+    "building_design_standards": "Building design standards",
+    "hardship_relief": "Hardship",
 }
 
 CATEGORY_COLORS = [
@@ -124,8 +139,15 @@ CATEGORY_COLORS = [
     "#008c95", "#a23b72", "#4e7d35", "#6f4c9b",
     "#2aa7d6", "#b85c1e", "#e56b8a", "#8c7a16",
     "#7a4e2d", "#76a9dc", "#3d5a80", "#d6a21d",
+    "#006d77", "#9b5de5", "#bc6c25", "#5f6f52",
 ]
 CATEGORY_COLOR_MAP = dict(zip(CATEGORY_LABELS, CATEGORY_COLORS))
+
+PRIMARY_DISPLAY_CATEGORY = {
+    "parking": "parking",
+    "parking_supply": "parking",
+    "parking_layout": "parking",
+}
 
 SITE_RENDER_MODES = {"dots", "parcels", "both"}
 
@@ -496,7 +518,6 @@ def concrete_assignments(applications: pd.DataFrame) -> pd.DataFrame:
     excluded = {
         "dimensional_relief_unspecified",
         "request_not_stated",
-        "hardship_relief",
     }
     return applications[
         ~applications["category"].isin(excluded)
@@ -556,7 +577,7 @@ def primary_relief_categories(
                 candidates,
                 key=lambda category: list(CATEGORY_LABELS).index(category),
             )
-        result[case_history_id] = primary
+        result[case_history_id] = PRIMARY_DISPLAY_CATEGORY.get(primary, primary)
     return result
 
 
@@ -565,10 +586,13 @@ def displace_overlapping_points(
     minimum_separation: float = 520.0,
     symbol_radii: np.ndarray | None = None,
     padding: float = 0.0,
+    overlap_fraction: float = 0.0,
     maximum_displacement: float = 1200.0,
     iterations: int = 180,
 ) -> tuple[np.ndarray, float]:
-    """Separate symbols after sizing while keeping each near its true location."""
+    """Separate symbols while permitting a configured amount of overlap."""
+    if not 0 <= overlap_fraction < 1:
+        raise ValueError("overlap_fraction must be from 0 up to 1")
     original = np.array([(point.x, point.y) for point in points], dtype=float)
     placed = original.copy()
     identifiers = [str(identifier) for identifier in points.index]
@@ -582,11 +606,13 @@ def displace_overlapping_points(
             delta = placed[left + 1:] - placed[left]
             distances = np.linalg.norm(delta, axis=1)
             if symbol_radii is None:
-                required = np.full(len(delta), minimum_separation)
+                required = np.full(
+                    len(delta), minimum_separation * (1 - overlap_fraction)
+                )
             else:
                 required = (
-                    symbol_radii[left]
-                    + symbol_radii[left + 1:]
+                    (symbol_radii[left] + symbol_radii[left + 1:])
+                    * (1 - overlap_fraction)
                     + padding
                 )
             for offset in np.flatnonzero(distances < required):
@@ -620,13 +646,15 @@ def displace_overlapping_points(
     return placed, maximum_used
 
 
-def relief_type_map_image(
+def grouped_case_map_image(
     histories: pd.DataFrame,
     sites: gpd.GeoDataFrame,
-    applications: pd.DataFrame,
+    case_groups: dict[str, str],
+    group_colors: dict[str, str],
     city_geometry,
     roads: gpd.GeoDataFrame,
-) -> tuple[str, int, int, float, int]:
+    marker_style: MapMarkerStyle = MapMarkerStyle(),
+) -> tuple[str, int, int, float, int, float]:
     fig, ax = plt.subplots(figsize=(10.7, 7.15), dpi=435)
     fig.patch.set_facecolor(CREAM)
     ax.set_facecolor(CREAM)
@@ -637,23 +665,24 @@ def relief_type_map_image(
     major.plot(ax=ax, color=NAVY, linewidth=0.22, alpha=0.36)
 
     histories = histories.drop_duplicates("case_history_id").copy()
+    histories = histories[
+        histories["case_history_id"].isin(case_groups)
+    ].copy()
     sites = sites.drop_duplicates(
         ["case_history_id", "site_id", "parcel_id"]
     ).copy()
-    primary_map = primary_relief_categories(applications)
+    sites = sites[sites["case_history_id"].isin(case_groups)].copy()
     case_values = histories.set_index("case_history_id")["appearance_count"]
-    sites["primary_category"] = (
-        sites["case_history_id"].map(primary_map).fillna("unspecified")
-    )
+    sites["map_group"] = sites["case_history_id"].map(case_groups)
     sites["appearance_count"] = (
         sites["case_history_id"].map(case_values).fillna(1).astype(int)
     )
 
     # Build connected project sites. First, every parcel/address belonging to
-    # one case is one project. Then cases with the same primary request type are
+    # one case is one project. Then cases with the same map group are
     # joined only when they share a matched address or assessor parcel.
     case_keys = list(
-        sites[["case_history_id", "primary_category"]]
+        sites[["case_history_id", "map_group"]]
         .drop_duplicates()
         .itertuples(index=False, name=None)
     )
@@ -675,7 +704,7 @@ def relief_type_map_image(
     for identity_column in ["site_id", "parcel_id"]:
         identities = sites.dropna(subset=[identity_column])
         for (_, category), group in identities.groupby(
-            [identity_column, "primary_category"]
+            [identity_column, "map_group"]
         ):
             keys = [
                 (case_id, category)
@@ -687,24 +716,24 @@ def relief_type_map_image(
     sites["project_group"] = [
         find((case_id, category))[0]
         for case_id, category in zip(
-            sites["case_history_id"], sites["primary_category"]
+            sites["case_history_id"], sites["map_group"]
         )
     ]
     case_sites = sites.drop_duplicates(
-        ["case_history_id", "project_group", "primary_category"]
+        ["case_history_id", "project_group", "map_group"]
     )
     aggregate = (
-        case_sites.groupby(["project_group", "primary_category"])
+        case_sites.groupby(["project_group", "map_group"])
         .agg(
             appearances=("appearance_count", "sum"),
             case_count=("case_history_id", "nunique"),
         )
     )
-    dissolved = sites.dissolve(by=["project_group", "primary_category"])
+    dissolved = sites.dissolve(by=["project_group", "map_group"])
     dissolved = dissolved.join(aggregate)
     points = dissolved.geometry.representative_point()
     appearances = dissolved["appearances"].clip(lower=1, upper=10)
-    marker_areas = 64 * appearances.to_numpy()
+    marker_areas = appearances.map(bza_hearing_marker_area).to_numpy()
 
     # Convert marker radii from Matplotlib points into the map's projected
     # units. This makes collision spacing follow the final visible dot sizes.
@@ -726,22 +755,16 @@ def relief_type_map_image(
     pixels_per_map_unit = (
         np.linalg.norm(display_kilometer - display_origin) / 1000.0
     )
-    radii_pixels = (
-        np.sqrt(marker_areas / math.pi) * fig.dpi / 72.0
-    )
+    radii_pixels = np.sqrt(marker_areas) * fig.dpi / 144.0
     radii_map_units = radii_pixels / pixels_per_map_unit
-    padding_map_units = 1.0 / pixels_per_map_unit
     placed, maximum_displacement = displace_overlapping_points(
         points,
         symbol_radii=radii_map_units,
-        padding=padding_map_units,
+        overlap_fraction=marker_style.overlap_fraction,
     )
 
     for index, ((_, category), _) in enumerate(points.items()):
-        color = (
-            MUTED if category == "unspecified"
-            else CATEGORY_COLOR_MAP.get(category, MUTED)
-        )
+        color = group_colors.get(category, MUTED)
         ax.scatter(
             [placed[index, 0]],
             [placed[index, 1]],
@@ -753,7 +776,7 @@ def relief_type_map_image(
             c=color,
             edgecolors=CREAM,
             linewidths=0.7,
-            alpha=0.82,
+            alpha=marker_style.opacity,
             zorder=5,
         )
 
@@ -766,6 +789,13 @@ def relief_type_map_image(
         facecolor=CREAM,
         pil_kwargs={"quality": 91, "optimize": True},
     )
+    image_width = Image.open(io.BytesIO(buffer.getvalue())).width
+    radius_per_sqrt_unit = bza_hearing_marker_radius(
+        1,
+        raster_dpi=fig.dpi,
+        raster_width=image_width,
+        embedded_width=1015,
+    )
     plt.close(fig)
     return (
         base64.b64encode(buffer.getvalue()).decode(),
@@ -773,20 +803,39 @@ def relief_type_map_image(
         len(points),
         maximum_displacement,
         int(appearances.max()),
+        radius_per_sqrt_unit,
     )
 
 
-def build_relief_type_map(
+def render_map_visual(
     histories: pd.DataFrame,
     sites: gpd.GeoDataFrame,
     applications: pd.DataFrame,
     city_geometry,
     roads: gpd.GeoDataFrame,
-) -> str:
-    image, total, mapped, maximum_displacement, maximum_appearances = (
-        relief_type_map_image(
-        histories, sites, applications, city_geometry, roads
-        )
+    *,
+    marker_style: MapMarkerStyle = MapMarkerStyle(),
+) -> tuple[SvgComponent, dict[str, object]]:
+    primary_map = primary_relief_categories(applications)
+    case_groups = {
+        case_history_id: category or "unspecified"
+        for case_history_id, category in primary_map.items()
+    }
+    (
+        image,
+        total,
+        mapped,
+        maximum_displacement,
+        maximum_appearances,
+        radius_per_sqrt_unit,
+    ) = grouped_case_map_image(
+        histories,
+        sites,
+        case_groups,
+        {**CATEGORY_COLOR_MAP, "unspecified": MUTED},
+        city_geometry,
+        roads,
+        marker_style=marker_style,
     )
     primary_map = primary_relief_categories(applications)
     mapped_ids = set(sites["case_history_id"])
@@ -840,10 +889,7 @@ def build_relief_type_map(
             f'text-anchor="end">{count}</text>'
         )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100"
-role="img" aria-labelledby="title desc">
-<title id="title">Detroit Board of Zoning Appeals cases</title>
-<desc id="desc">Map of Detroit Board of Zoning Appeals cases by the primary type of request recorded in meeting minutes from 2019 through 2026.</desc>
+    visual = f"""
 <style>{forum_css(metric_size=65, note_size=15,
 extra_sans=(".count", ".small-legend", ".small-count"),
 extra_rules=f".metric-label{{font-size:14px}}"
@@ -851,10 +897,6 @@ f".count{{font-size:16px;font-weight:700;fill:{NAVY}}}"
 f".small-legend{{font-size:11px;fill:{NAVY}}}"
 f".small-count{{font-size:11px;font-weight:700;fill:{NAVY}}}",
 muted=MUTED)}</style>
-<rect class="paper" width="1600" height="1100"/>
-{masthead_svg()}
-{title_block("Detroit Board of Zoning Appeals cases",
-"Cases by primary request recorded in meeting minutes, 2019–2026")}
 <image href="data:image/jpeg;base64,{image}" x="48" y="205" width="1015" height="720" preserveAspectRatio="xMidYMid meet"/>
 
 <text class="metric" x="1120" y="275">{adverse_or_closed}</text>
@@ -872,12 +914,14 @@ muted=MUTED)}</style>
 
 <text class="section-title" x="1120" y="520">Type of request</text>
 {''.join(category_legend)}
-
-{source_lines([
-"Color shows one request type per case; some cases involved additional requests.",
-"Source: Detroit BZA minutes, 2019–2026; locations linked to City assessor parcels. To aid legibility, locations may not represent precise addresses.",
-], first_y=1042)}
-</svg>"""
+"""
+    return (
+        SvgComponent(visual, 1600, 780, min_y=180),
+        {
+            "maximum_appearances": maximum_appearances,
+            "effect_size_radius_per_sqrt_unit": radius_per_sqrt_unit,
+        },
+    )
 
 
 def build_request_outcomes_by_type(
@@ -1169,16 +1213,33 @@ def run(
     output_dir.mkdir(parents=True, exist_ok=True)
     histories = pd.read_csv(DATA / "case_histories.csv")
     all_sites = gpd.read_file(DATA / "map_sites.gpkg").to_crs(parcels.crs)
-    relief_type_svg = build_relief_type_map(
+    visual, metadata = render_map_visual(
         histories,
         all_sites,
         all_applications,
         city_geometry,
         roads,
     )
-    write_named_asset(
-        "relief_type_map", "Detroit Board of Zoning Appeals cases",
-        relief_type_svg, output_dir,
+    relief_type_graphic = build_map_graphic(
+        visual=visual,
+        metadata=metadata,
+        title="Detroit Board of Zoning Appeals cases",
+        subtitle="Cases by primary request recorded in meeting minutes, 2019–2026",
+        sources=(
+            "Color shows one request type per case; some cases involved "
+            "additional requests.",
+            "Source: Detroit BZA minutes, 2019–2026; locations linked to City "
+            "assessor parcels. To aid legibility, locations may not represent "
+            "precise addresses.",
+        ),
+        description=(
+            "Map of Detroit Board of Zoning Appeals cases by the primary type "
+            "of request recorded in meeting minutes from 2019 through 2026."
+        ),
+    )
+    write_graphic_bundle(
+        output_dir, "relief_type_map", relief_type_graphic,
+        aspect_ratio=CONFERENCE_LANDSCAPE, png_width=3200,
     )
     print(f"Wrote {output_dir / 'relief_type_map.html'}")
 

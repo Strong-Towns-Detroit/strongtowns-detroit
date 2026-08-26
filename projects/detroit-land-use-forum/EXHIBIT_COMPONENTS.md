@@ -1,8 +1,16 @@
 # Exhibit component library
 
-The canonical conference graphics are composed from small SVG helpers rather
-than a single chart framework. This keeps analytical renderers independent
-while making the forum's repeated visual language reusable.
+The canonical graphics live in `projects/graphics/src/` and use the installed
+`strongtowns_detroit.graphics` package. Source definitions provide semantic page
+content and chart-specific SVG marks; the package owns page composition,
+aspect ratio, title wrapping, HTML embedding, and SVG/PNG output.
+
+The library's `GraphicBuildSystem` automatically discovers each source
+definition, loads it once, and fans it out to `output/instagram/`,
+`output/instagram_story/`, and `output/landuseconference/`. The installed
+`strongtowns-graphics` command is the primary entry point;
+`projects/graphics/build.py` is only a compatibility shim. Conference code is
+no longer the owner of the definitions.
 
 ## Shared components
 
@@ -10,7 +18,27 @@ while making the forum's repeated visual language reusable.
 
 - `masthead_svg()` — exact Strong Towns Detroit flag sprite and forum kicker.
 
-`exhibit_components.py`
+`strongtowns_detroit.graphics` (installed library)
+
+- `AspectRatio` and common presets — composition shape without coupling it to
+  pixels, DPI, print, or a browser-export workflow.
+- `Graphic` — semantic title, subtitle, visual, notes, sources, and accessible
+  description.
+- `SvgComponent` — chart-specific SVG markup and its local coordinate system.
+- `SvgRegion` — a semantic part of an SVG visual that may be stacked in a
+  portrait composition while the original visual remains intact in landscape.
+- `render_graphic_svg()` — applies the shared page composition and requested
+  aspect ratio.
+- `write_graphic_bundle()` — writes matching HTML/SVG/PNG without a browser.
+- `write_graphic_variants()` — writes caller-selected named ratios from one
+  `Graphic` definition.
+- `GraphicBuildSystem` + `GraphicFormat` — discover source definitions once,
+  render the supported Instagram post, Instagram Story, and land-use
+  conference formats, and write their manifests.
+- `MobileMapLayout` — gives every Detroit map the same fixed mobile width and
+  lays out its legend independently so legend density cannot shrink the map.
+
+`exhibit_components.py` (legacy helpers for noncanonical graphics)
 
 - `forum_css()` — semantic typography classes and palette defaults.
 - `title_block()` — title/dek positioning with escaped text.
@@ -29,6 +57,54 @@ while making the forum's repeated visual language reusable.
   BZA case histories.
 
 ## Composition example
+
+The caller owns content and chart marks; the library owns the page:
+
+```python
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    INSTAGRAM_PORTRAIT,
+    INSTAGRAM_SQUARE,
+    AspectRatio,
+    Graphic,
+    SvgComponent,
+    write_graphic_bundle,
+    write_graphic_variants,
+)
+
+graphic = Graphic(
+    title="Exhibit title",
+    subtitle="Short explanatory subtitle",
+    visual=SvgComponent(map_and_legend_svg, width=1600, height=780),
+    notes=("Interpretive note …",),
+    sources=("Source: …",),
+)
+
+write_graphic_bundle(
+    OUTPUT,
+    "example",
+    graphic,
+    aspect_ratio=CONFERENCE_LANDSCAPE,
+)
+
+write_graphic_variants(
+    OUTPUT,
+    "example",
+    graphic,
+    {
+        "conference": CONFERENCE_LANDSCAPE,
+        "instagram": INSTAGRAM_PORTRAIT,
+        "square": INSTAGRAM_SQUARE,
+        "custom": AspectRatio.parse("3:2"),
+    },
+)
+```
+
+Each variant has one composed SVG, embedded unchanged in its HTML artifact and
+optionally converted directly to PNG with librsvg. There is no screenshot or
+headless-browser stage.
+
+The original coordinate-based helpers remain for noncanonical generators:
 
 ```python
 css = forum_css(title_size=57)

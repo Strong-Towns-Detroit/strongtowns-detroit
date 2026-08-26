@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import html
 import json
+import math
 import shutil
 import subprocess
 import sys
@@ -15,12 +16,16 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent
 sys.path.insert(0, str(PROJECT))
-from exhibit_brand import masthead_svg
 from exhibit_components import (
     forum_css,
     ghost_hatch_pattern,
-    title_block,
-    write_svg_bundle,
+)
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    SvgComponent,
+    render_graphic_svg,
+    write_graphic_bundle,
 )
 PARKING_AUDIT = (
     PROJECT / "parking-requirements/output/parking-case-audit.csv"
@@ -126,89 +131,126 @@ def summarize(cases: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def build_svg(cases: pd.DataFrame, summary: pd.DataFrame) -> str:
+def build_graphic(
+    cases: pd.DataFrame,
+    summary: pd.DataFrame,
+    *,
+    title: str = (
+        "Developers consistently propose far fewer parking spaces "
+        "than the law requires."
+    ),
+    subtitle: str = "Parking gaps by project type · Detroit BZA cases, 2019–2026",
+    notes: tuple[str, ...] | None = None,
+    sources: tuple[str, ...] | None = None,
+    description: str | None = None,
+) -> Graphic:
     grants = int(cases["final_outcome"].eq("granted_reversed").sum())
     max_required = int(summary["required"].max())
+    tick_step = 200
+    axis_max = math.ceil(max_required / tick_step) * tick_step
+    chart_x = 510
+    chart_width = 800
+    pixels_per_space = chart_width / axis_max
+
+    ticks = []
+    for value in range(0, axis_max + 1, tick_step):
+        x = chart_x + value * pixels_per_space
+        ticks.append(
+            f'<line x1="{x:.1f}" y1="73" x2="{x:.1f}" y2="594" '
+            f'stroke="{PALE}" stroke-width="1"/>'
+            f'<text class="axis" x="{x:.1f}" y="63" text-anchor="middle">'
+            f'{value:,}</text>'
+        )
 
     rows = []
-    y0 = 408
+    y0 = 100
     for index, row in summary.iterrows():
-        y = y0 + index * 80
-        full_width = 500 * row.required / max_required
-        proposed_width = (
-            full_width * row.proposed / row.required if row.required else 0
-        )
-        ghost_x = 510 + proposed_width
+        y = y0 + index * 82
+        full_width = row.required * pixels_per_space
+        proposed_width = row.proposed * pixels_per_space
+        ghost_x = chart_x + proposed_width
         ghost_width = max(0, full_width - proposed_width)
         rows.append(
             f'<text class="row-label" x="58" y="{y + 21}">'
             f'{html.escape(row.project_type)}</text>'
             f'<text class="case-count" x="58" y="{y + 44}">'
-            f'{row.histories} cases · '
-            f'{row.numeric_histories} with counts</text>'
-            f'<clipPath id="bar-{index}"><rect x="510" y="{y}" '
+            f'{row.proposed:,} spaces proposed · '
+            f'{row.required:,} required by law</text>'
+            f'<clipPath id="bar-{index}"><rect x="{chart_x}" y="{y}" '
             f'width="{full_width:.1f}" height="31" rx="4"/></clipPath>'
             f'<g clip-path="url(#bar-{index})">'
-            f'<rect x="510" y="{y}" width="{proposed_width:.1f}" '
+            f'<rect x="{chart_x}" y="{y}" width="{proposed_width:.1f}" '
             f'height="31" fill="{NAVY}"/>'
             f'<rect x="{ghost_x:.1f}" y="{y}" width="{ghost_width:.1f}" '
             f'height="31" fill="url(#ghost-parking)" stroke="{RED}" '
             f'stroke-opacity=".5" stroke-width="1.5"/>'
             f'</g>'
-            f'<text class="proposed-spaces" x="1160" y="{y + 21}" '
-            f'text-anchor="end">'
-            f'{row.proposed:,} proposed</text>'
-            f'<text class="required-spaces" x="1325" y="{y + 21}" '
-            f'text-anchor="end">'
-            f'{row.required:,} required</text>'
         )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 1100"
-role="img" aria-labelledby="title desc">
-<title id="title">Parking gaps by project type</title>
-<desc id="desc">Required and proposed parking in 35 Detroit Board of Zoning Appeals cases, grouped by project type.</desc>
+    visual = f"""
 <defs>
   {ghost_hatch_pattern(color=RED)}
 </defs>
 <style>{forum_css(title_size=56, note_size=18, legend_size=14,
 extra_sans=(".row-label", ".case-count", ".proposed-spaces",
-".required-spaces", ".column"),
+".required-spaces", ".column", ".axis"),
 extra_rules=f".row-label{{font-size:18px;font-weight:700;fill:{NAVY}}}"
 f".case-count{{font-size:14px;fill:{MUTED}}}"
 f".proposed-spaces{{font-size:14px;font-weight:700;fill:{NAVY}}}"
 f".required-spaces{{font-size:14px;font-weight:700;fill:{RED}}}"
-f".column{{font-size:12px;font-weight:700;letter-spacing:1px;fill:{MUTED}}}",
+f".column{{font-size:12px;font-weight:700;letter-spacing:1px;fill:{MUTED}}}"
+f".axis{{font-size:13px;fill:{MUTED}}}",
 cream=CREAM, navy=NAVY, red=RED, muted=MUTED)}</style>
-<rect class="paper" width="1450" height="1100"/>
-{masthead_svg()}
-{title_block("Parking gaps by project type",
-"Required and proposed parking in 35 Detroit BZA cases, 2019–2026",
-title_y=145, subtitle_y=195)}
-
-<text class="section-title" x="55" y="343">Required and proposed spaces</text>
-<rect x="1010" y="321" width="14" height="14" fill="{NAVY}"/>
-<text class="legend" x="1031" y="333">Proposed or provided</text>
-<rect x="1175" y="321" width="14" height="14" fill="url(#ghost-parking)"
+<text class="section-title" x="55" y="23">Required and proposed spaces</text>
+<rect x="1010" y="1" width="14" height="14" fill="{NAVY}"/>
+<text class="legend" x="1031" y="13">Proposed or provided</text>
+<rect x="1175" y="1" width="14" height="14" fill="url(#ghost-parking)"
   stroke="{RED}" stroke-opacity=".5"/>
-<text class="legend" x="1196" y="333">Required beyond proposal</text>
-<text class="column" x="1160" y="380" text-anchor="end">PROPOSED</text>
-<text class="column" x="1325" y="380" text-anchor="end">REQUIRED</text>
+<text class="legend" x="1196" y="13">Required beyond proposal</text>
+<text class="column" x="510" y="45">TOTAL PARKING SPACES</text>
+{''.join(ticks)}
 {''.join(rows)}
+"""
+    return Graphic(
+        title=title,
+        subtitle=subtitle,
+        visual=SvgComponent(visual, width=1450, height=620),
+        notes=notes if notes is not None else (
+            f"{grants} of 62 parking cases ended in a grant or reversal. "
+            "These comparisons describe cases reaching the BZA; they do not "
+            "establish why a requirement or outcome occurred.",
+        ),
+        sources=sources if sources is not None else (
+            "An additional 27 parking cases were found in the BZA minutes but "
+            "did not state both required and proposed counts, so no parking "
+            "gap could be calculated.",
+            "Project groups are mutually exclusive. Source: Detroit BZA "
+            "minutes, 2019–2026.",
+        ),
+        description=description if description is not None else (
+            "Required and proposed parking in 35 Detroit Board of Zoning "
+            "Appeals cases, grouped by project type."
+        ),
+    )
 
-<line x1="55" y1="991" x2="1395" y2="991" stroke="{PALE}" stroke-width="2"/>
-<text class="note" x="55" y="1022">{grants} of 62 parking cases ended in a grant or reversal. These comparisons describe cases reaching the BZA; they do not establish why a requirement or outcome occurred.</text>
-<text class="source" x="55" y="1050">An additional 27 parking cases were found in the BZA minutes but did not state both required and proposed counts, so no parking gap could be calculated.</text>
-<text class="source" x="55" y="1078">Project groups are mutually exclusive. Source: Detroit BZA minutes, 2019–2026.</text>
-</svg>"""
+
+def build_svg(cases: pd.DataFrame, summary: pd.DataFrame) -> str:
+    """Compatibility helper returning the fully composed SVG."""
+    return render_graphic_svg(
+        build_graphic(cases, summary),
+        aspect_ratio=CONFERENCE_LANDSCAPE,
+    )
 
 
 def write_assets(cases: pd.DataFrame, summary: pd.DataFrame) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    svg = build_svg(cases, summary)
     stem = "detroit-parking-by-project-type"
-    write_svg_bundle(
-        OUT, stem, "Detroit parking by project type", svg,
-        width=1450, height=1100, png_width=2900, background=CREAM,
+    write_graphic_bundle(
+        OUT,
+        stem,
+        build_graphic(cases, summary),
+        aspect_ratio=CONFERENCE_LANDSCAPE,
+        png_width=2900,
     )
     cases.to_csv(OUT / "parking-project-type-audit.csv", index=False)
     summary.to_csv(OUT / "parking-project-type-summary.csv", index=False)

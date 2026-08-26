@@ -26,10 +26,12 @@ def test_concrete_assignments_use_categories_and_unique_histories():
     applications = pd.read_csv(DATA / "atlas_applications.csv")
     concrete = concrete_assignments(applications)
 
-    assert len(concrete) == 432
-    assert concrete["case_history_id"].nunique() == 314
-    assert concrete["category"].nunique() == 16
+    assert len(concrete) == 531
+    assert concrete["case_history_id"].nunique() == 382
+    assert concrete["category"].nunique() == 20
     assert "dimensional_relief_unspecified" not in set(concrete["category"])
+    assert "request_not_stated" not in set(concrete["category"])
+    assert "hardship_relief" in set(concrete["category"])
 
 
 def test_annular_marker_has_outer_and_inner_boundaries():
@@ -50,6 +52,18 @@ def test_primary_relief_uses_first_concrete_recorded_category():
     )
 
 
+def test_primary_relief_rolls_detailed_parking_up_for_display():
+    applications = pd.DataFrame([
+        {
+            "case_history_id": "parking-case",
+            "category": "parking_layout",
+            "relief_categories": "parking_layout",
+        }
+    ])
+
+    assert primary_relief_categories(applications)["parking-case"] == "parking"
+
+
 def test_displacement_is_bounded():
     import geopandas as gpd
     from shapely.geometry import Point
@@ -64,6 +78,23 @@ def test_displacement_is_bounded():
 
     assert placed.shape == (3, 2)
     assert maximum <= 20.000001
+
+
+def test_displacement_can_allow_scaled_symbol_overlap():
+    import geopandas as gpd
+    import numpy as np
+    from shapely.geometry import Point
+
+    points = gpd.GeoSeries([Point(0, 0), Point(0, 0)], index=["a", "b"])
+    placed, _ = displace_overlapping_points(
+        points,
+        symbol_radii=np.array([10.0, 10.0]),
+        overlap_fraction=0.10,
+        maximum_displacement=20,
+    )
+
+    separation = np.linalg.norm(placed[0] - placed[1])
+    assert 18 <= separation < 20
 
 
 def test_site_render_modes_are_explicit():

@@ -19,6 +19,7 @@ MIN_MATCH_SHARE = 0.80
 
 CORE_CATEGORIES = {
     "administrative_or_community_appeal",
+    "parking",
     "parking_supply",
     "use_spacing_separation",
     "setbacks_yards",
@@ -33,6 +34,8 @@ DIMENSIONAL_CATEGORIES = {
     "floor_area_bulk",
     "screening_landscaping",
     "signs_billboards",
+    "density_units",
+    "building_design_standards",
 }
 APPENDIX_CATEGORIES = {
     "multiple_buildings",

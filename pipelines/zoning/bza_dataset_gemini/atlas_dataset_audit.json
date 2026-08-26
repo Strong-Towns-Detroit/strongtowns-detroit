@@ -1,8 +1,8 @@
 {
   "case_histories": 405,
-  "categorized_case_histories": 404,
-  "category_assignments": 526,
-  "mapped_category_assignments": 518,
+  "categorized_case_histories": 405,
+  "category_assignments": 554,
+  "mapped_category_assignments": 546,
   "publication_gate": {
     "minimum_case_histories": 10,
     "minimum_match_share": 0.8
@@ -10,20 +10,23 @@
   "eligible_categories": [
     "administrative_or_community_appeal",
     "parking_supply",
-    "use_spacing_separation",
     "setbacks_yards",
+    "use_spacing_separation",
     "nonconforming_use_or_structure",
-    "lot_coverage",
     "lot_dimensions",
+    "lot_coverage",
+    "parking_layout",
     "height",
-    "parking_layout"
+    "screening_landscaping",
+    "floor_area_bulk",
+    "multiple_buildings"
   ],
   "ineligible_categories": [
-    "screening_landscaping",
+    "parking",
     "signs_billboards",
-    "floor_area_bulk",
     "open_recreation_space",
-    "multiple_buildings",
+    "building_design_standards",
+    "density_units",
     "fences_walls",
     "loading",
     "hardship_relief",

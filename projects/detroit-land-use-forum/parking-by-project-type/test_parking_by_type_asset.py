@@ -1,4 +1,4 @@
-from build_parking_by_type_asset import classified_cases, summarize
+from build_parking_by_type_asset import build_svg, classified_cases, summarize
 
 
 def test_all_parking_histories_have_one_type():
@@ -29,3 +29,20 @@ def test_selected_category_results():
     assert community["gap"] == 461
     assert gathering["histories"] == 20
     assert round(gathering["median_gap_share"], 3) == 0.847
+
+
+def test_chart_uses_a_horizontal_axis_and_inline_comparisons():
+    cases = classified_cases()
+    svg = build_svg(cases, summarize(cases))
+
+    assert "TOTAL PARKING SPACES" in svg
+    assert ">0</text>" in svg
+    assert ">800</text>" in svg
+    assert "Developers consistently propose far fewer" in svg
+    assert "parking spaces than the law requires." in svg
+    assert 'class="graphic-title"' in svg
+    assert "Of 62 parking-related BZA cases" not in svg
+    assert "91 spaces proposed · 405 required by law" in svg
+    assert "cases reported counts" not in svg
+    assert ">PROPOSED</text>" not in svg
+    assert ">REQUIRED</text>" not in svg

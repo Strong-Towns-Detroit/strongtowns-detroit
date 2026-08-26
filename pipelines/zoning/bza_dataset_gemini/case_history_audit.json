@@ -5,5 +5,11 @@
   "histories_with_multiple_appearances": 71,
   "printed_numbers_with_multiple_histories": 2,
   "override_rows_used": 4,
-  "unresolved_same_date_number_collisions": []
+  "unresolved_same_date_number_collisions": [],
+  "relief_case_reviews": {
+    "review_rows": 70,
+    "classified_histories": 60,
+    "unresolved_histories": 10,
+    "manual_category_assignments": 87
+  }
 }

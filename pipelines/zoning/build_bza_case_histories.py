@@ -14,6 +14,7 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 DEFAULT_INPUT = HERE / "bza_dataset_gemini/classified_cases.csv"
 DEFAULT_OVERRIDES = HERE / "bza_case_history_overrides.csv"
+DEFAULT_RELIEF_REVIEWS = HERE / "bza_relief_case_reviews.csv"
 DEFAULT_OUTPUT = HERE / "bza_dataset_gemini"
 
 
@@ -43,7 +44,9 @@ def representative(group: pd.DataFrame, column: str) -> object:
 
 
 def build_histories(
-    frame: pd.DataFrame, overrides: pd.DataFrame
+    frame: pd.DataFrame,
+    overrides: pd.DataFrame,
+    relief_reviews: pd.DataFrame | None = None,
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, dict]:
     minutes = frame[frame["record_type"].eq("minutes_case")].copy()
     minutes["meeting_date"] = pd.to_datetime(minutes["meeting_date"])
@@ -123,6 +126,111 @@ def build_histories(
     categories_frame = pd.DataFrame(categories).sort_values(
         ["category", "case_history_id"]
     )
+    review_audit = {
+        "review_rows": 0,
+        "classified_histories": 0,
+        "unresolved_histories": 0,
+        "manual_category_assignments": 0,
+    }
+    if relief_reviews is not None and not relief_reviews.empty:
+        reviews = relief_reviews.fillna("").copy()
+        required = {
+            "case_history_id", "printed_case_number", "review_status",
+            "categories", "evidence",
+        }
+        missing_columns = sorted(required - set(reviews.columns))
+        if missing_columns:
+            raise ValueError(f"Relief reviews lack columns: {missing_columns}")
+        duplicate_ids = reviews.loc[
+            reviews["case_history_id"].duplicated(), "case_history_id"
+        ].tolist()
+        if duplicate_ids:
+            raise ValueError(f"Duplicate relief-review IDs: {duplicate_ids}")
+        unknown_statuses = sorted(
+            set(reviews["review_status"]) - {"classified", "unresolved"}
+        )
+        if unknown_statuses:
+            raise ValueError(f"Unknown relief-review statuses: {unknown_statuses}")
+        history_index = histories_frame.set_index("case_history_id")
+        missing_ids = sorted(
+            set(reviews["case_history_id"]) - set(history_index.index)
+        )
+        if missing_ids:
+            raise ValueError(f"Relief-review IDs absent from histories: {missing_ids}")
+        for review in reviews.itertuples(index=False):
+            printed = str(history_index.loc[review.case_history_id, "printed_case_number"])
+            if printed != str(review.printed_case_number):
+                raise ValueError(
+                    f"Relief review {review.case_history_id} says case "
+                    f"{review.printed_case_number}, not {printed}"
+                )
+            reviewed_categories = split_labels(review.categories)
+            if review.review_status == "classified" and not reviewed_categories:
+                raise ValueError(
+                    f"Classified relief review has no category: {review.case_history_id}"
+                )
+            if review.review_status == "unresolved":
+                if reviewed_categories:
+                    raise ValueError(
+                        f"Unresolved relief review has categories: {review.case_history_id}"
+                    )
+                continue
+
+            history_mask = histories_frame["case_history_id"].eq(review.case_history_id)
+            existing = split_labels(
+                histories_frame.loc[history_mask, "relief_categories"].iloc[0]
+            )
+            existing.discard("dimensional_relief_unspecified")
+            combined = sorted(existing | reviewed_categories)
+            histories_frame.loc[history_mask, "relief_categories"] = "|".join(combined)
+            categories_frame = categories_frame[
+                ~(
+                    categories_frame["case_history_id"].eq(review.case_history_id)
+                    & categories_frame["category"].eq(
+                        "dimensional_relief_unspecified"
+                    )
+                )
+            ]
+            evidence = json.dumps(
+                [review.evidence] if review.evidence else [], ensure_ascii=False
+            )
+            additions = pd.DataFrame(
+                {
+                    "case_history_id": review.case_history_id,
+                    "category": sorted(reviewed_categories),
+                    "classification_sources": "manual_case_review",
+                    "evidence": evidence,
+                }
+            )
+            categories_frame = pd.concat(
+                [
+                    categories_frame[
+                        ~(
+                            categories_frame["case_history_id"].eq(
+                                review.case_history_id
+                            )
+                            & categories_frame["category"].isin(reviewed_categories)
+                        )
+                    ],
+                    additions,
+                ],
+                ignore_index=True,
+            )
+        categories_frame = categories_frame.sort_values(
+            ["category", "case_history_id"]
+        ).reset_index(drop=True)
+        review_audit = {
+            "review_rows": int(len(reviews)),
+            "classified_histories": int(
+                reviews["review_status"].eq("classified").sum()
+            ),
+            "unresolved_histories": int(
+                reviews["review_status"].eq("unresolved").sum()
+            ),
+            "manual_category_assignments": int(
+                reviews["categories"].map(lambda value: len(split_labels(value))).sum()
+            ),
+        }
     occurrence_columns = [
         "occurrence_id", "case_history_id", "case_number", "meeting_date",
         "decision_status", "decision", "decision_basis", "source_file",
@@ -145,17 +253,26 @@ def build_histories(
             minutes["occurrence_id"].isin(set(overrides["occurrence_id"])).sum()
         ),
         "unresolved_same_date_number_collisions": unresolved_collisions,
+        "relief_case_reviews": review_audit,
     }
     return histories_frame, occurrences_frame, categories_frame, audit
 
 
-def run(input_path: Path, overrides_path: Path, output_dir: Path) -> None:
+def run(
+    input_path: Path,
+    overrides_path: Path,
+    relief_reviews_path: Path,
+    output_dir: Path,
+) -> None:
     frame = pd.read_csv(input_path)
     overrides = pd.read_csv(overrides_path)
     missing = sorted(set(overrides["occurrence_id"]) - set(frame["occurrence_id"]))
     if missing:
         raise ValueError(f"Override occurrence IDs absent from corpus: {missing}")
-    histories, occurrences, categories, audit = build_histories(frame, overrides)
+    relief_reviews = pd.read_csv(relief_reviews_path)
+    histories, occurrences, categories, audit = build_histories(
+        frame, overrides, relief_reviews
+    )
     if audit["unresolved_same_date_number_collisions"]:
         raise ValueError(
             "Unresolved duplicate printed case numbers: "
@@ -175,9 +292,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--overrides", type=Path, default=DEFAULT_OVERRIDES)
+    parser.add_argument(
+        "--relief-reviews", type=Path, default=DEFAULT_RELIEF_REVIEWS
+    )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
-    run(args.input, args.overrides, args.output_dir)
+    run(args.input, args.overrides, args.relief_reviews, args.output_dir)
 
 
 if __name__ == "__main__":

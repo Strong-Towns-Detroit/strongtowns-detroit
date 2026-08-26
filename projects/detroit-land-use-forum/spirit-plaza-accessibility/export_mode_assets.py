@@ -18,12 +18,16 @@ from shapely.ops import transform, unary_union
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
-from exhibit_brand import masthead_svg
 from exhibit_components import (
     forum_css,
-    html_document as exhibit_html_document,
-    title_block,
-    write_svg_bundle,
+)
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    GraphicTheme,
+    SvgComponent,
+    render_graphic_svg,
+    write_graphic_bundle,
 )
 REPO_ROOT = HERE.parents[2]
 DEFAULT_DATA = HERE / "output/display_isochrones.geojson"
@@ -93,7 +97,18 @@ def geometry_path(geometry, map_point):
     return ""
 
 
-def build_svg(mode, data, roads, city, spec):
+def build_graphic(
+    mode,
+    data,
+    roads,
+    city,
+    spec,
+    *,
+    title: str | None = None,
+    subtitle: str | None = None,
+    sources: tuple[str, ...] | None = None,
+    description: str | None = None,
+):
     map_point = _mapper(city.bounds)
     city_path = geometry_path(city, map_point)
     layers = [
@@ -124,8 +139,8 @@ def build_svg(mode, data, roads, city, spec):
             f'<rect x="{x}" y="935" width="24" height="24" fill="{COLORS[minutes]}"/>'
             f'<text class="legend" x="{x + 34}" y="954">{minutes} min</text>'
         )
-    title = MODE_LABELS[mode]
-    subtitle = {
+    title = title or MODE_LABELS[mode]
+    subtitle = subtitle or {
         "walking": "Five- to 30-minute walking times from Campus Martius",
         "public_transport": (
             "Median five- to 30-minute transit reach from Campus Martius · "
@@ -138,13 +153,9 @@ def build_svg(mode, data, roads, city, spec):
         if mode == "public_transport"
         else "TravelTime API · Wednesday midday travel-time model"
     )
-    title_size = 48 if mode == "public_transport" else 64
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}"
-role="img" aria-labelledby="title description">
-<title id="title">{html.escape(title)}</title>
-<desc id="description">{html.escape(subtitle)}. Five through thirty minute travel bands.</desc>
+    visual = f"""
 <style>
-  {forum_css(title_size=title_size, dek_size=23, legend_size=17,
+  {forum_css(dek_size=23, legend_size=17,
   extra_rules=".legend{font-weight:700}.subtitle{font-family:Georgia,'Times New Roman',serif;font-size:23px;fill:#526276}",
   cream="#fffdf8")}
   .city{{fill:#f4efe6;stroke:#0c2340;stroke-width:1.5}}
@@ -154,19 +165,24 @@ role="img" aria-labelledby="title description">
   .road-major{{stroke:#0c2340;stroke-width:1.6;opacity:.74}}
   .origin{{fill:#c83a3a;stroke:#fff;stroke-width:2.5}}
 </style>
-<rect class="paper" width="1400" height="1000"/>
-{masthead_svg()}
-{title_block(title, subtitle, x=46, title_y=105, subtitle_x=48,
-subtitle_y=145, subtitle_class="subtitle")}
 <g>{''.join(layers)}</g>
 <g>{''.join(legend)}</g>
-<text class="source" x="790" y="953">{html.escape(source)}</text>
-</svg>"""
+"""
+    return Graphic(
+        title=title,
+        subtitle=subtitle,
+        visual=SvgComponent(visual, WIDTH, 800, min_y=170),
+        sources=sources if sources is not None else (source,),
+        description=description if description is not None else (
+            f"{subtitle}. Five through thirty minute travel bands."
+        ),
+    )
 
 
-def html_document(title, svg):
-    return exhibit_html_document(
-        title, svg, width=1400, height=1000, background="#fff8ed"
+def build_svg(mode, data, roads, city, spec):
+    return render_graphic_svg(
+        build_graphic(mode, data, roads, city, spec),
+        theme=GraphicTheme(background="#fffdf8"),
     )
 
 
@@ -187,12 +203,12 @@ def run(data_path, roads_path, boundary_path, spec_path, output_dir, png_width=2
             raise SystemExit(
                 f"{mode}: expected thresholds {sorted(expected)}, found {sorted(present)}"
             )
-        svg = build_svg(mode, data, roads, city, spec)
         stem = MODE_FILENAMES[mode]
-        write_svg_bundle(
-            output_dir, stem, MODE_LABELS[mode], svg,
-            width=WIDTH, height=HEIGHT, png_width=png_width,
-            background="#fff8ed",
+        write_graphic_bundle(
+            output_dir, stem, build_graphic(mode, data, roads, city, spec),
+            aspect_ratio=CONFERENCE_LANDSCAPE,
+            png_width=png_width,
+            theme=GraphicTheme(background="#fffdf8"),
         )
         print(f"Wrote {output_dir / f'{stem}.svg'}")
         print(f"Wrote {output_dir / f'{stem}.html'}")

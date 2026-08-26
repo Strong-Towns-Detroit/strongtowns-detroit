@@ -1,0 +1,38 @@
+"""Shared geographic context for Detroit graphics."""
+
+from functools import lru_cache
+from pathlib import Path
+
+import geopandas as gpd
+
+from strongtowns_detroit.graphics import WebMercatorBasemap
+
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+GEOGRAPHY = (
+    ROOT / "pipelines/housingDataAnalysis/street_simplification/output"
+)
+BOUNDARY = GEOGRAPHY / "detroit_boundary.gpkg"
+WATER = GEOGRAPHY / "detroit_water.gpkg"
+ROADS = (
+    ROOT
+    / "projects/detroit-land-use-forum/spirit-plaza-accessibility"
+    / "output/road_context.geojson"
+)
+
+
+@lru_cache(maxsize=1)
+def load_detroit_basemap() -> WebMercatorBasemap:
+    """Load the canonical silhouette, full OSM roads, and OSM water mask."""
+    boundary = gpd.read_file(BOUNDARY).to_crs("EPSG:3857")
+    roads = gpd.read_file(ROADS).to_crs("EPSG:3857")
+    water = gpd.read_file(WATER).to_crs("EPSG:3857")
+    water = water[water.geom_type.isin(["Polygon", "MultiPolygon"])].copy()
+    land_geometry = boundary.geometry.iloc[0]
+    water = gpd.clip(water, land_geometry)
+    return WebMercatorBasemap(
+        land_geometry=land_geometry,
+        roads=roads,
+        water=water,
+    )

@@ -1,0 +1,71 @@
+case_history_id,printed_case_number,review_status,categories,evidence
+bza-5-19-2dc104a2e6,5-19,classified,setbacks_yards,Front and side yard setbacks
+bza-4-19-9704261508,4-19,classified,loading|lot_dimensions,Loading-space variance and lot-area limit
+bza-7-19-8a6c93d171,7-19,classified,parking_supply,19 spaces required and zero proposed
+bza-30-19-9c0b26b104,30-19,classified,density_units|parking_layout|screening_landscaping,Unit count and paved and landscaped setbacks
+bza-28-19-9c30f8d441,28-19,classified,parking_layout|screening_landscaping,Parking aisle and residential screening setback
+bza-48-19-35b257663a,48-19,classified,floor_area_bulk,Facilities excessive in square footage and acreage
+bza-56-19-d21ffb627f,56-19,classified,screening_landscaping|fences_walls,Landscaping and wrought-iron-fence conditions
+bza-71-19-ed59cd56e2,71-19,classified,setbacks_yards,30-foot rear setback required and 13 feet provided
+bza-58-19-df53c91db1,58-19,classified,setbacks_yards|screening_landscaping|parking_layout,Setbacks landscaping and parking layout
+bza-61-19-4e42da9805,61-19,classified,use_spacing_separation|parking_supply,Use spacing and 45-space parking requirement
+bza-67-19-dd6df5c915,67-19,classified,screening_landscaping|fences_walls,Fence and landscaped buffer
+bza-75-19-9591bc33b1,75-19,classified,screening_landscaping|parking_layout,Landscaping screening and parking surface
+bza-72-19-be782cacfd,72-19,classified,parking,Location or amount of off-street parking; subtype unstated
+bza-85-19-b0b1323990,85-19,classified,building_design_standards,Shipping-container material and overlay standards
+bza-97-19-459bd7f671,97-19,classified,setbacks_yards,Rear-yard setback for garage
+bza-5-20-fc09d791a0,5-20,classified,parking_supply,26 spaces required and zero provided
+bza-7-20-39fc390e6c,7-20,classified,parking|loading,Parking location or amount and loading-zone deficiency
+bza-6-20-21fe579224,6-20,classified,setbacks_yards,Front-yard and garage corner-lot setbacks
+bza-91-19-9b79c42287,91-19,classified,use_spacing_separation,Vehicle-sales spacing waiver
+bza-9-20-68007fc307,9-20,classified,parking_supply,Ten parking spaces deficient
+bza-17-20-4f7a090036,17-20,classified,setbacks_yards,30-foot rear setback required and 15 feet proposed
+bza-11-21-2065af5007,11-21,classified,parking_supply,Four parking spaces deficient; other measurements unrecoverable
+bza-05-21-9b7c537c06,05-21,classified,building_design_standards,Upper-level facade transparency deficiency
+bza-16-21-6706391ca7,16-21,classified,parking_layout,Two vehicle-stacking spaces required
+bza-3-21-cee9bd7f02,3-21,classified,nonconforming_use_or_structure,Re-establish a drive-through accessory use
+bza-22-21-a0cae37c6a,22-21,classified,lot_dimensions,Minimum townhouse width deficiency
+bza-27-21-a56d8905f7,27-21,classified,setbacks_yards|parking_layout,Front setbacks and undersized parallel parking spaces
+bza-28-21-05880fccc0,28-21,unresolved,,Requested dimension absent from extracted minutes
+bza-29-21-cd232a5ef8,29-21,classified,setbacks_yards,20-foot setback required and approximately 10 feet proposed
+bza-36-21-dce8b705cb,36-21,classified,setbacks_yards,Front- and rear-setback deficiencies
+bza-55-21-48ef6cb9d1,55-21,classified,setbacks_yards,30-foot rear setback required and 6 feet 3 inches proposed
+bza-40-21-241d47ced9,40-21,classified,parking_layout|screening_landscaping,Drive aisle walkway wall and landscaped parking setback
+bza-75-21-9044d745bd,75-21,classified,lot_dimensions|screening_landscaping|building_design_standards,Parcel dimensions screening wall and facade standards
+bza-77-21-46450fedf6,77-21,unresolved,,Townhouse dimensional standards absent from extracted minutes
+bza-67-21-1beb30943a,67-21,classified,setbacks_yards|open_recreation_space,Front setback and deficient outdoor play area
+bza-61-21-d38fa68bf4,61-21,classified,setbacks_yards,Garage side setback deficiency
+bza-45-22-ac51806c35,45-22,classified,parking_layout,Parking lot paving drainage and striping
+bza-38-22-38ba18ce36,38-22,classified,height,Accessory-building height limit
+bza-41-22-15dfb8ba06,41-22,unresolved,,Garage-addition dimensional standard absent
+bza-57-22-29d327c7bd,57-22,unresolved,,Accessory-structure dimensional standard absent
+bza-60-22-958ec66e06,60-22,unresolved,,Violated standard absent from extracted minutes
+bza-66-22-a6e0b1dc18,66-22,classified,multiple_buildings,Second principal use or building
+bza-37-22-b17d680e46,37-22,classified,height,Explicit dimensional height variance
+bza-05-23-5a53c91971,05-23,classified,screening_landscaping,Landscaping area and shade trees required
+bza-75-22-e3fe10778e,75-22,classified,signs_billboards,Sign projects excessively into right-of-way
+bza-02-23-09191613e4,02-23,classified,floor_area_bulk,Grower facility exceeds allowed building area
+bza-09-23-2b90c325ff,09-23,classified,parking_layout,Parking area proposed in front yard
+bza-28-23-32856cc88a,28-23,classified,multiple_buildings|setbacks_yards,Multiple principal dwellings and setback deficiencies
+bza-40-23-012c2b298a,40-23,classified,parking_supply,Three parking spaces deficient
+bza-3-24-b561a47236,3-24,classified,multiple_buildings,One-principal-building rule
+bza-7-24-5ad1c5fa16,7-24,classified,setbacks_yards,Front and side-yard setbacks
+bza-22-24-5c0940c4c3,22-24,classified,setbacks_yards|use_spacing_separation,Gas-station setback and filling-station spacing
+bza-23-24-52267c8cf9,23-24,classified,floor_area_bulk,Second floor wider than first-floor envelope
+bza-26-24-8498a9e0ce,26-24,classified,setbacks_yards,Inter-building distance deficiency
+bza-28-24-a82f3aaf57,28-24,classified,setbacks_yards|lot_dimensions|parking_layout,Building setback lot area and walkway width
+bza-30-24-94d9984635,30-24,classified,use_spacing_separation,Outdoor-storage residential separation
+bza-15-24-43336a40f9,15-24,classified,setbacks_yards|use_spacing_separation|screening_landscaping|parking_layout,Setbacks use spacing landscaping and parking design
+bza-44-24-a72911911c,44-24,classified,setbacks_yards,Side-setback deficiencies
+bza-46-24-04961161fb,46-24,unresolved,,Dimension name absent from extracted minutes
+bza-48-24-4a6b166e25,48-24,unresolved,,Dimension name absent from extracted minutes
+bza-53-24-56e59115b1,53-24,classified,multiple_buildings|setbacks_yards,Multiple principal buildings and inter-building distance
+bza-79-24-03fe91ef07,79-24,classified,density_units|screening_landscaping,Occupancy capacity and mesh screening
+bza-83-24-c9e72204a7,83-24,unresolved,,Cabaret dimensional standard absent
+bza-4-25-34d6c95571,4-25,classified,use_spacing_separation,Overconcentration of similar vehicle-service uses
+bza-3-25-36721a5eeb,3-25,classified,multiple_buildings,Maximum number of principal detached buildings
+bza-12-25-67c0867482,12-25,classified,setbacks_yards,Carport side-property-line separation
+bza-16-25-aaaaa5d0aa,16-25,unresolved,,Community-outreach-center dimensional standard absent
+bza-17-25-97935d5a5c,17-25,unresolved,,House-and-garage dimensional standard absent
+bza-26-25-7703d8a4a4,26-25,classified,use_spacing_separation,Vehicle-service use-spacing deficiency
+bza-79-19-51772cbfc9,79-19,classified,administrative_or_community_appeal|floor_area_bulk|parking_supply,Administrative appeal with excessive square footage and deficient parking

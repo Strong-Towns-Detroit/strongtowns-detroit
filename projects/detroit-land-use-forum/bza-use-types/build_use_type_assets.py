@@ -14,6 +14,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 FORUM = HERE.parent
@@ -29,6 +30,16 @@ from exhibit_components import (
     write_svg_bundle,
 )
 from build_atlas import displace_overlapping_points
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    MapMarkerStyle,
+    SvgComponent,
+    bza_hearing_marker_area,
+    bza_hearing_marker_radius,
+    render_graphic_svg,
+    write_graphic_bundle,
+)
 
 DATA = ROOT / "pipelines/zoning/bza_dataset_gemini"
 CLASSIFICATIONS = (
@@ -57,7 +68,6 @@ FAMILY_ORDER = [
     "institutional_or_civic",
     "parking_only",
     "industrial_or_logistics",
-    "uncertain",
     "signage",
     "office_or_medical",
     "recreation_or_open_space",
@@ -67,36 +77,46 @@ FAMILY_ORDER = [
 FAMILY_LABELS = {
     "housing": "Residential projects",
     "cannabis_or_controlled_use": "Cannabis or controlled use",
-    "vehicle_oriented": "Vehicle-oriented",
+    "vehicle_oriented": "Vehicle sales and services",
     "mixed_use": "Mixed-use",
     "retail_or_personal_service": "Retail or personal service",
     "food_or_beverage": "Food or beverage",
     "institutional_or_civic": "Institutional or civic",
     "parking_only": "Parking",
     "industrial_or_logistics": "Industrial or logistics",
-    "uncertain": "Uncertain / insufficient detail",
     "signage": "Signage",
     "office_or_medical": "Office or medical",
     "recreation_or_open_space": "Recreation or open space",
-    "other": "Other",
+    "other": "Other / insufficient detail",
     "religious": "Religious",
 }
-FAMILY_COLORS = dict(zip(FAMILY_ORDER, [
-    "#0c2340", "#c8102e", "#0072ce", "#e8871e", "#008c95",
-    "#a23b72", "#4e7d35", "#6f4c9b", "#2aa7d6", "#73777d",
-    "#b85c1e", "#e56b8a", "#8c7a16", "#7a4e2d", "#76a9dc",
-]))
+FAMILY_COLORS = {
+    "housing": "#0c2340",
+    "cannabis_or_controlled_use": "#c8102e",
+    "vehicle_oriented": "#0072ce",
+    "mixed_use": "#e8871e",
+    "retail_or_personal_service": "#008c95",
+    "food_or_beverage": "#a23b72",
+    "institutional_or_civic": "#4e7d35",
+    "parking_only": "#6f4c9b",
+    "industrial_or_logistics": "#2aa7d6",
+    "signage": "#b85c1e",
+    "office_or_medical": "#e56b8a",
+    "recreation_or_open_space": "#8c7a16",
+    "other": "#73777d",
+    "religious": "#76a9dc",
+}
 
 
 def selected_cases(frame: pd.DataFrame) -> pd.DataFrame:
     """Return one display classification per canonical case history."""
     selected = frame.drop_duplicates("case_history_id").copy()
     selected["display_family"] = selected["project_type_family"]
-    uncertain = (
+    insufficient_detail = (
         selected["confidence"].eq("low")
         | selected["project_type_family"].eq("unclear")
     )
-    selected.loc[uncertain, "display_family"] = "uncertain"
+    selected.loc[insufficient_detail, "display_family"] = "other"
     return selected.copy()
 
 
@@ -115,6 +135,7 @@ def map_image(
     sites: gpd.GeoDataFrame,
     city_geometry,
     roads: gpd.GeoDataFrame,
+    marker_style: MapMarkerStyle = MapMarkerStyle(),
 ) -> tuple[str, int, int]:
     case_family = cases.set_index("case_history_id")["display_family"]
     case_appearances = cases.set_index("case_history_id")["appearance_count"]
@@ -177,7 +198,7 @@ def map_image(
     dissolved = dissolved.join(aggregate)
     points = dissolved.geometry.representative_point()
     appearances = dissolved["appearances"].clip(lower=1, upper=10)
-    marker_areas = 64 * appearances.to_numpy()
+    marker_areas = appearances.map(bza_hearing_marker_area).to_numpy()
 
     fig, ax = plt.subplots(figsize=(10.7, 7.15), dpi=435)
     fig.patch.set_facecolor(CREAM)
@@ -198,12 +219,12 @@ def map_image(
     origin = ax.transData.transform((0.0, 0.0))
     kilometer = ax.transData.transform((1000.0, 0.0))
     pixels_per_unit = np.linalg.norm(kilometer - origin) / 1000.0
-    radii_pixels = np.sqrt(marker_areas / math.pi) * fig.dpi / 72.0
+    radii_pixels = np.sqrt(marker_areas) * fig.dpi / 144.0
     radii = radii_pixels / pixels_per_unit
     placed, _ = displace_overlapping_points(
         points,
         symbol_radii=radii,
-        padding=1.0 / pixels_per_unit,
+        overlap_fraction=marker_style.overlap_fraction,
     )
     for index, ((_, family), _) in enumerate(points.items()):
         ax.scatter(
@@ -212,7 +233,7 @@ def map_image(
             c=FAMILY_COLORS[family],
             edgecolors=CREAM,
             linewidths=0.75,
-            alpha=0.86,
+            alpha=marker_style.opacity,
             zorder=5,
         )
     buffer = io.BytesIO()
@@ -220,22 +241,45 @@ def map_image(
         buffer, format="jpeg", bbox_inches="tight", pad_inches=0,
         facecolor=CREAM, pil_kwargs={"quality": 91, "optimize": True},
     )
+    image_width = Image.open(io.BytesIO(buffer.getvalue())).width
+    radius_per_sqrt_unit = bza_hearing_marker_radius(
+        1,
+        raster_dpi=fig.dpi,
+        raster_width=image_width,
+        embedded_width=1015,
+    )
     plt.close(fig)
     return (
         base64.b64encode(buffer.getvalue()).decode(),
         len(dissolved),
         int(appearances.max()),
+        radius_per_sqrt_unit,
     )
 
 
-def map_svg(
+def map_graphic(
     cases: pd.DataFrame,
     sites: gpd.GeoDataFrame,
     city_geometry,
     roads: gpd.GeoDataFrame,
-) -> str:
-    image, located, maximum_appearances = map_image(
-        cases, sites, city_geometry, roads
+    *,
+    title: str = "Proposed uses in Detroit BZA cases",
+    subtitle: str = (
+        "Cases grouped by the project described in meeting minutes, 2019–2026"
+    ),
+    sources: tuple[str, ...] = (
+        "Repeat hearings are consolidated into one case.",
+        "Proposed-use labels are analytic groupings derived from the "
+        "minutes, independent of Detroit’s zoning-use categories.",
+        "Source: Detroit BZA minutes, 2019–2026; locations linked to City "
+        "assessor parcels. To aid legibility, locations may not represent "
+        "precise addresses.",
+    ),
+    description: str | None = None,
+    marker_style: MapMarkerStyle = MapMarkerStyle(),
+) -> Graphic:
+    image, located, maximum_appearances, radius_per_sqrt_unit = map_image(
+        cases, sites, city_geometry, roads, marker_style=marker_style
     )
     counts = cases["display_family"].value_counts()
     legend = []
@@ -257,19 +301,12 @@ def map_svg(
     mixed_use = int(counts.get("mixed_use", 0))
     residential_or_mixed = housing + mixed_use
     residential_or_mixed_share = residential_or_mixed / len(cases)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100"
-role="img" aria-labelledby="title desc">
-<title id="title">Proposed uses in Detroit BZA cases</title>
-<desc id="desc">A deduplicated map of all {len(cases)} Detroit BZA case histories grouped by the proposed use described in meeting minutes.</desc>
+    visual = f"""
 <style>{forum_css(metric_size=65, note_size=15,
 extra_sans=(".small-legend", ".small-count"),
 extra_rules=f".small-legend{{font-size:11px;fill:{NAVY}}}"
 f".small-count{{font-size:11px;font-weight:700;fill:{NAVY}}}",
 muted=MUTED)}</style>
-<rect class="paper" width="1600" height="1100"/>
-{masthead_svg()}
-{title_block("Proposed uses in Detroit BZA cases",
-"Cases grouped by the project described in meeting minutes, 2019–2026")}
 <image href="data:image/jpeg;base64,{image}" x="48" y="205" width="1015" height="720" preserveAspectRatio="xMidYMid meet"/>
 <text class="metric" x="1120" y="275">{residential_or_mixed_share:.0%}</text>
 <text class="metric-label" x="1123" y="305">OF CASES WERE FOR RESIDENTIAL</text>
@@ -284,12 +321,30 @@ muted=MUTED)}</style>
 <text class="small-count" x="1173" y="462">1</text>
 <text class="section-title" x="1120" y="520">Proposed use</text>
 {''.join(legend)}
-{source_lines([
-"Repeat hearings are consolidated into one case.",
-"Proposed-use labels are analytic groupings derived from the minutes, independent of Detroit’s zoning-use categories.",
-"Source: Detroit BZA minutes, 2019–2026; locations linked to City assessor parcels. To aid legibility, locations may not represent precise addresses.",
-], first_y=1018, line_height=25)}
-</svg>"""
+"""
+    return Graphic(
+        title=title,
+        subtitle=subtitle,
+        visual=SvgComponent(visual, 1600, 780, min_y=180),
+        sources=sources,
+        description=description if description is not None else (
+            f"A deduplicated map of all {len(cases)} Detroit BZA case histories "
+            "grouped by the proposed use described in meeting minutes."
+        ),
+        metadata={
+            "maximum_appearances": maximum_appearances,
+            "effect_size_radius_per_sqrt_unit": radius_per_sqrt_unit,
+        },
+    )
+
+
+def map_svg(
+    cases: pd.DataFrame,
+    sites: gpd.GeoDataFrame,
+    city_geometry,
+    roads: gpd.GeoDataFrame,
+) -> str:
+    return render_graphic_svg(map_graphic(cases, sites, city_geometry, roads))
 
 
 def bar_svg(cases: pd.DataFrame) -> str:
@@ -338,11 +393,10 @@ def run() -> None:
     if len(cases) != cases["case_history_id"].nunique():
         raise ValueError("Use-type cases are not deduplicated")
     OUT.mkdir(parents=True, exist_ok=True)
-    write_svg_bundle(
+    write_graphic_bundle(
         OUT, "detroit-bza-proposed-use-map",
-        "Proposed uses in Detroit BZA cases",
-        map_svg(cases, sites, city, roads),
-        width=1600, height=1100, png_width=3200,
+        map_graphic(cases, sites, city, roads),
+        aspect_ratio=CONFERENCE_LANDSCAPE, png_width=3200,
     )
     write_svg_bundle(
         OUT, "detroit-bza-proposed-use-types",

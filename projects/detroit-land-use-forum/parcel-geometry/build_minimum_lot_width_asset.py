@@ -24,16 +24,19 @@ from build_minimum_lot_size_asset import (
     RED,
 )
 from build_minimum_lot_size_asset import ROADS
-from exhibit_brand import masthead_svg
 from exhibit_components import (
     LegendItem,
     forum_css,
     map_frame,
     metric_block,
-    source_lines,
     swatch_legend,
-    title_block,
-    write_svg_bundle,
+)
+from strongtowns_detroit.graphics import (
+    CONFERENCE_LANDSCAPE,
+    Graphic,
+    SvgComponent,
+    render_graphic_svg,
+    write_graphic_bundle,
 )
 from parcel_exhibit_components import bza_case_stat, is_detroit_parks_taxpayer
 import base64
@@ -121,10 +124,17 @@ def map_image(frame: gpd.GeoDataFrame) -> str:
     return base64.b64encode(buffer.getvalue()).decode()
 
 
-def build_svg(
+def build_graphic(
     frame: gpd.GeoDataFrame,
     width_cases: pd.DataFrame,
-) -> str:
+    *,
+    title: str = "Detroit's 50-foot minimum residential lot width",
+    subtitle: str = (
+        "Recorded R1–R6 frontage compared with the 50-foot minimum lot width"
+    ),
+    sources: tuple[str, ...] | None = None,
+    description: str | None = None,
+) -> Graphic:
     evaluated = frame[frame["evaluated"]]
     below = evaluated[evaluated["below_minimum"]]
     total, affected = len(evaluated), len(below)
@@ -149,19 +159,12 @@ def build_svg(
         ).sum()
     )
     image = map_image(frame)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100"
-role="img" aria-labelledby="title desc">
-<title id="title">Detroit's 50-foot minimum residential lot width</title>
-<desc id="desc">{affected:,} of {total:,} evaluated R1 through R6 parcels have recorded frontage more than one percent below 50 feet. {len(width_cases)} BZA case histories requested residential minimum-lot-width relief.</desc>
+    visual = f"""
 <style>{forum_css(extra_sans=(".bar-label", ".bar-value"),
 extra_serif=(".bza-metric",),
 extra_rules=f".bza-metric{{font-size:31px;font-weight:700}}"
 f".bar-label,.bar-value{{font-size:13px;fill:{NAVY}}}",
 muted=MUTED)}</style>
-<rect class="paper" width="1600" height="1100"/>
-{masthead_svg()}
-{title_block("Detroit's 50-foot minimum residential lot width",
-"Recorded R1–R6 frontage compared with the 50-foot minimum lot width")}
 {map_frame(f"data:image/jpeg;base64,{image}")}
 {swatch_legend([
 LegendItem("Variance or exception required", RED),
@@ -175,11 +178,31 @@ f"{affected:,} of {total:,} evaluated parcels")}
 <text class="note" x="1120" y="429">exception applies, new development cannot</text>
 <text class="note" x="1120" y="454">proceed under this minimum.</text>
 {bza_case_stat(len(width_cases), "lot-width", "residential minimum-lot-width")}
-{source_lines([
-"Classification: below minimum when recorded frontage is under 49.5 ft.; the 1% tolerance avoids false precision around the legal 50-ft. boundary.",
-f"Frontage is a validated proxy, not a universal legal lot-width measurement. Parcel result: {affected:,} below · {meets:,} meet · {unknown:,} not enough data · {parks:,} Parks & Recreation taxpayer · {outside:,} outside R1–R6.",
-])}
-</svg>"""
+"""
+    return Graphic(
+        title=title,
+        subtitle=subtitle,
+        visual=SvgComponent(visual, 1600, 780, min_y=180),
+        sources=sources if sources is not None else (
+            "Classification: below minimum when recorded frontage is under "
+            "49.5 ft.; the 1% tolerance avoids false precision around the "
+            "legal 50-ft. boundary.",
+            "Frontage is a validated proxy, not a universal legal lot-width "
+            f"measurement. Parcel result: {affected:,} below · {meets:,} meet · "
+            f"{unknown:,} not enough data · {parks:,} Parks & Recreation "
+            f"taxpayer · {outside:,} outside R1–R6.",
+        ),
+        description=description if description is not None else (
+            f"{affected:,} of {total:,} evaluated R1 through R6 parcels have "
+            "recorded frontage more than one percent below 50 feet. "
+            f"{len(width_cases)} BZA case histories requested residential "
+            "minimum-lot-width relief."
+        ),
+    )
+
+
+def build_svg(frame: gpd.GeoDataFrame, width_cases: pd.DataFrame) -> str:
+    return render_graphic_svg(build_graphic(frame, width_cases))
 
 
 def run() -> None:
@@ -195,12 +218,11 @@ def run() -> None:
     histories = pd.read_csv(BZA / "case_histories.csv")
     categories = pd.read_csv(BZA / "case_categories.csv")
     width_cases = select_residential_width_cases(histories, categories)
-    svg = build_svg(frame, width_cases)
     OUT.mkdir(parents=True, exist_ok=True)
     stem = "detroit-minimum-lot-width"
-    write_svg_bundle(
-        OUT, stem, "Detroit minimum lot width", svg,
-        width=1600, height=1100, png_width=3200,
+    write_graphic_bundle(
+        OUT, stem, build_graphic(frame, width_cases),
+        aspect_ratio=CONFERENCE_LANDSCAPE, png_width=3200,
     )
     width_cases.to_csv(
         OUT / "minimum-lot-width-bza-cases.csv", index=False

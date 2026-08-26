@@ -7,6 +7,8 @@ __pycache__/
 *.egg
 dist/
 build/
+projects/graphics/editor/node_modules/
+projects/graphics/editor/dist/
 
 # Virtual environments (3 venvs in this repo, ~3GB total)
 .venv/
