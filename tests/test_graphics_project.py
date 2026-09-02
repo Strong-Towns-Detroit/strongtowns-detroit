@@ -2,6 +2,8 @@
 
 from pathlib import Path
 
+import pytest
+
 from projects.graphics import build as BUILD
 from strongtowns_graphics.cli import main as graphics_main
 
@@ -76,6 +78,13 @@ def test_parking_chart_declares_its_data_and_encoding_in_the_graphic_file():
     assert "summarize(" not in source
 
 
+@pytest.mark.skipif(
+    not (
+        ROOT
+        / "projects/detroit-land-use-forum/parking-requirements/output/parking-case-audit.csv"
+    ).is_file(),
+    reason="generated parking audit must be materialized for this integration test",
+)
 def test_parking_chart_frames_the_excess_as_a_zoning_mandate():
     definition = next(
         item

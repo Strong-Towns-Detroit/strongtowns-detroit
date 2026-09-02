@@ -1,4 +1,11 @@
-from build_parking_by_type_asset import build_svg, classified_cases, summarize
+import pytest
+
+from build_parking_by_type_asset import PARKING_AUDIT, build_svg, classified_cases, summarize
+
+pytestmark = pytest.mark.skipif(
+    not PARKING_AUDIT.is_file(),
+    reason="generated parking audit must be materialized for these integration tests",
+)
 
 
 def test_all_parking_histories_have_one_type():
