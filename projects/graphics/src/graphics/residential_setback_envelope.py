@@ -23,7 +23,7 @@ from strongtowns_graphics import GraphicInput, graphic_definition, map_on_mobile
         GraphicInput(
             "classification",
             "detroit.residential-setback-envelope",
-            "classification.gpkg",
+            "classification.parquet",
         ),
         GraphicInput("histories", "detroit.bza.gemini.raw", "raw/case_histories.csv"),
         GraphicInput("categories", "detroit.bza.gemini.raw", "raw/case_categories.csv"),
@@ -31,7 +31,7 @@ from strongtowns_graphics import GraphicInput, graphic_definition, map_on_mobile
     ),
 )
 def build(context):
-    frame = gpd.read_file(context.input("classification"))
+    frame = gpd.read_parquet(context.input("classification"))
     histories = pd.read_csv(context.input("histories"))
     categories = pd.read_csv(context.input("categories"))
     cases = select_house_setback_cases(histories, categories)

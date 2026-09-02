@@ -50,6 +50,22 @@ def test_every_canonical_graphic_declares_external_inputs():
     )
 
 
+def test_migrated_graphics_use_promoted_data_contracts():
+    definitions = {item.name: item for item in BUILD.SYSTEM.definitions()}
+    campus = definitions["campus_martius_accessibility"]
+    assert {
+        (item.dataset_id, item.artifact) for item in campus.inputs
+    } >= {
+        ("detroit.spirit-plaza.accessibility", "display_isochrones.geojson"),
+        ("detroit.spirit-plaza.accessibility", "road_context.geojson"),
+    }
+    setback = definitions["residential_setback_envelope"]
+    assert (
+        "detroit.residential-setback-envelope",
+        "classification.parquet",
+    ) in {(item.dataset_id, item.artifact) for item in setback.inputs}
+
+
 def test_each_graphic_definition_owns_its_editorial_copy():
     required_fields = ("title=", "subtitle=", "sources=", "description=")
     for definition in GRAPHICS_ROOT.glob("*.py"):

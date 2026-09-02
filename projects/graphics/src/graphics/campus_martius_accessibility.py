@@ -31,7 +31,9 @@ from strongtowns_graphics import (
             "detroit.spirit-plaza.accessibility",
             "display_isochrones.geojson",
         ),
-        GraphicInput("roads", "detroit.osm.road-context", "road_context.geojson"),
+        GraphicInput(
+            "roads", "detroit.spirit-plaza.accessibility", "road_context.geojson"
+        ),
         GraphicInput("boundary", "detroit.osm.basemap.raw", "detroit_boundary.geojson"),
     ),
 )

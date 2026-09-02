@@ -2,6 +2,11 @@
   "lock_version": "1.0.0",
   "assets": [
     {
+      "dataset_id": "detroit.assessments.raw",
+      "snapshot_id": "64fa26ac-97fb-48e9-ba8a-823b4f071c1b",
+      "manifest_sha256": "8b01d3980d399107e48bffde4c8ac87dd9e6489fbad4a375dd3f1c1045011264"
+    },
+    {
       "dataset_id": "detroit.base-units.addresses.raw",
       "snapshot_id": "019738c9-64bf-4bcc-903a-a6926f18f914",
       "manifest_sha256": "5dfaa6ad0b3ac355d7a15c569e2d519c719443c6a81ec603d4255f8564157cb6"
@@ -27,6 +32,16 @@
       "manifest_sha256": "33fa00c79eb4328d5253ea681dce1ebf8a69a8e9241c0f226f279e81bf91299c"
     },
     {
+      "dataset_id": "detroit.bza.parking-requirements",
+      "snapshot_id": "5fd60278-8f54-45a6-9e42-f548fc9f1c2b",
+      "manifest_sha256": "72e7ab12ed928d4329598f16439e4409e2d643ab85b35bd69e1ce503a0840735"
+    },
+    {
+      "dataset_id": "detroit.lvt-estimator-2023.raw",
+      "snapshot_id": "66e2aa42-c4f8-4697-9a7d-eafd168bbde5",
+      "manifest_sha256": "3e92ce55ee6da9a5f7b21a897f5b710f6218769bfd6f3359c5432e1de5274244"
+    },
+    {
       "dataset_id": "detroit.municode.chapter-50.raw",
       "snapshot_id": "3c191d59-7229-4bbe-9818-70641501075a",
       "manifest_sha256": "f6685fb0c077cc98dd7e7a549f135f6fbcc8a9f0583c1235211796b06cf6153f"
@@ -37,6 +52,11 @@
       "manifest_sha256": "5e8a8622bd5eaa8020378d10f5036b96fd6f0b0d087647768bc079f48e8152af"
     },
     {
+      "dataset_id": "detroit.parcels",
+      "snapshot_id": "7f02590b-e02f-44f3-ab96-64ce21c38634",
+      "manifest_sha256": "b053d08b627d3166a4a47bd748c4481c22f8b65ebabf2e8e313f5e83ce0c82bf"
+    },
+    {
       "dataset_id": "detroit.parcels.attributes.raw",
       "snapshot_id": "9065dcec-aa54-4a7e-b718-c351a50e4aa5",
       "manifest_sha256": "4377588fa161f1f181aefb225d54cf3cabebcfcfc10d3a7f1abce7da9d28dc80"
@@ -45,6 +65,16 @@
       "dataset_id": "detroit.parcels.raw",
       "snapshot_id": "63af4c6b-57e1-4417-9a86-3a100fc9a0e9",
       "manifest_sha256": "9d6b231b1c30f8f1346223a96c208209f0f1fd0d4c3b209472ee8c82a354c53e"
+    },
+    {
+      "dataset_id": "detroit.residential-setback-envelope",
+      "snapshot_id": "1bcc24c8-867a-4f41-aa99-74c65c7a6dc3",
+      "manifest_sha256": "af7ec871589cec8ff04c5069eacb481c77918681a37c9ea8a0eb259d8eaead4a"
+    },
+    {
+      "dataset_id": "detroit.spirit-plaza.accessibility",
+      "snapshot_id": "ac7dace7-2bb7-4f74-82ab-7c589e029380",
+      "manifest_sha256": "da62a657e57845e5e88626a84a09d5c90073c3c5b1314afc7da2c1f2d1fc62cb"
     },
     {
       "dataset_id": "detroit.spirit-plaza.traveltime.raw",

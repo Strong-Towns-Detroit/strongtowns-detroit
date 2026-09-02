@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "strongtowns-detroit"
-version = "0.2.0"
+version = "0.3.0"
 requires-python = ">=3.12"
 dependencies = [
     "strongtowns-graphics @ git+https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git@56cfd0b94d3191e88fec235bef5d47faebdebd22",
-    "strongtowns-data @ git+https://github.com/Strong-Towns-Detroit/strongtowns-data.git@1696a7ea12adf65d1acd0ac8a2558c048c9fe904",
+    "strongtowns-data @ git+https://github.com/Strong-Towns-Detroit/strongtowns-data.git@37a742d480eefed9b6d17c848002cce8cef80882",
     "osmnx",
     "geopandas",
     "networkx",
