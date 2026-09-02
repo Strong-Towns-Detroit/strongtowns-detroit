@@ -11,9 +11,10 @@ PARCEL_DIR = FORUM / "parcel-geometry"
 sys.path.insert(0, str(PARCEL_DIR))
 
 from build_minimum_lot_size_asset import (  # noqa: E402
-    BZA, PARCELS, build_graphic, classify_lot_area, select_residential_area_cases,
+    build_graphic, classify_lot_area, select_residential_area_cases,
 )
 from strongtowns_graphics import (
+    GraphicInput,
     MobileMapInset,
     MobileMapPocket,
     graphic_definition,
@@ -21,15 +22,22 @@ from strongtowns_graphics import (
 )
 
 
-@graphic_definition("minimum_lot_area")
-def build():
-    frame = classify_lot_area(gpd.read_file(
-        PARCELS,
+@graphic_definition(
+    "minimum_lot_area",
+    inputs=(
+        GraphicInput("parcels", "detroit.parcels", "accepted.parquet"),
+        GraphicInput("histories", "detroit.bza.gemini.raw", "raw/case_histories.csv"),
+        GraphicInput("categories", "detroit.bza.gemini.raw", "raw/case_categories.csv"),
+    ),
+)
+def build(context):
+    frame = classify_lot_area(gpd.read_parquet(
+        context.input("parcels"),
         columns=["parcel_id", "zoning_district", "total_square_footage",
                  "taxpayer_1", "taxpayer_2", "geometry"],
     ))
-    histories = pd.read_csv(BZA / "case_histories.csv")
-    categories = pd.read_csv(BZA / "case_categories.csv")
+    histories = pd.read_csv(context.input("histories"))
+    categories = pd.read_csv(context.input("categories"))
     cases = select_residential_area_cases(histories, categories)
     evaluated = frame[frame["evaluated"]]
     affected = int(evaluated["below_minimum"].sum())

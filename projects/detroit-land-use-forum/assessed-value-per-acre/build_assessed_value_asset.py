@@ -101,13 +101,15 @@ def concentration(frame: gpd.GeoDataFrame, land_share: float = 0.10) -> float:
     )
 
 
-def map_image(frame: gpd.GeoDataFrame) -> str:
+def map_image(frame: gpd.GeoDataFrame, roads_path: Path = ROADS) -> str:
     fig, ax = plt.subplots(figsize=(10.8, 7.0), dpi=435)
     fig.patch.set_facecolor(CREAM)
     ax.set_facecolor(CREAM)
     frame.plot(ax=ax, color=frame["map_color"], edgecolor="none")
-    roads = gpd.read_file(ROADS).to_crs(frame.crs)
-    roads[roads["road_class"].isin(["major", "arterial"])].plot(
+    roads = gpd.read_file(roads_path).to_crs(frame.crs)
+    if "road_class" in roads:
+        roads = roads[roads["road_class"].isin(["major", "arterial"])]
+    roads.plot(
         ax=ax, color=CREAM, linewidth=0.25, alpha=0.56
     )
     ax.set_axis_off()
@@ -129,6 +131,7 @@ def map_image(frame: gpd.GeoDataFrame) -> str:
 def build_graphic(
     frame: gpd.GeoDataFrame,
     *,
+    roads_path: Path = ROADS,
     title: str = "Detroit's assessed property value per acre",
     subtitle: str = (
         "Total assessed land and improvement value divided by recorded parcel area"
@@ -141,7 +144,7 @@ def build_graphic(
     unknown = int((~frame["recorded"]).sum())
     share = concentration(frame)
     median_per_acre = float(recorded["assessed_value_per_acre"].median())
-    image = map_image(frame)
+    image = map_image(frame, roads_path)
     legend = [
         LegendItem("No recorded value / $0", NO_VALUE),
         *[LegendItem(label, color) for label, _, _, color in BANDS],

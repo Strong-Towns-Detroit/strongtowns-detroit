@@ -23,12 +23,16 @@ ROADS = (
 )
 
 
-@lru_cache(maxsize=1)
-def load_detroit_basemap() -> WebMercatorBasemap:
+@lru_cache(maxsize=8)
+def load_detroit_basemap(
+    boundary_path: Path = BOUNDARY,
+    roads_path: Path = ROADS,
+    water_path: Path = WATER,
+) -> WebMercatorBasemap:
     """Load the canonical silhouette, full OSM roads, and OSM water mask."""
-    boundary = gpd.read_file(BOUNDARY).to_crs("EPSG:3857")
-    roads = gpd.read_file(ROADS).to_crs("EPSG:3857")
-    water = gpd.read_file(WATER).to_crs("EPSG:3857")
+    boundary = gpd.read_file(boundary_path).to_crs("EPSG:3857")
+    roads = gpd.read_file(roads_path).to_crs("EPSG:3857")
+    water = gpd.read_file(water_path).to_crs("EPSG:3857")
     water = water[water.geom_type.isin(["Polygon", "MultiPolygon"])].copy()
     land_geometry = boundary.geometry.iloc[0]
     water = gpd.clip(water, land_geometry)

@@ -14,13 +14,12 @@ sys.path.insert(0, str(SOURCE_DIR))
 sys.path.insert(0, str(GRAPHICS))
 
 from build_use_type_assets import (  # noqa: E402
-    CLASSIFICATIONS,
     FAMILY_COLORS,
-    SITES,
     selected_cases,
 )
 from basemap import load_detroit_basemap  # noqa: E402
 from strongtowns_graphics import (
+    GraphicInput,
     LegendOrders,
     MapMarkerStyle,
     MobileMapInset,
@@ -30,10 +29,23 @@ from strongtowns_graphics import (
 )
 
 
-@graphic_definition("bza_proposed_use_map")
-def build():
-    cases = selected_cases(pd.read_csv(CLASSIFICATIONS))
-    sites = gpd.read_file(SITES).to_crs("EPSG:3857")
+@graphic_definition(
+    "bza_proposed_use_map",
+    inputs=(
+        GraphicInput(
+            "classifications",
+            "detroit.bza.gemini.raw",
+            "raw/project_type_enrichment/case_histories_with_project_types.csv",
+        ),
+        GraphicInput("sites", "detroit.bza.gemini.raw", "raw/map_sites.gpkg"),
+        GraphicInput("boundary", "detroit.osm.basemap.raw", "detroit_boundary.geojson"),
+        GraphicInput("water", "detroit.osm.basemap.raw", "detroit_water.geojson"),
+        GraphicInput("roads", "detroit.base-units.streets.raw", "raw.geojson"),
+    ),
+)
+def build(context):
+    cases = selected_cases(pd.read_csv(context.input("classifications")))
+    sites = gpd.read_file(context.input("sites")).to_crs("EPSG:3857")
     categories = {
         key: (label, FAMILY_COLORS[key])
         for key, label in (
@@ -82,7 +94,9 @@ def build():
 
     graphic = categorical_proportional_symbol_map(
         pl.DataFrame(records),
-        basemap=load_detroit_basemap(),
+        basemap=load_detroit_basemap(
+            context.input("boundary"), context.input("roads"), context.input("water")
+        ),
         title="Over one quarter of Detroit's BZA cases involve residential projects",
         subtitle=(
             "Cases grouped by the project described in meeting minutes, 2019–2026"

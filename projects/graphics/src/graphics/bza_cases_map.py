@@ -15,12 +15,12 @@ sys.path.insert(0, str(GRAPHICS))
 
 from build_atlas import (  # noqa: E402
     CATEGORY_COLOR_MAP,
-    DATA,
     MUTED,
     primary_relief_categories,
 )
 from basemap import load_detroit_basemap  # noqa: E402
 from strongtowns_graphics import (
+    GraphicInput,
     LegendOrders,
     MapMarkerStyle,
     categorical_proportional_symbol_map,
@@ -28,11 +28,21 @@ from strongtowns_graphics import (
 )
 
 
-@graphic_definition("bza_cases_map")
-def build():
-    applications = pd.read_csv(DATA / "atlas_applications.csv")
-    histories = pd.read_csv(DATA / "case_histories.csv")
-    sites = gpd.read_file(DATA / "map_sites.gpkg").to_crs("EPSG:3857")
+@graphic_definition(
+    "bza_cases_map",
+    inputs=(
+        GraphicInput("applications", "detroit.bza.gemini.raw", "raw/atlas_applications.csv"),
+        GraphicInput("histories", "detroit.bza.gemini.raw", "raw/case_histories.csv"),
+        GraphicInput("sites", "detroit.bza.gemini.raw", "raw/map_sites.gpkg"),
+        GraphicInput("boundary", "detroit.osm.basemap.raw", "detroit_boundary.geojson"),
+        GraphicInput("water", "detroit.osm.basemap.raw", "detroit_water.geojson"),
+        GraphicInput("roads", "detroit.base-units.streets.raw", "raw.geojson"),
+    ),
+)
+def build(context):
+    applications = pd.read_csv(context.input("applications"))
+    histories = pd.read_csv(context.input("histories"))
+    sites = gpd.read_file(context.input("sites")).to_crs("EPSG:3857")
     primary = primary_relief_categories(applications)
     categories = {
         key: (label, CATEGORY_COLOR_MAP[key])
@@ -86,7 +96,9 @@ def build():
 
     graphic = categorical_proportional_symbol_map(
         pl.DataFrame(records),
-        basemap=load_detroit_basemap(),
+        basemap=load_detroit_basemap(
+            context.input("boundary"), context.input("roads"), context.input("water")
+        ),
         title="Detroit Board of Zoning Appeals cases by relief requested",
         subtitle="Cases by primary request recorded in meeting minutes, 2019–2026",
         category_legend_heading="Type of request",

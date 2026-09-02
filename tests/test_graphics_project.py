@@ -5,6 +5,7 @@ from pathlib import Path
 import pytest
 
 from projects.graphics import build as BUILD
+from strongtowns_graphics import GraphicBuildContext
 from strongtowns_graphics.cli import main as graphics_main
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +38,16 @@ def test_discovery_identity_comes_from_library_registration_not_paths():
         path.stem for path in GRAPHICS_ROOT.glob("*.py")
     }
     assert all(item.module is not None for item in definitions)
+
+
+def test_every_canonical_graphic_declares_external_inputs():
+    definitions = BUILD.SYSTEM.definitions()
+
+    assert all(item.inputs for item in definitions)
+    assert all(
+        len({requirement.alias for requirement in item.inputs}) == len(item.inputs)
+        for item in definitions
+    )
 
 
 def test_each_graphic_definition_owns_its_editorial_copy():
@@ -91,7 +102,13 @@ def test_parking_chart_frames_the_excess_as_a_zoning_mandate():
         for item in BUILD.SYSTEM.definitions()
         if item.name == "parking_gaps_by_project_type"
     )
-    graphic = definition.builder()["parking-gaps-by-project-type"]
+    audit = (
+        ROOT
+        / "projects/detroit-land-use-forum/parking-requirements/output/parking-case-audit.csv"
+    )
+    graphic = definition.builder(
+        GraphicBuildContext({"parking_audit": audit})
+    )["parking-gaps-by-project-type"]
 
     assert graphic.title == (
         "Detroit's zoning code mandates far more parking than new developments propose"

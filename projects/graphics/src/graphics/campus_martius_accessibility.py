@@ -12,25 +12,34 @@ SOURCE_DIR = FORUM / "spirit-plaza-accessibility"
 sys.path.insert(0, str(SOURCE_DIR))
 
 from export_mode_assets import (  # noqa: E402
-    DEFAULT_BOUNDARY,
-    DEFAULT_DATA,
-    DEFAULT_ROADS,
     COLORS,
     _project,
     build_graphic,
 )
 from strongtowns_graphics import (
+    GraphicInput,
     graphic_definition,
     wide_map_with_legend_on_mobile,
 )
 
 
-@graphic_definition("campus_martius_accessibility")
-def build():
+@graphic_definition(
+    "campus_martius_accessibility",
+    inputs=(
+        GraphicInput(
+            "travel_times",
+            "detroit.spirit-plaza.accessibility",
+            "display_isochrones.geojson",
+        ),
+        GraphicInput("roads", "detroit.osm.road-context", "road_context.geojson"),
+        GraphicInput("boundary", "detroit.osm.basemap.raw", "detroit_boundary.geojson"),
+    ),
+)
+def build(context):
     spec = json.loads((SOURCE_DIR / "spec.json").read_text())
-    data = gpd.read_file(DEFAULT_DATA).to_crs("EPSG:4326")
-    roads = gpd.read_file(DEFAULT_ROADS).to_crs("EPSG:4326")
-    boundary = gpd.read_file(DEFAULT_BOUNDARY).to_crs("EPSG:4326")
+    data = gpd.read_file(context.input("travel_times")).to_crs("EPSG:4326")
+    roads = gpd.read_file(context.input("roads")).to_crs("EPSG:4326")
+    boundary = gpd.read_file(context.input("boundary")).to_crs("EPSG:4326")
     city = _project(unary_union(boundary.geometry))
     data.geometry = data.geometry.map(_project)
     roads.geometry = roads.geometry.map(_project)

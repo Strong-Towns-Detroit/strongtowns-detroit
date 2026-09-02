@@ -52,10 +52,16 @@ The build engine and command ship with the installed library. From anywhere in
 this repository, build every discovered definition with one command:
 
 ```bash
-strongtowns-graphics build
+strongtowns assets check
+strongtowns assets build
 ```
 
-The engine finds `projects/graphics`, recursively discovers every builder
+The umbrella command verifies every definition's declared artifacts against
+`strongtowns-data.lock.json` before invoking the library build engine. It never
+fetches, builds, or promotes data. When an input is unavailable it stops before
+rendering and prints the separate data preparation steps.
+
+The engine then finds `projects/graphics`, recursively discovers every builder
 registered through the library, and writes the requested publishing outputs
 and manifests. Definition identity comes from the registration, never from its
 directory or filename. There is no central registry or build file to update.
@@ -63,16 +69,21 @@ directory or filename. There is no central registry or build file to update.
 List the definitions that the engine found:
 
 ```bash
-strongtowns-graphics list
+strongtowns assets list
 ```
 
 Build one definition or publishing target:
 
 ```bash
-strongtowns-graphics build parking_gaps_by_project_type
-strongtowns-graphics build --target instagram
-strongtowns-graphics build bza_cases_map --target instagram_story
+strongtowns assets build assessed_value_per_acre
+strongtowns assets build --target instagram
+strongtowns assets build bza_cases_map --target instagram_story
 ```
+
+`strongtowns-graphics list` and `strongtowns-graphics build` remain available
+for library development and self-contained definitions. Detroit's definitions
+use locked external inputs and therefore use the project-aware `strongtowns
+assets` workflow.
 
 The reusable Python API is also available from the installed library:
 

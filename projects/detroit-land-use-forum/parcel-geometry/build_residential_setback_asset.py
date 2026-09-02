@@ -344,7 +344,7 @@ def select_house_setback_cases(
     ].copy()
 
 
-def map_image(frame: gpd.GeoDataFrame) -> str:
+def map_image(frame: gpd.GeoDataFrame, roads_path: Path = ROADS) -> str:
     other = frame[~frame["in_scope"]]
     unknown = frame[frame["in_scope"] & ~frame["evaluated"]]
     within = frame[frame["evaluated"] & ~frame["crosses_envelope"]]
@@ -356,8 +356,10 @@ def map_image(frame: gpd.GeoDataFrame) -> str:
     unknown.plot(ax=ax, color=OUTSIDE, edgecolor="none")
     within.plot(ax=ax, color=NAVY, edgecolor="none")
     crosses.plot(ax=ax, color=RED, edgecolor="none")
-    roads = gpd.read_file(ROADS).to_crs(frame.crs)
-    roads[roads["road_class"].isin(["major", "arterial"])].plot(
+    roads = gpd.read_file(roads_path).to_crs(frame.crs)
+    if "road_class" in roads:
+        roads = roads[roads["road_class"].isin(["major", "arterial"])]
+    roads.plot(
         ax=ax, color=NAVY, linewidth=0.22, alpha=0.36
     )
     ax.set_axis_off()
@@ -406,6 +408,7 @@ def build_graphic(
     cases: pd.DataFrame,
     categories: pd.DataFrame,
     *,
+    roads_path: Path = ROADS,
     title: str = "Detroit’s single- and two-family setback envelope",
     subtitle: str = (
         "Existing homes compared with Detroit’s required front, rear, and side yards"
@@ -423,7 +426,7 @@ def build_graphic(
     candidate = int(
         (frame["in_scope"] & frame["candidate_multi_parcel_site"]).sum()
     )
-    image = map_image(frame)
+    image = map_image(frame, roads_path)
     visual = f"""
 <style>{forum_css(title_size=45,
 extra_sans=(".bar-label", ".bar-value"),

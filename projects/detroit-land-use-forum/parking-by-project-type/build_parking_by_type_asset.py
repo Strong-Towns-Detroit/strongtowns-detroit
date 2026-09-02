@@ -90,8 +90,8 @@ PROJECT_TYPES: dict[str, list[str]] = {
 }
 
 
-def classified_cases() -> pd.DataFrame:
-    cases = pd.read_csv(PARKING_AUDIT, dtype=str).fillna("")
+def classified_cases(path: Path = PARKING_AUDIT) -> pd.DataFrame:
+    cases = pd.read_csv(path, dtype=str).fillna("")
     mapping = {
         case_id: project_type
         for project_type, case_ids in PROJECT_TYPES.items()

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import sys
 from functools import lru_cache
 from pathlib import Path
@@ -20,6 +19,7 @@ sys.path.insert(0, str(GRAPHICS))
 from basemap import load_detroit_basemap  # noqa: E402
 from strongtowns_graphics import (  # noqa: E402
     ContinuousChoroplethScale,
+    GraphicInput,
     graphic_definition,
     parcel_choropleth_map,
 )
@@ -29,8 +29,6 @@ from strongtowns_data.pipelines.land_values import (  # noqa: E402
     apply_land_value_smoothing,
 )
 
-PARCELS = ROOT / "pipelines" / "parcel-data" / "parcels_with_compliance.gpkg"
-DATASETS = ROOT / "data" / "datasets"
 NO_DATA = "#e4dfd6"
 
 VALUE_SCALE = ContinuousChoroplethScale(
@@ -62,27 +60,13 @@ CHANGE_SCALE = ContinuousChoroplethScale(
 )
 
 
-def _local_artifact(dataset: str, filename: str) -> Path:
-    """Use a promoted snapshot, or a sole local staging preview."""
-    root = DATASETS / dataset
-    pointer = root / "PROMOTED.json"
-    if pointer.is_file():
-        manifest = root / json.loads(pointer.read_text())["manifest"]
-        artifact = manifest.parent / filename
-        if artifact.is_file():
-            return artifact
-    candidates = sorted((root / ".staging").glob(f"*/{filename}"))
-    if len(candidates) != 1:
-        raise FileNotFoundError(
-            f"expected one promoted or staged {dataset}/{filename}; "
-            f"found {len(candidates)}"
-        )
-    return candidates[0]
-
-
-@lru_cache(maxsize=1)
-def comparison_frame() -> gpd.GeoDataFrame:
-    parcels = gpd.read_file(PARCELS, columns=["parcel_id", "geometry"])
+@lru_cache(maxsize=4)
+def comparison_frame(
+    parcels_path: Path,
+    current_source: Path,
+    history_source: Path,
+) -> gpd.GeoDataFrame:
+    parcels = gpd.read_file(parcels_path, columns=["parcel_id", "geometry"])
     parcels = parcels.drop_duplicates("parcel_id").to_crs("EPSG:3857")
     centroids = parcels.geometry.centroid
     coordinates = pl.DataFrame({
@@ -91,7 +75,6 @@ def comparison_frame() -> gpd.GeoDataFrame:
         "y": centroids.y,
     })
 
-    current_source = _local_artifact("detroit-assessments-source", "raw.geojson")
     current_rows = pyogrio.read_dataframe(
         current_source,
         read_geometry=False,
@@ -109,9 +92,6 @@ def comparison_frame() -> gpd.GeoDataFrame:
         config=LandValueSmoothing(mode=SmoothingMode.ISOLATED_SPIKES),
     ).select("parcel_id", "parcel_area_sqft", "selected_land_value")
 
-    history_source = _local_artifact(
-        "detroit-lvt-estimator-2023-source", "raw.csv"
-    )
     history = pl.read_csv(
         history_source,
         schema_overrides={"parcel_num": pl.String},
@@ -156,9 +136,23 @@ def comparison_frame() -> gpd.GeoDataFrame:
     return result
 
 
-@graphic_definition("parcel_land_value_change")
-def build():
-    frame = comparison_frame()
+@graphic_definition(
+    "parcel_land_value_change",
+    inputs=(
+        GraphicInput("parcels", "detroit.parcels.raw", "raw.geojson"),
+        GraphicInput("assessments", "detroit.assessments.raw", "raw.geojson"),
+        GraphicInput("history", "detroit.lvt-estimator-2023.raw", "raw.csv"),
+        GraphicInput("boundary", "detroit.osm.basemap.raw", "detroit_boundary.geojson"),
+        GraphicInput("water", "detroit.osm.basemap.raw", "detroit_water.geojson"),
+        GraphicInput("roads", "detroit.base-units.streets.raw", "raw.geojson"),
+    ),
+)
+def build(context):
+    frame = comparison_frame(
+        context.input("parcels"),
+        context.input("assessments"),
+        context.input("history"),
+    )
     comparable = int(frame["land_value_per_acre_2023"].notna().sum())
     sources = (
         "Sources: City of Detroit 2023 residential LVT estimator, 2026 tentative "
@@ -167,7 +161,9 @@ def build():
     common_subtitle = (
         f"Assessor-recorded land value per acre · same {comparable:,} residential parcels"
     )
-    basemap = load_detroit_basemap()
+    basemap = load_detroit_basemap(
+        context.input("boundary"), context.input("roads"), context.input("water")
+    )
     map_2023 = parcel_choropleth_map(
         frame,
         value_column="land_value_per_acre_2023",

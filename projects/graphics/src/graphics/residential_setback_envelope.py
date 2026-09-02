@@ -4,31 +4,36 @@ import sys
 from pathlib import Path
 
 import pandas as pd
+import geopandas as gpd
 
 FORUM = Path(__file__).resolve().parents[3] / "detroit-land-use-forum"
 PARCEL_DIR = FORUM / "parcel-geometry"
 sys.path.insert(0, str(PARCEL_DIR))
 
 from build_residential_setback_asset import (  # noqa: E402
-    BZA,
-    MERGED_RESULTS,
     build_graphic,
-    load_and_classify,
-    load_merged_classification,
     select_house_setback_cases,
 )
-from strongtowns_graphics import graphic_definition, map_on_mobile
+from strongtowns_graphics import GraphicInput, graphic_definition, map_on_mobile
 
 
-@graphic_definition("residential_setback_envelope")
-def build():
-    frame = (
-        load_merged_classification()
-        if MERGED_RESULTS.exists()
-        else load_and_classify(building_types=("single_family", "two_family"))
-    )
-    histories = pd.read_csv(BZA / "case_histories.csv")
-    categories = pd.read_csv(BZA / "case_categories.csv")
+@graphic_definition(
+    "residential_setback_envelope",
+    inputs=(
+        GraphicInput(
+            "classification",
+            "detroit.residential-setback-envelope",
+            "classification.gpkg",
+        ),
+        GraphicInput("histories", "detroit.bza.gemini.raw", "raw/case_histories.csv"),
+        GraphicInput("categories", "detroit.bza.gemini.raw", "raw/case_categories.csv"),
+        GraphicInput("roads", "detroit.base-units.streets.raw", "raw.geojson"),
+    ),
+)
+def build(context):
+    frame = gpd.read_file(context.input("classification"))
+    histories = pd.read_csv(context.input("histories"))
+    categories = pd.read_csv(context.input("categories"))
     cases = select_house_setback_cases(histories, categories)
     evaluated = frame[frame["evaluated"]]
     affected = int(evaluated["crosses_envelope"].sum())
@@ -43,6 +48,7 @@ def build():
         frame,
         cases,
         categories,
+        roads_path=context.input("roads"),
         title="Detroit’s single- and two-family setback envelope",
         subtitle=(
             "Existing homes compared with Detroit’s required front, rear, "

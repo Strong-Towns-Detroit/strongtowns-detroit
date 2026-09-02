@@ -18,6 +18,7 @@ from strongtowns_graphics import (  # noqa: E402
     BarPattern,
     BarSeries,
     ChartAlignment,
+    GraphicInput,
     NumericAxis,
     bar_chart,
     graphic_definition,
@@ -33,9 +34,18 @@ CATEGORY_ORDER = (
 )
 
 
-@graphic_definition("parking_gaps_by_project_type")
-def build():
-    source = classified_cases()
+@graphic_definition(
+    "parking_gaps_by_project_type",
+    inputs=(
+        GraphicInput(
+            "parking_audit",
+            "detroit.bza.parking-requirements",
+            "parking-case-audit.csv",
+        ),
+    ),
+)
+def build(context):
+    source = classified_cases(context.input("parking_audit"))
     cases = pl.DataFrame(
         {
             "project_type": source["project_type"].tolist(),

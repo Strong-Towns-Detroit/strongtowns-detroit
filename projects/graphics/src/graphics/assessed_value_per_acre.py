@@ -9,12 +9,12 @@ FORUM = Path(__file__).resolve().parents[3] / "detroit-land-use-forum"
 sys.path.insert(0, str(FORUM / "assessed-value-per-acre"))
 
 from build_assessed_value_asset import (  # noqa: E402
-    PARCELS,
     build_graphic,
     classify,
     concentration,
 )
 from strongtowns_graphics import (
+    GraphicInput,
     MobileMapInset,
     MobileMapPocket,
     graphic_definition,
@@ -22,18 +22,26 @@ from strongtowns_graphics import (
 )
 
 
-@graphic_definition("assessed_value_per_acre")
-def build():
-    frame = classify(gpd.read_file(
-        PARCELS,
-        columns=["parcel_id", "assessed_value", "total_square_footage", "geometry"],
-    ))
+@graphic_definition(
+    "assessed_value_per_acre",
+    inputs=(
+        GraphicInput("parcels", "detroit.parcels.raw", "raw.geojson"),
+        GraphicInput("roads", "detroit.base-units.streets.raw", "raw.geojson"),
+    ),
+)
+def build(context):
+    frame = gpd.read_file(
+        context.input("parcels"),
+        columns=["parcel_id", "amt_assessed_value", "total_square_footage", "geometry"],
+    ).rename(columns={"amt_assessed_value": "assessed_value"})
+    frame = classify(frame)
     recorded = frame[frame["recorded"]]
     zero = int(recorded["assessed"].eq(0).sum())
     unknown = int((~frame["recorded"]).sum())
     share = concentration(frame)
     graphic = build_graphic(
         frame,
+        roads_path=context.input("roads"),
         title="Detroit's assessed property value per acre",
         subtitle=(
             "Total assessed land and improvement value divided by recorded "
