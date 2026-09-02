@@ -1,2 +1,0 @@
-case_history_id,occurrence_id,site_key,site_id,number,street,source_location,street_nodir,match_status,parcel_match_count,parcel_id_base,parcel_key,current_parcel_id,recovery_method
-bza-56-21-13962dbe62,2021-09-21:56-21:1,2741:HARRISON,site-6a5f3b5262a9,2741,HARRISON,2733 Harrison (2741 Harrison) between Pine and Spruce in a R2 Zone (Two-Family Residential District) -City Council District #6,HARRISON,unmatched,0,08006919.,08006919,08006674.010,base_units_address_point_within_current_parcel

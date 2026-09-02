@@ -12,7 +12,7 @@ Usage:
 import argparse
 from pathlib import Path
 
-from strongtowns_detroit.legislative.fetcher import fetch_district_data
+from strongtowns_data.legislative.fetcher import fetch_district_data
 
 
 def main():

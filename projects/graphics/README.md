@@ -77,7 +77,7 @@ strongtowns-graphics build bza_cases_map --target instagram_story
 The reusable Python API is also available from the installed library:
 
 ```python
-from strongtowns_detroit.graphics import GraphicBuildSystem, GraphicFormat
+from strongtowns_graphics import GraphicBuildSystem, GraphicFormat
 
 build_system = GraphicBuildSystem.find()
 build_system.build()
@@ -92,7 +92,7 @@ projects/graphics/src/graphics/my_graphic.py
 Register a builder that returns `dict[str, Graphic]`:
 
 ```python
-from strongtowns_detroit.graphics import Graphic, graphic_definition
+from strongtowns_graphics import Graphic, graphic_definition
 
 
 @graphic_definition("my_graphic")
@@ -109,7 +109,7 @@ Map definitions may configure dot translucency and collision overlap through
 the public library model:
 
 ```python
-from strongtowns_detroit.graphics import MapMarkerStyle
+from strongtowns_graphics import MapMarkerStyle
 
 marker_style = MapMarkerStyle(opacity=0.78, overlap_fraction=0.10)
 ```

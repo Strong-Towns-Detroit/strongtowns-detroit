@@ -27,7 +27,6 @@ type CaseRecord = {
     status: string;
     decision: string;
     file: string;
-    url: string;
   }[];
   lat: number;
   lon: number;
@@ -652,17 +651,15 @@ export default function AtlasExplorer() {
               <section className="hearing-files">
                 <h3>Meeting records</h3>
                 {selected.hearings.map((hearing) => (
-                  <a
+                  <div
                     key={`${hearing.date}:${hearing.file}`}
-                    href={hearing.url}
-                    download
                   >
                     <span>
                       <b>{hearing.date}</b>
                       <small>{hearing.decision || hearing.status}</small>
                     </span>
-                    <strong>PDF ↓</strong>
-                  </a>
+                    <strong>{hearing.file}</strong>
+                  </div>
                 ))}
               </section>
             )}

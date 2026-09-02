@@ -10,8 +10,8 @@ HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from strongtowns_detroit.graphics import GraphicBuildSystem  # noqa: E402
-from strongtowns_detroit.graphics.cli import main as cli_main  # noqa: E402
+from strongtowns_graphics import GraphicBuildSystem  # noqa: E402
+from strongtowns_graphics.cli import main as cli_main  # noqa: E402
 
 SOURCE_ROOT = HERE / "src"
 OUTPUT_ROOT = HERE / "output"

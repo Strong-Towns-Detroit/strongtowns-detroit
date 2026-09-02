@@ -5,13 +5,14 @@ from pathlib import Path
 
 import geopandas as gpd
 
-from strongtowns_detroit.graphics import WebMercatorBasemap
+from strongtowns_graphics import WebMercatorBasemap
+from strongtowns_detroit.repositories import data_repository
 
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 GEOGRAPHY = (
-    ROOT / "pipelines/housingDataAnalysis/street_simplification/output"
+    data_repository() / "pipelines/housingDataAnalysis/street_simplification/output"
 )
 BOUNDARY = GEOGRAPHY / "detroit_boundary.gpkg"
 WATER = GEOGRAPHY / "detroit_water.gpkg"

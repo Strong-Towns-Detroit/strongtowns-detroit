@@ -1,7 +1,15 @@
+import pytest
+
 from build_parking_requirements_asset import (
+    DATA,
     PARKING_VALUES,
     outcome_counts,
     parking_cases,
+)
+
+pytestmark = pytest.mark.skipif(
+    not (DATA / "case_histories.csv").is_file(),
+    reason="reviewed BZA data must be materialized in strongtowns-data",
 )
 
 

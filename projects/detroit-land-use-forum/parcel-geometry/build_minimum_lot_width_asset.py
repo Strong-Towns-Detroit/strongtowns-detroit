@@ -31,7 +31,7 @@ from exhibit_components import (
     metric_block,
     swatch_legend,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     Graphic,
     SvgComponent,

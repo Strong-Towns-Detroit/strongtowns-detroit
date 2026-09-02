@@ -13,7 +13,7 @@ sys.path.insert(0, str(PARCEL_DIR))
 from build_minimum_lot_size_asset import (  # noqa: E402
     BZA, PARCELS, build_graphic, classify_lot_area, select_residential_area_cases,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     MobileMapInset,
     MobileMapPocket,
     graphic_definition,

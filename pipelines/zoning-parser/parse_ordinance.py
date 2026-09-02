@@ -1,6 +1,6 @@
 """Parse the full Detroit Zoning Ordinance into structured datasets.
 
-Thin CLI wrapper around strongtowns_detroit.zoning.ordinance.
+Thin CLI wrapper around strongtowns_data.zoning.ordinance.
 Reads .docx files from resources/ and writes JSON + CSV to output/.
 
 Usage:
@@ -10,7 +10,7 @@ Usage:
 import argparse
 from pathlib import Path
 
-from strongtowns_detroit.zoning.ordinance import (
+from strongtowns_data.zoning.ordinance import (
     export_to_csv,
     export_to_json,
     parse_ordinance,
@@ -49,7 +49,7 @@ def main():
 
 def _count_sections(nodes):
     """Count all nodes in section trees."""
-    from strongtowns_detroit.zoning.document import walk_sections
+    from strongtowns_data.zoning.document import walk_sections
     return walk_sections(nodes)
 
 

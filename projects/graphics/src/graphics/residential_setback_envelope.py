@@ -17,7 +17,7 @@ from build_residential_setback_asset import (  # noqa: E402
     load_merged_classification,
     select_house_setback_cases,
 )
-from strongtowns_detroit.graphics import graphic_definition, map_on_mobile
+from strongtowns_graphics import graphic_definition, map_on_mobile
 
 
 @graphic_definition("residential_setback_envelope")

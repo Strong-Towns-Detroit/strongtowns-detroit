@@ -1,7 +1,7 @@
 # Exhibit component library
 
 The canonical graphics live in `projects/graphics/src/` and use the installed
-`strongtowns_detroit.graphics` package. Source definitions provide semantic page
+`strongtowns_graphics` package. Source definitions provide semantic page
 content and chart-specific SVG marks; the package owns page composition,
 aspect ratio, title wrapping, HTML embedding, and SVG/PNG output.
 
@@ -18,7 +18,7 @@ no longer the owner of the definitions.
 
 - `masthead_svg()` — exact Strong Towns Detroit flag sprite and forum kicker.
 
-`strongtowns_detroit.graphics` (installed library)
+`strongtowns_graphics` (installed library)
 
 - `AspectRatio` and common presets — composition shape without coupling it to
   pixels, DPI, print, or a browser-export workflow.
@@ -61,7 +61,7 @@ no longer the owner of the definitions.
 The caller owns content and chart marks; the library owns the page:
 
 ```python
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     INSTAGRAM_PORTRAIT,
     INSTAGRAM_SQUARE,

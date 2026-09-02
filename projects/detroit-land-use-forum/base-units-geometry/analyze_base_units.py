@@ -17,11 +17,13 @@ import numpy as np
 import pandas as pd
 from shapely.ops import unary_union
 
+from strongtowns_detroit.repositories import data_repository
+
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
 DATA = HERE / "data"
 OUTPUT = HERE / "output"
-PARCELS = REPO / "pipelines/parcel-data/Parcels.geojson"
+PARCELS = data_repository() / "pipelines/parcel-data/Parcels.geojson"
 SERVICE = (
     "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/"
     "BaseUnitFeatures/FeatureServer"

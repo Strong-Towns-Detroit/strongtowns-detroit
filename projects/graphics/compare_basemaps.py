@@ -6,13 +6,16 @@ from pathlib import Path
 import geopandas as gpd
 import matplotlib.pyplot as plt
 
+from strongtowns_detroit.repositories import data_repository
+
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+DATA_REPOSITORY = data_repository()
+PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 CONTEXT = ROOT / "sites/land-forum/public/data/detroit-context.geojson"
 ROADS = (
-    ROOT
+    DATA_REPOSITORY
     / "projects/detroit-land-use-forum/spirit-plaza-accessibility"
     / "output/road_context.geojson"
 )

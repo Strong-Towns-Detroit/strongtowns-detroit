@@ -3,7 +3,7 @@
 from pathlib import Path
 
 from projects.graphics import build as BUILD
-from strongtowns_detroit.graphics.cli import main as graphics_main
+from strongtowns_graphics.cli import main as graphics_main
 
 ROOT = Path(__file__).resolve().parents[1]
 GRAPHICS_ROOT = BUILD.SOURCE_ROOT / "graphics"
@@ -23,6 +23,7 @@ def test_expected_graphic_families_are_in_neutral_source_tree():
         "minimum_lot_area",
         "minimum_lot_width",
         "parking_gaps_by_project_type",
+        "parcel_land_value_change",
         "residential_setback_envelope",
     }
 
@@ -60,8 +61,8 @@ def test_parking_chart_declares_its_data_and_encoding_in_the_graphic_file():
     source = (GRAPHICS_ROOT / "parking_gaps_by_project_type.py").read_text()
 
     assert "bar_chart(" in source
-    assert 'column="proposed_or_provided"' in source
-    assert 'column="required_beyond_proposal"' in source
+    assert 'column="proposed"' in source
+    assert 'column="additional_mandated"' in source
     assert "CATEGORY_ORDER" in source
     assert "group_by(\"project_type\")" in source
     assert "axis=NumericAxis(" in source
@@ -75,8 +76,36 @@ def test_parking_chart_declares_its_data_and_encoding_in_the_graphic_file():
     assert "summarize(" not in source
 
 
+def test_parking_chart_frames_the_excess_as_a_zoning_mandate():
+    definition = next(
+        item
+        for item in BUILD.SYSTEM.definitions()
+        if item.name == "parking_gaps_by_project_type"
+    )
+    graphic = definition.builder()["parking-gaps-by-project-type"]
+
+    assert graphic.title == (
+        "Detroit's zoning code mandates far more parking than new developments propose"
+    )
+    assert graphic.subtitle.startswith("Additional parking mandated by project type")
+    assert graphic.notes == ()
+    assert graphic.sources == ("Source: Detroit BZA minutes, 2019–2026.",)
+    assert "Additional spaces mandated" in graphic.visual.markup
+    assert "Required beyond proposal" not in graphic.visual.markup
+
+
+def test_land_value_maps_share_a_cohort_and_library_choropleth():
+    source = (GRAPHICS_ROOT / "parcel_land_value_change.py").read_text()
+
+    assert source.count("parcel_choropleth_map(") == 3
+    assert "land_value_per_acre_2023" in source
+    assert "land_value_per_acre_2026" in source
+    assert "land_value_per_acre_change" in source
+    assert "same {comparable:,} residential parcels" in source
+
+
 def test_publishing_targets_own_aspect_ratio_and_pixel_width():
-    from strongtowns_detroit.graphics import GRAPHIC_FORMAT_SPECS, GraphicFormat
+    from strongtowns_graphics import GRAPHIC_FORMAT_SPECS, GraphicFormat
 
     instagram = GRAPHIC_FORMAT_SPECS[GraphicFormat.INSTAGRAM_POST]
     story = GRAPHIC_FORMAT_SPECS[GraphicFormat.INSTAGRAM_STORY]
@@ -105,6 +134,6 @@ def test_cli_lists_automatically_discovered_graphics(capsys):
 
 
 def test_build_system_prefers_nested_graphics_project_from_repository_root():
-    from strongtowns_detroit.graphics import GraphicBuildSystem
+    from strongtowns_graphics import GraphicBuildSystem
 
     assert GraphicBuildSystem.find(ROOT).root == BUILD.HERE

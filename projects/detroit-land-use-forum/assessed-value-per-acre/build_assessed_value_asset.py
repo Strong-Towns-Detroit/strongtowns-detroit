@@ -28,15 +28,16 @@ from exhibit_components import (
     title_block,
     write_svg_bundle,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     Graphic,
     SvgComponent,
     render_graphic_svg,
     write_graphic_bundle,
 )
+from strongtowns_detroit.repositories import data_repository
 
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+PARCELS = data_repository() / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = FORUM / "spirit-plaza-accessibility/output/road_context.geojson"
 OUT = HERE / "output"
 

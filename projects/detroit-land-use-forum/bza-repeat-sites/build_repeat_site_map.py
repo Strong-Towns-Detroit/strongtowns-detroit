@@ -17,12 +17,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from shapely.ops import unary_union
 
+from strongtowns_detroit.repositories import data_repository
+
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from exhibit_brand import masthead_svg
 ROOT = HERE.parents[2]
-CASES = ROOT / "pipelines/zoning/bza_dataset_gemini/all_cases.csv"
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+DATA_REPOSITORY = data_repository()
+CASES = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini/all_cases.csv"
+PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = ROOT / "projects/detroit-land-use-forum/spirit-plaza-accessibility/output/road_context.geojson"
 OUT = HERE / "output"
 

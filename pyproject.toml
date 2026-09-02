@@ -1,8 +1,14 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "strongtowns-detroit"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
+    "strongtowns-graphics @ git+https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git@8d11da7acd439a7e6186eaebd1a25c3458f82b6a",
+    "strongtowns-data @ git+https://github.com/Strong-Towns-Detroit/strongtowns-data.git@5637d6a7b327d8b173a6d2f53560fd127f077372",
     "osmnx",
     "geopandas",
     "networkx",
@@ -26,13 +32,6 @@ dependencies = [
     "duckdb>=1.4,<2",
 ]
 
-[project.scripts]
-strongtowns-graphics = "strongtowns_detroit.graphics.cli:main"
-strongtowns-data = "strongtowns_detroit.data.cli:main"
-
-[tool.setuptools.package-data]
-"strongtowns_detroit.graphics" = ["assets/*.png"]
-
 [project.optional-dependencies]
 dev = ["pytest", "pytest-mock"]
 minutes = ["google-genai", "pydantic"]
@@ -45,17 +44,10 @@ notebooks = ["marimo>=0.18,<1"]
 [tool.pytest.ini_options]
 testpaths = [
     "tests",
-    "pipelines/isochrones/tests",
-    "pipelines/zoning",
     "projects/detroit-land-use-forum",
 ]
-asyncio_default_fixture_loop_scope = "function"
 pythonpath = [
+    ".",
     "src",
-    "pipelines/parcel-data",
-    "pipelines/housingDataAnalysis/src",
-    "pipelines/housingDataAnalysis/street_simplification",
-    "pipelines/zoning",
     "pipelines/legislative-district",
-    "pipelines/isochrones",
 ]

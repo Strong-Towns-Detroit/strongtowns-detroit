@@ -14,6 +14,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from strongtowns_detroit.repositories import data_repository
+
 HERE = Path(__file__).resolve().parent
 FORUM = HERE.parent
 ROOT = FORUM.parents[1]
@@ -31,7 +33,7 @@ from exhibit_components import (
     write_svg_bundle,
 )
 
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+PARCELS = data_repository() / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = FORUM / "spirit-plaza-accessibility/output/road_context.geojson"
 OUT = HERE / "output"
 

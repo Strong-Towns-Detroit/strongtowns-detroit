@@ -12,12 +12,14 @@ from pathlib import Path
 
 import pandas as pd
 
+from strongtowns_detroit.repositories import data_repository
+
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent
 sys.path.insert(0, str(PROJECT))
 from exhibit_brand import masthead_svg
-REPO = PROJECT.parents[1]
-DATA = REPO / "pipelines/zoning/bza_dataset_gemini"
+
+DATA = data_repository() / "pipelines/zoning/bza_dataset_gemini"
 OUT = HERE / "output"
 
 CREAM = "#fffaf0"

@@ -18,7 +18,7 @@ from shapely.geometry import Point, MultiPolygon, Polygon
 from shapely.ops import unary_union
 
 sys.path.insert(0, "/Users/johnbolt/strongtowns-detroit/src")
-from strongtowns_detroit.geo.isochrones import (
+from strongtowns_data.geo.isochrones import (
     load_or_build_network, travel_times_from,
 )
 

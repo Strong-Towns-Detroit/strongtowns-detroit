@@ -20,7 +20,7 @@ from exhibit_components import (
     forum_css,
     ghost_hatch_pattern,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     Graphic,
     SvgComponent,

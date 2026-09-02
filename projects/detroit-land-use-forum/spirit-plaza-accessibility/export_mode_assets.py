@@ -21,7 +21,7 @@ sys.path.insert(0, str(HERE.parent))
 from exhibit_components import (
     forum_css,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     Graphic,
     GraphicTheme,

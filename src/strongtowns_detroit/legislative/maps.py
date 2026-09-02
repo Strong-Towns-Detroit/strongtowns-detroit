@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.figure import Figure
 
-from strongtowns_detroit.geo.loader import load_geography, prepare_water
-from strongtowns_detroit.legislative.osm import filter_arterials
-from strongtowns_detroit.mapping.colors import BOUNDARY, Z_BOUNDARY
-from strongtowns_detroit.mapping.layers import add_geography_layers
+from strongtowns_data.geo.loader import load_geography, prepare_water
+from strongtowns_data.legislative.osm import filter_arterials
+from strongtowns_data.mapping.colors import BOUNDARY, Z_BOUNDARY
+from strongtowns_data.mapping.layers import add_geography_layers
 
 
 # Each panel: (column, title, colormap, format_str)

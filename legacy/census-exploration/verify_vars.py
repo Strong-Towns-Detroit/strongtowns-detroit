@@ -1,7 +1,7 @@
 import pytidycensus as tc
 import pandas as pd
 
-from strongtowns_detroit.config import get_census_api_key
+from strongtowns_data.config import get_census_api_key
 
 tc.set_census_api_key(get_census_api_key())
 

@@ -1,4 +1,4 @@
-"""Parking gaps by project type."""
+"""Parking mandates by project type."""
 
 import sys
 from pathlib import Path
@@ -11,7 +11,7 @@ sys.path.insert(0, str(FORUM / "parking-by-project-type"))
 from build_parking_by_type_asset import (  # noqa: E402
     classified_cases,
 )
-from strongtowns_detroit.graphics import (  # noqa: E402
+from strongtowns_graphics import (  # noqa: E402
     BarArrangement,
     BarChartStyle,
     BarOrientation,
@@ -42,19 +42,15 @@ def build():
             "numeric_status": source["numeric_status"].tolist(),
             "proposed_spaces": source["proposed_spaces"].tolist(),
             "required_spaces": source["required_spaces"].tolist(),
-            "final_outcome": source["final_outcome"].tolist(),
         }
     )
-    grants = cases.filter(
-        pl.col("final_outcome") == "granted_reversed"
-    ).height
 
     totals = (
         cases.filter(pl.col("numeric_status") == "explicit_pair")
         .group_by("project_type")
         .agg(
-            pl.col("proposed_spaces").sum().cast(pl.Int64).alias("actual"),
-            pl.col("required_spaces").sum().cast(pl.Int64).alias("target"),
+            pl.col("proposed_spaces").sum().cast(pl.Int64).alias("proposed"),
+            pl.col("required_spaces").sum().cast(pl.Int64).alias("mandated"),
         )
     )
     ordered_totals = (
@@ -70,13 +66,13 @@ def build():
     data = pl.DataFrame(
         {
             "category": ordered_totals["category"],
-            "proposed_or_provided": ordered_totals["actual"],
-            "required_beyond_proposal": (
-                ordered_totals["target"] - ordered_totals["actual"]
+            "proposed": ordered_totals["proposed"],
+            "additional_mandated": (
+                ordered_totals["mandated"] - ordered_totals["proposed"]
             ),
             "annotation": [
-                f"{row['actual']:,} spaces proposed · "
-                f"{row['target']:,} required by law"
+                f"{row['proposed']:,} proposed · "
+                f"{row['mandated'] - row['proposed']:,} additional spaces mandated"
                 for row in ordered_totals.iter_rows(named=True)
             ],
         }
@@ -92,21 +88,24 @@ def build():
         arrangement=BarArrangement.STACKED,
         series=(
             BarSeries(
-                column="proposed_or_provided",
-                label="Proposed or provided",
+                column="proposed",
+                label="Proposed by developments",
                 color="#082647",
             ),
             BarSeries(
-                column="required_beyond_proposal",
-                label="Required beyond proposal",
-                color="#c8102e",
+                column="additional_mandated",
+                label="Additional spaces mandated",
+                color="#d9872c",
                 pattern=BarPattern.DIAGONAL,
             ),
         ),
         title=(
-            "Detroit's Zoning Code mandates far more parking spaces than developments require"
+            "Detroit's zoning code mandates far more parking than new developments propose"
         ),
-        subtitle="Parking gaps by project type · Detroit BZA cases, 2019–2026",
+        subtitle=(
+            "Additional parking mandated by project type · Detroit BZA cases, "
+            "2019–2026"
+        ),
         axis=NumericAxis(
             title="",
             tick_step=200,
@@ -116,21 +115,13 @@ def build():
             muted_color="#526477",
             grid_color="#e4dccf",
         ),
-        notes=(
-            f"{grants} of 62 parking cases ended in a grant or reversal. "
-            "These comparisons describe cases reaching the BZA; they do not "
-            "establish why a requirement or outcome occurred.",
-        ),
         sources=(
-            "An additional 27 parking cases were found in the BZA minutes but "
-            "did not state both required and proposed counts, so no parking "
-            "gap could be calculated.",
-            "Project groups are mutually exclusive. Source: Detroit BZA "
-            "minutes, 2019–2026.",
+            "Source: Detroit BZA minutes, 2019–2026.",
         ),
         description=(
-            "Required and proposed parking in 35 Detroit Board of Zoning "
-            "Appeals cases, grouped by project type."
+            "Proposed and legally mandated parking in 35 Detroit Board of "
+            "Zoning Appeals cases, grouped by project type. The hatched bar "
+            "segments show spaces mandated beyond development proposals."
         ),
     )
     return {"parking-gaps-by-project-type": graphic}

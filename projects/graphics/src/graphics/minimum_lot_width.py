@@ -14,7 +14,7 @@ from build_minimum_lot_size_asset import BZA, PARCELS  # noqa: E402
 from build_minimum_lot_width_asset import (  # noqa: E402
     build_graphic, classify_lot_width, select_residential_width_cases,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     MobileMapInset,
     MobileMapPocket,
     graphic_definition,

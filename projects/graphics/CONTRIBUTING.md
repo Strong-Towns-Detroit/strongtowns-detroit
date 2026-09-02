@@ -25,7 +25,7 @@ copy reusable render/layout machinery into several definitions.
 Definitions are registered through the library, not by filename or directory:
 
 ```python
-from strongtowns_detroit.graphics import Graphic, graphic_definition
+from strongtowns_graphics import Graphic, graphic_definition
 
 
 @graphic_definition("example")

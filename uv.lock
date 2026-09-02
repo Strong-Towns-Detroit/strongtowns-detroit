@@ -3175,9 +3175,36 @@ wheels = [
 ]
 
 [[package]]
+name = "strongtowns-data"
+version = "0.1.0"
+source = { git = "https://github.com/Strong-Towns-Detroit/strongtowns-data.git?rev=5637d6a7b327d8b173a6d2f53560fd127f077372#5637d6a7b327d8b173a6d2f53560fd127f077372" }
+dependencies = [
+    { name = "beautifulsoup4" },
+    { name = "duckdb" },
+    { name = "geopandas" },
+    { name = "httpx" },
+    { name = "jsonschema" },
+    { name = "lxml" },
+    { name = "matplotlib" },
+    { name = "networkx" },
+    { name = "numpy" },
+    { name = "osmnx" },
+    { name = "pandas" },
+    { name = "polars" },
+    { name = "pyarrow" },
+    { name = "pyogrio" },
+    { name = "python-docx" },
+    { name = "python-dotenv" },
+    { name = "rdflib" },
+    { name = "requests" },
+    { name = "scikit-learn" },
+    { name = "shapely" },
+]
+
+[[package]]
 name = "strongtowns-detroit"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "duckdb" },
@@ -3200,6 +3227,8 @@ dependencies = [
     { name = "requests" },
     { name = "scikit-learn" },
     { name = "shapely" },
+    { name = "strongtowns-data" },
+    { name = "strongtowns-graphics" },
 ]
 
 [package.optional-dependencies]
@@ -3259,8 +3288,22 @@ requires-dist = [
     { name = "scikit-learn" },
     { name = "sentence-transformers", marker = "extra == 'semantic'" },
     { name = "shapely" },
+    { name = "strongtowns-data", git = "https://github.com/Strong-Towns-Detroit/strongtowns-data.git?rev=5637d6a7b327d8b173a6d2f53560fd127f077372" },
+    { name = "strongtowns-graphics", git = "https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git?rev=8d11da7acd439a7e6186eaebd1a25c3458f82b6a" },
 ]
 provides-extras = ["dev", "minutes", "archive", "census", "semantic", "accessibility", "notebooks"]
+
+[[package]]
+name = "strongtowns-graphics"
+version = "0.1.0"
+source = { git = "https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git?rev=8d11da7acd439a7e6186eaebd1a25c3458f82b6a#8d11da7acd439a7e6186eaebd1a25c3458f82b6a" }
+dependencies = [
+    { name = "geopandas" },
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "pillow" },
+    { name = "polars" },
+]
 
 [[package]]
 name = "sympy"

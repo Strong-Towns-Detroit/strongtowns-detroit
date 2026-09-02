@@ -20,7 +20,7 @@ from build_use_type_assets import (  # noqa: E402
     selected_cases,
 )
 from basemap import load_detroit_basemap  # noqa: E402
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     LegendOrders,
     MapMarkerStyle,
     MobileMapInset,

@@ -1,19 +1,23 @@
-"""Tests for the public strongtowns_detroit.graphics library."""
+"""Tests for the public strongtowns_graphics library."""
 
 import json
 import re
 
+import geopandas as gpd
 import polars as pl
 import pytest
+from shapely.geometry import LineString, Polygon
 
-from strongtowns_detroit.graphics.maps import _magnitude_legend_values
+from strongtowns_graphics.maps import _magnitude_legend_values
 
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     BarArrangement,
     BarChartStyle,
     BarOrientation,
     BarPattern,
     BarSeries,
+    ChoroplethBand,
+    ContinuousChoroplethScale,
     INSTAGRAM_PORTRAIT,
     INSTAGRAM_STORY,
     AspectRatio,
@@ -43,6 +47,8 @@ from strongtowns_detroit.graphics import (
     write_graphic_bundle,
     write_graphic_variants,
     categorical_proportional_symbol_map,
+    parcel_choropleth_map,
+    WebMercatorBasemap,
 )
 
 
@@ -215,6 +221,83 @@ def test_categorical_map_rejects_implicit_category_labels_or_colors() -> None:
         )
 
 
+def test_parcel_choropleth_uses_explicit_contiguous_bands() -> None:
+    parcels = gpd.GeoDataFrame(
+        {"value": [5.0, 15.0]},
+        geometry=[
+            Polygon([(0, 0), (10, 0), (10, 10), (0, 10)]),
+            Polygon([(10, 0), (20, 0), (20, 10), (10, 10)]),
+        ],
+        crs="EPSG:3857",
+    )
+    basemap = WebMercatorBasemap(
+        land_geometry=Polygon([(0, 0), (20, 0), (20, 10), (0, 10)]),
+        roads=gpd.GeoDataFrame(
+            {"road_class": ["local"]},
+            geometry=[LineString([(0, 5), (20, 5)])],
+            crs="EPSG:3857",
+        ),
+    )
+    graphic = parcel_choropleth_map(
+        parcels,
+        value_column="value",
+        bands=(
+            ChoroplethBand("Low", 0, 10, "#aaaaaa"),
+            ChoroplethBand("High", 10, 20, "#111111"),
+        ),
+        basemap=basemap,
+        title="Values",
+        subtitle="Per acre",
+        legend_heading="VALUE",
+    )
+
+    assert graphic.metadata["classified_parcel_count"] == 2
+    assert graphic.visual.mobile_map_layout is not None
+    assert "Low" in graphic.visual.markup and "High" in graphic.visual.markup
+
+    with pytest.raises(ValueError, match="contiguous"):
+        parcel_choropleth_map(
+            parcels,
+            value_column="value",
+            bands=(
+                ChoroplethBand("Low", 0, 10, "#aaaaaa"),
+                ChoroplethBand("High", 11, 20, "#111111"),
+            ),
+            basemap=basemap,
+            title="Values",
+            subtitle="",
+            legend_heading="VALUE",
+        )
+
+
+def test_continuous_choropleth_scale_supports_log_and_diverging_values() -> None:
+    logarithmic = ContinuousChoroplethScale(
+        minimum=1,
+        maximum=100,
+        colors=("#000000", "#ffffff"),
+        ticks=((1, "$1"), (10, "$10"), (100, "$100")),
+        logarithmic=True,
+    )
+    diverging = ContinuousChoroplethScale(
+        minimum=-10,
+        maximum=10,
+        midpoint=0,
+        colors=("#0000ff", "#ffffff", "#ff0000"),
+        ticks=((-10, "−10"), (0, "0"), (10, "+10")),
+    )
+
+    assert logarithmic.normalization()(10) == pytest.approx(0.5)
+    assert diverging.normalization()(0) == pytest.approx(0.5)
+    with pytest.raises(ValueError, match="minimum must be positive"):
+        ContinuousChoroplethScale(
+            minimum=0,
+            maximum=100,
+            colors=("#000000", "#ffffff"),
+            ticks=((1, "$1"),),
+            logarithmic=True,
+        )
+
+
 def test_proportional_legend_levels_do_not_cluster_near_the_maximum() -> None:
     assert _magnitude_legend_values(5, None) == (6, 3, 1)
     assert _magnitude_legend_values(8, None) == (8, 4, 1)
@@ -341,7 +424,7 @@ def test_mobile_map_and_legend_are_centered_as_one_composition() -> None:
 
 
 def test_mobile_map_pockets_accept_independent_typed_insets() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     graphic = map_on_mobile(
         Graphic(title="Map", visual=SvgComponent("<path/>", 1080, 1080)),
@@ -362,7 +445,7 @@ def test_mobile_map_pockets_accept_independent_typed_insets() -> None:
 
 
 def test_mobile_map_pocket_accepts_automatically_wrapped_editorial_text() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     graphic = map_on_mobile(
         Graphic(title="Map", visual=SvgComponent("<path/>", 1080, 1080)),
@@ -386,7 +469,7 @@ def test_mobile_map_pocket_accepts_automatically_wrapped_editorial_text() -> Non
 
 
 def test_mobile_map_segment_is_a_sibling_after_the_legend() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     graphic = map_on_mobile(
         Graphic(title="Map", visual=SvgComponent("<path/>", 1080, 1080)),
@@ -418,7 +501,7 @@ def test_mobile_map_segment_is_a_sibling_after_the_legend() -> None:
 
 
 def test_mobile_map_effect_size_inset_scales_circle_area() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     graphic = map_on_mobile(
         Graphic(title="Map", visual=SvgComponent("<path/>", 1080, 1080)),
@@ -441,7 +524,7 @@ def test_mobile_map_effect_size_inset_scales_circle_area() -> None:
 
 
 def test_counted_mobile_legend_supports_standard_ordering() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     base = Graphic(title="Map", visual=SvgComponent("<path/>", 1080, 1080))
     items = [
@@ -475,7 +558,7 @@ def test_counted_mobile_legend_supports_standard_ordering() -> None:
 
 
 def test_counted_mobile_legend_accepts_a_custom_comparator() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     base = Graphic(title="Map", visual=SvgComponent("<path/>", 1080, 1080))
     graphic = map_on_mobile(
@@ -523,7 +606,7 @@ def test_map_marker_style_validates_opacity_and_overlap() -> None:
 
 
 def test_effect_size_leaders_fan_symmetrically_into_number_centers() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     graphic = map_on_mobile(
         Graphic(title="Map", visual=SvgComponent("<path/>", 1080, 1080)),
@@ -548,7 +631,7 @@ def test_effect_size_leaders_fan_symmetrically_into_number_centers() -> None:
 
 
 def test_mobile_map_rejects_two_insets_in_one_pocket() -> None:
-    from strongtowns_detroit.graphics import map_on_mobile
+    from strongtowns_graphics import map_on_mobile
 
     first = MobileMapInset.hero_statistic(
         pocket=MobileMapPocket.LOWER_LEFT,
@@ -699,7 +782,7 @@ def test_graphic_project_loads_definition_once_and_fans_out(tmp_path) -> None:
     marker = tmp_path / "build-count.txt"
     (source_dir / "unrelated_filename.py").write_text(
         "from pathlib import Path\n"
-        "from strongtowns_detroit.graphics import (\n"
+        "from strongtowns_graphics import (\n"
         "    Graphic, SvgComponent, graphic_definition,\n"
         ")\n"
         f"MARKER = Path({str(marker)!r})\n"
@@ -748,7 +831,7 @@ def test_graphic_project_rejects_unknown_format(tmp_path) -> None:
 def test_build_system_finds_project_and_automatically_discovers_graphics(
     tmp_path,
 ) -> None:
-    from strongtowns_detroit.graphics import GraphicBuildSystem
+    from strongtowns_graphics import GraphicBuildSystem
 
     project_root = tmp_path / "projects" / "graphics"
     first = project_root / "src" / "user" / "picked" / "alpha.py"
@@ -756,13 +839,13 @@ def test_build_system_finds_project_and_automatically_discovers_graphics(
     first.parent.mkdir(parents=True)
     second.parent.mkdir(parents=True)
     first.write_text(
-        "from strongtowns_detroit.graphics import graphic_definition\n"
+        "from strongtowns_graphics import graphic_definition\n"
         "@graphic_definition('first')\n"
         "def build(): return {}\n",
         encoding="utf-8",
     )
     second.write_text(
-        "from strongtowns_detroit.graphics import graphic_definition\n"
+        "from strongtowns_graphics import graphic_definition\n"
         "@graphic_definition('second')\n"
         "def build(): return {}\n",
         encoding="utf-8",
@@ -775,14 +858,14 @@ def test_build_system_finds_project_and_automatically_discovers_graphics(
 
 
 def test_partial_build_merges_existing_manifest_entries(tmp_path) -> None:
-    from strongtowns_detroit.graphics import GraphicBuildSystem
+    from strongtowns_graphics import GraphicBuildSystem
 
     project_root = tmp_path / "graphics"
     for name in ("first", "second"):
         definition = project_root / "src" / "definitions" / f"{name}.py"
         definition.parent.mkdir(parents=True, exist_ok=True)
         definition.write_text(
-            "from strongtowns_detroit.graphics import (\n"
+            "from strongtowns_graphics import (\n"
             "    Graphic, SvgComponent, graphic_definition,\n"
             ")\n"
             f"@graphic_definition({name!r})\n"

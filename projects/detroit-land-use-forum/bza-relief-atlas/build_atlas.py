@@ -5,11 +5,10 @@ from __future__ import annotations
 
 import argparse
 import base64
+import hashlib
 import html
 import io
-import json
 import math
-import hashlib
 import shutil
 import subprocess
 import sys
@@ -28,23 +27,24 @@ sys.path.insert(0, str(HERE.parent))
 from exhibit_brand import masthead_svg
 from exhibit_components import (
     forum_css,
-    source_lines,
-    title_block,
     write_svg_bundle,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
-    Graphic,
     MapMarkerStyle,
     SvgComponent,
+    build_map_graphic,
     bza_hearing_marker_area,
     bza_hearing_marker_radius,
-    build_map_graphic,
     write_graphic_bundle,
 )
+
+from strongtowns_detroit.repositories import data_repository
+
 ROOT = HERE.parents[2]
-DATA = ROOT / "pipelines/zoning/bza_dataset_gemini"
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+DATA_REPOSITORY = data_repository()
+DATA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
+PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = (
     ROOT / "projects/detroit-land-use-forum/spirit-plaza-accessibility"
     / "output/road_context.geojson"

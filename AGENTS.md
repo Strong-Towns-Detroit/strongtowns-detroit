@@ -78,34 +78,9 @@ map composition changes.
 See `projects/graphics/USING_GRAPHICS.md` for publishing mode and
 `projects/graphics/CONTRIBUTING.md` for developer mode.
 
-## Data-pipeline mode
+## Data work
 
-For a data request, establish whether the user wants an analysis from promoted
-data or intends to change contracts and pipeline behavior. Infer the mode when
-their intent is already clear.
-
-1. Inspect `strongtowns-data status` before building or acquiring anything.
-2. Offline `build` and network `fetch` are separate operations. Never fetch
-   merely because a promoted input is missing.
-3. Never use `--allow-paid` without explicit authorization for that provider
-   operation.
-4. Immutable snapshot artifacts and completed manifests are evidence. Do not
-   edit them by hand or overwrite them.
-5. Missing legacy provenance stays null with `provenance_grade=legacy`; do not
-   infer a URL, date, query, or version that was not captured.
-6. Dirty-code diagnostics may remain staged, but do not bypass the clean-tree
-   promotion gate.
-7. Schema meaning changes require a major contract version and migration tests.
-8. Builders consume registered asset identities and write only to assigned
-   staging directories. Do not add current-working-directory assumptions.
-9. Report accepted and rejected counts and preserve every rejection with an
-   enumerated reason and source-row locator.
-10. Never commit or push unless the user explicitly asks.
-11. Query catalogs are derived mirrors. Never treat a database edit as a source
-    change or write notebook results back into promoted evidence.
-12. Do not add, configure, or publish to a hosted database without an explicit
-    provider decision. Prefer a downloadable local catalog for analysis.
-13. Catalog consumer connections must remain read-only and must not enable
-    external file access, network access, or automatic extension installation.
-
-Read `docs/data-pipelines.md` before extending the engine or a dataset contract.
+Reusable data models, acquisition, pipeline behavior, evidence metadata, and
+their tests belong in the sibling `strongtowns-data` repository. This project
+consumes only content-addressed inputs pinned by `strongtowns-data.lock.json`.
+Never fetch, build, promote, or upload data from this consumer repository.

@@ -1,4 +1,4 @@
-# Detroit Data Analysis
+# Strong Towns Detroit
 
 Data analysis and policy research examining Detroit's zoning, housing, and land use. The project quantifies the impact of Michigan's proposed zoning preemption legislation on Detroit's 235,000+ residential parcels and builds a machine-readable knowledge graph of the city's zoning ordinance.
 
@@ -19,38 +19,29 @@ Key findings from the analysis:
 
 **BZA minutes extraction** — Scrapes and OCRs Board of Zoning Appeals meeting minutes into structured case datasets (case number, petitioner, location, proposal, decision, votes).
 
+Reusable code and data tooling live in sibling repositories:
+
+- `strongtowns-graphics` — publishing-neutral rendering library
+- `strongtowns-data` — data contracts, pipelines, manifests, and review tooling
+- `zoning-rule-engine` — zoning-language compiler and rule engine
+
+This repository contains Detroit-specific analysis, exhibits, and the Land
+Forum site.
+
 ## Repository Structure
 
 ```
-src/strongtowns_detroit/           # Shared Python package
-  parcels/                         # Parcel compliance & preemption analysis
-  census/                          # ACS data fetching & aggregation
-  bza/                             # BZA minutes scraping, renaming, OCR parsing
-  geo/                             # Geography utilities (boundary, water, streets)
-  mapping/                         # Choropleth map rendering
-  zoning/                          # Ordinance parser + RDF knowledge graph
-    models.py                      # Data models (UsePermission, DimensionalStandard, etc.)
-    table_parser.py                # XML-level table expansion (merged cells)
-    document.py                    # Section hierarchy parser
-    use_tables.py                  # Type A: use permission matrices
-    dimensional.py                 # Type B: dimensional standards
-    definitions.py                 # Type C: definition lookups
-    citations.py                   # Cross-reference extraction & citation graph
-    ordinance.py                   # Orchestrator + JSON/CSV export
-    ontology.py                    # MZO OWL/SKOS ontology (T-Box)
-    rdf_builder.py                 # RDF knowledge graph builder (A-Box)
-    kg_queries.py                  # SPARQL query tools for AI agents
+src/strongtowns_detroit/           # Detroit-only Python helpers and design tokens
 
 pipelines/
-  parcel-data/                     # Parcel zoning analysis pipeline
-  housingDataAnalysis/             # Census & housing data pipeline
-    street_simplification/         # OSMnx street network simplification
+  assessment-history/              # Detroit assessment-history analysis
+  legislative-district/            # Detroit legislative-district products
   zoning-parser/                   # Ordinance parsing CLI
-  zoning/                          # BZA minutes extraction pipeline
 
-tests/                             # 435 tests (393 unit + 42 integration)
-resources/                         # Zoning ordinance .docx files (not in repo)
-docs/                              # Internal documentation
+projects/                          # Detroit analyses and exhibit definitions
+sites/land-forum/                  # Public Land Forum web application
+tests/                             # Consumer-boundary and regression tests
+strongtowns-data.lock.json         # Content-addressed input selection
 ```
 
 ## Setup
@@ -58,35 +49,23 @@ docs/                              # Internal documentation
 **Requirements:** Python 3.12+
 
 ```bash
-# Clone the repo
-git clone https://github.com/Strong-Towns-Detroit/data-analysis-scripts.git
-cd data-analysis-scripts
+# Clone the four repositories beside one another
+git clone https://github.com/Strong-Towns-Detroit/strongtowns-detroit.git
+git clone https://github.com/Strong-Towns-Detroit/strongtowns-data.git
+git clone https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git
+git clone https://github.com/Strong-Towns-Detroit/zoning-rule-engine.git
+cd strongtowns-detroit
 
-# Create virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Install dependencies
-pip install pytest pytest-mock python-dotenv
-pip install python-docx lxml rdflib        # zoning parser + knowledge graph
-pip install pandas geopandas matplotlib    # parcel analysis
-pip install sentence-transformers          # semantic use-code matching (optional)
-
-# Census API (optional, for housing analysis pipeline)
-cp .env.example .env
-# Edit .env and add your Census API key from https://api.census.gov/data/key_signup.html
+uv sync --locked --extra dev
+uv run pytest -q
 ```
 
 ### Data Files
 
-The large data files are not checked into git. To run the pipelines, you'll need:
-
-| File | Size | Source | Used By |
-|------|------|--------|---------|
-| `resources/*.docx` | 111 MB | [Detroit Zoning Ordinance on Municode](https://library.municode.com/mi/detroit/codes/code_of_ordinances?nodeId=PTIVZOAM) | Ordinance parser |
-| `pipelines/parcel-data/Parcels.geojson` | 939 MB | [Detroit Open Data](https://data.detroitmi.gov/) | Parcel analysis |
-| `pipelines/parcel-data/parcel-data.csv` | 172 MB | Detroit Open Data | Parcel analysis |
-| `pipelines/parcel-data/building-permits.csv` | 16 MB | Detroit Open Data | Parcel analysis |
+Large and third-party evidence files are not checked into this repository.
+Materialize the content-addressed inputs through `strongtowns-data`. Adjacent
+clones are detected automatically; set `STRONGTOWNS_DATA_REPOSITORY` when using
+a different checkout layout.
 
 ## Running the Pipelines
 
@@ -102,8 +81,6 @@ that fan out to Instagram posts, Instagram Stories, and conference graphics.
 - AI agents should follow [AGENTS.md](AGENTS.md), establish publishing or
   developer mode, and preserve the boundary between graphic definitions and
   the shared library.
-- Data collaborators can use the [downloadable query catalog and nonprofit
-  hosting plan](docs/nonprofit-data-access.md) without a metered query API.
 
 ```bash
 strongtowns-graphics list
@@ -113,27 +90,14 @@ strongtowns-graphics build
 ### Reproducible data and local SQL
 
 ```bash
-uv run strongtowns-data status
-uv run strongtowns-data build detroit-query-catalog
-uv run strongtowns-data catalog query detroit.query.catalog \
-  --sql "SELECT count(*) FROM parcels"
-uv run --extra notebooks marimo edit notebooks/data_catalog.py
+uv run strongtowns-data materialize \
+  --repository ../strongtowns-data \
+  --lock strongtowns-data.lock.json \
+  --output .data
 ```
 
 The DuckDB catalog is a read-only, downloadable mirror of promoted data. No
 hosted database, R2 upload, or paid query service is required.
-
-### Parcel Zoning Analysis
-
-Run in order from `pipelines/parcel-data/`:
-
-```bash
-python extract_tables_from_docx.py      # .docx → merged_tables.csv
-python build_use_code.py                # CSV → detroit_zoning.json
-python merge_and_calculate.py           # Merge parcels + zoning → compliance metrics
-python analyze_preemption.py            # Generate preemption impact report
-python map_parcels.py                   # Render choropleth maps
-```
 
 ### Zoning Ordinance Parser
 
@@ -156,9 +120,9 @@ Build an RDF knowledge graph from the parsed ordinance:
 
 ```python
 from pathlib import Path
-from strongtowns_detroit.zoning.ordinance import parse_ordinance
-from strongtowns_detroit.zoning.citations import build_citation_graph
-from strongtowns_detroit.zoning.rdf_builder import build_rdf_graph, export_graph
+from strongtowns_data.zoning.ordinance import parse_ordinance
+from strongtowns_data.zoning.citations import build_citation_graph
+from strongtowns_data.zoning.rdf_builder import build_rdf_graph, export_graph
 
 data = parse_ordinance(Path("resources"))
 graph = build_citation_graph(data["sections"], resolve_hierarchical=False)
@@ -177,7 +141,7 @@ export_graph(rdf, Path("output/detroit_zoning.ttl"))
 Query it with the built-in SPARQL tools:
 
 ```python
-from strongtowns_detroit.zoning.kg_queries import *
+from strongtowns_data.zoning.kg_queries import *
 
 # What uses are allowed by-right in R1?
 query_use_permissions(rdf, district="R1", permission="by_right")
@@ -197,35 +161,22 @@ bfs_traverse(rdf, "50-12-101", max_depth=2)
 
 The ontology uses the `mzo:` namespace (`http://municipalzoning.org/ontology#`) and is designed to work for any US municipality, not just Detroit.
 
-### Census Housing Analysis
-
-```bash
-cd pipelines/housingDataAnalysis
-source .venv/bin/activate
-pip install -r requirements.txt
-python src/scripts/run_detroit_analysis.py
-```
-
-### BZA Minutes Extraction
-
-```bash
-cd pipelines/zoning
-python scrape_bza_minutes.py
-python rename_bza_minutes.py
-python create_bza_dataset_from_minutes.py --engine tesseract
-```
-
 ## Tests
 
 ```bash
-source .venv/bin/activate
-python -m pytest tests/ -v --tb=short
+uv sync --locked --extra dev
+uv run pytest -q
+cd sites/land-forum
+npm ci
+npm test
+npm run tokens:check
+npm run build
 ```
 
-The default suite includes library, pipeline, Land Forum, graphics, and
-isochrone tests. See [Reproducible data pipelines](docs/data-pipelines.md) for
-the locked environment and clean-checkout workflow. AI agents follow
-[AGENTS.md](AGENTS.md).
+The default suite covers Detroit consumer boundaries, exhibit logic, and the
+Land Forum. Library, data-engine, and zoning-compiler suites run in their own
+repositories. See [AGENTS.md](AGENTS.md) for the locked environment and
+clean-checkout workflow.
 
 ## Key Technical Details
 

@@ -30,7 +30,7 @@ from exhibit_components import (
     write_svg_bundle,
 )
 from build_atlas import displace_overlapping_points
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     Graphic,
     MapMarkerStyle,
@@ -40,13 +40,15 @@ from strongtowns_detroit.graphics import (
     render_graphic_svg,
     write_graphic_bundle,
 )
+from strongtowns_detroit.repositories import data_repository
 
-DATA = ROOT / "pipelines/zoning/bza_dataset_gemini"
+DATA_REPOSITORY = data_repository()
+DATA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
 CLASSIFICATIONS = (
     DATA / "project_type_enrichment/case_histories_with_project_types.csv"
 )
 SITES = DATA / "map_sites.gpkg"
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = (
     FORUM / "spirit-plaza-accessibility/output/road_context.geojson"
 )

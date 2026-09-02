@@ -1,0 +1,65 @@
+{
+  "lock_version": "1.0.0",
+  "assets": [
+    {
+      "dataset_id": "detroit.base-units.addresses.raw",
+      "snapshot_id": "019738c9-64bf-4bcc-903a-a6926f18f914",
+      "manifest_sha256": "5dfaa6ad0b3ac355d7a15c569e2d519c719443c6a81ec603d4255f8564157cb6"
+    },
+    {
+      "dataset_id": "detroit.base-units.buildings.raw",
+      "snapshot_id": "aca8a713-cbc4-4783-86e0-74d510d185ef",
+      "manifest_sha256": "68167da1b7179c5210d39374757cafbffd0fa526372fb9ef0f9a384ab957ad82"
+    },
+    {
+      "dataset_id": "detroit.base-units.streets.raw",
+      "snapshot_id": "a57e2caa-1e08-45e9-a92c-a438da445b6e",
+      "manifest_sha256": "8e48ce0e446ef53cdae78af87b5143300827b15057a60c3455750bffb0157936"
+    },
+    {
+      "dataset_id": "detroit.bza.gemini.raw",
+      "snapshot_id": "6233c2f2-1019-4ef7-b68b-961f054c12c0",
+      "manifest_sha256": "bdbc2a96515aa48f527fc83f24a6bd04214a9785dee52bbc06fb0ecbc60b915e"
+    },
+    {
+      "dataset_id": "detroit.bza.minutes.raw",
+      "snapshot_id": "0f464c52-18b1-44aa-a296-788ccf857e65",
+      "manifest_sha256": "33fa00c79eb4328d5253ea681dce1ebf8a69a8e9241c0f226f279e81bf91299c"
+    },
+    {
+      "dataset_id": "detroit.municode.chapter-50.raw",
+      "snapshot_id": "3c191d59-7229-4bbe-9818-70641501075a",
+      "manifest_sha256": "f6685fb0c077cc98dd7e7a549f135f6fbcc8a9f0583c1235211796b06cf6153f"
+    },
+    {
+      "dataset_id": "detroit.osm.basemap.raw",
+      "snapshot_id": "07a8c953-dd09-4454-909a-7d83c533ae20",
+      "manifest_sha256": "5e8a8622bd5eaa8020378d10f5036b96fd6f0b0d087647768bc079f48e8152af"
+    },
+    {
+      "dataset_id": "detroit.parcels.attributes.raw",
+      "snapshot_id": "9065dcec-aa54-4a7e-b718-c351a50e4aa5",
+      "manifest_sha256": "4377588fa161f1f181aefb225d54cf3cabebcfcfc10d3a7f1abce7da9d28dc80"
+    },
+    {
+      "dataset_id": "detroit.parcels.raw",
+      "snapshot_id": "63af4c6b-57e1-4417-9a86-3a100fc9a0e9",
+      "manifest_sha256": "9d6b231b1c30f8f1346223a96c208209f0f1fd0d4c3b209472ee8c82a354c53e"
+    },
+    {
+      "dataset_id": "detroit.spirit-plaza.traveltime.raw",
+      "snapshot_id": "1b6a15eb-e968-4434-b521-45399bd31393",
+      "manifest_sha256": "233a2fb206e43ebb464504a42f6c8b7281cfe65eece2764e72a40c2e545c3182"
+    },
+    {
+      "dataset_id": "hud.lihtc.qct-2026-wayne.raw",
+      "snapshot_id": "f4a8ec06-990c-4cac-89f8-b35a5434b9bc",
+      "manifest_sha256": "3bc313ef0521f87762331ef422ff6f29b4a71b5d65ed3b216dfe39adac77bd2a"
+    },
+    {
+      "dataset_id": "michigan.assessment-history.reports.raw",
+      "snapshot_id": "ffe085dc-07f2-4835-8329-c0c064e5ae92",
+      "manifest_sha256": "c554111f36b6c5cb1638eafc31da3c2e69e37aed2fe1603897628e660e565d72"
+    }
+  ]
+}

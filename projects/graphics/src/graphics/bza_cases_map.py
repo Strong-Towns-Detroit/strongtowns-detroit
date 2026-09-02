@@ -20,7 +20,7 @@ from build_atlas import (  # noqa: E402
     primary_relief_categories,
 )
 from basemap import load_detroit_basemap  # noqa: E402
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     LegendOrders,
     MapMarkerStyle,
     categorical_proportional_symbol_map,

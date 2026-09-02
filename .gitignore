@@ -98,15 +98,13 @@ pipelines/parcel-data/Untitled.ipynb
 cache/
 pipelines/housingDataAnalysis/cache/
 data/.cache/
-data/derived/
-data/provider/
 data/reviews/
-data/sources/**/.staging/
+data/datasets/**/.staging/
 # Immutable payloads live in R2. Git retains only the root snapshot manifest
 # and promoted pointer, never copied raw evidence (including nested manifests).
-data/sources/**/snapshots/**/*
-!data/sources/*/snapshots/*/
-!data/sources/*/snapshots/*/manifest.json
+data/datasets/**/snapshots/**/*
+!data/datasets/*/snapshots/*/
+!data/datasets/*/snapshots/*/manifest.json
 
 # GraphML network caches (isochrone toolkit builds these anywhere under --cache-dir)
 **/*.graphml

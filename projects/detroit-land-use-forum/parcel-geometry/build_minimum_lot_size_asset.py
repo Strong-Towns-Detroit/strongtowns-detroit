@@ -29,18 +29,20 @@ from exhibit_components import (
     write_svg_bundle,
 )
 from parcel_exhibit_components import bza_case_stat, is_detroit_parks_taxpayer
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     Graphic,
     SvgComponent,
     render_graphic_svg,
     write_graphic_bundle,
 )
+from strongtowns_detroit.repositories import data_repository
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
-BZA = ROOT / "pipelines/zoning/bza_dataset_gemini"
+DATA_REPOSITORY = data_repository()
+PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+BZA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
 ROADS = (
     ROOT / "projects/detroit-land-use-forum/spirit-plaza-accessibility"
     / "output/road_context.geojson"

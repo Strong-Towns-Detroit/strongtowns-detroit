@@ -254,7 +254,7 @@ via `config.get_census_api_key()`:
 ```python
 def __init__(self, api_key: Optional[str] = None, cache_dir: str = './cache'):
     if api_key is None:
-        from strongtowns_detroit.config import get_census_api_key
+        from strongtowns_data.config import get_census_api_key
         api_key = get_census_api_key()
 ```
 
@@ -357,7 +357,7 @@ Library-agnostic color constants (plain hex strings, no matplotlib import) so an
 plotting library can use them:
 
 ```python
-from strongtowns_detroit.mapping.colors import BUILDABLE, NOT_BUILDABLE, SHORTAGE
+from strongtowns_data.mapping.colors import BUILDABLE, NOT_BUILDABLE, SHORTAGE
 
 # Works with matplotlib, folium, plotly, deck.gl, etc.
 ```
@@ -502,8 +502,8 @@ if __name__ == "__main__":
 **After** (thin wrapper → library):
 ```python
 # calculate_buildable.py (after)
-from strongtowns_detroit.parcels.compliance import check_compliance as _unified_check
-from strongtowns_detroit.constants import PROPOSED_MIN_SQFT, PROPOSED_MIN_DWELLING_SQFT
+from strongtowns_data.parcels.compliance import check_compliance as _unified_check
+from strongtowns_data.constants import PROPOSED_MIN_SQFT, PROPOSED_MIN_DWELLING_SQFT
 
 def check_compliance(row, zoning_restrictions):
     """Thin wrapper: delegates to unified compliance with calculate_buildable settings."""
@@ -522,8 +522,8 @@ if __name__ == "__main__":
 The simplest cases are pure re-exports:
 ```python
 # detroit_census_fetcher.py (after)
-"""Thin re-export — the real implementation lives in strongtowns_detroit.census.fetcher."""
-from strongtowns_detroit.census.fetcher import DetroitCensusFetcher
+"""Thin re-export — the real implementation lives in strongtowns_data.census.fetcher."""
+from strongtowns_data.census.fetcher import DetroitCensusFetcher
 ```
 
 ---

@@ -20,7 +20,7 @@ from pathlib import Path
 
 import geopandas as gpd
 
-from strongtowns_detroit.legislative.tract_naming import (
+from strongtowns_data.legislative.tract_naming import (
     load_overrides, name_tracts,
 )
 

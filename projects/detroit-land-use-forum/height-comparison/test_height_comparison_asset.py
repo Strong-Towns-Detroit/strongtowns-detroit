@@ -1,4 +1,11 @@
-from build_height_comparison_asset import height_cases
+import pytest
+
+from build_height_comparison_asset import DATA, height_cases
+
+pytestmark = pytest.mark.skipif(
+    not (DATA / "case_histories.csv").is_file(),
+    reason="reviewed BZA data must be materialized in strongtowns-data",
+)
 
 
 def test_height_audit_counts_and_duplicate():

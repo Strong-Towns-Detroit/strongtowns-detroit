@@ -14,6 +14,11 @@ from build_atlas import (
     plot_case_sites,
 )
 
+requires_reviewed_data = pytest.mark.skipif(
+    not (DATA / "atlas_applications.csv").is_file(),
+    reason="reviewed BZA data must be materialized in strongtowns-data",
+)
+
 
 def test_granted_outcome_uses_blue():
     colors = {key: color for key, _, color in OUTCOME_LABELS}
@@ -22,6 +27,7 @@ def test_granted_outcome_uses_blue():
     assert len(set(colors.values())) == len(colors)
 
 
+@requires_reviewed_data
 def test_concrete_assignments_use_categories_and_unique_histories():
     applications = pd.read_csv(DATA / "atlas_applications.csv")
     concrete = concrete_assignments(applications)
@@ -43,6 +49,7 @@ def test_annular_marker_has_outer_and_inner_boundaries():
     assert 0.5 < radii[radii > 0].min() < 0.6
 
 
+@requires_reviewed_data
 def test_primary_relief_uses_first_concrete_recorded_category():
     applications = pd.read_csv(DATA / "atlas_applications.csv")
     primary = primary_relief_categories(applications)

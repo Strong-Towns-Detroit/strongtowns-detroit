@@ -5,12 +5,12 @@ from __future__ import annotations
 import json
 import math
 from functools import lru_cache
-from pathlib import Path
+
+from strongtowns_detroit.repositories import data_repository
 
 RESIDENTIAL_DISTRICTS = {f"R{i}" for i in range(1, 7)}
-ROOT = Path(__file__).resolve().parents[3]
 MANUAL_USE_CROSSWALK = (
-    ROOT
+    data_repository()
     / "pipelines/parcel-data"
     / "parcel_use_codes_to_zoning_use_codes_manual_mapping.json"
 )

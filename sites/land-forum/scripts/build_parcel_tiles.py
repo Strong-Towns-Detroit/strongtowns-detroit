@@ -43,6 +43,8 @@ from typing import Callable
 import geopandas as gpd
 import pandas as pd
 
+from strongtowns_detroit.repositories import data_repository
+
 HERE = Path(__file__).resolve().parent
 SITE = HERE.parent
 ROOT = SITE.parents[1]
@@ -78,9 +80,10 @@ from build_assessed_value_asset import (  # noqa: E402
     concentration,
 )
 
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+DATA_REPOSITORY = data_repository()
+PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = FORUM / "spirit-plaza-accessibility/output/road_context.geojson"
-BZA = ROOT / "pipelines/zoning/bza_dataset_gemini"
+BZA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
 OUT_DIR = SITE / "public/data/zoning"
 
 RESIDENTIAL = [f"R{i}" for i in range(1, 7)]

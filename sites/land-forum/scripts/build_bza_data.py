@@ -11,10 +11,13 @@ import geopandas as gpd
 import pandas as pd
 from shapely.geometry import mapping
 
+from strongtowns_detroit.repositories import data_repository
+
 HERE = Path(__file__).resolve().parent
 SITE = HERE.parent
 ROOT = SITE.parents[1]
-DATA = ROOT / "pipelines/zoning/bza_dataset_gemini"
+DATA_REPOSITORY = data_repository()
+DATA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
 OUTPUT = SITE / "public/data/bza-cases.json"
 MAP_OUTPUT = SITE / "public/data/bza-map.json"
 CONTEXT_OUTPUT = SITE / "public/data/detroit-context.geojson"
@@ -23,7 +26,7 @@ ROADS = (
     / "output/road_context.geojson"
 )
 CITY_BOUNDARY = (
-    ROOT / "pipelines/housingDataAnalysis/street_simplification"
+    DATA_REPOSITORY / "pipelines/housingDataAnalysis/street_simplification"
     / "output/detroit_boundary.geojson"
 )
 ATLAS_CODE = (
@@ -113,7 +116,6 @@ def main() -> None:
                 "status": clean(row.decision_status),
                 "decision": clean(row.decision),
                 "file": clean(row.source_file),
-                "url": f"/bza-minutes/{clean(row.source_file)}",
             }
             for row in group.sort_values("meeting_date").itertuples(index=False)
         ]

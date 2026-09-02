@@ -52,7 +52,7 @@ from scipy.spatial import cKDTree
 from scipy.ndimage import gaussian_filter, distance_transform_edt
 
 sys.path.insert(0, "/Users/johnbolt/strongtowns-detroit/src")
-from strongtowns_detroit.geo.isochrones import (
+from strongtowns_data.geo.isochrones import (
     load_or_build_network, travel_times_from, isochrone_polygon,
 )
 

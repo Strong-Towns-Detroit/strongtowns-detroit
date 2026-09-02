@@ -31,7 +31,7 @@ from exhibit_components import (
     write_svg_bundle,
 )
 from parcel_exhibit_components import bza_case_stat
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     CONFERENCE_LANDSCAPE,
     Graphic,
     SvgComponent,

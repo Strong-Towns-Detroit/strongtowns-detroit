@@ -19,7 +19,7 @@ from export_mode_assets import (  # noqa: E402
     _project,
     build_graphic,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     graphic_definition,
     wide_map_with_legend_on_mobile,
 )

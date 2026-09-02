@@ -15,12 +15,14 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from strongtowns_detroit.repositories import data_repository
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from exhibit_brand import masthead_svg
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-DATA = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+DATA = data_repository() / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = (
     ROOT / "projects/detroit-land-use-forum/spirit-plaza-accessibility"
     / "output/road_context.geojson"

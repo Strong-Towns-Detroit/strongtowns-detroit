@@ -10,9 +10,11 @@ from pathlib import Path
 import geopandas as gpd
 import pandas as pd
 
+from strongtowns_detroit.repositories import data_repository
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-PARCELS = ROOT / "pipelines/parcel-data/parcels_with_compliance.gpkg"
+PARCELS = data_repository() / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 BUILDINGS = HERE / "data/base_units_buildings.geojson"
 OVERLAPS = HERE / "output/building_parcel_overlaps.csv"
 OUT = HERE / "output/principal_building_site_audit.csv"

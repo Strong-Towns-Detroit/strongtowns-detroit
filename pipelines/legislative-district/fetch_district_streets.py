@@ -12,7 +12,7 @@ Usage:
 import argparse
 from pathlib import Path
 
-from strongtowns_detroit.legislative.osm import (
+from strongtowns_data.legislative.osm import (
     fetch_place_boundaries, fetch_streets, fetch_water, save_layer,
 )
 

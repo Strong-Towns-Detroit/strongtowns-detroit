@@ -1,9 +1,16 @@
+import pytest
+
 from lot_coverage_model import (
+    MANUAL_USE_CROSSWALK,
     coverage_building_type,
     maximum_coverage_percent,
 )
 
 
+@pytest.mark.skipif(
+    not MANUAL_USE_CROSSWALK.is_file(),
+    reason="reviewed parcel crosswalk must be materialized in strongtowns-data",
+)
 def test_building_type_is_explicit_and_r_district_only():
     assert coverage_building_type("R2", "SINGLE FAMILY") == "single_family"
     assert coverage_building_type("R2", "TWO FAMILY") == "two_family"

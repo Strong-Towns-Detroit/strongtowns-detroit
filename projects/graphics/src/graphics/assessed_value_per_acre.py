@@ -14,7 +14,7 @@ from build_assessed_value_asset import (  # noqa: E402
     classify,
     concentration,
 )
-from strongtowns_detroit.graphics import (
+from strongtowns_graphics import (
     MobileMapInset,
     MobileMapPocket,
     graphic_definition,

@@ -1,1 +1,1 @@
-"""Michigan state legislative district analysis (ACS demographics, mapping)."""
+"""Detroit-specific legislative maps and interactive presentation."""

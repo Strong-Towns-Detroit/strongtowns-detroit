@@ -15,7 +15,7 @@ from pathlib import Path
 
 import geopandas as gpd
 
-from strongtowns_detroit.legislative.precincts import fetch_district_precincts
+from strongtowns_data.legislative.precincts import fetch_district_precincts
 
 
 def main():
