@@ -60,14 +60,22 @@ You may ask an agent to run these; you do not need to run them yourself.
 
 ```bash
 # See available definitions
-strongtowns-graphics list
+strongtowns assets list
+
+# Check that the required data is ready
+strongtowns assets check
 
 # Build all graphics in all publishing formats
-strongtowns-graphics build
+strongtowns assets build
 
 # Build one graphic for Instagram
-strongtowns-graphics build bza_proposed_use_map --target instagram
+strongtowns assets build bza_proposed_use_map --target instagram
 ```
+
+Run these from the Detroit project checkout, or have the agent supply its path
+with `--project`. The `assets` commands check each graphic's required data before
+rendering. If an input is missing, ask the project maintainer or agent to resolve
+it; these commands do not download or prepare missing data automatically.
 
 Exports appear under `projects/graphics/output/<target>/<definition>/`.
 That directory is generated and should never be edited by hand.

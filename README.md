@@ -23,6 +23,7 @@ Reusable code and data tooling live in sibling repositories:
 
 - `strongtowns-graphics` — publishing-neutral rendering library
 - `strongtowns-data` — data contracts, pipelines, manifests, and review tooling
+- `strongtowns-cli` — accessible command interface over the domain packages
 - `zoning-rule-engine` — zoning-language compiler and rule engine
 
 This repository contains Detroit-specific analysis, exhibits, and the Land
@@ -53,11 +54,14 @@ strongtowns-data.lock.json         # Content-addressed input selection
 git clone https://github.com/Strong-Towns-Detroit/strongtowns-detroit.git
 git clone https://github.com/Strong-Towns-Detroit/strongtowns-data.git
 git clone https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git
+git clone https://github.com/Strong-Towns-Detroit/strongtowns-cli.git
 git clone https://github.com/Strong-Towns-Detroit/zoning-rule-engine.git
 cd strongtowns-detroit
 
 uv sync --locked --extra dev
 uv run pytest -q
+python -m pip install -e '../strongtowns-cli[all]'
+strongtowns doctor --require graphics --require data
 ```
 
 ### Data Files
@@ -83,17 +87,22 @@ that fan out to Instagram posts, Instagram Stories, and conference graphics.
   the shared library.
 
 ```bash
-strongtowns-graphics list
-strongtowns-graphics build
+strongtowns assets list --project .
+strongtowns assets check --project .
+strongtowns assets build --project . --target instagram
 ```
+
+`assets check` is a read-only preflight. `assets build` first verifies every
+content-addressed input in `strongtowns-data.lock.json`, then delegates output
+generation to the graphics SDK. Select one or more definitions by placing their
+names after `check` or `build`.
 
 ### Reproducible data and local SQL
 
 ```bash
-uv run strongtowns-data materialize \
-  --repository ../strongtowns-data \
-  --lock strongtowns-data.lock.json \
-  --output .data
+strongtowns data status --repository ../strongtowns-data
+strongtowns data materialize strongtowns-data.lock.json .data \
+  --repository ../strongtowns-data
 ```
 
 The DuckDB catalog is a read-only, downloadable mirror of promoted data. No
