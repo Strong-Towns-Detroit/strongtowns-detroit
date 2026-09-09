@@ -4,6 +4,8 @@ This is the publishing-neutral home for Strong Towns Detroit graphics.
 
 Choose the guide that matches how you want to work:
 
+- [Example notebooks](notebooks/README.md): editable Python SDK walkthroughs
+  for all twelve existing Instagram graphics, plus a small starter chart.
 - [Using the graphics](USING_GRAPHICS.md): plain-language publishing workflow
   for editors, researchers, organizers, and AI-assisted users.
 - [Contributing](CONTRIBUTING.md): architecture and safeguards for developers

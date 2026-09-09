@@ -79,3 +79,9 @@ it; these commands do not download or prepare missing data automatically.
 
 Exports appear under `projects/graphics/output/<target>/<definition>/`.
 That directory is generated and should never be edited by hand.
+
+## Learn by changing a notebook
+
+For editable Python examples, open [the Instagram notebook collection](notebooks/README.md).
+Start with a small bar chart, then work through the existing parking, BZA,
+parcel, land-value, and travel-time graphics directly with the SDK.

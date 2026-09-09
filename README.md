@@ -80,6 +80,8 @@ that fan out to Instagram posts, Instagram Stories, and conference graphics.
 
 - Start with the [plain-language graphics guide](projects/graphics/USING_GRAPHICS.md)
   if you want to produce or revise graphics without working directly in code.
+- Open the [Instagram example notebooks](projects/graphics/notebooks/README.md)
+  to generate and adapt our existing graphics directly with the Python SDKs.
 - Read the [graphics contributor guide](projects/graphics/CONTRIBUTING.md) before
   changing library APIs or adding reusable rendering behavior.
 - AI agents should follow [AGENTS.md](AGENTS.md), establish publishing or
