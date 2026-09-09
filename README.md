@@ -60,8 +60,17 @@ cd strongtowns-detroit
 
 uv sync --locked --extra dev
 uv run pytest -q
-python -m pip install -e '../strongtowns-cli[all]'
-strongtowns doctor --require graphics --require data
+uv pip install -e ../strongtowns-cli
+uv run --no-sync strongtowns doctor --require graphics --require data
+```
+
+The CLI requires Python 3.12+ and installs both the data and graphics SDKs
+automatically; no extras or separate zoning executable are needed. The commands
+above install it into this checkout's environment. For a standalone CLI install
+in your Python environment:
+
+```bash
+python -m pip install 'strongtowns-cli @ git+https://github.com/Strong-Towns-Detroit/strongtowns-cli.git@main'
 ```
 
 ### Data Files
