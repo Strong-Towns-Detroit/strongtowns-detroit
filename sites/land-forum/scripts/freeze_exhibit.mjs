@@ -132,11 +132,16 @@ await page.evaluate(() => document.fonts.ready);
 
 // Then every tile. MapCanvas flips this only once all layers report loaded.
 await page.waitForFunction(
-  () =>
-    document.querySelector("[data-map-ready]")?.getAttribute("data-map-ready") ===
-    "true",
+  () => Boolean(document.querySelector("[data-map-error]")) ||
+    document.querySelector("[data-map-ready]")?.getAttribute("data-map-ready") === "true",
+  undefined,
   { timeout: readyTimeout },
 );
+async function assertMapLoaded() {
+  const error = await page.locator("[data-map-ready]").getAttribute("data-map-error");
+  if (error) throw new Error(`Cannot export an incomplete map: ${error}`);
+}
+await assertMapLoaded();
 
 /**
  * Wait for the drawn map to stop changing.
@@ -218,6 +223,7 @@ const png = resolve(outDir, `${stem}.png`);
  * still changing.
  */
 const MAX_CAPTURE_ATTEMPTS = 6;
+await assertMapLoaded();
 let raw = await frame.screenshot({ scale: "device" });
 let confirmed = false;
 for (let attempt = 1; attempt < MAX_CAPTURE_ATTEMPTS; attempt += 1) {

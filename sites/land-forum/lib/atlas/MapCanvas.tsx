@@ -17,6 +17,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Map as MapLibreMap } from "maplibre-gl";
 import { Protocol } from "pmtiles";
+import { LatestTask } from "./latest-task";
+import { ParcelIndex } from "./parcel-index";
 import { loadTile } from "./tiles";
 import { colorExpression, paintRank, sortKey } from "./paint";
 import type { MapSpec, ViewState } from "./types";
@@ -88,6 +90,7 @@ export default function MapCanvas({
   frozen = false,
   onPick,
   onViewStateChange,
+  selectedId,
   className,
 }: Props) {
   const container = useRef<HTMLDivElement | null>(null);
@@ -95,10 +98,47 @@ export default function MapCanvas({
   const pickRef = useRef(onPick);
   pickRef.current = onPick;
   const [ready, setReady] = useState(false);
+  const [error, setError] = useState("");
+  const [lookupId, setLookupId] = useState("");
+  const [lookupBusy, setLookupBusy] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  const request = useRef(0);
+  const latest = useRef(new LatestTask());
+  const locate = useRef<(lon: number, lat: number, id?: string) => Promise<void>>(async () => {});
+  const selectionId = useRef<string | null>(null);
+  const indexRef = useRef(new ParcelIndex());
+  useEffect(() => {
+    if (!selectedId && selectionId.current) {
+      const source = mapRef.current?.getSource("selected-parcel") as import("maplibre-gl").GeoJSONSource | undefined;
+      source?.setData({ type: "FeatureCollection", features: [] });
+      selectionId.current = null;
+    }
+  }, [selectedId]);
+
+  async function lookup(event: React.FormEvent) {
+    event.preventDefault();
+    const sequence = ++request.current;
+    latest.current.cancel();
+    setLookupBusy(true);
+    setError("");
+    try {
+      const id = lookupId.trim();
+      const point = await indexRef.current.find(id);
+      if (sequence !== request.current) return;
+      mapRef.current?.flyTo({ center: point, zoom: 16, duration: 0 });
+      await locate.current(point[0], point[1], id);
+    } catch (error) {
+      if (sequence === request.current) setError(error instanceof Error ? error.message : "Parcel lookup failed.");
+    } finally { setLookupBusy(false); }
+  }
 
   useEffect(() => {
     if (!container.current || mapRef.current) return;
     let cancelled = false;
+    setReady(false);
+    setError("");
+    selectionId.current = null;
+    if (!frozen) pickRef.current?.(null);
 
     (async () => {
       const maplibregl = await import("maplibre-gl");
@@ -139,6 +179,7 @@ export default function MapCanvas({
         fadeDuration: frozen ? 0 : 300,
       });
       mapRef.current = map;
+      map.on("error", () => { if (!cancelled) setError("Map data could not load. Retry the map or use the publication summary."); });
 
       if (spec.bounds) {
         map.fitBounds(spec.bounds, {
@@ -207,55 +248,75 @@ export default function MapCanvas({
           }
         }
 
-        map.once("idle", () => setReady(true));
+        if (!frozen && spec.inspect) {
+          map.addSource("selected-parcel", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+          map.addLayer({ id: "selected-parcel-outline", type: "line", source: "selected-parcel",
+            paint: { "line-color": "#111111", "line-width": 4 } });
+        }
+        map.once("idle", () => { if (!cancelled) setReady(true); });
       });
 
       if (!frozen && spec.inspect) {
-        map.on("click", async (event) => {
+        locate.current = async (lon, lat, id) => {
+          request.current += 1;
+          setError("");
           const target = spec.layers.find((layer) => layer.id === spec.inspect!.layerId);
           if (!target) return;
-          const lookup = spec.inspect!.lookupSource ?? target.source;
-          const lookupZoom = spec.inspect!.lookupZoom ?? 15;
-          const index = tileAt(event.lngLat.lng, event.lngLat.lat, lookupZoom);
-          const features = await loadTile(
-            lookup.url,
-            lookup.sourceLayer,
-            index,
-          );
-          const point: Position = [event.lngLat.lng, event.lngLat.lat];
-          // Assessor parcels overlap, so more than one can contain the click.
-          // `fill-sort-key` decides which one the reader can actually see;
-          // taking the first tile-order match would let the inspector name a
-          // parcel hidden underneath it.
-          const hits = features.filter((candidate) =>
-            containsPoint(candidate.geometry, point),
-          );
-          const feature = hits.reduce<(typeof hits)[number] | undefined>(
-            (best, candidate) =>
-              best === undefined
-              || paintRank(target, candidate.properties)
-                 >= paintRank(target, best.properties)
-                ? candidate
-                : best,
-            undefined,
-          );
-          pickRef.current?.(
-            feature
-              ? { layerId: target.id, properties: feature.properties }
-              : null,
-          );
-        });
+          await latest.current.run(async () => {
+            const lookup = spec.inspect!.lookupSource ?? target.source;
+            const lookupZoom = spec.inspect!.lookupZoom ?? 15;
+            const index = tileAt(lon, lat, lookupZoom);
+            const features = await loadTile(
+              lookup.url,
+              lookup.sourceLayer,
+              index,
+            );
+            const point: Position = [lon, lat];
+            // Assessor parcels overlap, so more than one can contain the click.
+            // `fill-sort-key` decides which one the reader can actually see;
+            // taking the first tile-order match would let the inspector name a
+            // parcel hidden underneath it.
+            const hits = features.filter((candidate) =>
+              id ? String(candidate.properties[spec.inspect!.idField]) === id : containsPoint(candidate.geometry, point),
+            );
+            const feature = hits.reduce<(typeof hits)[number] | undefined>(
+              (best, candidate) =>
+                best === undefined
+                || paintRank(target, candidate.properties)
+                   >= paintRank(target, best.properties)
+                  ? candidate
+                  : best,
+              undefined,
+            );
+            if (id && !feature) throw new Error("Parcel detail is unavailable for this ID. Please retry.");
+            return feature;
+          }, (feature) => {
+            selectionId.current = feature ? String(feature.properties[spec.inspect!.idField]) : null;
+            const source = map.getSource("selected-parcel") as import("maplibre-gl").GeoJSONSource;
+            source?.setData({ type: "FeatureCollection", features: feature ? [{ type: "Feature", properties: {}, geometry: feature.geometry as GeoJSON.Geometry }] : [] });
+            pickRef.current?.(
+              feature
+                ? { layerId: target.id, properties: feature.properties }
+                : null,
+            );
+          }, (error) => {
+            setError(error instanceof Error ? error.message : "Parcel inspection failed.");
+          });
+        };
+        map.on("click", (event) => { void locate.current(event.lngLat.lng, event.lngLat.lat); });
       }
-    })();
+    })().catch(() => { if (!cancelled) setError("The map could not start. Please retry."); });
 
     return () => {
       cancelled = true;
+      request.current += 1;
+      latest.current.cancel();
       mapRef.current?.remove();
       mapRef.current = null;
     };
     // Map specs are stable configuration objects for the lifetime of a route.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [attempt]);
 
   const style = useMemo(
     () => width && height ? { width: `${width}px`, height: `${height}px` } : undefined,
@@ -263,14 +324,24 @@ export default function MapCanvas({
   );
 
   return (
+    <div className={className} style={style ? { ...style, position: "relative" } : undefined}>
     <div
       ref={container}
-      className={className}
-      style={style}
-      data-map-ready={ready ? "true" : "false"}
+      style={{ position: "absolute", inset: 0 }}
+      data-map-ready={ready && !error ? "true" : "false"}
+      data-map-error={error || undefined}
       role="img"
       aria-label={`${spec.title}. ${spec.subtitle}`}
-    >
+    />
+    {!frozen && <div className="map-controls">
+      {spec.inspect && <form onSubmit={lookup}>
+        <label>Parcel ID <input value={lookupId} onChange={(event) => setLookupId(event.target.value)} /></label>
+        <button type="submit" disabled={!ready || lookupBusy || !lookupId.trim()}>Find parcel</button>
+      </form>}
+      {!ready && !error && <p role="status">Loading map…</p>}
+      {lookupBusy && <p role="status">Finding parcel…</p>}
+      {error && <p role="alert">{error} <button onClick={() => setAttempt(attempt + 1)}>Retry map</button></p>}
+    </div>}
     </div>
   );
 }

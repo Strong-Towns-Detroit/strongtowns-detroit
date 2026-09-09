@@ -1,5 +1,7 @@
 "use client";
 
+import DataSources from "./DataSources";
+
 /**
  * The interactive view for any parcel dimensional standard.
  *
@@ -64,7 +66,8 @@ export default function ParcelRuleExplorer({
           </ul>
         </div>
 
-        <div className="pub-inspect">
+        <DataSources kind="parcel" />
+        <div className="pub-inspect" aria-live="polite">
           {picked ? (
             <>
               <h2>
@@ -81,6 +84,7 @@ export default function ParcelRuleExplorer({
                       {formatMeasure(
                         picked.properties[field.field],
                         field.format,
+                        field.allowZero,
                       )}
                     </dd>
                   </div>

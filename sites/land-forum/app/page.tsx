@@ -44,6 +44,7 @@ export default function Home() {
         </Link>
         <nav aria-label="Primary">
           <Link href="/atlas">BZA Atlas</Link>
+          <Link href="/graphics/bza/">Create a graphic</Link>
           <a href="#about">About</a>
         </nav>
       </header>

@@ -84,6 +84,8 @@ export type InspectField = {
   label: string;
   /** `status` maps a four-state code to its plain-language sentence. */
   format?: "text" | "integer" | "sqft" | "feet" | "currency" | "status";
+  /** Zero is evidence for quantities such as footprint outside an envelope. */
+  allowZero?: boolean;
 };
 
 export type ViewState = {

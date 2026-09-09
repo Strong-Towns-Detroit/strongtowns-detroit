@@ -8,11 +8,12 @@
  * explorer, and the frozen board are written once.
  */
 
+import { PARCEL_ARCHIVE_URL } from "../archive-url";
 import { brand, dataColor } from "../../tokens";
 import type { LegendEntry, MapMetric, MapSpec } from "../types";
 
 const DISPLAY_TILES = "/data/zoning/parcels-display.pmtiles";
-const LOOKUP_TILES = "/data/zoning/parcels.pmtiles";
+const LOOKUP_TILES = PARCEL_ARCHIVE_URL;
 
 /** Detroit's parcel extent, as reported by the archive header. */
 const BOUNDS: [number, number, number, number] = [
@@ -169,7 +170,8 @@ export function parcelRuleSpec(config: ParcelRuleConfig): MapSpec {
         {
           field: config.measureField,
           label: config.measureLabel,
-          format: config.measureField === "sqft" ? "sqft" : "feet",
+          format: config.measureField.endsWith("sqft") ? "sqft" : "feet",
+          allowZero: config.measureField === "outside_sqft",
         },
         { field: config.statusField, label: "Status", format: "status" },
       ],
@@ -184,12 +186,6 @@ export function parcelRuleSpec(config: ParcelRuleConfig): MapSpec {
   };
 }
 
-export const STATUS_LABELS: Record<string, string> = {
-  below: "Would require relief under today's standard",
-  meets: "Meets the minimum as measured",
-  unknown: "Not enough information to evaluate",
-  outside: "Outside R1–R6, or the rule does not apply",
-};
 
 export function ruleMetric(
   config: ParcelRuleConfig,
@@ -229,21 +225,4 @@ export function ruleAccounting(
   return `${config.accountingLead}: ${parts.join(" · ")}.`;
 }
 
-/**
- * A recorded 0 is an absent measurement, not a zero-size lot — and it is
- * exactly the case the classifier routes to "not enough information". Printing
- * "0 sq. ft." would present missing evidence as a finding.
- */
-export function formatMeasure(
-  value: unknown,
-  format: string | undefined,
-): string {
-  if (value == null || value === "") return "Not recorded";
-  if (format === "status") return STATUS_LABELS[String(value)] ?? String(value);
-  const n = Number(value);
-  if (!Number.isFinite(n) || n <= 0) return "Not recorded";
-  if (format === "sqft") return `${n.toLocaleString()} sq. ft.`;
-  if (format === "feet") return `${n.toLocaleString()} ft.`;
-  if (format === "currency") return `$${n.toLocaleString()}`;
-  return String(value);
-}
+export { formatMeasure, STATUS_LABELS } from "../format-measure";

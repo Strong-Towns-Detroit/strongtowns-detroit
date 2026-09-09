@@ -14,11 +14,12 @@
  * classifier assigns the band and the browser paints a category.
  */
 
+import { PARCEL_ARCHIVE_URL } from "../archive-url";
 import { brand, dataColor } from "../../tokens";
 import type { LegendEntry, MapMetric, MapSpec } from "../types";
 
 const DISPLAY_TILES = "/data/zoning/parcels-display.pmtiles";
-const LOOKUP_TILES = "/data/zoning/parcels.pmtiles";
+const LOOKUP_TILES = PARCEL_ARCHIVE_URL;
 
 const BOUNDS: [number, number, number, number] = [
   -83.287694, 42.255387, -82.910539, 42.450244,

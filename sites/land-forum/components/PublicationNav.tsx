@@ -14,6 +14,7 @@ export default function PublicationNav({ current }: { current?: string }) {
   return (
     <nav aria-label="Primary">
       <Link href="/atlas">BZA Atlas</Link>
+      <Link href="/graphics/bza/" aria-current={current === 'bza-graphics' ? 'page' : undefined}>Create a graphic</Link>
       {entries.map((entry) => {
         const active = entry.slug === current;
         return (

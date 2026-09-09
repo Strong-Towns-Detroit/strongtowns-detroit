@@ -33,6 +33,7 @@ export default function AtlasPage() {
             BZA Atlas
           </Link>
           <Link href="/#about">About</Link>
+          <Link href="/graphics/bza/">Create a graphic</Link>
         </nav>
       </header>
       <section className="atlas-intro">

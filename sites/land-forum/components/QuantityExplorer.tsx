@@ -1,5 +1,7 @@
 "use client";
 
+import DataSources from "./DataSources";
+
 import { useCallback, useMemo, useState } from "react";
 import MapCanvas, { type PickedFeature } from "../lib/atlas/MapCanvas";
 import { formatMeasure } from "../lib/atlas/specs/parcel-rule";
@@ -45,7 +47,8 @@ export default function QuantityExplorer({
           </ul>
         </div>
 
-        <div className="pub-inspect">
+        <DataSources kind="parcel" />
+        <div className="pub-inspect" aria-live="polite">
           {picked ? (
             <>
               <h2>
@@ -62,6 +65,7 @@ export default function QuantityExplorer({
                       {formatMeasure(
                         picked.properties[field.field],
                         field.format,
+                        field.allowZero,
                       )}
                     </dd>
                   </div>

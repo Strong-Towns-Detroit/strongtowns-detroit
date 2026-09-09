@@ -283,3 +283,9 @@
   justify-content: flex-start;
   background: var(--cream);
 }
+
+.map-controls { position: absolute; z-index: 2; top: 12px; right: 12px; max-width: min(320px, calc(100% - 65px)); padding: 8px; background: #fffaf0; color: #0c2340; }
+.map-controls form { display: flex; flex-wrap: wrap; gap: 8px; }
+.map-controls input { max-width: 140px; }
+.map-controls button, .map-controls input { min-height: 44px; }
+.case-card:focus-visible, .case-detail:focus-visible { outline: 3px solid #0072ce; outline-offset: 2px; }

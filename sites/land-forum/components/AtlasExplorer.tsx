@@ -1,6 +1,10 @@
 "use client";
 
+import DataSources from "./DataSources";
+import { matchesBzaCase } from "../lib/graphics/bza";
+
 import { useEffect, useMemo, useRef, useState } from "react";
+import { fetchJson, records, safeSourceUrl, readAtlasState, writeAtlasState, type AtlasState } from "../lib/atlas/data";
 import type {
   GeoJSONSource,
   Map as MapLibreMap,
@@ -27,6 +31,7 @@ type CaseRecord = {
     status: string;
     decision: string;
     file: string;
+    sourceUrl?: string | null;
   }[];
   lat: number;
   lon: number;
@@ -45,6 +50,10 @@ type MapSite = {
 const CATEGORY_COLORS: Record<string, string> = {
   "Administrative/community appeal": "#0c2340",
   "Parking supply": "#c83a3a",
+  Parking: "#c83a3a",
+  "Density/unit count": "#006d77",
+  "Building design standards": "#9b5de5",
+  Hardship: "#bc6c25",
   "Use spacing/separation": "#0072ce",
   "Setbacks/yards": "#e57f00",
   "Nonconforming use/structure": "#43617f",
@@ -96,7 +105,7 @@ function FilterChecklist({
             <button type="button" onClick={() => onChange([])}>Clear</button>
           )}
         </div>
-        {values.map((value) => (
+        {[...new Set([...values, ...selected])].map((value) => (
           <label key={value}>
             <input
               type="checkbox"
@@ -185,11 +194,44 @@ export default function AtlasExplorer() {
   const [mapSites, setMapSites] = useState<MapSite[]>([]);
   const [mapContext, setMapContext] = useState<GeoJSON.FeatureCollection | null>(null);
   const [mapReady, setMapReady] = useState(false);
-  const [query, setQuery] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedOutcomes, setSelectedOutcomes] = useState<string[]>([]);
-  const [selectedYears, setSelectedYears] = useState<string[]>([]);
-  const [selected, setSelected] = useState<CaseRecord | null>(null);
+  const [urlState, setUrlState] = useState<AtlasState>(readAtlasState(""));
+  const query = urlState.q;
+  const selectedCategories = urlState.category;
+  const selectedOutcomes = urlState.outcome;
+  const selectedYears = urlState.year;
+  const selected = cases.find((item) => item.id === urlState.case) ?? null;
+  const updateUrl = (patch: Partial<AtlasState>, mode: "pushState" | "replaceState" = "pushState") => {
+    const next = { ...readAtlasState(window.location.search), ...patch };
+    const search = writeAtlasState(next, window.location.search);
+    window.history[mode](null, "", `${window.location.pathname}${search ? `?${search}` : ""}${window.location.hash}`);
+    setUrlState(next);
+  };
+  const setQuery = (q: string) => updateUrl({ q }, "replaceState");
+  const setSelectedCategories = (category: string[]) => updateUrl({ category });
+  const setSelectedOutcomes = (outcome: string[]) => updateUrl({ outcome });
+  const setSelectedYears = (year: string[]) => updateUrl({ year });
+  const setSelected = (item: CaseRecord | null) => updateUrl({ case: item?.id ?? "" });
+  const [dataError, setDataError] = useState("");
+  const [mapError, setMapError] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [attempt, setAttempt] = useState(0);
+  const detailRef = useRef<HTMLElement>(null);
+  const previousFocus = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    const restore = () => setUrlState(readAtlasState(window.location.search));
+    restore();
+    window.addEventListener("popstate", restore);
+    return () => window.removeEventListener("popstate", restore);
+  }, []);
+  useEffect(() => {
+    if (selected) {
+      previousFocus.current = document.activeElement as HTMLElement;
+      detailRef.current?.focus();
+    } else previousFocus.current?.focus();
+  }, [selected?.id]);
+  useEffect(() => {
+    if (selected && mapReady) mapRef.current?.flyTo({ center: [selected.lon, selected.lat], zoom: 15, duration: 0 });
+  }, [selected?.id, mapReady]);
   const [selectedSite, setSelectedSite] = useState<CaseRecord[]>([]);
 
   useEffect(() => {
@@ -197,31 +239,37 @@ export default function AtlasExplorer() {
   }, [cases]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    setLoading(true);
+    setDataError("");
+    setMapError("");
+    fetchJson("/data/bza-cases.json", controller.signal).then((value) => {
+      const rows = records(value, ["id", "caseNumber", "address", "location", "petitioner", "proposal", "category", "categoryLabel", "outcome", "outcomeLabel", "firstDate", "lastDate"], ["appearances", "lat", "lon"]);
+      for (const row of rows) records(row.hearings, ["date", "status", "decision", "file"], []);
+      if (!controller.signal.aborted) setCases(rows as unknown as CaseRecord[]);
+    }).catch((error) => {
+      if (!controller.signal.aborted) setDataError(String(error.message));
+    }).finally(() => { if (!controller.signal.aborted) setLoading(false); });
     Promise.all([
-      fetch("/data/bza-cases.json").then((response) => response.json()),
-      fetch("/data/bza-map.json").then((response) => response.json()),
-      fetch("/data/detroit-context.geojson").then((response) => response.json()),
-    ]).then(([caseData, siteData, contextData]) => {
-      setCases(caseData);
-      setMapSites(siteData);
-      setMapContext(contextData);
-    });
-  }, []);
+      fetchJson("/data/bza-map.json", controller.signal),
+      fetchJson("/data/detroit-context.geojson", controller.signal),
+    ]).then(([sites, context]) => {
+      const rows = records(sites, ["id", "category", "categoryLabel"], ["appearances", "lat", "lon"]);
+      if (!rows.every((row) => Array.isArray(row.caseIds) && row.caseIds.every((id) => typeof id === "string"))) throw new Error("Invalid map case identifiers.");
+      const geo = context as GeoJSON.FeatureCollection;
+      if (geo?.type !== "FeatureCollection" || !Array.isArray(geo.features)) throw new Error("Invalid map context.");
+      if (!controller.signal.aborted) {
+        setMapSites(rows as unknown as MapSite[]);
+        setMapContext(geo);
+      }
+    }).catch((error) => { if (!controller.signal.aborted) setMapError(String(error.message)); });
+    return () => controller.abort();
+  }, [attempt]);
 
   const filtered = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    return cases.filter((item) => {
-      const searchable = [
-        item.caseNumber, item.address, item.location, item.petitioner,
-      ].join(" ").toLowerCase();
-      return (!needle || searchable.includes(needle))
-        && (!selectedCategories.length
-          || selectedCategories.includes(item.categoryLabel))
-        && (!selectedOutcomes.length
-          || selectedOutcomes.includes(item.outcomeLabel))
-        && (!selectedYears.length
-          || selectedYears.includes(item.firstDate.slice(0, 4)));
-    });
+    return cases.filter((item) => matchesBzaCase(item, {
+      q: query, categories: selectedCategories, outcomes: selectedOutcomes, years: selectedYears,
+    }));
   }, [cases, query, selectedCategories, selectedOutcomes, selectedYears]);
 
   const categories = useMemo(
@@ -270,10 +318,11 @@ export default function AtlasExplorer() {
         "top-left",
       );
       mapRef.current = map;
+      map.on("error", () => { if (!cancelled) setMapError("The map could not load. Case records remain available."); });
       map.once("load", () => {
         if (!cancelled) setMapReady(true);
       });
-    });
+    }).catch(() => { if (!cancelled) setMapError("The map could not start. Case records remain available."); });
     return () => {
       cancelled = true;
       popupRef.current?.remove();
@@ -514,6 +563,7 @@ export default function AtlasExplorer() {
   return (
     <section className="explorer">
       <aside className="filter-panel">
+        <a className="project-link" href={`/graphics/bza/?from=atlas&${writeAtlasState({ ...urlState, case: '' })}`}>Create a graphic from these cases</a>
         <label className="search-label">
           <span>Search cases</span>
           <input
@@ -543,17 +593,20 @@ export default function AtlasExplorer() {
             onChange={setSelectedYears}
           />
         </div>
-        <div className="results-heading">
+        {loading && <p role="status">Loading case records…</p>}
+        {dataError && <p role="alert">{dataError} <button onClick={() => setAttempt(attempt + 1)}>Retry data</button></p>}
+        {!loading && !dataError && filtered.length === 0 && <p role="status">No cases match these filters.</p>}
+        <div className="results-heading" aria-live="polite">
           <strong>{filtered.length}</strong>
           <span>{filtered.length === 1 ? "case" : "cases"}</span>
         </div>
-        <div className="case-list" role="list">
+        <ul className="case-list" style={{ listStyle: "none", padding: 0 }}>
           {filtered.map((item) => (
-            <button
+            <li key={item.id}><button
               className={selected?.id === item.id ? "case-card selected" : "case-card"}
               key={item.id}
               onClick={() => chooseCase(item)}
-              role="listitem"
+              type="button"
             >
               <span
                 className="case-swatch"
@@ -564,11 +617,13 @@ export default function AtlasExplorer() {
                 <small>{item.caseNumber} · {item.firstDate.slice(0, 4)}</small>
                 <small>{item.categoryLabel}</small>
               </span>
-            </button>
+            </button></li>
           ))}
-        </div>
+        </ul>
+        <DataSources kind="bza" />
       </aside>
       <div className="map-region">
+        {mapError && <p role="alert">{mapError} <button onClick={() => window.location.reload()}>Reload map</button></p>}
         <div ref={mapNode} className="map" aria-label="Map of Detroit BZA cases" />
         <div className="map-note">
           Pie area shows the mix of request types at a site. Like requests are
@@ -621,7 +676,7 @@ export default function AtlasExplorer() {
           </article>
         )}
         {selected && (
-          <article className="case-detail">
+          <article className="case-detail" ref={detailRef} tabIndex={-1} aria-label="Selected case">
             <button
               className="detail-close"
               onClick={() => {
@@ -658,7 +713,9 @@ export default function AtlasExplorer() {
                       <b>{hearing.date}</b>
                       <small>{hearing.decision || hearing.status}</small>
                     </span>
-                    <strong>{hearing.file}</strong>
+                    {safeSourceUrl(hearing.sourceUrl)
+                      ? <a href={safeSourceUrl(hearing.sourceUrl)!}>{hearing.file || "View meeting record"}</a>
+                      : <span>{hearing.file}<small>Source link unavailable</small></span>}
                   </div>
                 ))}
               </section>
