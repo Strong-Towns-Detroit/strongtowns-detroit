@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+from strongtowns_detroit.bza import data_directory as bza_data_directory
+
 import base64
 import html
 import io
@@ -24,7 +26,7 @@ sys.path.insert(0, str(HERE.parent))
 from exhibit_brand import masthead_svg
 ROOT = HERE.parents[2]
 DATA_REPOSITORY = data_repository()
-CASES = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini/all_cases.csv"
+CASES = bza_data_directory() / "all_cases.csv"
 PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
 ROADS = ROOT / "projects/detroit-land-use-forum/spirit-plaza-accessibility/output/road_context.geojson"
 OUT = HERE / "output"

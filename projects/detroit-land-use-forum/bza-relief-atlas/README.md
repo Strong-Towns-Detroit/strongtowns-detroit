@@ -5,20 +5,13 @@ hearings and rehearings do not inflate the count. A case can appear in more than
 one map when it requested more than one kind of relief.
 
 The build consumes the normalized tables in
-`pipelines/zoning/bza_dataset_gemini/`. A standalone category must have at least
+the BZA snapshot pinned by `strongtowns-data.lock.json`, resolved through the SDK. A standalone category must have at least
 10 case histories and at least 80% of those histories matched to an assessor
 parcel. Quality-assurance categories are never published as relief maps.
 
-Reviewed case-level classifications live in
-`pipelines/zoning/bza_relief_case_reviews.csv`. They are applied by the case
-history builder, so regenerate the normalized inputs in this order after
-editing that ledger:
-
-```bash
-python pipelines/zoning/build_bza_case_histories.py
-python pipelines/zoning/normalize_bza_outcomes.py
-python pipelines/zoning/build_bza_atlas_dataset.py
-```
+Reviewed case-level classifications live in `resources/bza/bza_relief_case_reviews.csv`
+in the data repository. Internal maintainers rebuild and release prepared inputs;
+this consumer only reads its existing immutable data pin.
 
 The analytical tables distinguish `parking_supply` from `parking_layout`.
 Primary-request overview maps roll both up to the parent display category
@@ -28,7 +21,6 @@ not stated in the minutes.
 Build the complete eligible series:
 
 ```bash
-python pipelines/zoning/build_bza_atlas_dataset.py
 python projects/detroit-land-use-forum/bza-relief-atlas/build_atlas.py
 ```
 

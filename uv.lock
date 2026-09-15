@@ -3177,7 +3177,7 @@ wheels = [
 [[package]]
 name = "strongtowns-data"
 version = "0.3.0"
-source = { git = "https://github.com/Strong-Towns-Detroit/strongtowns-data.git?rev=82e730de7ab0c6e0c7de90ce93579977e2d4e53a#82e730de7ab0c6e0c7de90ce93579977e2d4e53a" }
+source = { git = "https://github.com/Strong-Towns-Detroit/strongtowns-data.git?rev=63b046d4b3ff70842122ab47c72c8618fba97596#63b046d4b3ff70842122ab47c72c8618fba97596" }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "duckdb" },
@@ -3288,7 +3288,7 @@ requires-dist = [
     { name = "scikit-learn" },
     { name = "sentence-transformers", marker = "extra == 'semantic'" },
     { name = "shapely" },
-    { name = "strongtowns-data", git = "https://github.com/Strong-Towns-Detroit/strongtowns-data.git?rev=82e730de7ab0c6e0c7de90ce93579977e2d4e53a" },
+    { name = "strongtowns-data", git = "https://github.com/Strong-Towns-Detroit/strongtowns-data.git?rev=63b046d4b3ff70842122ab47c72c8618fba97596" },
     { name = "strongtowns-graphics", git = "https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git?rev=56cfd0b94d3191e88fec235bef5d47faebdebd22" },
 ]
 provides-extras = ["dev", "minutes", "archive", "census", "semantic", "accessibility", "notebooks"]

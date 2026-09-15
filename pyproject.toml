@@ -8,7 +8,7 @@ version = "0.3.0"
 requires-python = ">=3.12"
 dependencies = [
     "strongtowns-graphics @ git+https://github.com/Strong-Towns-Detroit/strongtowns-graphics.git@56cfd0b94d3191e88fec235bef5d47faebdebd22",
-    "strongtowns-data @ git+https://github.com/Strong-Towns-Detroit/strongtowns-data.git@82e730de7ab0c6e0c7de90ce93579977e2d4e53a",
+    "strongtowns-data @ git+https://github.com/Strong-Towns-Detroit/strongtowns-data.git@63b046d4b3ff70842122ab47c72c8618fba97596",
     "osmnx",
     "geopandas",
     "networkx",

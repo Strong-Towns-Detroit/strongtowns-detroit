@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+from strongtowns_detroit.bza import data_directory as bza_data_directory
+
 import html
 import json
 import shutil
@@ -19,7 +21,7 @@ PROJECT = HERE.parent
 sys.path.insert(0, str(PROJECT))
 from exhibit_brand import masthead_svg
 
-DATA = data_repository() / "pipelines/zoning/bza_dataset_gemini"
+DATA = bza_data_directory()
 OUT = HERE / "output"
 
 CREAM = "#fffaf0"

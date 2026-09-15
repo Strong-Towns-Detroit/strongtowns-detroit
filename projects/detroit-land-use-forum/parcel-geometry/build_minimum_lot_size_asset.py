@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+from strongtowns_detroit.bza import data_directory as bza_data_directory
+
 import base64
 import html
 import io
@@ -42,7 +44,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 DATA_REPOSITORY = data_repository()
 PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
-BZA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
+BZA = bza_data_directory()
 ROADS = (
     ROOT / "projects/detroit-land-use-forum/spirit-plaza-accessibility"
     / "output/road_context.geojson"

@@ -7,7 +7,7 @@ The review assigns a category only when the extracted minutes state the
 requested standard, deficiency, waiver, or other direct evidence. A proposed
 land use alone is not treated as evidence of requested relief. Categories are
 multi-label. These findings are applied through the canonical
-`pipelines/zoning/bza_relief_case_reviews.csv` ledger; production tables and
+`resources/bza/bza_relief_case_reviews.csv` ledger; production tables and
 graphics can therefore be regenerated without losing the manual review.
 
 ## Result

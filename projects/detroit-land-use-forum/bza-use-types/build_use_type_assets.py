@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+from strongtowns_detroit.bza import data_directory as bza_data_directory
+
 import base64
 import html
 import io
@@ -43,7 +45,7 @@ from strongtowns_graphics import (
 from strongtowns_detroit.repositories import data_repository
 
 DATA_REPOSITORY = data_repository()
-DATA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
+DATA = bza_data_directory()
 CLASSIFICATIONS = (
     DATA / "project_type_enrichment/case_histories_with_project_types.csv"
 )
