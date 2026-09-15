@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "detroit.bza.gemini.raw": {
+      "snapshot_id": "6233c2f2-1019-4ef7-b68b-961f054c12c0",
+      "manifest_sha256": "bdbc2a96515aa48f527fc83f24a6bd04214a9785dee52bbc06fb0ecbc60b915e",
+      "created_at": "2026-08-26T18:06:03.774451+00:00"
+    },
+    "detroit.spirit-plaza.accessibility": {
+      "snapshot_id": "ac7dace7-2bb7-4f74-82ab-7c589e029380",
+      "manifest_sha256": "da62a657e57845e5e88626a84a09d5c90073c3c5b1314afc7da2c1f2d1fc62cb",
+      "created_at": "2026-09-02T21:31:42.115735+00:00"
+    },
+    "detroit.osm.basemap.raw": {
+      "snapshot_id": "07a8c953-dd09-4454-909a-7d83c533ae20",
+      "manifest_sha256": "5e8a8622bd5eaa8020378d10f5036b96fd6f0b0d087647768bc079f48e8152af",
+      "created_at": "2026-08-26T18:06:05.134530+00:00"
+    }
+  }
+}
