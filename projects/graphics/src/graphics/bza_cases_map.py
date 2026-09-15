@@ -39,7 +39,7 @@ from strongtowns_graphics import (
         GraphicInput("roads", "detroit.base-units.streets.raw", "raw.geojson"),
     ),
 )
-def build(context):
+def build(context, include_scene=False):
     applications = pd.read_csv(context.input("applications"))
     histories = pd.read_csv(context.input("histories"))
     sites = gpd.read_file(context.input("sites")).to_crs("EPSG:3857")
@@ -96,6 +96,7 @@ def build(context):
 
     graphic = categorical_proportional_symbol_map(
         pl.DataFrame(records),
+        include_scene=include_scene,
         basemap=load_detroit_basemap(
             context.input("boundary"), context.input("roads"), context.input("water")
         ),

@@ -122,6 +122,11 @@ def build(inputs, metadata, output, studio_only=False):
         )
     )
     records = histories.merge(points, on="case_history_id", how="left", validate="one_to_one")
+    source_links = {}
+    if "source_links" in inputs:
+        for document in json.loads(inputs["source_links"].read_text())["documents"]:
+            if document.get("prepared_filename"):
+                source_links[document["prepared_filename"]] = source_url(document.get("url", ""))
     hearings_by_case = {}
     for case_id, group in occurrences.groupby("case_history_id"):
         hearings_by_case[case_id] = [
@@ -130,7 +135,7 @@ def build(inputs, metadata, output, studio_only=False):
                 "status": clean(row.decision_status),
                 "decision": clean(row.decision),
                 "file": clean(row.source_file),
-                "sourceUrl": source_url(getattr(row, "source_url", "")),
+                "sourceUrl": source_url(getattr(row, "source_url", "")) or source_links.get(clean(row.source_file)),
             }
             for row in group.sort_values("meeting_date").itertuples(index=False)
         ]
@@ -166,7 +171,7 @@ def build(inputs, metadata, output, studio_only=False):
         return
     mapped = [row for row in public if row["lat"] is not None and row["lon"] is not None]
     OUTPUT.write_text(
-        json.dumps(mapped, ensure_ascii=False, separators=(",", ":")),
+        json.dumps(public, ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )
     build_map_assets(histories, sites.to_crs(3857), primary, inputs, output, primary_labels)
