@@ -16,9 +16,11 @@ house district and render a multi-panel choropleth map deck.
    Use `--exclude <GEOID …>` to manually drop specific tracts that the
    area threshold would otherwise include.
 
-2. **fetch_district_streets.py** — Pulls OSM street network, water
-   polygons, and city boundaries for the municipalities the district
-   touches (default: Detroit, Hamtramck, Highland Park, Grosse Pointe Park).
+2. **fetch_district_streets.py** — Exports verified, pinned OSM street network,
+   water polygons, and city boundaries from the data repository. Acquire the
+   `hd9-osm-boundaries-source`, `hd9-osm-water-source`, and
+   `hd9-osm-streets-source` datasets in `strongtowns-data` and update this
+   project’s lock there first. This script performs no network acquisition.
    Writes `district_<N>_streets.gpkg`, `district_<N>_water.gpkg`,
    `district_<N>_cities.gpkg`.
 

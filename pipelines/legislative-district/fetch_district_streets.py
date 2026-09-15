@@ -1,59 +1,39 @@
-"""Fetch OSM streets, water, and city boundaries for HD-9-area municipalities.
+"""Export pinned OSM layers for legislative maps without fetching or building data.
 
-Outputs:
-    output/district_<N>_streets.gpkg
-    output/district_<N>_water.gpkg
-    output/district_<N>_cities.gpkg
-
-Usage:
-    python pipelines/legislative-district/fetch_district_streets.py --district 9
+Acquire hd9-osm-{boundaries,water,streets}-source in strongtowns-data and update
+strongtowns-data.lock.json there before running this consumer export.
 """
 
 import argparse
 from pathlib import Path
 
-from strongtowns_data.legislative.osm import (
-    fetch_place_boundaries, fetch_streets, fetch_water, save_layer,
-)
+from strongtowns_data import DataBuildSystem, DataLock, DataRepository
+from strongtowns_data.legislative.osm import save_layer
+from strongtowns_data.osm.basemaps import read_map_layers
+from strongtowns_detroit.repositories import data_repository
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
-# Cities that intersect or fully contain MI HD-9.
-DEFAULT_PLACES = [
-    "Detroit, Michigan, USA",
-    "Hamtramck, Michigan, USA",
-    "Highland Park, Michigan, USA",
-    "Grosse Pointe Park, Michigan, USA",
-]
-
-
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--district', type=int, default=9)
-    parser.add_argument('--output-dir', default='./output')
-    parser.add_argument(
-        '--places', nargs='+', default=DEFAULT_PLACES,
-        help='Municipalities to fetch (full OSM names).',
-    )
-    args = parser.parse_args()
-
-    out = Path(args.output_dir)
-    out.mkdir(parents=True, exist_ok=True)
-
-    print(f"Fetching boundaries for {len(args.places)} places...")
-    cities = fetch_place_boundaries(args.places)
-    save_layer(cities, out / f"district_{args.district}_cities.gpkg")
-
-    print("Fetching street network...")
-    streets = fetch_streets(args.places)
-    print(f"  {len(streets):,} street edges")
-    save_layer(streets, out / f"district_{args.district}_streets.gpkg")
-
-    print("Fetching water features...")
-    water = fetch_water(args.places)
-    print(f"  {len(water):,} water polygons")
-    save_layer(water, out / f"district_{args.district}_water.gpkg")
-
-    print("\nDone.")
+    parser.add_argument('--output-dir', type=Path, default=Path('./output'))
+    parser.add_argument('--lock', type=Path, default=PROJECT_ROOT / 'strongtowns-data.lock.json')
+    parser.add_argument('--repository', type=Path, default=data_repository())
+    parser.add_argument('--region', default='hd9', help='Registered OSM region in the data lock.')
+    args = parser.parse_args(argv)
+    lock = DataLock.load(args.lock)
+    repository = DataRepository(DataBuildSystem.find(args.repository))
+    directories = {
+        kind: repository.resolve(lock.asset(f'{args.region}.osm.{kind}.raw'))[0]
+        for kind in ('boundaries', 'water', 'streets')
+    }
+    layers = read_map_layers(**directories)
+    for kind, frame in layers.items():
+        path = args.output_dir / f'district_{args.district}_{kind}.gpkg'
+        save_layer(frame, path)
+        print(f'Exported {len(frame):,} pinned {kind} records -> {path}')
 
 
 if __name__ == '__main__':

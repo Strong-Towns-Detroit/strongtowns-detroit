@@ -82,6 +82,21 @@
       "manifest_sha256": "233a2fb206e43ebb464504a42f6c8b7281cfe65eece2764e72a40c2e545c3182"
     },
     {
+      "dataset_id": "hd9.osm.boundaries.raw",
+      "snapshot_id": "b0542fd9-5727-4ac9-a3ce-7687e93eefe0",
+      "manifest_sha256": "8009aec5f54da6b7936bfcc0e5e182e8d55d42bba49f83bb5ed9a04f6b22558e"
+    },
+    {
+      "dataset_id": "hd9.osm.streets.raw",
+      "snapshot_id": "66323449-6299-4e43-97d3-ec2b3d7ac557",
+      "manifest_sha256": "74fa13f10b09abd85fff9430881c7659d51bdfc224a7dab3c257b4aee7795672"
+    },
+    {
+      "dataset_id": "hd9.osm.water.raw",
+      "snapshot_id": "8bcdbc4f-20cf-43c1-a10b-11c2ec570a0e",
+      "manifest_sha256": "50507563ad334bafb5901137df6ac3a677142a2d22668132287de148c255982b"
+    },
+    {
       "dataset_id": "hud.lihtc.qct-2026-wayne.raw",
       "snapshot_id": "f4a8ec06-990c-4cac-89f8-b35a5434b9bc",
       "manifest_sha256": "3bc313ef0521f87762331ef422ff6f29b4a71b5d65ed3b216dfe39adac77bd2a"
