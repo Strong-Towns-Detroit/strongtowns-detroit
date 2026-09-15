@@ -16,3 +16,10 @@ public/exhibits/
 
 # TypeScript incremental build cache
 tsconfig.tsbuildinfo
+# Generated with the parcel archives; do not hand-author a lookup index.
+public/data/zoning/parcel-index.json
+public/data/zoning/parcel-provenance.json
+public/data/zoning/parcel-index/
+
+# Local browser inspection scripts and screenshots.
+build/

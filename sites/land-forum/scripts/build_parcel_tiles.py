@@ -43,7 +43,7 @@ from typing import Callable
 import geopandas as gpd
 import pandas as pd
 
-from strongtowns_detroit.repositories import data_repository
+from atlas_inputs import resolve_inputs
 
 HERE = Path(__file__).resolve().parent
 SITE = HERE.parent
@@ -80,10 +80,6 @@ from build_assessed_value_asset import (  # noqa: E402
     concentration,
 )
 
-DATA_REPOSITORY = data_repository()
-PARCELS = DATA_REPOSITORY / "pipelines/parcel-data/parcels_with_compliance.gpkg"
-ROADS = FORUM / "spirit-plaza-accessibility/output/road_context.geojson"
-BZA = DATA_REPOSITORY / "pipelines/zoning/bza_dataset_gemini"
 OUT_DIR = SITE / "public/data/zoning"
 
 RESIDENTIAL = [f"R{i}" for i in range(1, 7)]
@@ -323,7 +319,22 @@ def run_tippecanoe(
     )
 
 
-def main() -> None:
+def write_parcel_index(index: dict, output: Path) -> None:
+    """Partition by five ID characters so a search downloads a small shard."""
+    shards: dict[str, dict] = {}
+    for parcel_id, point in index.items():
+        shards.setdefault(parcel_id[:5], {})[parcel_id] = point
+    directory = output / "parcel-index"
+    directory.mkdir(parents=True, exist_ok=True)
+    locations = {}
+    for prefix, rows in sorted(shards.items()):
+        filename = prefix.encode("utf-8").hex() + ".json"
+        (directory / filename).write_text(json.dumps(rows, separators=(",", ":"), sort_keys=True))
+        locations[prefix] = f"/data/zoning/parcel-index/{filename}"
+    (output / "parcel-index.json").write_text(json.dumps({"version": 1, "shards": locations}, sort_keys=True))
+
+
+def main(argv=None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-zoom", type=int, default=15)
     parser.add_argument("--full-detail", type=int, default=14)
@@ -349,7 +360,23 @@ def main() -> None:
         default=",".join(QUANTITIES),
         help="Comma-separated quantity choropleths to evaluate.",
     )
-    args = parser.parse_args()
+    parser.add_argument("--lock", type=Path, default=ROOT / "strongtowns-data.lock.json")
+    parser.add_argument("--repository", type=Path)
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--output-directory", type=Path, default=OUT_DIR)
+    args = parser.parse_args(argv)
+    requirements = {
+        "parcels": ("detroit.parcels", "accepted.parquet"),
+        "roads": ("detroit.spirit-plaza.accessibility", "road_context.geojson"),
+        "histories": ("detroit.bza.gemini.raw", "raw/case_histories.csv"),
+        "categories": ("detroit.bza.gemini.raw", "raw/case_categories.csv"),
+    }
+    if "setback_envelope" in [name.strip() for name in args.rules.split(",")]:
+        requirements["setback"] = ("detroit.residential-setback-envelope", "classification.parquet")
+    inputs, provenance = resolve_inputs(args.lock, args.repository, requirements)
+    if args.check:
+        print(json.dumps({"ready": True, "inputs": provenance}, indent=2))
+        return
 
     selected = [name.strip() for name in args.rules.split(",") if name.strip()]
     unknown = [name for name in selected if name not in RULES]
@@ -365,8 +392,14 @@ def main() -> None:
         {c for name in selected for c in RULES[name].source_columns}
         | {c for name in quantities for c in QUANTITIES[name].source_columns}
     )
-    print(f"Reading {PARCELS.name} ...", flush=True)
-    raw = gpd.read_file(PARCELS, columns=BASE_COLUMNS + needed)
+    print("Reading pinned parcels ...", flush=True)
+    columns = list(dict.fromkeys(BASE_COLUMNS + needed + ["geometry"]))
+    # Canonical assessor records retain the provider's field name; the exhibit
+    # classifier uses the same explicit alias as the graphics definition.
+    columns = ["amt_assessed_value" if column == "assessed_value" else column for column in columns]
+    raw = gpd.read_parquet(inputs["parcels"], columns=columns).rename(
+        columns={"amt_assessed_value": "assessed_value"}
+    )
     print(f"  {len(raw):,} parcels", flush=True)
 
     # One frame, one column per rule. Every rule is evaluated over the same
@@ -382,15 +415,15 @@ def main() -> None:
     )
 
     summaries: dict[str, object] = {}
-    histories = pd.read_csv(BZA / "case_histories.csv")
-    categories = pd.read_csv(BZA / "case_categories.csv")
+    histories = pd.read_csv(inputs["histories"])
+    categories = pd.read_csv(inputs["categories"])
 
     for name in selected:
         rule = RULES[name]
         if rule.load is not None:
             # Loads and keys its own frame, so align on parcel_id rather than
             # trusting two independent reads to come back in the same order.
-            classified = rule.load()
+            classified = gpd.read_parquet(inputs["setback"])
             keyed = classified.set_index(
                 classified["parcel_id"].astype("string")
             )
@@ -441,7 +474,7 @@ def main() -> None:
 
     features = features.to_crs("EPSG:4326")
 
-    roads = gpd.read_file(ROADS)
+    roads = gpd.read_file(inputs["roads"])
     roads = roads[roads["road_class"].isin(["major", "arterial"])]
     roads = roads[["road_class", "geometry"]].to_crs("EPSG:4326")
     print(f"  {len(roads):,} major/arterial road features", flush=True)
@@ -453,7 +486,7 @@ def main() -> None:
     features.to_file(parcels_path, driver="GeoJSONSeq")
     roads.to_file(roads_path, driver="GeoJSONSeq")
 
-    destination = OUT_DIR / args.output
+    destination = args.output_directory / args.output
     print(f"Tiling to {destination} ...", flush=True)
     run_tippecanoe(
         parcels_path,
@@ -466,7 +499,7 @@ def main() -> None:
     )
 
     if not args.skip_display:
-        display = OUT_DIR / args.display_output
+        display = args.output_directory / args.display_output
         print(f"Tiling overview tier to {display} ...", flush=True)
         run_tippecanoe(
             parcels_path,
@@ -482,14 +515,19 @@ def main() -> None:
             min_zoom=args.display_zoom,
         )
 
-    (OUT_DIR / "parcel-rules.json").write_text(
+    args.output_directory.mkdir(parents=True, exist_ok=True)
+    points = features.geometry.representative_point()
+    parcel_index = {str(pid): [point.x, point.y] for pid, point in zip(features["pid"], points) if not point.is_empty}
+    write_parcel_index(parcel_index, args.output_directory)
+    (args.output_directory / "parcel-provenance.json").write_text(json.dumps({"inputs": provenance}, indent=2) + "\n")
+    (args.output_directory / "parcel-rules.json").write_text(
         json.dumps(summaries, indent=2) + "\n", encoding="utf-8"
     )
     shutil.rmtree(work, ignore_errors=True)
 
     print(json.dumps(summaries, indent=2))
     print(f"\nRules: {', '.join(selected)}")
-    for path in (destination, OUT_DIR / args.display_output):
+    for path in (destination, args.output_directory / args.display_output):
         if path.exists():
             print(f"  {path.name:28} {path.stat().st_size / 1024 / 1024:6.1f} MB")
 

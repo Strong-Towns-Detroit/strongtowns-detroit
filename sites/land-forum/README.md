@@ -1,83 +1,90 @@
 # Land Forum
 
-Public website for Land Forum and the Detroit Board of Zoning Appeals atlas.
+Detroit BZA minutes, mapped and explained. Land Forum is a project of Strong
+Towns Detroit. The public site contains the home page, atlas, methods, and the
+secondary chart studio. Other exhibits are preserved in Git history.
 
-## Develop
+## Run and verify
 
-```bash
-python scripts/build_bza_data.py
-npm install
+```sh
+npm ci
 npm run dev
+npm test
+npm run typecheck
+npm run tokens:check
+NEXT_PUBLIC_SITE_URL=https://land-forum.example npm run build
+node scripts/check_worker_assets.mjs
+npm run test:browser
 ```
 
-The public atlas data is generated from the repository’s normalized BZA case
-histories and matched assessor parcels. Do not edit `public/data/bza-cases.json`
-by hand.
+Install Playwright Chromium if needed (`npx playwright install chromium`). Browser
+tests start the production server unless `CIVIC_TEST_ORIGIN` is set. The example
+origin is for testing only; deployment rejects placeholder or localhost origins.
 
-Production builds use vinext and include the Sites metadata inside `dist/`.
+## Map publishing
 
-## Public origin
+The atlas and Instagram preview use the same prepared vector scene, rendered by
+`@strongtowns/graphics-browser`. The scene is derived from the relief-map definition
+in `projects/graphics/src/graphics/bza_cases_map.py`, including its original
+basemap, EPSG:3857 transform, symbol areas, and deterministic displacement.
 
-Anything needing an absolute URL — the canonical link, Open Graph tags,
-`sitemap.xml`, `robots.txt` — reads the origin from `NEXT_PUBLIC_SITE_URL`:
+Explore by zooming, panning, selecting cases, or filtering. **Create graphic**
+opens a modal and animates the whole-Detroit map into a 1080 × 1350 composition
+in 500 ms (no animation with reduced motion). Zoom/pan does not affect export.
+Filters preserve symbol positions and sizes. Headline and explanation are
+editable; sources, legend, and Land Forum attribution are automatic. Preview
+and PNG share the exact SVG and embedded Inter font.
 
-```bash
-NEXT_PUBLIC_SITE_URL=https://your-domain.org npm run build
+Copy graphic link or save settings to preserve the data version, filters, and
+text. Version 2 map recipes reference an immutable map, which references an
+immutable case bundle. Version 1 chart recipes remain supported. Preserve
+historical assets when publishing updates. Geographic subsets and drawn
+boundaries are not part of this release.
+
+For automated local map publishing, use the same browser export path:
+
+```sh
+node scripts/export_bza_map.mjs http://localhost:3000 latest /tmp/bza-map.png
+node scripts/export_bza_map.mjs http://localhost:3000 saved-settings.json /tmp/bza-map.png
 ```
 
-It is defined once in `app/site.ts`. With the variable unset, absolute URLs
-fall back to `http://localhost:3000`, so link previews will not resolve — that
-is deliberate, and preferable to baking a wrong hostname into shipped metadata.
-An unparseable value fails the build rather than emitting a malformed tag.
+The older Python graphic command remains available to reproduce historical
+locked exhibits. Use the browser export above for current Land Forum maps.
 
-## Typography
+## Offline data preparation
 
-Two self-hosted variable families, in `public/fonts`, declared by hand in
-`app/fonts.css`:
+`bza-release.lock.json` pins the BZA 1.1.0 release manifest by SHA-256. Restore
+that release through the data repository first. This consumer never downloads
+or rebuilds BZA evidence. From the Detroit repository root:
 
-| Family | Axes | Used for |
-| --- | --- | --- |
-| Source Serif 4 | `wght 200..900`, `opsz 8..60` | headlines, dek, prose, data |
-| Inter | `wght 100..900`, `opsz 14..32` | labels, controls, eyebrows |
+```sh
+python sites/land-forum/scripts/build_bza_publication.py \
+  --release-directory /path/to/verified/bza/1.1.0
+```
 
-Both are SIL Open Font License 1.1. Nothing is fetched from a third party at
-runtime.
+Install the project's pinned data and graphics SDKs first. The builder verifies
+all release files, resolves the existing boundary/water/street snapshots through
+`strongtowns-data.lock.json`, reconciles 417 cases / 509 hearings / 408 mapped
+cases, and writes immutable map and case bundles. It joins PDF links only using
+explicit prepared-filename matches in the verified release provenance; missing
+links are labeled. Changing release versions requires updating the reviewed
+expected totals in the builder and tests as well as the pin.
 
-Three things are worth preserving if this is ever reworked:
+Do not modify existing hashed files. Commit new public JSON bundles and their
+latest pointers together. Do not commit generated PNG/SVG files or screenshots.
 
-- **No manual tracking on display headings.** Both families carry an optical
-  size axis and `font-optical-sizing: auto` is the browser default, so large
-  text already gets the cut drawn for that size. The previous
-  `letter-spacing: -.065em` was compensating for a text face used at 130px, and
-  it fought the fonts' own kerning pairs.
-- **All-caps takes positive tracking** (`--track-caps`), lowercase display type
-  slightly negative (`--track-display`). Mixing these up is what made the
-  wordmark read as broken.
-- **Stat figures need `font-variant-numeric: lining-nums tabular-nums`.**
-  Source Serif 4 defaults to lining figures; the tabular variant keeps columns
-  aligned and stops ranges like `2019–26` breaking across lines.
+## Deploy
 
-The declarations are written by hand rather than through `next/font` because
-`npm run dev` runs real `next dev` while `npm run build` runs `vinext build`,
-and vinext's `next/font` shim resolves `src` paths verbatim, emits no
-`unicode-range`, and generates no fallback metrics. Plain `@font-face` behaves
-identically under both.
+Authenticate Cloudflare, determine the actual custom or account-assigned
+`workers.dev` hostname, then run:
 
-To regenerate or add a subset, download the variable `woff2` from the Google
-Fonts CSS API and copy its `unicode-range` into `app/fonts.css` alongside it.
-Font filenames are not content-hashed, which is why `public/_headers` caps
-`/fonts/*` at 30 days rather than marking it immutable.
+```sh
+NEXT_PUBLIC_SITE_URL=https://YOUR-ACTUAL-HOST npm run deploy:vinext
+```
 
-## Headers
-
-`public/_headers` **replaces** the file vinext generates — it is not merged.
-It therefore has to carry vinext's own `/_next/static/*` immutable rule as well
-as the security and cache headers; removing that block silently drops immutable
-caching on every hashed build asset.
-
-## Icons and social card
-
-`public/icon.svg` is the master mark, with the "LF" converted to outlines so it
-cannot be affected by font substitution. The raster icons, `favicon.ico`, and
-the 1200×630 `og-default.png` are generated from it and from the live hero
-styles. Regenerate them if the palette or wordmark changes.
+Deployment rebuilds with the supplied public origin, checks asset limits, and
+uses the existing `land-forum` Worker configuration. The BZA deployment omits
+parcel archives, frozen exhibits, and MapLibre workers; it needs no separate
+parcel archive host. Verify the public atlas, export, direct case links, methods,
+and social metadata before announcing launch. Keep the previous Worker version
+available for rollback. Posting to Instagram is a separate editorial action.

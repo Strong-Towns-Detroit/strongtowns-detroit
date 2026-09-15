@@ -51,7 +51,7 @@ a { color: inherit; }
   position: relative;
   z-index: 1000;
 }
-.site-header nav { display: flex; gap: 30px; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 14px 30px; }
 .site-header nav a {
   font-size: 13px;
   font-weight: 600;
@@ -383,3 +383,12 @@ input { margin-top: 8px; padding: 13px; }
     scroll-behavior: auto !important;
   }
 }
+
+/* Record metadata remains readable whether or not a source URL is known. */
+.hearing-files > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.hearing-files > div b, .hearing-files > div small { display: block; }
+.hearing-files > div small { margin-top: 4px; color: var(--ink-soft); font-size: 12px; line-height: 1.4; }
+.hearing-files > div > a { display: block; padding: 0; border: 0; text-decoration: underline; }
+.data-sources { padding: 12px; overflow-wrap: anywhere; }
+.data-sources li { margin-bottom: 12px; }
+.case-detail { background: var(--paper); }

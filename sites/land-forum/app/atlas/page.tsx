@@ -32,7 +32,8 @@ export default function AtlasPage() {
           <Link className="active" aria-current="page" href="/atlas">
             BZA Atlas
           </Link>
-          <Link href="/#about">About</Link>
+          <Link href="/methods/">Methods & sources</Link>
+
         </nav>
       </header>
       <section className="atlas-intro">

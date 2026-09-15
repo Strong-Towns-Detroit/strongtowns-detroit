@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "brand": "LAND FORUM · STRONG TOWNS DETROIT",
+  "countLabel": "recorded BZA cases",
+  "themeTokens": { "background": "cream", "foreground": "navy", "accent": "navy" },
+  "templates": {
+    "category": { "label": "Requests by category", "title": "What requests reach Detroit’s BZA?", "explanation": "Recorded cases grouped by their primary request.", "kind": "bars" },
+    "outcome": { "label": "Recorded outcomes", "title": "What outcomes are recorded for Detroit BZA cases?", "explanation": "Recorded outcomes for the selected cases.", "kind": "bars" },
+    "count": { "label": "Case count", "title": "Detroit BZA cases in the available record", "explanation": "Each case is counted once, even when it has multiple hearings.", "kind": "count" }
+  }
+}
