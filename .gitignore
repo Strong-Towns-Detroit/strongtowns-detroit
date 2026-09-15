@@ -134,7 +134,7 @@ projects/detroit-land-use-forum/conference-canonical/
 # Municode snapshot page rasters (~114 MB), alongside the already-ignored .docx.
 resources/municode/**/*.png
 
-# Compiled ordinance payloads, rebuilt by pipelines/zoning/compile_ordinance.py.
+# Generated ordinance payloads.
 data/zoning-ordinance/executable-rules.json
 data/zoning-ordinance/source-corpus.json
 data/zoning-ordinance/chapter-50-package.json
