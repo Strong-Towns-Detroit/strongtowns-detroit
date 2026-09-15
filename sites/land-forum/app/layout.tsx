@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import ReactDOM from "react-dom";
-import "maplibre-gl/dist/maplibre-gl.css";
 import "./tokens.css";
 import "./fonts.css";
 import "./styles.css";
-import "./exhibit.css";
+import "./globals.css";
 import { site, siteOrigin } from "./site";
 
 export const metadata: Metadata = {

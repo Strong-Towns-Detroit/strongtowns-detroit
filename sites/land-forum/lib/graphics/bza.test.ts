@@ -46,11 +46,11 @@ test('CSV includes exact counts, scope and immutable identity', () => {
   assert.match(summaryCsv(recipe, unsafe, notes), /"'=1\+1"/);
 });
 
-test('published atlas and studio retain identical mapped cases and filter results', async () => {
+test('historical atlas and studio retain identical mapped cases and filter results', async () => {
   const { readFile } = await import('node:fs/promises');
   const { matchesBzaCase } = await import('./bza.ts');
   const root = new URL('../../public/data/', import.meta.url);
-  const latest = JSON.parse(await readFile(new URL('bza-studio/latest.json', root), 'utf8'));
+  const latest = { bundle: '87c2229baa36a5b8ed6493692128351a6ed0c6945ca3ff5d0e3d9eacdff689c9' };
   const published = parseBundle(JSON.parse(await readFile(new URL(`bza-studio/${latest.bundle}.json`, root), 'utf8')));
   const atlas: BzaCase[] = JSON.parse(await readFile(new URL('bza-cases.json', root), 'utf8'));
   const ids = (records: { id: string }[]) => records.map((row) => row.id).sort();

@@ -38,103 +38,6 @@ after(async () => {
 });
 
 const cases = [{ id: "case-1", caseNumber: "17-24", address: "1 Test Street", location: "Detroit", petitioner: "Applicant", proposal: "A duplex", category: "lot_dimensions", categoryLabel: "Lot dimensions", outcome: "granted", outcomeLabel: "Granted", firstDate: "2024-01-01", lastDate: "2024-01-01", appearances: 1, lat: 42.36, lon: -83.1, hearings: [{ date: "2024-01-01", status: "decided", decision: "Granted", file: "minutes.pdf", sourceUrl: "https://example.org/minutes.pdf" }] }];
-async function fixture(page, handler) {
-  await page.route("**/data/bza-cases.json", handler ?? ((route) => route.fulfill({ json: cases })));
-  await page.route("**/data/bza-map.json", (route) => route.fulfill({ json: [] }));
-  await page.route("**/data/detroit-context.geojson", (route) => route.fulfill({ json: { type: "FeatureCollection", features: [] } }));
-}
-
-test("failed case loading is recoverable and distinct from no results", async () => {
-  const page = await browser.newPage();
-  let fail = true;
-  await fixture(page, (route) => fail ? route.fulfill({ status: 503, body: "Unavailable" }) : route.fulfill({ json: cases }));
-  await page.goto(`${origin}/atlas/`);
-  await page.getByRole("button", { name: "Retry data" }).waitFor();
-  assert.equal(await page.getByText("No cases match these filters.").count(), 0);
-  fail = false;
-  await page.getByRole("button", { name: "Retry data" }).click();
-  await page.getByRole("button", { name: /1 Test Street/ }).waitFor();
-  await page.getByRole("textbox", { name: "Search cases" }).fill("absent");
-  await page.getByText("No cases match these filters.").waitFor();
-  await page.close();
-});
-
-test("mobile case links survive reload and history; keyboard selection restores focus", async () => {
-  const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
-  await fixture(page);
-  await page.goto(`${origin}/atlas/?q=Test&year=2024`);
-  const card = page.getByRole("button", { name: /1 Test Street/ });
-  await card.focus();
-  await page.keyboard.press("Enter");
-  await page.getByRole("heading", { name: "1 Test Street" }).waitFor();
-  assert.equal(new URL(page.url()).searchParams.get("case"), "case-1");
-  assert.equal(await page.locator(".case-detail").evaluate((el) => el === document.activeElement), true);
-  await page.getByRole("button", { name: "Close case details" }).click();
-  assert.equal(await card.evaluate((el) => el === document.activeElement), true);
-  await page.goBack();
-  await page.getByRole("heading", { name: "1 Test Street" }).waitFor();
-  await page.reload();
-  await page.getByRole("heading", { name: "1 Test Street" }).waitFor();
-  assert.equal(await page.getByRole("textbox", { name: "Search cases" }).inputValue(), "Test");
-  assert.equal(await page.getByRole("link", { name: "minutes.pdf" }).getAttribute("href"), "https://example.org/minutes.pdf");
-  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
-  await page.screenshot({ path: process.env.CIVIC_SCREENSHOT ?? "/tmp/civic-atlas-mobile.png" });
-  await page.close();
-});
-
-test("map failure leaves case records usable", async () => {
-  const page = await browser.newPage();
-  await fixture(page);
-  await page.route("**/data/bza-map.json", (route) => route.fulfill({ status: 503, body: "Unavailable" }));
-  await page.goto(`${origin}/atlas/`);
-  await page.getByRole("button", { name: "Reload map" }).waitFor();
-  await page.getByRole("button", { name: /1 Test Street/ }).click();
-  await page.getByRole("heading", { name: "1 Test Street" }).waitFor();
-  await page.close();
-});
-
-test("keyboard parcel lookup selects the requested string ID and displays a highlight", async () => {
-  const { readFile } = await import("node:fs/promises");
-  const archive = await readFile("tests/fixtures/parcels.pmtiles");
-  const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-  await page.route("**/*.pmtiles", (route) => {
-    const range = /^bytes=(\d+)-(\d*)$/.exec(route.request().headers().range ?? "");
-    if (!range) return route.fulfill({ body: archive, contentType: "application/octet-stream" });
-    const start = Number(range[1]), end = Math.min(Number(range[2] || archive.length - 1), archive.length - 1);
-    return route.fulfill({ status: 206, headers: { "content-type": "application/octet-stream", "content-range": `bytes ${start}-${end}/${archive.length}`, "accept-ranges": "bytes" }, body: archive.subarray(start, end + 1) });
-  });
-  await page.route("**/parcel-index.json", (route) => route.fulfill({ json: { version: 1, shards: { "0001": "/data/zoning/parcel-index/303030.json", "0002": "/data/zoning/parcel-index/303030.json" } } }));
-  await page.route("**/parcel-index/*.json", (route) => route.fulfill({ json: { "0001": [-83.1005, 42.3605], "0002": [-83.0985, 42.3605] } }));
-  await page.goto(`${origin}/publications/minimum-lot-area/`);
-  await page.locator('[data-map-ready="true"]').waitFor();
-  await page.getByRole("textbox", { name: "Parcel ID" }).fill("0001");
-  await page.getByRole("textbox", { name: "Parcel ID" }).press("Enter");
-  await page.getByRole("heading", { name: "First fixture parcel" }).waitFor();
-  await page.getByRole("textbox", { name: "Parcel ID" }).fill("0002");
-  await page.getByRole("textbox", { name: "Parcel ID" }).press("Enter");
-  await page.getByRole("heading", { name: "Second fixture parcel" }).waitFor();
-  assert.equal(await page.locator(".pub-inspect dd").nth(1).textContent(), "R1");
-  await page.screenshot({ path: "/tmp/civic-parcel-selection.png" });
-  await page.getByRole("textbox", { name: "Parcel ID" }).fill("missing");
-  await page.getByRole("textbox", { name: "Parcel ID" }).press("Enter");
-  await page.getByText("Parcel ID not found in this publication.", { exact: false }).waitFor();
-  await page.close();
-});
-
-test("frozen maps expose tile failures and retain the publishing dimensions", async () => {
-  const page = await browser.newPage({ viewport: { width: 1600, height: 1100 } });
-  await page.route("**/*.pmtiles", (route) => route.fulfill({ status: 503, body: "Unavailable" }));
-  await page.goto(`${origin}/publications/minimum-lot-area/poster/`);
-  const map = page.locator("[data-map-error]");
-  await map.waitFor();
-  assert.equal(await map.getAttribute("data-map-ready"), "false");
-  assert.equal(await page.getByRole("textbox", { name: "Parcel ID" }).count(), 0);
-  const bounds = await map.boundingBox();
-  assert.equal(bounds.width, 1015);
-  assert.equal(bounds.height, 680);
-  await page.close();
-});
-
 const studioRecord = { ...cases[0], mapped: true };
 const studioBundle = {
   version: 1,
@@ -281,5 +184,69 @@ test('published case bundle renders all templates without overflowing or droppin
   await page.getByRole('button', { name: '4. Download', exact: true }).click();
   const { file } = await downloaded(page, 'Download PNG 1');
   await file.saveAs(`/tmp/civic-studio-count-${process.env.CIVIC_BROWSER_ENGINE ?? 'chromium'}.png`);
+  await page.close();
+});
+
+
+test('whole Detroit export is independent of camera and preserves saved selection', { timeout: 90000 }, async () => {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  await page.goto(`${origin}/atlas/`);
+  await page.locator('[data-map-ready="true"]').waitFor();
+  assert.equal(await page.locator('.map-artwork [data-case-id]').count(), 408);
+  await page.getByRole('button', {name:'Zoom in',exact:true}).click();
+  const camera = await page.locator('.map-artwork').getAttribute('style');
+  await page.getByRole('button', {name:'Create graphic',exact:true}).click();
+  await page.locator('.export-preview svg').first().waitFor();
+  assert.equal(await page.locator('.export-preview [data-case-id]').count(),408);
+  const atlas = await page.locator('.map-artwork [data-case-id]').evaluateAll(nodes=>nodes.map(n=>[n.getAttribute('data-case-id'),n.getAttribute('cx'),n.getAttribute('cy'),n.getAttribute('r')]));
+  const preview = await page.locator('.export-preview [data-case-id]').evaluateAll(nodes=>nodes.map(n=>[n.getAttribute('data-case-id'),n.getAttribute('cx'),n.getAttribute('cy'),n.getAttribute('r')]));
+  assert.deepEqual(preview,atlas);
+  const {bytes:png,file}=await downloaded(page,'Download Instagram PNG');
+  assert.equal(png.readUInt32BE(16),1080);assert.equal(png.readUInt32BE(20),1350);
+  await file.saveAs('/tmp/land-forum-instagram.png');
+  await page.getByLabel('Headline',{exact:true}).fill('Our Detroit cases');
+  await page.locator('.export-preview svg').first().waitFor();
+  const {bytes}=await downloaded(page,'Save settings');const recipe=JSON.parse(bytes);
+  assert.equal(recipe.version,2);assert.equal(recipe.title,'Our Detroit cases');assert.equal('camera' in recipe,false);
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('.map-artwork').getAttribute('style'),camera);
+  assert.equal(await page.getByRole('button',{name:'Create graphic',exact:true}).evaluate(el=>el===document.activeElement),true);
+  await page.getByLabel('Primary request',{exact:true}).selectOption('Parking');
+  assert.equal(await page.locator('.map-artwork [data-case-id]').count(),65);
+  await page.getByRole('button',{name:'Create graphic',exact:true}).click();
+  await page.locator('.export-preview svg').first().waitFor();
+  assert.equal(await page.locator('.export-preview [data-case-id]').count(),65);
+  await page.keyboard.press('Escape');
+  await page.goto(`${origin}/atlas/#map=${encodeURIComponent(JSON.stringify(recipe))}`);
+  await page.reload();await page.locator('[data-map-ready="true"]').waitFor();
+  await page.getByRole('button',{name:'Create graphic',exact:true}).click();
+  assert.equal(await page.getByLabel('Headline',{exact:true}).inputValue(),'Our Detroit cases');
+  await page.close();
+});
+
+test('mobile atlas retains unmapped cases, empty selections, reduced motion and source details', {timeout:60000},async()=>{
+  const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+  await page.goto(`${origin}/atlas/`);await page.locator('[data-map-ready="true"]').waitFor();
+  assert.equal(await page.locator('.case-list li').count(),417);
+  await page.locator('.case-list button').first().click();await page.locator('.case-detail').waitFor();
+  await page.reload();await page.locator('.case-detail').waitFor();
+  await page.getByRole('button',{name:'Create graphic',exact:true}).click();await page.locator('.export-preview svg').first().waitFor();
+  assert.equal(await page.locator('dialog').evaluate(el=>getComputedStyle(el).animationName),'none');
+  await page.screenshot({path:'/tmp/land-forum-mobile.png',fullPage:true});
+  await page.keyboard.press('Escape');
+  await page.getByLabel('Search cases',{exact:true}).fill('no-such-case-xyz');await page.getByText('No cases match these filters.').waitFor();
+  assert.equal(await page.getByRole('button',{name:'Create graphic',exact:true}).isDisabled(),true);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.close();
+});
+
+test('map corruption leaves current records available and saved history never silently advances',{timeout:60000},async()=>{
+  const page=await browser.newPage();
+  await page.route('**/data/bza-maps/*.json',route=>route.request().url().endsWith('/latest.json')?route.continue():route.fulfill({json:{}}));
+  await page.goto(`${origin}/atlas/`);await page.getByRole('alert').filter({hasText:'does not match'}).waitFor();
+  await page.locator('.case-list button').first().waitFor();
+  const invalid={version:2,template:'map',map:'f'.repeat(64),filters:{q:'',categories:[],outcomes:[],years:[],mappedOnly:false},title:'Historic cases',explanation:''};
+  await page.goto(`${origin}/atlas/#map=${encodeURIComponent(JSON.stringify(invalid))}`);await page.reload();
+  await page.getByRole('alert').waitFor();assert.equal(await page.locator('.case-list button').count(),0);
   await page.close();
 });

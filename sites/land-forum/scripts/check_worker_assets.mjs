@@ -12,6 +12,6 @@ async function oversized(directory) {
 }
 const failures = await oversized(root);
 if (failures.length) {
-  console.error(`Workers assets exceed 25 MiB:\n${failures.join("\n")}\nFor the parcel archive, configure NEXT_PUBLIC_PARCEL_ARCHIVE_URL to its separately hosted HTTPS URL and rebuild. The host must support HTTP ranges and CORS. No upload was attempted.`);
+  console.error(`Workers assets exceed 25 MiB:\n${failures.join("\n")}\nReduce or separately host oversized assets before deployment. No upload was attempted.`);
   process.exitCode = 1;
 }

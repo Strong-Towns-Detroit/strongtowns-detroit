@@ -37,11 +37,9 @@ export const site = {
   name: "Land Forum",
   shortName: "Land Forum",
   title: "Land Forum — Detroit",
-  tagline: "A forum for building Detroit.",
+  tagline: "Detroit’s zoning appeals, mapped and explained.",
   description:
-    "Public evidence and open inquiry about how Detroit uses its land. " +
-    "Land-use investigations built from primary records, with methods and " +
-    "sources shown.",
+    "Detroit Board of Zoning Appeals minutes, mapped and explained. Explore cases, read source records, and create graphics with Land Forum.",
   locale: "en_US",
   themeColor: "#0c2340",
   origin: siteOrigin,
@@ -59,26 +57,7 @@ export const site = {
 export const routes = [
   { path: "/", changeFrequency: "monthly" as const, priority: 1 },
   { path: "/atlas/", changeFrequency: "monthly" as const, priority: 0.8 },
-  {
-    path: "/publications/minimum-lot-area/",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    path: "/publications/minimum-lot-width/",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    path: "/publications/setback-envelope/",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
-  {
-    path: "/publications/assessed-value-per-acre/",
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  },
+  { path: "/methods/", changeFrequency: "monthly" as const, priority: 0.6 },
 ];
 
 export function absoluteUrl(path: string): string {

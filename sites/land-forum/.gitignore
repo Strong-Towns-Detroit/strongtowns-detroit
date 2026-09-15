@@ -20,3 +20,6 @@ tsconfig.tsbuildinfo
 public/data/zoning/parcel-index.json
 public/data/zoning/parcel-provenance.json
 public/data/zoning/parcel-index/
+
+# Local browser inspection scripts and screenshots.
+build/
