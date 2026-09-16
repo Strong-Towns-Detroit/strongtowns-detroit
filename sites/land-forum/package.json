@@ -10,7 +10,7 @@
     "dev:vinext": "vinext dev --port 3001",
     "build:vinext": "vinext build",
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
-    "deploy:vinext": "node scripts/check_public_origin.mjs && npm run build && node scripts/check_worker_assets.mjs && vinext-cloudflare deploy --config dist/server/wrangler.json",
+    "deploy:vinext": "node scripts/check_public_origin.mjs && npm run build && node scripts/check_worker_assets.mjs && wrangler deploy --config dist/server/wrangler.json",
     "tokens": "python3 ../../design/build_tokens.py",
     "tokens:check": "python3 ../../design/build_tokens.py --check",
     "test": "node --experimental-strip-types --test lib/**/*.test.ts",
