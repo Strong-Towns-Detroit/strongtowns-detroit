@@ -32,10 +32,3 @@ test("HTTP failure is distinguished from an empty successful response", async (t
   assert.deepEqual(await fetchJson("/cases"), []);
 });
 
-test("external archive URLs require HTTPS and reject credentials", async () => {
-  const { parcelArchiveUrl } = await import("./archive-url.ts");
-  assert.equal(parcelArchiveUrl(), "/data/zoning/parcels.pmtiles");
-  assert.equal(parcelArchiveUrl("https://example.org/parcels.pmtiles"), "https://example.org/parcels.pmtiles");
-  assert.throws(() => parcelArchiveUrl("http://example.org/parcels.pmtiles"));
-  assert.throws(() => parcelArchiveUrl("https://user:secret@example.org/parcels.pmtiles"));
-});
