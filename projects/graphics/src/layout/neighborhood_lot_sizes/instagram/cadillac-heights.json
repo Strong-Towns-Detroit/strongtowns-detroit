@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "graphic": {
+    "target": "instagram",
+    "source": "neighborhood_lot_sizes",
+    "name": "cadillac-heights"
+  },
+  "nodes": {
+    "graphic.brand": {
+      "attributes": {
+        "transform": "translate(-25.6 206.9) scale(1.4)"
+      }
+    },
+    "graphic.title": {
+      "attributes": {
+        "transform": "translate(0 211.7)"
+      }
+    },
+    "graphic.subtitle": {
+      "attributes": {
+        "transform": "translate(0 211.7)"
+      }
+    }
+  }
+}

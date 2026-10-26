@@ -12,6 +12,22 @@ ROOT = Path(__file__).resolve().parents[1]
 GRAPHICS_ROOT = BUILD.SOURCE_ROOT / "graphics"
 
 
+def test_neighborhood_small_lot_selection_uses_exact_share_and_all_parcels():
+    import pandas as pd
+    from projects.graphics.src.graphics.neighborhood_lot_sizes import summarize
+
+    rows = (
+        [("Exactly 80", value) for value in (3999, 4000, 4999, 1000, 5000)]
+        + [("Rounds to 80", 3000)] * 799
+        + [("Rounds to 80", 5000)] * 201
+        + [("Unknown included", value) for value in (3000, 3000, 3000, 0, None)]
+    )
+    summary = summarize(pd.DataFrame(rows, columns=["neighborhood", "total_square_footage"]))
+    assert list(summary.index) == ["Exactly 80"]
+    assert summary.loc["Exactly 80", "under5000"] == 4
+    assert summary.loc["Exactly 80", "under4000"] == 2
+
+
 def test_expected_graphic_families_are_in_neutral_source_tree():
     names = {
         path.stem
@@ -23,8 +39,11 @@ def test_expected_graphic_families_are_in_neutral_source_tree():
         "bza_cases_map",
         "bza_proposed_use_map",
         "campus_martius_accessibility",
+        "detroit_lot_sizes",
         "minimum_lot_area",
         "minimum_lot_width",
+        "neighborhood_lot_sizes",
+        "neighborhood_lot_overview",
         "parking_gaps_by_project_type",
         "parcel_land_value_change",
         "residential_setback_envelope",

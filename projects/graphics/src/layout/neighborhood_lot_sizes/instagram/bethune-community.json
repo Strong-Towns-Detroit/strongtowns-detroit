@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "graphic": {
+    "target": "instagram",
+    "source": "neighborhood_lot_sizes",
+    "name": "bethune-community"
+  },
+  "nodes": {
+    "graphic.brand": {
+      "attributes": {
+        "transform": "translate(-25.6 89.1) scale(1.4)"
+      }
+    },
+    "graphic.title": {
+      "attributes": {
+        "transform": "translate(0 93.9)"
+      }
+    },
+    "graphic.subtitle": {
+      "attributes": {
+        "transform": "translate(0 93.9)"
+      }
+    }
+  }
+}

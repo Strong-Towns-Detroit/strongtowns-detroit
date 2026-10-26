@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "graphic": {
+    "target": "instagram",
+    "source": "neighborhood_lot_sizes",
+    "name": "springwells"
+  },
+  "nodes": {
+    "graphic.brand": {
+      "attributes": {
+        "transform": "translate(-25.6 79.5) scale(1.4)"
+      }
+    },
+    "graphic.title": {
+      "attributes": {
+        "transform": "translate(0 84.3)"
+      }
+    },
+    "graphic.subtitle": {
+      "attributes": {
+        "transform": "translate(0 84.3)"
+      }
+    }
+  }
+}

@@ -47,6 +47,11 @@
       "manifest_sha256": "f6685fb0c077cc98dd7e7a549f135f6fbcc8a9f0583c1235211796b06cf6153f"
     },
     {
+      "dataset_id": "detroit.neighborhoods.raw",
+      "snapshot_id": "31d25e72-ce65-4886-bbf3-5f97fd15ce1c",
+      "manifest_sha256": "c74e1bd937cca227769c9cd5409f1d26d5f1448f437365ef801d606043398cdd"
+    },
+    {
       "dataset_id": "detroit.osm.basemap.raw",
       "snapshot_id": "07a8c953-dd09-4454-909a-7d83c533ae20",
       "manifest_sha256": "5e8a8622bd5eaa8020378d10f5036b96fd6f0b0d087647768bc079f48e8152af"
@@ -63,8 +68,8 @@
     },
     {
       "dataset_id": "detroit.parcels.raw",
-      "snapshot_id": "63af4c6b-57e1-4417-9a86-3a100fc9a0e9",
-      "manifest_sha256": "9d6b231b1c30f8f1346223a96c208209f0f1fd0d4c3b209472ee8c82a354c53e"
+      "snapshot_id": "16181de9-03a8-468f-a2ba-f746c8075d69",
+      "manifest_sha256": "be44a30d080ec99cab2495e8c47444fd574ba770bd799f0807f7a08c6d884d71"
     },
     {
       "dataset_id": "detroit.residential-setback-envelope",
