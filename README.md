@@ -17,18 +17,43 @@ cd strongtowns-detroit
 
 uv sync --locked --extra dev
 uv run pytest -q
-uv pip install -e ../strongtowns-cli
-uv run --no-sync strongtowns doctor --require graphics --require data
+uv pip install --python .venv/bin/python --no-deps -e ../strongtowns-cli
+.venv/bin/strongtowns doctor --require graphics --require data
 ```
 
-The CLI requires Python 3.12+ and installs both the data and graphics SDKs
-automatically; no extras or separate zoning executable are needed. The commands
-above install it into this checkout's environment. For a standalone CLI install
-in your Python environment:
+The CLI requires Python 3.12+. `uv sync` installs this project and its pinned
+data and graphics SDKs. Install the CLI with `--no-deps` to preserve those
+versions: the CLI pins different SDK revisions, which can otherwise replace
+the versions this project requires and cause missing-import errors. No extras
+or separate zoning executable are needed. The commands above install into this
+checkout's `.venv`. Run the examples below from this
+repository's root; the explicit `.venv/bin/strongtowns` path uses that environment
+even when another virtual environment or Conda environment is active.
+
+For a standalone CLI install in your Python environment:
 
 ```bash
 python -m pip install 'strongtowns-cli @ git+https://github.com/Strong-Towns-Detroit/strongtowns-cli.git@main'
 ```
+
+The standalone CLI does not install this Detroit project package.
+
+### Troubleshooting: `No module named 'strongtowns_detroit'`
+
+This error means the Python environment running the CLI cannot import this
+project's package. Changing into the repository alone does not make its `src/`
+package importable. From this repository's root, install the project and CLI into
+the same environment and run that CLI explicitly:
+
+```bash
+uv sync --locked --extra dev
+uv pip install --python .venv/bin/python --no-deps -e ../strongtowns-cli
+.venv/bin/strongtowns assets build --project . --target instagram
+```
+
+If `.venv/bin/python` can already import `strongtowns_detroit`, only the last two
+commands are needed. Repeat the CLI install after a `uv sync` if it removes the
+separately installed CLI.
 
 ### Data Files
 
@@ -50,9 +75,9 @@ Create Instagram posts, Stories, and conference graphics.
 - Read the [graphics contributor guide](projects/graphics/CONTRIBUTING.md) before
   changing library APIs or adding reusable rendering behavior.
 ```bash
-strongtowns assets list --project .
-strongtowns assets check --project .
-strongtowns assets build --project . --target instagram
+.venv/bin/strongtowns assets list --project .
+.venv/bin/strongtowns assets check --project .
+.venv/bin/strongtowns assets build --project . --target instagram
 ```
 
 `assets check` reports input readiness. Select a graphic by placing its name
@@ -61,16 +86,16 @@ after `check` or `build`, or omit the name to select all.
 ### Reproducible data and local SQL
 
 ```bash
-strongtowns data status --repository ../strongtowns-data
-strongtowns data materialize strongtowns-data.lock.json .data \
+.venv/bin/strongtowns data status --repository ../strongtowns-data
+.venv/bin/strongtowns data materialize strongtowns-data.lock.json .data \
   --repository ../strongtowns-data
 ```
 
 ### BZA cases
 
 ```bash
-strongtowns bza list --search "side setback"
-strongtowns bza export --output cases.csv
+.venv/bin/strongtowns bza list --search "side setback"
+.venv/bin/strongtowns bza export --output cases.csv
 ```
 
 See the [Python guide](docs/package-walkthrough.md) for SDK examples and this
