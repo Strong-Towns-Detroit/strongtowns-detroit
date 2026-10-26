@@ -146,7 +146,7 @@ def test_parking_chart_frames_the_excess_as_a_zoning_mandate():
     )["parking-gaps-by-project-type"]
 
     assert graphic.title == (
-        "Detroit's zoning code mandates far more parking than new developments propose"
+        "Detroit's zoning code mandates far more parking than new developments need"
     )
     assert graphic.subtitle.startswith("Additional parking mandated by project type")
     assert graphic.notes == ()

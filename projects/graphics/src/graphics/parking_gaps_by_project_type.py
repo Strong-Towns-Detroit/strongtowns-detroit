@@ -110,7 +110,7 @@ def build(context):
             ),
         ),
         title=(
-            "Detroit's zoning code mandates far more parking than new developments propose"
+            "Detroit's zoning code mandates far more parking than new developments need"
         ),
         subtitle=(
             "Additional parking mandated by project type · Detroit BZA cases, "
